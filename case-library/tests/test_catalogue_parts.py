@@ -56,6 +56,11 @@ def test_dependencies_load_first() -> None:
             assert {rule["target"], *rule["inputs"]} <= seen_components
 
 
+def test_all_value_rules_travel_in_one_part() -> None:
+    pieces = parts.split_document(_doc(REAL), max_bytes=60_000)
+    assert sum(1 for p in pieces if "value_rules" in p) == 1
+
+
 def test_a_small_document_is_one_part() -> None:
     pieces = parts.split_document(_doc(), max_bytes=1_000_000)
     assert len(pieces) == 1
