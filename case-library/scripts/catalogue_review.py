@@ -16,25 +16,18 @@ import sys
 from collections.abc import Callable, Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
 
 from openpyxl import Workbook
-from openpyxl.styles import Alignment, Font, PatternFill
-from openpyxl.utils import get_column_letter
-from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.worksheet.worksheet import Worksheet
 
 from scripts.catalogue import CASE_LIBRARY, DEFAULT_DIR, Catalogue, read_catalogue
+from scripts.workbook import FILLS, cell_text, write_table
+
+__all__ = ["FILLS", "SHEETS", "build_pack", "cell_text", "main", "range_refs"]
 
 REVIEW_DIR = CASE_LIBRARY / "review"
 CGHS_SOURCE = "CGHS 2025, Tier I NABH (OM 03.10.2025)"
 SEVERITY_ORDER = {"error": 0, "check": 1, "minor": 2, "": 3}
-FILLS = {
-    "error": PatternFill("solid", fgColor="F8CBAD"),
-    "check": PatternFill("solid", fgColor="FFE699"),
-    "decision": PatternFill("solid", fgColor="FFF2CC"),
-    "header": PatternFill("solid", fgColor="D9E1F2"),
-}
 
 
 @dataclass(frozen=True)
@@ -303,47 +296,8 @@ ROW_BUILDERS: Mapping[str, Callable[[Catalogue, Path], list[dict[str, str]]]] = 
 
 
 def _write_sheet(ws: Worksheet, sheet: Sheet, rows: list[dict[str, str]]) -> None:
-    header = [*sheet.columns, "decision", *sheet.edits, "note"]
-    ws.append(header)
     ordered = sorted(rows, key=lambda r: SEVERITY_ORDER.get(r.get("flag", ""), 3))
-    for row in ordered:
-        ws.append(
-            [row.get(col, "") for col in sheet.columns] + [""] * (len(header) - len(sheet.columns))
-        )
-        fill = FILLS.get(row.get("flag", ""))
-        if fill is not None:
-            ws.cell(ws.max_row, 1).fill = fill
-    first_decision = len(sheet.columns) + 1
-    for col_index, name in enumerate(header, start=1):
-        cell = ws.cell(1, col_index)
-        cell.font = Font(bold=True)
-        cell.fill = FILLS["decision"] if col_index >= first_decision else FILLS["header"]
-        wide = name in {
-            "text",
-            "suggestion",
-            "issue",
-            "question",
-            "options",
-            "cghs_names",
-            "match_note",
-            "audit_note",
-            "recommendation",
-            "new_text",
-            "note",
-        }
-        ws.column_dimensions[get_column_letter(col_index)].width = 60 if wide else 16
-    for row_cells in ws.iter_rows(min_row=2):
-        for cell in row_cells:
-            cell.alignment = Alignment(wrap_text=True, vertical="top")
-        row_cells[first_decision - 1].fill = FILLS["decision"]
-    ws.freeze_panes = "B2"
-    if sheet.decisions and ws.max_row > 1:
-        validation = DataValidation(
-            type="list", formula1=f'"{",".join(sheet.decisions)}"', allow_blank=True
-        )
-        ws.add_data_validation(validation)
-        letter = get_column_letter(first_decision)
-        validation.add(f"{letter}2:{letter}{ws.max_row}")
+    write_table(ws, sheet.columns, sheet.decisions, sheet.edits, ordered)
 
 
 def build_pack(catalogue: Catalogue, audit: Path, out: Path) -> dict[str, int]:
@@ -388,15 +342,6 @@ def main(argv: Sequence[str] | None = None) -> int:
     counts = build_pack(read_catalogue(args.dir), args.audit or pack_dir / "audit", out)
     print(f"Wrote {out}: " + ", ".join(f"{k} {v}" for k, v in counts.items()) + ".")
     return 0
-
-
-def cell_text(value: Any) -> str:
-    """A workbook cell as stripped text; whole-number floats lose their '.0'."""
-    if value is None:
-        return ""
-    if isinstance(value, float) and value.is_integer():
-        return str(int(value))
-    return str(value).strip()
 
 
 if __name__ == "__main__":

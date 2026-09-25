@@ -14,7 +14,8 @@ from openpyxl import load_workbook
 
 from scripts.catalogue import FILES, Catalogue, read_catalogue
 from scripts.catalogue_checks import check
-from scripts.catalogue_review import SHEETS, cell_text, range_refs
+from scripts.catalogue_review import SHEETS, range_refs
+from scripts.workbook import cell_text
 
 Rows = list[dict[str, str]]
 

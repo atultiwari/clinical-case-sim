@@ -50,9 +50,10 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
   - Accept: no undecided rows; catalogue version 1 recorded. Can run in parallel with L0.6–L0.9.
   - Depends on: L0.4.
 
-- [ ] **L0.6 Curation skill v0.1**
+- [x] **L0.6 Curation skill v0.1** (done 2026-09-25: skill, 17 SQL snippets, dry-run planner and case review pack; see the note)
   - Build: `.claude/skills/case-curate/` with `SKILL.md` (SPEC §4.3–§4.4 and §6), templates and SQL snippets; the review pack builder and reader in `scripts/`, which the skill calls.
   - Accept: invoking the skill on the pilot in dry-run mode lists every step and the SQL it would run without writing anything; the review pack builder produces a workbook from a fixture.
+  - Note (2026-09-25): `.claude/skills/case-curate/` holds `SKILL.md` (protocol, affected-value rules, never-do list), `sql/` (one snippet per writing call, with step, writes and params headers) and `templates/`. `python -m scripts.curate_plan cases/PMC12949993` prints the 11 steps and 15 writing calls without connecting; an integration test runs every snippet in order on the local database. `python -m scripts.review_pack build|read` builds the SPEC §7.2 workbook through a read-only connection and reads the returned decisions into JSON; `tests/integration/test_review_pack.py` builds it from the fixture case. It needs the read-only role from L0.7 to run `leak_scan` and `reference_range` on the Case Vault. Branched from L0.5, so it merges after L0.4 and L0.5.
   - Depends on: L0.3.
 
 - [ ] **L0.7 Case Studio v1 (read-only)**
