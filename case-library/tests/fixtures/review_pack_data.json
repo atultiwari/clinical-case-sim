@@ -1,0 +1,78 @@
+{
+  "batch": "fixture-batch",
+  "cases": [
+    {
+      "case_version_id": "NID-9001@v1",
+      "status": "in_review",
+      "source": "de novo (no article)",
+      "licence": "",
+      "production_ok": null,
+      "public_release_ok": null,
+      "origin_counts": {"article": 2, "affected": 3, "normal": 2, "rule": 1}
+    }
+  ],
+  "ledger": [
+    {
+      "key": "synthetic_ledger:00000000-0000-4000-8000-000000000001",
+      "case": "NID-9001@v1", "target": "CMP.RBC", "item": "Red cell count", "tier": "affected",
+      "day": "1", "value": "2.5 x10^12/L", "ref_range": "3.8-4.8 x10^12/L", "release_text": "",
+      "rationale": "Tracks Hb", "confidence": "0.7", "priority": "low", "judgement_call": ""
+    },
+    {
+      "key": "synthetic_ledger:00000000-0000-4000-8000-000000000002",
+      "case": "NID-9001@v1", "target": "CMP.HB", "item": "Haemoglobin", "tier": "affected",
+      "day": "1", "value": "75 g/L", "ref_range": "115-165 g/L", "release_text": "",
+      "rationale": "Trend", "confidence": "0.8", "priority": "high", "judgement_call": ""
+    },
+    {
+      "key": "synthetic_ledger:00000000-0000-4000-8000-000000000003",
+      "case": "NID-9001@v1", "target": "CMP.ZPP", "item": "Zinc protoporphyrin", "tier": "affected",
+      "day": "0", "value": "250 umol/mol haem", "ref_range": "", "release_text": "",
+      "rationale": "No anchor in the article", "confidence": "0.5", "priority": "medium",
+      "judgement_call": "yes"
+    }
+  ],
+  "normal_list": [
+    {"key": "synthetic_ledger:NID-9001@v1/CMP.NA", "case": "NID-9001@v1", "target": "CMP.NA",
+     "item": "Sodium", "tier": "normal", "days": "2"},
+    {"key": "synthetic_ledger:NID-9001@v1/HX.OCCUPATION", "case": "NID-9001@v1",
+     "target": "HX.OCCUPATION", "item": "Occupation", "tier": "rule", "days": "1"}
+  ],
+  "article_facts": [
+    {"key": "fact:NID-9001@v1/L01", "case": "NID-9001@v1", "id": "L01", "category": "lab",
+     "item": "Red cell count", "catalogue_ref": "CMP.RBC", "day": "0", "value": "2.4",
+     "unit": "x10^12/L", "ref_range": "3.8-4.8", "flag": "L", "release_text": "",
+     "source_locator": "Table 1"},
+    {"key": "fact:NID-9001@v1/S01_D0", "case": "NID-9001@v1", "id": "S01_D0", "category": "lab",
+     "item": "Haemoglobin", "catalogue_ref": "CMP.HB", "day": "0", "value": "72", "unit": "g/L",
+     "ref_range": "115-165", "flag": "L", "release_text": "", "source_locator": "Table 1"}
+  ],
+  "patient_words": [
+    {"key": "fact:NID-9001@v1/H01", "case": "NID-9001@v1", "item": "Presenting complaint",
+     "release_text": "Tiredness for a month.", "lay_text": "I've been tired for about a month."}
+  ],
+  "reports_consults": [
+    {"key": "report:NID-9001@v1/RP01", "case": "NID-9001@v1", "kind": "report",
+     "subject": "LAB.FILM", "variant": "original", "status": "provisional",
+     "status_line": "Provisional report: not final; a review can be requested.", "condition": "",
+     "origin": "article", "text": "Hypochromic red cells.", "findings": "FND.HYPOCHROMIA",
+     "rationale": "First report in the article", "confidence": ""},
+    {"key": "consult_note:NID-9001@v1/CN01", "case": "NID-9001@v1", "kind": "consult",
+     "subject": "haematology", "variant": "1", "status": "", "status_line": "",
+     "condition": "{\"not\": {\"released_any\": [\"L02\"]}}", "origin": "affected",
+     "text": "Please send a blood film.", "findings": "", "rationale": "Before the lead result",
+     "confidence": "0.6"}
+  ],
+  "ground_truth": [
+    {"key": "ground_truth:NID-9001@v1/final_dx", "case": "NID-9001@v1", "part": "final_dx",
+     "text": "Lead poisoning from a supplement", "condition": "{\"id\": \"DX.LEAD_POISONING\"}"},
+    {"key": "ground_truth:NID-9001@v1/rubric/1", "case": "NID-9001@v1", "part": "rubric",
+     "text": "Score 5: Lead poisoning with the source", "condition": "{\"dx_in\": [\"DX.LEAD_POISONING\"]}"},
+    {"key": "ground_truth:NID-9001@v1/must_do/1", "case": "NID-9001@v1", "part": "must_do",
+     "text": "Measure blood lead", "condition": "{\"ordered_any\": [\"LAB.BLOOD_LEAD\"]}"}
+  ],
+  "leaks": [
+    {"key": "leak_scan:NID-9001@v1/report/RP01/plumbism", "case": "NID-9001@v1",
+     "location": "report", "row_id": "RP01", "term": "plumbism"}
+  ]
+}

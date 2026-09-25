@@ -1,0 +1,14 @@
+id,kind,target,inputs,factor,tolerance_pct,formula
+R.MCH,ratio,CMP.MCH,CMP.HB|CMP.RBC,1,2,MCH (pg) = haemoglobin (g/L) / red cell count (x10^12/L)
+R.MCHC,ratio,CMP.MCHC,CMP.HB|CMP.HCT,1,2,MCHC (g/L) = haemoglobin (g/L) / haematocrit (L/L)
+R.MCV,ratio,CMP.MCV,CMP.HCT|CMP.RBC,1000,2,MCV (fL) = 1000 x haematocrit (L/L) / red cell count (x10^12/L)
+R.RETIC_PCT,ratio,CMP.RETIC_PCT,CMP.RETIC_ABS|CMP.RBC,0.1,2,Reticulocytes (%) = 0.1 x reticulocytes (x10^9/L) / red cell count (x10^12/L)
+R.WBC_DIFF_SUM,sum_equals,CMP.WBC,CMP.NEUT|CMP.LYMPH|CMP.MONO|CMP.EOS|CMP.BASO,1,5,"White cell count (x10^9/L) = neutrophils + lymphocytes + monocytes + eosinophils + basophils (each x10^9/L), within 5%"
+R.TSAT,ratio,CMP.TSAT,CMP.IRON|CMP.TIBC,100,5,Transferrin saturation (%) = serum iron (umol/L) / TIBC (umol/L) x 100
+R.FLC_RATIO,ratio,CMP.FLC_RATIO,CMP.FLC_KAPPA|CMP.FLC_LAMBDA,1,5,Free light chain ratio = free kappa (mg/L) / free lambda (mg/L)
+R.ANION_GAP,difference,CMP.ANION_GAP,CMP.NA|CMP.CL|CMP.BICARB,1,10,Anion gap (mmol/L) = sodium (mmol/L) - (chloride (mmol/L) + bicarbonate (mmol/L))
+R.BILI_CONJ_NOT_ABOVE_TOTAL,not_above,CMP.BILI_CONJ,CMP.BILI_TOTAL,1,2,Conjugated bilirubin (umol/L) cannot exceed total bilirubin (umol/L)
+R.ALBUMIN_NOT_ABOVE_TOTAL_PROTEIN,not_above,CMP.ALBUMIN,CMP.TOTAL_PROTEIN,1,2,Albumin (g/L) cannot exceed total protein (g/L)
+R.CA_ION_NOT_ABOVE_CA,not_above,CMP.CA_ION,CMP.CA,1,2,Ionised calcium (mmol/L) cannot exceed total calcium (mmol/L)
+R.HDL_NOT_ABOVE_CHOL,not_above,CMP.CHOL_HDL,CMP.CHOL_TOTAL,1,2,HDL cholesterol (mmol/L) cannot exceed total cholesterol (mmol/L)
+R.NON_HDL,difference,CMP.CHOL_NON_HDL,CMP.CHOL_TOTAL|CMP.CHOL_HDL,1,5,Non-HDL cholesterol (mmol/L) = total cholesterol (mmol/L) - HDL cholesterol (mmol/L)

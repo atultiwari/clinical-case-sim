@@ -1,0 +1,493 @@
+id,name,category,synonyms,specialty_scope,icd11,icd10,codes_verified
+DX.IRON_DEFICIENCY_ANAEMIA,Iron deficiency anaemia,haematology,IDA|iron deficiency anemia|low iron anaemia|microcytic anaemia due to iron deficiency,attending,3A00,D50.9,true
+DX.IRON_DEFICIENCY_ANAEMIA_BLOOD_LOSS,Iron deficiency anaemia secondary to chronic blood loss,haematology,chronic blood loss anaemia|iron deficiency anemia from blood loss|IDA from bleeding,attending,3A00.01,D50.0,true
+DX.IRON_DEFICIENCY_WITHOUT_ANAEMIA,Iron deficiency without anaemia,haematology,latent iron deficiency|iron depletion|non-anaemic iron deficiency,attending,,E61.1,true
+DX.B12_DEFICIENCY_ANAEMIA,Vitamin B12 deficiency anaemia,haematology,B12 deficiency anemia|cobalamin deficiency|megaloblastic anaemia due to B12 deficiency,attending,3A01,D51.9,true
+DX.PERNICIOUS_ANAEMIA,Pernicious anaemia,haematology,PA|pernicious anemia|Addisonian anaemia|autoimmune gastritis with B12 deficiency,attending,3A01.30,D51.0,true
+DX.FOLATE_DEFICIENCY_ANAEMIA,Folate deficiency anaemia,haematology,folic acid deficiency anemia|folate deficiency|megaloblastic anaemia due to folate deficiency,attending,3A02,D52.9,true
+DX.MEGALOBLASTIC_ANAEMIA,"Megaloblastic anaemia, unspecified",haematology,megaloblastic anemia|macrocytic megaloblastic anaemia|MA,attending,,D53.1,true
+DX.ANAEMIA_OF_INFLAMMATION,Anaemia of inflammation,haematology,anaemia of chronic disease|ACD|anemia of chronic inflammation,attending,3A71.Z,D63.8,true
+DX.ANAEMIA_OF_CKD,Anaemia of chronic kidney disease,haematology,renal anaemia|anemia of CKD|CKD anaemia,attending,3A71.2,D63.8,true
+DX.ANAEMIA_OF_HYPOTHYROIDISM,Anaemia due to hypothyroidism,haematology,hypothyroid anaemia|anemia of hypothyroidism|endocrine anaemia,attending,3A71.Y,D63.8,true
+DX.MIXED_NUTRITIONAL_ANAEMIA,Mixed nutritional anaemia,haematology,dimorphic anaemia|combined iron and B12 deficiency|nutritional anemia,attending,,D53.8,true
+DX.PROTEIN_DEFICIENCY_ANAEMIA,Protein deficiency anaemia,haematology,anaemia of malnutrition|protein energy malnutrition anemia|PEM anaemia,attending,3A03.1,D53.0,true
+DX.ACUTE_BLOOD_LOSS_ANAEMIA,Acute posthaemorrhagic anaemia,haematology,acute blood loss anaemia|acute posthemorrhagic anemia|haemorrhagic anaemia,attending,3A94,D62,true
+DX.WARM_AIHA,Warm autoimmune haemolytic anaemia,haematology,warm AIHA|wAIHA|warm autoimmune hemolytic anemia|IgG mediated haemolysis,attending,3A20.0,D59.1,true
+DX.COLD_AGGLUTININ_DISEASE,Cold agglutinin disease,haematology,CAD|cold AIHA|cold autoimmune hemolytic anemia|cold agglutinin syndrome,attending,3A20.1,D59.1,true
+DX.MIXED_AIHA,Mixed-type autoimmune haemolytic anaemia,haematology,mixed AIHA|mixed warm and cold AIHA|mixed autoimmune hemolytic anemia,attending,3A20.2,D59.1,true
+DX.PAROXYSMAL_COLD_HAEMOGLOBINURIA,Paroxysmal cold haemoglobinuria,haematology,PCH|Donath-Landsteiner haemolysis|paroxysmal cold hemoglobinuria,attending,3A20.3,D59.6,true
+DX.DRUG_INDUCED_IMMUNE_HAEMOLYSIS,Drug-induced immune haemolytic anaemia,drug-related,DIIHA|drug induced immune hemolytic anemia|drug antibody haemolysis,attending,3A20.Y,D59.0,true
+DX.DRUG_INDUCED_NONIMMUNE_HAEMOLYSIS,Drug-induced non-autoimmune haemolytic anaemia,drug-related,oxidant drug haemolysis|drug induced nonimmune hemolytic anemia|toxic haemolysis,attending,3A21.Y,D59.2,true
+DX.IVIG_HAEMOLYSIS,IVIG-associated haemolysis,drug-related,intravenous immunoglobulin haemolysis|IVIG hemolysis|IVIG-induced haemolytic anaemia|isohaemagglutinin haemolysis after IVIG,attending,3A20.Y,D59.0,true
+DX.DELAYED_HAEMOLYTIC_TRANSFUSION_REACTION,Delayed haemolytic transfusion reaction,haematology,DHTR|delayed hemolytic transfusion reaction|delayed transfusion haemolysis,attending,,T80.8,true
+DX.ACUTE_HAEMOLYTIC_TRANSFUSION_REACTION,Acute haemolytic transfusion reaction,haematology,AHTR|ABO incompatible transfusion|acute hemolytic transfusion reaction,attending,,T80.3,true
+DX.HEREDITARY_SPHEROCYTOSIS,Hereditary spherocytosis,haematology,HS|congenital spherocytosis|spherocytic anaemia|hereditary spherocytic anemia,attending,3A10.Y,D58.0,true
+DX.HEREDITARY_ELLIPTOCYTOSIS,Hereditary elliptocytosis,haematology,HE|ovalocytosis|elliptocytic anaemia,attending,3A10.2,D58.1,true
+DX.SOUTHEAST_ASIAN_OVALOCYTOSIS,Southeast Asian ovalocytosis,haematology,SAO|Melanesian ovalocytosis|stomatocytic elliptocytosis,attending,3A10.Y,D58.1,true
+DX.HEREDITARY_STOMATOCYTOSIS,Hereditary stomatocytosis,haematology,dehydrated hereditary stomatocytosis|xerocytosis|overhydrated stomatocytosis,attending,3A10.Z,D58.8,true
+DX.G6PD_DEFICIENCY,G6PD deficiency,haematology,glucose-6-phosphate dehydrogenase deficiency|G6PD deficient haemolysis|favism,attending,3A10.00,D55.0,true
+DX.PYRUVATE_KINASE_DEFICIENCY,Pyruvate kinase deficiency,haematology,PK deficiency|PKD|pyruvate kinase deficient anemia,attending,3A10.Y,D55.2,true
+DX.P5N_DEFICIENCY,Pyrimidine 5'-nucleotidase deficiency,haematology,P5N deficiency|P5'N-1 deficiency|pyrimidine 5 prime nucleotidase deficiency|P5N1 deficiency,attending,3A10.Y,D55.3,true
+DX.BETA_THALASSAEMIA_TRAIT,Beta thalassaemia trait,haematology,beta thal trait|beta thalassemia minor|BTT|thalassaemia minor,attending,3A50.2,D56.3,true
+DX.BETA_THALASSAEMIA_MAJOR,Beta thalassaemia major,haematology,TM|Cooley anaemia|transfusion dependent beta thalassemia|TDT,attending,3A50.2,D56.1,true
+DX.BETA_THALASSAEMIA_INTERMEDIA,Beta thalassaemia intermedia,haematology,thalassaemia intermedia|NTDT|non transfusion dependent thalassemia,attending,3A50.2,D56.1,true
+DX.HBE_BETA_THALASSAEMIA,HbE-beta thalassaemia,haematology,HbE beta thal|haemoglobin E beta thalassemia|E-beta thalassaemia,attending,3A50.2,D56.1,true
+DX.ALPHA_THALASSAEMIA_TRAIT,Alpha thalassaemia trait,haematology,alpha thal trait|alpha thalassemia minor|alpha thalassaemia carrier,attending,3A50.00,D56.3,true
+DX.HBH_DISEASE,Haemoglobin H disease,haematology,HbH disease|hemoglobin H disease|alpha thalassaemia intermedia,attending,3A50.02,D56.0,true
+DX.DELTA_BETA_THALASSAEMIA,Delta-beta thalassaemia,haematology,delta beta thal|HPFH-like thalassaemia|delta-beta thalassemia,attending,3A50.3,D56.2,true
+DX.HPFH,Hereditary persistence of fetal haemoglobin,haematology,HPFH|persistent HbF|hereditary persistence of fetal hemoglobin,attending,3A50.4,D56.4,true
+DX.SICKLE_CELL_ANAEMIA,Sickle cell anaemia (HbSS),haematology,sickle cell disease|SCD|HbSS|sickle cell anemia,attending,3A51.1,D57.1,true
+DX.SICKLE_CELL_CRISIS,Sickle cell disease with crisis,haematology,vaso-occlusive crisis|VOC|sickle crisis|painful crisis,attending,3A51.2,D57.0,true
+DX.SICKLE_CELL_TRAIT,Sickle cell trait,haematology,HbAS|sickle trait|sickle carrier,attending,3A51.0,D57.3,true
+DX.SICKLE_BETA_THALASSAEMIA,Sickle-beta thalassaemia,haematology,HbS beta thal|sickle beta thalassemia|S-beta thalassaemia,attending,3A51.3,D57.2,true
+DX.HBE_TRAIT,Haemoglobin E trait,haematology,HbE trait|HbAE|hemoglobin E carrier,attending,3A51.Y,D58.2,true
+DX.UNSTABLE_HAEMOGLOBIN,Unstable haemoglobin disease,haematology,unstable hemoglobinopathy|Heinz body haemolytic anaemia|congenital Heinz body anemia,attending,3A51.Y,D58.2,true
+DX.PNH,Paroxysmal nocturnal haemoglobinuria,haematology,PNH|paroxysmal nocturnal hemoglobinuria|Marchiafava-Micheli syndrome,attending,3A21.0,D59.5,true
+DX.TTP,Thrombotic thrombocytopenic purpura,haematology,TTP|Moschcowitz syndrome|ADAMTS13 deficiency|immune TTP,attending,3B64.14,M31.1,true
+DX.HUS,Haemolytic uraemic syndrome,haematology,HUS|hemolytic uremic syndrome|STEC-HUS,attending,3A21.2,D59.3,true
+DX.ATYPICAL_HUS,Atypical haemolytic uraemic syndrome,haematology,aHUS|complement-mediated TMA|atypical hemolytic uremic syndrome,attending,3A10.Y,D59.3,true
+DX.MAHA_OTHER,"Microangiopathic haemolytic anaemia, other",haematology,MAHA|thrombotic microangiopathy|microangiopathic hemolytic anemia|TMA,attending,3A21.1,D59.4,true
+DX.MECHANICAL_VALVE_HAEMOLYSIS,Mechanical heart valve haemolysis,haematology,prosthetic valve haemolysis|Waring blender syndrome|valve hemolysis,attending,,D59.4,true
+DX.MARCH_HAEMOGLOBINURIA,March haemoglobinuria,haematology,exercise haemoglobinuria|footstrike haemolysis|march hemoglobinuria,attending,3A21.Y,D59.6,true
+DX.MALARIA_HAEMOLYSIS,Haemolysis due to malaria,haematology,malarial haemolysis|blackwater fever|malaria hemolysis,attending,,B50.8,true
+DX.APLASTIC_ANAEMIA,Aplastic anaemia,haematology,AA|acquired aplastic anemia|bone marrow aplasia|marrow failure,attending,3A70,D61.9,true
+DX.FANCONI_ANAEMIA,Fanconi anaemia,haematology,FA|Fanconi anemia|constitutional aplastic anaemia,attending,3A70.0,D61.0,true
+DX.PURE_RED_CELL_APLASIA,Pure red cell aplasia,haematology,PRCA|acquired red cell aplasia|erythroblastopenia,attending,3A61,D60.9,true
+DX.DIAMOND_BLACKFAN_ANAEMIA,Diamond-Blackfan anaemia,haematology,DBA|congenital pure red cell aplasia|Diamond Blackfan anemia,attending,3A60.1,D61.0,true
+DX.CDA,Congenital dyserythropoietic anaemia,haematology,CDA|congenital dyserythropoietic anemia|CDA type II|HEMPAS,attending,3A73,D64.4,true
+DX.CONGENITAL_SIDEROBLASTIC_ANAEMIA,Congenital sideroblastic anaemia,haematology,X-linked sideroblastic anaemia|XLSA|hereditary sideroblastic anemia|ALAS2 deficiency,attending,3A72.0,D64.0,true
+DX.SIDEROBLASTIC_ANAEMIA_TOXIC,Acquired sideroblastic anaemia due to toxins or drugs,drug-related,toxic sideroblastic anaemia|drug induced sideroblastic anemia|secondary sideroblastic anaemia|reversible sideroblastic anaemia,attending,3A72.1,D64.2,true
+DX.SIDEROBLASTIC_ANAEMIA_ALCOHOL,Sideroblastic anaemia due to alcohol,drug-related,alcohol induced sideroblastic anemia|alcoholic sideroblastic anaemia|ethanol sideroblastic anaemia,attending,,D64.2,true
+DX.DRUG_INDUCED_ANAEMIA,Drug-induced anaemia,drug-related,medication-induced anaemia|drug induced anemia|iatrogenic anaemia|drug related marrow suppression,attending,,D64.8,true
+DX.ANAEMIA_UNSPECIFIED,"Anaemia, unspecified",haematology,anemia|low haemoglobin|low Hb,attending,3A9Z,D64.9,true
+DX.SECONDARY_POLYCYTHAEMIA,Secondary polycythaemia,haematology,secondary erythrocytosis|secondary polycythemia|hypoxic erythrocytosis,attending,,D75.1,true
+DX.METHAEMOGLOBINAEMIA,Methaemoglobinaemia,haematology,methemoglobinemia|MetHb|acquired methaemoglobinaemia,attending,,D74.9,true
+DX.HAEMOCHROMATOSIS,Hereditary haemochromatosis,metabolic,HH|hemochromatosis|HFE haemochromatosis|iron overload,attending,5C64.10,E83.1,true
+DX.TRANSFUSIONAL_IRON_OVERLOAD,Transfusional iron overload,haematology,secondary haemosiderosis|transfusion siderosis|secondary iron overload,attending,,E83.1,true
+DX.HYPERSPLENISM,Hypersplenism,haematology,splenic sequestration|hypersplenic cytopenia|splenomegaly with cytopenias,attending,3B81.B,D73.1,true
+DX.LEUKOCYTOSIS_REACTIVE,Reactive leukocytosis,haematology,leukemoid reaction|reactive neutrophilia|leukaemoid reaction,attending,MA16.11,D72.8,true
+DX.NEUTROPENIA,Neutropenia,haematology,agranulocytosis|low neutrophil count|neutropaenia,attending,4B00.0,D70,true
+DX.FEBRILE_NEUTROPENIA,Febrile neutropenia,haematology,FN|neutropenic fever|neutropenic sepsis,attending,,D70,true
+DX.EOSINOPHILIA,Eosinophilia,haematology,hypereosinophilia|raised eosinophils|HES,attending,4B03,D72.1,true
+DX.PANCYTOPENIA,"Pancytopenia, unspecified",haematology,trilineage cytopenia|pancytopaenia|low all counts,attending,3A70,D61.9,true
+DX.MDS,Myelodysplastic syndrome,oncology,MDS|myelodysplasia|myelodysplastic neoplasm|preleukaemia,attending,2A3Z,D46.9,true
+DX.MDS_RING_SIDEROBLASTS,Myelodysplastic syndrome with ring sideroblasts,oncology,MDS-RS|RARS|refractory anaemia with ring sideroblasts|MDS with SF3B1 mutation,attending,2A33,D46.1,true
+DX.MDS_EXCESS_BLASTS,Myelodysplastic syndrome with excess blasts,oncology,MDS-EB|RAEB|refractory anemia with excess blasts,attending,,D46.2,true
+DX.MDS_DEL5Q,Myelodysplastic syndrome with isolated del(5q),oncology,5q minus syndrome|MDS del 5q|5q- syndrome,attending,2A36,D46.6,true
+DX.CMML,Chronic myelomonocytic leukaemia,oncology,CMML|chronic myelomonocytic leukemia|MDS/MPN,attending,2A40,C93.1,true
+DX.AML,Acute myeloid leukaemia,oncology,AML|acute myeloid leukemia|acute myelogenous leukaemia|ANLL,attending,2A60.3Z,C92.0,true
+DX.APL,Acute promyelocytic leukaemia,oncology,APL|APML|acute promyelocytic leukemia|AML M3,attending,2A60.0,C92.4,true
+DX.ALL,Acute lymphoblastic leukaemia,oncology,ALL|acute lymphoblastic leukemia|acute lymphocytic leukaemia,attending,2B33.3,C91.0,true
+DX.CML,Chronic myeloid leukaemia,oncology,CML|chronic myeloid leukemia|BCR-ABL1 positive leukaemia,attending,2A20.0,C92.1,true
+DX.CLL,Chronic lymphocytic leukaemia,oncology,CLL|chronic lymphocytic leukemia|small lymphocytic lymphoma|SLL,attending,2A82.00,C91.1,true
+DX.HAIRY_CELL_LEUKAEMIA,Hairy cell leukaemia,oncology,HCL|hairy cell leukemia|leukaemic reticuloendotheliosis,attending,2A82.2,C91.4,true
+DX.POLYCYTHAEMIA_VERA,Polycythaemia vera,oncology,PV|polycythemia vera|primary polycythaemia|JAK2 polycythaemia,attending,2A20.4,D45,true
+DX.ESSENTIAL_THROMBOCYTHAEMIA,Essential thrombocythaemia,oncology,ET|essential thrombocythemia|primary thrombocytosis,attending,3B63.1,D47.3,true
+DX.PRIMARY_MYELOFIBROSIS,Primary myelofibrosis,oncology,PMF|myelofibrosis|agnogenic myeloid metaplasia|idiopathic myelofibrosis,attending,2A20.2,D47.4,true
+DX.HODGKIN_LYMPHOMA,Hodgkin lymphoma,oncology,HL|Hodgkin disease|Hodgkin's lymphoma,attending,2B30.Z,C81.9,true
+DX.DLBCL,Diffuse large B-cell lymphoma,oncology,DLBCL|diffuse large B cell lymphoma|high grade B cell lymphoma,attending,2A81.Z,C83.3,true
+DX.FOLLICULAR_LYMPHOMA,Follicular lymphoma,oncology,FL|follicular NHL|low grade B cell lymphoma,attending,2A80.Z,C82.9,true
+DX.MANTLE_CELL_LYMPHOMA,Mantle cell lymphoma,oncology,MCL|mantle cell NHL|mantle zone lymphoma,attending,2A85.5,C83.1,true
+DX.BURKITT_LYMPHOMA,Burkitt lymphoma,oncology,Burkitt's lymphoma|BL|high grade B cell lymphoma with MYC,attending,2A85.6,C83.7,true
+DX.MARGINAL_ZONE_LYMPHOMA,Marginal zone lymphoma,oncology,MZL|MALT lymphoma|splenic marginal zone lymphoma,attending,,C88.4,true
+DX.T_CELL_LYMPHOMA,Peripheral T-cell lymphoma,oncology,PTCL|T cell NHL|peripheral T cell lymphoma NOS,attending,2A90.C,C84.4,true
+DX.NHL,"Non-Hodgkin lymphoma, unspecified",oncology,NHL|non Hodgkin's lymphoma|lymphoma NOS,attending,2B33.5,C85.9,true
+DX.WALDENSTROM,Waldenstrom macroglobulinaemia,oncology,WM|Waldenstrom's macroglobulinemia|lymphoplasmacytic lymphoma|LPL,attending,2A85.4,C88.0,true
+DX.MULTIPLE_MYELOMA,Multiple myeloma,oncology,MM|plasma cell myeloma|myelomatosis|Kahler disease,attending,2A83.1,C90.0,true
+DX.SMOULDERING_MYELOMA,Smouldering multiple myeloma,oncology,SMM|smoldering myeloma|asymptomatic myeloma,attending,,C90.0,true
+DX.MGUS,Monoclonal gammopathy of undetermined significance,oncology,MGUS|benign monoclonal gammopathy|paraproteinaemia of undetermined significance,attending,2A83.0,D47.2,true
+DX.MGRS,Monoclonal gammopathy of renal significance,oncology,MGRS|paraprotein-related kidney disease|monoclonal gammopathy with renal involvement,attending,,D47.2,true
+DX.PLASMACYTOMA,Solitary plasmacytoma,oncology,solitary bone plasmacytoma|extramedullary plasmacytoma|SBP,attending,2A83.2,C90.3,true
+DX.PLASMA_CELL_LEUKAEMIA,Plasma cell leukaemia,oncology,PCL|plasma cell leukemia|primary PCL,attending,2A83.4,C90.1,true
+DX.AL_AMYLOIDOSIS,AL amyloidosis,oncology,primary amyloidosis|light chain amyloidosis|AL amyloid,attending,5D00.0,E85.8,true
+DX.POEMS,POEMS syndrome,oncology,POEMS|osteosclerotic myeloma|Crow-Fukase syndrome,attending,2A83.Y,D47.7,true
+DX.HLH,Haemophagocytic lymphohistiocytosis,haematology,HLH|hemophagocytic lymphohistiocytosis|haemophagocytic syndrome|macrophage activation syndrome,attending,4A01.23,D76.1,true
+DX.LANGERHANS_HISTIOCYTOSIS,Langerhans cell histiocytosis,oncology,LCH|histiocytosis X|eosinophilic granuloma,attending,2B31.2Z,C96.6,true
+DX.ITP,Immune thrombocytopenia,haematology,ITP|idiopathic thrombocytopenic purpura|immune thrombocytopenic purpura,attending,3B64.10,D69.3,true
+DX.HIT,Heparin-induced thrombocytopenia,drug-related,HIT|heparin induced thrombocytopenia|HITT,attending,3B64.12,D69.5,true
+DX.DRUG_INDUCED_THROMBOCYTOPENIA,Drug-induced thrombocytopenia,drug-related,DITP|drug induced immune thrombocytopenia|medication thrombocytopenia,attending,3B64.12,D69.5,true
+DX.DIC,Disseminated intravascular coagulation,haematology,DIC|consumptive coagulopathy|defibrination syndrome,attending,3B20,D65,true
+DX.HAEMOPHILIA_A,Haemophilia A,haematology,hemophilia A|factor VIII deficiency|classic haemophilia,attending,3B10.0,D66,true
+DX.HAEMOPHILIA_B,Haemophilia B,haematology,hemophilia B|factor IX deficiency|Christmas disease,attending,3B11,D67,true
+DX.VON_WILLEBRAND_DISEASE,Von Willebrand disease,haematology,VWD|von Willebrand's disease|vWF deficiency,attending,3B12,D68.0,true
+DX.ACQUIRED_HAEMOPHILIA,Acquired haemophilia A,haematology,AHA|acquired factor VIII inhibitor|acquired hemophilia,attending,3B22,D68.3,true
+DX.VITAMIN_K_DEFICIENCY,Vitamin K deficiency coagulopathy,haematology,vitamin K deficiency bleeding|VKDB|acquired coagulation factor deficiency,attending,,D68.4,true
+DX.WARFARIN_OVERANTICOAGULATION,Excessive anticoagulation with warfarin,drug-related,warfarin toxicity|supratherapeutic INR|over-anticoagulation,attending,,D68.3,true
+DX.ANTIPHOSPHOLIPID_SYNDROME,Antiphospholipid syndrome,rheumatology,APS|antiphospholipid antibody syndrome|Hughes syndrome,attending,4A45.Z,D68.6,true
+DX.FACTOR_V_LEIDEN,Factor V Leiden thrombophilia,haematology,FVL|activated protein C resistance|factor V Leiden mutation,attending,3B61.0Y,D68.5,true
+DX.PROTEIN_C_S_DEFICIENCY,Protein C or protein S deficiency,haematology,protein C deficiency|protein S deficiency|inherited thrombophilia,attending,3B61.0Y,D68.5,true
+DX.DVT,Deep vein thrombosis,cardiology,DVT|deep venous thrombosis|leg vein thrombosis,attending,BD71.4,I80.2,true
+DX.PORTAL_VEIN_THROMBOSIS,Portal vein thrombosis,hepatology,PVT|portal venous thrombosis|extrahepatic portal vein obstruction,attending,DB98.3,I81,true
+DX.BUDD_CHIARI,Budd-Chiari syndrome,hepatology,BCS|hepatic vein thrombosis|hepatic venous outflow obstruction,attending,DB98.5,I82.0,true
+DX.CVST,Cerebral venous sinus thrombosis,neurology,CVST|CVT|cerebral venous thrombosis|dural sinus thrombosis,attending,8B22.1,I67.6,true
+DX.HEAVY_METAL_POISONING,Heavy metal poisoning,toxicology,heavy metal toxicity|metal poisoning|toxic effect of metals,attending,,T56.9,true
+DX.LEAD_POISONING,Lead poisoning,toxicology,plumbism|lead toxicity|saturnism|toxic effect of lead,attending,NE61,T56.0,true
+DX.ARSENIC_POISONING,Arsenic poisoning,toxicology,arsenicosis|arsenic toxicity|toxic effect of arsenic,attending,NE61,T57.0,true
+DX.MERCURY_POISONING,Mercury poisoning,toxicology,mercurialism|mercury toxicity|hydrargyria|toxic effect of mercury,attending,NE61,T56.1,true
+DX.CADMIUM_POISONING,Cadmium poisoning,toxicology,cadmium toxicity|itai-itai disease|toxic effect of cadmium,attending,NE61,T56.3,true
+DX.THALLIUM_POISONING,Thallium poisoning,toxicology,thallium toxicity|toxic effect of thallium|rat poison thallium,attending,,T56.8,true
+DX.ALUMINIUM_PHOSPHIDE_POISONING,Aluminium phosphide poisoning,toxicology,celphos poisoning|ALP poisoning|aluminum phosphide poisoning|phosphine poisoning,attending,,T60.4,true
+DX.ZINC_PHOSPHIDE_POISONING,Zinc phosphide poisoning,toxicology,rat killer poisoning|zinc phosphide toxicity|rodenticide poisoning,attending,,T60.4,true
+DX.ORGANOPHOSPHATE_POISONING,Organophosphate poisoning,toxicology,OP poisoning|organophosphorus poisoning|cholinergic toxicity|pesticide poisoning,attending,,T60.0,true
+DX.PARAQUAT_POISONING,Paraquat poisoning,toxicology,herbicide poisoning|paraquat toxicity|bipyridyl poisoning,attending,NE61,T60.3,true
+DX.PARACETAMOL_OVERDOSE,Paracetamol overdose,toxicology,acetaminophen overdose|paracetamol poisoning|APAP toxicity,attending,NE60,T39.1,true
+DX.SALICYLATE_POISONING,Salicylate poisoning,toxicology,aspirin overdose|salicylism|salicylate toxicity,attending,,T39.0,true
+DX.METHANOL_POISONING,Methanol poisoning,toxicology,methyl alcohol poisoning|hooch tragedy|spurious liquor poisoning|methanol toxicity,attending,NE61&XM7KD9,T51.1,true
+DX.ETHYLENE_GLYCOL_POISONING,Ethylene glycol poisoning,toxicology,antifreeze poisoning|ethylene glycol toxicity|glycol poisoning,attending,,T52.3,true
+DX.CARBON_MONOXIDE_POISONING,Carbon monoxide poisoning,toxicology,CO poisoning|carboxyhaemoglobinaemia|carbon monoxide toxicity,attending,NE61,T58,true
+DX.SNAKEBITE_NEUROTOXIC,"Snakebite envenomation, neurotoxic",toxicology,neurotoxic envenomation|krait bite|cobra bite|elapid envenoming,attending,NE61,T63.0,true
+DX.SNAKEBITE_HAEMOTOXIC,"Snakebite envenomation, haemotoxic",toxicology,viper bite|haemotoxic envenomation|Russell viper bite|venom induced consumption coagulopathy|hemotoxic snakebite,attending,NE61,T63.0,true
+DX.SCORPION_STING,Scorpion sting envenomation,toxicology,scorpion envenomation|scorpion bite|scorpionism,attending,NE61,T63.2,true
+DX.DIGOXIN_TOXICITY,Digoxin toxicity,drug-related,digitalis toxicity|digoxin poisoning|dig toxicity,attending,,T46.0,true
+DX.LITHIUM_TOXICITY,Lithium toxicity,drug-related,lithium poisoning|lithium overdose|lithium intoxication,attending,,T43.5,true
+DX.TCA_OVERDOSE,Tricyclic antidepressant overdose,toxicology,TCA poisoning|amitriptyline overdose|tricyclic toxicity,attending,,T43.0,true
+DX.BENZODIAZEPINE_OVERDOSE,Benzodiazepine overdose,toxicology,benzo overdose|sedative overdose|benzodiazepine poisoning,attending,,T42.4,true
+DX.OPIOID_OVERDOSE,Opioid overdose,toxicology,opiate poisoning|narcotic overdose|opioid toxicity,attending,,T40.2,true
+DX.IRON_OVERDOSE,Iron overdose,toxicology,iron poisoning|iron tablet overdose|ferrous sulphate poisoning,attending,,T45.4,true
+DX.DATURA_POISONING,Datura poisoning,toxicology,anticholinergic poisoning|dhatura poisoning|anticholinergic toxidrome,attending,,T62.2,true
+DX.YELLOW_OLEANDER_POISONING,Yellow oleander poisoning,toxicology,oleander poisoning|cardiac glycoside plant poisoning|Thevetia poisoning,attending,,T62.2,true
+DX.ALCOHOL_INTOXICATION,Acute alcohol intoxication,toxicology,ethanol intoxication|drunkenness|acute alcohol poisoning,attending,6C40.3,F10.0,true
+DX.ALCOHOL_WITHDRAWAL,Alcohol withdrawal syndrome,psychiatry,AWS|alcohol withdrawal|delirium tremens|DTs,attending,6C40.4,F10.3,true
+DX.ALCOHOL_DEPENDENCE,Alcohol dependence,psychiatry,alcohol use disorder|AUD|alcoholism,attending,6C40.2,F10.2,true
+DX.ACUTE_INTERMITTENT_PORPHYRIA,Acute intermittent porphyria,metabolic,AIP|acute porphyria|PBG deaminase deficiency|HMBS deficiency,attending,5C58.1Y,E80.2,true
+DX.PORPHYRIA_CUTANEA_TARDA,Porphyria cutanea tarda,metabolic,PCT|cutaneous porphyria|uroporphyrinogen decarboxylase deficiency,attending,5C58.10,E80.1,true
+DX.VARIEGATE_PORPHYRIA,Variegate porphyria,metabolic,VP|South African porphyria|protoporphyrinogen oxidase deficiency,attending,5C58.13,E80.2,true
+DX.HEREDITARY_COPROPORPHYRIA,Hereditary coproporphyria,metabolic,HCP|coproporphyrinogen oxidase deficiency|coproporphyria,attending,5C58.1Y,E80.2,true
+DX.ERYTHROPOIETIC_PROTOPORPHYRIA,Erythropoietic protoporphyria,metabolic,EPP|protoporphyria|ferrochelatase deficiency,attending,5C58.12,E80.0,true
+DX.ALAD_PORPHYRIA,ALA dehydratase deficiency porphyria,metabolic,ADP|Doss porphyria|ALAD deficiency porphyria,attending,5C58.1Y,E80.2,true
+DX.WILSON_DISEASE,Wilson disease,metabolic,Wilson's disease|hepatolenticular degeneration|copper overload,attending,5C64.00,E83.0,true
+DX.COPPER_DEFICIENCY,Copper deficiency,metabolic,hypocupraemia|acquired copper deficiency|copper deficiency myeloneuropathy|hypocupremia,attending,5B5K.6,E61.0,true
+DX.ZINC_TOXICITY,Zinc toxicity,toxicology,excess zinc intake|zinc induced copper deficiency|zinc overload,attending,,T56.5,true
+DX.VITAMIN_B6_DEFICIENCY,Vitamin B6 deficiency,metabolic,pyridoxine deficiency|pyridoxal phosphate deficiency|B6 deficiency,attending,5B5D,E53.1,true
+DX.THIAMINE_DEFICIENCY,Thiamine deficiency,metabolic,beriberi|vitamin B1 deficiency|Wernicke encephalopathy,attending,5B5A,E51.9,true
+DX.SCURVY,Scurvy,metabolic,vitamin C deficiency|ascorbic acid deficiency|scorbutus,attending,5B56.0,E54,true
+DX.VITAMIN_D_DEFICIENCY,Vitamin D deficiency,metabolic,hypovitaminosis D|osteomalacia|low vitamin D,attending,5B57.Z,E55.9,true
+DX.HYPONATRAEMIA,Hyponatraemia,metabolic,hyponatremia|low sodium|SIADH-related hyponatraemia,attending,5C72,E87.1,true
+DX.SIADH,Syndrome of inappropriate antidiuretic hormone secretion,endocrine,SIADH|SIAD|inappropriate ADH secretion,attending,5A60.2Z,E22.2,true
+DX.HYPOKALAEMIA,Hypokalaemia,metabolic,hypokalemia|low potassium|potassium deficiency,attending,5C77,E87.6,true
+DX.HYPERKALAEMIA,Hyperkalaemia,metabolic,hyperkalemia|high potassium|raised potassium,attending,5C76,E87.5,true
+DX.HYPOMAGNESAEMIA,Hypomagnesaemia,metabolic,hypomagnesemia|low magnesium|magnesium deficiency,attending,5C64.41,E83.4,true
+DX.LACTIC_ACIDOSIS,Lactic acidosis,metabolic,type A lactic acidosis|hyperlactataemia|lactic acidemia,attending,5C73,E87.2,true
+DX.TUMOUR_LYSIS_SYNDROME,Tumour lysis syndrome,oncology,TLS|tumor lysis syndrome|cytolysis syndrome,attending,5D01,E88.3,true
+DX.FALCIPARUM_MALARIA,Plasmodium falciparum malaria,infection,falciparum malaria|malignant tertian malaria|Pf malaria,attending,1F40,B50.9,true
+DX.SEVERE_MALARIA,Severe falciparum malaria,infection,cerebral malaria|complicated malaria|severe Pf malaria,attending,1F40.Y,B50.8,true
+DX.VIVAX_MALARIA,Plasmodium vivax malaria,infection,vivax malaria|benign tertian malaria|Pv malaria,attending,1F41.Z,B51.9,true
+DX.MIXED_MALARIA,Mixed malaria infection,infection,mixed Pf Pv infection|mixed plasmodial infection|mixed species malaria,attending,,B50.9,true
+DX.KNOWLESI_MALARIA,Plasmodium knowlesi malaria,infection,knowlesi malaria|simian malaria|Pk malaria,attending,1F44,B53.1,true
+DX.DENGUE,Dengue fever,infection,dengue|breakbone fever|DF|dengue without warning signs,attending,1D20,A97.0,true
+DX.SEVERE_DENGUE,Severe dengue,infection,dengue haemorrhagic fever|DHF|dengue shock syndrome|DSS,attending,1D22,A97.2,true
+DX.CHIKUNGUNYA,Chikungunya,infection,chikungunya fever|CHIKV infection|chikungunya arthritis,attending,1D40,A92.0,true
+DX.TYPHOID_FEVER,Typhoid fever,infection,enteric fever|Salmonella Typhi infection|typhoid,attending,1A07,A01.0,true
+DX.PARATYPHOID_FEVER,Paratyphoid fever,infection,enteric fever paratyphi|Salmonella Paratyphi infection|paratyphoid,attending,1A08,A01.4,true
+DX.SCRUB_TYPHUS,Scrub typhus,infection,tsutsugamushi disease|Orientia tsutsugamushi infection|chigger-borne rickettsiosis,attending,1C30.3,A75.3,true
+DX.SPOTTED_FEVER,Spotted fever rickettsiosis,infection,Indian tick typhus|rickettsial spotted fever|tick-borne rickettsiosis,attending,1C31.Z,A77.9,true
+DX.LEPTOSPIROSIS,Leptospirosis,infection,Weil disease|leptospiral infection|rat fever,attending,1B91,A27.9,true
+DX.BRUCELLOSIS,Brucellosis,infection,Malta fever|undulant fever|Brucella infection,attending,1B95,A23.9,true
+DX.MELIOIDOSIS,Melioidosis,infection,Burkholderia pseudomallei infection|Whitmore disease|Nightcliff gardener's disease,attending,1C42,A24.4,true
+DX.KALA_AZAR,Visceral leishmaniasis,infection,kala-azar|VL|black fever|Leishmania donovani infection,attending,1F54.0,B55.0,true
+DX.PULMONARY_TB,Pulmonary tuberculosis,infection,pulmonary TB|PTB|lung tuberculosis|Koch's chest,attending,1B10,A15.0,true
+DX.TB_LYMPHADENITIS,Tuberculous lymphadenitis,infection,TB lymphadenitis|scrofula|lymph node TB,attending,1B12.6,A18.2,true
+DX.TB_PLEURAL,Tuberculous pleural effusion,infection,TB pleurisy|tuberculous pleurisy|TB effusion,attending,1B10.0,A15.6,true
+DX.TB_ABDOMINAL,Abdominal tuberculosis,infection,intestinal TB|TB peritonitis|abdominal Koch's,attending,1B12.7,A18.3,true
+DX.TB_MENINGITIS,Tuberculous meningitis,infection,TBM|TB meningitis|meningeal tuberculosis,attending,1B11.0,A17.0,true
+DX.MILIARY_TB,Miliary tuberculosis,infection,disseminated TB|miliary TB|military tuberculosis,attending,1B13.Z,A19.9,true
+DX.SPINAL_TB,Tuberculosis of spine,infection,Pott disease|spinal TB|tuberculous spondylitis,attending,,A18.0,true
+DX.DRUG_RESISTANT_TB,Multidrug-resistant tuberculosis,infection,MDR-TB|drug resistant TB|rifampicin resistant TB,attending,MG52.00,U84.3,true
+DX.LATENT_TB,Latent tuberculosis infection,infection,LTBI|latent TB|TB infection without disease,attending,1B14,Z22.7,true
+DX.HIV_INFECTION,HIV infection,infection,HIV|human immunodeficiency virus infection|HIV positive,attending,1C62,B24,true
+DX.ADVANCED_HIV,Advanced HIV disease,infection,AIDS|acquired immunodeficiency syndrome|HIV disease with opportunistic infection,attending,,B20,true
+DX.PCP,Pneumocystis pneumonia,infection,PCP|PJP|Pneumocystis jirovecii pneumonia,attending,1F2G.0,B48.5,true
+DX.CRYPTOCOCCAL_MENINGITIS,Cryptococcal meningitis,infection,cryptococcosis|cryptococcal meningoencephalitis|CM,attending,1F27.10,B45.1,true
+DX.TOXOPLASMOSIS,Cerebral toxoplasmosis,infection,toxoplasma encephalitis|CNS toxoplasmosis|toxo,attending,1F57.1,B58.2,true
+DX.HEPATITIS_A,Acute hepatitis A,infection,HAV|infectious hepatitis|hepatitis A virus infection,attending,1E50.0,B15.9,true
+DX.HEPATITIS_B_ACUTE,Acute hepatitis B,infection,acute HBV|hepatitis B virus infection|serum hepatitis,attending,1E50.1,B16.9,true
+DX.HEPATITIS_B_CHRONIC,Chronic hepatitis B,infection,CHB|chronic HBV|HBsAg positive chronic hepatitis,attending,1E51.0Z,B18.1,true
+DX.HEPATITIS_C,Chronic hepatitis C,infection,HCV|chronic HCV|hepatitis C virus infection,attending,1E51.1,B18.2,true
+DX.HEPATITIS_D,Hepatitis D,infection,HDV|delta hepatitis|hepatitis delta,attending,1E50.3,B17.0,true
+DX.HEPATITIS_E,Acute hepatitis E,infection,HEV|hepatitis E virus infection|enterically transmitted non-A non-B hepatitis,attending,1E50.4,B17.2,true
+DX.PARVOVIRUS_B19,Parvovirus B19 infection,infection,erythema infectiosum|fifth disease|B19 infection|slapped cheek,attending,1F04,B34.3,true
+DX.CMV_INFECTION,Cytomegalovirus infection,infection,CMV|CMV disease|cytomegalovirus mononucleosis,attending,1D82.Z,B25.9,true
+DX.EBV_INFECTION,Infectious mononucleosis,infection,glandular fever|EBV infection|Epstein-Barr virus infection|mono,attending,1D81.Z,B27.0,true
+DX.MYCOPLASMA_PNEUMONIA,Mycoplasma pneumoniae infection,infection,Mycoplasma pneumonia|atypical pneumonia|walking pneumonia,attending,CA40.04,J15.7,true
+DX.COVID19,COVID-19,infection,SARS-CoV-2 infection|coronavirus disease 2019|covid,attending,RA01.0,U07.1,true
+DX.INFLUENZA,Influenza,infection,flu|influenza A|seasonal influenza,attending,1E32,J11.1,true
+DX.SEPSIS,Sepsis,infection,septicaemia|septicemia|bacteraemia with organ dysfunction,attending,1G40,A41.9,true
+DX.SEPTIC_SHOCK,Septic shock,infection,severe sepsis with shock|distributive shock|vasoplegic shock,attending,1G41,R57.2,true
+DX.INFECTIVE_ENDOCARDITIS,Infective endocarditis,infection,IE|bacterial endocarditis|SBE,attending,BB40,I33.0,true
+DX.RHEUMATIC_HEART_DISEASE,Rheumatic heart disease,cardiology,RHD|rheumatic valvular disease|rheumatic mitral stenosis,attending,BC20.Z,I09.9,true
+DX.UTI,Urinary tract infection,infection,UTI|cystitis|bladder infection,attending,GC08.Z,N39.0,true
+DX.PYELONEPHRITIS,Acute pyelonephritis,renal,pyelonephritis|kidney infection|upper UTI,attending,GB51,N10,true
+DX.COMMUNITY_ACQUIRED_PNEUMONIA,Community-acquired pneumonia,respiratory,CAP|pneumonia|chest infection|lobar pneumonia,attending,CA40,J18.9,true
+DX.ASPIRATION_PNEUMONIA,Aspiration pneumonia,respiratory,aspiration pneumonitis|inhalation pneumonia|Mendelson syndrome,attending,CA71.0,J69.0,true
+DX.LUNG_ABSCESS,Lung abscess,respiratory,pulmonary abscess|abscess of lung|cavitating pneumonia,attending,CA43.2,J85.2,true
+DX.EMPYEMA,Empyema thoracis,respiratory,pleural empyema|pyothorax|infected pleural effusion,attending,CA44,J86.9,true
+DX.BACTERIAL_MENINGITIS,Bacterial meningitis,infection,pyogenic meningitis|acute bacterial meningitis|meningococcal meningitis,attending,1D01.0Z,G00.9,true
+DX.VIRAL_MENINGITIS,Viral meningitis,infection,aseptic meningitis|viral meningitis syndrome|lymphocytic meningitis,attending,1C8E.Z,A87.9,true
+DX.LIVER_ABSCESS_AMOEBIC,Amoebic liver abscess,infection,ALA|amebic liver abscess|hepatic amoebiasis,attending,1A36.10,A06.4,true
+DX.LIVER_ABSCESS_PYOGENIC,Pyogenic liver abscess,infection,PLA|bacterial liver abscess|hepatic abscess,attending,DB90.0&XN74M,K75.0,true
+DX.AMOEBIC_DYSENTERY,Amoebic dysentery,infection,intestinal amoebiasis|amebic colitis|Entamoeba histolytica infection,attending,1A36.00,A06.0,true
+DX.HOOKWORM_INFECTION,Hookworm infection,infection,ancylostomiasis|hookworm disease|necatoriasis,attending,1F68.Z,B76.9,true
+DX.GIARDIASIS,Giardiasis,infection,Giardia infection|lambliasis|beaver fever,attending,1A31,A07.1,true
+DX.CLOSTRIDIOIDES_DIFFICILE,Clostridioides difficile infection,infection,C diff|CDI|pseudomembranous colitis,attending,1A04,A04.7,true
+DX.CELLULITIS,Cellulitis,infection,skin and soft tissue infection|SSTI|erysipelas,attending,1B70.Z,L03.9,true
+DX.INFECTIOUS_DIARRHOEA,Acute infectious gastroenteritis,infection,gastroenteritis|infectious diarrhea|acute diarrhoeal disease,attending,1A40.Z,A09,true
+DX.PEPTIC_ULCER,Peptic ulcer disease,gastroenterology,PUD|peptic ulcer|stomach ulcer|duodenal ulcer,attending,DA61,K27.9,true
+DX.BLEEDING_PEPTIC_ULCER,Bleeding peptic ulcer,gastroenterology,haemorrhagic peptic ulcer|peptic ulcer with haemorrhage|bleeding ulcer,attending,DA61/ME24.9Z,K27.4,true
+DX.H_PYLORI_GASTRITIS,Helicobacter pylori gastritis,gastroenterology,H pylori infection|HP gastritis|Helicobacter infection,attending,DA42.1,K29.7,true
+DX.UPPER_GI_BLEED,Upper gastrointestinal haemorrhage,gastroenterology,UGIB|upper GI bleed|haematemesis|upper gastrointestinal hemorrhage,attending,ME24.9,K92.2,true
+DX.LOWER_GI_BLEED,Lower gastrointestinal haemorrhage,gastroenterology,LGIB|lower GI bleed|rectal bleeding|haematochezia,attending,ME24.9,K92.2,true
+DX.VARICEAL_BLEED,Oesophageal variceal haemorrhage,hepatology,variceal bleed|esophageal varices with bleeding|bleeding varices,attending,DA26.00,I85.0,true
+DX.ANGIODYSPLASIA,Angiodysplasia of the gastrointestinal tract,gastroenterology,vascular ectasia|AVM of colon|GI angiodysplasia,attending,DB34.0,K55.2,true
+DX.GORD,Gastro-oesophageal reflux disease,gastroenterology,GERD|GORD|acid reflux|reflux oesophagitis,attending,DA22.Z,K21.9,true
+DX.BARRETT_OESOPHAGUS,Barrett oesophagus,gastroenterology,Barrett's esophagus|columnar lined oesophagus|BO,attending,DA23,K22.7,true
+DX.ACHALASIA,Achalasia,gastroenterology,achalasia cardia|oesophageal achalasia|cardiospasm,attending,DA21.0,K22.0,true
+DX.COELIAC_DISEASE,Coeliac disease,gastroenterology,celiac disease|gluten enteropathy|coeliac sprue|CD,attending,DA95,K90.0,true
+DX.TROPICAL_SPRUE,Tropical sprue,gastroenterology,tropical malabsorption|tropical enteropathy|post infective malabsorption,attending,DA96.01,K90.1,true
+DX.CROHN_DISEASE,Crohn disease,gastroenterology,Crohn's disease|CD|regional enteritis|IBD Crohn,attending,DD70,K50.9,true
+DX.ULCERATIVE_COLITIS,Ulcerative colitis,gastroenterology,UC|IBD colitis|proctocolitis,attending,DD71,K51.9,true
+DX.MICROSCOPIC_COLITIS,Microscopic colitis,gastroenterology,collagenous colitis|lymphocytic colitis|MC,attending,DB33.1Z,K52.8,true
+DX.IBS,Irritable bowel syndrome,gastroenterology,IBS|spastic colon|functional bowel disorder,attending,DD91.0Z,K58.8,true
+DX.FUNCTIONAL_DYSPEPSIA,Functional dyspepsia,gastroenterology,non-ulcer dyspepsia|NUD|indigestion,attending,DD90.3,K30,true
+DX.ACUTE_PANCREATITIS,Acute pancreatitis,gastroenterology,AP|pancreatitis|acute pancreatic inflammation,attending,DC31,K85.9,true
+DX.CHRONIC_PANCREATITIS,Chronic pancreatitis,gastroenterology,CP|chronic calcific pancreatitis|tropical pancreatitis,attending,DC32,K86.1,true
+DX.ALCOHOLIC_PANCREATITIS,Alcohol-induced acute pancreatitis,gastroenterology,alcoholic pancreatitis|ethanol pancreatitis|alcohol related pancreatitis,attending,DC31.1,K85.2,true
+DX.GALLSTONES,Cholelithiasis,hepatology,gallstones|gall bladder stones|biliary calculi,attending,DC11.3,K80.2,true
+DX.ACUTE_CHOLECYSTITIS,Acute cholecystitis,hepatology,cholecystitis|inflamed gallbladder|calculous cholecystitis,attending,DC12.0Z,K81.0,true
+DX.CHOLEDOCHOLITHIASIS,Choledocholithiasis,hepatology,CBD stones|common bile duct stones|bile duct calculi,attending,DC11.6,K80.5,true
+DX.ACUTE_CHOLANGITIS,Acute cholangitis,hepatology,ascending cholangitis|biliary sepsis|Charcot triad cholangitis,attending,DC13,K83.0,true
+DX.PSC,Primary sclerosing cholangitis,hepatology,PSC|sclerosing cholangitis|fibrosing cholangitis,attending,DB96.2Z,K83.0,true
+DX.PBC,Primary biliary cholangitis,hepatology,PBC|primary biliary cirrhosis|autoimmune cholangiopathy,attending,DB96.1Z,K74.3,true
+DX.MESENTERIC_ISCHAEMIA,Acute mesenteric ischaemia,gastroenterology,mesenteric ischemia|bowel ischaemia|intestinal ischaemia,attending,DD30.1,K55.0,true
+DX.ISCHAEMIC_COLITIS,Ischaemic colitis,gastroenterology,ischemic colitis|colonic ischaemia|colon ischaemia,attending,DD31.00,K55.9,true
+DX.SMALL_BOWEL_OBSTRUCTION,Intestinal obstruction,gastroenterology,bowel obstruction|SBO|intestinal ileus,attending,,K56.6,true
+DX.APPENDICITIS,Acute appendicitis,gastroenterology,appendicitis|inflamed appendix|acute appendix,attending,DB10.02,K35.8,true
+DX.DIVERTICULITIS,Diverticulitis,gastroenterology,diverticular disease|colonic diverticulitis|sigmoid diverticulitis,attending,DC80,K57.3,true
+DX.CONSTIPATION,Chronic constipation,gastroenterology,constipation|obstipation|functional constipation,attending,,K59.0,true
+DX.PERIODIC_ABDOMINAL_PAIN,Nonspecific abdominal pain,gastroenterology,NSAP|abdominal pain unspecified|functional abdominal pain,attending,MD81.4,R10.4,true
+DX.CIRRHOSIS,Cirrhosis of liver,hepatology,liver cirrhosis|chronic liver disease|CLD|hepatic fibrosis,attending,DB93.1,K74.6,true
+DX.ALCOHOLIC_LIVER_DISEASE,Alcohol-related liver disease,hepatology,ALD|alcoholic liver disease|alcoholic cirrhosis,attending,DB94.Z,K70.9,true
+DX.ALCOHOLIC_HEPATITIS,Alcoholic hepatitis,hepatology,alcohol-related hepatitis|AH|acute alcoholic hepatitis,attending,DB94.1Z,K70.1,true
+DX.MASLD,Metabolic dysfunction-associated steatotic liver disease,hepatology,MASLD|NAFLD|fatty liver|non alcoholic fatty liver disease,attending,DB92.Z,K76.0,true
+DX.MASH,Metabolic dysfunction-associated steatohepatitis,hepatology,MASH|NASH|non alcoholic steatohepatitis,attending,DB92.1,K75.8,true
+DX.AUTOIMMUNE_HEPATITIS,Autoimmune hepatitis,hepatology,AIH|lupoid hepatitis|autoimmune chronic hepatitis,attending,DB96.0,K75.4,true
+DX.DRUG_INDUCED_LIVER_INJURY,Drug-induced liver injury,drug-related,DILI|drug hepatotoxicity|toxic hepatitis|ATT hepatitis,attending,DB95.Z,K71.9,true
+DX.ACUTE_LIVER_FAILURE,Acute liver failure,hepatology,ALF|fulminant hepatic failure|acute hepatic failure,attending,DB91.Z,K72.0,true
+DX.HEPATIC_ENCEPHALOPATHY,Hepatic encephalopathy,hepatology,HE|portosystemic encephalopathy|hepatic coma,attending,DB99.5,K72.9,true
+DX.PORTAL_HYPERTENSION,Portal hypertension,hepatology,PHT|raised portal pressure|portal hypertensive syndrome,attending,DB98.7Z,K76.6,true
+DX.ASCITES_SBP,Spontaneous bacterial peritonitis,hepatology,SBP|ascitic fluid infection|primary peritonitis,attending,DC50.00,K65.8,true
+DX.HEPATORENAL_SYNDROME,Hepatorenal syndrome,hepatology,HRS|HRS-AKI|hepatorenal failure,attending,DB99.2,K76.7,true
+DX.GILBERT_SYNDROME,Gilbert syndrome,hepatology,Gilbert's syndrome|familial nonhaemolytic hyperbilirubinaemia|constitutional hepatic dysfunction,attending,5C58.01,E80.4,true
+DX.HEPATOCELLULAR_CARCINOMA,Hepatocellular carcinoma,oncology,HCC|hepatoma|primary liver cancer,attending,2C12.02,C22.0,true
+DX.CHOLANGIOCARCINOMA,Cholangiocarcinoma,oncology,bile duct cancer|biliary tract cancer|Klatskin tumour,attending,2C12.10,C22.1,true
+DX.GALLBLADDER_CANCER,Gallbladder carcinoma,oncology,carcinoma gallbladder|GBC|gall bladder cancer,attending,2C13.Z,C23,true
+DX.PANCREATIC_CANCER,Pancreatic adenocarcinoma,oncology,pancreatic cancer|carcinoma pancreas|PDAC,attending,2C10.0,C25.9,true
+DX.GASTRIC_CANCER,Gastric carcinoma,oncology,stomach cancer|carcinoma stomach|gastric adenocarcinoma,attending,2B72.Z,C16.9,true
+DX.OESOPHAGEAL_CANCER,Oesophageal carcinoma,oncology,esophageal cancer|carcinoma oesophagus|food pipe cancer,attending,2B70.Z,C15.9,true
+DX.COLORECTAL_CANCER,Colorectal carcinoma,oncology,CRC|bowel cancer|colon cancer|rectal cancer,attending,2B90.Z,C18.9,true
+DX.LUNG_CANCER,Carcinoma of the lung,oncology,lung cancer|bronchogenic carcinoma|NSCLC|SCLC,attending,2C25.Z,C34.9,true
+DX.BREAST_CANCER,Breast carcinoma,oncology,breast cancer|carcinoma breast|CA breast,attending,2C6Z,C50.9,true
+DX.PROSTATE_CANCER,Prostate carcinoma,oncology,prostate cancer|carcinoma prostate|CA prostate,attending,2C82.Z,C61,true
+DX.RENAL_CELL_CARCINOMA,Renal cell carcinoma,oncology,RCC|kidney cancer|hypernephroma,attending,2C90.0,C64,true
+DX.OVARIAN_CANCER,Ovarian carcinoma,oncology,ovarian cancer|carcinoma ovary|CA ovary,attending,2C73.Z,C56,true
+DX.CERVICAL_CANCER,Cervical carcinoma,oncology,cervical cancer|carcinoma cervix|CA cervix,attending,2C77.Z,C53.9,true
+DX.ORAL_CANCER,Oral cavity carcinoma,oncology,mouth cancer|oral squamous cell carcinoma|OSCC,attending,2B66.Z,C06.9,true
+DX.METASTATIC_CANCER_UNKNOWN_PRIMARY,Metastatic carcinoma of unknown primary,oncology,CUP|cancer of unknown primary|disseminated malignancy,attending,2D44,C80.0,true
+DX.BONE_MARROW_INFILTRATION,Bone marrow infiltration by metastatic carcinoma,oncology,marrow metastases|myelophthisis|leucoerythroblastic anaemia,attending,2E03,C79.5,true
+DX.PARANEOPLASTIC_SYNDROME,Paraneoplastic neurological syndrome,oncology,paraneoplastic syndrome|PNS|onconeural antibody syndrome,attending,8E4A.1,G13.0,true
+DX.AKI,Acute kidney injury,renal,AKI|acute renal failure|ARF,attending,GB60,N17.9,true
+DX.ACUTE_TUBULAR_NECROSIS,Acute tubular necrosis,renal,ATN|tubular necrosis|ischaemic ATN,attending,GB52,N17.0,true
+DX.PIGMENT_NEPHROPATHY,Pigment nephropathy,renal,haem pigment nephropathy|myoglobinuric AKI|haemoglobinuric AKI,attending,,N17.0,true
+DX.ACUTE_INTERSTITIAL_NEPHRITIS,Acute interstitial nephritis,renal,AIN|tubulointerstitial nephritis|drug induced interstitial nephritis,attending,GB50,N10,true
+DX.CKD,Chronic kidney disease,renal,CKD|chronic renal failure|CRF|chronic kidney failure,attending,GB61,N18.9,true
+DX.ESKD,End-stage kidney disease,renal,ESRD|end stage renal disease|CKD stage 5,attending,GB61.5,N18.5,true
+DX.DIABETIC_NEPHROPATHY,Diabetic kidney disease,renal,DKD|diabetic nephropathy|Kimmelstiel-Wilson disease,attending,GB61.Z,E11.2,true
+DX.HYPERTENSIVE_NEPHROPATHY,Hypertensive nephrosclerosis,renal,hypertensive nephropathy|hypertensive kidney disease|benign nephrosclerosis,attending,BA02,I12.9,true
+DX.NEPHROTIC_SYNDROME,Nephrotic syndrome,renal,nephrosis|nephrotic range proteinuria|NS,attending,GB41,N04.9,true
+DX.MINIMAL_CHANGE_DISEASE,Minimal change disease,renal,MCD|lipoid nephrosis|nil disease,attending,,N04.0,true
+DX.FSGS,Focal segmental glomerulosclerosis,renal,FSGS|focal sclerosis|focal glomerulosclerosis,attending,,N04.1,true
+DX.MEMBRANOUS_NEPHROPATHY,Membranous nephropathy,renal,MN|membranous glomerulonephritis|PLA2R nephropathy,attending,,N04.2,true
+DX.NEPHRITIC_SYNDROME,Acute nephritic syndrome,renal,nephritic syndrome|acute glomerulonephritis|AGN,attending,GB40&XT5R,N00.9,true
+DX.POST_INFECTIOUS_GN,Post-infectious glomerulonephritis,renal,PIGN|post streptococcal glomerulonephritis|PSGN,attending,,N00.9,true
+DX.IGA_NEPHROPATHY,IgA nephropathy,renal,IgAN|Berger disease|IgA glomerulonephritis,attending,,N02.8,true
+DX.RPGN,Rapidly progressive glomerulonephritis,renal,RPGN|crescentic glomerulonephritis|crescentic GN,attending,GB40,N01.9,true
+DX.ANTI_GBM_DISEASE,Anti-glomerular basement membrane disease,renal,anti-GBM disease|Goodpasture syndrome|Goodpasture disease,attending,MF85,M31.0,true
+DX.LUPUS_NEPHRITIS,Lupus nephritis,renal,LN|SLE nephritis|lupus glomerulonephritis,attending,4A40.0Y,M32.1,true
+DX.CAST_NEPHROPATHY,Myeloma cast nephropathy,renal,myeloma kidney|light chain cast nephropathy|cast nephropathy,attending,GB55.Y&XH4XA9,N16.1,true
+DX.RTA_DISTAL,Distal renal tubular acidosis,renal,type 1 RTA|dRTA|classic distal RTA,attending,GB90.44,N25.8,true
+DX.RTA_PROXIMAL,Proximal renal tubular acidosis,renal,type 2 RTA|pRTA|Fanconi syndrome,attending,GB90.44,N25.8,true
+DX.RTA_TYPE4,Type 4 renal tubular acidosis,renal,hyperkalaemic RTA|hyporeninaemic hypoaldosteronism|type IV RTA,attending,GB90.44,N25.8,true
+DX.RENAL_STONES,Nephrolithiasis,renal,kidney stones|renal calculi|urolithiasis,attending,GB70.0Z,N20.0,true
+DX.POLYCYSTIC_KIDNEY_DISEASE,Autosomal dominant polycystic kidney disease,renal,ADPKD|polycystic kidneys|PKD,attending,GB81,Q61.2,true
+DX.RHABDOMYOLYSIS,Rhabdomyolysis,neuromuscular,rhabdo|muscle breakdown|crush syndrome,attending,FB32.20,M62.8,true
+DX.SLE,Systemic lupus erythematosus,rheumatology,SLE|lupus|systemic lupus,attending,4A40.0,M32.9,true
+DX.RHEUMATOID_ARTHRITIS,Rheumatoid arthritis,rheumatology,RA|rheumatoid disease|inflammatory polyarthritis,attending,FA20.Z,M06.9,true
+DX.SJOGREN_SYNDROME,Sjogren syndrome,rheumatology,Sjogren's syndrome|sicca syndrome|primary Sjogren,attending,4A43.2Z,M35.0,true
+DX.SYSTEMIC_SCLEROSIS,Systemic sclerosis,rheumatology,SSc|scleroderma|CREST syndrome,attending,4A42.Z,M34.9,true
+DX.MCTD,Mixed connective tissue disease,rheumatology,MCTD|overlap syndrome|Sharp syndrome,attending,4A43.3,M35.1,true
+DX.GIANT_CELL_ARTERITIS,Giant cell arteritis,rheumatology,GCA|temporal arteritis|Horton disease,attending,4A44.2,M31.6,true
+DX.TAKAYASU_ARTERITIS,Takayasu arteritis,rheumatology,pulseless disease|aortoarteritis|Takayasu's disease,attending,4A44.1,M31.4,true
+DX.POLYARTERITIS_NODOSA,Polyarteritis nodosa,rheumatology,PAN|periarteritis nodosa|necrotising arteritis,attending,4A44.4,M30.0,true
+DX.GPA,Granulomatosis with polyangiitis,rheumatology,GPA|Wegener granulomatosis|ANCA vasculitis,attending,4A44.A1,M31.3,true
+DX.MPA,Microscopic polyangiitis,rheumatology,MPA|microscopic polyarteritis|MPO-ANCA vasculitis,attending,4A44.A0,M31.7,true
+DX.EGPA,Eosinophilic granulomatosis with polyangiitis,rheumatology,EGPA|Churg-Strauss syndrome|allergic granulomatosis,attending,4A44.A2,M30.1,true
+DX.IGA_VASCULITIS,IgA vasculitis,rheumatology,Henoch-Schonlein purpura|HSP|IgAV,attending,4A44.92,D69.0,true
+DX.CRYOGLOBULINAEMIC_VASCULITIS,Cryoglobulinaemic vasculitis,rheumatology,cryoglobulinemia|mixed cryoglobulinaemia|cryoglobulinemic vasculitis,attending,4A44.90,D89.1,true
+DX.BEHCET_DISEASE,Behcet disease,rheumatology,Behcet's syndrome|BD|oculo-oral-genital syndrome,attending,4A62,M35.2,true
+DX.DERMATOMYOSITIS,Dermatomyositis,neuromuscular,DM|inflammatory myopathy with rash|dermatomyositis syndrome,attending,4A41.00,M33.1,true
+DX.POLYMYOSITIS,Polymyositis,neuromuscular,PM|idiopathic inflammatory myopathy|polymyositis syndrome,attending,4A41.1Z,M33.2,true
+DX.INCLUSION_BODY_MYOSITIS,Inclusion body myositis,neuromuscular,IBM|sporadic inclusion body myositis|sIBM,attending,4A41.20,G72.4,true
+DX.IMNM,Immune-mediated necrotising myopathy,neuromuscular,IMNM|necrotizing autoimmune myopathy|statin associated autoimmune myopathy|HMGCR myopathy,attending,,G72.4,true
+DX.ANTISYNTHETASE_SYNDROME,Antisynthetase syndrome,neuromuscular,ASS|anti-Jo-1 syndrome|antisynthetase myositis,attending,4A43.Y,M33.2,true
+DX.STATIN_MYOPATHY,Statin-induced myopathy,drug-related,statin myalgia|drug induced myopathy|statin myotoxicity,attending,8C80,G72.0,true
+DX.HYPOTHYROID_MYOPATHY,Hypothyroid myopathy,neuromuscular,myxoedema myopathy|hypothyroid muscle disease|Hoffmann syndrome,attending,5A00.2Y,G73.5,true
+DX.MUSCULAR_DYSTROPHY,Muscular dystrophy,neuromuscular,limb girdle muscular dystrophy|LGMD|myotonic dystrophy,attending,8C70.Z,G71.0,true
+DX.POLYMYALGIA_RHEUMATICA,Polymyalgia rheumatica,rheumatology,PMR|polymyalgia|senile rheumatic gout,attending,FA22,M35.3,true
+DX.GOUT,Gout,rheumatology,gouty arthritis|podagra|urate arthropathy,attending,FA25.2Z,M10.9,true
+DX.PSEUDOGOUT,Calcium pyrophosphate deposition disease,rheumatology,CPPD|pseudogout|chondrocalcinosis,attending,FA26.2,M11.2,true
+DX.REACTIVE_ARTHRITIS,Reactive arthritis,rheumatology,ReA|Reiter syndrome|post infectious arthritis,attending,,M02.9,true
+DX.ANKYLOSING_SPONDYLITIS,Ankylosing spondylitis,rheumatology,AS|axial spondyloarthritis|axSpA,attending,FA92.0,M45,true
+DX.PSORIATIC_ARTHRITIS,Psoriatic arthritis,rheumatology,PsA|psoriatic arthropathy|psoriasis arthritis,attending,FA21.Z,L40.5,true
+DX.SEPTIC_ARTHRITIS,Septic arthritis,infection,infective arthritis|pyogenic arthritis|joint infection,attending,FA10,M00.9,true
+DX.OSTEOARTHRITIS,Osteoarthritis,rheumatology,OA|degenerative joint disease|osteoarthrosis,attending,FA0Z,M19.9,true
+DX.ADULT_ONSET_STILL,Adult-onset Still disease,rheumatology,AOSD|Still's disease|systemic onset arthritis in adults,attending,FA23,M06.1,true
+DX.SARCOIDOSIS,Sarcoidosis,rheumatology,sarcoid|Besnier-Boeck-Schaumann disease|granulomatous disease,attending,4B20,D86.9,true
+DX.IGG4_RELATED_DISEASE,IgG4-related disease,rheumatology,IgG4-RD|IgG4 related sclerosing disease|autoimmune pancreatitis type 1,attending,4A43.0,D89.8,true
+DX.FIBROMYALGIA,Fibromyalgia,rheumatology,fibromyalgia syndrome|FMS|chronic widespread pain,attending,MG30.01,M79.7,true
+DX.MYASTHENIA_GRAVIS,Myasthenia gravis,neuromuscular,MG|myasthenia|autoimmune myasthenia,attending,8C60,G70.0,true
+DX.LEMS,Lambert-Eaton myasthenic syndrome,neuromuscular,LEMS|Lambert Eaton syndrome|myasthenic syndrome,attending,8C62,G73.1,true
+DX.GBS,Guillain-Barre syndrome,neuromuscular,GBS|AIDP|acute inflammatory demyelinating polyneuropathy|Landry paralysis,attending,8C01.0,G61.0,true
+DX.CIDP,Chronic inflammatory demyelinating polyneuropathy,neuromuscular,CIDP|chronic inflammatory demyelinating polyradiculoneuropathy|chronic GBS,attending,8C01.3,G61.8,true
+DX.MOTOR_NEURON_DISEASE,Motor neuron disease,neuromuscular,MND|amyotrophic lateral sclerosis|ALS|Lou Gehrig disease,attending,8B60.Z,G12.2,true
+DX.MULTIFOCAL_MOTOR_NEUROPATHY,Multifocal motor neuropathy,neuromuscular,MMN|multifocal motor neuropathy with conduction block|anti-GM1 neuropathy,attending,8C01.3,G61.8,true
+DX.PERIPHERAL_NEUROPATHY,"Peripheral neuropathy, unspecified",neuromuscular,polyneuropathy|peripheral nerve disease|neuropathy,attending,8C0Z,G62.9,true
+DX.DIABETIC_NEUROPATHY,Diabetic peripheral neuropathy,neuromuscular,diabetic polyneuropathy|DPN|diabetic neuropathy,attending,8C03.0,E11.4,true
+DX.TOXIC_NEUROPATHY,Toxic neuropathy,toxicology,heavy metal neuropathy|toxic polyneuropathy|neurotoxic neuropathy,attending,8D43.2Y,G62.2,true
+DX.DRUG_INDUCED_NEUROPATHY,Drug-induced peripheral neuropathy,drug-related,drug induced polyneuropathy|chemotherapy induced neuropathy|isoniazid neuropathy,attending,8D43.20,G62.0,true
+DX.ALCOHOLIC_NEUROPATHY,Alcoholic polyneuropathy,neuromuscular,alcohol related neuropathy|alcoholic neuropathy|nutritional neuropathy,attending,8D44.0,G62.1,true
+DX.VASCULITIC_NEUROPATHY,Vasculitic neuropathy,neuromuscular,mononeuritis multiplex|vasculitic mononeuropathy|ischaemic neuropathy,attending,8E4A.1,G63.5,true
+DX.LEPROSY,Leprosy,infection,Hansen disease|leprous neuropathy|Mycobacterium leprae infection,attending,1B20.Z,A30.9,true
+DX.SUBACUTE_COMBINED_DEGENERATION,Subacute combined degeneration of the spinal cord,neurology,SACD|SCD of cord|B12 myelopathy,attending,8B44.Y,E53.8,true
+DX.COPPER_DEFICIENCY_MYELOPATHY,Copper deficiency myelopathy,neurology,copper deficiency myeloneuropathy|hypocupric myelopathy|CDM,attending,5B5K.6/8D40.Y,E61.0,true
+DX.TRANSVERSE_MYELITIS,Transverse myelitis,neurology,TM|acute myelitis|acute transverse myelopathy,attending,8A41.0,G37.3,true
+DX.CORD_COMPRESSION,Spinal cord compression,neurology,compressive myelopathy|metastatic cord compression|MSCC,attending,8B42,G95.2,true
+DX.MULTIPLE_SCLEROSIS,Multiple sclerosis,neurology,MS|disseminated sclerosis|demyelinating disease,attending,8A40.Z,G35,true
+DX.NMOSD,Neuromyelitis optica spectrum disorder,neurology,NMOSD|Devic disease|aquaporin-4 antibody disease,attending,8A43.Z,G36.0,true
+DX.ISCHAEMIC_STROKE,Ischaemic stroke,neurology,cerebral infarction|ischemic stroke|CVA|brain attack,attending,8B11.5Z,I63.9,true
+DX.TIA,Transient ischaemic attack,neurology,TIA|mini-stroke|transient ischemic attack,attending,8B10.Z,G45.9,true
+DX.INTRACEREBRAL_HAEMORRHAGE,Intracerebral haemorrhage,neurology,ICH|haemorrhagic stroke|intracerebral hemorrhage|brain bleed,attending,8B00.Z,I61.9,true
+DX.SUBARACHNOID_HAEMORRHAGE,Subarachnoid haemorrhage,neurology,SAH|subarachnoid hemorrhage|ruptured aneurysm,attending,8B01.2,I60.9,true
+DX.SUBDURAL_HAEMATOMA,Subdural haematoma,neurology,SDH|subdural hematoma|chronic subdural,attending,8B02,I62.0,true
+DX.EPILEPSY,Epilepsy,neurology,seizure disorder|epileptic seizures|fits,attending,,G40.9,true
+DX.STATUS_EPILEPTICUS,Status epilepticus,neurology,SE|prolonged seizure|continuous seizures,attending,8A66.Z,G41.9,true
+DX.PROVOKED_SEIZURE,Acute symptomatic seizure,neurology,provoked seizure|reactive seizure|metabolic seizure,attending,8A63,R56.8,true
+DX.VIRAL_ENCEPHALITIS,Viral encephalitis,neurology,encephalitis|acute encephalitis syndrome|AES,attending,1C80,A86,true
+DX.HSV_ENCEPHALITIS,Herpes simplex encephalitis,neurology,HSE|HSV encephalitis|herpes encephalitis,attending,1F00.21,B00.4,true
+DX.JAPANESE_ENCEPHALITIS,Japanese encephalitis,infection,JE|Japanese B encephalitis|JEV infection,attending,1C85,A83.0,true
+DX.AUTOIMMUNE_ENCEPHALITIS,Autoimmune encephalitis,neurology,anti-NMDA receptor encephalitis|limbic encephalitis|AE,attending,8E4A.0,G04.8,true
+DX.METABOLIC_ENCEPHALOPATHY,Metabolic encephalopathy,neurology,toxic metabolic encephalopathy|septic encephalopathy|acute confusional state,attending,8E47,G93.4,true
+DX.LEAD_ENCEPHALOPATHY,Lead encephalopathy,toxicology,toxic encephalopathy due to lead|lead induced encephalopathy|saturnine encephalopathy,attending,8D43.0Y&XM0ZH6,G92,true
+DX.WERNICKE_ENCEPHALOPATHY,Wernicke encephalopathy,neurology,WE|Wernicke-Korsakoff syndrome|thiamine deficiency encephalopathy,attending,5B5A.10,E51.2,true
+DX.DELIRIUM,Delirium,psychiatry,acute confusional state|acute brain syndrome|delirium not induced by substances,attending,6D70.Z,F05.9,true
+DX.DEMENTIA,Dementia,neurology,major neurocognitive disorder|Alzheimer disease|cognitive decline,attending,6D8Z,F03,true
+DX.PARKINSON_DISEASE,Parkinson disease,neurology,PD|Parkinson's disease|paralysis agitans,attending,8A00.0Z,G20,true
+DX.MIGRAINE,Migraine,neurology,migraine headache|hemicrania|sick headache,attending,8A80.Z,G43.9,true
+DX.IDIOPATHIC_INTRACRANIAL_HYPERTENSION,Idiopathic intracranial hypertension,neurology,IIH|pseudotumour cerebri|benign intracranial hypertension,attending,8D60.Y,G93.2,true
+DX.BRAIN_TUMOUR,Primary brain tumour,oncology,brain tumor|glioma|intracranial neoplasm,attending,2A00.5,C71.9,true
+DX.CNS_LYMPHOMA,Primary CNS lymphoma,oncology,PCNSL|cerebral lymphoma|primary central nervous system lymphoma,attending,2A81.5,C83.3,true
+DX.HYPOTHYROIDISM,Hypothyroidism,endocrine,underactive thyroid|myxoedema|hypothyroid,attending,5A00,E03.9,true
+DX.HASHIMOTO_THYROIDITIS,Hashimoto thyroiditis,endocrine,autoimmune thyroiditis|chronic lymphocytic thyroiditis|Hashimoto's disease,attending,5A03.20,E06.3,true
+DX.HYPERTHYROIDISM,Hyperthyroidism,endocrine,thyrotoxicosis|overactive thyroid|hyperthyroid,attending,5A02,E05.9,true
+DX.GRAVES_DISEASE,Graves disease,endocrine,Graves' disease|toxic diffuse goitre|Basedow disease,attending,5A02.0,E05.0,true
+DX.TOXIC_NODULAR_GOITRE,Toxic multinodular goitre,endocrine,TMNG|Plummer disease|toxic nodular goiter,attending,5A02.2,E05.2,true
+DX.SUBACUTE_THYROIDITIS,Subacute thyroiditis,endocrine,de Quervain thyroiditis|granulomatous thyroiditis|painful thyroiditis,attending,5A03.1,E06.1,true
+DX.TYPE1_DIABETES,Type 1 diabetes mellitus,endocrine,T1DM|insulin dependent diabetes|juvenile diabetes,attending,5A10,E10.9,true
+DX.TYPE2_DIABETES,Type 2 diabetes mellitus,endocrine,T2DM|non insulin dependent diabetes|adult onset diabetes|sugar,attending,5A11,E11.9,true
+DX.DKA,Diabetic ketoacidosis,endocrine,DKA|diabetic ketoacidotic crisis|ketoacidosis,attending,5A22.0,E10.1,true
+DX.HHS,Hyperosmolar hyperglycaemic state,endocrine,HHS|HONK|hyperosmolar hyperglycemic state,attending,5A20.0,E11.0,true
+DX.HYPOGLYCAEMIA,Hypoglycaemia,endocrine,hypoglycemia|low blood sugar|hypo,attending,5A41,E16.2,true
+DX.ADDISON_DISEASE,Primary adrenal insufficiency,endocrine,Addison disease|Addison's disease|primary hypoadrenalism,attending,5A74.0,E27.1,true
+DX.ADRENAL_CRISIS,Adrenal crisis,endocrine,Addisonian crisis|acute adrenal insufficiency|adrenal failure,attending,5A74.1,E27.2,true
+DX.CUSHING_SYNDROME,Cushing syndrome,endocrine,Cushing's syndrome|hypercortisolism|hypercortisolaemia,attending,5A70.Z,E24.9,true
+DX.CUSHING_DISEASE,Cushing disease,endocrine,pituitary Cushing|ACTH-secreting pituitary adenoma|Cushing's disease,attending,5A70.0,E24.0,true
+DX.PRIMARY_HYPERALDOSTERONISM,Primary hyperaldosteronism,endocrine,Conn syndrome|primary aldosteronism|PA,attending,5A72.0,E26.0,true
+DX.PHAEOCHROMOCYTOMA,Phaeochromocytoma,endocrine,pheochromocytoma|PCC|adrenal medullary tumour,attending,5A75,D35.0,true
+DX.PRIMARY_HYPERPARATHYROIDISM,Primary hyperparathyroidism,endocrine,PHPT|hyperparathyroidism|parathyroid adenoma,attending,5A51.0,E21.0,true
+DX.SECONDARY_HYPERPARATHYROIDISM,Secondary hyperparathyroidism,endocrine,SHPT|renal hyperparathyroidism|secondary HPT,attending,GC2Z,N25.8,true
+DX.HYPOPARATHYROIDISM,Hypoparathyroidism,endocrine,hypoPT|low PTH|parathyroid insufficiency,attending,5A50.Z,E20.9,true
+DX.HYPERCALCAEMIA_OF_MALIGNANCY,Hypercalcaemia of malignancy,oncology,HCM|malignant hypercalcemia|humoral hypercalcaemia of malignancy|PTHrP hypercalcaemia,attending,,E83.5,true
+DX.HYPOPITUITARISM,Hypopituitarism,endocrine,pituitary insufficiency|panhypopituitarism|Sheehan syndrome,attending,5A61.0,E23.0,true
+DX.PROLACTINOMA,Prolactinoma,endocrine,prolactin-secreting adenoma|hyperprolactinaemia|lactotroph adenoma,attending,2F37.Y,D35.2,true
+DX.ACROMEGALY,Acromegaly,endocrine,growth hormone excess|GH-secreting adenoma|somatotroph adenoma,attending,5A60.0,E22.0,true
+DX.DIABETES_INSIPIDUS,Diabetes insipidus,endocrine,DI|arginine vasopressin deficiency|AVP deficiency,attending,5A61.5,E23.2,true
+DX.OBESITY,Obesity,endocrine,morbid obesity|raised BMI|overweight,attending,5B81.Z,E66.9,true
+DX.DYSLIPIDAEMIA,Dyslipidaemia,metabolic,hyperlipidemia|high cholesterol|hypercholesterolaemia,attending,5C80,E78.5,true
+DX.ACS_STEMI,ST-elevation myocardial infarction,cardiology,STEMI|heart attack|acute MI with ST elevation|acute coronary syndrome,attending,BA41.0,I21.3,true
+DX.ACS_NSTEMI,Non-ST-elevation myocardial infarction,cardiology,NSTEMI|non ST elevation MI|NSTE-ACS,attending,BA41.1,I21.4,true
+DX.UNSTABLE_ANGINA,Unstable angina,cardiology,UA|crescendo angina|acute coronary insufficiency,attending,BA40.0,I20.0,true
+DX.STABLE_ANGINA,Stable angina,cardiology,chronic stable angina|angina pectoris|effort angina,attending,BA40.1,I20.8,true
+DX.TYPE2_MI,Type 2 myocardial infarction,cardiology,demand ischaemia|supply demand mismatch MI|T2MI,attending,,I21.9,true
+DX.HEART_FAILURE_REDUCED_EF,Heart failure with reduced ejection fraction,cardiology,HFrEF|systolic heart failure|congestive cardiac failure|CCF,attending,BD11.2,I50.9,true
+DX.HEART_FAILURE_PRESERVED_EF,Heart failure with preserved ejection fraction,cardiology,HFpEF|diastolic heart failure|HF with normal EF,attending,BD11.0,I50.9,true
+DX.HIGH_OUTPUT_HEART_FAILURE,High-output heart failure,cardiology,high output cardiac failure|anaemic heart failure|hyperdynamic circulation,attending,,I50.9,true
+DX.DILATED_CARDIOMYOPATHY,Dilated cardiomyopathy,cardiology,DCM|congestive cardiomyopathy|dilated heart,attending,BC43.0Z,I42.0,true
+DX.HYPERTROPHIC_CARDIOMYOPATHY,Hypertrophic cardiomyopathy,cardiology,HCM|HOCM|hypertrophic obstructive cardiomyopathy,attending,BC43.1Z,I42.1,true
+DX.CARDIAC_AMYLOIDOSIS,Cardiac amyloidosis,cardiology,amyloid cardiomyopathy|ATTR cardiomyopathy|infiltrative cardiomyopathy,attending,5D00.0&XA6H07,E85.4,true
+DX.MYOCARDITIS,Myocarditis,cardiology,acute myocarditis|viral myocarditis|inflammatory cardiomyopathy,attending,BC42,I40.9,true
+DX.PERICARDITIS,Acute pericarditis,cardiology,pericarditis|pericardial inflammation|viral pericarditis,attending,BB20.Z,I30.9,true
+DX.PERICARDIAL_EFFUSION,Pericardial effusion,cardiology,cardiac tamponade|pericardial fluid|tamponade,attending,BB25,I31.3,true
+DX.ATRIAL_FIBRILLATION,Atrial fibrillation,cardiology,AF|AFib|irregularly irregular pulse,attending,BC81.3,I48.9,true
+DX.ATRIAL_FLUTTER,Atrial flutter,cardiology,flutter|typical atrial flutter|AFL,attending,BC81.2Z,I48.9,true
+DX.SVT,Supraventricular tachycardia,cardiology,SVT|PSVT|AVNRT,attending,BC81,I47.1,true
+DX.VENTRICULAR_TACHYCARDIA,Ventricular tachycardia,cardiology,VT|broad complex tachycardia|ventricular tachyarrhythmia,attending,BC71.0Z,I47.2,true
+DX.COMPLETE_HEART_BLOCK,Complete heart block,cardiology,third degree AV block|CHB|complete AV block,attending,BC63.2Z,I44.2,true
+DX.AORTIC_STENOSIS,Aortic stenosis,cardiology,AS|aortic valve stenosis|calcific aortic stenosis,attending,BB70.1,I35.0,true
+DX.MITRAL_REGURGITATION,Mitral regurgitation,cardiology,MR|mitral incompetence|mitral insufficiency,attending,BB61.Z,I34.0,true
+DX.HYPERTENSION,Essential hypertension,cardiology,high blood pressure|HTN|primary hypertension,attending,BA00.Z,I10,true
+DX.HYPERTENSIVE_EMERGENCY,Hypertensive emergency,cardiology,malignant hypertension|hypertensive crisis|accelerated hypertension,attending,BA03,I10,true
+DX.AORTIC_DISSECTION,Aortic dissection,cardiology,dissecting aneurysm|acute aortic syndrome|type A dissection,attending,BD50.Z,I71.0,true
+DX.PULMONARY_EMBOLISM,Pulmonary embolism,respiratory,PE|pulmonary thromboembolism|lung clot,attending,BB00,I26.9,true
+DX.PULMONARY_HYPERTENSION,Pulmonary hypertension,respiratory,PH|PAH|pulmonary arterial hypertension,attending,BB01.Z,I27.2,true
+DX.COPD,Chronic obstructive pulmonary disease,respiratory,COPD|chronic bronchitis|emphysema|COAD,attending,CA22,J44.9,true
+DX.COPD_EXACERBATION,Acute exacerbation of COPD,respiratory,AECOPD|COPD flare|infective exacerbation of COPD,attending,CA22.0,J44.1,true
+DX.ASTHMA,Asthma,respiratory,bronchial asthma|reactive airway disease|wheezy chest,attending,CA23,J45.9,true
+DX.ACUTE_SEVERE_ASTHMA,Acute severe asthma,respiratory,status asthmaticus|severe asthma attack|life threatening asthma,attending,CA23.31,J46,true
+DX.BRONCHIECTASIS,Bronchiectasis,respiratory,non-CF bronchiectasis|post TB bronchiectasis|dilated bronchi,attending,CA24,J47,true
+DX.ILD,Interstitial lung disease,respiratory,ILD|diffuse parenchymal lung disease|pulmonary fibrosis,attending,CB0Z,J84.9,true
+DX.IPF,Idiopathic pulmonary fibrosis,respiratory,IPF|cryptogenic fibrosing alveolitis|UIP,attending,CB03.4,J84.1,true
+DX.HYPERSENSITIVITY_PNEUMONITIS,Hypersensitivity pneumonitis,respiratory,HP|extrinsic allergic alveolitis|farmer's lung|bird fancier's lung,attending,CA70.Z,J67.9,true
+DX.CTD_ILD,Connective tissue disease associated interstitial lung disease,respiratory,CTD-ILD|myositis ILD|rheumatoid lung,attending,CB05.1,J99.1,true
+DX.PNEUMOCONIOSIS,Pneumoconiosis,respiratory,silicosis|occupational lung disease|coal workers pneumoconiosis,attending,CA60.Z,J64,true
+DX.ABPA,Allergic bronchopulmonary aspergillosis,respiratory,ABPA|aspergillus allergy|allergic aspergillosis,attending,CA82.4,B44.8,true
+DX.CHRONIC_PULMONARY_ASPERGILLOSIS,Chronic pulmonary aspergillosis,infection,CPA|aspergilloma|fungal ball,attending,1F20.12,B44.1,true
+DX.MALIGNANT_PLEURAL_EFFUSION,Malignant pleural effusion,respiratory,MPE|carcinomatous pleural effusion|pleural metastases,attending,2D72,J91,true
+DX.PARAPNEUMONIC_EFFUSION,Parapneumonic effusion,respiratory,PPE|pneumonia associated effusion|complicated parapneumonic effusion,attending,,J91,true
+DX.TRANSUDATIVE_PLEURAL_EFFUSION,Transudative pleural effusion,respiratory,transudate|cardiac pleural effusion|hydrothorax,attending,CB27,J90,true
+DX.PNEUMOTHORAX,Pneumothorax,respiratory,collapsed lung|PTX|spontaneous pneumothorax,attending,CB21.Z,J93.9,true
+DX.ARDS,Acute respiratory distress syndrome,respiratory,ARDS|adult respiratory distress syndrome|acute lung injury,attending,CB00,J80,true
+DX.OBSTRUCTIVE_SLEEP_APNOEA,Obstructive sleep apnoea,respiratory,OSA|obstructive sleep apnea|sleep disordered breathing,attending,7A41,G47.3,true
+DX.TYPE2_RESPIRATORY_FAILURE,Hypercapnic respiratory failure,respiratory,type 2 respiratory failure|T2RF|hypercarbic respiratory failure,attending,CB41.21,J96.9,true
+DX.DEPRESSION,Depressive episode,psychiatry,depression|major depressive disorder|MDD|low mood,attending,6A70,F32.9,true
+DX.ANXIETY_DISORDER,Generalised anxiety disorder,psychiatry,GAD|anxiety|generalized anxiety disorder,attending,6B00,F41.1,true
+DX.PANIC_DISORDER,Panic disorder,psychiatry,panic attacks|episodic paroxysmal anxiety|panic,attending,6B01,F41.0,true
+DX.SOMATIC_SYMPTOM_DISORDER,Somatic symptom disorder,psychiatry,somatisation disorder|bodily distress disorder|somatization|medically unexplained symptoms,attending,6C20,F45.1,true
+DX.FUNCTIONAL_NEUROLOGICAL_DISORDER,Functional neurological disorder,psychiatry,FND|conversion disorder|dissociative neurological symptom disorder,attending,6B60.Z,F44.4,true
+DX.PICA,Pica,psychiatry,geophagia|pagophagia|eating non-food substances,attending,6B84,F50.8,true
+DX.ANOREXIA_NERVOSA,Anorexia nervosa,psychiatry,AN|anorexia|restrictive eating disorder,attending,6B80.Z,F50.0,true
+DX.DELIBERATE_SELF_POISONING,Intentional self-poisoning,psychiatry,DSP|deliberate self harm by poisoning|suicide attempt by poisoning,attending,,X69,true
+DX.FACTITIOUS_DISORDER,Factitious disorder,psychiatry,Munchausen syndrome|factitious illness|fabricated illness,attending,6D50,F68.1,true
+DX.DRUG_INDUCED_AGRANULOCYTOSIS,Drug-induced agranulocytosis,drug-related,drug induced neutropenia|medication agranulocytosis|carbimazole agranulocytosis,attending,4B00.01,D70,true
+DX.DRUG_INDUCED_APLASTIC_ANAEMIA,Drug-induced aplastic anaemia,drug-related,drug induced marrow aplasia|drug induced aplastic anemia|toxic aplastic anaemia,attending,3A70.10,D61.1,true
+DX.CHEMOTHERAPY_MYELOSUPPRESSION,Chemotherapy-induced myelosuppression,drug-related,chemotherapy induced cytopenia|cytotoxic marrow suppression|post chemo pancytopenia,attending,,D61.1,true
+DX.DRUG_INDUCED_MEGALOBLASTOSIS,Drug-induced megaloblastic anaemia,drug-related,methotrexate megaloblastosis|drug induced macrocytosis|antifolate anaemia,attending,3A02.4,D52.1,true
+DX.DRUG_INDUCED_LUPUS,Drug-induced lupus,drug-related,DIL|drug induced lupus erythematosus|hydralazine lupus,attending,4A40.1,M32.0,true
+DX.DRESS,Drug reaction with eosinophilia and systemic symptoms,drug-related,DRESS|DIHS|drug hypersensitivity syndrome,attending,,L27.0,true
+DX.SJS_TEN,Stevens-Johnson syndrome or toxic epidermal necrolysis,drug-related,SJS|TEN|Lyell syndrome,attending,EB13,L51.1,true
+DX.DRUG_INDUCED_AKI,Drug-induced acute kidney injury,drug-related,nephrotoxic AKI|drug induced nephrotoxicity|NSAID nephropathy,attending,,N14.1,true
+DX.DRUG_INDUCED_HYPONATRAEMIA,Drug-induced hyponatraemia,drug-related,drug induced SIADH|thiazide hyponatremia|medication hyponatraemia,attending,5C72,E87.1,true
+DX.STEROID_INDUCED_HYPERGLYCAEMIA,Steroid-induced hyperglycaemia,drug-related,steroid induced diabetes|glucocorticoid hyperglycemia|drug induced diabetes,attending,MA18.0,R73.9,true
+DX.IATROGENIC_CUSHING,Iatrogenic Cushing syndrome,drug-related,drug induced Cushing|exogenous steroid excess|steroid induced Cushingoid state,attending,5A70.Y,E24.2,true
+DX.AMIODARONE_THYROID,Amiodarone-induced thyroid dysfunction,drug-related,AIT|amiodarone thyrotoxicosis|amiodarone hypothyroidism,attending,,E03.2,true
+DX.SEROTONIN_SYNDROME,Serotonin syndrome,drug-related,serotonin toxicity|serotonergic syndrome|SS,attending,8D85,G25.8,true
+DX.NMS,Neuroleptic malignant syndrome,drug-related,NMS|neuroleptic malignant hyperthermia|antipsychotic induced hyperthermia,attending,8A0Y,G21.0,true
+DX.ANAPHYLAXIS,Anaphylaxis,drug-related,anaphylactic shock|severe allergic reaction|anaphylactic reaction,attending,4A84.Z,T78.2,true
+DX.AYURVEDIC_METAL_TOXICITY,Heavy metal toxicity from traditional medicine,toxicology,bhasma toxicity|Ayurvedic lead poisoning|herbal remedy metal poisoning|traditional remedy toxicity,attending,,T56.9,true

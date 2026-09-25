@@ -1,0 +1,61 @@
+id,name,category,synonyms,specialty_scope,shown_by
+FND.COARSE_BASOPHILIC_STIPPLING,Coarse basophilic stippling,blood film,punctate basophilia|stippled red cells|basophilic stippling|coarse stippling,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.PAPPENHEIMER_BODIES,Pappenheimer bodies,blood film,siderotic granules|iron granules in red cells|Pappenheimer inclusions,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.POLYCHROMASIA,Polychromasia,blood film,polychromatophilic cells|polychromatic red cells|bluish young red cells,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.RBC_AGGLUTINATION,Red cell agglutination,blood film,RBC clumping|red cell clumps|agglutinated red cells|autoagglutination,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.SPHEROCYTES,Spherocytes,blood film,spherocytosis on film|microspherocytes|spherical red cells,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.SCHISTOCYTES,Schistocytes,blood film,fragmented red cells|red cell fragments|helmet cells|schistocytosis,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.TARGET_CELLS,Target cells,blood film,codocytes|target red cells|leptocytes,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.SICKLE_CELLS,Sickle cells,blood film,drepanocytes|sickled red cells|sickled RBCs,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.TEAR_DROP_CELLS,Tear drop cells,blood film,dacrocytes|teardrop cells|tear-drop poikilocytes,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.ROULEAUX,Rouleaux formation,blood film,rouleaux|stacked red cells|red cells in stacks,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.BLASTS,Circulating blasts,blood film,blast cells|peripheral blasts|blasts on film,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.HYPERSEGMENTED_NEUTROPHILS,Hypersegmented neutrophils,blood film,hypersegmentation|multilobed neutrophils|right shift,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.TOXIC_GRANULATION,Toxic granulation,blood film,toxic granules|toxic changes in neutrophils|Dohle bodies,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.ATYPICAL_LYMPHOCYTES,Atypical lymphocytes,blood film,reactive lymphocytes|activated lymphocytes|Downey cells,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.MALARIAL_PARASITES,Malarial parasites,blood film,MP positive|plasmodium on film|ring forms|malaria parasites seen,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.HOWELL_JOLLY_BODIES,Howell-Jolly bodies,blood film,HJ bodies|nuclear remnants in red cells|Howell Jolly bodies,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.BITE_CELLS,Bite cells,blood film,degmacytes|blister cells|bitten red cells,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.ACANTHOCYTES,Acanthocytes,blood film,spur cells|acanthocytosis|spiky red cells,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.MICROCYTOSIS,Microcytosis,blood film,microcytic red cells|small red cells|microcytes,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.MACROCYTOSIS,Macrocytosis,blood film,macrocytic red cells|large red cells|macrocytes|oval macrocytes,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.LEUCOERYTHROBLASTIC,Leucoerythroblastic picture,blood film,leukoerythroblastic blood film|nucleated red cells and myelocytes|leucoerythroblastosis,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.SMUDGE_CELLS,Smudge cells,blood film,smear cells|basket cells|crushed lymphocytes,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.HYPOCHROMIA,Hypochromia,blood film,hypochromic red cells|pale red cells|hypochromasia,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.RING_SIDEROBLASTS,Ring sideroblasts,bone marrow,ringed sideroblasts|ring sideroblasts on Perls stain|RS,service.pathology,PROC.BM.ASPIRATE|LAB.BM.IRON_STAIN
+FND.DYSERYTHROPOIESIS,Dyserythropoiesis,bone marrow,dyserythropoietic change|erythroid dysplasia|dysplastic erythroid precursors,service.pathology,PROC.BM.ASPIRATE
+FND.DYSGRANULOPOIESIS,Dysgranulopoiesis,bone marrow,granulocytic dysplasia|dysplastic neutrophil precursors|hypogranular neutrophils,service.pathology,PROC.BM.ASPIRATE|LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.DYSMEGAKARYOPOIESIS,Dysmegakaryopoiesis,bone marrow,megakaryocytic dysplasia|micromegakaryocytes|dysplastic megakaryocytes,service.pathology,PROC.BM.ASPIRATE|PROC.BM.TREPHINE
+FND.ATYPICAL_PLASMA_CELLS,Atypical plasma cells,bone marrow,abnormal plasma cells|dysplastic plasma cells|binucleate plasma cells,service.pathology,PROC.BM.ASPIRATE|PROC.BM.TREPHINE
+FND.INCREASED_PLASMA_CELLS,Increased plasma cells,bone marrow,marrow plasmacytosis|raised plasma cell percentage|plasma cell excess,service.pathology,PROC.BM.ASPIRATE|PROC.BM.TREPHINE|LAB.BM.FLOW
+FND.MARROW_GRANULOMAS,Marrow granulomas,bone marrow,bone marrow granulomas|granulomas in marrow|epithelioid granulomas in trephine,service.pathology,PROC.BM.TREPHINE
+FND.MARROW_FIBROSIS,Marrow fibrosis,bone marrow,reticulin fibrosis|myelofibrosis on trephine|increased reticulin,service.pathology,PROC.BM.TREPHINE
+FND.MEGALOBLASTIC_CHANGE,Megaloblastic change,bone marrow,megaloblasts|megaloblastic erythropoiesis|nuclear-cytoplasmic asynchrony,service.pathology,PROC.BM.ASPIRATE
+FND.ERYTHROID_HYPERPLASIA,Erythroid hyperplasia,bone marrow,erythroid hyperplasia in marrow|increased erythropoiesis|reversed M:E ratio,service.pathology,PROC.BM.ASPIRATE|PROC.BM.TREPHINE
+FND.ABSENT_MARROW_IRON,Absent marrow iron stores,bone marrow,no stainable iron|absent iron stores|Perls negative marrow,service.pathology,PROC.BM.ASPIRATE|LAB.BM.IRON_STAIN
+FND.HYPOCELLULAR_MARROW,Hypocellular marrow,bone marrow,marrow hypoplasia|low marrow cellularity|aplastic marrow,service.pathology,PROC.BM.ASPIRATE|PROC.BM.TREPHINE
+FND.LYTIC_BONE_LESIONS,Lytic bone lesions,imaging,punched-out lesions|osteolytic lesions|lytic lesions|bone lucencies,service.radiology,IMG.XR.SKELETAL_SURVEY|IMG.XR.SKULL|IMG.XR.SPINE|IMG.CT.WHOLE_BODY_LOW_DOSE|IMG.MRI.SPINE|IMG.NM.PET_CT
+FND.SPLENOMEGALY,Splenomegaly,imaging,enlarged spleen|big spleen|splenic enlargement,service.radiology,IMG.US.ABDOMEN|IMG.CT.ABDOMEN_PELVIS|IMG.NM.PET_CT
+FND.HEPATOMEGALY,Hepatomegaly,imaging,enlarged liver|big liver|hepatic enlargement,service.radiology,IMG.US.ABDOMEN|IMG.CT.ABDOMEN_PELVIS|IMG.MRI.MRCP
+FND.LYMPHADENOPATHY,Lymph node enlargement,imaging,lymphadenopathy|enlarged lymph nodes|enlarged nodes on imaging,service.radiology,IMG.CT.ABDOMEN_PELVIS|IMG.CT.CHEST|IMG.CT.NECK|IMG.US.NECK|IMG.NM.PET_CT
+FND.PLEURAL_EFFUSION,Pleural effusion,imaging,fluid in the chest|pleural fluid|effusion,service.radiology,IMG.XR.CHEST|IMG.CT.CHEST|IMG.CT.CTPA
+FND.CONSOLIDATION,Consolidation,imaging,lung consolidation|airspace opacity|patchy shadowing,service.radiology,IMG.XR.CHEST|IMG.CT.CHEST
+FND.RADIO_OPAQUE_BOWEL_MATERIAL,Radio-opaque material in the bowel,imaging,radiopaque flecks in bowel|radio-dense intraluminal material|opaque particles in gut,service.radiology,IMG.XR.ABDOMEN|IMG.CT.ABDOMEN_PELVIS|IMG.CT.WHOLE_BODY_LOW_DOSE
+FND.BOWEL_OBSTRUCTION,Dilated bowel loops with obstruction,imaging,bowel obstruction|dilated loops|air-fluid levels|intestinal obstruction,service.radiology,IMG.XR.ABDOMEN|IMG.CT.ABDOMEN_PELVIS
+FND.FREE_AIR,Free intraperitoneal air,imaging,pneumoperitoneum|free gas|air under diaphragm,service.radiology,IMG.XR.CHEST|IMG.XR.ABDOMEN|IMG.CT.ABDOMEN_PELVIS
+FND.GALLSTONES,Gallstones,imaging,cholelithiasis on imaging|gallbladder calculi|GB stones,service.radiology,IMG.US.ABDOMEN|IMG.MRI.MRCP|IMG.CT.ABDOMEN_PELVIS
+FND.HYDRONEPHROSIS,Hydronephrosis,imaging,dilated renal pelvis|pelvicalyceal dilatation|PCS dilatation,service.radiology,IMG.US.KIDNEYS|IMG.US.ABDOMEN|IMG.CT.KUB|IMG.CT.ABDOMEN_PELVIS
+FND.LEAD_LINES,Dense metaphyseal bands,imaging,lead lines|metaphyseal sclerotic bands|growth arrest lines|dense metaphyseal lines,service.radiology,IMG.XR.LONG_BONES|IMG.XR.SKELETAL_SURVEY|IMG.XR.HANDS
+FND.DEEP_VEIN_THROMBUS,Non-compressible deep vein,imaging,DVT on Doppler|venous thrombus|clot in leg vein,service.radiology,IMG.US.DOPPLER_LEGS
+FND.PULMONARY_ARTERY_FILLING_DEFECT,Pulmonary arterial filling defect,imaging,clot in pulmonary artery|PE on CT|filling defect on CTPA,service.radiology,IMG.CT.CTPA
+FND.MUSCLE_OEDEMA,Muscle oedema on MRI,imaging,muscle edema|STIR hyperintensity in muscle|muscle inflammation on MRI,service.radiology,IMG.MRI.MUSCLE
+FND.MUSCLE_FATTY_REPLACEMENT,Fatty replacement of muscle,imaging,muscle atrophy with fat|fatty infiltration of muscle|muscle fat replacement,service.radiology,IMG.MRI.MUSCLE
+FND.NON_CASEATING_GRANULOMA,Non-caseating granulomas,histology,non-necrotising granulomas|naked granulomas|epithelioid granulomas without necrosis,service.pathology,PROC.BIOPSY.LYMPH_NODE|PROC.BIOPSY.LIVER|PROC.BIOPSY.SKIN|PROC.BIOPSY.KIDNEY|PROC.BIOPSY.MUSCLE
+FND.CASEATING_GRANULOMA,Caseating granulomas,histology,necrotising granulomas|caseous necrosis|granulomas with necrosis,service.pathology,PROC.BIOPSY.LYMPH_NODE|PROC.BIOPSY.LIVER|PROC.BM.TREPHINE
+FND.RIMMED_VACUOLES,Rimmed vacuoles,histology,rimmed vacuoles in muscle|red-rimmed vacuoles|vacuolar myopathic change,service.pathology,PROC.BIOPSY.MUSCLE
+FND.ENDOMYSIAL_INFLAMMATION,Endomysial inflammation,histology,endomysial lymphocytes|inflammatory infiltrate in muscle|invasion of non-necrotic fibres,service.pathology,PROC.BIOPSY.MUSCLE
+FND.INTERFACE_HEPATITIS,Interface hepatitis,histology,piecemeal necrosis|interface activity|periportal inflammation,service.pathology,PROC.BIOPSY.LIVER
+FND.GLOMERULAR_CRESCENTS,Glomerular crescents,histology,crescents|crescentic glomeruli|cellular crescents,service.pathology,PROC.BIOPSY.KIDNEY
+FND.VILLOUS_ATROPHY,Duodenal villous atrophy,histology,villous atrophy|flattened villi|crypt hyperplasia with villous blunting,service.pathology,PROC.ENDO.OGD
+FND.ACID_FAST_BACILLI,Acid-fast bacilli,microbiology,AFB positive|AFB seen|ZN stain positive|acid fast bacilli,service.microbiology,LAB.MICRO.AFB_SMEAR
+FND.GPC_CLUSTERS,Gram-positive cocci in clusters,microbiology,GPC in clusters|gram positive cocci clusters|staphylococcal-looking organisms,service.microbiology,LAB.MICRO.BLOOD_CULTURE

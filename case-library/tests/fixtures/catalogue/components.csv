@@ -1,0 +1,7 @@
+id,name,loinc,unit_si,unit_conv,conv_factor,decimals,normal_text
+CMP.HB,Haemoglobin,,g/L,g/dL,0.1,0,
+CMP.RBC,Red cell count,,x10^12/L,,,2,
+CMP.MCH,Mean cell haemoglobin,,pg,,,1,
+CMP.PB_BLOOD,Blood lead,,ug/dL,,,1,
+CMP.FILM_REPORT,Blood film report,,,,,,Normocytic normochromic red cells. White cells and platelets normal in number and morphology.
+CMP.HIV_AG_AB,HIV antigen and antibody,,,,,,Non-reactive

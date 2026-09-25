@@ -1,0 +1,2 @@
+id,name,category,synonyms,specialty_scope,icd11,icd10,codes_verified
+DX.LEAD_POISONING,Lead poisoning,toxicology,lead toxicity|plumbism|saturnism,attending,,T56.0,false

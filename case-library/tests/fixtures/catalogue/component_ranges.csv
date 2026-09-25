@@ -1,0 +1,8 @@
+component_id,sex,age_min,age_max,low,high,text,display,source
+CMP.HB,F,18,,115,165,,,"Dacie and Lewis Practical Haematology, 12th ed. (2017)"
+CMP.HB,M,18,,130,180,,,"Dacie and Lewis Practical Haematology, 12th ed. (2017)"
+CMP.RBC,F,18,,3.8,4.8,,,"Dacie and Lewis Practical Haematology, 12th ed. (2017)"
+CMP.MCH,any,,,27,32,,,"Dacie and Lewis Practical Haematology, 12th ed. (2017)"
+CMP.PB_BLOOD,any,,,0,5,,<5,"Tietz Textbook of Laboratory Medicine, 7th ed. (2022)"
+CMP.FILM_REPORT,any,,,,,Normal,,"Dacie and Lewis Practical Haematology, 12th ed. (2017)"
+CMP.HIV_AG_AB,any,,,,,Non-reactive,,"Tietz Textbook of Laboratory Medicine, 7th ed. (2022)"

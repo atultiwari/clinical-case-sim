@@ -1,0 +1,5 @@
+id,name,category,synonyms,specialty_scope,route,specimen,price_inr,price_source,tat_minutes,invasive,loinc,components
+LAB.HAEM.CBC,Full blood count,haematology,FBC|CBC|complete blood count,attending,direct,EDTA blood,200,estimate,240,false,,CMP.HB|CMP.RBC|CMP.MCH
+LAB.TOX.BLOOD_LEAD,Blood lead,toxicology,lead level|blood lead level,attending,direct,EDTA blood,1500,estimate,1440,false,,CMP.PB_BLOOD
+LAB.HAEM.FILM,Peripheral blood film,haematology,blood film|smear,attending,service.pathology,EDTA blood,150,estimate,240,false,,CMP.FILM_REPORT
+LAB.SERO.HIV,HIV antibody and antigen,serology,HIV test|HIV serology,attending,direct,serum,300,estimate,1440,false,,CMP.HIV_AG_AB

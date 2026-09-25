@@ -1,0 +1,142 @@
+id,name,category,synonyms,specialty_scope
+HX.PC.ONSET_DURATION,Onset and duration of symptoms,presenting complaint,when did it start|how long have you been unwell|duration of illness|since when,attending|consultant.*
+HX.PC.PAIN_DETAILS,"Pain: site, character, radiation and severity",presenting complaint,SOCRATES|pain history|where does it hurt|tell me about the pain|pain score,attending|consultant.*
+HX.PC.PROGRESSION,Course and progression of symptoms,presenting complaint,getting worse or better|progression|course of illness,attending|consultant.*
+HX.PC.AGGRAVATING_RELIEVING,Aggravating and relieving factors,presenting complaint,what makes it worse|what makes it better|triggers,attending|consultant.*
+HX.PC.PREVIOUS_EPISODES,Previous similar episodes,presenting complaint,happened before|similar episodes|recurrence,attending|consultant.*
+HX.PC.TREATMENT_SO_FAR,Treatment taken for this illness so far,presenting complaint,treatment before coming|what have you taken|local doctor treatment|self-medication,attending|consultant.*
+HX.PC.IMPACT,Effect on daily life and work,presenting complaint,functional impact|can you work|effect on daily activities,attending|consultant.*
+HX.PC.PATIENT_CONCERNS,"Ideas, concerns and expectations",presenting complaint,ICE|what are you worried about|patient concerns|expectations,attending|consultant.*
+HX.PC.ASSOCIATED,Other associated symptoms,presenting complaint,anything else|other symptoms|associated complaints,attending|consultant.*
+HX.GEN.FEVER_SWEATS_WEIGHT,"Fever, night sweats and weight loss",systems review,B symptoms|constitutional symptoms|fever|weight loss|night sweats,attending|consultant.*
+HX.GEN.FATIGUE,Tiredness and fatigue,systems review,tired|lethargy|weakness all over|low energy|fatigability,attending|consultant.*
+HX.GEN.JAUNDICE,Yellowing of the eyes or skin,systems review,yellow eyes|icterus|jaundice|piliya|yellow skin,attending|consultant.*
+HX.GEN.METALLIC_TASTE,Metallic taste or change in taste,systems review,metallic taste|taste change|dysgeusia|strange taste in mouth,attending|consultant.*
+HX.GEN.RECENT_INFECTION,Recent infections or febrile illness,systems review,recent fever|recent infection|recent viral illness|cold and cough recently,attending|consultant.*
+HX.GEN.ITCH,Itching,systems review,pruritus|itchy skin|kharish,attending|consultant.*
+HX.GEN.LUMPS,Lumps or swellings anywhere,systems review,lumps|swellings|glands|neck swelling,attending|consultant.*
+HX.GEN.BRUISING_BLEEDING,Easy bruising or bleeding,systems review,bleeding tendency|easy bruising|bleeds easily|nosebleeds,attending|consultant.*
+HX.GEN.THIRST,Excessive thirst,systems review,polydipsia|very thirsty|drinking a lot of water,attending|consultant.*
+HX.GEN.HEAT_COLD,Intolerance of heat or cold,systems review,heat intolerance|cold intolerance|feels cold all the time,attending|consultant.*
+HX.GEN.SLEEP,Sleep,systems review,insomnia|sleep problems|sleeping well,attending|consultant.*
+HX.GEN.PICA,"Craving for ice, clay or other non-food items",systems review,pica|eating mud|pagophagia|eating chalk|eating ice,attending|consultant.*
+HX.GEN.RIGORS,Chills and rigors,systems review,shivering|chills|shaking with fever,attending|consultant.*
+HX.CVS.CHEST_PAIN,Chest pain,systems review,angina|chest tightness|heart pain|chest discomfort,attending|consultant.*
+HX.CVS.BREATHLESSNESS,Breathlessness at rest or on exertion,systems review,shortness of breath|SOB|dyspnoea|dyspnea|breathlessness|effort intolerance,attending|consultant.*
+HX.CVS.ORTHOPNOEA_PND,Orthopnoea and paroxysmal nocturnal dyspnoea,systems review,orthopnea|PND|breathless lying flat|waking up breathless,attending|consultant.*
+HX.CVS.PALPITATIONS,Palpitations,systems review,racing heart|heart pounding|irregular heartbeat|dhadkan,attending|consultant.*
+HX.CVS.SYNCOPE,"Fainting, blackouts or light-headedness",systems review,syncope|fainting|blackouts|presyncope|dizzy on standing,attending|consultant.*
+HX.CVS.ANKLE_SWELLING,Ankle or leg swelling,systems review,pedal oedema|pedal edema|swollen feet|leg swelling,attending|consultant.*
+HX.CVS.CLAUDICATION,Leg pain on walking,systems review,claudication|calf pain on walking|leg cramps when walking,attending|consultant.*
+HX.RESP.COUGH,Cough,systems review,coughing|khansi|dry cough|chronic cough,attending|consultant.*
+HX.RESP.SPUTUM,Sputum production,systems review,phlegm|expectoration|bringing up mucus,attending|consultant.*
+HX.RESP.HAEMOPTYSIS,Coughing up blood,systems review,haemoptysis|hemoptysis|blood in sputum,attending|consultant.*
+HX.RESP.WHEEZE,Wheeze,systems review,wheezing|whistling chest|chest tightness with wheeze,attending|consultant.*
+HX.RESP.SNORING,Snoring and daytime sleepiness,systems review,snoring|daytime sleepiness|sleep apnoea symptoms|apnea symptoms,attending|consultant.*
+HX.GI.NAUSEA_APPETITE,"Nausea, vomiting and appetite",systems review,appetite|nausea|vomiting|loss of appetite|anorexia,attending|consultant.*
+HX.GI.ABDOMINAL_PAIN,Abdominal pain,systems review,tummy pain|stomach ache|belly pain|colic|pet dard,attending|consultant.*
+HX.GI.DYSPHAGIA,Difficulty or pain on swallowing,systems review,dysphagia|odynophagia|food sticking|swallowing difficulty,attending|consultant.*
+HX.GI.HEARTBURN,Heartburn and indigestion,systems review,acidity|dyspepsia|reflux|gas,attending|consultant.*
+HX.GI.BOWEL_HABIT,Bowel habit,systems review,stools|constipation|diarrhoea|diarrhea|motions|loose motions,attending|consultant.*
+HX.GI.BLEEDING,Blood in the stool or vomit,systems review,black stools|melaena|melena|rectal bleeding|haematemesis|hematemesis|blood in stool,attending|consultant.*
+HX.GI.ABDOMINAL_SWELLING,Abdominal swelling or distension,systems review,bloating|distension|swollen abdomen|tummy swelling,attending|consultant.*
+HX.GI.WORMS,Worms passed in the stool,systems review,worm infestation|passing worms|keede,attending|consultant.*
+HX.GU.URINE_COLOUR,Urine colour,systems review,urine color|dark urine|red urine|cola-coloured urine|blood in urine,attending|consultant.*
+HX.GU.DYSURIA,Pain or burning on passing urine,systems review,dysuria|burning micturition|painful urination,attending|consultant.*
+HX.GU.FREQUENCY,"Frequency, urgency and nocturia",systems review,frequency|urgency|nocturia|passing urine at night,attending|consultant.*
+HX.GU.URINE_VOLUME,Amount of urine passed,systems review,urine output|oliguria|polyuria|passing less urine,attending|consultant.*
+HX.GU.FROTHY_URINE,Frothy urine,systems review,foamy urine|bubbles in urine|proteinuria symptoms,attending|consultant.*
+HX.GU.STREAM,Hesitancy and poor urinary stream,systems review,hesitancy|poor stream|dribbling|prostate symptoms|LUTS,attending|consultant.*
+HX.GU.DISCHARGE_SORES,"Genital discharge, sores or ulcers",systems review,genital ulcer|urethral discharge|genital sores,attending|consultant.*
+HX.GYN.MENSES,Menstrual history,systems review,periods|LMP|menstrual cycle|heavy periods|menorrhagia|last menstrual period,attending|consultant.*
+HX.GYN.PREGNANCY,Possibility of current pregnancy,systems review,pregnant|chance of pregnancy|missed period,attending|consultant.*
+HX.GYN.OBSTETRIC,Obstetric history,systems review,gravida para|previous deliveries|miscarriages|GPLA,attending|consultant.*
+HX.GYN.CONTRACEPTION,Contraception,systems review,birth control|family planning|OCP|Copper-T|IUCD,attending|consultant.*
+HX.GYN.MENOPAUSE,Menopause and postmenopausal bleeding,systems review,menopause|PMB|bleeding after menopause,attending|consultant.*
+HX.GYN.VAGINAL_DISCHARGE,Vaginal discharge or bleeding between periods,systems review,white discharge|leucorrhoea|intermenstrual bleeding|PV discharge,attending|consultant.*
+HX.NEURO.HEADACHE,Headache,systems review,head pain|sir dard|migraine symptoms,attending|consultant.*
+HX.NEURO.SEIZURES,"Fits, seizures or loss of consciousness",systems review,fits|convulsions|epilepsy|LOC,attending|consultant.*
+HX.NEURO.WEAKNESS,Weakness of the arms or legs,systems review,limb weakness|paralysis|foot drop|wrist drop|difficulty climbing stairs,attending|consultant.*
+HX.NEURO.SENSORY,"Numbness, tingling or pins and needles",systems review,paraesthesia|paresthesia|numbness|tingling|burning feet,attending|consultant.*
+HX.NEURO.COGNITION_MOOD,"Memory, concentration and mood change",systems review,memory loss|confusion|irritability|forgetfulness|behaviour change,attending|consultant.*
+HX.NEURO.DIZZINESS_BALANCE,"Dizziness, vertigo and unsteadiness",systems review,vertigo|giddiness|unsteady|balance problems|chakkar,attending|consultant.*
+HX.NEURO.SPEECH,Change in speech,systems review,slurred speech|dysarthria|difficulty speaking,attending|consultant.*
+HX.NEURO.TREMOR,Tremor or abnormal movements,systems review,shaking hands|tremor|involuntary movements|twitching,attending|consultant.*
+HX.NEURO.FALLS,Falls,systems review,falling|tripping|fall history,attending|consultant.*
+HX.MSK.JOINT_PAIN,Joint pain and swelling,systems review,arthralgia|joint swelling|arthritis symptoms|painful joints,attending|consultant.*
+HX.MSK.STIFFNESS,Morning stiffness,systems review,early morning stiffness|stiff joints|EMS,attending|consultant.*
+HX.MSK.MUSCLE_PAIN,"Muscle pain, tenderness or cramps",systems review,myalgia|muscle cramps|body ache|muscle pain,attending|consultant.*
+HX.MSK.BACK_PAIN,Back pain,systems review,backache|low back pain|kamar dard,attending|consultant.*
+HX.MSK.BONE_PAIN,Bone pain,systems review,bony pain|bone ache|aching bones,attending|consultant.*
+HX.SKIN.RASH,Rash,systems review,skin rash|spots|eruption|skin lesions,attending|consultant.*
+HX.SKIN.PIGMENTATION,Change in skin colour or pigmentation,systems review,darkening of skin|hyperpigmentation|skin patches|skin discolouration,attending|consultant.*
+HX.SKIN.HAIR_NAILS,Change in hair or nails,systems review,hair loss|brittle nails|nail changes|alopecia,attending|consultant.*
+HX.SKIN.PHOTOSENSITIVITY,Rash or blistering on sun exposure,systems review,photosensitivity|sun sensitivity|blisters in sunlight,attending|consultant.*
+HX.EYE.VISION,Visual disturbance,systems review,blurred vision|double vision|diplopia|loss of vision,attending|consultant.*
+HX.EYE.RED_DRY,"Red, painful or dry eyes",systems review,red eye|eye pain|dry eyes|gritty eyes,attending|consultant.*
+HX.ENT.MOUTH_ULCERS,Mouth ulcers and sore tongue,systems review,oral ulcers|sore tongue|glossitis|chhale|angular cracks,attending|consultant.*
+HX.ENT.GUMS,Bleeding or swollen gums,systems review,gum bleeding|gum swelling|bleeding gums|gum discolouration,attending|consultant.*
+HX.ENT.HEARING,Hearing loss and tinnitus,systems review,deafness|ringing in ears|tinnitus|hearing problems,attending|consultant.*
+HX.ENT.NOSE_THROAT,Sore throat or nasal symptoms,systems review,sore throat|blocked nose|runny nose|sinus symptoms,attending|consultant.*
+HX.ENT.HOARSENESS,Change in voice,systems review,hoarse voice|hoarseness|voice change,attending|consultant.*
+HX.PSYCH.LOW_MOOD,Low mood and loss of interest,systems review,depression screen|feeling low|anhedonia|sadness,attending|consultant.*
+HX.PSYCH.ANXIETY,Worry and anxiety,systems review,anxious|nervousness|panic|tension,attending|consultant.*
+HX.PSYCH.SELF_HARM,Thoughts of self-harm or suicide,systems review,suicidal thoughts|self harm|suicide risk,attending|consultant.*
+HX.PSYCH.PSYCHOSIS,Unusual experiences or beliefs,systems review,hallucinations|hearing voices|delusions|paranoia,attending|consultant.*
+HX.PSYCH.STRESS,Recent stress or life events,systems review,life events|stressors|bereavement|work stress,attending|consultant.*
+HX.PMH.MEDICAL,Previous medical illnesses,past history,PMH|past medical history|past illnesses|previous diseases,attending|consultant.*
+HX.PMH.SURGICAL,Previous operations,past history,past surgical history|PSH|surgeries|operations,attending|consultant.*
+HX.PMH.ADMISSIONS,Previous hospital admissions,past history,hospitalisations|hospitalizations|previous admissions,attending|consultant.*
+HX.PMH.CHRONIC_CONDITIONS,"Long-term conditions (diabetes, high blood pressure, asthma, tuberculosis, thyroid)",past history,comorbidities|co-morbidities|DM HTN|chronic illnesses|TB history,attending|consultant.*
+HX.PMH.TRANSFUSION_PREGNANCY,Previous blood transfusions and pregnancies,past history,blood transfusion history|previous transfusions|sensitising events|prior pregnancies,attending|consultant.*
+HX.PMH.IVIG_DETAILS,Previous intravenous immunoglobulin treatment,past history,IVIG|immunoglobulin infusion|IV immunoglobulin,attending|consultant.*
+HX.PMH.MYCOPHENOLATE,Previous mycophenolate treatment,past history,mycophenolate mofetil|MMF|mycophenolic acid,attending|consultant.*
+HX.PMH.IMMUNOSUPPRESSION,"Previous immunosuppressive, chemotherapy or radiotherapy treatment",past history,immunosuppressants|chemotherapy|radiotherapy|steroid courses,attending|consultant.*
+HX.PMH.VACCINATION,Vaccination history,past history,immunisation|immunization|vaccines|jabs,attending|consultant.*
+HX.PMH.CHILDHOOD,Birth and childhood illnesses,past history,childhood history|developmental history|birth history,attending|consultant.*
+HX.MEDS.CURRENT,Current medicines,medicines,drug history|medications|tablets|DHx|regular medicines,attending|consultant.*
+HX.MEDS.SUPPLEMENTS,"Supplements, herbal and traditional remedies",medicines,Ayurvedic medicine|herbal medicine|home remedies|vitamins|Unani|Siddha|homeopathy|desi dawa|supplements|herbal|traditional medicine|Chinese medicine|tonics|over-the-counter|OTC|alternative medicine|imported medicines,attending|consultant.*
+HX.MEDS.SUPPLEMENT_DETAILS,"Supplement or remedy details: name, source, dose and duration",medicines,which supplement|where bought|bhasma details|remedy ingredients|how long taken,attending|consultant.*
+HX.MEDS.ALLERGIES,Drug and other allergies,medicines,allergy|drug allergy|NKDA|adverse drug reactions,attending|consultant.*
+HX.MEDS.ADHERENCE,Adherence to medicines,medicines,compliance|missed doses|taking tablets regularly,attending|consultant.*
+HX.MEDS.RECENT_CHANGES,Recent new medicines or dose changes,medicines,new drugs|recently started|dose change|stopped medicines,attending|consultant.*
+HX.MEDS.OTC,Over-the-counter medicines and painkillers,medicines,OTC drugs|painkillers|NSAIDs|chemist medicines|self-prescribed,attending|consultant.*
+HX.MEDS.RECENT_ANTIBIOTICS,Recent antibiotics,medicines,antibiotic courses|any antibiotics lately|antimicrobials,attending|consultant.*
+HX.FAMILY.BLOOD,"Family history of blood disorders, anaemia or jaundice",family,family anemia|family blood disease|relatives needing transfusions|hereditary blood problems,attending|consultant.*
+HX.FAMILY.GENERAL,Illnesses in the family,family,family history|FHx|hereditary illnesses|relatives' health,attending|consultant.*
+HX.FAMILY.CONSANGUINITY,Consanguinity of parents,family,consanguineous marriage|parents related|cousin marriage,attending|consultant.*
+HX.FAMILY.CANCER,Family history of cancer,family,cancer in family|malignancy in relatives|family tumours,attending|consultant.*
+HX.FAMILY.CARDIAC,Family history of heart disease or sudden death,family,premature heart disease|sudden cardiac death in family|family heart attacks,attending|consultant.*
+HX.FAMILY.AUTOIMMUNE,Family history of thyroid or autoimmune conditions,family,autoimmune disease in family|family thyroid problems|family arthritis,attending|consultant.*
+HX.FAMILY.SIMILAR_ILLNESS,Similar illness in family members,family,anyone else in family affected|relatives with same symptoms|family members unwell,attending|consultant.*
+HX.SOCIAL.ALCOHOL,Alcohol use,social,drinking|alcohol intake|units|daru|country liquor,attending|consultant.*
+HX.SOCIAL.SMOKING,Smoking,social,cigarettes|bidi|pack years|tobacco smoking|hookah,attending|consultant.*
+HX.SOCIAL.TOBACCO_CHEWING,"Tobacco chewing, gutka, paan and betel nut",social,gutka|paan|khaini|betel nut|supari|chewing tobacco,attending|consultant.*
+HX.SOCIAL.RECREATIONAL_DRUGS,Recreational drug use,social,illicit drugs|cannabis|ganja|drug use|substance use,attending|consultant.*
+HX.SOCIAL.INJECTING,Injecting drug use,social,IVDU|PWID|needle sharing,attending|consultant.*
+HX.SOCIAL.DIET,Diet,social,food habits|eating habits|meals|nutrition,attending|consultant.*
+HX.SOCIAL.VEGETARIAN,Vegetarian or vegan diet,social,veg|pure vegetarian|vegan|eggetarian|non-veg,attending|consultant.*
+HX.SOCIAL.TRAVEL,Recent travel,social,travel history|foreign travel|trips|native place visit,attending|consultant.*
+HX.SOCIAL.LIVING,Living situation and household,social,who do you live with|home situation|household members,attending|consultant.*
+HX.SOCIAL.FUNCTION,Daily activities and mobility,social,ADLs|activities of daily living|independence|mobility,attending|consultant.*
+HX.SOCIAL.EXERCISE,Physical activity and exercise,social,exercise|sports|fitness,attending|consultant.*
+HX.SOCIAL.FINANCES,Financial situation and support,social,income|support at home|insurance|affordability,attending|consultant.*
+HX.EXPOSURE.OCCUPATION,Occupation and workplace exposures,exposure,job|work|what do you do|occupational history|workplace,attending|consultant.*
+HX.EXPOSURE.PREVIOUS_JOBS,Previous occupations,exposure,past jobs|work history|employment history,attending|consultant.*
+HX.EXPOSURE.HOBBIES,Hobbies and pastimes,exposure,pastimes|leisure activities|interests|crafts,attending|consultant.*
+HX.EXPOSURE.HOME,"Home environment: age of house, paint, renovation and cooking fuel",exposure,house|home exposures|renovation|cooking fuel|chulha,attending|consultant.*
+HX.EXPOSURE.WATER,Drinking water source,exposure,water supply|well water|borewell|tube well|hand pump,attending|consultant.*
+HX.EXPOSURE.TOXINS,"Chemicals, pesticides, metals and other toxins",exposure,poison exposure|pesticides|chemicals|heavy metals|insecticides,attending|consultant.*
+HX.EXPOSURE.COOKWARE,"Cookware, utensils and food containers",exposure,utensils|pots and pans|glazed pottery|storage containers,attending|consultant.*
+HX.EXPOSURE.COSMETICS,Cosmetics and traditional preparations applied to the body,exposure,kohl|surma|kajal|sindoor|hair dye|skin creams,attending|consultant.*
+HX.EXPOSURE.ANIMALS,"Animals, pets and livestock",exposure,pets|cattle|farm animals|animal contact|rats,attending|consultant.*
+HX.EXPOSURE.BITES,"Insect, tick, snake or animal bites",exposure,snake bite|dog bite|tick bite|insect sting|mosquito bites,attending|consultant.*
+HX.EXPOSURE.FOOD,"Unusual food, street food or undercooked meat",exposure,street food|undercooked meat|food poisoning|raw food,attending|consultant.*
+HX.EXPOSURE.SICK_CONTACTS,"Contact with unwell people, including tuberculosis",exposure,sick contacts|TB contact|infectious contacts|contact history,attending|consultant.*
+HX.EXPOSURE.OTHERS_EXPOSED,Others with similar symptoms or the same exposure,exposure,anyone else affected|co-workers ill|cluster|others at home unwell,attending|consultant.*
+HX.EXPOSURE.SEXUAL,Sexual history,exposure,sexual partners|STI risk|unprotected sex|high-risk behaviour,attending|consultant.*
+HX.EXPOSURE.NEEDLES,"Tattoos, needlestick injuries and unsafe injections",exposure,tattoos|needlestick|injections by quacks|unsterile needles,attending|consultant.*
+HX.EXPOSURE.RADIATION,Radiation exposure,exposure,radiation|X-ray work|radioactive exposure,attending|consultant.*
+HX.RECORDS.PREVIOUS,"Previous records, test results and prescriptions",records,old reports|previous investigations|old prescriptions|past results|file,attending|consultant.*
+HX.RECORDS.DISCHARGE_SUMMARIES,Previous discharge summaries,records,discharge summary|discharge card|old admission notes,attending|consultant.*
+HX.RECORDS.REFERRAL_LETTER,Referral letter,records,referral note|GP letter|reference letter,attending|consultant.*
