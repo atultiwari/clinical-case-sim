@@ -1,0 +1,2 @@
+id,kind,target,inputs,factor,tolerance_pct,formula
+R.MCH,ratio,CMP.MCH,CMP.HB|CMP.RBC,1,2,MCH (pg) = Hb (g/L) / RBC (x10^12/L)
