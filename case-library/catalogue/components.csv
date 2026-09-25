@@ -59,7 +59,7 @@ CMP.PROTEIN_C,Protein C activity,,IU/dL,,,0,
 CMP.PROTEIN_S_FREE,Free protein S antigen,,IU/dL,,,0,
 CMP.ANTITHROMBIN,Antithrombin activity,,IU/dL,,,0,
 CMP.HIT_ANTIBODY,Anti-PF4/heparin antibody,,,,,,Anti-PF4/heparin antibodies not detected.
-CMP.ABO_GROUP,ABO group,,,,,,"Forward and reverse grouping concordant: group O. (Generator should vary the group per case, e.g. by Indian population frequencies, unless the article states it.)"
+CMP.ABO_GROUP,ABO group,,,,,,Forward and reverse grouping concordant: group O.
 CMP.RHD,RhD type,,,,,,RhD positive.
 CMP.ANTIBODY_SCREEN,Antibody screen,,,,,,No irregular red cell antibodies detected by indirect antiglobulin technique.
 CMP.ANTIBODY_ID,Antibody identification,,,,,,No red cell alloantibody identified on panel testing.
@@ -73,7 +73,7 @@ CMP.BM_ASPIRATE_REPORT,Bone marrow aspirate report,,,,,,"Particulate, cellular a
 CMP.BM_TREPHINE_REPORT,Bone marrow trephine report,,,,,,Adequate trephine core with age-appropriate cellularity and normal trilineage haematopoiesis. Bony trabeculae are unremarkable and there is no fibrosis on reticulin stain. No infiltrate or granulomas are seen.
 CMP.BM_IRON_REPORT,Bone marrow iron stain report,,,,,,Perls stain shows normal storage iron (grade 2) in marrow fragments. Occasional erythroblasts contain fine siderotic granules; no ring sideroblasts are seen.
 CMP.BM_FLOW_REPORT,Bone marrow flow cytometry report,,,,,,"Myeloid, monocytic and erythroid maturation patterns are normal. CD34-positive blasts are under 2% with a normal phenotype. B cells are polyclonal and plasma cells show a normal polyclonal phenotype."
-CMP.KARYOTYPE_REPORT,Karyotype report,,,,,,"Twenty metaphases analysed at a 400-band level. Normal karyotype for the patient's sex, with no clonal abnormality detected. (Generator should print 46,XX or 46,XY from the case's sex.)"
+CMP.KARYOTYPE_REPORT,Karyotype report,,,,,,"Twenty metaphases analysed at a 400-band level. Normal karyotype for the patient's sex, with no clonal abnormality detected."
 CMP.FISH_MDS_REPORT,MDS FISH panel report,,,,,,"Two hundred interphase nuclei scored per probe. Normal signal patterns for 5q31, 7q31, chromosome 8 centromere and 20q12; no deletion or gain detected."
 CMP.FISH_MYELOMA_REPORT,Plasma cell FISH panel report,,,,,,"Plasma cell-enriched interphase FISH, 100 nuclei scored per probe. No IGH rearrangement, 1q gain or 17p (TP53) deletion detected."
 CMP.BCR_ABL,BCR-ABL1 transcript,,,,,,BCR-ABL1 fusion transcripts (p190 and p210) not detected.
@@ -326,7 +326,7 @@ CMP.XR_HANDS_REPORT,Hands X-ray report,,,,,,PA radiographs of both hands. Joint 
 CMP.XR_LONG_BONES_REPORT,Long bones and knees X-ray report,,,,,,Radiographs of the long bones and knees. Cortices are intact and bone density is normal with no focal lesion. Joint spaces are preserved.
 CMP.SKELETAL_SURVEY_REPORT,Skeletal survey report,,,,,,"Skeletal survey of the skull, spine, pelvis, ribs and long bones. Bone density is normal and no focal lytic or sclerotic lesion is seen. No fractures are identified."
 CMP.US_ABDOMEN_REPORT,Ultrasound abdomen report,,,,,,"The liver is normal in size and echotexture with no focal lesion. The gallbladder is thin-walled without calculi and the common bile duct is not dilated. The spleen is normal in size and homogeneous. Both kidneys, the pancreas and the aorta appear normal, with no free fluid."
-CMP.US_PELVIS_REPORT,Ultrasound pelvis report,,,,,,"The urinary bladder is well distended with a smooth wall. The pelvic organs (uterus and ovaries, or prostate) are normal in size and echotexture with no mass. No free fluid in the pelvis. (Better: separate male and female texts chosen by sex.)"
+CMP.US_PELVIS_REPORT,Ultrasound pelvis report,,,,,,"The urinary bladder is well distended with a smooth wall. The pelvic organs (uterus and ovaries, or prostate) are normal in size and echotexture with no mass. No free fluid in the pelvis."
 CMP.US_KIDNEYS_REPORT,Ultrasound kidneys and urinary tract report,,,,,,Both kidneys are normal in size with preserved corticomedullary differentiation. No calculi and no pelvicalyceal dilatation. The bladder is unremarkable.
 CMP.US_NECK_REPORT,Ultrasound neck report,,,,,,The thyroid gland is normal in size and echotexture with no nodules. No enlarged or morphologically abnormal cervical lymph nodes. The salivary glands appear normal.
 CMP.DOPPLER_LEGS_REPORT,Venous Doppler ultrasound of the legs report,,,,,,"The common femoral, femoral and popliteal veins of both legs are fully compressible with normal phasic flow and augmentation. No intraluminal thrombus is seen."

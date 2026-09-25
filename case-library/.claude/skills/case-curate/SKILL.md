@@ -57,6 +57,8 @@ About 12–15 approvals per case.
 7. Every row: rationale, confidence (0–1), priority, and `judgement_call` when the article gives no anchor and reasonable clinicians could differ. Judgement calls lead the review pack.
 8. Answer the question asked, in the words a patient would use or a clinician would record. No diagnosis-specific negatives in answers to general questions (the occupation question gets the job, not "no lead exposure"); keep that reasoning in the rationale.
 
+9. Patient-dependent normals (catalogue v1, Q1 and Q2): the templates for menstrual history, pelvic examination, pulse, ECG rate, postural blood pressure, height and weight, peak flow and capillary glucose are neutral. Where the case's own sex, age or vital signs make a neutral text wrong, write the item as an `affected` row from the case's values. Always record the patient's blood group (ABO and RhD) as an `affected` row; the generator's default only fills a gap.
+
 Items on any path are always `affected` or checked explicitly, never left to the normal generator. The patient's words (`lay_text`) carry exactly the clinical fact: no added symptoms, no lost negatives.
 
 ## Reports and consult notes (SPEC §6.8)
