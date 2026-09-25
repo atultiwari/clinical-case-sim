@@ -57,12 +57,17 @@ F1–F3 are in `case-media/PMC12949993/`; their sizes match the local files and 
    ```
 4. From `case-library/`, run `pnpm --filter @case-library/studio dev` and open http://localhost:3000. With `STUDIO_USERS` unset there is no login page, and it only listens on this Mac.
 
-### 4. Review the pilot (L0.10) in the Studio
+### 4. Review the pilot (L0.10): done as a recorded blanket approval
 
-Once steps 1–3 are done, the pilot shows in the Studio. Review it there (or ask Claude for the Excel pack): the 21 judgement calls, the reviewer-set values (G14, G15), and reject the `CMP.US_PELVIS_REPORT` normal row, which carries an authoring note. Then say "freeze" when you are satisfied (L0.11).
+Atul chose to approve everything for now. It is recorded as his decision (batch `chat-2026-09-25-atul-blanket`, 1,338 decisions), with Claude's proposed values for the six placeholders, the three marrow report values (G15) and the corrected pelvic ultrasound text. The pilot was **not reviewed item by item**, so it must not count in a study's primary results until Atul reviews it; the Studio shows every row with its note.
 
-### 5. Later
+### 5. Freeze (L0.11)
+
+Say "freeze" to freeze `PMC12949993@v1` and export bundle `PMC12949993@v1.r1`. Nothing else blocks it: every check is clean.
+
+### 6. Later
 
 - The starter cases' proposed answers (`cases/BATCH1-CURATOR-ANSWERS.md`) at the batch 1 review (L1.4).
 - The catalogue recheck before Nidana's production release.
+- An item-by-item review of the pilot in the Studio, before it counts in any study's primary results.
 - For the VPS deployment of the Studio: `STUDIO_USERS` and `STUDIO_SESSION_SECRET` (see `studio/README.md`).
