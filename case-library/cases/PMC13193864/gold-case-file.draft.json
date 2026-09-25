@@ -1213,7 +1213,8 @@
    "public_release_ok": true,
    "has_annotations": true,
    "file_path": "PMC13193864/F4.jpg",
-   "raw_fact_id": "R07"
+   "raw_fact_id": null,
+   "note": "Not shown to players until masked: the plot header appears to show the patient's name. Mask (crop the header) before any use (figure check, 2026-09-26)."
   },
   {
    "id": "M08",
@@ -1226,7 +1227,8 @@
    "public_release_ok": true,
    "has_annotations": true,
    "file_path": "PMC13193864/F4.jpg",
-   "raw_fact_id": "R07"
+   "raw_fact_id": null,
+   "note": "Not shown to players until masked: the plot header appears to show the patient's name, dated '+1', so it looks like a later patient sample rather than the laboratory negative control the article's caption states. Mask (crop the header) before any use (figure check, 2026-09-26)."
   }
  ],
  "gaps": [

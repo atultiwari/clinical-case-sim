@@ -636,7 +636,7 @@
    "licence": "CC BY 4.0",
    "production_ok": true,
    "public_release_ok": true,
-   "has_annotations": false,
+   "has_annotations": true,
    "file_path": "PMC12643702/F1.jpg",
    "raw_fact_id": "S01"
   },
@@ -649,7 +649,7 @@
    "licence": "CC BY 4.0",
    "production_ok": true,
    "public_release_ok": true,
-   "has_annotations": false,
+   "has_annotations": true,
    "file_path": "PMC12643702/F2.jpg",
    "raw_fact_id": "S01"
   }

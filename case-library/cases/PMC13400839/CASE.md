@@ -159,3 +159,9 @@ Existing items reused instead of the shortlist's suggestions: `HX.PMH.SURGICAL` 
 - [ ] The rubric and conditions, especially must-do 5 (platelets plus antibiotics) and must-not-do 4 (folate without B12).
 - [ ] The new catalogue items and their estimated prices.
 - [ ] Figures: download F1 to F3 and confirm `has_annotations` (only Figure 1C mentions arrows).
+
+## Figure check (2026-09-26)
+
+The images were downloaded from PMC and looked at one by one.
+
+- M09 (Figure 3, flow cytometry): `has_annotations` set to true (gate names and axes). It shows "Blasts 1: 25.77%", which supports the myeloid-neoplasm trap, not the diagnosis.

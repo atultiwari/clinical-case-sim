@@ -808,7 +808,8 @@
    "public_release_ok": true,
    "has_annotations": true,
    "file_path": "PMC11015937/F2.jpg",
-   "raw_fact_id": "R02"
+   "raw_fact_id": null,
+   "note": "Not shown to players: the chart is titled 'Percentage of Plasmodium falciparum' and marks 'Day 2 - anti malaria medicine started', so it gives away later days and treatment. Debrief only (figure check, 2026-09-26)."
   }
  ],
  "ground_truth": {

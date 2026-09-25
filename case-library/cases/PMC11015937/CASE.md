@@ -140,3 +140,10 @@ That made 6 items (1 history, 3 tests, 2 actions), 4 components and 1 normal tem
 - [ ] Consult notes: infectious diseases and haematology before the travel history. Are they too leading?
 - [ ] Figure flags: both charts are annotated; mask or crop the axis labels before production use.
 - [ ] Catalogue needs: ids, prices, turnaround and the ADAMTS13 antibody range source.
+
+## Figure check (2026-09-26)
+
+The images were downloaded from PMC and looked at one by one.
+
+- M02 (Figure 2, parasitaemia chart) unlinked from the parasitaemia result: its title names Plasmodium falciparum and it marks the day treatment started, so a player would see later days and the treatment. Debrief only.
+- The chart shows the article's parasitaemia values; the reviewer row (day 0) and the estimated later days should be set from it at review.

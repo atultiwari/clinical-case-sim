@@ -138,3 +138,11 @@ Notes for the lead curator:
 - [ ] The rubric and the must-do and must-not-do conditions (decision 21); whether starting steroids should be penalised.
 - [ ] The figures after download: which file is which, annotations, and the licence flags (decision 22).
 - [ ] The new catalogue items and their prices and ranges (all price_source `estimate`).
+
+## Figure check (2026-09-26)
+
+The images were downloaded from PMC and looked at one by one.
+
+- M07 and M08 (Figure 4, FLAER flow plots) unlinked from the PNH flow result until masked: the plot headers appear to show the patient's name. Production decision: mask (crop the headers) or exclude.
+- Figure 4B's header reads "+1" with a later date, so it looks like a second patient sample, not the "laboratory negative control" the article's caption states.
+- M01 (Figure 1, timeline) names eculizumab and meningococcal vaccination; it has no link and stays debrief only.

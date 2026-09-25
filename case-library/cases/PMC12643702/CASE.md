@@ -166,3 +166,11 @@ The shortlist's other suggestions already exist: factor II, V, VII, IX, X assays
 - [ ] Check the rubric (especially 3 for vitamin K deficiency and 2 for deliberate self-poisoning) and the must-do and must-not-do conditions.
 - [ ] Read the consult notes for leaks and for being no more diagnostic than a colleague would be (haematology V2, toxicology V1 and V2).
 - [ ] Approve or edit the new catalogue items, their synonyms, prices and turnaround, and verify the ICD codes.
+
+## Figure check (2026-09-26)
+
+The images were downloaded from PMC and looked at one by one.
+
+- M01 and M02: `has_annotations` set to true (axes, legend and INR data labels).
+- Figure 1's article caption says vitamin K dose times, but the chart's title and legend read "Time resulted" (result times). The caption is kept as the article gives it; check at review.
+- Figure 2 shows the article's INR values as data labels. The INR series in the ledger was estimated before the figure was seen and should be replaced from it at review.
