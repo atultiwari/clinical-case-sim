@@ -1,18 +1,36 @@
 import { FlagBadge, LicenceBadges } from "@/components/badges";
 import { Empty, Fields } from "@/components/common";
+import { FigureDecisionForm } from "@/components/review/figure-decision-form";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatDateTime } from "@/lib/format";
 import { loadCase, type CaseParams } from "@/server/case-page";
+import { caseIdOf } from "@/lib/review-input";
 import { listMedia } from "@/server/queries/media";
+import { canRecord } from "@/server/review-context";
 
 const DECISION_TONES = { pending: "warning", use: "success", mask: "info", exclude: "danger" } as const;
 
 export default async function FiguresPage({ params }: { params: CaseParams }) {
   const c = await loadCase(params);
-  const media = await listMedia(c.id);
+  const [media, permission] = await Promise.all([listMedia(c.id), canRecord()]);
   if (media.length === 0) return <Empty>No figures.</Empty>;
+  const canWrite = permission.allowed && c.status !== "retired";
+  const notice = !permission.allowed
+    ? permission.reason
+    : canWrite
+      ? null
+      : "This case version is retired: its figure decisions cannot change.";
   return (
+    <>
+    {canWrite ? (
+      <p className="mb-2 rounded-md border border-sky-200 bg-sky-50 p-2 text-xs text-sky-900">
+        Figure decisions are written to the figure&apos;s row at once (SPEC §9). After a case is frozen, a new decision
+        means a new bundle revision, which Claude exports.
+      </p>
+    ) : notice ? (
+      <p className="mb-2 text-xs text-muted-foreground">{notice}</p>
+    ) : null}
     <div className="grid gap-3 md:grid-cols-2">
       {media.map((m) => (
         <Card key={m.id}>
@@ -54,9 +72,21 @@ export default async function FiguresPage({ params }: { params: CaseParams }) {
                 ["Raw material", m.raw_fact_id],
               ]}
             />
+            {canWrite ? (
+              <div className="sm:col-span-2">
+                <FigureDecisionForm
+                  caseVersionId={c.id}
+                  caseId={caseIdOf(c.id)}
+                  mediaId={m.id}
+                  current={m.production_decision}
+                  currentMaskedPath={m.masked_path}
+                />
+              </div>
+            ) : null}
           </CardContent>
         </Card>
       ))}
     </div>
+    </>
   );
 }

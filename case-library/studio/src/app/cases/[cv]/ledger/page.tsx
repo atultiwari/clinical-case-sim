@@ -1,5 +1,6 @@
 import { OriginBadge, ReviewBadge } from "@/components/badges";
 import { Empty, FilterLinks, Pager, type FilterOption } from "@/components/common";
+import { ReviewNotice, RowReview } from "@/components/review/row-review";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { caseHref } from "@/lib/case-id";
@@ -20,6 +21,7 @@ import {
 import type { SearchParams } from "@/lib/search-params";
 import { loadCase, type CaseParams } from "@/server/case-page";
 import { listLedger } from "@/server/queries/ledger";
+import { loadReviewContext } from "@/server/review-context";
 
 type Props = { params: CaseParams; searchParams: Promise<SearchParams> };
 
@@ -44,7 +46,10 @@ function options<K extends "tier" | "priority" | "status" | "judgement">(
 export default async function LedgerPage({ params, searchParams }: Props) {
   const c = await loadCase(params);
   const filters = parseLedgerFilters(await searchParams);
-  const { rows, total, facets } = await listLedger(c.id, filters);
+  const [{ rows, total, facets }, review] = await Promise.all([
+    listLedger(c.id, filters),
+    loadReviewContext(c.id, c.status),
+  ]);
   const base = caseHref(c.id, "ledger");
   return (
     <>
@@ -63,6 +68,7 @@ export default async function LedgerPage({ params, searchParams }: Props) {
           {hasActiveFilters(filters) ? <a href={base} className="text-xs">Clear all</a> : null}
         </form>
       </div>
+      <ReviewNotice canWrite={review.context.canWrite} reason={review.notice} />
       <p className="mb-2 text-xs text-muted-foreground">{total} rows</p>
       {rows.length === 0 ? (
         <Empty>No ledger rows{hasActiveFilters(filters) ? " match these filters" : " yet"}.</Empty>
@@ -96,9 +102,15 @@ export default async function LedgerPage({ params, searchParams }: Props) {
                   {row.release_text ? <div className="text-xs">{row.release_text}</div> : null}
                 </TableCell>
                 <TableCell>{row.priority ?? "—"}</TableCell>
-                <TableCell>
+                <TableCell className="min-w-48">
                   <ReviewBadge status={row.review_status} />
                   {row.review_note ? <div className="text-xs">{row.review_note}</div> : null}
+                  <RowReview
+                    context={review.context}
+                    targetTable="synthetic_ledger"
+                    rowId={row.id}
+                    currentValue={prettyJson(row.value)}
+                  />
                 </TableCell>
                 <TableCell className="max-w-sm text-xs">
                   {row.rationale ?? "—"}

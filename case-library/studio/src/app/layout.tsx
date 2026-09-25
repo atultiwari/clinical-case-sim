@@ -4,24 +4,30 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 import { SiteHeader } from "@/components/site-header";
+import { currentUser, writeAvailability } from "@/server/auth";
 import { databaseHost, isDatabaseConfigured } from "@/server/db";
 import { DB_URL_VARIABLE } from "@/server/env";
 
 export const metadata: Metadata = {
   title: "Case Studio",
-  description: "Private, read-only viewer of the Case Vault.",
+  description: "Private viewer of the Case Vault, with Atul's review decisions.",
   robots: { index: false, follow: false },
 };
 
 // Every page reads the Case Vault at request time; nothing is prerendered.
 export const dynamic = "force-dynamic";
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({ children }: { children: ReactNode }) {
   const configured = isDatabaseConfigured();
+  const user = await currentUser();
   return (
     <html lang="en-GB">
       <body>
-        <SiteHeader host={configured ? databaseHost() : null} />
+        <SiteHeader
+          host={configured ? databaseHost() : null}
+          user={user}
+          writable={Boolean(user) && writeAvailability().enabled}
+        />
         <main className="mx-auto max-w-[1400px] px-4 py-4">
           {configured ? children : <MissingDatabase />}
         </main>

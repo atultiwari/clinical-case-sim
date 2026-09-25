@@ -42,12 +42,19 @@ def test_rls_is_on_for_every_table(db: psycopg.Connection) -> None:
 
 
 def test_no_client_policies(db: psycopg.Connection) -> None:
-    # The only policies are the read-only role's select policies (L0.7).
+    # The only policies are the read-only role's select policies (L0.7) and the
+    # Case Studio writer's (L1.5); none for anon, authenticated or public.
     rows = db.execute(
         "select distinct roles::text, cmd from pg_policies where schemaname = 'casevault'"
+        " order by 1, 2"
     ).fetchall()
 
-    assert rows == [("{casevault_reader}", "SELECT")]
+    assert rows == [
+        ("{casevault_reader}", "SELECT"),
+        ("{casevault_studio_writer}", "INSERT"),
+        ("{casevault_studio_writer}", "SELECT"),
+        ("{casevault_studio_writer}", "UPDATE"),
+    ]
 
 
 @pytest.mark.parametrize("role", ["anon", "authenticated"])
