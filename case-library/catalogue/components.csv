@@ -48,41 +48,41 @@ CMP.APTT,Activated partial thromboplastin time,,s,,,1,
 CMP.FIBRINOGEN,Fibrinogen,,g/L,mg/dL,100,1,
 CMP.D_DIMER,D-dimer,,mg/L FEU,,,2,
 CMP.TT,Thrombin time,,s,,,1,
-CMP.MIXING_STUDY,Mixing study result,,,,,,"Clotting times of a 1:1 mix with normal pooled plasma fall within the reference range, immediately and after 2 h incubation at 37 C."
+CMP.MIXING_STUDY,Mixing study result,,,,,,"Clotting times of a 1:1 mix with normal pooled plasma fall within the reference range, immediately and after 2 h incubation at 37 °C."
 CMP.F8,Factor VIII activity,,IU/dL,,,0,
 CMP.F9,Factor IX activity,,IU/dL,,,0,
 CMP.VWF_AG,von Willebrand factor antigen,,IU/dL,,,0,
 CMP.VWF_ACT,von Willebrand factor activity,,IU/dL,,,0,
 CMP.DRVVT_RATIO,DRVVT normalised ratio,,ratio,,,2,
-CMP.LUPUS_ANTICOAGULANT,Lupus anticoagulant,,,,,,Lupus anticoagulant not detected by DRVVT and silica clotting time.
+CMP.LUPUS_ANTICOAGULANT,Lupus anticoagulant,,,,,,Lupus anticoagulant not detected by dRVVT and silica clotting time.
 CMP.PROTEIN_C,Protein C activity,,IU/dL,,,0,
 CMP.PROTEIN_S_FREE,Free protein S antigen,,IU/dL,,,0,
 CMP.ANTITHROMBIN,Antithrombin activity,,IU/dL,,,0,
 CMP.HIT_ANTIBODY,Anti-PF4/heparin antibody,,,,,,Anti-PF4/heparin antibodies not detected.
-CMP.ABO_GROUP,ABO group,,,,,,Forward and reverse grouping concordant: group O.
+CMP.ABO_GROUP,ABO group,,,,,,"Forward and reverse grouping concordant: group O. (Generator should vary the group per case, e.g. by Indian population frequencies, unless the article states it.)"
 CMP.RHD,RhD type,,,,,,RhD positive.
 CMP.ANTIBODY_SCREEN,Antibody screen,,,,,,No irregular red cell antibodies detected by indirect antiglobulin technique.
 CMP.ANTIBODY_ID,Antibody identification,,,,,,No red cell alloantibody identified on panel testing.
 CMP.DAT_IGG,"Direct antiglobulin test, IgG",,,,,,Direct antiglobulin test negative with anti-IgG.
 CMP.DAT_C3D,"Direct antiglobulin test, C3d",,,,,,Direct antiglobulin test negative with anti-C3d.
 CMP.ELUATE,Eluate antibody,,,,,,No antibody detected in the eluate against a screening panel.
-CMP.DONATH_LANDSTEINER,Donath-Landsteiner antibody,,,,,,No haemolysis after incubation at 4 C then 37 C; biphasic haemolysin not detected.
-CMP.COLD_AGGLUTININ_TITRE,Cold agglutinin titre,,,,,,Cold agglutinin titre less than 1 in 64 at 4 C.
+CMP.DONATH_LANDSTEINER,Donath-Landsteiner antibody,,,,,,No haemolysis after incubation at 4 °C then 37 °C; biphasic haemolysin not detected.
+CMP.COLD_AGGLUTININ_TITRE,Cold agglutinin titre,,,,,,Cold agglutinin titre less than 1:64 at 4 °C.
 CMP.CROSSMATCH,Crossmatch result,,,,,,Donor units compatible by indirect antiglobulin crossmatch.
-CMP.BM_ASPIRATE_REPORT,Bone marrow aspirate report,,,,,,"Particulate, cellular aspirate with normal trilineage haematopoiesis. Erythropoiesis is normoblastic and granulopoiesis matures normally; megakaryocytes are adequate with normal morphology. Plasma cells and lymphocytes are not increased and no blasts excess or infiltrate is seen."
+CMP.BM_ASPIRATE_REPORT,Bone marrow aspirate report,,,,,,"Particulate, cellular aspirate with normal trilineage haematopoiesis. Erythropoiesis is normoblastic and granulopoiesis matures normally; megakaryocytes are adequate with normal morphology. Plasma cells and lymphocytes are not increased; there is no excess of blasts and no infiltrate."
 CMP.BM_TREPHINE_REPORT,Bone marrow trephine report,,,,,,Adequate trephine core with age-appropriate cellularity and normal trilineage haematopoiesis. Bony trabeculae are unremarkable and there is no fibrosis on reticulin stain. No infiltrate or granulomas are seen.
 CMP.BM_IRON_REPORT,Bone marrow iron stain report,,,,,,Perls stain shows normal storage iron (grade 2) in marrow fragments. Occasional erythroblasts contain fine siderotic granules; no ring sideroblasts are seen.
 CMP.BM_FLOW_REPORT,Bone marrow flow cytometry report,,,,,,"Myeloid, monocytic and erythroid maturation patterns are normal. CD34-positive blasts are under 2% with a normal phenotype. B cells are polyclonal and plasma cells show a normal polyclonal phenotype."
-CMP.KARYOTYPE_REPORT,Karyotype report,,,,,,"Twenty metaphases analysed at a 400-band level. Normal male or female karyotype, 46,XX or 46,XY, with no clonal abnormality detected."
+CMP.KARYOTYPE_REPORT,Karyotype report,,,,,,"Twenty metaphases analysed at a 400-band level. Normal karyotype for the patient's sex, with no clonal abnormality detected. (Generator should print 46,XX or 46,XY from the case's sex.)"
 CMP.FISH_MDS_REPORT,MDS FISH panel report,,,,,,"Two hundred interphase nuclei scored per probe. Normal signal patterns for 5q31, 7q31, chromosome 8 centromere and 20q12; no deletion or gain detected."
-CMP.FISH_MYELOMA_REPORT,Plasma cell FISH panel report,,,,,,"Plasma cell-enriched interphase FISH, 100 nuclei scored per probe. Normal signal patterns for IGH rearrangement, 1q gain and 17p (TP53) deletion probes."
+CMP.FISH_MYELOMA_REPORT,Plasma cell FISH panel report,,,,,,"Plasma cell-enriched interphase FISH, 100 nuclei scored per probe. No IGH rearrangement, 1q gain or 17p (TP53) deletion detected."
 CMP.BCR_ABL,BCR-ABL1 transcript,,,,,,BCR-ABL1 fusion transcripts (p190 and p210) not detected.
 CMP.JAK2_V617F,JAK2 V617F,,,,,,JAK2 V617F mutation not detected.
 CMP.CALR_MUTATION,CALR exon 9 mutation,,,,,,CALR exon 9 mutation not detected.
 CMP.MPL_MUTATION,MPL exon 10 mutation,,,,,,MPL exon 10 mutation not detected.
 CMP.MYELOID_NGS_REPORT,Myeloid NGS panel report,,,,,,Targeted sequencing of a myeloid gene panel achieved adequate coverage across all regions. No pathogenic or likely pathogenic variants were detected above the 2% variant allele frequency limit of detection.
 CMP.BETA_GLOBIN_REPORT,Beta-globin gene analysis report,,,,,,"Sequencing of the HBB gene, including exons, intron boundaries and promoter, shows no pathogenic variant."
-CMP.ALPHA_GLOBIN_REPORT,Alpha-globin gene analysis report,,,,,,Gap-PCR for common alpha-globin deletions and sequencing of HBA1 and HBA2 show a normal alpha-globin genotype (aa/aa).
+CMP.ALPHA_GLOBIN_REPORT,Alpha-globin gene analysis report,,,,,,Gap-PCR for common alpha-globin deletions and sequencing of HBA1 and HBA2 show a normal alpha-globin genotype (αα/αα).
 CMP.PB_BLOOD,Blood lead,,ug/dL,,,1,
 CMP.PB_URINE,Urine lead,,ug/L,,,0,
 CMP.HG_BLOOD,Blood mercury,,ug/L,,,1,
@@ -115,7 +115,7 @@ CMP.ANTI_XA,Anti-Xa activity,,IU/mL,,,2,
 CMP.PLATELET_AGGREGATION_REPORT,Platelet aggregation report,,,,,,"Normal primary and secondary aggregation responses to ADP, collagen, adrenaline and arachidonic acid, with normal agglutination to ristocetin."
 CMP.FETAL_CELLS,Fetal red cells,,%,,,2,
 CMP.PML_RARA,PML-RARA transcript,,,,,,PML-RARA fusion transcripts not detected.
-CMP.UREA,Urea,,mmol/L,BUN mg/dL,2.8,1,
+CMP.UREA,Urea,,mmol/L,mg/dL,6.006,1,
 CMP.CREATININE,Creatinine,,umol/L,mg/dL,0.0113,0,
 CMP.EGFR,Estimated glomerular filtration rate (CKD-EPI),,mL/min/1.73m2,,,0,
 CMP.NA,Sodium,,mmol/L,,,0,
@@ -257,10 +257,10 @@ CMP.ANTI_HCV,Hepatitis C antibody,,,,,,Anti-HCV non-reactive.
 CMP.HAV_IGM,Hepatitis A IgM antibody,,,,,,Anti-HAV IgM negative.
 CMP.HEV_IGM,Hepatitis E IgM antibody,,,,,,Anti-HEV IgM negative.
 CMP.CMV_IGM,Cytomegalovirus IgM antibody,,,,,,CMV IgM negative.
-CMP.CMV_IGG,Cytomegalovirus IgG antibody,,,,,,CMV IgG negative.
+CMP.CMV_IGG,Cytomegalovirus IgG antibody,,,,,,"CMV IgG positive, consistent with past infection."
 CMP.EBV_VCA_IGM,Epstein-Barr virus VCA IgM antibody,,,,,,EBV VCA IgM negative.
-CMP.EBV_VCA_IGG,Epstein-Barr virus VCA IgG antibody,,,,,,EBV VCA IgG negative.
-CMP.EBV_EBNA_IGG,Epstein-Barr virus EBNA-1 IgG antibody,,,,,,EBNA-1 IgG negative.
+CMP.EBV_VCA_IGG,Epstein-Barr virus VCA IgG antibody,,,,,,"EBV VCA IgG positive, consistent with past infection."
+CMP.EBV_EBNA_IGG,Epstein-Barr virus EBNA-1 IgG antibody,,,,,,"EBNA-1 IgG positive, consistent with past infection."
 CMP.PARVO_IGM,Parvovirus B19 IgM antibody,,,,,,Parvovirus B19 IgM negative.
 CMP.PARVO_IGG,Parvovirus B19 IgG antibody,,,,,,Parvovirus B19 IgG negative.
 CMP.MYCOPLASMA_IGM,Mycoplasma pneumoniae IgM antibody,,,,,,Mycoplasma pneumoniae IgM negative.
@@ -314,19 +314,19 @@ CMP.URINE_NA,"Urine sodium, spot",,mmol/L,,,0,
 CMP.OSMO_URINE,Urine osmolality,,mOsm/kg,,,0,
 CMP.FIT,Faecal immunochemical test for haemoglobin,,,,,,Negative for faecal occult blood.
 CMP.CALPROTECTIN,Faecal calprotectin,,ug/g,,,0,
-CMP.STOOL_OVA_PARASITES,"Stool microscopy for ova, cysts and parasites",,,,,,"Formed brown stool. No ova, cysts or trophozoites seen. No pus cells or red cells seen."
+CMP.STOOL_OVA_PARASITES,"Stool microscopy for ova, cysts and parasites",,,,,,"No ova, cysts or trophozoites seen. No pus cells or red cells seen."
 CMP.HP_STOOL_AG,Helicobacter pylori stool antigen,,,,,,H. pylori antigen not detected.
 CMP.FAECAL_ELASTASE,Faecal elastase-1,,ug/g,,,0,
-CMP.XR_CHEST_REPORT,Chest X-ray report,,,,,,PA erect chest radiograph. The heart size and mediastinal contours are within normal limits. The lungs are clear and both costophrenic angles are sharp. No free air under the diaphragm; the visible bones are unremarkable.
-CMP.XR_ABDOMEN_REPORT,Abdominal X-ray report,,,,,,Supine abdominal radiograph. The bowel gas pattern is normal with no dilated loops. No abnormal calcification or radio-opaque material is seen. The visible bones and soft tissue outlines are unremarkable.
+CMP.XR_CHEST_REPORT,Chest X-ray report,,,,,,PA erect chest radiograph. The heart size and mediastinal contours are within normal limits. The lungs are clear and both costophrenic angles are sharp. The visible bones are unremarkable.
+CMP.XR_ABDOMEN_REPORT,Abdominal X-ray report,,,,,,Supine abdominal radiograph. The bowel gas pattern is normal with no dilated loops. No abnormal calcification. The visible bones and soft tissue outlines are unremarkable.
 CMP.XR_SKULL_REPORT,Skull X-ray report,,,,,,AP and lateral skull radiographs. The vault is of normal density with no focal lucent or sclerotic areas. The sella turcica is of normal size and outline.
 CMP.XR_SPINE_REPORT,Spine X-ray report,,,,,,AP and lateral spine radiographs. Vertebral body heights and alignment are maintained. Disc spaces are preserved and bone density appears normal. No focal bone lesion is seen.
 CMP.XR_PELVIS_REPORT,Pelvis X-ray report,,,,,,"AP pelvis radiograph. The pelvic ring, sacroiliac joints and hip joints appear normal. Bone density is normal and no focal lesion is seen."
 CMP.XR_HANDS_REPORT,Hands X-ray report,,,,,,PA radiographs of both hands. Joint spaces are preserved with no erosions or periarticular osteopenia. Soft tissues are unremarkable and there is no abnormal calcification.
-CMP.XR_LONG_BONES_REPORT,Long bones and knees X-ray report,,,,,,Radiographs of the long bones and knees. Cortices are intact and the metaphyses are of normal density with no transverse bands. Joint spaces are preserved.
+CMP.XR_LONG_BONES_REPORT,Long bones and knees X-ray report,,,,,,Radiographs of the long bones and knees. Cortices are intact and bone density is normal with no focal lesion. Joint spaces are preserved.
 CMP.SKELETAL_SURVEY_REPORT,Skeletal survey report,,,,,,"Skeletal survey of the skull, spine, pelvis, ribs and long bones. Bone density is normal and no focal lytic or sclerotic lesion is seen. No fractures are identified."
-CMP.US_ABDOMEN_REPORT,Ultrasound abdomen report,,,,,,"The liver is normal in size and echotexture with no focal lesion. The gallbladder is thin-walled without calculi and the common bile duct is not dilated. The spleen measures 10 cm and is homogeneous. Both kidneys, the pancreas and the aorta appear normal, with no free fluid."
-CMP.US_PELVIS_REPORT,Ultrasound pelvis report,,,,,,The urinary bladder is well distended with a smooth wall. The pelvic organs are normal in size and echotexture with no adnexal mass. No free fluid in the pelvis.
+CMP.US_ABDOMEN_REPORT,Ultrasound abdomen report,,,,,,"The liver is normal in size and echotexture with no focal lesion. The gallbladder is thin-walled without calculi and the common bile duct is not dilated. The spleen is normal in size and homogeneous. Both kidneys, the pancreas and the aorta appear normal, with no free fluid."
+CMP.US_PELVIS_REPORT,Ultrasound pelvis report,,,,,,"The urinary bladder is well distended with a smooth wall. The pelvic organs (uterus and ovaries, or prostate) are normal in size and echotexture with no mass. No free fluid in the pelvis. (Better: separate male and female texts chosen by sex.)"
 CMP.US_KIDNEYS_REPORT,Ultrasound kidneys and urinary tract report,,,,,,Both kidneys are normal in size with preserved corticomedullary differentiation. No calculi and no pelvicalyceal dilatation. The bladder is unremarkable.
 CMP.US_NECK_REPORT,Ultrasound neck report,,,,,,The thyroid gland is normal in size and echotexture with no nodules. No enlarged or morphologically abnormal cervical lymph nodes. The salivary glands appear normal.
 CMP.DOPPLER_LEGS_REPORT,Venous Doppler ultrasound of the legs report,,,,,,"The common femoral, femoral and popliteal veins of both legs are fully compressible with normal phasic flow and augmentation. No intraluminal thrombus is seen."
@@ -335,27 +335,27 @@ CMP.ELASTOGRAPHY_REPORT,Liver elastography report,,,,,,"Ten valid measurements o
 CMP.CT_HEAD_REPORT,CT head report,,,,,,"Non-contrast CT of the head. Grey-white matter differentiation is preserved. No intracranial haemorrhage, mass effect or midline shift. The ventricles and extra-axial spaces are normal for age."
 CMP.CT_CHEST_REPORT,CT chest report,,,,,,"CT of the chest. The lungs are clear with no nodules, consolidation or interstitial change. The airways are patent. No mediastinal or hilar lymph node enlargement and no pleural or pericardial fluid."
 CMP.CTPA_REPORT,CT pulmonary angiogram report,,,,,,Good opacification of the pulmonary arterial tree to subsegmental level with no filling defect. The right ventricle is not dilated. The lungs are clear and there is no pleural fluid.
-CMP.CT_ABDOMEN_PELVIS_REPORT,CT abdomen and pelvis report,,,,,,"Contrast-enhanced CT of the abdomen and pelvis in the portal venous phase. The liver, spleen, pancreas, adrenal glands and kidneys are normal. The bowel is of normal calibre with no wall thickening and no intraluminal radio-dense material. No lymph node enlargement, free fluid or free gas."
-CMP.WBLDCT_REPORT,Whole-body low-dose CT report,,,,,,Whole-body low-dose CT from vertex to knees. The axial and appendicular skeleton is of normal density with no lytic or destructive lesion. No extramedullary soft tissue mass. Incidental organs in the field of view are unremarkable.
+CMP.CT_ABDOMEN_PELVIS_REPORT,CT abdomen and pelvis report,,,,,,"Contrast-enhanced CT of the abdomen and pelvis in the portal venous phase. The liver, spleen, pancreas, adrenal glands and kidneys are normal. The bowel is of normal calibre with no wall thickening. No lymph node enlargement, free fluid or free gas."
+CMP.WBLDCT_REPORT,Whole-body low-dose CT report,,,,,,Whole-body low-dose CT from vertex to knees. The axial and appendicular skeleton is of normal density with no lytic or destructive lesion. No extramedullary soft tissue mass. Other organs in the field of view are unremarkable.
 CMP.CT_KUB_REPORT,"CT kidneys, ureters and bladder report",,,,,,Non-contrast CT of the urinary tract. No urinary tract calculi. No hydronephrosis or hydroureter and no perinephric stranding. The bladder is unremarkable.
 CMP.CT_NECK_REPORT,CT neck report,,,,,,"Contrast-enhanced CT of the neck. The pharynx, larynx, thyroid and salivary glands are normal. No enlarged cervical lymph nodes and no collection. The airway is patent."
-CMP.MRI_BRAIN_REPORT,MRI brain report,,,,,,MRI of the brain with diffusion-weighted imaging. Normal grey and white matter signal with no restricted diffusion. The ventricles and sulci are normal for age. No abnormal enhancement or mass.
+CMP.MRI_BRAIN_REPORT,MRI brain report,,,,,,MRI of the brain with diffusion-weighted and post-contrast imaging. Normal grey and white matter signal with no restricted diffusion. The ventricles and sulci are normal for age. No abnormal enhancement or mass.
 CMP.MRI_SPINE_REPORT,MRI spine report,,,,,,MRI of the whole spine. Normal vertebral marrow signal and alignment. The spinal cord is of normal calibre and signal with no compression. No disc protrusion causing root or canal compromise.
 CMP.MRI_MUSCLE_REPORT,MRI muscles report,,,,,,MRI of the thigh and pelvic girdle muscles with T1 and STIR sequences. Normal muscle bulk and signal with no oedema or fatty replacement. The fascia and subcutaneous tissues are unremarkable.
 CMP.MRCP_REPORT,MRCP report,,,,,,MRI of the liver with MRCP. The liver is normal in size and signal with no focal lesion. The intrahepatic and common bile ducts are of normal calibre with no filling defect or stricture. The pancreatic duct is normal.
 CMP.MRI_PITUITARY_REPORT,MRI pituitary report,,,,,,Dedicated MRI of the pituitary with dynamic contrast. The gland is normal in size and enhances homogeneously. The stalk is central and the optic chiasm is clear.
 CMP.BONE_SCAN_REPORT,Bone scan report,,,,,,Whole-body technetium-99m MDP scintigraphy. Symmetrical physiological tracer uptake throughout the skeleton with normal renal excretion. No focal area of increased or reduced uptake.
 CMP.PET_CT_REPORT,PET-CT report,,,,,,"FDG PET-CT from skull base to mid-thigh. Physiological tracer distribution only. No abnormal hypermetabolic focus in lymph nodes, organs or bone."
-CMP.DXA_REPORT,Bone density scan report,,,,,,"DXA of the lumbar spine and both hips. Bone mineral density is within the normal range for age, with T-scores above -1.0 at all sites."
-CMP.ECG_REPORT,12-lead ECG report,,,,,,"Sinus rhythm at 76 per minute. Normal axis, PR and QRS intervals. No ST-segment or T-wave abnormality."
+CMP.DXA_REPORT,Bone density scan report,,,,,,"DXA of the lumbar spine and both hips. Bone mineral density is within the normal range, with T-scores above -1.0 and Z-scores above -2.0 at all sites."
+CMP.ECG_REPORT,12-lead ECG report,,,,,,"Sinus rhythm. Normal axis. PR, QRS and QTc intervals within normal limits. No ST-segment or T-wave abnormality."
 CMP.ECHO_REPORT,Echocardiogram report,,,,,,"Transthoracic echocardiogram. Normal left ventricular size and systolic function with no regional wall motion abnormality. Normal valves, right heart size and estimated pulmonary artery pressure. No pericardial fluid."
 CMP.HOLTER_REPORT,24-hour Holter monitor report,,,,,,24-hour ambulatory ECG. Sinus rhythm throughout with appropriate diurnal rate variation. Occasional isolated ectopic beats only; no pauses or sustained arrhythmia.
-CMP.TMT_REPORT,Exercise ECG report,,,,,,"Bruce protocol, 10 minutes completed, 90% of age-predicted maximum heart rate reached. No symptoms, no significant ST-segment change and a normal blood pressure response."
+CMP.TMT_REPORT,Exercise ECG report,,,,,,"Bruce protocol, 90% of age-predicted maximum heart rate reached. No symptoms, no significant ST-segment change and a normal blood pressure response."
 CMP.CORONARY_ANGIO_REPORT,Coronary angiography report,,,,,,"Right radial approach. Left main, left anterior descending, circumflex and right coronary arteries are smooth with no luminal narrowing. Right dominant circulation."
-CMP.OGD_REPORT,Upper GI endoscopy report,,,,,,"Endoscopy to the second part of the duodenum. Normal oesophageal, gastric and duodenal mucosa. No ulceration, varices or bleeding. Duodenal and gastric biopsies taken."
-CMP.COLONOSCOPY_REPORT,Colonoscopy report,,,,,,"Complete colonoscopy to the caecum with intubation of the terminal ileum; good bowel preparation. Normal mucosa throughout with no polyps, ulceration or source of bleeding. Random colonic biopsies taken."
+CMP.OGD_REPORT,Upper GI endoscopy report,,,,,,"Endoscopy to the second part of the duodenum. Normal oesophageal, gastric and duodenal mucosa. No ulceration, varices or bleeding."
+CMP.COLONOSCOPY_REPORT,Colonoscopy report,,,,,,"Complete colonoscopy to the caecum with intubation of the terminal ileum; good bowel preparation. Normal mucosa throughout with no polyps, ulceration or source of bleeding."
 CMP.CAPSULE_REPORT,Capsule endoscopy report,,,,,,"Complete small bowel transit with the capsule reaching the caecum. Normal small bowel mucosa with no ulceration, vascular lesion, mass or active bleeding."
-CMP.BRONCHOSCOPY_REPORT,Bronchoscopy report,,,,,,Flexible bronchoscopy. Normal vocal cords and trachea. The bronchial tree is patent to subsegmental level with normal mucosa and no endobronchial lesion. Bronchoalveolar lavage sent.
+CMP.BRONCHOSCOPY_REPORT,Bronchoscopy report,,,,,,Flexible bronchoscopy. Normal vocal cords and trachea. The bronchial tree is patent to subsegmental level with normal mucosa and no endobronchial lesion.
 CMP.NCS_EMG_REPORT,Nerve conduction studies and EMG report,,,,,,"Motor and sensory nerve conduction studies of the upper and lower limbs show normal amplitudes, latencies and conduction velocities. Concentric needle EMG of proximal and distal muscles shows no spontaneous activity and normal motor unit morphology and recruitment."
 CMP.EEG_REPORT,EEG report,,,,,,"Awake and drowsy recording. Symmetrical, reactive 10 Hz posterior dominant rhythm. No focal slowing and no epileptiform discharges; photic stimulation and hyperventilation are unremarkable."
 CMP.LP_REPORT,Lumbar puncture report,,,,,,"Lumbar puncture at L3-L4 in the left lateral position, atraumatic. Clear, colourless CSF obtained and sent for analysis."
