@@ -1,10 +1,13 @@
 """casevault.import_case_json on the pilot draft (SPEC §4.4 step 4, PLAN L0.3 and L0.8)."""
 
+import json
 from pathlib import Path
 
 import psycopg
 import psycopg.sql
 import pytest
+
+from scripts import catalogue as cat
 
 pytestmark = pytest.mark.integration
 
@@ -13,6 +16,9 @@ IMPORT = "select casevault.import_case_json(%s::jsonb, 'claude-test via case-cur
 
 
 def _import_pilot(db: psycopg.Connection) -> str:
+    """Load catalogue v0 (the pilot names its items since L0.8), then import the pilot."""
+    document = cat.build_document(cat.read_catalogue(cat.DEFAULT_DIR), version=0)
+    db.execute("select casevault.load_catalogue(%s::jsonb)", (json.dumps(document),))
     row = db.execute(IMPORT, (PILOT.read_text(encoding="utf-8"),)).fetchone()
     assert row is not None
     return str(row[0])
@@ -34,8 +40,9 @@ def test_pilot_imports_every_article_row(db: psycopg.Connection) -> None:
     counts = {
         t: _count(db, t, cv) for t in ("fact", "raw_material", "media", "gap", "ground_truth")
     }
-    # 10 history + 125 series points + 26 single results; 3 raw material (PLAN L0.8).
-    assert counts == {"fact": 161, "raw_material": 3, "media": 4, "gap": 20, "ground_truth": 1}
+    # 10 history + 125 series points + 35 single results (the draft's 26, with composite
+    # results split per component in L0.8); 3 raw material.
+    assert counts == {"fact": 170, "raw_material": 3, "media": 4, "gap": 20, "ground_truth": 1}
 
 
 def test_series_expand_to_one_fact_per_day(db: psycopg.Connection) -> None:
@@ -91,7 +98,7 @@ def test_same_version_cannot_be_imported_twice(db: psycopg.Connection) -> None:
     _import_pilot(db)
 
     with pytest.raises(psycopg.errors.UniqueViolation), db.transaction():
-        _import_pilot(db)
+        db.execute(IMPORT, (PILOT.read_text(encoding="utf-8"),))
 
 
 def test_import_needs_generator_and_skill_version(db: psycopg.Connection) -> None:
