@@ -97,7 +97,8 @@ def catalogue_document(case_dirs: Sequence[Path]) -> dict[str, Any]:
     return document
 
 
-def _replay_one(db: psycopg.Connection, case_dir: Path) -> Replay:
+def load_case(db: psycopg.Connection, case_dir: Path) -> str:
+    """Import a case and run skill steps 7-9 on the loaded catalogue; return its version id."""
     gold = _load_json(next(case_dir.glob("gold-case-file*.json")))
     cv = f"{gold['case_id']}@v{gold.get('version', 1)}"
     base = {"cv": cv, "generator": GENERATOR, "skill_version": "v0.1"}
@@ -111,6 +112,11 @@ def _replay_one(db: psycopg.Connection, case_dir: Path) -> Replay:
     for snippet, param, file in AFTER_NORMALS:
         if (curation / file).exists():
             _run(db, snippet, {**base, param: _load_json(curation / file)})
+    return cv
+
+
+def _replay_one(db: psycopg.Connection, case_dir: Path) -> Replay:
+    cv = load_case(db, case_dir)
     problems = [(str(k), str(v)) for k, v in db.execute(CHECKS, {"cv": cv}).fetchall()]
     counts = {
         f"ledger {tier}": n
