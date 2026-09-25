@@ -84,6 +84,7 @@ create table casevault.source_article (
   title text not null,
   journal text,
   published date,
+  url text,                                    -- schema 0.2
   licence text not null,
   licence_verified_at timestamptz,
   production_ok boolean not null default false,
@@ -160,6 +161,7 @@ create table casevault.fact (
   reveals_dx boolean not null default false,
   pivotal boolean not null default false,
   release text not null check (release ~ '^(vignette|chart|never|service\.[a-z_]+)$'),
+  release_condition jsonb,                     -- schema 0.2, e.g. {"requires_topics": [...]}
   release_text text,
   lay_text text,
   source_locator text,

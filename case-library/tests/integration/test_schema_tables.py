@@ -12,6 +12,7 @@ SPEC_TABLES = {
     "report", "consult_note", "ground_truth", "path_analysis", "synthetic_ledger",
     "test_utility", "bundle", "catalogue_item", "test_def", "component", "test_component",
     "normal_template", "diagnosis_def", "review_batch", "review_decision", "missing_request",
+    "value_rule",  # formulas and physiology checks, loaded with the catalogue (L0.4)
 }  # fmt: skip
 INSERT_REPORT = (
     "insert into casevault.report"
