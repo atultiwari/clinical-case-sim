@@ -50,8 +50,8 @@ def _load(file: str) -> Any:
     return json.loads((CURATION / file).read_text(encoding="utf-8"))
 
 
-@pytest.fixture
-def resolved(db: psycopg.Connection) -> psycopg.Connection:
+def resolve_pilot(db: psycopg.Connection) -> psycopg.Connection:
+    """Run steps 4-9 of the skill for the pilot, as the MCP calls will on the Case Vault."""
     document = cat.build_document(cat.read_catalogue(cat.DEFAULT_DIR), version=0)
     for template in document["normal_templates"]:
         template["review_status"] = "approved"
@@ -68,6 +68,11 @@ def resolved(db: psycopg.Connection) -> psycopg.Connection:
         if (CURATION / file).exists():
             _run(db, snippet, {**base, param: _load(file)})
     return db
+
+
+@pytest.fixture
+def resolved(db: psycopg.Connection) -> psycopg.Connection:
+    return resolve_pilot(db)
 
 
 def test_coverage_is_complete(resolved: psycopg.Connection) -> None:

@@ -1,0 +1,387 @@
+[
+  {
+    "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+    "utility": "low_yield",
+    "rationale": "No acute pathology; radiation and contrast for little yield with a soft abdomen."
+  },
+  {
+    "test_item_id": "IMG.CT.WHOLE_BODY_LOW_DOSE",
+    "utility": "unnecessary",
+    "rationale": "No paraprotein and a normal light chain ratio; radiation without indication."
+  },
+  {
+    "test_item_id": "IMG.US.ABDOMEN",
+    "utility": "low_yield",
+    "rationale": "Normal; reasonable only if the pain persists or the examination changes."
+  },
+  {
+    "test_item_id": "IMG.XR.ABDOMEN",
+    "utility": "low_yield",
+    "rationale": "No obstruction or radio-opaque material; low yield with a soft abdomen."
+  },
+  {
+    "test_item_id": "LAB.BM.FLOW",
+    "utility": "low_yield",
+    "rationale": "No abnormal blasts; plasma cells polyclonal."
+  },
+  {
+    "test_item_id": "LAB.BM.IRON_STAIN",
+    "utility": "low_yield",
+    "rationale": "Shows ring sideroblasts, which can mislead towards myelodysplasia; comes with a marrow that is not needed first."
+  },
+  {
+    "test_item_id": "LAB.CHEM.ALDOLASE",
+    "utility": "unnecessary",
+    "rationale": "Raised from the known myositis; adds nothing to CK."
+  },
+  {
+    "test_item_id": "LAB.CHEM.CK",
+    "utility": "low_yield",
+    "rationale": "Raised from the known myositis; does not explain the anaemia."
+  },
+  {
+    "test_item_id": "LAB.CHEM.COPPER_CAERULOPLASMIN",
+    "utility": "supportive",
+    "rationale": "Excludes copper deficiency as a reversible cause of ring sideroblasts before any myelodysplasia label."
+  },
+  {
+    "test_item_id": "LAB.CHEM.CRP",
+    "utility": "supportive",
+    "rationale": "A normal CRP argues against infection or inflammation."
+  },
+  {
+    "test_item_id": "LAB.CHEM.FERRITIN",
+    "utility": "supportive",
+    "rationale": "Replete ferritin excludes iron deficiency."
+  },
+  {
+    "test_item_id": "LAB.CHEM.HAPTOGLOBIN",
+    "utility": "supportive",
+    "rationale": "Low haptoglobin supports haemolysis."
+  },
+  {
+    "test_item_id": "LAB.CHEM.HBA1C",
+    "utility": "unnecessary",
+    "rationale": "Falsely lowered by shortened red cell survival; irrelevant to the presentation."
+  },
+  {
+    "test_item_id": "LAB.CHEM.IRON_STUDIES",
+    "utility": "supportive",
+    "rationale": "Replete iron studies exclude iron deficiency and argue against empirical iron."
+  },
+  {
+    "test_item_id": "LAB.CHEM.LDH",
+    "utility": "supportive",
+    "rationale": "Supports haemolysis; also raised by the myositis."
+  },
+  {
+    "test_item_id": "LAB.CHEM.LFT",
+    "utility": "supportive",
+    "rationale": "Routine admission panel; shows the unconjugated bilirubin rise and the mild transaminase rise from myositis."
+  },
+  {
+    "test_item_id": "LAB.CHEM.LIPASE",
+    "utility": "supportive",
+    "rationale": "Reasonable to exclude pancreatitis in abdominal pain; normal."
+  },
+  {
+    "test_item_id": "LAB.CHEM.RENAL",
+    "utility": "supportive",
+    "rationale": "Routine admission panel; also a baseline before chelation."
+  },
+  {
+    "test_item_id": "LAB.CHEM.TROPONIN_I",
+    "utility": "low_yield",
+    "rationale": "Normal; useful only if cardiac injury is a real question."
+  },
+  {
+    "test_item_id": "LAB.CHEM.TROPONIN_T",
+    "utility": "low_yield",
+    "rationale": "Can be raised from regenerating skeletal muscle in myositis and mislead towards the heart."
+  },
+  {
+    "test_item_id": "LAB.CHEM.VITAMIN_B6",
+    "utility": "unnecessary",
+    "rationale": "Normal; no culprit drugs or malnutrition."
+  },
+  {
+    "test_item_id": "LAB.CHEM.ZINC",
+    "utility": "unnecessary",
+    "rationale": "Normal; does not change management."
+  },
+  {
+    "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+    "utility": "unnecessary",
+    "rationale": "Normal; no indication without evidence of a clonal marrow disorder."
+  },
+  {
+    "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+    "utility": "low_yield",
+    "rationale": "Normal; needed only if a marrow is done for a suspected clonal disorder."
+  },
+  {
+    "test_item_id": "LAB.GI.FIT",
+    "utility": "low_yield",
+    "rationale": "Negative; no history of bleeding and iron is replete."
+  },
+  {
+    "test_item_id": "LAB.HAEM.ALAD_ACTIVITY",
+    "utility": "low_yield",
+    "rationale": "Specialised and not widely available; the blood lead answers the question directly."
+  },
+  {
+    "test_item_id": "LAB.HAEM.CBC",
+    "utility": "essential",
+    "rationale": "Defines the anaemia and its indices; part of the routine admission panel."
+  },
+  {
+    "test_item_id": "LAB.HAEM.EMA_BINDING",
+    "utility": "low_yield",
+    "rationale": "Normal; there are no spherocytes on the film."
+  },
+  {
+    "test_item_id": "LAB.HAEM.ESR",
+    "utility": "low_yield",
+    "rationale": "Raised by the anaemia and IVIG; non-specific."
+  },
+  {
+    "test_item_id": "LAB.HAEM.FILM",
+    "utility": "essential",
+    "rationale": "The film is where the key red cell inclusions are seen; the screening report is provisional."
+  },
+  {
+    "test_item_id": "LAB.HAEM.FILM_REVIEW",
+    "utility": "essential",
+    "rationale": "The expert review finds the coarse basophilic stippling the screening film missed."
+  },
+  {
+    "test_item_id": "LAB.HAEM.G6PD",
+    "utility": "low_yield",
+    "rationale": "Normal; the film shows no bite cells or features of oxidative haemolysis."
+  },
+  {
+    "test_item_id": "LAB.HAEM.HB_HPLC",
+    "utility": "supportive",
+    "rationale": "Excludes a haemoglobinopathy as a cause of basophilic stippling; suggested by the film review."
+  },
+  {
+    "test_item_id": "LAB.HAEM.P5N_ACTIVITY",
+    "utility": "low_yield",
+    "rationale": "Low because lead inhibits the enzyme, which can mislead towards the inherited disorder; only after lead and HPLC."
+  },
+  {
+    "test_item_id": "LAB.HAEM.PK",
+    "utility": "low_yield",
+    "rationale": "Normal; an inherited enzyme defect is unlikely in new anaemia at 49."
+  },
+  {
+    "test_item_id": "LAB.HAEM.PNH_FLOW",
+    "utility": "low_yield",
+    "rationale": "No PNH clone; haemosiderinuria is absent and counts are otherwise unremarkable."
+  },
+  {
+    "test_item_id": "LAB.HAEM.RETIC",
+    "utility": "essential",
+    "rationale": "The reticulocytosis shows a haemolytic or regenerative anaemia and argues against marrow suppression."
+  },
+  {
+    "test_item_id": "LAB.IMM.ANA",
+    "utility": "low_yield",
+    "rationale": "Negative or low titre; does not change management."
+  },
+  {
+    "test_item_id": "LAB.IMM.B2M",
+    "utility": "unnecessary",
+    "rationale": "No paraprotein, so staging markers are not indicated."
+  },
+  {
+    "test_item_id": "LAB.IMM.COELIAC_TTG",
+    "utility": "low_yield",
+    "rationale": "Negative; malabsorption does not fit replete haematinics."
+  },
+  {
+    "test_item_id": "LAB.IMM.COMPLEMENT",
+    "utility": "low_yield",
+    "rationale": "Normal; adds little with a C3d-negative DAT."
+  },
+  {
+    "test_item_id": "LAB.IMM.FLC",
+    "utility": "low_yield",
+    "rationale": "Polyclonally raised with a normal ratio; a red herring."
+  },
+  {
+    "test_item_id": "LAB.IMM.IFE",
+    "utility": "low_yield",
+    "rationale": "No paraprotein; adds little after a normal electrophoresis."
+  },
+  {
+    "test_item_id": "LAB.IMM.IMMUNOGLOBULINS",
+    "utility": "low_yield",
+    "rationale": "Uninterpretable for IgG on maintenance IVIG."
+  },
+  {
+    "test_item_id": "LAB.IMM.MYOSITIS_ANTIBODIES",
+    "utility": "unnecessary",
+    "rationale": "The myositis is already diagnosed; does not change management."
+  },
+  {
+    "test_item_id": "LAB.IMM.SPEP",
+    "utility": "supportive",
+    "rationale": "A reasonable screen for a paraprotein in unexplained anaemia at 49; negative."
+  },
+  {
+    "test_item_id": "LAB.IMM.URINE_BJP",
+    "utility": "low_yield",
+    "rationale": "Negative; adds little with a normal free light chain ratio."
+  },
+  {
+    "test_item_id": "LAB.MOL.MYELOID_NGS",
+    "utility": "unnecessary",
+    "rationale": "Normal; reversible causes of ring sideroblasts should be excluded first."
+  },
+  {
+    "test_item_id": "LAB.SERO.CMV",
+    "utility": "low_yield",
+    "rationale": "No active infection; IgG may be passive from IVIG."
+  },
+  {
+    "test_item_id": "LAB.SERO.EBV",
+    "utility": "low_yield",
+    "rationale": "Past infection only."
+  },
+  {
+    "test_item_id": "LAB.SERO.HEPATITIS_B",
+    "utility": "low_yield",
+    "rationale": "Relevant only before rituximab or escalated immunosuppression, which this patient should not receive."
+  },
+  {
+    "test_item_id": "LAB.SERO.MYCOPLASMA",
+    "utility": "low_yield",
+    "rationale": "Negative; the cold agglutinin titre is low."
+  },
+  {
+    "test_item_id": "LAB.SERO.PARVOVIRUS_B19",
+    "utility": "low_yield",
+    "rationale": "No active infection; the reticulocytosis argues against red cell aplasia."
+  },
+  {
+    "test_item_id": "LAB.TBS.ANTIBODY_SCREEN",
+    "utility": "supportive",
+    "rationale": "Needed with the group for safe transfusion; negative."
+  },
+  {
+    "test_item_id": "LAB.TBS.BLOOD_GROUP",
+    "utility": "supportive",
+    "rationale": "Group A matters for interpreting a positive DAT in a patient on IVIG, and for transfusion."
+  },
+  {
+    "test_item_id": "LAB.TBS.COLD_AGGLUTININ",
+    "utility": "supportive",
+    "rationale": "Reasonable given agglutination on the film; the low titre and thermal amplitude make it insignificant."
+  },
+  {
+    "test_item_id": "LAB.TBS.DAT",
+    "utility": "essential",
+    "rationale": "Needed to assess an immune cause of the haemolysis; its weak IgG-only result must be interpreted in the light of IVIG."
+  },
+  {
+    "test_item_id": "LAB.TBS.DL_TEST",
+    "utility": "low_yield",
+    "rationale": "Negative; paroxysmal cold haemoglobinuria does not fit an adult without a recent infection."
+  },
+  {
+    "test_item_id": "LAB.TBS.ELUATE",
+    "utility": "supportive",
+    "rationale": "Helps show that the weak DAT reflects passive antibody from IVIG."
+  },
+  {
+    "test_item_id": "LAB.TOX.BLOOD_LEAD",
+    "utility": "essential",
+    "rationale": "The confirmatory test; it decides treatment."
+  },
+  {
+    "test_item_id": "LAB.TOX.BLOOD_MERCURY",
+    "utility": "low_yield",
+    "rationale": "Urine is preferred for inorganic mercury from remedies; blood adds little."
+  },
+  {
+    "test_item_id": "LAB.TOX.FAECAL_PORPHYRINS",
+    "utility": "unnecessary",
+    "rationale": "Normal; urine porphobilinogen already excludes an acute porphyria."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_ALA",
+    "utility": "supportive",
+    "rationale": "Raised, supporting impaired haem synthesis; helps separate this picture from acute porphyria."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_ARSENIC",
+    "utility": "supportive",
+    "rationale": "Worth checking once an unlabelled supplement is disclosed, as such products can contain several metals."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_LEAD",
+    "utility": "low_yield",
+    "rationale": "Blood lead is the test of choice; urine lead adds little to the diagnosis."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_MERCURY",
+    "utility": "supportive",
+    "rationale": "Worth checking once an unlabelled supplement is disclosed; inorganic mercury is best measured in urine."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_PBG",
+    "utility": "supportive",
+    "rationale": "Excludes an acute porphyria in abdominal pain with anaemia."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_PORPHYRINS",
+    "utility": "low_yield",
+    "rationale": "Raised coproporphyrin is non-specific and can mislead towards a porphyria."
+  },
+  {
+    "test_item_id": "LAB.TOX.ZPP",
+    "utility": "supportive",
+    "rationale": "Raised with replete iron, supporting impaired haem synthesis; does not replace the blood lead."
+  },
+  {
+    "test_item_id": "LAB.URINE.HAEMOSIDERIN",
+    "utility": "low_yield",
+    "rationale": "Not detected; adds little once the pattern is extravascular."
+  },
+  {
+    "test_item_id": "LAB.URINE.URINALYSIS",
+    "utility": "supportive",
+    "rationale": "Cheap; excludes haemoglobinuria and proteinuria."
+  },
+  {
+    "test_item_id": "PROC.BM.ASPIRATE",
+    "utility": "low_yield",
+    "rationale": "Invasive; the diagnosis is reachable from the film review and blood lead. Its findings can mislead towards myelodysplasia."
+  },
+  {
+    "test_item_id": "PROC.BM.TREPHINE",
+    "utility": "low_yield",
+    "rationale": "Invasive and non-specific here."
+  },
+  {
+    "test_item_id": "PROC.CARD.ECG",
+    "utility": "supportive",
+    "rationale": "Reasonable for tachycardia and a raised troponin T; shows sinus tachycardia only."
+  },
+  {
+    "test_item_id": "PROC.ENDO.COLONOSCOPY",
+    "utility": "unnecessary",
+    "rationale": "Invasive with bowel preparation; no bleeding, change in bowel habit or iron deficiency."
+  },
+  {
+    "test_item_id": "PROC.ENDO.OGD",
+    "utility": "unnecessary",
+    "rationale": "Invasive; no bleeding, dyspepsia or iron deficiency."
+  },
+  {
+    "test_item_id": "PROC.NEURO.NCS_EMG",
+    "utility": "low_yield",
+    "rationale": "Confirms the known myopathy; no neuropathy, and no new neurological signs to justify it."
+  }
+]

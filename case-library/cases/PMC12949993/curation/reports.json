@@ -1,0 +1,304 @@
+[
+  {
+    "id": "RP01",
+    "test_item_id": "LAB.HAEM.FILM",
+    "variant": "original",
+    "status": "provisional",
+    "status_line": "Provisional report: screening film, not yet reviewed by a haematopathologist. A review can be requested.",
+    "findings": [
+      "FND.RBC_AGGLUTINATION"
+    ],
+    "report_text": "Marked red cell agglutination. No other abnormality seen.",
+    "impression": "Red cell agglutination.",
+    "suggested_reflex": [],
+    "based_on": [
+      "R01"
+    ],
+    "origins": [
+      "article"
+    ],
+    "rationale": "The article's first film report described marked agglutination only; the stippling was found when the film was re-examined. Shown as provisional so no player takes it for the final word (Nidana N-014).",
+    "confidence": 0.95
+  },
+  {
+    "id": "RP02",
+    "test_item_id": "LAB.HAEM.FILM_REVIEW",
+    "variant": "expert",
+    "status": "final",
+    "status_line": "Final report, reviewed by a haematopathologist.",
+    "findings": [
+      "FND.RBC_AGGLUTINATION",
+      "FND.COARSE_BASOPHILIC_STIPPLING",
+      "FND.PAPPENHEIMER_BODIES",
+      "FND.POLYCHROMASIA"
+    ],
+    "report_text": "Film reviewed by a haematopathologist. Marked red cell agglutination. Coarse basophilic stippling in a proportion of red cells. Pappenheimer bodies present. Polychromasia, in keeping with the reticulocyte count. No spherocytes or red cell fragments seen. White cells and platelets show no morphological abnormality. Comment: suggest a blood lead level and haemoglobin studies.",
+    "impression": "Red cell agglutination with coarse basophilic stippling, Pappenheimer bodies and polychromasia.",
+    "suggested_reflex": [
+      "LAB.TOX.BLOOD_LEAD",
+      "LAB.HAEM.HB_HPLC"
+    ],
+    "based_on": [
+      "R01"
+    ],
+    "origins": [
+      "article",
+      "affected"
+    ],
+    "rationale": "Agglutination, stippling and Pappenheimer bodies are from the article (R01, Figures 1 and 3). Polychromasia and the absence of spherocytes and fragments follow G16 and the reticulocytosis. The comment is a judgement call (ANALYSIS §7.2): a haematopathologist seeing coarse stippling routinely suggests a blood lead and haemoglobin studies; it names tests, not a diagnosis.",
+    "confidence": 0.8
+  },
+  {
+    "id": "RP03",
+    "test_item_id": "PROC.BM.ASPIRATE",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [
+      "FND.DYSERYTHROPOIESIS",
+      "FND.COARSE_BASOPHILIC_STIPPLING",
+      "FND.ATYPICAL_PLASMA_CELLS"
+    ],
+    "report_text": "Particulate aspirate; cellularity [to be set by the reviewer]. Erythropoiesis is active, with dyserythropoietic features. Coarse basophilic stippling is seen in erythroid precursors. Granulopoiesis matures normally and megakaryocytes are adequate with normal morphology. Plasma cells are not increased, but some show atypical morphology. Blasts [to be set by the reviewer]. See the iron stain report.",
+    "impression": "Dyserythropoiesis with basophilic stippling of erythroid precursors; some atypical plasma cells.",
+    "suggested_reflex": [],
+    "based_on": [
+      "R02"
+    ],
+    "origins": [
+      "article",
+      "reviewer"
+    ],
+    "rationale": "Dyserythropoiesis, stippling in erythroid cells and atypical plasma cells are from the article (R02, Figure 2A). Cellularity and blast count are not reported (G15) and are left to the reviewer; active erythropoiesis fits the reticulocytosis.",
+    "confidence": 0.8
+  },
+  {
+    "id": "RP04",
+    "test_item_id": "LAB.BM.IRON_STAIN",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [
+      "FND.RING_SIDEROBLASTS"
+    ],
+    "report_text": "Perls stain. Storage iron is present in marrow fragments. Ring sideroblasts are present, [to be set by the reviewer]% of erythroblasts.",
+    "impression": "Ring sideroblasts present; iron stores present.",
+    "suggested_reflex": [],
+    "based_on": [
+      "R03"
+    ],
+    "origins": [
+      "article",
+      "reviewer"
+    ],
+    "rationale": "Ring sideroblasts are from the article (R03, Figure 2B). The percentage is not reported and is set by the reviewer (G15). Iron stores present follows G15 and the replete serum iron studies (ferritin 165, transferrin saturation 53%).",
+    "confidence": 0.8
+  },
+  {
+    "id": "RP05",
+    "test_item_id": "PROC.BM.TREPHINE",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [
+      "FND.ERYTHROID_HYPERPLASIA"
+    ],
+    "report_text": "Adequate trephine core. Cellularity [to be set by the reviewer], with erythroid hyperplasia. Granulopoiesis and megakaryocytes are normal in number and morphology. No excess of blasts. Plasma cells are not increased and show no infiltrative pattern. No fibrosis on reticulin stain. No granulomas.",
+    "impression": "Erythroid hyperplasia; no infiltrate, excess blasts or fibrosis.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected",
+      "reviewer"
+    ],
+    "rationale": "The article reports no trephine. Erythroid hyperplasia fits the reticulocytosis; the absence of an infiltrate and of increased plasma cells fits the normal immunofixation and free light chain ratio. Cellularity is reviewer-set (G15).",
+    "confidence": 0.7
+  },
+  {
+    "id": "RP06",
+    "test_item_id": "IMG.XR.ABDOMEN",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Supine abdominal radiograph. The bowel gas pattern is normal with no dilated loops. No abnormal calcification or radio-opaque material is seen. The visible bones and soft tissue outlines are unremarkable.",
+    "impression": "No acute abnormality.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "G17: no acute abdominal pathology and no radio-opaque material. Some contaminated remedies show radio-opaque flecks after recent ingestion; the article does not report any, so none are invented (judgement call ANALYSIS §7.14).",
+    "confidence": 0.7
+  },
+  {
+    "id": "RP07",
+    "test_item_id": "IMG.US.ABDOMEN",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "The liver is normal in size and echotexture with no focal lesion. The gallbladder is thin-walled without calculi and the common bile duct is not dilated. The spleen measures 11 cm and is homogeneous. Both kidneys, the pancreas and the aorta appear normal. No free fluid.",
+    "impression": "Normal abdominal ultrasound; spleen not enlarged.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "G17 and ANALYSIS §6: no acute pathology, spleen not enlarged, no gallstones. The haemolysis is mild and recent, so no splenomegaly or pigment stones.",
+    "confidence": 0.75
+  },
+  {
+    "id": "RP08",
+    "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Contrast-enhanced CT of the abdomen and pelvis in the portal venous phase. The liver, spleen, pancreas, adrenal glands and kidneys are normal. The spleen is not enlarged. The bowel is of normal calibre with no wall thickening and no intraluminal radio-dense material. No lymph node enlargement, free fluid or free gas.",
+    "impression": "No acute abdominal or pelvic pathology. No lymph node enlargement.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "G17 and ANALYSIS §6: no acute pathology and no lymphadenopathy (plasma cell and gastrointestinal paths).",
+    "confidence": 0.75
+  },
+  {
+    "id": "RP09",
+    "test_item_id": "IMG.CT.WHOLE_BODY_LOW_DOSE",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Whole-body low-dose CT from vertex to knees. The axial and appendicular skeleton is of normal density with no lytic or destructive lesion. No extramedullary soft tissue mass. Incidental organs in the field of view are unremarkable.",
+    "impression": "No lytic bone lesions.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "Plasma cell path (P5): no paraprotein, a normal free light chain ratio and normal calcium, so no lytic lesions are expected.",
+    "confidence": 0.85
+  },
+  {
+    "id": "RP10",
+    "test_item_id": "LAB.BM.FLOW",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Bone marrow aspirate. CD34-positive blasts are under 2% with a normal phenotype; no abnormal blast population. Erythroid precursors are increased, in keeping with active erythropoiesis. Myeloid and monocytic maturation patterns are normal. Plasma cells are few and show a normal polyclonal phenotype. B cells are polyclonal.",
+    "impression": "No abnormal blast population; plasma cells polyclonal.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "ANALYSIS §6: no abnormal blasts; the atypical-looking plasma cells are few and polyclonal, which fits the absent paraprotein and normal light chain ratio.",
+    "confidence": 0.8
+  },
+  {
+    "id": "RP11",
+    "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Twenty metaphases analysed at a 400-band level. Karyotype 46,XX. No clonal abnormality detected.",
+    "impression": "Normal female karyotype, 46,XX.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "G15 and ANALYSIS §6: normal karyotype; the marrow changes are acquired and reversible, not clonal.",
+    "confidence": 0.9
+  },
+  {
+    "id": "RP12",
+    "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Two hundred interphase nuclei scored per probe. Normal signal patterns for 5q31, 7q31, the chromosome 8 centromere and 20q12; no deletion or gain detected.",
+    "impression": "Normal FISH panel.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "ANALYSIS §6: normal; no clonal marrow disorder.",
+    "confidence": 0.9
+  },
+  {
+    "id": "RP13",
+    "test_item_id": "LAB.MOL.MYELOID_NGS",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Targeted sequencing of a myeloid gene panel, including SF3B1, achieved adequate coverage across all regions. No pathogenic or likely pathogenic variants were detected above the 2% variant allele frequency limit of detection.",
+    "impression": "No pathogenic variants detected.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "ANALYSIS §6: no pathogenic variants, including SF3B1; the ring sideroblasts are not clonal. Clonal haematopoiesis at 49 is uncommon, so none is added.",
+    "confidence": 0.85
+  },
+  {
+    "id": "RP14",
+    "test_item_id": "PROC.ENDO.OGD",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Endoscopy to the second part of the duodenum. Normal oesophagus. Mild patchy erythema of the gastric antrum without erosions or ulceration. Normal duodenal mucosa. No varices or bleeding. Antral and duodenal biopsies taken; histology shows mild non-specific chronic inflammation in the antrum, no Helicobacter organisms, and normal duodenal villous architecture.",
+    "impression": "Mild non-specific antral gastritis. No source of bleeding.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "G18: normal or non-specific findings. Duodenal histology is normal, in keeping with the negative coeliac serology.",
+    "confidence": 0.7
+  },
+  {
+    "id": "RP15",
+    "test_item_id": "PROC.ENDO.COLONOSCOPY",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Complete colonoscopy to the caecum with intubation of the terminal ileum; good bowel preparation. Normal mucosa throughout with no polyps, ulceration or source of bleeding.",
+    "impression": "Normal colonoscopy.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "ANALYSIS §6: normal; no gastrointestinal bleeding (H08) and iron studies are replete.",
+    "confidence": 0.85
+  },
+  {
+    "id": "RP16",
+    "test_item_id": "PROC.NEURO.NCS_EMG",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Motor and sensory nerve conduction studies of the upper and lower limbs, including the radial nerves, show normal amplitudes, latencies and conduction velocities. Concentric needle EMG shows fibrillation potentials and short-duration, low-amplitude polyphasic motor units with early recruitment in the forearm finger flexors and quadriceps, with some mixed long-duration units. Distal lower limb muscles are less affected.",
+    "impression": "Myopathic pattern in a distribution consistent with the known inclusion body myositis. No evidence of a motor neuropathy.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "G19: no motor neuropathy (no wrist or foot drop, G05); myopathic pattern of the known inclusion body myositis, which commonly shows mixed motor units and fibrillations.",
+    "confidence": 0.75
+  }
+]
