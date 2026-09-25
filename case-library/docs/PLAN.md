@@ -25,7 +25,8 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
 
 - [ ] **L0.2 [human] Case Vault project and MCP**
   - Build: create the Supabase project `case-vault` on the Free plan, in any region (see CLAUDE.md, Stack). Atul creates it in the dashboard, or approves Claude creating it through the account-level connector. Add `case-library/.mcp.json` with the project-scoped URL (SPEC §4.1). Keep manual approval for `execute_sql` and `apply_migration`. If Claude Code can see the account-level Supabase connector, add `nidana/.claude/settings.json` and `sambhasha/.claude/settings.json` that deny its tools.
-  - Accept: in Claude Code started in `case-library/`, the Supabase MCP lists tables for this project only and shows no account tools. Sessions started in `nidana/` or `sambhasha/` have no Supabase tools at all (the account-level connector is denied in their `.claude/settings.json`).
+  - Accept: in Claude Code started in `case-library/`, the Supabase MCP lists tables for this project only, and no account tool can be used. Sessions started in `nidana/` or `sambhasha/` cannot use any Supabase tool. In terminal and IDE sessions the account-level connector is not loaded at all (`disableClaudeAiConnectors`). The desktop app delivers connectors itself and no project setting hides them, so there its tools are listed but every call is refused by the deny rules in each part's `.claude/settings.json`.
+  - Note (2026-09-25): Atul accepted "listed but refused" for the desktop app, so the connector stays in claude.ai for reading cases in chat and Cowork (SPEC §4.1).
   - Note (2026-09-25): Atul created `case-vault` (ref `vxiymbaxsiavxuyxzhnt`, Tokyo) and deleted VRL-App-Demo, so the Free plan's two-project limit is not a concern.
   - Depends on: L0.1.
 
