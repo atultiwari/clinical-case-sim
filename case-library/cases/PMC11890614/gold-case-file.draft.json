@@ -1,0 +1,222 @@
+{
+  "_status_note": "DRAFT gold case file for PMC11890614 (Case Library task L1.3, curation steps 1-5). The Case Reviewer (Dr Atul Tiwari) must verify every fact against the article before it is frozen as PMC11890614@v1. Values are transcribed as printed in the article (US conventional units: g/dL, 10^3/uL, ng/mL); unit conversion waits for the pilot review. Day 0 is admission (the article's hospital day 1), so the article's hospital day N is day N-1 here. Many work-up results are undated in the text (their dates are probably in Figure 5, an image not read here): they carry day null and a note. Items under 'gaps' are NOT article facts. Path analysis and affected values wait for the pilot review.",
+  "schema_version": "0.3",
+  "case_id": "PMC11890614",
+  "version": 1,
+  "status": "draft",
+
+  "case": {
+    "slug": "c-c149v",
+    "display_title": "Four months of fever and dry cough in a young man",
+    "display_tags": ["infectious disease", "respiratory medicine", "haematology", "internal medicine"],
+    "specialty": "infectious disease",
+    "difficulty": "hard",
+    "est_minutes": 45,
+    "lab_profile": {
+      "sex": "M",
+      "age_years": 36,
+      "note": "The article's own ranges, in the article's own units (Table 1). The platelet range is printed as '139-36' and is left out until the Case Reviewer decides.",
+      "components": {
+        "CMP.HB": {"low": 11.4, "high": 14.7, "unit": "g/dL"},
+        "CMP.WBC": {"low": 4.4, "high": 10.5, "unit": "x10^3/uL"},
+        "CMP.NEUT": {"low": 1.5, "high": 7.5, "unit": "x10^3/uL"},
+        "CMP.FERRITIN": {"low": 24, "high": 336, "unit": "ng/mL"},
+        "CMP.AST": {"low": 5, "high": 46, "unit": "U/L"},
+        "CMP.ALT": {"low": 4, "high": 51, "unit": "U/L"}
+      }
+    }
+  },
+
+  "source": {
+    "title": "A Perplexing Case Highlighting the Diagnostic Conundrum of Miliary Tuberculosis Mimicking Sarcoidosis and Progressing Into Hemophagocytic Lymphohistiocytosis",
+    "authors": ["Weiying Li", "Prachi Mann", "Ivonne De La Hoz", "Alexa Constantakos", "Dwayne Gordon", "George Everett", "Edward Maharam"],
+    "affiliations": ["Internal Medicine, AdventHealth, Orlando, USA"],
+    "journal": "Cureus",
+    "volume": "17",
+    "issue": "2",
+    "article_number": "e78636",
+    "published": "2025-02-06",
+    "doi": "10.7759/cureus.78636",
+    "pmcid": "PMC11890614",
+    "pmid": "40062127",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11890614/",
+    "licence": "CC BY 4.0",
+    "production_ok": true,
+    "public_release_ok": true,
+    "licence_verified": "2026-09-25 from the JATS <license> element of the cached XML (ali:license_ref https://creativecommons.org/licenses/by/4.0/); no figure carries its own permissions or credit line in the XML",
+    "content_sha256": "0ebdccafa1396e32414477d61d54bb034ee9e732695a0aa7124049ade263b565",
+    "snapshot_path": "data/articles/PMC11890614/jats.xml",
+    "attribution": "Adapted from Li W, Mann P, De La Hoz I, Constantakos A, Gordon D, Everett G, Maharam E. A Perplexing Case Highlighting the Diagnostic Conundrum of Miliary Tuberculosis Mimicking Sarcoidosis and Progressing Into Hemophagocytic Lymphohistiocytosis. Cureus 17(2): e78636 (2025). doi:10.7759/cureus.78636. Licensed CC BY 4.0. Changes: restructured into a simulation; diagnosis hidden until the debrief; simulated findings added where marked."
+  },
+
+  "clock": {
+    "day_0": null,
+    "day_0_label": "Admission through the emergency department (the article's hospital day 1; calendar date not reported)",
+    "semantics": "Integer day relative to admission; the article's hospital day N is day N-1. day = null means the article gives no date; see each fact's note."
+  },
+
+  "vignette": "A 36-year-old man, originally from Haiti and with no significant past medical history, presents to the emergency department with four months of recurrent fever and a dry cough.",
+  "opening_statement_lay": "I've had fevers on and off and a dry cough for about four months now, and they just won't go away.",
+
+  "facts": [
+    {"id": "H01", "category": "history", "item": "Age and sex", "release_text": "36-year-old man.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation"},
+    {"id": "H02", "category": "history", "item": "Country of origin", "release_text": "Originally from Haiti; he immigrated from there.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation; Discussion", "released_by": ["HX.SOCIAL.LIVING", "HX.SOCIAL.TRAVEL"]},
+    {"id": "H03", "category": "history", "item": "Past medical history", "release_text": "No significant past medical history.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation", "released_by": ["HX.PMH.MEDICAL", "HX.PMH.CHRONIC_CONDITIONS"]},
+    {"id": "H04", "category": "history", "item": "Presenting complaint: fever", "release_text": "Recurrent fever for four months.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation; Abstract", "released_by": ["HX.GEN.FEVER_SWEATS_WEIGHT", "HX.PC.ONSET_DURATION"]},
+    {"id": "H05", "category": "history", "item": "Presenting complaint: cough", "release_text": "Dry cough for four months.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation", "released_by": ["HX.RESP.COUGH", "HX.RESP.SPUTUM"]},
+    {"id": "H06", "category": "history", "item": "Night sweats", "release_text": "Night sweats over the same four months.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["HX.GEN.FEVER_SWEATS_WEIGHT", "HX.PC.ASSOCIATED"]},
+    {"id": "H07", "category": "history", "item": "Weight loss", "release_text": "Unintentional weight loss over the same four months. Amount not recorded.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["HX.GEN.FEVER_SWEATS_WEIGHT", "HX.PC.ASSOCIATED"]},
+
+    {"id": "E01", "category": "exam", "item": "Temperature on admission", "value": "39.0 C (102.2 F)", "unit": "", "release_text": "Febrile: temperature 39.0 C (102.2 F).", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["EX.GEN.VITALS"]},
+    {"id": "E02", "category": "exam", "item": "Heart rate on admission", "value": 115, "unit": "/min", "release_text": "Tachycardic: heart rate 115 per minute.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["EX.GEN.VITALS", "EX.CVS.PULSE"]},
+
+    {"id": "C01", "category": "course", "item": "High-dose steroid for presumed sarcoidosis", "release_text": "Started on high-dose steroid after the work-up for infection was negative. Drug and dose not recorded.", "day": null, "kind": "raw", "reveals_dx": false, "release": "never", "source_locator": "Case presentation (undated; after the lung biopsy and first NGS tests)"},
+    {"id": "C02", "category": "course", "item": "Response to steroid", "release_text": "Daily fever and dry cough continued without any significant improvement.", "day": null, "kind": "raw", "reveals_dx": false, "release": "never", "source_locator": "Case presentation (undated)"},
+    {"id": "C03", "category": "course", "item": "Treatment for the haemophagocytic process", "release_text": "After multidisciplinary discussion: high-dose steroids and etoposide (HLH-2004 protocol).", "day": null, "kind": "raw", "reveals_dx": true, "release": "never", "source_locator": "Case presentation (undated; before day 18)"},
+    {"id": "C04", "category": "course", "item": "Acute respiratory failure and shock", "release_text": "Acute hypoxic respiratory failure requiring endotracheal intubation; profound shock requiring multiple vasopressors.", "day": 18, "kind": "raw", "reveals_dx": false, "release": "never", "source_locator": "Case presentation (hospital day 19)"},
+    {"id": "C05", "category": "course", "item": "Empirical antimicrobials", "release_text": "Broad-spectrum antibiotics and antifungals started empirically.", "day": 18, "kind": "raw", "reveals_dx": false, "release": "never", "source_locator": "Case presentation (hospital day 19)"},
+    {"id": "C06", "category": "course", "item": "Specific treatment", "release_text": "Rifampin, isoniazid, pyrazinamide and ethambutol started; chemotherapy for the haemophagocytic process withheld.", "day": 25, "kind": "raw", "reveals_dx": true, "release": "never", "source_locator": "Case presentation; Abstract (after the repeat NGS on hospital day 26)"},
+    {"id": "C07", "category": "course", "item": "Outcome", "release_text": "Rapid decline with multi-organ failure; died about one week after specific treatment started. The family declined an autopsy.", "day": null, "kind": "raw", "reveals_dx": false, "release": "never", "source_locator": "Case presentation; Abstract; Discussion"}
+  ],
+
+  "series": [
+    {"id": "S01", "item": "Haemoglobin", "code": null, "unit": "g/dL", "ref_range": "11.4-14.7", "points": [{"day": 0, "value": 9.9, "flag": "L"}, {"day": 17, "value": 6.8, "flag": "L"}], "source_locator": "Table 1 (Day 1, Day 18)", "catalogue_ref": "CMP.HB"},
+    {"id": "S02", "item": "Platelet count", "code": null, "unit": "x10^3/uL", "ref_range": "139-36 (as printed; probably 139-361)", "points": [{"day": 0, "value": 227}, {"day": 17, "value": 40, "flag": "L"}], "source_locator": "Table 1 (Day 1, Day 18)", "catalogue_ref": "CMP.PLT"},
+    {"id": "S03", "item": "White cell count", "code": null, "unit": "x10^3/uL", "ref_range": "4.4-10.5", "points": [{"day": 0, "value": 4.5}, {"day": 17, "value": 0.03, "flag": "L"}], "source_locator": "Table 1 (Day 1, Day 18)", "catalogue_ref": "CMP.WBC"},
+    {"id": "S04", "item": "Absolute neutrophil count", "code": null, "unit": "x10^3/uL", "ref_range": "1.5-7.5", "points": [{"day": 0, "value": 2.9}, {"day": 17, "value": 0, "flag": "L"}], "source_locator": "Table 1 (Day 1, Day 18)", "catalogue_ref": "CMP.NEUT"},
+    {"id": "S05", "item": "Ferritin", "code": null, "unit": "ng/mL", "ref_range": "24-336", "points": [{"day": 0, "value": 1364, "flag": "H"}, {"day": 17, "value": 7821, "flag": "H"}], "source_locator": "Table 1 (Day 1, Day 18)", "catalogue_ref": "CMP.FERRITIN"},
+    {"id": "S06", "item": "AST", "code": null, "unit": "U/L", "ref_range": "5-46", "points": [{"day": 0, "value": 63, "flag": "H"}, {"day": 17, "value": 335, "flag": "H"}], "source_locator": "Table 1 (Day 1, Day 18)", "catalogue_ref": "CMP.AST"},
+    {"id": "S07", "item": "ALT", "code": null, "unit": "U/L", "ref_range": "4-51", "points": [{"day": 0, "value": 40}, {"day": 17, "value": 325, "flag": "H"}], "source_locator": "Table 1 (Day 1, Day 18)", "catalogue_ref": "CMP.ALT"}
+  ],
+
+  "single_results": [
+    {"id": "L01", "item": "HIV test", "code": null, "value": "Negative", "unit": "", "ref_range": "Negative", "day": 0, "note": "Assay not stated.", "source_locator": "Case presentation", "catalogue_ref": "CMP.HIV_AG_AB"},
+    {"id": "L02", "item": "Interferon-gamma release assay (QuantiFERON TB Gold Plus)", "code": null, "value": "Negative", "unit": "", "ref_range": "Negative", "day": null, "note": "Undated; early in the admission.", "source_locator": "Case presentation; Abstract", "catalogue_ref": "CMP.IGRA"},
+    {"id": "L03", "item": "Sputum acid-fast bacilli smear", "code": null, "value": "Negative (repeated sputum specimens)", "unit": "", "ref_range": "Negative", "day": null, "note": "Undated; repeated early in the admission.", "source_locator": "Case presentation; Abstract", "catalogue_ref": "CMP.AFB_SMEAR"},
+    {"id": "L04", "item": "Sputum MTB complex PCR", "code": null, "value": "MTB complex not detected", "unit": "", "ref_range": "Not detected", "day": null, "note": "Undated. The article says 'MTB complex PCR'; the platform (Xpert or other) is not stated.", "source_locator": "Case presentation; Abstract", "catalogue_ref": "CMP.XPERT_MTB_RIF"},
+    {"id": "L05", "item": "Sputum mycobacterial culture", "code": null, "value": "No mycobacteria isolated (repeated specimens)", "unit": "", "ref_range": "No growth", "day": null, "note": "Undated. The catalogue has no mycobacterial culture component.", "source_locator": "Case presentation; Abstract"},
+    {"id": "L06", "item": "Bronchoalveolar lavage (first): acid-fast bacilli smear", "code": null, "value": "Negative", "unit": "", "ref_range": "Negative", "day": null, "note": "Undated; before the lung biopsy.", "source_locator": "Case presentation; Abstract"},
+    {"id": "L07", "item": "Bronchoalveolar lavage (first): mycobacterial culture", "code": null, "value": "No mycobacteria isolated", "unit": "", "ref_range": "No growth", "day": null, "note": "Undated.", "source_locator": "Case presentation"},
+    {"id": "L08", "item": "Plasma microbial cell-free DNA next-generation sequencing (Karius), first", "code": null, "value": "No pathogen detected (MTB complex not detected)", "unit": "", "ref_range": "No pathogen detected", "day": null, "note": "Undated; before the steroid was started. The repeat on day 25 differs (L19).", "source_locator": "Case presentation; Abstract"},
+    {"id": "L09", "item": "Next-generation sequencing (MicroGenDX), first", "code": null, "value": "MTB complex not detected", "unit": "", "ref_range": "Not detected", "day": null, "note": "Undated; before the steroid was started. Specimen not stated. The repeat on day 25 differs (L20).", "source_locator": "Case presentation"},
+    {"id": "L10", "item": "Cryptococcus test", "code": null, "value": "Negative", "unit": "", "ref_range": "Negative", "day": null, "note": "Undated; test type not stated.", "source_locator": "Discussion"},
+    {"id": "L11", "item": "Aspergillus test", "code": null, "value": "Negative", "unit": "", "ref_range": "Negative", "day": null, "note": "Undated; test type not stated.", "source_locator": "Discussion"},
+    {"id": "L12", "item": "Histoplasma test", "code": null, "value": "Negative", "unit": "", "ref_range": "Negative", "day": null, "note": "Undated; test type not stated.", "source_locator": "Discussion"},
+    {"id": "L13", "item": "Pneumocystis jirovecii test", "code": null, "value": "Negative", "unit": "", "ref_range": "Negative", "day": null, "note": "Undated; test type not stated.", "source_locator": "Discussion"},
+    {"id": "L14", "item": "Brucella test", "code": null, "value": "Negative", "unit": "", "ref_range": "Negative", "day": null, "note": "Undated; test type not stated.", "source_locator": "Discussion"},
+    {"id": "L15", "item": "JC virus test", "code": null, "value": "Negative", "unit": "", "ref_range": "Negative", "day": null, "note": "Undated; test type not stated.", "source_locator": "Discussion"},
+    {"id": "L16", "item": "Soluble interleukin-2 receptor (sCD25)", "code": null, "value": 7593.1, "unit": "pg/mL", "ref_range": "175.3-858.2", "flag": "H", "day": null, "note": "Undated; after the steroid, before day 18.", "source_locator": "Case presentation"},
+    {"id": "L17", "item": "CXCL9", "code": null, "value": 52784, "unit": "pg/mL", "ref_range": "<647", "flag": "H", "day": null, "note": "Undated; after the steroid, before day 18.", "source_locator": "Case presentation"},
+    {"id": "L18", "item": "H-score (calculated by the team)", "code": null, "value": 256, "unit": "points", "ref_range": "", "day": null, "release": "never", "note": "A clinician's calculation, not a test; kept for the debrief. Its inputs (triglycerides, fibrinogen, organomegaly) are only partly reported.", "source_locator": "Case presentation; Abstract"},
+    {"id": "L19", "item": "Plasma microbial cell-free DNA next-generation sequencing (Karius), repeat", "code": null, "value": "Mycobacterium tuberculosis complex detected", "unit": "", "ref_range": "No pathogen detected", "flag": "A", "day": 25, "reveals_dx": true, "pivotal": true, "source_locator": "Case presentation; Abstract (hospital day 26)"},
+    {"id": "L20", "item": "Next-generation sequencing (MicroGenDX), repeat", "code": null, "value": "Mycobacterium tuberculosis complex detected", "unit": "", "ref_range": "Not detected", "flag": "A", "day": 25, "reveals_dx": true, "pivotal": true, "source_locator": "Case presentation; Abstract (hospital day 26)"},
+    {"id": "L21", "item": "Bronchoalveolar lavage (second): acid-fast bacilli stain", "code": null, "value": "Positive: acid-fast bacilli seen", "unit": "", "ref_range": "Negative", "flag": "A", "day": 25, "reveals_dx": true, "pivotal": true, "note": "Repeated after the NGS result; positive within hours. Day assumed equal to the NGS day.", "source_locator": "Case presentation; Abstract"},
+    {"id": "L22", "item": "Bronchoalveolar lavage (second): MTB complex PCR", "code": null, "value": "MTB complex detected", "unit": "", "ref_range": "Not detected", "flag": "A", "day": 25, "reveals_dx": true, "pivotal": true, "note": "Positive within hours of the second lavage.", "source_locator": "Case presentation; Abstract"},
+    {"id": "L23", "item": "Bronchoalveolar lavage (second): mycobacterial culture", "code": null, "value": "Mycobacterium tuberculosis isolated", "unit": "", "ref_range": "No growth", "flag": "A", "day": null, "reveals_dx": true, "pivotal": true, "note": "Resulted after specific treatment had started; exact day not given.", "source_locator": "Case presentation; Abstract"}
+  ],
+
+  "raw_material": [
+    {"id": "R01", "test": "Chest X-ray", "release": "service.radiology", "day": 0, "findings": "Innumerable widespread small nodules throughout both lungs in a miliary pattern.", "media": ["M01"], "source_locator": "Case presentation, Figure 1a", "test_item_id": "IMG.XR.CHEST"},
+    {"id": "R02", "test": "CT chest", "release": "service.radiology", "day": 0, "findings": "Innumerable widespread bilateral miliary nodules filling the entirety of both lungs.", "media": ["M02", "M06"], "source_locator": "Figure 1b-c; Figure 4a", "test_item_id": "IMG.CT.CHEST"},
+    {"id": "R03", "test": "CT abdomen", "release": "service.radiology", "day": 0, "findings": "Moderate splenomegaly.", "media": [], "note": "The text cites Figure 1, but Figure 1's caption shows only the chest. Other abdominal findings are not reported.", "source_locator": "Case presentation", "test_item_id": "IMG.CT.ABDOMEN_PELVIS"},
+    {"id": "R04", "test": "CT pulmonary angiogram", "release": "service.radiology", "day": 18, "findings": "No pulmonary embolism. New airspace opacities throughout both lungs, progressively worse than on the admission CT.", "media": [], "source_locator": "Case presentation (hospital day 19)", "test_item_id": "IMG.CT.CTPA"},
+    {"id": "R05", "test": "CT chest", "release": "service.radiology", "day": 29, "findings": "Diffuse bilateral reticulonodular, flocculent and consolidative airspace opacities.", "media": ["M07"], "note": "Figure 4b is dated 'day 30'; it may be the same scan as R04 (hospital day 19).", "source_locator": "Figure 4b", "test_item_id": "IMG.CT.CHEST"},
+    {"id": "R06", "test": "Transbronchial lung biopsy", "release": "service.pathology", "day": null, "findings": "Non-necrotising granulomatous inflammation. Acid-fast bacilli stain on the tissue: negative.", "media": ["M03"], "note": "Undated; after repeated negative sputum and the first lavage. The catalogue has no lung biopsy item, so this is attached to bronchoscopy.", "source_locator": "Case presentation, Figure 2", "test_item_id": "PROC.RESP.BRONCHOSCOPY"},
+    {"id": "R07", "test": "Bone marrow trephine biopsy", "release": "service.pathology", "day": null, "findings": "Multiple small foci of non-caseating granulomatous inflammation.", "media": ["M04"], "note": "Undated; after the steroid, before day 18. Cellularity, AFB stain and culture not reported.", "source_locator": "Case presentation, Figure 3a", "test_item_id": "PROC.BM.TREPHINE"},
+    {"id": "R08", "test": "Bone marrow aspirate", "release": "service.pathology", "day": null, "findings": "Occasional haemophagocytic cells.", "media": ["M05"], "note": "Undated; same procedure as R07.", "source_locator": "Case presentation, Figure 3b", "test_item_id": "PROC.BM.ASPIRATE"}
+  ],
+
+  "media": [
+    {"id": "M01", "figure": "Figure 1a", "specimen": "Chest radiograph", "stain": null, "redacted_caption": "Chest X-ray at presentation.", "licence": "CC BY 4.0", "production_ok": false, "public_release_ok": false, "has_annotations": true, "file_path": "PMC11890614/F1.jpg", "raw_fact_id": "R01"},
+    {"id": "M02", "figure": "Figure 1b-c", "specimen": "CT chest", "stain": null, "redacted_caption": "CT chest at presentation.", "licence": "CC BY 4.0", "production_ok": false, "public_release_ok": false, "has_annotations": true, "file_path": "PMC11890614/F1.jpg", "raw_fact_id": "R02"},
+    {"id": "M03", "figure": "Figure 2", "specimen": "Transbronchial lung biopsy", "stain": "Not stated", "redacted_caption": "Transbronchial lung biopsy.", "licence": "CC BY 4.0", "production_ok": false, "public_release_ok": false, "has_annotations": true, "file_path": "PMC11890614/F2.jpg", "raw_fact_id": "R06"},
+    {"id": "M04", "figure": "Figure 3a", "specimen": "Bone marrow trephine biopsy", "stain": "Not stated", "redacted_caption": "Bone marrow trephine biopsy.", "licence": "CC BY 4.0", "production_ok": false, "public_release_ok": false, "has_annotations": true, "file_path": "PMC11890614/F3.jpg", "raw_fact_id": "R07"},
+    {"id": "M05", "figure": "Figure 3b", "specimen": "Bone marrow aspirate", "stain": "Not stated", "redacted_caption": "Bone marrow aspirate.", "licence": "CC BY 4.0", "production_ok": false, "public_release_ok": false, "has_annotations": true, "file_path": "PMC11890614/F3.jpg", "raw_fact_id": "R08"},
+    {"id": "M06", "figure": "Figure 4a", "specimen": "CT chest", "stain": null, "redacted_caption": "CT chest on admission.", "licence": "CC BY 4.0", "production_ok": false, "public_release_ok": false, "has_annotations": true, "file_path": "PMC11890614/F4.jpg", "raw_fact_id": "R02"},
+    {"id": "M07", "figure": "Figure 4b", "specimen": "CT chest", "stain": null, "redacted_caption": "CT chest later in the admission.", "licence": "CC BY 4.0", "production_ok": false, "public_release_ok": false, "has_annotations": true, "file_path": "PMC11890614/F4.jpg", "raw_fact_id": "R05"}
+  ],
+
+  "ground_truth": {
+    "final_dx": {
+      "id": "DX.MILIARY_TB",
+      "ids": ["DX.MILIARY_TB", "DX.HLH"],
+      "text": "Miliary tuberculosis with repeatedly negative initial microbiological tests, mistaken for sarcoidosis on non-necrotising granulomas, treated with high-dose steroid and complicated by secondary haemophagocytic lymphohistiocytosis",
+      "icd10": ["A19.9", "D76.1"],
+      "accepted_synonyms": ["miliary tuberculosis", "miliary TB", "disseminated tuberculosis", "disseminated TB", "tuberculosis", "tuberculosis-associated haemophagocytic lymphohistiocytosis", "tuberculosis-associated hemophagocytic lymphohistiocytosis", "TB-associated HLH", "secondary HLH"],
+      "secondary_findings": [
+        "Secondary haemophagocytic lymphohistiocytosis (fever, cytopenias, ferritin 7821 ng/mL, raised soluble IL-2 receptor and CXCL9, haemophagocytes in the marrow; H-score 256)",
+        "Moderate splenomegaly"
+      ]
+    },
+    "accepted_differential": [
+      "Sarcoidosis, including miliary sarcoidosis",
+      "Disseminated fungal infection (histoplasmosis, cryptococcosis)",
+      "Disseminated non-tuberculous mycobacterial infection",
+      "Lymphoma (with secondary haemophagocytosis)",
+      "Haemophagocytic lymphohistiocytosis from another trigger (EBV, lymphoma)",
+      "Metastatic malignancy with miliary spread"
+    ],
+    "red_herrings": [
+      "Negative interferon-gamma release assay",
+      "Negative sputum AFB smears, MTB PCR and mycobacterial cultures",
+      "Negative first bronchoalveolar lavage",
+      "Negative first cell-free DNA and MicroGenDX sequencing",
+      "Non-necrotising (non-caseating) granulomas in the lung and marrow"
+    ],
+    "key_discriminators": [
+      "Miliary pattern on chest imaging with four months of fever, cough, night sweats and weight loss",
+      "Origin in a high-incidence country (Haiti)",
+      "The low sensitivity of every single TB test in miliary disease",
+      "No response to high-dose steroid, then worsening",
+      "Pancytopenia with rising ferritin and transaminases (secondary haemophagocytosis)",
+      "Repeat NGS, second lavage AFB stain and PCR positive on day 25"
+    ],
+    "treatment_given": "High-dose steroid for presumed sarcoidosis; then high-dose steroids and etoposide (HLH-2004); empirical broad-spectrum antibiotics and antifungals, intubation and vasopressors from day 18; rifampin, isoniazid, pyrazinamide and ethambutol from day 25 with HLH chemotherapy withheld.",
+    "outcome": "Multi-organ failure; died about one week after starting anti-tuberculosis treatment. Autopsy declined, so whether tuberculosis was present from the start or reactivated under immunosuppression is not proven; the authors think it was present from the start.",
+    "must_do": [
+      "Keep tuberculosis high on the list despite negative tests, given the miliary pattern, the symptoms and the origin",
+      "Start empirical anti-tuberculosis treatment when suspicion stays high despite negative tests, or cover with it before any steroid",
+      "Send tissue from more than one site (lung, marrow, liver) for AFB stain, MTB PCR and mycobacterial culture, and repeat testing when the course changes",
+      "Recognise secondary haemophagocytosis (cytopenias, ferritin, triglycerides, fibrinogen, soluble IL-2 receptor, marrow) and treat its trigger",
+      "Involve infectious diseases early; isolate the patient while tuberculosis is possible",
+      "Test for HIV"
+    ],
+    "must_not_do": [
+      "Diagnose sarcoidosis and start high-dose steroid without anti-tuberculosis cover while miliary tuberculosis has not been reliably excluded",
+      "Treat haemophagocytosis with etoposide or escalating immunosuppression alone without treating the trigger",
+      "Take a negative interferon-gamma release assay or negative smears as excluding miliary tuberculosis"
+    ],
+    "rubric": {
+      "5": "Miliary (disseminated) tuberculosis with secondary haemophagocytic lymphohistiocytosis",
+      "4": "Miliary tuberculosis without recognising the haemophagocytosis, or TB-associated HLH without naming the miliary form",
+      "3": "Disseminated granulomatous infection (mycobacterial or fungal) not specified, with haemophagocytosis",
+      "2": "Sarcoidosis, lymphoma or primary HLH as the final diagnosis",
+      "1": "Unrelated diagnosis, or one that would lead to harm"
+    }
+  },
+
+  "gaps": [
+    {"id": "G01", "item": "Complete vital signs on admission (blood pressure, respiratory rate, SpO2)", "guidance": "Temperature and heart rate are reported. Blood pressure normal; respiratory rate mildly raised; SpO2 normal or mildly reduced on air at admission.", "review_required": true},
+    {"id": "G02", "item": "General and chest examination", "guidance": "Thin, unwell, febrile; mild pallor; lungs may be clear or have scattered fine crackles (miliary disease is often quiet on auscultation); no clubbing.", "review_required": true},
+    {"id": "G03", "item": "Abdominal examination and lymph nodes", "guidance": "Spleen palpable or not (moderate splenomegaly on CT); liver edge possibly palpable; no significant peripheral lymphadenopathy unless Atul decides otherwise.", "review_required": true},
+    {"id": "G04", "item": "Fundoscopy (choroidal tubercles)", "guidance": "Not reported. Do not invent a near-pathognomonic sign: the Case Reviewer decides; default no abnormality seen.", "review_required": true},
+    {"id": "G05", "item": "TB contact history, previous TB treatment, BCG vaccination, date of immigration", "guidance": "Not reported. No known contact and no previous treatment; BCG likely given in childhood; the Case Reviewer sets the immigration date.", "review_required": true},
+    {"id": "G06", "item": "Occupation, smoking, alcohol, drugs, sexual history, travel", "guidance": "Not reported. Neutral answers; no immunosuppressing risk (HIV negative).", "review_required": true},
+    {"id": "G07", "item": "Current medicines and allergies", "guidance": "None regular before admission; no known allergies.", "review_required": true},
+    {"id": "G08", "item": "Rest of the blood count on admission (MCV, lymphocytes, red cell indices) and day 17", "guidance": "The article says 'mild normocytic anaemia': MCV normal; lymphopenia likely. Day 17 consistent with Table 1 pancytopenia.", "review_required": true},
+    {"id": "G09", "item": "Inflammatory markers (CRP, ESR, procalcitonin)", "guidance": "The article says 'elevated inflammatory markers' without values: CRP and ESR raised; procalcitonin normal or mildly raised.", "review_required": true},
+    {"id": "G10", "item": "Renal function, electrolytes, bilirubin, ALP, albumin, LDH on admission", "guidance": "Renal function normal; sodium mildly low possible; albumin low; LDH raised; bilirubin and ALP normal or mildly raised on admission, rising by day 17.", "review_required": true},
+    {"id": "G11", "item": "Triglycerides and fibrinogen (H-score inputs)", "guidance": "Not reported although the H-score was 256: by day 17 triglycerides raised and fibrinogen low, consistent with that score; the Case Reviewer sets values.", "review_required": true},
+    {"id": "G12", "item": "Serum calcium, ACE, urine calcium (sarcoidosis work-up)", "guidance": "Not reported. Calcium normal; ACE normal or mildly raised (non-specific in granulomatous infection).", "review_required": true},
+    {"id": "G13", "item": "Blood cultures, including mycobacterial blood culture", "guidance": "Routine blood cultures negative. Mycobacterial blood culture: the Case Reviewer decides (the article does not report one).", "review_required": true},
+    {"id": "G14", "item": "Urine AFB and mycobacterial culture, and other extrapulmonary samples", "guidance": "Not reported. Do not auto-generate: the Case Reviewer sets them, since a positive result would end the case early.", "review_required": true, "auto_generate": false},
+    {"id": "G15", "item": "AFB stain, PCR and mycobacterial culture on the bone marrow", "guidance": "Not reported. Do not auto-generate: the Case Reviewer decides; marrow culture is often positive in miliary disease but slow.", "review_required": true, "auto_generate": false},
+    {"id": "G16", "item": "Liver biopsy", "guidance": "Not done in the article. If ordered: granulomas; the Case Reviewer decides AFB stain and culture results.", "review_required": true, "auto_generate": false},
+    {"id": "G17", "item": "Lumbar puncture and CSF", "guidance": "Not done in the article. The Case Reviewer decides; default normal CSF or mild lymphocytosis.", "review_required": true},
+    {"id": "G18", "item": "Hepatitis B and C serology, EBV and CMV serology or PCR", "guidance": "Not reported individually ('viral work-up negative'): negative or past infection; EBV PCR negative.", "review_required": true},
+    {"id": "G19", "item": "Coagulation screen and arterial blood gas at day 18", "guidance": "Not reported. Coagulopathy with low fibrinogen; hypoxaemic respiratory failure with lactic acidosis in shock.", "review_required": true},
+    {"id": "G20", "item": "Bronchoscopy airway findings", "guidance": "Not reported. Airways normal or mildly inflamed; no endobronchial lesion.", "review_required": true},
+    {"id": "G21", "item": "Dates of the first-round tests, the steroid and the HLH treatment", "guidance": "The text gives no dates; Figure 5 (a timeline image) probably does. The Case Reviewer sets the days before path analysis.", "review_required": true, "auto_generate": false},
+    {"id": "G22", "item": "Steroid drug and dose; etoposide dose", "guidance": "Not reported. High-dose steroid (for example prednisone 1 mg/kg or pulse methylprednisolone); HLH-2004 dexamethasone and etoposide doses.", "review_required": true}
+  ]
+}

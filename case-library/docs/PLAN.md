@@ -100,6 +100,7 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
 - [ ] **L1.3 Curate batch 1**
   - Build: run the skill in batch mode on the nine cases; extend the catalogue where their paths need it (with a changelog entry).
   - Accept: nine cases `in_review` with 100% coverage and clean checks; one review pack for the batch.
+  - Note (2026-09-25): started early at Atul's request, on branch `case-library/L1.3-batch1` (from L0.9). Steps 1–5 only for Sambhasha's four starter cases: `cases/<PMCID>/gold-case-file.draft.json` and `CASE.md` (with open questions for Atul). All import on catalogue v0 and pass `tests/integration/test_gold_files.py` (links, laboratory profile, leak scan). Paths and values wait for the pilot review (SPEC §7.1). Found across the four: the articles report conventional units (g/dL, mg/dL) while the catalogue and its formulas use SI, which needs one decision for every case; and each case needs catalogue items the catalogue lacks (listed in each CASE.md).
   - Depends on: L1.2.
 
 - [ ] **L1.4 [human] Review batch 1**

@@ -1,0 +1,250 @@
+{
+  "_status_note": "DRAFT gold case file (Case Library task L1.3, curation steps 1-5). The Case Reviewer (Dr Atul Tiwari) must verify every fact against the article before it is frozen as PMC11227049@v1. Values are transcribed from the article as published, in the article's own (conventional) units; obvious unit misprints are corrected in 'unit' and recorded in 'note' (see CASE.md, Open questions). Items under 'gaps' are NOT article facts. Path analysis and affected values wait for the pilot review.",
+  "schema_version": "0.3",
+  "case_id": "PMC11227049",
+  "version": 1,
+  "status": "draft",
+
+  "case": {
+    "slug": "c-tegc9",
+    "display_title": "Tired, off her food, with pain after meals",
+    "display_tags": ["anaemia", "abdominal pain", "diabetes"],
+    "specialty": "haematology",
+    "lab_profile": {"sex": "F", "age_years": 58, "components": {
+      "CMP.HB": {"low": 12, "high": 14, "unit": "g/dL"},
+      "CMP.HCT": {"low": 36, "high": 47, "unit": "%"},
+      "CMP.MCH": {"low": 25, "high": 35, "unit": "pg"},
+      "CMP.MCHC": {"low": 32, "high": 36, "unit": "g/dL"},
+      "CMP.PLT": {"low": 150, "high": 400, "unit": "x10^3/uL"},
+      "CMP.WBC": {"low": 4, "high": 11, "unit": "x10^3/uL"},
+      "CMP.RDW": {"low": 11, "high": 13.5, "unit": "%"},
+      "CMP.RETIC_PCT": {"low": 0.2, "high": 2.0, "unit": "%"},
+      "CMP.UREA": {"low": 10, "high": 45, "unit": "mg/dL"},
+      "CMP.CREATININE": {"low": 0.66, "high": 1.3, "unit": "mg/dL"},
+      "CMP.NA": {"low": 136, "high": 145, "unit": "mEq/L"},
+      "CMP.K": {"low": 3.5, "high": 5.0, "unit": "mEq/L"},
+      "CMP.TOTAL_PROTEIN": {"low": 6.0, "high": 8.0, "unit": "g/dL"},
+      "CMP.ALBUMIN": {"low": 3.5, "high": 5.2, "unit": "g/dL"},
+      "CMP.AST": {"low": 0, "high": 35, "unit": "U/L"},
+      "CMP.ALT": {"low": 0, "high": 40, "unit": "U/L"},
+      "CMP.ALP": {"low": 30, "high": 120, "unit": "U/L"},
+      "CMP.BILI_TOTAL": {"low": 0.3, "high": 1.2, "unit": "mg/dL"},
+      "CMP.BILI_CONJ": {"low": 0.0, "high": 0.2, "unit": "mg/dL"},
+      "CMP.IRON": {"low": 37, "high": 171, "unit": "ug/dL"},
+      "CMP.FERRITIN": {"low": 11, "high": 306, "unit": "ng/mL"},
+      "CMP.TIBC": {"low": 265, "high": 497, "unit": "ug/dL"},
+      "CMP.GLUCOSE_RANDOM": {"low": 80, "high": 160, "unit": "mg/dL"},
+      "CMP.GLUCOSE_PP": {"low": 100, "high": 165, "unit": "mg/dL"},
+      "CMP.HBA1C": {"low": 4, "high": 6.5, "unit": "%"},
+      "CMP.TSH": {"low": 0.38, "high": 5.33, "unit": "uIU/mL"},
+      "CMP.PB_BLOOD": {"low": 0, "high": 25, "unit": "ug/dL", "display": "<25.00"},
+      "CMP.PB_URINE": {"low": 0, "high": 80, "unit": "ug/dL", "display": "<80.0"},
+      "CMP.ZINC": {"low": 65, "high": 256, "unit": "ug/dL"}
+    }}
+  },
+
+  "source": {
+    "title": "Case of lead poisoning secondary to intake of herbal medicine for diabetes mellitus in a tertiary care hospital in Kerala",
+    "authors": ["Junith Thomas", "Rohini Sebastian", "C R Anil Kumar", "Aboobacker Mohamed Rafi"],
+    "affiliations": [
+      "Department of Transfusion Medicine, Jubilee Mission Medical College, Thrissur, Kerala, India",
+      "Department of Pathology, Jubilee Mission Medical College, Thrissur, Kerala, India",
+      "Department of General Medicine, Jubilee Mission Medical College, Thrissur, Kerala, India"
+    ],
+    "journal": "Endocrinology, Diabetes & Metabolism Case Reports",
+    "volume": "2024",
+    "issue": "2",
+    "article_number": "23-0066",
+    "published": "2024-06-10",
+    "doi": "10.1530/EDM-23-0066",
+    "pmid": "38866062",
+    "pmcid": "PMC11227049",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11227049/",
+    "licence": "CC BY 4.0",
+    "production_ok": true,
+    "public_release_ok": true,
+    "licence_verified": "2026-09-25 from the <license> element of the cached JATS XML (https://creativecommons.org/licenses/by/4.0/; copyright the author(s) 2024); figure captions carry no separate credit line",
+    "jats_sha256": "671ee106d00171938b606418165bac9c763a7ac5f90f038d6ee6f52ce78179e2",
+    "attribution": "Adapted from Thomas J, Sebastian R, Anil Kumar CR, Rafi AM. Case of lead poisoning secondary to intake of herbal medicine for diabetes mellitus in a tertiary care hospital in Kerala. Endocrinol Diabetes Metab Case Rep 2024(2): 23-0066 (2024). doi:10.1530/EDM-23-0066. Licensed CC BY 4.0. Changes: restructured into a simulation; diagnosis hidden until the debrief; simulated findings added where marked."
+  },
+
+  "clock": {
+    "day_0": null,
+    "day_0_label": "Presentation to the out-patient department and admission (calendar date not reported)",
+    "semantics": "Integer day relative to presentation. day = null means the fact is valid at any point in the admission (the article gives no date). The article dates nothing after admission: the film review, marrow, disclosure, lead levels and imaging are all undated."
+  },
+
+  "vignette": "A 58-year-old woman with type 2 diabetes and hypothyroidism presents with two weeks of generalised tiredness, reduced food intake and abdominal pain after eating.",
+  "opening_statement_lay": "For the last two weeks I have been tired all the time and I have not been eating much. My stomach hurts after I eat.",
+
+  "facts": [
+    {"id": "H01", "category": "history", "item": "Age and sex", "release_text": "58-year-old woman.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation"},
+    {"id": "H02", "category": "history", "item": "Past medical history: diabetes", "release_text": "Type 2 diabetes.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation", "released_by": ["HX.PMH.MEDICAL", "HX.PMH.CHRONIC_CONDITIONS"]},
+    {"id": "H03", "category": "history", "item": "Past medical history: hypothyroidism", "release_text": "Hypothyroidism, under control on thyroxine.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation", "released_by": ["HX.PMH.MEDICAL", "HX.PMH.CHRONIC_CONDITIONS"]},
+    {"id": "H04", "category": "history", "item": "Presenting complaint: tiredness", "release_text": "Generalised tiredness for two weeks.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation", "released_by": ["HX.PC.ONSET_DURATION", "HX.GEN.FATIGUE"]},
+    {"id": "H05", "category": "history", "item": "Presenting complaint: reduced food intake", "release_text": "Decreased food intake for two weeks.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation", "released_by": ["HX.PC.ONSET_DURATION", "HX.GI.NAUSEA_APPETITE"]},
+    {"id": "H06", "category": "history", "item": "Presenting complaint: abdominal pain", "release_text": "Abdominal pain after eating for two weeks.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation", "released_by": ["HX.GI.ABDOMINAL_PAIN", "HX.PC.PAIN_DETAILS", "HX.PC.AGGRAVATING_RELIEVING"]},
+    {"id": "H07", "category": "history", "item": "Nausea and vomiting", "release_text": "The abdominal pain is not associated with nausea or vomiting.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["HX.GI.NAUSEA_APPETITE", "HX.PC.ASSOCIATED"]},
+    {"id": "H08", "category": "history", "item": "Fever", "release_text": "No fever.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["HX.GEN.FEVER_SWEATS_WEIGHT"]},
+    {"id": "H09", "category": "history", "item": "Bowel habit", "release_text": "No loose stools.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["HX.GI.BOWEL_HABIT"]},
+    {"id": "H10", "category": "history", "item": "Breathlessness", "release_text": "No breathing difficulty.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["HX.CVS.BREATHLESSNESS"]},
+    {"id": "H11", "category": "history", "item": "Gastrointestinal bleeding", "release_text": "No melaena or haematemesis.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["HX.GI.BLEEDING"]},
+    {"id": "H12", "category": "history", "item": "Health before this illness", "release_text": "She was comparatively healthy before this illness.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["HX.PC.PREVIOUS_EPISODES", "HX.PC.PROGRESSION"]},
+    {"id": "H13", "category": "history", "item": "Medication: metformin stopped", "release_text": "She was previously on metformin, which she stopped two months ago.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["HX.MEDS.CURRENT", "HX.MEDS.RECENT_CHANGES"]},
+    {"id": "H14", "category": "history", "item": "Medication: thyroxine", "release_text": "Thyroxine tablets for hypothyroidism, which is under control. Dose not recorded.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation", "released_by": ["HX.MEDS.CURRENT"]},
+    {"id": "H15", "category": "history", "item": "Herbal medicine use (hidden until asked specifically)", "release_text": "She had been taking herbal capsules for her diabetes, bought over the internet, for about one and a half months, and stopped them before admission.", "day": 0, "kind": "raw", "reveals_dx": false, "pivotal": true, "release": "chart", "release_condition": {"requires_topics": ["dietary or herbal supplements", "traditional, Ayurvedic or imported medicines", "remedies bought online or without a prescription", "alternative treatment for her diabetes"], "note": "In the article the history was revisited only after the film and marrow findings, with targeted questions about heavy-metal exposure; the patient then disclosed the capsules. A general medication question returns H13 and H14 only, because she had stopped the capsules before admission."}, "source_locator": "Treatment", "released_by": ["HX.MEDS.SUPPLEMENTS", "HX.MEDS.SUPPLEMENT_DETAILS"]},
+    {"id": "H16", "category": "history", "item": "Herbal medicine details", "release_text": "An Ayurvedic herbal capsule for diabetes, ordered over the internet. Taken for about one and a half months; stopped before admission.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "release_condition": {"requires_topics": ["name, source, dose or duration of a supplement or remedy"], "note": "The article names the product (brand name held in 'note', not shown to players until Atul decides). Dose not reported."}, "note": "Article: Sheopal's Herbal Diabetes Care Capsule, procured through the internet.", "source_locator": "Background; Treatment", "released_by": ["HX.MEDS.SUPPLEMENT_DETAILS"]},
+
+    {"id": "E01", "category": "exam", "item": "Conscious level and orientation", "release_text": "Conscious and well oriented.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation (examination)", "released_by": ["EX.GEN.CONSCIOUSNESS"]},
+    {"id": "E02", "category": "exam", "item": "Pallor", "release_text": "Pallor present.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation (examination)", "released_by": ["EX.GEN.PALLOR"]},
+    {"id": "E03", "category": "exam", "item": "Jaundice", "release_text": "No icterus.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation (examination)", "released_by": ["EX.GEN.JAUNDICE"]},
+    {"id": "E04", "category": "exam", "item": "Cyanosis", "release_text": "No cyanosis.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation (examination)", "released_by": ["EX.GEN.CYANOSIS"]},
+    {"id": "E05", "category": "exam", "item": "Clubbing", "release_text": "No clubbing.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation (examination)", "released_by": ["EX.GEN.CLUBBING"]},
+    {"id": "E06", "category": "exam", "item": "Lymph nodes", "release_text": "No lymphadenopathy.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation (examination)", "released_by": ["EX.GEN.LYMPH_NODES"]},
+    {"id": "E07", "category": "exam", "item": "Oedema", "release_text": "No oedema.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation (examination)", "released_by": ["EX.GEN.OEDEMA"]},
+    {"id": "E08", "category": "exam", "item": "Vital signs", "release_text": "Vital signs within normal limits.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "note": "No values reported; see gap G01.", "source_locator": "Case presentation (examination)", "released_by": ["EX.GEN.VITALS"]},
+    {"id": "E09", "category": "exam", "item": "Cardiovascular system", "release_text": "Cardiovascular system: no abnormality detected.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "note": "Article: 'No abnormality was detected in the systemic examination', split per system.", "source_locator": "Case presentation (examination)", "released_by": ["EX.CVS.AUSCULTATION"]},
+    {"id": "E10", "category": "exam", "item": "Respiratory system", "release_text": "Respiratory system: no abnormality detected.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation (examination)", "released_by": ["EX.RESP.AUSCULTATION"]},
+    {"id": "E11", "category": "exam", "item": "Abdomen", "release_text": "Abdomen: no abnormality detected.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation (examination)", "released_by": ["EX.ABD.PALPATION", "EX.ABD.LIVER_SPLEEN"]},
+    {"id": "E12", "category": "exam", "item": "Central nervous system", "release_text": "Nervous system: no abnormality detected.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation (examination)", "released_by": ["EX.NEURO.MOTOR", "EX.NEURO.REFLEXES_SENSATION"]},
+    {"id": "E13", "category": "exam", "item": "Oral cavity", "release_text": "Desquamation of the tongue and oral mucosa.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "note": "The gums are not described; see gap G05.", "source_locator": "Case presentation (examination)", "released_by": ["EX.ORAL.CAVITY"]}
+  ],
+
+  "series": [],
+
+  "single_results": [
+    {"id": "L01", "item": "Haemoglobin", "code": {"system": "LOINC", "code": "718-7"}, "value": 7.5, "unit": "g/dL", "ref_range": "12-14", "flag": "L", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.HB"},
+    {"id": "L02", "item": "Haematocrit", "code": {"system": "LOINC", "code": "4544-3"}, "value": 23.1, "unit": "%", "ref_range": "36-47", "flag": "L", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.HCT"},
+    {"id": "L03", "item": "Mean cell haemoglobin", "code": null, "value": 25.7, "unit": "pg", "ref_range": "25-35", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.MCH"},
+    {"id": "L04", "item": "Mean cell haemoglobin concentration", "code": null, "value": 32.3, "unit": "g/dL", "ref_range": "32-36", "day": 0, "note": "The article prints the unit as %; g/dL is meant.", "source_locator": "Table 1", "catalogue_ref": "CMP.MCHC"},
+    {"id": "L05", "item": "Platelet count", "code": {"system": "LOINC", "code": "777-3"}, "value": 300, "unit": "x10^3/uL", "ref_range": "150-400", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.PLT"},
+    {"id": "L06", "item": "Total white cell count", "code": {"system": "LOINC", "code": "6690-2"}, "value": 6.31, "unit": "x10^3/uL", "ref_range": "4-11", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.WBC"},
+    {"id": "L07", "item": "Red cell distribution width", "code": null, "value": 15.3, "unit": "%", "ref_range": "11-13.5", "flag": "H", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.RDW"},
+    {"id": "L08", "item": "Reticulocyte count", "code": null, "value": 7.94, "unit": "%", "ref_range": "0.2-2.0", "flag": "H", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.RETIC_PCT"},
+    {"id": "L09", "item": "Differential white cell count", "code": null, "value": "Normal", "unit": "", "ref_range": "", "day": 0, "note": "Text only; no counts reported. No single catalogue component; see gap G04.", "source_locator": "Investigation (text)"},
+    {"id": "L10", "item": "Blood urea", "code": null, "value": 11, "unit": "mg/dL", "ref_range": "10-45", "day": 0, "note": "Urea, not BUN, judging by the range.", "source_locator": "Table 1", "catalogue_ref": "CMP.UREA"},
+    {"id": "L11", "item": "Creatinine", "code": {"system": "LOINC", "code": "2160-0"}, "value": 0.7, "unit": "mg/dL", "ref_range": "0.66-1.3", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.CREATININE"},
+    {"id": "L12", "item": "Sodium", "code": {"system": "LOINC", "code": "2951-2"}, "value": 136, "unit": "mEq/L", "ref_range": "136-145", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.NA"},
+    {"id": "L13", "item": "Potassium", "code": {"system": "LOINC", "code": "2823-3"}, "value": 3.8, "unit": "mEq/L", "ref_range": "3.5-5.0", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.K"},
+    {"id": "L14", "item": "Serum total protein", "code": {"system": "LOINC", "code": "2885-2"}, "value": 7.4, "unit": "g/dL", "ref_range": "6.0-8.0", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.TOTAL_PROTEIN"},
+    {"id": "L15", "item": "Albumin", "code": {"system": "LOINC", "code": "1751-7"}, "value": 4.2, "unit": "g/dL", "ref_range": "3.5-5.2", "day": 0, "note": "The article prints the unit as mg/dL; g/dL is meant.", "source_locator": "Table 1", "catalogue_ref": "CMP.ALBUMIN"},
+    {"id": "L16", "item": "Globulin", "code": null, "value": 3.1, "unit": "g/dL", "ref_range": "2.4-4.0", "day": 0, "note": "No catalogue component for globulin.", "source_locator": "Table 1"},
+    {"id": "L17", "item": "Albumin/globulin ratio", "code": null, "value": 1.3, "unit": "ratio", "ref_range": "0.9-2.0", "day": 0, "note": "No catalogue component for the A/G ratio.", "source_locator": "Table 1"},
+    {"id": "L18", "item": "AST (SGOT)", "code": {"system": "LOINC", "code": "1920-8"}, "value": 139, "unit": "U/L", "ref_range": "0-35", "flag": "H", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.AST"},
+    {"id": "L19", "item": "ALT (SGPT)", "code": {"system": "LOINC", "code": "1742-6"}, "value": 146, "unit": "U/L", "ref_range": "0-40", "flag": "H", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.ALT"},
+    {"id": "L20", "item": "Alkaline phosphatase", "code": {"system": "LOINC", "code": "6768-6"}, "value": 156, "unit": "U/L", "ref_range": "30-120", "flag": "H", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.ALP"},
+    {"id": "L21", "item": "Total bilirubin", "code": {"system": "LOINC", "code": "1975-2"}, "value": 1.4, "unit": "mg/dL", "ref_range": "0.3-1.2", "flag": "H", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.BILI_TOTAL"},
+    {"id": "L22", "item": "Direct bilirubin", "code": {"system": "LOINC", "code": "1968-7"}, "value": 0.1, "unit": "mg/dL", "ref_range": "0.0-0.2", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.BILI_CONJ"},
+    {"id": "L23", "item": "Serum iron", "code": {"system": "LOINC", "code": "2498-4"}, "value": 182, "unit": "ug/dL", "ref_range": "37-171", "flag": "H", "day": 0, "note": "Serum iron exceeds the TIBC (L25): a transferrin saturation above 100% is impossible. See CASE.md, Open questions.", "source_locator": "Table 1", "catalogue_ref": "CMP.IRON"},
+    {"id": "L24", "item": "Ferritin", "code": {"system": "LOINC", "code": "2276-4"}, "value": 264, "unit": "ng/mL", "ref_range": "11-306", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.FERRITIN"},
+    {"id": "L25", "item": "Total iron-binding capacity", "code": {"system": "LOINC", "code": "2500-7"}, "value": 165, "unit": "ug/dL", "ref_range": "265-497", "flag": "L", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.TIBC"},
+    {"id": "L26", "item": "Random blood sugar", "code": null, "value": 137, "unit": "mg/dL", "ref_range": "80-160", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.GLUCOSE_RANDOM"},
+    {"id": "L27", "item": "Post-prandial blood sugar", "code": null, "value": 174, "unit": "mg/dL", "ref_range": "100-165", "flag": "H", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.GLUCOSE_PP"},
+    {"id": "L28", "item": "HbA1c", "code": {"system": "LOINC", "code": "4548-4"}, "value": 9, "unit": "%", "ref_range": "4-6.5", "flag": "H", "day": 0, "source_locator": "Table 1 and Investigation", "catalogue_ref": "CMP.HBA1C"},
+    {"id": "L29", "item": "TSH", "code": {"system": "LOINC", "code": "3016-3"}, "value": 4.45, "unit": "uIU/mL", "ref_range": "0.38-5.33", "day": 0, "source_locator": "Table 1", "catalogue_ref": "CMP.TSH"},
+    {"id": "L30", "item": "T3 (total)", "code": null, "value": 0.92, "unit": "ng/mL", "ref_range": "0.87-1.78", "day": 0, "note": "Total T3 by its range; the catalogue has free T3 only.", "source_locator": "Table 1"},
+    {"id": "L31", "item": "T4 (total)", "code": null, "value": 15.3, "unit": "ug/dL", "ref_range": "4.8-15.6", "day": 0, "note": "The article prints the unit as ug/mL; ug/dL is meant (total T4 by its range). The catalogue has free T4 only.", "source_locator": "Table 1"},
+
+    {"id": "L32", "item": "Blood lead", "code": {"system": "LOINC", "code": "5671-3"}, "value": 121.20, "unit": "ug/dL", "ref_range": "<25.00", "flag": "H", "day": null, "reveals_dx": false, "pivotal": true, "note": "The text gives '121.20 ug' without a volume; Table 2 gives ug/dL.", "source_locator": "Table 2 and Treatment", "catalogue_ref": "CMP.PB_BLOOD"},
+    {"id": "L33", "item": "Random urine lead", "code": null, "value": 400.2, "unit": "ug/dL", "ref_range": "<80.0", "flag": "H", "day": null, "note": "Unit as printed (ug/dL); the catalogue's unit is ug/L. See CASE.md, Open questions.", "source_locator": "Table 2 and Treatment", "catalogue_ref": "CMP.PB_URINE"},
+    {"id": "L34", "item": "Blood zinc", "code": null, "value": 89.84, "unit": "ug/dL", "ref_range": "65.0-256.0", "day": null, "source_locator": "Table 2", "catalogue_ref": "CMP.ZINC"},
+    {"id": "L35", "item": "Lead content of the herbal capsules (state drug analyst)", "category": "product", "code": null, "value": 40657.71, "unit": "ppm", "ref_range": "permissible limit 10", "flag": "H", "day": null, "note": "Not a patient test: released when the product is sent for analysis. Permissible limit as given by the article (API).", "source_locator": "Table 2 and Treatment", "released_by": ["ACT.TEST_PRODUCT"]},
+
+    {"id": "O01", "item": "Haemoglobin at discharge (outcome)", "code": null, "value": 10.1, "unit": "g/dL", "ref_range": "12-14", "flag": "L", "day": null, "release": "never", "note": "Outcome for the debrief. No catalogue link: the discharge day is not reported, and a day-null link would answer every Hb request in the admission.", "source_locator": "Treatment"},
+    {"id": "O02", "item": "Blood and urine lead after six weeks of oral chelation (outcome)", "code": null, "value": "Both down to normal levels (values not reported)", "unit": "", "ref_range": "", "day": null, "release": "never", "source_locator": "Outcome and follow-up"},
+    {"id": "O03", "item": "Peripheral blood film at follow-up (outcome)", "code": null, "value": "Mild normocytic normochromic anaemia only", "unit": "", "ref_range": "", "day": null, "release": "never", "source_locator": "Outcome and follow-up"}
+  ],
+
+  "raw_material": [
+    {"id": "R01", "test": "Peripheral blood film", "release": "service.pathology", "day": 0, "findings": "Normocytic normochromic anaemia. Coarse basophilic stippling of red cells. Normoblasts present. Polychromasia.", "media": ["M01"], "note": "The article says a 'careful examination' of the film revealed these features; the pathologist co-author examined it. Whether a routine first look missed the stippling is not stated. The film is taken as the admission sample (day 0).", "source_locator": "Treatment, Figure 1", "test_item_id": "LAB.HAEM.FILM"},
+    {"id": "R02", "test": "Bone marrow aspirate", "release": "service.pathology", "day": null, "findings": "Erythroid hyperplasia.", "media": [], "note": "The article's marrow report impression (an interpretation, not raw material): possible acquired sideroblastic anaemia from drug-induced lead or zinc poisoning, or possible myelodysplastic syndrome with ring sideroblasts. Cellularity, dysplasia and karyotype not reported (gap G16).", "source_locator": "Treatment", "test_item_id": "PROC.BM.ASPIRATE"},
+    {"id": "R03", "test": "Bone marrow iron stain (Perls' Prussian blue)", "release": "service.pathology", "day": null, "findings": "Many ring sideroblasts.", "media": ["M02"], "note": "Percentage of ring sideroblasts and iron stores not reported (gap G16).", "source_locator": "Treatment, Figure 2", "test_item_id": "LAB.BM.IRON_STAIN"},
+    {"id": "R04", "test": "Ultrasound abdomen", "release": "service.radiology", "day": null, "findings": "No abnormality.", "media": [], "note": "Undated in the article; reported in the Treatment section.", "source_locator": "Treatment", "test_item_id": "IMG.US.ABDOMEN"}
+  ],
+
+  "media": [
+    {"id": "M01", "figure": "Figure 1", "specimen": "Peripheral blood film", "stain": "not stated (Romanowsky type)", "redacted_caption": "Peripheral blood film.", "licence": "CC BY 4.0", "production_ok": false, "public_release_ok": false, "has_annotations": false, "file_path": "PMC11227049/F1.jpg", "raw_fact_id": "R01", "note": "Source file EDM23-0066fig1.jpg; not downloaded, so annotations are not checked. Original caption: 'Peripheral blood smear.'"},
+    {"id": "M02", "figure": "Figure 2", "specimen": "Bone marrow aspirate", "stain": "Perls' Prussian blue (iron)", "redacted_caption": "Bone marrow aspirate, Perls' Prussian blue stain.", "licence": "CC BY 4.0", "production_ok": false, "public_release_ok": false, "has_annotations": false, "file_path": "PMC11227049/F2.jpg", "raw_fact_id": "R03", "note": "Source file EDM23-0066fig2.jpg; not downloaded, so annotations are not checked. Original caption ('Ring sideroblast.') names the finding, so it is redacted."}
+  ],
+
+  "ground_truth": {
+    "final_dx": {
+      "id": "DX.LEAD_POISONING",
+      "ids": ["DX.LEAD_POISONING", "DX.AYURVEDIC_METAL_TOXICITY"],
+      "text": "Lead poisoning from an Ayurvedic herbal diabetes capsule bought online, presenting with abdominal pain, anorexia and fatigue, and anaemia with coarse basophilic stippling and ring sideroblasts",
+      "icd10": ["T56.0", "D64.2"],
+      "accepted_synonyms": ["lead poisoning", "lead toxicity", "plumbism", "saturnism", "lead intoxication", "heavy-metal (lead) poisoning", "Ayurvedic lead poisoning"],
+      "secondary_findings": [
+        "Acquired sideroblastic anaemia from lead (ring sideroblasts), with a reticulocytosis",
+        "Raised transaminases and alkaline phosphatase, not explained in the article",
+        "Poorly controlled type 2 diabetes (HbA1c 9%) after stopping metformin",
+        "Hypothyroidism, controlled on thyroxine"
+      ]
+    },
+    "accepted_differential": [
+      "Myelodysplastic syndrome with ring sideroblasts",
+      "Other acquired sideroblastic anaemia (alcohol, drugs such as isoniazid, copper deficiency or zinc excess)",
+      "Haemolytic anaemia (reticulocytosis, mildly raised unconjugated bilirubin)",
+      "Thalassaemia trait (basophilic stippling, low-normal MCH)",
+      "Arsenic or mercury toxicity from a traditional remedy",
+      "Acute porphyria (abdominal pain)",
+      "Drug- or herb-induced liver injury",
+      "Nutritional deficiency anaemia (B12 or folate; tongue desquamation)"
+    ],
+    "red_herrings": ["desquamation of the tongue and oral mucosa", "raised transaminases and alkaline phosphatase", "HbA1c 9%", "hypothyroidism", "high serum iron with low TIBC", "reticulocytosis suggesting haemolysis", "marrow report raising myelodysplastic syndrome", "metformin stopped two months earlier"],
+    "key_discriminators": ["coarse basophilic stippling on the film", "ring sideroblasts in the marrow", "herbal diabetes capsules bought online", "blood lead 121.20 ug/dL", "random urine lead 400.2", "capsule lead 40657.71 ppm"],
+    "treatment_given": "The herbal medicine was stopped. Chelation with dimercaprol (BAL), then oral d-penicillamine for six weeks. The capsules were sent to the state drug analyst (lead 40657.71 ppm against a permissible 10 ppm).",
+    "outcome": "Symptomatic improvement; haemoglobin 10.1 g/dL at discharge. After six weeks of d-penicillamine, blood and urine lead had fallen to normal and the film showed only a mild normocytic normochromic anaemia.",
+    "rubric": {
+      "5": "Lead poisoning, with the herbal diabetes capsules identified as the source",
+      "4": "Lead poisoning, source not identified",
+      "3": "Heavy-metal poisoning from a traditional remedy without naming lead, or toxic sideroblastic anaemia without naming lead",
+      "2": "Myelodysplastic syndrome with ring sideroblasts, haemolytic anaemia, thalassaemia trait or nutritional anaemia as the final diagnosis",
+      "1": "Unrelated diagnosis, or one that would lead to harm"
+    },
+    "must_do": [
+      "Ask specifically about herbal, Ayurvedic or other traditional medicines and remedies bought online, especially for her diabetes",
+      "Have the peripheral blood film examined carefully for basophilic stippling",
+      "Measure venous blood lead",
+      "Stop the exposure (the capsules) before or alongside chelation",
+      "Chelate (symptomatic adult, blood lead about 121 ug/dL), with toxicology or senior advice",
+      "Send the product for analysis and report it to the drug regulator or public health",
+      "Restart effective treatment for her diabetes",
+      "Plan a repeat blood lead after chelation"
+    ],
+    "must_not_do": [
+      "Label myelodysplastic syndrome with ring sideroblasts before excluding reversible causes such as lead, alcohol, drugs and copper deficiency",
+      "Chelate while the exposure continues",
+      "Give iron therapy (serum iron and ferritin are not low)",
+      "Attribute the anaemia to diabetes or hypothyroidism without investigating it"
+    ],
+    "teaching_points": [
+      "Herbal and Ayurvedic remedies, including products sold online, can contain toxic amounts of lead",
+      "Patients may not volunteer remedies they have stopped or do not regard as medicines; ask specifically",
+      "Coarse basophilic stippling with ring sideroblasts points to lead before a marrow diagnosis of myelodysplasia"
+    ]
+  },
+
+  "gaps": [
+    {"id": "G01", "item": "Vital sign values", "guidance": "Article: within normal limits. Temperature normal; heart rate upper normal (anaemia); blood pressure normal; respiratory rate and SpO2 normal.", "review_required": true},
+    {"id": "G02", "item": "Red cell count and MCV", "guidance": "Not reported. Must agree with Hb 7.5 g/dL, Hct 23.1% and MCH 25.7 pg: red cell count about 2.9 x10^12/L and MCV about 79-80 fL. The article calls the anaemia normocytic, so the MCV sits at the lower limit; Atul to set.", "review_required": true},
+    {"id": "G03", "item": "Absolute reticulocyte count", "guidance": "Not reported. With 7.94% and a red cell count of about 2.9 x10^12/L, about 230 x10^9/L.", "review_required": true},
+    {"id": "G04", "item": "Differential white cell counts", "guidance": "Article: differential count normal. Normal neutrophil, lymphocyte, monocyte, eosinophil and basophil counts summing to 6.31 x10^3/uL.", "review_required": false},
+    {"id": "G05", "item": "Gums (lead line)", "guidance": "Not described. No lead line: do not invent a pathognomonic sign the article does not report.", "review_required": true},
+    {"id": "G06", "item": "Neurological detail (wrist drop, neuropathy, cognition)", "guidance": "Article: systemic examination normal. No wrist or foot drop; reflexes and sensation normal (diabetes of unknown duration: ankle reflexes may be reduced; Atul to decide).", "review_required": true},
+    {"id": "G07", "item": "Reason for stopping metformin", "guidance": "Not reported. The likely story is that she replaced it with the herbal capsules; the answer to a question about stopping metformin must not reveal the capsules unless supplements or remedies are asked about (judgement call).", "review_required": true},
+    {"id": "G08", "item": "Occupation, home, cookware, cosmetics and other exposures", "guidance": "Not reported. No occupational or hobby lead exposure; no other household member unwell; no other traditional preparations.", "review_required": true},
+    {"id": "G09", "item": "Haemolysis screen (LDH, haptoglobin, DAT)", "guidance": "Not reported. Reticulocytes 7.94% and bilirubin 1.4 mg/dL (direct 0.1) suggest mild haemolysis: LDH mildly raised; haptoglobin low-normal; DAT negative.", "review_required": true},
+    {"id": "G10", "item": "Vitamin B12 and folate", "guidance": "Not reported; players will ask because of the tongue desquamation and metformin use. Normal (B12 may be low-normal after long metformin use).", "review_required": true},
+    {"id": "G11", "item": "Zinc protoporphyrin", "guidance": "Not reported. Raised.", "review_required": true},
+    {"id": "G12", "item": "Urine delta-aminolaevulinic acid and porphobilinogen", "guidance": "Not reported. ALA raised; porphobilinogen normal or only mildly raised, not in the acute porphyria range.", "review_required": true},
+    {"id": "G13", "item": "Haemoglobin HPLC", "guidance": "Not reported. Normal; no thalassaemia trait.", "review_required": false},
+    {"id": "G14", "item": "Viral hepatitis markers, GGT and coagulation", "guidance": "Not reported, although AST 139 and ALT 146 U/L invite them. HBsAg, anti-HCV, hepatitis A and E IgM negative; GGT mildly raised; PT/INR normal.", "review_required": true},
+    {"id": "G15", "item": "Urinalysis", "guidance": "Not reported. Glucose trace or negative (random glucose 137 mg/dL); no protein; no haemoglobin.", "review_required": false},
+    {"id": "G16", "item": "Bone marrow cellularity, dysplasia, percentage of ring sideroblasts, iron stores, karyotype", "guidance": "Not reported beyond erythroid hyperplasia and many ring sideroblasts. Atul sets the percentage; mild dyserythropoiesis only; iron stores present; normal karyotype.", "review_required": true},
+    {"id": "G17", "item": "Blood or urine mercury and arsenic", "guidance": "Not tested in the patient; the capsules were tested for lead only. Do not auto-generate: Atul sets these values.", "review_required": true, "auto_generate": false},
+    {"id": "G18", "item": "Upper GI endoscopy", "guidance": "Not reported. Normal or non-specific findings.", "review_required": true},
+    {"id": "G19", "item": "Urate, calcium, chest X-ray and ECG", "guidance": "Not reported. Normal.", "review_required": false},
+    {"id": "G20", "item": "Timing after admission", "guidance": "The article dates nothing after admission. The film review, marrow, disclosure, lead levels and imaging are available whenever ordered during the admission (day null); the length of stay is not reported.", "review_required": true}
+  ]
+}

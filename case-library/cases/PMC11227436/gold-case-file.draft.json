@@ -1,0 +1,802 @@
+{
+  "_status_note": "DRAFT gold case file for PMC11227436 (Case Library task L1.3, curation steps 1-5). The Case Reviewer (Dr Atul Tiwari) must verify every fact against the article before it is frozen as PMC11227436@v1. Values are transcribed as printed in the article (French-style units: g/dL, /mm3, PT as a percentage); unit conversion waits for the pilot review. Items under 'gaps' are NOT article facts. Path analysis and affected values wait for the pilot review.",
+  "schema_version": "0.3",
+  "case_id": "PMC11227436",
+  "version": 1,
+  "status": "draft",
+  "case": {
+    "slug": "c-k15e5",
+    "display_title": "Diarrhoea, weight loss and a very low blood count",
+    "display_tags": [
+      "haematology",
+      "gastroenterology",
+      "internal medicine"
+    ],
+    "specialty": "haematology",
+    "difficulty": "intermediate",
+    "lab_profile": {
+      "sex": "F",
+      "age_years": 53,
+      "note": "The article's own ranges, in the article's own units (Table 1).",
+      "components": {
+        "CMP.HB": {
+          "low": 12,
+          "high": 16,
+          "unit": "g/dL"
+        },
+        "CMP.PLT": {
+          "low": 150000,
+          "high": 450000,
+          "unit": "/mm3"
+        },
+        "CMP.NEUT": {
+          "low": 1500,
+          "high": 8000,
+          "unit": "/mm3"
+        },
+        "CMP.MCV": {
+          "low": 80,
+          "high": 100,
+          "unit": "fL"
+        },
+        "CMP.PT": {
+          "low": 70,
+          "high": 100,
+          "unit": "%"
+        },
+        "CMP.HAPTOGLOBIN": {
+          "low": 30,
+          "high": 200,
+          "unit": "mg/dL"
+        },
+        "CMP.LDH": {
+          "low": 120,
+          "high": 240,
+          "unit": "IU/L"
+        },
+        "CMP.B12": {
+          "low": 200,
+          "high": 900,
+          "unit": "pg/mL"
+        }
+      }
+    }
+  },
+  "source": {
+    "title": "Pseudomicroangiopathic Thrombotic Syndrome: Unveiling the Vitamin B12 Deficiency Connection",
+    "authors": [
+      "Samia Sabri",
+      "Zahida Aqodad",
+      "Habiba Alaoui",
+      "Houda Bachir",
+      "Siham Hamaz",
+      "Khalid Serraj"
+    ],
+    "affiliations": [
+      "Department of Internal Medicine, Immuno-Hematology and Cellular Therapy Laboratory, Faculty of Medicine and Pharmacy, University Hospital Mohammed VI, Mohammed First University, Oujda, Morocco"
+    ],
+    "journal": "Cureus",
+    "volume": "16",
+    "issue": "6",
+    "article_number": "e61787",
+    "published": "2024-06-06",
+    "doi": "10.7759/cureus.61787",
+    "pmid": "38975473",
+    "pmcid": "PMC11227436",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11227436/",
+    "licence": "CC BY 4.0",
+    "production_ok": true,
+    "public_release_ok": true,
+    "licence_verified": "2026-09-25 from the <license> element of the cached JATS XML (https://creativecommons.org/licenses/by/4.0/; PMC license-ref CC BY). Figures carry no separate credit line in the XML.",
+    "attribution": "Adapted from Sabri S, Aqodad Z, Alaoui H, Bachir H, Hamaz S, Serraj K. Pseudomicroangiopathic Thrombotic Syndrome: Unveiling the Vitamin B12 Deficiency Connection. Cureus 16(6): e61787 (2024). doi:10.7759/cureus.61787. Licensed CC BY 4.0. Restructured into a simulation; diagnosis hidden until the debrief; simulated findings added where marked."
+  },
+  "clock": {
+    "day_0": null,
+    "day_0_label": "Admission to the emergency department",
+    "semantics": "Integer day relative to admission. The article gives no calendar dates. day = null means the fact is valid at any point in the admission (the article gives no day). The treatment course is dated from the start of replacement, not from admission."
+  },
+  "vignette": "A 53-year-old woman with no significant past medical history presents to the emergency department with watery diarrhoea for 10 days and significant weight loss.",
+  "opening_statement_lay": "I've had watery diarrhoea for about ten days now, and I've lost a lot of weight.",
+  "facts": [
+    {
+      "id": "H01",
+      "category": "history",
+      "item": "Age and sex",
+      "release_text": "53-year-old woman.",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "vignette",
+      "source_locator": "Case presentation",
+      "released_by": []
+    },
+    {
+      "id": "H02",
+      "category": "history",
+      "item": "Presenting complaint",
+      "release_text": "Watery diarrhoea for 10 days.",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "vignette",
+      "source_locator": "Case presentation",
+      "released_by": [
+        "HX.PC.ONSET_DURATION",
+        "HX.GI.BOWEL_HABIT"
+      ]
+    },
+    {
+      "id": "H03",
+      "category": "history",
+      "item": "Weight loss",
+      "release_text": "Significant weight loss. Amount and period not recorded.",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "vignette",
+      "source_locator": "Case presentation",
+      "released_by": [
+        "HX.GEN.FEVER_SWEATS_WEIGHT",
+        "HX.PC.ASSOCIATED"
+      ]
+    },
+    {
+      "id": "H04",
+      "category": "history",
+      "item": "Past medical history",
+      "release_text": "No significant past medical history.",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "vignette",
+      "source_locator": "Case presentation",
+      "released_by": [
+        "HX.PMH.MEDICAL",
+        "HX.PMH.CHRONIC_CONDITIONS"
+      ]
+    },
+    {
+      "id": "H05",
+      "category": "history",
+      "item": "Character of the diarrhoea",
+      "release_text": "Liquid stools without blood or mucus.",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "chart",
+      "source_locator": "Case presentation",
+      "released_by": [
+        "HX.GI.BOWEL_HABIT",
+        "HX.GI.BLEEDING"
+      ]
+    },
+    {
+      "id": "H06",
+      "category": "history",
+      "item": "Tiredness",
+      "release_text": "Marked weakness and tiredness (asthenia).",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "chart",
+      "source_locator": "Case presentation",
+      "released_by": [
+        "HX.GEN.FATIGUE",
+        "HX.PC.ASSOCIATED"
+      ]
+    },
+    {
+      "id": "H07",
+      "category": "history",
+      "item": "Bleeding",
+      "release_text": "No bleeding.",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "chart",
+      "source_locator": "Case presentation",
+      "released_by": [
+        "HX.GEN.BRUISING_BLEEDING"
+      ],
+      "note": "The article reports no haemorrhage on examination; the reviewer should confirm this may also be given as a history answer."
+    },
+    {
+      "id": "E01",
+      "category": "exam",
+      "item": "Haemodynamics",
+      "release_text": "Haemodynamically stable.",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "chart",
+      "source_locator": "Case presentation",
+      "released_by": [
+        "EX.GEN.VITALS",
+        "EX.CVS.PULSE"
+      ]
+    },
+    {
+      "id": "E02",
+      "category": "exam",
+      "item": "General appearance",
+      "release_text": "Appears weak and tired (asthenic).",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "chart",
+      "source_locator": "Case presentation",
+      "released_by": [
+        "EX.GEN.APPEARANCE"
+      ]
+    },
+    {
+      "id": "E03",
+      "category": "exam",
+      "item": "Jaundice",
+      "release_text": "Noticeable jaundice.",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "chart",
+      "source_locator": "Case presentation",
+      "released_by": [
+        "EX.GEN.JAUNDICE"
+      ]
+    },
+    {
+      "id": "E04",
+      "category": "exam",
+      "item": "Lymph nodes, liver and spleen",
+      "release_text": "No lymphadenopathy, hepatomegaly or splenomegaly (no tumour syndrome).",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "chart",
+      "source_locator": "Case presentation",
+      "released_by": [
+        "EX.GEN.LYMPH_NODES",
+        "EX.ABD.LIVER_SPLEEN"
+      ]
+    },
+    {
+      "id": "E05",
+      "category": "exam",
+      "item": "Signs of bleeding",
+      "release_text": "No signs of haemorrhage.",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "chart",
+      "source_locator": "Case presentation",
+      "released_by": [
+        "EX.SKIN.PURPURA"
+      ]
+    },
+    {
+      "id": "E06",
+      "category": "exam",
+      "item": "Neurological examination",
+      "release_text": "No neurological impairment.",
+      "day": 0,
+      "kind": "raw",
+      "reveals_dx": false,
+      "release": "chart",
+      "source_locator": "Case presentation (text after Table 1)",
+      "released_by": [
+        "EX.NEURO.MOTOR",
+        "EX.NEURO.REFLEXES_SENSATION",
+        "EX.GEN.CONSCIOUSNESS"
+      ]
+    }
+  ],
+  "series": [],
+  "single_results": [
+    {
+      "id": "L01",
+      "item": "Haemoglobin",
+      "code": null,
+      "value": 5.1,
+      "unit": "g/dL",
+      "ref_range": "12-16",
+      "day": 0,
+      "source_locator": "Table 1",
+      "catalogue_ref": "CMP.HB",
+      "flag": "L"
+    },
+    {
+      "id": "L02",
+      "item": "Platelet count",
+      "code": null,
+      "value": 62000,
+      "unit": "/mm3",
+      "ref_range": "150,000-450,000",
+      "day": 0,
+      "source_locator": "Table 1",
+      "catalogue_ref": "CMP.PLT",
+      "flag": "L"
+    },
+    {
+      "id": "L03",
+      "item": "Neutrophil count",
+      "code": null,
+      "value": 1050,
+      "unit": "/mm3",
+      "ref_range": "1,500-8,000",
+      "day": 0,
+      "source_locator": "Table 1",
+      "catalogue_ref": "CMP.NEUT",
+      "flag": "L"
+    },
+    {
+      "id": "L04",
+      "item": "Mean corpuscular volume",
+      "code": null,
+      "value": 113,
+      "unit": "fL",
+      "ref_range": "80-100",
+      "day": 0,
+      "source_locator": "Table 1",
+      "catalogue_ref": "CMP.MCV",
+      "flag": "H"
+    },
+    {
+      "id": "L05",
+      "item": "Reticulocyte count (absolute)",
+      "code": null,
+      "value": 92000,
+      "unit": "/mm3",
+      "ref_range": ">120,000",
+      "day": 0,
+      "source_locator": "Table 1",
+      "catalogue_ref": "CMP.RETIC_ABS",
+      "flag": "L",
+      "note": "The article's 'normal range' of >120,000/mm3 is the usual threshold for a regenerative response, not a reference interval."
+    },
+    {
+      "id": "L06",
+      "item": "Prothrombin time (activity)",
+      "code": null,
+      "value": 44,
+      "unit": "%",
+      "ref_range": "70-100",
+      "day": 0,
+      "source_locator": "Table 1",
+      "catalogue_ref": "CMP.PT",
+      "flag": "L",
+      "note": "Reported as prothrombin activity in %, not seconds. The catalogue has no PT-activity component; linked to CMP.PT pending review."
+    },
+    {
+      "id": "L07",
+      "item": "Urea (renal function)",
+      "code": null,
+      "value": "Normal",
+      "unit": "",
+      "ref_range": "Normal",
+      "day": 0,
+      "source_locator": "Table 1 (from 'Renal function: Normal')",
+      "catalogue_ref": "CMP.UREA"
+    },
+    {
+      "id": "L07b",
+      "item": "Creatinine (renal function)",
+      "code": null,
+      "value": "Normal",
+      "unit": "",
+      "ref_range": "Normal",
+      "day": 0,
+      "source_locator": "Table 1 (from 'Renal function: Normal')",
+      "catalogue_ref": "CMP.CREATININE"
+    },
+    {
+      "id": "L08",
+      "item": "Haptoglobin",
+      "code": null,
+      "value": "Decreased",
+      "unit": "",
+      "ref_range": "30-200 mg/dL",
+      "day": 0,
+      "source_locator": "Table 1",
+      "catalogue_ref": "CMP.HAPTOGLOBIN",
+      "flag": "L"
+    },
+    {
+      "id": "L09",
+      "item": "Free (unconjugated) bilirubin",
+      "code": null,
+      "value": 31,
+      "unit": "umol/L",
+      "ref_range": "0-20",
+      "day": 0,
+      "source_locator": "Table 1",
+      "catalogue_ref": null,
+      "flag": "H",
+      "note": "The article prints 'mmol/L'; umol/L assumed. The catalogue has no unconjugated bilirubin component."
+    },
+    {
+      "id": "L10",
+      "item": "Lactate dehydrogenase",
+      "code": null,
+      "value": 1466,
+      "unit": "IU/L",
+      "ref_range": "120-240",
+      "day": 0,
+      "source_locator": "Table 1",
+      "catalogue_ref": "CMP.LDH",
+      "flag": "H"
+    },
+    {
+      "id": "L11",
+      "item": "Schistocytes",
+      "code": null,
+      "value": 2.3,
+      "unit": "%",
+      "ref_range": "0",
+      "day": 0,
+      "source_locator": "Table 1",
+      "catalogue_ref": null,
+      "flag": "H",
+      "note": "The catalogue has no numeric schistocyte component; also given to the Pathology Service in R01."
+    },
+    {
+      "id": "L12",
+      "item": "Direct antiglobulin test, IgG",
+      "code": null,
+      "value": "Positive (IgG)",
+      "unit": "",
+      "ref_range": "Negative",
+      "day": 0,
+      "source_locator": "Table 1 (from 'Direct Coombs Test')",
+      "catalogue_ref": "CMP.DAT_IGG"
+    },
+    {
+      "id": "L13",
+      "item": "Vitamin B12",
+      "code": null,
+      "value": 50,
+      "unit": "pg/mL",
+      "ref_range": "200-900",
+      "day": 0,
+      "source_locator": "Table 1",
+      "catalogue_ref": "CMP.B12",
+      "flag": "L",
+      "pivotal": true
+    },
+    {
+      "id": "L14",
+      "item": "Anti-gastric parietal cell antibodies",
+      "code": null,
+      "value": "Positive",
+      "unit": "",
+      "ref_range": "Not detected",
+      "day": null,
+      "source_locator": "Case presentation (text after Table 1)",
+      "catalogue_ref": "CMP.ANTI_GPC",
+      "note": "The article says these antibodies, with gastroscopy, 'confirmed' the diagnosis but gives no titre or method; positive is inferred.",
+      "pivotal": true
+    }
+  ],
+  "raw_material": [
+    {
+      "id": "R01",
+      "test": "Peripheral blood film",
+      "release": "service.pathology",
+      "day": 0,
+      "findings": "Schistocytes 2.3% of red cells.",
+      "media": [],
+      "note": "The article reports only the schistocyte count. Other film features are gap G07.",
+      "source_locator": "Table 1 and text",
+      "test_item_id": "LAB.HAEM.FILM"
+    },
+    {
+      "id": "R02",
+      "test": "Bone marrow examination (H&E as captioned)",
+      "release": "service.pathology",
+      "day": null,
+      "findings": "Marked hypercellularity with increased erythroblasts. Megaloblasts with fine chromatin and prominent nucleoli.",
+      "media": [
+        "M01",
+        "M02"
+      ],
+      "note": "The caption says H&E, which suggests a trephine or clot section rather than an aspirate smear; linked to the aspirate pending review.",
+      "source_locator": "Text and Figure 1",
+      "test_item_id": "PROC.BM.ASPIRATE"
+    },
+    {
+      "id": "R03",
+      "test": "Upper GI endoscopy with gastric biopsies",
+      "release": "service.pathology",
+      "day": null,
+      "findings": "Biopsies: atrophy of the fundic mucosa. Intestinal metaplasia.",
+      "media": [
+        "M03",
+        "M04"
+      ],
+      "note": "The article does not describe the endoscopic appearance. The catalogue has no separate gastric biopsy histology item; linked to the endoscopy.",
+      "source_locator": "Text and Figure 2",
+      "test_item_id": "PROC.ENDO.OGD"
+    }
+  ],
+  "media": [
+    {
+      "id": "M01",
+      "figure": "Figure 1A",
+      "specimen": "Bone marrow",
+      "stain": "H&E, x100",
+      "redacted_caption": "Bone marrow, H&E, low power.",
+      "licence": "CC BY 4.0",
+      "production_ok": false,
+      "public_release_ok": false,
+      "has_annotations": true,
+      "file_path": "PMC11227436/F1.jpg",
+      "raw_fact_id": "R02"
+    },
+    {
+      "id": "M02",
+      "figure": "Figure 1B",
+      "specimen": "Bone marrow",
+      "stain": "H&E, x400",
+      "redacted_caption": "Bone marrow, H&E, high power.",
+      "licence": "CC BY 4.0",
+      "production_ok": false,
+      "public_release_ok": false,
+      "has_annotations": true,
+      "file_path": "PMC11227436/F1.jpg",
+      "raw_fact_id": "R02"
+    },
+    {
+      "id": "M03",
+      "figure": "Figure 2A",
+      "specimen": "Gastric biopsy (fundus)",
+      "stain": "H&E",
+      "redacted_caption": "Gastric fundic biopsy.",
+      "licence": "CC BY 4.0",
+      "production_ok": false,
+      "public_release_ok": false,
+      "has_annotations": true,
+      "file_path": "PMC11227436/F2.jpg",
+      "raw_fact_id": "R03"
+    },
+    {
+      "id": "M04",
+      "figure": "Figure 2B-C",
+      "specimen": "Gastric biopsy",
+      "stain": "H&E",
+      "redacted_caption": "Gastric biopsy, two further fields.",
+      "licence": "CC BY 4.0",
+      "production_ok": false,
+      "public_release_ok": false,
+      "has_annotations": true,
+      "file_path": "PMC11227436/F2.jpg",
+      "raw_fact_id": "R03"
+    }
+  ],
+  "ground_truth": {
+    "final_dx": {
+      "id": "DX.PERNICIOUS_ANAEMIA",
+      "text": "Pernicious anaemia (autoimmune atrophic gastritis) with severe vitamin B12 deficiency, presenting as pancytopenia with haemolysis and schistocytes that mimicked a thrombotic microangiopathy (pseudo-TMA)",
+      "icd10": [
+        "D51.0"
+      ],
+      "accepted_synonyms": [
+        "pernicious anaemia",
+        "pernicious anemia",
+        "Biermer's disease",
+        "Biermer disease",
+        "Addisonian anaemia",
+        "Addison-Biermer anaemia",
+        "autoimmune atrophic gastritis with vitamin B12 deficiency"
+      ],
+      "leak_terms": [
+        "vitamin B12 deficiency",
+        "B12 deficiency",
+        "cobalamin deficiency",
+        "pseudo-TMA",
+        "pseudo-thrombotic microangiopathy",
+        "pseudomicroangiopathy",
+        "megaloblastic anaemia",
+        "megaloblastic anemia"
+      ]
+    },
+    "secondary_findings": [
+      "IgG-positive direct antiglobulin test, which the authors discuss as possibly dysimmune and associated with pernicious anaemia; no autoimmune haemolytic anaemia treatment was needed",
+      "Prothrombin activity 44%, not explained in the article",
+      "Watery diarrhoea resolving with B12 replacement alone"
+    ],
+    "accepted_differential": [
+      "Thrombotic thrombocytopenic purpura",
+      "Haemolytic uraemic syndrome, including STEC-HUS given the diarrhoea",
+      "Other microangiopathic haemolytic anaemia",
+      "Warm autoimmune haemolytic anaemia or Evans syndrome (IgG-positive DAT)",
+      "Folate deficiency",
+      "Myelodysplastic neoplasm",
+      "Other causes of pancytopenia: marrow infiltration, aplastic anaemia, HIV",
+      "Malabsorption (coeliac disease) with nutritional deficiency"
+    ],
+    "red_herrings": [
+      "schistocytes 2.3%",
+      "thrombocytopenia with haemolysis",
+      "IgG-positive direct antiglobulin test",
+      "LDH 1,466 IU/L",
+      "diarrhoea (suggests STEC-HUS)",
+      "prothrombin activity 44%"
+    ],
+    "key_discriminators": [
+      "MCV 113 fL",
+      "inappropriately low reticulocytes (92,000/mm3) despite haemolysis",
+      "neutropenia as well (pancytopenia)",
+      "normal renal function and no neurological impairment",
+      "PLASMIC score 4 (low risk of severe ADAMTS13 deficiency)",
+      "vitamin B12 50 pg/mL",
+      "megaloblastic erythropoiesis in the marrow",
+      "anti-parietal cell antibodies",
+      "fundic atrophy with intestinal metaplasia on gastric biopsy"
+    ],
+    "treatment_given": "Vitamin B12 replacement (route, dose and schedule not reported). No plasma exchange.",
+    "outcome": "Rapid improvement: diarrhoea resolved by day 4 and a reticulocyte response by day 7 of replacement, without other treatment. Follow-up values not reported.",
+    "must_do": [
+      "Measure vitamin B12 and folate (before any transfusion) in macrocytic pancytopenia",
+      "Assess the pre-test probability of TTP (for example the PLASMIC score) and send ADAMTS13 if TTP remains possible",
+      "Recognise that a low reticulocyte count with haemolysis points to ineffective erythropoiesis",
+      "Replace vitamin B12 parenterally",
+      "Find the cause: intrinsic factor and parietal cell antibodies, and gastroscopy with biopsies",
+      "Confirm the response: reticulocytes within about a week, then the blood count"
+    ],
+    "must_not_do": [
+      "Start plasma exchange for presumed TTP without weighing B12 deficiency and the PLASMIC score",
+      "Treat as autoimmune haemolytic anaemia with steroids on the IgG DAT alone",
+      "Give folic acid alone before B12 replacement"
+    ]
+  },
+  "gaps": [
+    {
+      "id": "G01",
+      "item": "Vital signs",
+      "guidance": "Article says 'stable haemodynamics'. Afebrile; heart rate mildly raised from anaemia; blood pressure normal; SpO2 normal.",
+      "review_required": true
+    },
+    {
+      "id": "G02",
+      "item": "Weight loss details",
+      "guidance": "Amount and period not reported. Reviewer sets a plausible figure (for example 6-8 kg over two to three months).",
+      "review_required": true
+    },
+    {
+      "id": "G03",
+      "item": "Abdominal examination",
+      "guidance": "Soft, non-tender or mildly tender abdomen; no masses; no organomegaly (article: no tumour syndrome).",
+      "review_required": true
+    },
+    {
+      "id": "G04",
+      "item": "Detailed neurological examination",
+      "guidance": "Article: no neurological impairment. Vibration sense, proprioception, reflexes and cognition normal. Do not invent posterior column signs.",
+      "review_required": true
+    },
+    {
+      "id": "G05",
+      "item": "Tongue and mouth",
+      "guidance": "Not reported. Reviewer decides: normal, or a smooth red tongue.",
+      "review_required": true
+    },
+    {
+      "id": "G06",
+      "item": "Rest of the blood count",
+      "guidance": "White cell count low-normal or low, consistent with neutrophils 1,050/mm3; lymphocytes normal; RDW raised; red cell count consistent with Hb 5.1 g/dL and MCV 113 fL.",
+      "review_required": true
+    },
+    {
+      "id": "G07",
+      "item": "Other blood film features",
+      "guidance": "Macro-ovalocytes, anisopoikilocytosis and hypersegmented neutrophils; polychromasia scanty; schistocytes as reported (2.3%); no blasts.",
+      "review_required": true
+    },
+    {
+      "id": "G08",
+      "item": "Renal profile and electrolytes (numbers)",
+      "guidance": "Article: renal function normal. Urea and creatinine within range; potassium normal or low-normal (diarrhoea).",
+      "review_required": false
+    },
+    {
+      "id": "G09",
+      "item": "Liver function (total and conjugated bilirubin, enzymes)",
+      "guidance": "Total bilirubin raised, mostly unconjugated (free bilirubin 31 umol/L); AST mildly raised; ALT, ALP and GGT normal; albumin low-normal.",
+      "review_required": true
+    },
+    {
+      "id": "G10",
+      "item": "INR, APTT, fibrinogen, D-dimer",
+      "guidance": "Consistent with prothrombin activity 44% (INR about 1.6-1.8). APTT normal or mildly prolonged; fibrinogen normal (no DIC).",
+      "review_required": true
+    },
+    {
+      "id": "G11",
+      "item": "ADAMTS13 activity",
+      "guidance": "Not reported. If ordered: not severely deficient (well above 10%). The catalogue has no ADAMTS13 item yet.",
+      "review_required": true
+    },
+    {
+      "id": "G12",
+      "item": "Folate, iron studies and ferritin",
+      "guidance": "Folate normal; ferritin normal or raised; transferrin saturation normal or raised.",
+      "review_required": true
+    },
+    {
+      "id": "G13",
+      "item": "Intrinsic factor antibodies",
+      "guidance": "Not reported. Reviewer sets (positive supports the diagnosis; negative does not exclude it).",
+      "review_required": true
+    },
+    {
+      "id": "G14",
+      "item": "Gastrin, pepsinogen, homocysteine, methylmalonic acid",
+      "guidance": "Not in the catalogue. If added: gastrin raised, pepsinogen I low, homocysteine and MMA raised.",
+      "review_required": true
+    },
+    {
+      "id": "G15",
+      "item": "Endoscopic appearance",
+      "guidance": "Not described. Pale, thin fundic mucosa with visible vessels; antrum spared.",
+      "review_required": true
+    },
+    {
+      "id": "G16",
+      "item": "Stool tests",
+      "guidance": "Culture, C. difficile toxin and ova and parasites negative.",
+      "review_required": false
+    },
+    {
+      "id": "G17",
+      "item": "Abdominal ultrasound",
+      "guidance": "No hepatosplenomegaly, mass or biliary dilatation.",
+      "review_required": true
+    },
+    {
+      "id": "G18",
+      "item": "HIV and viral hepatitis serology",
+      "guidance": "Negative.",
+      "review_required": false
+    },
+    {
+      "id": "G19",
+      "item": "DAT C3d, eluate and antibody screen",
+      "guidance": "C3d negative; antibody screen negative. Eluate reviewer-set.",
+      "review_required": true
+    },
+    {
+      "id": "G20",
+      "item": "Thyroid function and anti-TPO",
+      "guidance": "TSH normal; anti-TPO reviewer-set (autoimmune thyroid disease often goes with this condition).",
+      "review_required": true
+    },
+    {
+      "id": "G21",
+      "item": "Diet, alcohol and medicines",
+      "guidance": "Mixed diet; no alcohol; no metformin, proton-pump inhibitor or nitrous oxide. General answers only, no diagnosis-specific negatives.",
+      "review_required": true
+    },
+    {
+      "id": "G22",
+      "item": "Family history",
+      "guidance": "No known blood or autoimmune disease in the family, unless the reviewer decides otherwise.",
+      "review_required": true
+    },
+    {
+      "id": "G23",
+      "item": "Urinalysis",
+      "guidance": "Urobilinogen raised; no haemoglobinuria, proteinuria or haematuria.",
+      "review_required": true
+    },
+    {
+      "id": "G24",
+      "item": "Bone marrow details: iron stain, trephine, karyotype",
+      "guidance": "Iron stores present, no ring sideroblasts; karyotype normal; no infiltrate.",
+      "review_required": true
+    },
+    {
+      "id": "G25",
+      "item": "Blood counts after treatment",
+      "guidance": "Article: reticulocyte response by day 7 of replacement, no numbers. Reviewer sets values if a follow-up count is modelled.",
+      "review_required": true
+    }
+  ]
+}
