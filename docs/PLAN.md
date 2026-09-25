@@ -10,7 +10,8 @@ Each part has its own PLAN. This file holds the umbrella tasks and the order in 
   - Accept: `gh repo view` reports visibility `PRIVATE`; `main` is level with `origin/main`; no tracked file matches `.gitignore` (`git ls-files -ci --exclude-standard` prints nothing); the scan found no secret.
   - Depends on: S-005.
 
-- [ ] **U0.1 Monorepo scaffold**
+- [x] **U0.1 Monorepo scaffold**
+  - Done 25 Sep 2026: root pnpm workspace, `.pre-commit-config.yaml` (changelog guard, gitleaks, file checks) and the `contract` workflow; on a fresh clone `pnpm install` and `pre-commit run --all-files` pass, the hook blocked a schema commit without a changelog, and probe PR #2 failed the contract workflow (closed unmerged).
   - Build: on the branch `umbrella/U0.1-monorepo-scaffold`: a root `package.json` and `pnpm-workspace.yaml` listing `nidana/apps/*`, `nidana/packages/*` and `case-library/studio`; a root `.pre-commit-config.yaml` with the changelog guard, a secret scanner and basic file checks (large files, merge-conflict markers); a contract workflow in `.github/workflows/` that runs the changelog guard now and gains the bundle checks once the schema and exports exist (`docs/REPOSITORY.md`). Each part's first build task (Case Library L0.1, Nidana N1.1, Sambhasha P0.1) adds that part's project files, its hooks in the root pre-commit config and its own workflow.
   - Accept: on a fresh clone, `pnpm install` and `pre-commit run --all-files` succeed; a commit that changes a file under `case-library/schemas/` or `case-library/catalogue/` without changing `docs/CHANGELOG.md` is blocked by the hook, and a pull request with such a change fails the contract workflow.
   - Depends on: U0.0. Do this before any part's first build task.
