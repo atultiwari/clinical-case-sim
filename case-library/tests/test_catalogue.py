@@ -97,6 +97,7 @@ def test_wrong_header_is_reported(cat_dir: Path) -> None:
         ("findings.csv", "FND.COARSE_BASOPHILIC_STIPPLING", {"shown_by": "LAB.NOPE"}, "LAB.NOPE"),
         ("normal_templates.csv", "EX.ORAL.GUMS", {"template": ""}, "template"),
         ("normal_templates.csv", "EX.ORAL.GUMS", {"item_id": "LAB.HAEM.CBC"}, "template"),
+        ("normal_templates.csv", "EX.ORAL.GUMS", {"review_status": "ok"}, "review_status"),
         ("value_rules.csv", "R.MCH", {"kind": "product"}, "kind"),
         ("value_rules.csv", "R.MCH", {"inputs": "CMP.HB"}, "inputs"),
         ("value_rules.csv", "R.MCH", {"target": "CMP.NOPE"}, "CMP.NOPE"),

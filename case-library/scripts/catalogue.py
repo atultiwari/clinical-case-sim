@@ -66,7 +66,7 @@ FILES: Mapping[str, tuple[str, ...]] = {
     "referrals.csv": ITEM_COLUMNS,
     "diagnoses.csv": (*ITEM_COLUMNS, "icd11", "icd10", "codes_verified"),
     "findings.csv": (*ITEM_COLUMNS, "shown_by"),
-    "normal_templates.csv": ("item_id", "template"),
+    "normal_templates.csv": ("item_id", "template", "review_status"),
     "value_rules.csv": ("id", "kind", "target", "inputs", "factor", "tolerance_pct", "formula"),
 }
 # The catalogue_item kind of each item file.
@@ -202,7 +202,11 @@ def build_document(catalogue: Catalogue, version: int) -> dict[str, Any]:
         "components": sorted(components, key=lambda c: c["id"]),
         "normal_templates": sorted(
             (
-                {"item_id": r["item_id"], "template": r["template"]}
+                {
+                    "item_id": r["item_id"],
+                    "template": r["template"],
+                    "review_status": r["review_status"],
+                }
                 for r in catalogue.rows("normal_templates.csv")
             ),
             key=lambda t: t["item_id"],

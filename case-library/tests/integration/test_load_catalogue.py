@@ -80,25 +80,36 @@ def test_the_generator_reads_the_loaded_ranges(db: psycopg.Connection) -> None:
 
 def test_loading_twice_changes_nothing(db: psycopg.Connection) -> None:
     _load(db, _doc())
-    db.execute("update casevault.normal_template set review_status = 'approved'")
     before = db.execute("select * from casevault.catalogue_item order by id").fetchall()
     _load(db, _doc(version=1))
     after = db.execute("select * from casevault.catalogue_item order by id").fetchall()
     assert before == after  # since_version stays at the version an item joined in
-    assert (
-        _scalar(
-            db, "select count(*) from casevault.normal_template where review_status = 'approved'"
-        )
-        == 4
+
+
+def test_the_csv_review_status_is_loaded(db: psycopg.Connection) -> None:
+    doc = _doc()
+    doc["normal_templates"] = [
+        {**t, "review_status": "approved"} if t["item_id"] == "EX.ORAL.GUMS" else t
+        for t in doc["normal_templates"]
+    ]
+    _load(db, doc)
+    statuses: dict[str, str] = dict(
+        db.execute("select item_id, review_status from casevault.normal_template").fetchall()
     )
+    assert statuses["EX.ORAL.GUMS"] == "approved"
+    assert statuses["REF.TOXICOLOGY"] == "pending"
 
 
-def test_a_changed_template_goes_back_to_review(db: psycopg.Connection) -> None:
+def test_without_a_status_a_changed_template_goes_back_to_review(
+    db: psycopg.Connection,
+) -> None:
     _load(db, _doc())
     db.execute("update casevault.normal_template set review_status = 'approved'")
     doc = _doc(version=1)
     doc["normal_templates"] = [
-        {**t, "template": "Gums healthy."} if t["item_id"] == "EX.ORAL.GUMS" else t
+        {"item_id": t["item_id"], "template": "Gums healthy."}
+        if t["item_id"] == "EX.ORAL.GUMS"
+        else {"item_id": t["item_id"], "template": t["template"]}
         for t in doc["normal_templates"]
     ]
     _load(db, doc)

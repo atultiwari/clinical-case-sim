@@ -4,6 +4,17 @@ Every change to the shared contract (S-004) gets an entry here, newest first. Ea
 
 Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
+## 2026-09-25: catalogue v1 (in review, Case Library L0.5)
+
+- `case-library/catalogue/normal_templates.csv` gains a `review_status` column (`pending` or `approved`); the Case Vault loader takes it from the CSV, and the normal generator uses approved templates only.
+- Test prices carry their source: `CGHS 2025, Tier I NABH (OM 03.10.2025)` where a CGHS rate matches, `reviewer` where Atul set it, and `estimate` otherwise. Sambhasha's `prices_inr.yaml` and `turnaround.yaml` are generated from these.
+- The rest of v1 (reference ranges, normal texts, prices, turnaround, diagnosis codes) is Atul's review; this entry is completed when his decisions are applied.
+
+Acknowledgements:
+
+- [ ] Nidana: pin catalogue v1 once it is recorded here.
+- [ ] Sambhasha: generate `configs/prices_inr.yaml` and `configs/turnaround.yaml` from the catalogue v1 export.
+
 ## 2026-09-25: bundle schema 0.3 and catalogue v0 (planned)
 
 - Bundle schema 0.3, defined in `case-library/docs/SPEC.md` §10. It extends Sambhasha's schema 0.2 with catalogue links, origins, ledger tiers, report variants with provisional or final status, consult notes, licence flags, the case laboratory profile and gaps.

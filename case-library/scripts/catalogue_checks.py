@@ -33,6 +33,7 @@ RULE_INPUTS: Mapping[str, Callable[[int], bool]] = {
     "sum_equals": lambda n: n >= 2,
 }
 TEMPLATE_KINDS = frozenset({"history", "exam", "referral"})
+TEMPLATE_STATUSES = frozenset({"pending", "approved"})
 ICD10 = re.compile(r"^[A-Z][0-9]{2}(\.[0-9A-Z]{1,2})?$")
 ICD11 = re.compile(r"^[0-9A-Z]{4}(\.[0-9A-Z]{1,2})?([&/][0-9A-Z.&/]+)?$")
 MIN_SYNONYMS = 2
@@ -114,8 +115,9 @@ def _check_tests(catalogue: "Catalogue") -> Iterator[str]:
             yield f"{test_id}: route {row['route']!r} is not one of {sorted(ROUTES)}"
         if not _is_number(row["price_inr"]) or float(row["price_inr"]) < 0:
             yield f"{test_id}: price_inr {row['price_inr']!r} is not a price"
-        if row["price_source"] != "estimate" and not row["price_source"].startswith("CGHS"):
-            yield f"{test_id}: price_source must be 'estimate' or start with 'CGHS'"
+        source = row["price_source"]
+        if source not in {"estimate", "reviewer"} and not source.startswith("CGHS"):
+            yield f"{test_id}: price_source must be 'estimate', 'reviewer' or start with 'CGHS'"
         if not _is_whole(row["tat_minutes"]):
             yield f"{test_id}: tat_minutes {row['tat_minutes']!r} is not a whole number"
         if row["invasive"] not in BOOLEANS:
@@ -221,6 +223,8 @@ def _check_templates(catalogue: "Catalogue") -> Iterator[str]:
             yield f"{row['item_id']}: a normal template needs a history, exam or referral item"
         if not row["template"]:
             yield f"{row['item_id']}: the normal template is empty"
+        if row["review_status"] not in TEMPLATE_STATUSES:
+            yield f"{row['item_id']}: template review_status must be pending or approved"
     for item_id, kind in kinds.items():
         if kind in TEMPLATE_KINDS and templates[item_id] != 1:
             yield f"{item_id}: needs exactly one normal template (has {templates[item_id]})"

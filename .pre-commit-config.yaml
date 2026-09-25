@@ -70,6 +70,6 @@ repos:
         name: "Case Library: mypy"
         files: ^case-library/(scripts|tests)/.*\.py$
         args: [--config-file=case-library/pyproject.toml]
-        additional_dependencies: ["psycopg[binary]==3.3.6", "pytest==9.1.1"]
+        additional_dependencies: ["psycopg[binary]==3.3.6", "pytest==9.1.1", "types-openpyxl==3.1.5.20260827"]
   # --- Nidana hooks (added by N1.1) ---
   # --- Sambhasha hooks (added by P0.1) ---
