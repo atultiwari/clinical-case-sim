@@ -86,9 +86,10 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
   - Note (2026-09-25): a separate session added `casevault.placeholder_scan` (migration `20260925165040_casevault_placeholder_scan`, applied to the Case Vault with Atul's approval; pull request #14): step 10 and `export_blockers` now refuse placeholder text and authoring notes in anything a player sees. On the pilot it finds nothing. Security advisors clean.
   - Depends on: L0.7, L0.9.
 
-- [ ] **L0.11 Freeze and export**
+- [x] **L0.11 Freeze and export** (done 2026-09-25: frozen on Atul's word; bundle `PMC12949993@v1.r1` exported; not yet published)
   - Build: if catalogue v1 (L0.5) changed anything the pilot uses, re-run the resolution for those items and review the changed rows. Then, on Atul's word, freeze `PMC12949993@v1`, export bundle `PMC12949993@v1.r1` to `exports/` with its `.sha256` file, and mark it published for development.
   - Accept: coverage is 100% against catalogue v1; a second export gives byte-identical output; frozen rows cannot be changed; the bundle validates against `schemas/case-bundle.v0.3.schema.json`. Milestone LM0.
+  - Note (2026-09-25): Atul said "freeze". Catalogue v1 was already in the Case Vault before the pilot was imported, so nothing needed re-resolving. Frozen through the MCP at 17:02:51 UTC with `frozen_hash` = SHA-256 of `casevault.bundle_rows(id)::text` at the moment of freezing (`9ef2486f…bdba20`); a test update on a pilot fact was refused ("case version PMC12949993@v1 is frozen"). Exported with `scripts/export_bundle.py` through the `studio_reader` login (`--env-file studio/.env.local`): `exports/PMC12949993@v1.r1.json`, 379,427 bytes, SHA-256 `9cde1628d9d654b3028632cfae5f74c0614026774f46883f747f7eed5dcb6ca8`; a second export was byte-identical; the bundle has every field the schema requires, at the top level and in every row. The hash is recorded in `casevault.bundle` (catalogue version 1). **Not published:** marking it published for development needs Atul's word "publish". The pilot was approved in bulk, not item by item (L0.10), so it must not count in a study's primary results until reviewed. Milestone LM0 reached, apart from the publish step.
   - Depends on: L0.5, L0.10.
 
 ---

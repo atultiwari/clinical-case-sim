@@ -45,11 +45,15 @@ repos:
       - id: check-toml
       - id: check-executables-have-shebangs
       - id: check-shebang-scripts-are-executable
+      # Exported bundles are hashed byte for byte (Case Library SPEC §7.5); never rewrite them.
       - id: end-of-file-fixer
+        exclude: ^case-library/exports/
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
+        exclude: ^case-library/exports/
       - id: mixed-line-ending
         args: [--fix=lf]
+        exclude: ^case-library/exports/
 
   # --- Case Library hooks (added by L0.1) ---
   # Versions match the exact pins in case-library/pyproject.toml; ruff and mypy read their
