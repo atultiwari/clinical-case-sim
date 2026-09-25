@@ -1,5 +1,10 @@
 {
+  "disableClaudeAiConnectors": true,
   "permissions": {
-    "deny": ["mcp__supabase", "mcp__claude_ai_Supabase", "mcp__bbfedc9b-cd23-4ebf-9705-6fa0acc5a3fc"]
+    "deny": [
+      "mcp__supabase",
+      "mcp__claude_ai_Supabase",
+      "mcp__bbfedc9b-cd23-4ebf-9705-6fa0acc5a3fc"
+    ]
   }
 }

@@ -57,6 +57,13 @@ def test_account_level_connector_is_denied(part: str) -> None:
     assert deny >= ACCOUNT_CONNECTORS
 
 
+@pytest.mark.parametrize("part", ["case-library", "nidana", "sambhasha"])
+def test_claude_ai_connectors_are_not_fetched(part: str) -> None:
+    # Hides them in terminal and IDE sessions; the desktop app delivers connectors itself,
+    # so there only the deny rules above apply.
+    assert _read_json(UMBRELLA / part / ".claude" / "settings.json")["disableClaudeAiConnectors"]
+
+
 @pytest.mark.parametrize("part", ["nidana", "sambhasha"])
 def test_other_parts_have_no_supabase_tools(part: str) -> None:
     deny = set(_read_json(UMBRELLA / part / ".claude" / "settings.json")["permissions"]["deny"])
