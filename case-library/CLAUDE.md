@@ -64,7 +64,7 @@ Run these from `case-library/`:
 uv run pytest                                            # scripts and SQL tests
 supabase start && supabase db reset                      # local database with all migrations
 uv run python scripts/review_pack.py build <batch>
-uv run python scripts/export_bundle.py PMC12949993@v1
+uv run --env-file .env python -m scripts.export_bundle PMC12949993@v1 --catalogue-version 1
 pnpm --filter @case-library/studio dev                   # the Case Studio, locally
 ```
 

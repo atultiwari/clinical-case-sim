@@ -517,6 +517,18 @@ casevault.missing_request(id bigserial pk, created_at timestamptz, source text, 
 - `nulls not distinct` (Postgres 15 and later; Supabase runs 17) makes the one-live-row rule hold for rows whose `day_bucket` is null.
 - Case Vault functions: `import_case_json`, `compute_derived`, `resolve_normals`, `check_consistency`, `leak_scan`, `coverage_report` and `export_bundle`.
 
+Details settled in L0.3 (migrations in `supabase/migrations/`):
+
+- Schema 0.2 columns carry forward: `fact.release_condition` (jsonb) and `source_article.url`. `source_article.attribution` holds the attribution line copied into bundles.
+- `casevault.value_rule(id, kind, target, inputs, factor, tolerance_pct, formula)` holds the formulas (`ratio`, `difference`) and physiology checks (`not_above`, `sum_equals`). Its rows name component ids, so they load with the catalogue (L0.4).
+- `case.lab_profile` is `{"sex": "F", "age_years": 49, "components": {"CMP.HB": {"low": 115, "high": 165, "unit": "g/L"}}}`. The normal generator uses the case's own range for a component first, then the catalogue's range for the patient's sex and age.
+- The days an engine can request run from 0 to the last article day of the case. Coverage asks for every one of them.
+- The normal generator leaves anything on a path, and anything a formula produces, to other steps. It calculates formula targets from that day's values; a value calculated from `affected` inputs is itself `affected`, with the formula as its rationale.
+- `check_consistency` also reports a `normal` row outside the patient's range (`range`), so a value that belongs on a path cannot pass as normal.
+- A referral resolves through a consult note whose `specialty` is the `REF.*` id; an interpretive test resolves through a report with its `test_item_id`.
+- `export_blockers(case version)` lists every reason a version cannot be exported yet. `export_bundle(case version, revision, catalogue version)` takes the revision explicitly, so the same inputs always give the same bundle; it drops curation provenance (generator, rationale, review fields) from every row.
+- Bundle files are written by `python -m scripts.export_bundle`; the RFC 8785 serializer is `scripts/jcs.py` (no added dependency).
+
 ### 10.3 Mapping from earlier designs
 
 | HemoSim entity | Sambhasha schema 0.2 | Case Library schema 0.3 |

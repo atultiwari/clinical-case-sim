@@ -11,7 +11,7 @@ Install the GitHub CLI and sign in to GitHub once, in the Terminal app:
 
 ## First session (once): umbrella tasks U0.0 and U0.1
 
-Start Claude Code in the `Clinical-Case-Sim` folder (in Terminal: `cd ~/Downloads/Research_Projects/Clinical-Case-Sim` and then `claude`; in the desktop app, choose that folder) and paste:
+Start Claude Code in the `Clinical-Case-Sim` folder (in Terminal: `cd ~/Projects/research/Clinical-Case-Sim` and then `claude`; in the desktop app, choose that folder) and paste:
 
 ```text
 This is the first Claude Code session for Clinical-Case-Sim. It is umbrella work at the root folder: repository set-up (see "Where to start a session" in CLAUDE.md).

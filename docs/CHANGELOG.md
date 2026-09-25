@@ -11,6 +11,7 @@ Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 - Licence flags `production_ok` and `public_release_ok`, on every case and separately on every figure (S-006).
 - Condition vocabulary for rubric anchors, must-do and must-not-do, including `finding_released` (Case Library SPEC §10.4).
 - A bundle's SHA-256 is the hash of the exported file's bytes, kept in a `.sha256` file beside it (Case Library SPEC §10.5).
+- Added in Case Library L0.3 (same version, still planned): the machine-readable schema `case-library/schemas/case-bundle.v0.3.schema.json`. It carries forward schema 0.2's `release_condition` on facts and `url` on the source, fixes the shape of `case.lab_profile`, and leaves curation provenance (generator, rationale, review fields) out of bundles (Case Library SPEC §10.2).
 
 Acknowledgements:
 
