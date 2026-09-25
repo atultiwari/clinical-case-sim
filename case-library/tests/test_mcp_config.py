@@ -1,19 +1,31 @@
-"""Checks the Case Vault MCP set-up (PLAN L0.2, SPEC §4.1 and §4.2)."""
+"""Checks the Case Vault connector set-up (PLAN L0.2, SPEC §4.1 and §4.2)."""
 
 import json
+import subprocess
 from pathlib import Path
 from typing import Any
-from urllib.parse import parse_qs, urlsplit
 
 import pytest
 
 CASE_LIBRARY = Path(__file__).resolve().parents[1]
 UMBRELLA = CASE_LIBRARY.parent
 CASE_VAULT_REF = "vxiymbaxsiavxuyxzhnt"
-MCP_FEATURES = {"database", "debugging", "development", "docs"}
+GUARD_HOOK = CASE_LIBRARY / ".claude" / "hooks" / "case-vault-only.sh"
 # The account-level Supabase connector, as the Claude Code CLI and the desktop app name it.
 ACCOUNT_CONNECTORS = {"mcp__claude_ai_Supabase", "mcp__bbfedc9b-cd23-4ebf-9705-6fa0acc5a3fc"}
-WRITE_TOOLS = {"mcp__supabase__execute_sql", "mcp__supabase__apply_migration"}
+WRITE_TOOLS = {"execute_sql", "apply_migration"}
+ACCOUNT_TOOLS = {
+    "create_project",
+    "pause_project",
+    "restore_project",
+    "confirm_cost",
+    "create_branch",
+    "delete_branch",
+    "merge_branch",
+    "reset_branch",
+    "rebase_branch",
+    "deploy_edge_function",
+}
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -21,43 +33,71 @@ def _read_json(path: Path) -> dict[str, Any]:
     return data
 
 
-def _supabase_query() -> dict[str, list[str]]:
-    server = _read_json(CASE_LIBRARY / ".mcp.json")["mcpServers"]["supabase"]
-    url = urlsplit(server["url"])
-    assert server["type"] == "http"
-    assert (url.scheme, url.netloc, url.path) == ("https", "mcp.supabase.com", "/mcp")
-    return parse_qs(url.query)
+def _case_library_settings() -> dict[str, Any]:
+    return _read_json(CASE_LIBRARY / ".claude" / "settings.json")
 
 
-def test_mcp_is_scoped_to_the_case_vault_project() -> None:
-    assert _supabase_query()["project_ref"] == [CASE_VAULT_REF]
+def _run_guard(tool_input: dict[str, Any]) -> subprocess.CompletedProcess[str]:
+    payload = json.dumps(
+        {"tool_name": "mcp__claude_ai_Supabase__execute_sql", "tool_input": tool_input}
+    )
+    return subprocess.run(
+        [str(GUARD_HOOK)], input=payload, capture_output=True, text=True, check=False
+    )
 
 
-def test_mcp_enables_only_the_agreed_features() -> None:
-    assert set(_supabase_query()["features"][0].split(",")) == MCP_FEATURES
+def test_case_library_has_no_project_scoped_server() -> None:
+    assert not (CASE_LIBRARY / ".mcp.json").exists()
 
 
-def test_mcp_json_declares_only_the_supabase_server() -> None:
-    assert list(_read_json(CASE_LIBRARY / ".mcp.json")["mcpServers"]) == ["supabase"]
+@pytest.mark.parametrize("connector", sorted(ACCOUNT_CONNECTORS))
+def test_case_library_keeps_manual_approval_for_writes(connector: str) -> None:
+    permissions = _case_library_settings()["permissions"]
+    writes = {f"{connector}__{tool}" for tool in WRITE_TOOLS}
+
+    assert set(permissions["ask"]) >= writes
+    assert not set(permissions.get("allow", [])) & (writes | {connector, f"{connector}__*"})
 
 
-def test_case_library_keeps_manual_approval_for_writes() -> None:
-    permissions = _read_json(CASE_LIBRARY / ".claude" / "settings.json")["permissions"]
+@pytest.mark.parametrize("connector", sorted(ACCOUNT_CONNECTORS))
+def test_case_library_denies_account_tools(connector: str) -> None:
+    deny = set(_case_library_settings()["permissions"]["deny"])
 
-    allow = set(permissions.get("allow", []))
-
-    assert set(permissions["ask"]) >= WRITE_TOOLS
-    assert not allow & (WRITE_TOOLS | {"mcp__supabase", "mcp__supabase__*"})
+    assert deny >= {f"{connector}__{tool}" for tool in ACCOUNT_TOOLS}
+    assert connector not in deny
 
 
-@pytest.mark.parametrize("part", ["case-library", "nidana", "sambhasha"])
+@pytest.mark.parametrize("connector", sorted(ACCOUNT_CONNECTORS))
+def test_guard_hook_covers_the_connector(connector: str) -> None:
+    [entry] = _case_library_settings()["hooks"]["PreToolUse"]
+
+    assert f"{connector}__.*" in entry["matcher"].split("|")
+    assert entry["hooks"][0]["command"].endswith("/.claude/hooks/case-vault-only.sh")
+
+
+def test_guard_allows_the_case_vault() -> None:
+    assert _run_guard({"project_id": CASE_VAULT_REF}).returncode == 0
+
+
+def test_guard_allows_calls_without_a_project() -> None:
+    assert _run_guard({}).returncode == 0
+
+
+def test_guard_blocks_another_project() -> None:
+    result = _run_guard({"project_id": "someotherproject"})
+
+    assert result.returncode == 2
+    assert "someotherproject" in result.stderr
+
+
+@pytest.mark.parametrize("part", ["nidana", "sambhasha"])
 def test_account_level_connector_is_denied(part: str) -> None:
     deny = set(_read_json(UMBRELLA / part / ".claude" / "settings.json")["permissions"]["deny"])
 
     assert deny >= ACCOUNT_CONNECTORS
 
 
-@pytest.mark.parametrize("part", ["case-library", "nidana", "sambhasha"])
+@pytest.mark.parametrize("part", ["nidana", "sambhasha"])
 def test_claude_ai_connectors_are_not_fetched(part: str) -> None:
     # Hides them in terminal and IDE sessions; the desktop app delivers connectors itself,
     # so there only the deny rules above apply.
