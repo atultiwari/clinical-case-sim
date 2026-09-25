@@ -825,274 +825,22 @@
   "confidence": 0.6
  },
  {
-  "target": "CMP.INR",
-  "day_bucket": 1,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 4.62,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 4.62 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 2,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 6.35,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 6.35 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 3,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 3.88,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 3.88 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 4,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 3.21,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 3.21 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 5,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 3.54,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 3.54 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 6,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 2.87,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 2.87 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 7,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 3.02,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 3.02 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 8,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 2.66,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 2.66 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 9,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 2.79,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 2.79 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 10,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 2.48,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 2.48 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 11,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 2.57,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 2.57 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 12,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 2.31,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 2.31 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 13,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 2.42,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 2.42 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.INR",
-  "day_bucket": 14,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 2.19,
-   "unit": "ratio",
-   "ref_range": "0.8-1.2",
-   "flag": "H"
-  },
-  "release_text": "International normalised ratio 2.19 ratio (0.8-1.2), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 (not readable by the curator) holds the in-hospital values. The text fixes the shape: unmeasurable on admission, better after the third 10 mg dose, higher again before the fourth (48 h), then an uneven fall to 2.04 at discharge on daily 10 mg doses.",
-  "confidence": 0.4
- },
- {
   "target": "CMP.PT",
   "day_bucket": 1,
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 44.0,
+   "value": 73.7,
    "unit": "s",
    "ref_range": "11.0-14.0",
    "flag": "H"
   },
-  "release_text": "Prothrombin time 44.0 s (11.0-14.0), high.",
+  "release_text": "Prothrombin time 73.7 s (11.0-14.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "From the day's INR (4.62) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
+  "rationale": "From the day's INR in Figure 2 (8.57) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.PT",
@@ -1100,17 +848,17 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 57.4,
+   "value": 33.9,
    "unit": "s",
    "ref_range": "11.0-14.0",
    "flag": "H"
   },
-  "release_text": "Prothrombin time 57.4 s (11.0-14.0), high.",
+  "release_text": "Prothrombin time 33.9 s (11.0-14.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "From the day's INR (6.35) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
+  "rationale": "From the day's INR in Figure 2 (3.37) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.PT",
@@ -1118,17 +866,17 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 38.1,
+   "value": 57.1,
    "unit": "s",
    "ref_range": "11.0-14.0",
    "flag": "H"
   },
-  "release_text": "Prothrombin time 38.1 s (11.0-14.0), high.",
+  "release_text": "Prothrombin time 57.1 s (11.0-14.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "From the day's INR (3.88) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
+  "rationale": "From the day's INR in Figure 2 (6.31) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.PT",
@@ -1136,17 +884,17 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 32.5,
+   "value": 33.1,
    "unit": "s",
    "ref_range": "11.0-14.0",
    "flag": "H"
   },
-  "release_text": "Prothrombin time 32.5 s (11.0-14.0), high.",
+  "release_text": "Prothrombin time 33.1 s (11.0-14.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "From the day's INR (3.21) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
+  "rationale": "From the day's INR in Figure 2 (3.28) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.PT",
@@ -1154,17 +902,17 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 35.3,
+   "value": 63.1,
    "unit": "s",
    "ref_range": "11.0-14.0",
    "flag": "H"
   },
-  "release_text": "Prothrombin time 35.3 s (11.0-14.0), high.",
+  "release_text": "Prothrombin time 63.1 s (11.0-14.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "From the day's INR (3.54) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
+  "rationale": "From the day's INR in Figure 2 (7.11) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.PT",
@@ -1172,17 +920,17 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 29.6,
+   "value": 26.5,
    "unit": "s",
    "ref_range": "11.0-14.0",
    "flag": "H"
   },
-  "release_text": "Prothrombin time 29.6 s (11.0-14.0), high.",
+  "release_text": "Prothrombin time 26.5 s (11.0-14.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "From the day's INR (2.87) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
+  "rationale": "From the day's INR in Figure 2 (2.51) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.PT",
@@ -1190,17 +938,17 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 30.9,
+   "value": 25.2,
    "unit": "s",
    "ref_range": "11.0-14.0",
    "flag": "H"
   },
-  "release_text": "Prothrombin time 30.9 s (11.0-14.0), high.",
+  "release_text": "Prothrombin time 25.2 s (11.0-14.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "From the day's INR (3.02) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
+  "rationale": "From the day's INR in Figure 2 (2.37) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.PT",
@@ -1208,17 +956,17 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 27.8,
+   "value": 24.4,
    "unit": "s",
    "ref_range": "11.0-14.0",
    "flag": "H"
   },
-  "release_text": "Prothrombin time 27.8 s (11.0-14.0), high.",
+  "release_text": "Prothrombin time 24.4 s (11.0-14.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "From the day's INR (2.66) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
+  "rationale": "From the day's INR in Figure 2 (2.27) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.PT",
@@ -1226,17 +974,17 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 28.9,
+   "value": 22.2,
    "unit": "s",
    "ref_range": "11.0-14.0",
    "flag": "H"
   },
-  "release_text": "Prothrombin time 28.9 s (11.0-14.0), high.",
+  "release_text": "Prothrombin time 22.2 s (11.0-14.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "From the day's INR (2.79) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
+  "rationale": "From the day's INR in Figure 2 (2.03) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.PT",
@@ -1244,93 +992,21 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 26.2,
+   "value": 21.1,
    "unit": "s",
    "ref_range": "11.0-14.0",
    "flag": "H"
   },
-  "release_text": "Prothrombin time 26.2 s (11.0-14.0), high.",
+  "release_text": "Prothrombin time 21.1 s (11.0-14.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "From the day's INR (2.48) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
+  "rationale": "From the day's INR in Figure 2 (1.91) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.PT",
   "day_bucket": 11,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 27.0,
-   "unit": "s",
-   "ref_range": "11.0-14.0",
-   "flag": "H"
-  },
-  "release_text": "Prothrombin time 27.0 s (11.0-14.0), high.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": false,
-  "rationale": "From the day's INR (2.57) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
- },
- {
-  "target": "CMP.PT",
-  "day_bucket": 12,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 24.7,
-   "unit": "s",
-   "ref_range": "11.0-14.0",
-   "flag": "H"
-  },
-  "release_text": "Prothrombin time 24.7 s (11.0-14.0), high.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": false,
-  "rationale": "From the day's INR (2.31) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
- },
- {
-  "target": "CMP.PT",
-  "day_bucket": 13,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 25.7,
-   "unit": "s",
-   "ref_range": "11.0-14.0",
-   "flag": "H"
-  },
-  "release_text": "Prothrombin time 25.7 s (11.0-14.0), high.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": false,
-  "rationale": "From the day's INR (2.42) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
- },
- {
-  "target": "CMP.PT",
-  "day_bucket": 14,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 23.6,
-   "unit": "s",
-   "ref_range": "11.0-14.0",
-   "flag": "H"
-  },
-  "release_text": "Prothrombin time 23.6 s (11.0-14.0), high.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": false,
-  "rationale": "From the day's INR (2.19) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
- },
- {
-  "target": "CMP.PT",
-  "day_bucket": 15,
   "tier": "affected",
   "gap_id": "G01",
   "value": {
@@ -1343,8 +1019,8 @@
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "From the day's INR (2.04) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
-  "confidence": 0.45
+  "rationale": "From the day's INR in Figure 2 (2.04) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.APTT",
@@ -1352,16 +1028,16 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 52.4,
+   "value": 68.5,
    "unit": "s",
    "ref_range": "26.0-36.0",
    "flag": "H"
   },
-  "release_text": "Activated partial thromboplastin time 52.4 s (26.0-36.0), high.",
+  "release_text": "Activated partial thromboplastin time 68.5 s (26.0-36.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
   "confidence": 0.45
  },
  {
@@ -1370,16 +1046,16 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 61.8,
+   "value": 46.2,
    "unit": "s",
    "ref_range": "26.0-36.0",
    "flag": "H"
   },
-  "release_text": "Activated partial thromboplastin time 61.8 s (26.0-36.0), high.",
+  "release_text": "Activated partial thromboplastin time 46.2 s (26.0-36.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
   "confidence": 0.45
  },
  {
@@ -1388,16 +1064,16 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 47.5,
+   "value": 55.8,
    "unit": "s",
    "ref_range": "26.0-36.0",
    "flag": "H"
   },
-  "release_text": "Activated partial thromboplastin time 47.5 s (26.0-36.0), high.",
+  "release_text": "Activated partial thromboplastin time 55.8 s (26.0-36.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
   "confidence": 0.45
  },
  {
@@ -1406,16 +1082,16 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 42.3,
+   "value": 44.0,
    "unit": "s",
    "ref_range": "26.0-36.0",
    "flag": "H"
   },
-  "release_text": "Activated partial thromboplastin time 42.3 s (26.0-36.0), high.",
+  "release_text": "Activated partial thromboplastin time 44.0 s (26.0-36.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
   "confidence": 0.45
  },
  {
@@ -1424,16 +1100,16 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 44.1,
+   "value": 58.3,
    "unit": "s",
    "ref_range": "26.0-36.0",
    "flag": "H"
   },
-  "release_text": "Activated partial thromboplastin time 44.1 s (26.0-36.0), high.",
+  "release_text": "Activated partial thromboplastin time 58.3 s (26.0-36.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
   "confidence": 0.45
  },
  {
@@ -1442,16 +1118,16 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 39.6,
+   "value": 39.8,
    "unit": "s",
    "ref_range": "26.0-36.0",
    "flag": "H"
   },
-  "release_text": "Activated partial thromboplastin time 39.6 s (26.0-36.0), high.",
+  "release_text": "Activated partial thromboplastin time 39.8 s (26.0-36.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
   "confidence": 0.45
  },
  {
@@ -1460,16 +1136,16 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 40.2,
+   "value": 38.2,
    "unit": "s",
    "ref_range": "26.0-36.0",
    "flag": "H"
   },
-  "release_text": "Activated partial thromboplastin time 40.2 s (26.0-36.0), high.",
+  "release_text": "Activated partial thromboplastin time 38.2 s (26.0-36.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
   "confidence": 0.45
  },
  {
@@ -1478,16 +1154,16 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 37.8,
+   "value": 37.1,
    "unit": "s",
    "ref_range": "26.0-36.0",
    "flag": "H"
   },
-  "release_text": "Activated partial thromboplastin time 37.8 s (26.0-36.0), high.",
+  "release_text": "Activated partial thromboplastin time 37.1 s (26.0-36.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
   "confidence": 0.45
  },
  {
@@ -1496,73 +1172,20 @@
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 38.4,
+   "value": 35.6,
    "unit": "s",
-   "ref_range": "26.0-36.0",
-   "flag": "H"
+   "ref_range": "26.0-36.0"
   },
-  "release_text": "Activated partial thromboplastin time 38.4 s (26.0-36.0), high.",
+  "release_text": "Activated partial thromboplastin time 35.6 s (26.0-36.0).",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
   "confidence": 0.45
  },
  {
   "target": "CMP.APTT",
   "day_bucket": 10,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 36.2,
-   "unit": "s",
-   "ref_range": "26.0-36.0",
-   "flag": "H"
-  },
-  "release_text": "Activated partial thromboplastin time 36.2 s (26.0-36.0), high.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
-  "confidence": 0.45
- },
- {
-  "target": "CMP.APTT",
-  "day_bucket": 11,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 35.4,
-   "unit": "s",
-   "ref_range": "26.0-36.0"
-  },
-  "release_text": "Activated partial thromboplastin time 35.4 s (26.0-36.0).",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
-  "confidence": 0.45
- },
- {
-  "target": "CMP.APTT",
-  "day_bucket": 12,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 34.1,
-   "unit": "s",
-   "ref_range": "26.0-36.0"
-  },
-  "release_text": "Activated partial thromboplastin time 34.1 s (26.0-36.0).",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
-  "confidence": 0.45
- },
- {
-  "target": "CMP.APTT",
-  "day_bucket": 13,
   "tier": "affected",
   "gap_id": "G01",
   "value": {
@@ -1574,41 +1197,24 @@
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
   "confidence": 0.45
  },
  {
   "target": "CMP.APTT",
-  "day_bucket": 14,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G01",
   "value": {
-   "value": 33.6,
+   "value": 34.2,
    "unit": "s",
    "ref_range": "26.0-36.0"
   },
-  "release_text": "Activated partial thromboplastin time 33.6 s (26.0-36.0).",
+  "release_text": "Activated partial thromboplastin time 34.2 s (26.0-36.0).",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
-  "confidence": 0.45
- },
- {
-  "target": "CMP.APTT",
-  "day_bucket": 15,
-  "tier": "affected",
-  "gap_id": "G01",
-  "value": {
-   "value": 33.1,
-   "unit": "s",
-   "ref_range": "26.0-36.0"
-  },
-  "release_text": "Activated partial thromboplastin time 33.1 s (26.0-36.0).",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": false,
-  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); falls faster than the INR and follows the same unstable course.",
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
   "confidence": 0.45
  },
  {
@@ -1648,7 +1254,7 @@
  },
  {
   "target": "CMP.FIBRINOGEN",
-  "day_bucket": 14,
+  "day_bucket": 10,
   "tier": "affected",
   "gap_id": null,
   "value": {
@@ -1669,16 +1275,16 @@
   "tier": "affected",
   "gap_id": "G06",
   "value": {
-   "value": 14,
+   "value": 7,
    "unit": "IU/dL",
    "ref_range": "50-150",
    "flag": "L"
   },
-  "release_text": "Factor II activity 14 IU/dL (50-150), low.",
+  "release_text": "Factor II activity 7 IU/dL (50-150), low.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": true,
-  "rationale": "Partial recovery on daily vitamin K, in step with the INR of day 3 (3.88); an INR of 2.5-4 corresponds to activities of roughly 10-35%.",
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 3 (6.31): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
   "confidence": 0.4
  },
  {
@@ -1687,16 +1293,16 @@
   "tier": "affected",
   "gap_id": "G06",
   "value": {
-   "value": 16,
+   "value": 5,
    "unit": "IU/dL",
    "ref_range": "50-150",
    "flag": "L"
   },
-  "release_text": "Factor VII activity 16 IU/dL (50-150), low.",
+  "release_text": "Factor VII activity 5 IU/dL (50-150), low.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": true,
-  "rationale": "Partial recovery on daily vitamin K, in step with the INR of day 3 (3.88); an INR of 2.5-4 corresponds to activities of roughly 10-35%.",
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 3 (6.31): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
   "confidence": 0.4
  },
  {
@@ -1705,16 +1311,16 @@
   "tier": "affected",
   "gap_id": "G06",
   "value": {
-   "value": 17,
+   "value": 9,
    "unit": "IU/dL",
    "ref_range": "50-150",
    "flag": "L"
   },
-  "release_text": "Factor IX activity 17 IU/dL (50-150), low.",
+  "release_text": "Factor IX activity 9 IU/dL (50-150), low.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": true,
-  "rationale": "Partial recovery on daily vitamin K, in step with the INR of day 3 (3.88); an INR of 2.5-4 corresponds to activities of roughly 10-35%.",
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 3 (6.31): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
   "confidence": 0.4
  },
  {
@@ -1723,16 +1329,16 @@
   "tier": "affected",
   "gap_id": "G06",
   "value": {
-   "value": 12,
+   "value": 5,
    "unit": "IU/dL",
    "ref_range": "50-150",
    "flag": "L"
   },
-  "release_text": "Factor X activity 12 IU/dL (50-150), low.",
+  "release_text": "Factor X activity 5 IU/dL (50-150), low.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": true,
-  "rationale": "Partial recovery on daily vitamin K, in step with the INR of day 3 (3.88); an INR of 2.5-4 corresponds to activities of roughly 10-35%.",
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 3 (6.31): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
   "confidence": 0.4
  },
  {
@@ -1741,11 +1347,11 @@
   "tier": "affected",
   "gap_id": "G06",
   "value": {
-   "value": 82,
+   "value": 80,
    "unit": "IU/dL",
    "ref_range": "50-150"
   },
-  "release_text": "Factor V activity 82 IU/dL (50-150).",
+  "release_text": "Factor V activity 80 IU/dL (50-150).",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
@@ -1758,16 +1364,16 @@
   "tier": "affected",
   "gap_id": "G06",
   "value": {
-   "value": 27,
+   "value": 34,
    "unit": "IU/dL",
    "ref_range": "50-150",
    "flag": "L"
   },
-  "release_text": "Factor II activity 27 IU/dL (50-150), low.",
+  "release_text": "Factor II activity 34 IU/dL (50-150), low.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": true,
-  "rationale": "Partial recovery on daily vitamin K, in step with the INR of day 10 (2.48); an INR of 2.5-4 corresponds to activities of roughly 10-35%.",
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 10 (1.91): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
   "confidence": 0.4
  },
  {
@@ -1776,16 +1382,16 @@
   "tier": "affected",
   "gap_id": "G06",
   "value": {
-   "value": 29,
+   "value": 38,
    "unit": "IU/dL",
    "ref_range": "50-150",
    "flag": "L"
   },
-  "release_text": "Factor VII activity 29 IU/dL (50-150), low.",
+  "release_text": "Factor VII activity 38 IU/dL (50-150), low.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": true,
-  "rationale": "Partial recovery on daily vitamin K, in step with the INR of day 10 (2.48); an INR of 2.5-4 corresponds to activities of roughly 10-35%.",
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 10 (1.91): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
   "confidence": 0.4
  },
  {
@@ -1794,16 +1400,16 @@
   "tier": "affected",
   "gap_id": "G06",
   "value": {
-   "value": 33,
+   "value": 40,
    "unit": "IU/dL",
    "ref_range": "50-150",
    "flag": "L"
   },
-  "release_text": "Factor IX activity 33 IU/dL (50-150), low.",
+  "release_text": "Factor IX activity 40 IU/dL (50-150), low.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": true,
-  "rationale": "Partial recovery on daily vitamin K, in step with the INR of day 10 (2.48); an INR of 2.5-4 corresponds to activities of roughly 10-35%.",
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 10 (1.91): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
   "confidence": 0.4
  },
  {
@@ -1812,16 +1418,16 @@
   "tier": "affected",
   "gap_id": "G06",
   "value": {
-   "value": 24,
+   "value": 30,
    "unit": "IU/dL",
    "ref_range": "50-150",
    "flag": "L"
   },
-  "release_text": "Factor X activity 24 IU/dL (50-150), low.",
+  "release_text": "Factor X activity 30 IU/dL (50-150), low.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": true,
-  "rationale": "Partial recovery on daily vitamin K, in step with the INR of day 10 (2.48); an INR of 2.5-4 corresponds to activities of roughly 10-35%.",
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 10 (1.91): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
   "confidence": 0.4
  },
  {
@@ -2415,79 +2021,79 @@
  },
  {
   "target": "CMP.HB",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
-   "value": 89,
+   "value": 85,
    "unit": "g/L",
    "ref_range": "130-180",
    "flag": "L"
   },
-  "release_text": "Haemoglobin 89 g/L (130-180), low.",
+  "release_text": "Haemoglobin 85 g/L (130-180), low.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": true,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {
   "target": "CMP.HCT",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
-   "value": 0.268,
+   "value": 0.256,
    "unit": "L/L",
    "ref_range": "0.4-0.52",
    "flag": "L"
   },
-  "release_text": "Haematocrit 0.27 L/L (0.4-0.52), low.",
+  "release_text": "Haematocrit 0.26 L/L (0.4-0.52), low.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {
   "target": "CMP.RBC",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
-   "value": 3.08,
+   "value": 2.95,
    "unit": "x10^12/L",
    "ref_range": "4.5-5.5",
    "flag": "L"
   },
-  "release_text": "Red cell count 3.08 x10^12/L (4.5-5.5), low.",
+  "release_text": "Red cell count 2.95 x10^12/L (4.5-5.5), low.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {
   "target": "CMP.RDW",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
-   "value": 15.8,
+   "value": 16.0,
    "unit": "%",
    "ref_range": "11.6-14.0",
    "flag": "H"
   },
-  "release_text": "Red cell distribution width 15.8 % (11.6-14.0), high.",
+  "release_text": "Red cell distribution width 16.0 % (11.6-14.0), high.",
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {
   "target": "CMP.WBC",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
@@ -2499,12 +2105,12 @@
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {
   "target": "CMP.NEUT",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
@@ -2516,12 +2122,12 @@
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {
   "target": "CMP.LYMPH",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
@@ -2533,12 +2139,12 @@
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {
   "target": "CMP.MONO",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
@@ -2550,12 +2156,12 @@
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {
   "target": "CMP.EOS",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
@@ -2567,12 +2173,12 @@
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {
   "target": "CMP.BASO",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
@@ -2584,12 +2190,12 @@
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {
   "target": "CMP.NRBC",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
@@ -2601,12 +2207,12 @@
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {
   "target": "CMP.PLT",
-  "day_bucket": 15,
+  "day_bucket": 11,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
@@ -2618,7 +2224,7 @@
   "lay_text": null,
   "priority": "medium",
   "judgement_call": false,
-  "rationale": "Continued recovery by discharge.",
+  "rationale": "Continued recovery by discharge (day 11).",
   "confidence": 0.55
  },
  {

@@ -17,7 +17,7 @@ Jiang L, Chen T, Xu L, Shi M, Huang W. *Paroxysmal nocturnal hemoglobinuria with
 
 A 60-year-old woman had fatigue, anorexia, loose watery stools and dark tea-coloured urine after influenza A in February 2025. Outpatient tests showed mild anaemia, creatinine 123.7 µmol/L, bilirubin 76.4 µmol/L and LDH 1,868 U/L. She was admitted on 11 March. She was afebrile (BP 144/89, HR 86), pale, with mild bilateral pitting oedema. On 12 March her creatinine was 2,065 µmol/L, Hb 69 g/L, LDH 685 U/L and absolute reticulocytes 12.8 ×10⁹/L (low). Urine showed blood 2+ with few red cells. ADAMTS13 was 53.2%, CK 33 U/L, and ANA, anti-dsDNA and ANCA were negative. She was oliguric (200 mL over 13 h), so haemodialysis was started, and she received four units of washed red cells. On 13 March the DAT was positive for IgG and C3d, with no schistocytes on the film. The kidneys were enlarged, and the renal vessels were patent on Doppler. On further questioning she described recurring episodes of dark urine since 2016, each settling in 2–3 days; earlier evaluations had found no cause.
 
-Her urine output recovered and dialysis stopped on 16 March. Her platelets fell to 45 ×10⁹/L by 19 March, and methylprednisolone was started empirically for possible AIHA. The kidney biopsy (18 March, reported 20 March) showed haemoglobin cast nephropathy, tubular haemosiderin on Prussian blue and intrarenal venous thrombi. A leg vein ultrasound found a right iliac vein thrombosis, and a small perirenal haematoma from the biopsy was also seen. Prophylactic LMWH began on 23 March and rivaroxaban on 2 April. **Conventional CD55/CD59 flow cytometry on 24 March was normal.** Bone marrow flow showed partial loss of CD16 on granulocytes and CD14 on monocytes. **High-sensitivity FLAER flow cytometry on 28 March found a granulocyte clone of 98.46% and a red cell clone of 3.06%.** PIGA sequencing found c.548G>A (VAF 3.27%). She had meningococcal vaccination, then eculizumab from 21 April, and steroids were stopped. She went into haematological remission with renal recovery over 7 months.
+Her urine output recovered and dialysis stopped on 16 March. Her platelets fell from 233 to 98 ×10⁹/L by 18 March, and methylprednisolone was started empirically for possible AIHA on 19 March. After LMWH was started the platelets fell again, to a nadir of 45 on 24 and 26 March (Figure 1). The kidney biopsy (18 March, reported 20 March) showed haemoglobin cast nephropathy, tubular haemosiderin on Prussian blue and intrarenal venous thrombi. A leg vein ultrasound found a right iliac vein thrombosis, and a small perirenal haematoma from the biopsy was also seen. Prophylactic LMWH began on 23 March and rivaroxaban on 2 April. **Conventional CD55/CD59 flow cytometry on 24 March was normal.** Bone marrow flow showed partial loss of CD16 on granulocytes and CD14 on monocytes. **High-sensitivity FLAER flow cytometry on 28 March found a granulocyte clone of 98.46% and a red cell clone of 3.06%.** PIGA sequencing found c.548G>A (VAF 3.27%). She had meningococcal vaccination, then eculizumab from 21 April, and steroids were stopped. She went into haematological remission with renal recovery over 7 months.
 
 ## What the players start with
 
@@ -36,10 +36,10 @@ Display title: "Tired and off her food after the flu, with failing kidneys". Tag
 | 1 | DAT IgG and C3d positive; film without schistocytes; kidney ultrasound and renal Doppler (recorded on day 0 for the DAT, see decision 3) |
 | 4 | Urine output 2,300 mL/day; dialysis stopped |
 | 6 | Kidney biopsy (reported day 8) |
-| 7 | Platelet nadir 45; methylprednisolone started |
+| 7 | Methylprednisolone started (platelets 109, Figure 1) |
 | about 9 | Leg ultrasound: right iliac vein thrombosis; small perirenal haematoma |
 | 11 | Prophylactic LMWH |
-| 12 | Conventional CD55/CD59 flow cytometry normal (Table 2) |
+| 12 | Conventional CD55/CD59 flow cytometry normal (Table 2); platelet nadir 45 (Figure 1; again 45 on day 14) |
 | not dated | Bone marrow flow cytometry (R06); PIGA sequencing (L60) |
 | 16 | High-sensitivity FLAER flow cytometry (Table 3). The case's clock ends here |
 | 21, 40 | Rivaroxaban; eculizumab after vaccination (ground truth only) |
@@ -54,12 +54,12 @@ Display title: "Tired and off her food after the flu, with failing kidneys". Tag
 | Conventional flow, day 12 (Table 2) | L40–L43 | 4 |
 | High-sensitivity flow, day 16 (Table 3) | L50, L51 (`reveals_dx`) | 2 |
 | PIGA (undated, `reveals_dx`) | L60 | 1 |
-| Platelet series | S01 (day 0, day 7) | 2 points |
+| Series (Figure 1 read from the image) | S01 platelets (day 0 from Table 1, days 1–14), S02 Hb (days 1–14), S03 creatinine (days 1–14), S04 LDH (days 11–14) | 10 + 9 + 8 + 3 points |
 | Raw material | R01 film, R02 kidney US, R03 renal Doppler, R04 biopsy, R05 leg US, R06 marrow flow, R07 FLAER | 7 |
 | Figures | M01–M08 (F1; F2 A–D; F3; F4 A–B) | 8 |
 | Gaps | G01–G09 | 9 |
 
-In the replay: 63 article facts, 2 derived (MCH 31.4 pg, reticulocytes 0.58%), 240 affected ledger rows (41 judgement calls), 1,616 normal, 1 rule, 0 reviewer; 18 reports (all final), 22 consult notes (7 affected, 15 rule).
+In the replay (26 Sep 2026, after the Figure 1 reading): 91 article facts, 3 derived, 245 affected ledger rows (23 judgement calls), 1,979 normal, 2 rule, 0 reviewer; 18 reports (all final), 22 consult notes (7 affected, 15 rule).
 
 ## Hidden and conditional facts
 
@@ -90,8 +90,8 @@ Atul delegated these open questions (brief, 25 Sep 2026). Each is recorded here;
 1. **Clock.** Day 0 is 12 March (the first laboratory results), not 11 March (the evening admission), so that Table 1 is day 0. Vital signs and examination are placed on day 0.
 2. **Outpatient results** (creatinine 123.7, bilirubin 76.4, LDH 1,868, "mild anaemia") are a history fact (H11), released by the referral letter or previous records, not lab facts on a negative day. The article gives no date.
 3. **DAT.** Table 1 lists it with the admission results, but the text dates it to 13 March. It is recorded on day 0 (note on L25) so that a DAT ordered on admission has an answer.
-4. **Platelet nadir** of 45 (abstract) is placed on day 7 (19 March), because the text says the count fell from 12 to 19 March. Days 2, 4, 6, 12 and 16 are affected values.
-5. **Serial values (G03).** Figure 1 was not read. Hb, platelets, LDH and creatinine on days 2–16 are affected judgement calls (confidence 0.5), fitted to the text: dialysis days 0–4, four units transfused, dialysis stopped on day 4, recovery. Urea, K, Na, Cl, bicarbonate and eGFR follow them (not flagged as judgement calls).
+4. **Platelet nadir.** Superseded on 26 Sep 2026 by Figure 1: the nadir of 45 is on 24 March (day 12) and again on 26 March (day 14), not on day 7 (109 on 19 March). The first draft's day-7 point is removed from S01.
+5. **Serial values (G03).** Revised on 26 Sep 2026: Figure 1's labelled points were read from the image and added as article facts (series S01–S04, source_locator "Figure 1", note "read from the figure image"): platelets, Hb and creatinine on days 1, 4, 6, 7, 8, 11, (12), 13, 14 and LDH on days 11, 13, 14. The x-axis shows 18 March twice; the second 18 March point is not used. Points after day 16 (29 March onwards) are outside the case's clock and not added. The estimated rows these facts answer were removed. The remaining in-between days are affected values interpolated between figure points, no longer judgement calls (confidence 0.7): Hb and platelets on days 2 and 16; creatinine on days 2, 12 and 16; LDH on days 7, 12 and 16. Urea (not in the figure) and eGFR were recomputed to follow the figure's creatinine. Pre-admission values on 27 February (Hb 130, platelets 148, creatinine 123.7, LDH shown as 1,888 against 1,868 in the text) stay in H11 only.
 6. **Units.** SI throughout, printed values in notes: BUN 65.9 mmol/L recorded as urea 65.9; uACR 235.0 → 26.6 mg/mmol; uPCR 558.19 → 63 mg/mmol; urine RBC 13.3/µL → 2/HPF and WBC 2.3/µL → 0/HPF (at about 5.5/µL per HPF); ferritin ng/mL = µg/L; PCT 0.051 → 0.05 µg/L (the catalogue's decimals). The case `lab_profile` carries the article's reference ranges in SI.
 7. **Two flow cytometry tests.** The catalogue's `LAB.HAEM.PNH_FLOW` has FLAER clone-size components, so it stands for the high-sensitivity test (Table 3). A new test, `LAB.HAEM.PNH_CD55_CD59`, carries the conventional assay (Table 2). Both need day-0 answers (carry-forward starts at the first value):
    - conventional: 99.99% for all four populations (the authors blame the method, so it is normal whenever it is ordered);
@@ -130,11 +130,20 @@ Notes for the lead curator:
 
 ## Case Reviewer checklist
 
-- [ ] Every article fact (H01–H11, E01–E03, L01–L60, S01) against the article; the SI conversions in the notes (decision 6).
-- [ ] The clock and the DAT day (decisions 1, 3); the platelet nadir day (decision 4).
-- [ ] The 41 judgement calls, most important first: the day-0 high-sensitivity result (7), the serial values (5), the eluate (12), plasma free Hb and urine casts (14), transient jaundice (8), red cell acetylcholinesterase, HIT antibody (13).
+- [ ] Every article fact (H01–H11, E01–E03, L01–L60, S01–S04) against the article and Figure 1; the SI conversions in the notes (decision 6).
+- [ ] The clock and the DAT day (decisions 1, 3); the Figure 1 readings (decisions 4 and 5).
+- [ ] The 23 judgement calls, most important first: the day-0 high-sensitivity result (7), the eluate (12), plasma free Hb and urine casts (14), transient jaundice (8), red cell acetylcholinesterase, HIT antibody (13).
 - [ ] The marrow reports (15) and the added immunofluorescence sentence in the biopsy report (16).
 - [ ] The consult notes, especially haematology V1: is suggesting high-sensitivity flow before the biopsy too helpful?
 - [ ] The rubric and the must-do and must-not-do conditions (decision 21); whether starting steroids should be penalised.
 - [ ] The figures after download: which file is which, annotations, and the licence flags (decision 22).
 - [ ] The new catalogue items and their prices and ranges (all price_source `estimate`).
+
+## Figure check (2026-09-26)
+
+The images were downloaded from PMC and looked at one by one.
+
+- M07 and M08 (Figure 4, FLAER flow plots) unlinked from the PNH flow result until masked: the plot headers appear to show the patient's name. Production decision: mask (crop the headers) or exclude.
+- Figure 4B's header reads "+1" with a later date, so it looks like a second patient sample, not the "laboratory negative control" the article's caption states.
+- M01 (Figure 1, timeline) names eculizumab and meningococcal vaccination; it has no link and stays debrief only.
+- Figure 1 has labelled, dated values for creatinine, LDH, Hb and platelets. Those up to 26 March (day 14) were read from the image into series S01–S04 (decision 5). The chart also marks a negative DAT around April, after the case's clock. The x-axis repeats 20250318; the second point is ignored.

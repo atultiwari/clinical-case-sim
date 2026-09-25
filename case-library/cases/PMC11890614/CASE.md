@@ -134,3 +134,10 @@ Final diagnosis `DX.MILIARY_TB` with `DX.HLH` (A19.9, D76.1). Rubric: 5 miliary 
 - [ ] Consult notes: helpful, never more diagnostic than a colleague with the same Chart
 - [ ] Ground truth, rubric, must-do and must-not-do agreed
 - [ ] Catalogue needs merged with the other batch-1 cases (sIL-2R and CXCL9 ranges, prices, ICD-11 codes)
+
+## Figure check (2026-09-26)
+
+The images were downloaded from PMC and looked at one by one.
+
+- M03: `has_annotations` set to true (one arrow).
+- M08 (Figure 5, the timeline) names the diagnosis and the treatment; it stays unlinked and is debrief only.

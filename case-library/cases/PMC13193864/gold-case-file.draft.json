@@ -472,14 +472,188 @@
      "value": 233
     },
     {
+     "day": 1,
+     "value": 183
+    },
+    {
+     "day": 4,
+     "value": 141
+    },
+    {
+     "day": 6,
+     "value": 98,
+     "flag": "L"
+    },
+    {
      "day": 7,
+     "value": 109,
+     "flag": "L"
+    },
+    {
+     "day": 8,
+     "value": 111,
+     "flag": "L"
+    },
+    {
+     "day": 11,
+     "value": 66,
+     "flag": "L"
+    },
+    {
+     "day": 12,
+     "value": 45,
+     "flag": "L"
+    },
+    {
+     "day": 13,
+     "value": 48,
+     "flag": "L"
+    },
+    {
+     "day": 14,
      "value": 45,
      "flag": "L"
     }
    ],
-   "note": "Day 0 from Table 1. The abstract gives the nadir as 45 x10^9/L; the text says the count fell progressively between 12 and 19 March, so the nadir is placed on 19 March (day 7), the curator's reading. Figure 1 holds the other values.",
-   "source_locator": "Table 1, abstract and text",
+   "note": "Day 0 from Table 1; days 1-14 read from the figure image (Figure 1). The nadir of 45 x10^9/L (abstract) falls on 24 and 26 March (days 12 and 14), after a partial recovery to 109-111 on 19-20 March. Read from the figure image (Figure 1, labelled data points). The x-axis shows 18 March twice; the second 18 March point is not used.",
+   "source_locator": "Table 1 (day 0); Figure 1 (days 1-14)",
    "catalogue_ref": "CMP.PLT"
+  },
+  {
+   "id": "S02",
+   "item": "Haemoglobin",
+   "code": null,
+   "unit": "g/L",
+   "ref_range": "115-150",
+   "points": [
+    {
+     "day": 1,
+     "value": 62,
+     "flag": "L"
+    },
+    {
+     "day": 4,
+     "value": 101,
+     "flag": "L"
+    },
+    {
+     "day": 6,
+     "value": 96,
+     "flag": "L"
+    },
+    {
+     "day": 7,
+     "value": 89,
+     "flag": "L"
+    },
+    {
+     "day": 8,
+     "value": 89,
+     "flag": "L"
+    },
+    {
+     "day": 11,
+     "value": 80,
+     "flag": "L"
+    },
+    {
+     "day": 12,
+     "value": 82,
+     "flag": "L"
+    },
+    {
+     "day": 13,
+     "value": 80,
+     "flag": "L"
+    },
+    {
+     "day": 14,
+     "value": 80,
+     "flag": "L"
+    }
+   ],
+   "note": "Days 1-14 read from the figure image; day 0 (69 g/L) is L22 from Table 1. Rise on day 4 after four units of washed red cells. Read from the figure image (Figure 1, labelled data points). The x-axis shows 18 March twice; the second 18 March point is not used.",
+   "source_locator": "Figure 1",
+   "catalogue_ref": "CMP.HB"
+  },
+  {
+   "id": "S03",
+   "item": "Creatinine",
+   "code": null,
+   "unit": "umol/L",
+   "ref_range": "41-81",
+   "points": [
+    {
+     "day": 1,
+     "value": 1306,
+     "flag": "H"
+    },
+    {
+     "day": 4,
+     "value": 485,
+     "flag": "H"
+    },
+    {
+     "day": 6,
+     "value": 426,
+     "flag": "H"
+    },
+    {
+     "day": 7,
+     "value": 272,
+     "flag": "H"
+    },
+    {
+     "day": 8,
+     "value": 217,
+     "flag": "H"
+    },
+    {
+     "day": 11,
+     "value": 192,
+     "flag": "H"
+    },
+    {
+     "day": 13,
+     "value": 167,
+     "flag": "H"
+    },
+    {
+     "day": 14,
+     "value": 136,
+     "flag": "H"
+    }
+   ],
+   "note": "Days 1-14 read from the figure image; day 0 (2,065 umol/L) is L14. No value is labelled on 24 March (day 12). Read from the figure image (Figure 1, labelled data points). The x-axis shows 18 March twice; the second 18 March point is not used.",
+   "source_locator": "Figure 1",
+   "catalogue_ref": "CMP.CREATININE"
+  },
+  {
+   "id": "S04",
+   "item": "Lactate dehydrogenase",
+   "code": null,
+   "unit": "U/L",
+   "ref_range": "120-250",
+   "points": [
+    {
+     "day": 11,
+     "value": 306,
+     "flag": "H"
+    },
+    {
+     "day": 13,
+     "value": 267,
+     "flag": "H"
+    },
+    {
+     "day": 14,
+     "value": 287,
+     "flag": "H"
+    }
+   ],
+   "note": "Read from the figure image; day 0 (685 U/L) is L10. No LDH value is labelled between 12 and 23 March. Read from the figure image (Figure 1, labelled data points). The x-axis shows 18 March twice; the second 18 March point is not used.",
+   "source_locator": "Figure 1",
+   "catalogue_ref": "CMP.LDH"
   }
  ],
  "single_results": [
@@ -1213,7 +1387,8 @@
    "public_release_ok": true,
    "has_annotations": true,
    "file_path": "PMC13193864/F4.jpg",
-   "raw_fact_id": "R07"
+   "raw_fact_id": null,
+   "note": "Not shown to players until masked: the plot header appears to show the patient's name. Mask (crop the header) before any use (figure check, 2026-09-26)."
   },
   {
    "id": "M08",
@@ -1226,7 +1401,8 @@
    "public_release_ok": true,
    "has_annotations": true,
    "file_path": "PMC13193864/F4.jpg",
-   "raw_fact_id": "R07"
+   "raw_fact_id": null,
+   "note": "Not shown to players until masked: the plot header appears to show the patient's name, dated '+1', so it looks like a later patient sample rather than the laboratory negative control the article's caption states. Mask (crop the header) before any use (figure check, 2026-09-26)."
   }
  ],
  "gaps": [
@@ -1244,8 +1420,8 @@
   },
   {
    "id": "G03",
-   "item": "Serial values (creatinine, haemoglobin, platelets, LDH)",
-   "guidance": "Only in Figure 1. The case gives affected values on days 2, 4, 7, 12 and 16 from the text: dialysis from day 0 to day 4, urine output 2,300 mL/day by day 4, four units of washed red cells, platelets falling to 45 x10^9/L by day 7.",
+   "item": "Serial values between and after the Figure 1 points",
+   "guidance": "Figure 1 gives platelets, haemoglobin and creatinine on days 1-14 and LDH on days 11-14 (series S01-S04). Days 2 and 16 (and LDH on days 7, 12 and 16, creatinine on day 12) are affected values interpolated between the figure's points.",
    "review_required": true
   },
   {
@@ -1313,7 +1489,7 @@
    "Myeloma cast nephropathy",
    "Drug-induced or infection-associated haemolysis and AKI (after influenza)",
    "Aplastic anaemia or another marrow failure syndrome",
-   "Heparin-induced thrombocytopenia (falling platelets on dialysis heparin)"
+   "Heparin-induced thrombocytopenia (platelets falling on dialysis heparin, and to 45 x10^9/L after LMWH was started)"
   ],
   "red_herrings": [
    "positive DAT (IgG and C3d)",

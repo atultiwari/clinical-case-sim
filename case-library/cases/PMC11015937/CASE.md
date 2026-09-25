@@ -38,9 +38,10 @@ Display title: "Ten days of fever, abdominal pain and loose stools". Tags: fever
 | About −42 to −14 | Four weeks in Nigeria, with no prophylaxis |
 | About −4 | Emergency visit; sent home on oral antibiotics (curator: ciprofloxacin) |
 | 0 | Admitted: confused and dehydrated; Hb 106 g/L, platelets 125, creatinine 150 µmol/L, haptoglobin undetectable; films positive for *P. falciparum* |
-| 2 | Platelets 66 (the lowest), Hb 85; creatinine peaks (curator's value); afebrile from now on |
-| 4 | Hb 68, reticulocytes 0.37%; parasites cleared (curator's reading of Figure 2) |
-| 5 | Symptoms resolved |
+| 2 | Platelets 66 (the lowest), Hb 85; creatinine peaks (curator's value); **artemether-lumefantrine started, parasitaemia 5%** (Figure 2); afebrile from now on |
+| 3 | Parasitaemia 1.6% (Figure 2) |
+| 4 | Hb 68, reticulocytes 0.37%; parasitaemia 0.6% |
+| 5 | Symptoms resolved; no parasites seen (Figure 2, also day 6); platelets about 157 (Figure 1) |
 | 7 | Hb 60 (the lowest); two units of red cells about now; reticulocytes 2.58% |
 | 9 | Hb 92, platelets 444, reticulocytes 7.78%; discharged around here |
 | About +30 | Clinic: well, Hb 11.6 g/dL (kept out of play, in the ground truth's outcome) |
@@ -49,7 +50,7 @@ Display title: "Ten days of fever, abdominal pain and loose stools". Tags: fever
 
 - **History (5):** H01 age and sex; H02 presenting complaints (vignette); H03 earlier emergency visit (vignette); **H04 travel to Nigeria (hidden, pivotal)**, released only by `HX.SOCIAL.TRAVEL`; H05 no prophylaxis, released by the new `HX.SOCIAL.TRAVEL_PROPHYLAXIS` or the travel question.
 - **Examination (5):** looks ill, pale, dehydrated with dry mucous membranes, confused, abdomen soft and non-tender.
-- **Series (8, 40 points), days 0/2/4/7/9 from Table 1:** Hb, Hct, MCV, MCH, platelets, reticulocyte %, LDH and haptoglobin, all in SI units.
+- **Series (10, 50 points):** days 0/2/4/7/9 from Table 1 (Hb, Hct, MCV, MCH, platelets, reticulocyte %, LDH, haptoglobin, in SI units); S09 parasitaemia days 2–6 from Figure 2 (5, 1.6, 0.6, 0, 0%); S10 platelets days 1/3/5/6/8 from Figure 1 (67, 80, 157, 235, 375). Both read from the figure images on 26 Sep 2026.
 - **Single results (14):** lactate, PT, INR, bilirubin, urea (from BUN), creatinine, blood culture, stool occult blood, stool culture, Giardia antigen, stool leucocytes (no catalogue component), C. difficile, ADAMTS13 antibody 22 U/mL and activity 49.1% (both day `null`).
 - **Interpretation (1):** X01, the PLASMIC score of 6, set to `release: never` because players calculate it themselves.
 - **Raw material:** R01 smear (*P. falciparum*, occasional schistocytes), R02 Figure 2, R03 chest X-ray negative, R04 CT abdomen and pelvis negative.
@@ -90,8 +91,8 @@ Atul delegated these open questions. Every judgement call is also flagged in `cu
 4. **Haptoglobin on day 0.** Table 1 says "NA", but the text reports <10 mg/dL at presentation, so day 0 is taken from the text.
 5. **ADAMTS13 day.** Not dated, so day `null`. The catalogue's 3-day turnaround sets when players see it.
 6. **Follow-up at one month.** Kept out of the facts (it would stretch the case days to about 40) and recorded in the ground truth's `outcome`, as for PMC12007988.
-7. **Parasitaemia.** A new test, `LAB.HAEM.MALARIA_PARASITAEMIA`. **Day 0 is a `reviewer` row (proposed 2.8%)**, because the article plots it only in Figure 2. Days 1–4 (1.6, 0.5, 0.05, 0%) are judgement calls to be replaced by the figure's values. The smear report RP01 quotes 2.8% and must change with the day-0 value.
-8. **Severe or uncomplicated.** Confusion and AKI meet CDC and WHO-style criteria for severe malaria, but the team gave oral artemether-lumefantrine. The rubric accepts both diagnosis ids at score 5, and the must-do accepts either artesunate or artemether-lumefantrine. The consult note recommends IV artesunate while she is confused or vomiting.
+7. **Parasitaemia.** A new test, `LAB.HAEM.MALARIA_PARASITAEMIA`. Figure 2, read on 26 Sep 2026, gives days 2–6 as article facts (series S09; treatment started on day 2 at 5%). Days 0 and 1 are not plotted, so they are affected judgement calls at 5%, the first measured value, which smear report RP01 also quotes. The earlier reviewer row (2.8%) and the estimates for days 1–4 were removed. Figure 2 itself (M02) stays debrief only, unlinked from R02, because it names the parasite and marks the day treatment started.
+8. **Severe or uncomplicated.** Confusion, AKI and a parasitaemia of 5% (the CDC threshold) meet CDC and WHO-style criteria for severe malaria, but the team gave oral artemether-lumefantrine. The rubric accepts both diagnosis ids at score 5, and the must-do accepts either artesunate or artemether-lumefantrine. The consult note recommends IV artesunate while she is confused or vomiting.
 9. **GCS 14 and vital signs** (38.7 °C, pulse 114, BP 104/62, RR 22, SpO₂ 97%): judgement calls. A GCS of 11 or below would define cerebral malaria, which the article does not describe.
 10. **The antibiotic** from the first visit is ciprofloxacin 500 mg twice daily, started four days earlier (a judgement call). The ED note records gastroenteritis with no blood tests (a judgement call) and says nothing about travel.
 11. **Microcytosis.** MCV 74–80 fL and MCH about 25 pg are present from admission, but the article never explains them. Proposed: homozygous α⁺-thalassaemia (−α3.7/−α3.7), with a normal HPLC and high ferritin (an acute-phase response; low iron and a TSAT of 12% from inflammation). A family history of mild microcytic anaemia and a clinic count from two years earlier (MCV 78) support it. **All four are judgement calls**, and they imply West African ancestry, which the article does not state. The alternative is to leave the microcytosis unexplained, with a normal alpha-globin result.
@@ -103,13 +104,14 @@ Atul delegated these open questions. Every judgement call is also flagged in `cu
 17. **Films.** The screening film (RP02) shows ring forms and asks for thick and thin films, without naming the species. The haematopathologist review (RP03) names *P. falciparum* and says the schistocytes are too few to support a primary TMA. The smear (RP01) is the confirmatory test.
 18. **Leak terms.** The accepted synonyms are specific ("falciparum malaria", "Pf malaria" and so on). Bare "malaria" is not a leak term, so a consultant can say "exclude malaria" and test names stay usable. Notes written after parasites are found say "Plasmodium falciparum infection" rather than "falciparum malaria".
 19. **Birthplace (`HX.SOCIAL.RESIDENCE`, added to the catalogue in the merge):** born and brought up in Nigeria, in Brooklyn for over 20 years (a judgement call). It is consistent with decision 11 and a visiting-friends-and-relatives traveller, and it replaces the new template 'born locally', which would contradict both. The alternative is to leave her origin unstated.
-20. **Reviewer rows:** one (day-0 parasitaemia). The brief allows at most two.
+20. **Reviewer rows:** none since the figure check (the day-0 parasitaemia row was replaced by Figure 2's values and an affected estimate).
+21. **Platelets from Figure 1** fill days 1, 3, 5, 6 and 8 (series S10). On day 4 the figure (about 93) and Table 1 (102) differ; the table is kept.
 
 ## Counts (local replay, 25 Sep 2026)
 
-- **Facts:** 65 article (11 history, examination and interpretation facts, 40 series points, 14 single results); 5 derived (MCHC).
-- **Ledger (after the lead curator's catalogue merge):** 338 affected (309 written, the rest calculated from affected inputs), 1 reviewer, 2 rule, 1,552 normal.
-- **Judgement calls:** 22.
+- **Facts:** 75 article (11 history, examination and interpretation facts, 50 series points, 14 single results); 5 derived (MCHC).
+- **Ledger (after the figure check):** 336 affected (306 written, the rest calculated from affected inputs), 0 reviewer, 2 rule, 1,552 normal.
+- **Judgement calls:** 20.
 - **Reports:** 8, all `only` and final (smear, screening film, film review, chest X-ray, CT abdomen and pelvis, ultrasound abdomen, ultrasound kidneys, CT head).
 - **Consult notes:** 22. There are 9 `affected` notes: infectious diseases ×3 (before travel is known, after travel, after parasites), haematology ×2 (before and after parasites), gastroenterology, neurology, nephrology and general surgery. The other 13 are `rule` generic notes.
 - **Test utility:** 78 tests.
@@ -132,11 +134,18 @@ That made 6 items (1 history, 3 tests, 2 actions), 4 components and 1 normal tem
 
 - [ ] Every fact against the article: Table 1 (40 points), the admission values in the text, and the negative tests.
 - [ ] Day numbering (decision 2) and the LDH and haptoglobin choices on day 0 (decisions 3 and 4).
-- [ ] **Read Figure 2** and replace the day-0 parasitaemia reviewer row and the days 1–4 affected rows; update RP01 to match.
-- [ ] Figure 1 platelet trend: check whether days 1, 3, 5, 6 and 8 are worth adding.
+- [x] Figure 2 read (S09) and Figure 1 read (S10) on 26 Sep 2026; RP01 updated to 5%.
+- [ ] Check the values read from both figures, and the 5% estimate for days 0 and 1.
 - [ ] The microcytosis explanation (decision 11): accept α⁺-thalassaemia, or leave it unexplained.
 - [ ] Severe or uncomplicated, and whether the rubric and must-do should prefer artesunate (decision 8).
-- [ ] Judgement calls in `curation/affected.json` (22), especially GCS, vital signs, creatinine peak, ED note and antibiotic.
+- [ ] Judgement calls in `curation/affected.json` (20), especially GCS, vital signs, creatinine peak, ED note and antibiotic.
 - [ ] Consult notes: infectious diseases and haematology before the travel history. Are they too leading?
 - [ ] Figure flags: both charts are annotated; mask or crop the axis labels before production use.
 - [ ] Catalogue needs: ids, prices, turnaround and the ADAMTS13 antibody range source.
+
+## Figure check (2026-09-26)
+
+The images were downloaded from PMC and looked at one by one.
+
+- M02 (Figure 2, parasitaemia chart) unlinked from the parasitaemia result: its title names Plasmodium falciparum and it marks the day treatment started, so a player would see later days and the treatment. Debrief only.
+- Done 26 Sep 2026: days 2–6 read from the chart into series S09 (5, 1.6, 0.6, 0, 0%); the reviewer row and the estimates for days 1–4 removed; days 0–1 set at 5% (affected); RP01 now quotes 5%. Figure 1 read into series S10 (days 1, 3, 5, 6, 8).

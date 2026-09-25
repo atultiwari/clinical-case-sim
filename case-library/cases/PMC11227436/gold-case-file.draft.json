@@ -524,7 +524,7 @@
    "licence": "CC BY 4.0",
    "production_ok": true,
    "public_release_ok": true,
-   "has_annotations": false,
+   "has_annotations": true,
    "file_path": "PMC11227436/F1.jpg",
    "raw_fact_id": "R02",
    "note": "Two panels labelled A and B; the caption mentions no arrows or other marks. Not yet seen."
@@ -538,7 +538,7 @@
    "licence": "CC BY 4.0",
    "production_ok": true,
    "public_release_ok": true,
-   "has_annotations": false,
+   "has_annotations": true,
    "file_path": "PMC11227436/F2.jpg",
    "raw_fact_id": "R03",
    "note": "Three panels labelled A to C; the caption mentions no arrows or other marks. Not yet seen."

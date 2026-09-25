@@ -153,3 +153,9 @@ The rows pass the catalogue checker when appended to a copy of the CSVs. PMC1200
 - [ ] Ground truth, rubric, must-do and must-not-do conditions agreed
 - [ ] New catalogue items agreed (with the lead curator's merge)
 - [ ] Signed off: freeze as `PMC11227436@v1`
+
+## Figure check (2026-09-26)
+
+The images were downloaded from PMC and looked at one by one.
+
+- M01 and M02: `has_annotations` set to true (panel letters drawn on the images).

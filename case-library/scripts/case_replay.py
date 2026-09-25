@@ -115,7 +115,7 @@ def load_case(db: psycopg.Connection, case_dir: Path) -> str:
     return cv
 
 
-def _replay_one(db: psycopg.Connection, case_dir: Path) -> Replay:
+def replay_one(db: psycopg.Connection, case_dir: Path) -> Replay:
     cv = load_case(db, case_dir)
     problems = [(str(k), str(v)) for k, v in db.execute(CHECKS, {"cv": cv}).fetchall()]
     counts = {
@@ -139,7 +139,7 @@ def replay(db: psycopg.Connection, case_dirs: Sequence[Path]) -> list[Replay]:
         )
         for case_dir in case_dirs:
             with db.transaction():
-                results.append(_replay_one(db, case_dir))
+                results.append(replay_one(db, case_dir))
     return results
 
 
