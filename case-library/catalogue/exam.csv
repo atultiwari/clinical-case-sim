@@ -1,0 +1,69 @@
+id,name,category,synonyms,specialty_scope
+EX.GEN.APPEARANCE,General appearance,general,general inspection|end of bed|looks unwell|GPE,attending|consultant.*
+EX.GEN.VITALS,Vital signs,general,vitals|observations|obs|BP pulse temperature|SpO2,attending|consultant.*
+EX.GEN.CONSCIOUSNESS,Conscious level and orientation,general,GCS|Glasgow coma scale|orientation|AVPU,attending|consultant.*
+EX.GEN.PALLOR,Pallor,general,pale|anaemic look|anemic|conjunctival pallor|palmar pallor,attending|consultant.*
+EX.GEN.JAUNDICE,Jaundice,general,icterus|scleral icterus|yellow sclera|icteric,attending|consultant.*
+EX.GEN.CYANOSIS,Cyanosis,general,blue lips|central cyanosis|peripheral cyanosis,attending|consultant.*
+EX.GEN.CLUBBING,Finger clubbing,general,clubbing|nail clubbing|digital clubbing,attending|consultant.*
+EX.GEN.OEDEMA,Oedema,general,edema|pedal oedema|pitting oedema|sacral oedema|swelling of feet,attending|consultant.*
+EX.GEN.LYMPH_NODES,Lymph nodes,general,lymphadenopathy|glands|LN exam|cervical nodes|axillary nodes,attending|consultant.*
+EX.GEN.HYDRATION,Hydration status,general,dehydration|skin turgor|mucous membranes|capillary refill,attending|consultant.*
+EX.GEN.HANDS_NAILS,Hands and nails,general,nails|koilonychia|hand examination|nail changes,attending|consultant.*
+EX.GEN.HEIGHT_WEIGHT,"Height, weight and body mass index",general,BMI|weight|anthropometry|body mass index,attending|consultant.*
+EX.GEN.BONE_TENDERNESS,Bone tenderness,general,sternal tenderness|bony tenderness|spinal tenderness,attending|consultant.*
+EX.GEN.BREATH_ODOUR,Breath odour,general,breath smell|fetor|halitosis|odor,attending|consultant.*
+EX.CVS.PULSE,"Pulse: rate, rhythm, volume and character",cardiovascular,radial pulse|pulse exam|radio-femoral delay|nadi,attending|consultant.*
+EX.CVS.JVP,Jugular venous pressure,cardiovascular,JVP|neck veins|JVD|jugular venous distension,attending|consultant.*
+EX.CVS.INSPECTION,Precordium inspection,cardiovascular,chest inspection for heart|precordial inspection|visible pulsations,attending|consultant.*
+EX.CVS.PALPATION,"Apex beat, heaves and thrills",cardiovascular,apex beat|precordial palpation|heave|thrill,attending|consultant.*
+EX.CVS.AUSCULTATION,Heart auscultation,cardiovascular,heart sounds|murmurs|listen to the heart|cardiac auscultation|S1 S2,attending|consultant.*
+EX.CVS.PERIPHERAL_PULSES,Peripheral pulses,cardiovascular,foot pulses|dorsalis pedis|femoral pulses|distal pulses,attending|consultant.*
+EX.VASC.CALVES,Calves for swelling and tenderness,vascular,calf tenderness|leg swelling check|DVT check,attending|consultant.*
+EX.RESP.INSPECTION,Chest inspection,respiratory,chest shape|respiratory effort|accessory muscles|work of breathing,attending|consultant.*
+EX.RESP.PALPATION,Trachea and chest expansion,respiratory,tracheal position|chest expansion|respiratory palpation,attending|consultant.*
+EX.RESP.PERCUSSION,Chest percussion,respiratory,percussion note|dullness|hyperresonance,attending|consultant.*
+EX.RESP.AUSCULTATION,Lung auscultation,respiratory,breath sounds|crackles|crepitations|wheeze on auscultation|listen to the chest,attending|consultant.*
+EX.RESP.VOCAL_RESONANCE,Vocal resonance,respiratory,vocal fremitus|tactile fremitus|whispering pectoriloquy,attending|consultant.*
+EX.RESP.SPUTUM,Sputum inspection,respiratory,sputum pot|look at sputum|sputum colour,attending|consultant.*
+EX.ABD.INSPECTION,Abdominal inspection,abdominal,abdomen look|distension|scars|visible veins,attending|consultant.*
+EX.ABD.PALPATION,Abdominal palpation,abdominal,feel the abdomen|tenderness|abdominal masses|guarding|per abdomen,attending|consultant.*
+EX.ABD.LIVER_SPLEEN,Liver and spleen,abdominal,hepatomegaly|splenomegaly|organomegaly|liver span|spleen palpation,attending|consultant.*
+EX.ABD.KIDNEYS,Kidneys (ballotting),abdominal,ballot kidneys|renal palpation|palpable kidneys,attending|consultant.*
+EX.ABD.PERCUSSION,Abdominal percussion and shifting dullness,abdominal,shifting dullness|ascites check|fluid thrill,attending|consultant.*
+EX.ABD.AUSCULTATION,Bowel sounds and abdominal bruits,abdominal,bowel sounds|renal bruit|abdominal bruit,attending|consultant.*
+EX.ABD.HERNIAL_ORIFICES,Hernial orifices,abdominal,hernia check|inguinal hernia|cough impulse,attending|consultant.*
+EX.ABD.RECTAL,Digital rectal examination,abdominal,PR exam|DRE|per rectal|rectal exam,attending|consultant.gastroenterology|consultant.general_surgery
+EX.NEURO.MENTAL_STATE,Cognitive and mental state examination,neurological,MMSE|AMTS|cognition test|MSE|mini-mental,attending|consultant.*
+EX.NEURO.SPEECH,Speech and language,neurological,dysarthria|aphasia|dysphasia|speech assessment,attending|consultant.*
+EX.NEURO.CRANIAL_NERVES,Cranial nerves,neurological,CN exam|cranial nerve examination|pupils|eye movements|facial nerve,attending|consultant.*
+EX.NEURO.MOTOR,"Motor system: bulk, tone and power",neurological,power|tone|muscle strength|MRC grading|limb power,attending|consultant.*
+EX.NEURO.REFLEXES_SENSATION,Reflexes and sensation,neurological,deep tendon reflexes|DTR|plantar response|sensory exam|vibration sense|proprioception,attending|consultant.*
+EX.NEURO.COORDINATION,Coordination,neurological,cerebellar signs|finger-nose test|heel-shin test|dysdiadochokinesis,attending|consultant.*
+EX.NEURO.GAIT,Gait,neurological,walking|tandem gait|heel-toe walking|gait assessment,attending|consultant.*
+EX.NEURO.ROMBERG,Romberg test,neurological,Romberg sign|standing with eyes closed|Rombergism,attending|consultant.*
+EX.NEURO.MENINGISM,Meningeal signs,neurological,neck stiffness|Kernig sign|Brudzinski sign|nuchal rigidity,attending|consultant.*
+EX.NEURO.INVOLUNTARY_MOVEMENTS,Tremor and involuntary movements,neurological,tremor|asterixis|flapping tremor|myoclonus|chorea,attending|consultant.*
+EX.NEURO.PERIPHERAL_NERVES,Peripheral nerve thickening,neurological,nerve thickening|thickened nerves|ulnar nerve palpation|greater auricular nerve,attending|consultant.*
+EX.EYE.FUNDOSCOPY,Fundoscopy,eyes,ophthalmoscopy|fundus exam|optic disc|retina exam,attending|consultant.ophthalmology|consultant.neurology
+EX.EYE.SLIT_LAMP,Slit-lamp examination,eyes,slit lamp|biomicroscopy|anterior segment exam|cornea exam,consultant.ophthalmology
+EX.EYE.VISUAL_ACUITY,Visual acuity,eyes,Snellen chart|vision test|VA|eyesight check,attending|consultant.*
+EX.EYE.VISUAL_FIELDS,Formal visual field testing,eyes,perimetry|visual fields|field of vision|Humphrey fields,consultant.ophthalmology|consultant.neurology
+EX.ORAL.CAVITY,"Oral cavity, tongue and teeth",oral and ENT,mouth exam|tongue|teeth|throat|oral mucosa,attending|consultant.*
+EX.ORAL.GUMS,Gums,oral and ENT,gingiva|gum line|gum examination|gingival margin,attending|consultant.*
+EX.ENT.OTOSCOPY,Otoscopy,oral and ENT,ear exam|tympanic membrane|ear drum|auroscope,attending|consultant.*
+EX.NECK.THYROID,Thyroid examination,neck,thyroid gland|goitre|goiter|neck swelling,attending|consultant.*
+EX.BREAST.EXAMINATION,Breast examination,breast,breast lump check|breast exam|CBE,attending|consultant.*
+EX.MSK.GALS,Musculoskeletal screen (GALS),musculoskeletal,GALS|joint screen|MSK screen,attending|consultant.*
+EX.MSK.JOINTS,Detailed joint examination,musculoskeletal,joints|look feel move|synovitis|joint swelling|arthritis exam,attending|consultant.*
+EX.MSK.SPINE,Spine examination,musculoskeletal,back exam|spinal examination|spine tenderness,attending|consultant.*
+EX.MSK.MUSCLES,Muscle tenderness and wasting,musculoskeletal,muscle tenderness|muscle wasting|atrophy|myopathy signs,attending|consultant.*
+EX.SKIN.INSPECTION,Skin inspection,skin,skin exam|rash|skin lesions|pigmentation|dermatological exam,attending|consultant.*
+EX.SKIN.PURPURA,"Petechiae, purpura and bruising",skin,petechiae|purpura|bruises|ecchymoses,attending|consultant.*
+EX.GU.GENITALIA,External genitalia,genitourinary,genital exam|testes|scrotum|genitalia,attending|consultant.*
+EX.GU.RENAL_ANGLE,Renal angle tenderness,genitourinary,costovertebral angle tenderness|CVA tenderness|loin tenderness,attending|consultant.*
+EX.GYN.PELVIC,Pelvic examination (speculum and bimanual),gynaecological,PV exam|per vaginal|speculum exam|bimanual|internal exam,consultant.obstetrics_gynaecology
+EX.BEDSIDE.CAPILLARY_GLUCOSE,Capillary blood glucose,bedside test,CBG|finger-prick glucose|glucometer|GRBS|sugar check,attending|consultant.*
+EX.BEDSIDE.POSTURAL_BP,Lying and standing blood pressure,bedside test,postural BP|orthostatic BP|orthostatic hypotension check,attending|consultant.*
+EX.BEDSIDE.TOURNIQUET_TEST,Tourniquet test,bedside test,Hess test|capillary fragility test|Rumpel-Leede test,attending|consultant.*
+EX.BEDSIDE.PEAK_FLOW,Peak expiratory flow,bedside test,PEFR|peak flow|PEF,attending|consultant.*

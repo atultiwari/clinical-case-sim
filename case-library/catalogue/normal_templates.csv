@@ -1,0 +1,229 @@
+item_id,template
+HX.PC.ONSET_DURATION,No further details reported.
+HX.PC.PAIN_DETAILS,No pain reported.
+HX.PC.PROGRESSION,No further details reported.
+HX.PC.AGGRAVATING_RELIEVING,No aggravating or relieving factors identified.
+HX.PC.PREVIOUS_EPISODES,No previous similar episodes.
+HX.PC.TREATMENT_SO_FAR,No treatment taken for this illness so far.
+HX.PC.IMPACT,Managing usual daily activities.
+HX.PC.PATIENT_CONCERNS,No specific concerns beyond wanting to know the cause.
+HX.PC.ASSOCIATED,No other symptoms reported.
+HX.GEN.FEVER_SWEATS_WEIGHT,"No fever, night sweats or weight loss."
+HX.GEN.FATIGUE,No unusual tiredness.
+HX.GEN.JAUNDICE,No yellowing of the eyes or skin noticed.
+HX.GEN.METALLIC_TASTE,No change in taste.
+HX.GEN.RECENT_INFECTION,No recent infections or febrile illness.
+HX.GEN.ITCH,No itching.
+HX.GEN.LUMPS,No lumps or swellings noticed.
+HX.GEN.BRUISING_BLEEDING,"No easy bruising, nosebleeds or prolonged bleeding."
+HX.GEN.THIRST,No excessive thirst.
+HX.GEN.HEAT_COLD,No intolerance of heat or cold.
+HX.GEN.SLEEP,Sleeping normally.
+HX.GEN.PICA,"No cravings for ice, clay, chalk or other non-food items."
+HX.GEN.RIGORS,No chills or rigors.
+HX.CVS.CHEST_PAIN,No chest pain.
+HX.CVS.BREATHLESSNESS,No breathlessness at rest or on exertion.
+HX.CVS.ORTHOPNOEA_PND,Sleeps flat on one pillow; no waking at night breathless.
+HX.CVS.PALPITATIONS,No palpitations.
+HX.CVS.SYNCOPE,"No blackouts, fainting or light-headedness."
+HX.CVS.ANKLE_SWELLING,No ankle or leg swelling.
+HX.CVS.CLAUDICATION,No calf pain on walking.
+HX.RESP.COUGH,No cough.
+HX.RESP.SPUTUM,No sputum.
+HX.RESP.HAEMOPTYSIS,No coughing up of blood.
+HX.RESP.WHEEZE,No wheeze.
+HX.RESP.SNORING,No loud snoring or daytime sleepiness.
+HX.GI.NAUSEA_APPETITE,Appetite normal; no nausea or vomiting.
+HX.GI.ABDOMINAL_PAIN,No abdominal pain.
+HX.GI.DYSPHAGIA,No difficulty or pain on swallowing.
+HX.GI.HEARTBURN,No heartburn or indigestion.
+HX.GI.BOWEL_HABIT,Bowels open daily with normal formed stool; no recent change.
+HX.GI.BLEEDING,"No blood in the stool, black stools or vomiting of blood."
+HX.GI.ABDOMINAL_SWELLING,No abdominal swelling or distension.
+HX.GI.WORMS,No worms seen in the stool.
+HX.GU.URINE_COLOUR,"Urine normal in colour; no dark, red or cola-coloured urine."
+HX.GU.DYSURIA,No pain or burning on passing urine.
+HX.GU.FREQUENCY,No increased frequency or urgency; not getting up at night to pass urine.
+HX.GU.URINE_VOLUME,Passing normal amounts of urine.
+HX.GU.FROTHY_URINE,No frothy urine.
+HX.GU.STREAM,"No hesitancy, poor stream or dribbling."
+HX.GU.DISCHARGE_SORES,"No genital discharge, sores or ulcers."
+HX.GYN.MENSES,Periods regular with normal flow; no bleeding between periods.
+HX.GYN.PREGNANCY,No possibility of current pregnancy reported.
+HX.GYN.OBSTETRIC,No obstetric complications reported.
+HX.GYN.CONTRACEPTION,Nothing of note reported.
+HX.GYN.MENOPAUSE,No postmenopausal bleeding reported.
+HX.GYN.VAGINAL_DISCHARGE,No abnormal vaginal discharge or bleeding between periods.
+HX.NEURO.HEADACHE,No headache.
+HX.NEURO.SEIZURES,"No fits, seizures or episodes of loss of consciousness."
+HX.NEURO.WEAKNESS,No weakness of the arms or legs.
+HX.NEURO.SENSORY,"No numbness, tingling or pins and needles."
+HX.NEURO.COGNITION_MOOD,No problems with memory or concentration; mood normal.
+HX.NEURO.DIZZINESS_BALANCE,"No dizziness, vertigo or unsteadiness."
+HX.NEURO.SPEECH,No change in speech.
+HX.NEURO.TREMOR,No tremor or abnormal movements.
+HX.NEURO.FALLS,No falls.
+HX.MSK.JOINT_PAIN,No joint pain or swelling.
+HX.MSK.STIFFNESS,No morning stiffness.
+HX.MSK.MUSCLE_PAIN,"No muscle pain, tenderness or cramps."
+HX.MSK.BACK_PAIN,No back pain.
+HX.MSK.BONE_PAIN,No bone pain.
+HX.SKIN.RASH,No rash.
+HX.SKIN.PIGMENTATION,No change in skin colour or pigmentation.
+HX.SKIN.HAIR_NAILS,No change in hair or nails.
+HX.SKIN.PHOTOSENSITIVITY,No rash or blistering after sun exposure.
+HX.EYE.VISION,"No blurring, double vision or loss of vision."
+HX.EYE.RED_DRY,"No red, painful or dry eyes."
+HX.ENT.MOUTH_ULCERS,No mouth ulcers or sore tongue.
+HX.ENT.GUMS,No bleeding or swelling of the gums.
+HX.ENT.HEARING,No hearing loss or ringing in the ears.
+HX.ENT.NOSE_THROAT,No sore throat or nasal symptoms.
+HX.ENT.HOARSENESS,No change in voice.
+HX.PSYCH.LOW_MOOD,Mood described as good; still enjoys usual activities.
+HX.PSYCH.ANXIETY,No undue worry or anxiety.
+HX.PSYCH.SELF_HARM,No thoughts of self-harm or suicide.
+HX.PSYCH.PSYCHOSIS,No unusual experiences such as hearing voices.
+HX.PSYCH.STRESS,No major recent stresses or life events.
+HX.PMH.MEDICAL,No previous medical illnesses.
+HX.PMH.SURGICAL,No previous operations.
+HX.PMH.ADMISSIONS,No previous hospital admissions.
+HX.PMH.CHRONIC_CONDITIONS,No long-term conditions.
+HX.PMH.TRANSFUSION_PREGNANCY,No previous blood transfusions or pregnancies.
+HX.PMH.IVIG_DETAILS,Has never received immunoglobulin infusions.
+HX.PMH.MYCOPHENOLATE,Has never taken mycophenolate.
+HX.PMH.IMMUNOSUPPRESSION,"Has never received immunosuppressive treatment, chemotherapy or radiotherapy."
+HX.PMH.VACCINATION,Vaccinations up to date as far as known.
+HX.PMH.CHILDHOOD,No significant childhood illnesses reported.
+HX.MEDS.CURRENT,Not taking any regular medicines.
+HX.MEDS.SUPPLEMENTS,"No supplements, herbal, Ayurvedic or other traditional remedies."
+HX.MEDS.SUPPLEMENT_DETAILS,No supplements or remedies taken.
+HX.MEDS.ALLERGIES,No known drug allergies.
+HX.MEDS.ADHERENCE,No problems taking medicines as prescribed.
+HX.MEDS.RECENT_CHANGES,No new medicines or dose changes in the past three months.
+HX.MEDS.OTC,"No over-the-counter medicines, including painkillers."
+HX.MEDS.RECENT_ANTIBIOTICS,No antibiotics in the past three months.
+HX.FAMILY.BLOOD,No family history of blood problems or of needing transfusions.
+HX.FAMILY.GENERAL,No significant illnesses in the family.
+HX.FAMILY.CONSANGUINITY,Parents not related by blood.
+HX.FAMILY.CANCER,None reported in the family.
+HX.FAMILY.CARDIAC,None reported in the family.
+HX.FAMILY.AUTOIMMUNE,None reported in the family.
+HX.FAMILY.SIMILAR_ILLNESS,No family member has had a similar illness.
+HX.SOCIAL.ALCOHOL,Does not drink alcohol.
+HX.SOCIAL.SMOKING,Has never smoked.
+HX.SOCIAL.TOBACCO_CHEWING,"Does not chew tobacco, paan or betel nut."
+HX.SOCIAL.RECREATIONAL_DRUGS,No recreational drug use.
+HX.SOCIAL.INJECTING,Has never injected drugs.
+HX.SOCIAL.DIET,"Eats a regular, varied home-cooked diet."
+HX.SOCIAL.VEGETARIAN,No restrictive diet followed.
+HX.SOCIAL.TRAVEL,No recent travel outside the home area.
+HX.SOCIAL.LIVING,Nothing of note reported.
+HX.SOCIAL.FUNCTION,Independent in all daily activities.
+HX.SOCIAL.EXERCISE,Nothing of note reported.
+HX.SOCIAL.FINANCES,Nothing of note reported.
+HX.EXPOSURE.OCCUPATION,No workplace exposures of note reported.
+HX.EXPOSURE.PREVIOUS_JOBS,Nothing of note reported.
+HX.EXPOSURE.HOBBIES,"No hobbies involving chemicals, fumes or dusts."
+HX.EXPOSURE.HOME,No recent renovation or known hazards at home.
+HX.EXPOSURE.WATER,Drinks treated or filtered water.
+HX.EXPOSURE.TOXINS,"No known exposure to chemicals, pesticides or other toxins."
+HX.EXPOSURE.COOKWARE,Nothing of note reported.
+HX.EXPOSURE.COSMETICS,Nothing of note reported.
+HX.EXPOSURE.ANIMALS,No animal exposures of note.
+HX.EXPOSURE.BITES,No recent bites or stings.
+HX.EXPOSURE.FOOD,No unusual foods or recent food-related illness.
+HX.EXPOSURE.SICK_CONTACTS,No contact with anyone unwell.
+HX.EXPOSURE.OTHERS_EXPOSED,No one else at home or work has similar symptoms.
+HX.EXPOSURE.SEXUAL,No new sexual partners; no concerns about sexually transmitted infection.
+HX.EXPOSURE.NEEDLES,"No tattoos, needlestick injuries or injections from unqualified practitioners."
+HX.EXPOSURE.RADIATION,No known radiation exposure.
+HX.RECORDS.PREVIOUS,No previous records or test results available.
+HX.RECORDS.DISCHARGE_SUMMARIES,No previous discharge summaries.
+HX.RECORDS.REFERRAL_LETTER,Referral letter gives no further information.
+EX.GEN.APPEARANCE,Comfortable at rest; alert and not in distress.
+EX.GEN.VITALS,"Temperature 36.8 °C; pulse 76/min, regular; blood pressure 118/76 mmHg; respiratory rate 14/min; SpO2 98% on room air."
+EX.GEN.CONSCIOUSNESS,"Alert and oriented to time, place and person; GCS 15/15."
+EX.GEN.PALLOR,"No pallor of the conjunctivae, palms or nail beds."
+EX.GEN.JAUNDICE,No scleral icterus.
+EX.GEN.CYANOSIS,No central or peripheral cyanosis.
+EX.GEN.CLUBBING,No finger clubbing.
+EX.GEN.OEDEMA,No pitting oedema of the ankles or sacrum.
+EX.GEN.LYMPH_NODES,"No palpable cervical, axillary or inguinal lymph nodes."
+EX.GEN.HYDRATION,Well hydrated; moist mucous membranes; capillary refill under 2 seconds.
+EX.GEN.HANDS_NAILS,"Hands and nails normal; no koilonychia, leukonychia, splinter haemorrhages or palmar erythema."
+EX.GEN.HEIGHT_WEIGHT,"Height 165 cm, weight 60 kg; BMI 22.0 kg/m2."
+EX.GEN.BONE_TENDERNESS,No sternal or other bony tenderness.
+EX.GEN.BREATH_ODOUR,No abnormal breath odour.
+EX.CVS.PULSE,"Pulse 76/min, regular, normal volume and character; no radio-femoral delay."
+EX.CVS.JVP,JVP not raised; normal waveform.
+EX.CVS.INSPECTION,Precordium normal; no scars or visible pulsations.
+EX.CVS.PALPATION,"Apex beat in the fifth left intercostal space, mid-clavicular line; no heaves or thrills."
+EX.CVS.AUSCULTATION,Heart sounds 1 and 2 normal; no added sounds or murmurs.
+EX.CVS.PERIPHERAL_PULSES,All peripheral pulses palpable and symmetrical.
+EX.VASC.CALVES,Calves soft and non-tender; no swelling.
+EX.RESP.INSPECTION,Chest symmetrical; normal respiratory effort; no use of accessory muscles.
+EX.RESP.PALPATION,Trachea central; chest expansion normal and symmetrical.
+EX.RESP.PERCUSSION,Percussion note resonant throughout.
+EX.RESP.AUSCULTATION,Vesicular breath sounds throughout; no added sounds.
+EX.RESP.VOCAL_RESONANCE,Vocal resonance normal and symmetrical.
+EX.RESP.SPUTUM,No sputum produced.
+EX.ABD.INSPECTION,"Abdomen flat and moving with respiration; no scars, distension or visible veins."
+EX.ABD.PALPATION,Abdomen soft and non-tender; no masses; no guarding.
+EX.ABD.LIVER_SPLEEN,Liver and spleen not palpable.
+EX.ABD.KIDNEYS,Kidneys not ballotable.
+EX.ABD.PERCUSSION,Percussion note tympanic; no shifting dullness.
+EX.ABD.AUSCULTATION,Bowel sounds normal; no bruits.
+EX.ABD.HERNIAL_ORIFICES,Hernial orifices intact; no cough impulse.
+EX.ABD.RECTAL,Normal perianal skin; normal anal tone; no rectal masses; brown stool on the glove with no blood or melaena.
+EX.NEURO.MENTAL_STATE,"Oriented; attention, memory and recall normal on bedside testing."
+EX.NEURO.SPEECH,Speech fluent and clear; comprehension normal.
+EX.NEURO.CRANIAL_NERVES,Cranial nerves II to XII intact; pupils equal and reactive to light.
+EX.NEURO.MOTOR,Normal bulk and tone in all four limbs; no fasciculation; power 5/5 throughout.
+EX.NEURO.REFLEXES_SENSATION,"Reflexes 2+ and symmetrical; plantars flexor; light touch, pinprick, vibration and joint position sense intact."
+EX.NEURO.COORDINATION,Finger-nose and heel-shin testing normal; no dysdiadochokinesis.
+EX.NEURO.GAIT,"Gait normal, including heel-toe walking."
+EX.NEURO.ROMBERG,Romberg test negative.
+EX.NEURO.MENINGISM,No neck stiffness; Kernig sign negative.
+EX.NEURO.INVOLUNTARY_MOVEMENTS,"No tremor, asterixis or other involuntary movements."
+EX.NEURO.PERIPHERAL_NERVES,No thickened peripheral nerves.
+EX.EYE.FUNDOSCOPY,Optic discs pink with sharp margins; normal vessels; no haemorrhages or exudates.
+EX.EYE.SLIT_LAMP,"Lids, conjunctivae, cornea, anterior chamber, iris and lens normal on slit-lamp examination."
+EX.EYE.VISUAL_ACUITY,Visual acuity 6/6 in each eye.
+EX.EYE.VISUAL_FIELDS,Full visual fields in both eyes on formal perimetry.
+EX.ORAL.CAVITY,Oral mucosa moist and healthy; tongue normal; no ulcers; dentition fair.
+EX.ORAL.GUMS,"Gums healthy; no bleeding, swelling or discolouration."
+EX.ENT.OTOSCOPY,Ear canals clear; tympanic membranes intact and normal.
+EX.NECK.THYROID,Thyroid not enlarged; no nodules; moves normally on swallowing.
+EX.BREAST.EXAMINATION,"Breasts symmetrical; no lumps, skin changes or nipple discharge; axillae clear."
+EX.MSK.GALS,"Gait, arms, legs and spine screen normal."
+EX.MSK.JOINTS,"No joint swelling, tenderness, deformity or restricted movement."
+EX.MSK.SPINE,Spine normal in alignment; no tenderness; full range of movement.
+EX.MSK.MUSCLES,No muscle tenderness or wasting.
+EX.SKIN.INSPECTION,"Skin normal; no rashes, pigmentation changes or other lesions."
+EX.SKIN.PURPURA,"No petechiae, purpura or bruising."
+EX.GU.GENITALIA,External genitalia normal.
+EX.GU.RENAL_ANGLE,No renal angle tenderness.
+EX.GYN.PELVIC,Normal vulva and vagina; cervix healthy on speculum; uterus normal in size; no adnexal masses or tenderness.
+EX.BEDSIDE.CAPILLARY_GLUCOSE,Capillary blood glucose 5.4 mmol/L.
+EX.BEDSIDE.POSTURAL_BP,"No postural drop in blood pressure (lying 120/78 mmHg, standing 118/80 mmHg)."
+EX.BEDSIDE.TOURNIQUET_TEST,Tourniquet test negative.
+EX.BEDSIDE.PEAK_FLOW,"Peak flow 480 L/min, within the predicted range."
+REF.CARDIOLOGY,No specific cardiac concerns from our side; happy to review if new problems arise.
+REF.GASTROENTEROLOGY,No specific gastrointestinal concerns from our side; happy to review if new problems arise.
+REF.HAEMATOLOGY,No specific haematological concerns from our side; happy to review if new problems arise.
+REF.NEUROLOGY,No specific neurological concerns from our side; happy to review if new problems arise.
+REF.TOXICOLOGY,No specific toxicological concerns from our side; happy to advise if new information arises.
+REF.NEPHROLOGY,No specific renal concerns from our side; happy to review if new problems arise.
+REF.RHEUMATOLOGY,No specific rheumatological concerns from our side; happy to review if new problems arise.
+REF.ENDOCRINOLOGY,No specific endocrine concerns from our side; happy to review if new problems arise.
+REF.INFECTIOUS_DISEASES,No specific infection concerns from our side; happy to review if new problems arise.
+REF.RESPIRATORY,No specific respiratory concerns from our side; happy to review if new problems arise.
+REF.PSYCHIATRY,No specific psychiatric concerns from our side; happy to review if new problems arise.
+REF.DERMATOLOGY,No specific skin concerns from our side; happy to review if new problems arise.
+REF.ONCOLOGY,No specific oncological concerns from our side; happy to review if new problems arise.
+REF.OPHTHALMOLOGY,No specific eye concerns from our side; happy to review if new problems arise.
+REF.ENT,"No specific ear, nose or throat concerns from our side; happy to review if new problems arise."
+REF.GENERAL_SURGERY,No specific surgical concerns from our side; happy to review if new problems arise.
+REF.OBSTETRICS_GYNAECOLOGY,No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.
+REF.DIETETICS,No specific nutritional concerns from our side; happy to review if intake or weight changes.
+REF.PHYSIOTHERAPY,No specific mobility concerns from our side; happy to review if function changes.

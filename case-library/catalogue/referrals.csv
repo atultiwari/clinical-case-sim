@@ -1,0 +1,20 @@
+id,name,category,synonyms,specialty_scope
+REF.CARDIOLOGY,Cardiology,medical,cardiologist|heart specialist|cardiac team,attending
+REF.GASTROENTEROLOGY,Gastroenterology,medical,gastroenterologist|GI team|gastro|hepatology,attending
+REF.HAEMATOLOGY,Haematology,medical,hematology|haematologist|blood specialist|haem team,attending
+REF.NEUROLOGY,Neurology,medical,neurologist|neuro team|nerve specialist,attending
+REF.TOXICOLOGY,Clinical toxicology,medical,toxicologist|poisons service|poison centre|tox,attending
+REF.NEPHROLOGY,Nephrology,medical,nephrologist|renal team|kidney specialist,attending
+REF.RHEUMATOLOGY,Rheumatology,medical,rheumatologist|rheum|joint specialist,attending
+REF.ENDOCRINOLOGY,Endocrinology,medical,endocrinologist|endo|hormone specialist|diabetes team,attending
+REF.INFECTIOUS_DISEASES,Infectious diseases,medical,ID team|infectious disease specialist|infection service,attending
+REF.RESPIRATORY,Respiratory medicine,medical,pulmonology|chest physician|pulmonologist|chest medicine,attending
+REF.PSYCHIATRY,Psychiatry,medical,psychiatrist|mental health team|liaison psychiatry,attending
+REF.DERMATOLOGY,Dermatology,medical,dermatologist|skin specialist|derm,attending
+REF.ONCOLOGY,Oncology,medical,oncologist|cancer specialist|medical oncology,attending
+REF.OPHTHALMOLOGY,Ophthalmology,surgical,ophthalmologist|eye specialist|eye doctor|ophthal,attending
+REF.ENT,"Ear, nose and throat surgery",surgical,otolaryngology|ENT surgeon|otorhinolaryngology,attending
+REF.GENERAL_SURGERY,General surgery,surgical,surgeon|surgical team|gen surg,attending
+REF.OBSTETRICS_GYNAECOLOGY,Obstetrics and gynaecology,surgical,OBGYN|OB/GYN|gynaecologist|gynecology|obstetrician,attending
+REF.DIETETICS,Dietetics,allied,dietitian|dietician|nutritionist|nutrition team,attending
+REF.PHYSIOTHERAPY,Physiotherapy,allied,physio|physical therapy|rehabilitation,attending

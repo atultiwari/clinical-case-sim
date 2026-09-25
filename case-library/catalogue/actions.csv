@@ -1,0 +1,117 @@
+id,name,category,synonyms,specialty_scope
+RX.CHELATION.SUCCIMER_ORAL,Oral succimer (DMSA),chelation,DMSA|succimer|dimercaptosuccinic acid|oral chelation,attending
+RX.CHELATION.EDTA_IV,Intravenous calcium disodium EDTA,chelation,CaNa2EDTA|EDTA chelation|edetate calcium disodium|IV EDTA,attending
+RX.CHELATION.DIMERCAPROL,Dimercaprol (BAL),chelation,BAL|British anti-Lewisite|IM dimercaprol,attending
+RX.CHELATION.PENICILLAMINE,D-penicillamine,chelation,penicillamine|oral penicillamine|D-pen,attending
+RX.CHELATION.DMPS,Unithiol (DMPS),chelation,DMPS|unithiol|dimercaptopropane sulfonate,attending
+RX.CHELATION.DESFERRIOXAMINE,Desferrioxamine,chelation,deferoxamine|Desferal|iron chelation infusion,attending
+RX.STEROID.HIGH_DOSE,High-dose corticosteroids,steroid,pulse methylprednisolone|IV methylpred|high dose steroids|prednisolone 1 mg/kg,attending
+RX.STEROID.PREDNISOLONE,"Oral prednisolone, standard dose",steroid,prednisolone|oral steroids|pred|prednisone,attending
+RX.STEROID.HYDROCORTISONE,Intravenous hydrocortisone,steroid,IV hydrocortisone|stress dose steroids|hydrocort,attending
+RX.STEROID.DEXAMETHASONE,Dexamethasone,steroid,dexa|dexona|IV dexamethasone,attending
+RX.IMMUNO.RITUXIMAB,Rituximab,immunosuppression,anti-CD20|RTX|rituximab infusion,attending
+RX.IMMUNO.ESCALATE,Escalate immunosuppression,immunosuppression,step up immunosuppression|increase immunosuppressive therapy|second-line immunosuppression|add steroid-sparing agent,attending
+RX.IMMUNO.IVIG,Intravenous immunoglobulin,immunosuppression,IVIG|IV Ig|immunoglobulin infusion|IV immunoglobulin,attending
+RX.IMMUNO.PLASMA_EXCHANGE,Plasma exchange,immunosuppression,PLEX|plasmapheresis|therapeutic plasma exchange|TPE,attending
+RX.IMMUNO.CYCLOPHOSPHAMIDE,Cyclophosphamide,immunosuppression,IV cyclophosphamide|cyclo|CYC pulse,attending
+RX.IMMUNO.AZATHIOPRINE,Azathioprine,immunosuppression,AZA|Imuran|azathioprine tablets,attending
+RX.IMMUNO.MYCOPHENOLATE,Mycophenolate mofetil,immunosuppression,MMF|mycophenolate|CellCept,attending
+RX.IMMUNO.METHOTREXATE,Methotrexate,immunosuppression,MTX|weekly methotrexate|oral methotrexate,attending
+RX.IMMUNO.STOP,Stop or reduce immunosuppression,immunosuppression,withhold immunosuppressants|taper immunosuppression|reduce immunosuppressive dose,attending
+RX.IRON.ORAL,Oral iron,haematinic,ferrous sulphate|iron tablets|ferrous sulfate|oral iron supplement,attending
+RX.IRON.IV,Intravenous iron,haematinic,IV iron|ferric carboxymaltose|iron sucrose|FCM,attending
+RX.VITAMIN.B12,Vitamin B12 replacement,haematinic,hydroxocobalamin injections|cyanocobalamin|B12 injections|methylcobalamin,attending
+RX.VITAMIN.FOLATE,Folic acid,haematinic,folate tablets|folic acid supplement|folate replacement,attending
+RX.VITAMIN.THIAMINE,Thiamine,haematinic,vitamin B1|Pabrinex|IV thiamine,attending
+RX.VITAMIN.K,Vitamin K,haematinic,phytomenadione|vitamin K1|IV vitamin K,attending
+RX.VITAMIN.PYRIDOXINE,Pyridoxine,haematinic,vitamin B6|pyridoxine tablets|B6 supplement,attending
+RX.VITAMIN.D,Vitamin D replacement,haematinic,cholecalciferol|vitamin D3|colecalciferol,attending
+RX.MINERAL.COPPER,Copper replacement,haematinic,copper supplement|oral copper|copper gluconate,attending
+RX.MINERAL.ZINC,Zinc supplement,haematinic,zinc sulphate|zinc sulfate|oral zinc,attending
+RX.TRANSFUSION.RED_CELLS,Red cell transfusion,transfusion,blood transfusion|PRBC|packed red cells|PCV transfusion,attending
+RX.TRANSFUSION.PLATELETS,Platelet transfusion,transfusion,platelets|RDP|SDP|platelet concentrate,attending
+RX.TRANSFUSION.FFP,Fresh frozen plasma,transfusion,FFP|plasma transfusion|fresh plasma,attending
+RX.TRANSFUSION.CRYO,Cryoprecipitate,transfusion,cryo|cryoprecipitate transfusion|fibrinogen replacement,attending
+RX.TRANSFUSION.WARMED_BLOOD,Transfuse through a blood warmer,transfusion,warmed blood|blood warmer|warm transfusion,attending
+RX.ANTIBIOTIC.EMPIRICAL_BROAD,Empirical broad-spectrum antibiotics,antimicrobial,broad-spectrum antibiotics|piperacillin-tazobactam|sepsis antibiotics|empirical IV antibiotics,attending
+RX.ANTIBIOTIC.PENICILLIN,Penicillin-class antibiotic,antimicrobial,amoxicillin|co-amoxiclav|penicillin|benzylpenicillin,attending
+RX.ANTIBIOTIC.CEPHALOSPORIN,Cephalosporin,antimicrobial,ceftriaxone|cefotaxime|third-generation cephalosporin,attending
+RX.ANTIBIOTIC.CARBAPENEM,Carbapenem,antimicrobial,meropenem|imipenem|ertapenem,attending
+RX.ANTIBIOTIC.MACROLIDE,Macrolide,antimicrobial,azithromycin|clarithromycin|erythromycin,attending
+RX.ANTIBIOTIC.DOXYCYCLINE,Doxycycline,antimicrobial,doxy|tetracycline-class antibiotic|oral doxycycline,attending
+RX.ANTIBIOTIC.GLYCOPEPTIDE,Glycopeptide,antimicrobial,vancomycin|teicoplanin|MRSA cover,attending
+RX.ANTIBIOTIC.FLUOROQUINOLONE,Fluoroquinolone,antimicrobial,ciprofloxacin|levofloxacin|quinolone,attending
+RX.ANTIBIOTIC.METRONIDAZOLE,Metronidazole,antimicrobial,flagyl|anaerobic cover|IV metronidazole,attending
+RX.ANTIVIRAL.ACICLOVIR,Aciclovir,antimicrobial,acyclovir|IV aciclovir|antiviral for herpes,attending
+RX.ANTIVIRAL.GANCICLOVIR,Ganciclovir or valganciclovir,antimicrobial,ganciclovir|valganciclovir|CMV treatment,attending
+RX.ANTIVIRAL.HEPATITIS_B,Hepatitis B antiviral,antimicrobial,tenofovir|entecavir|HBV antiviral,attending
+RX.ANTIVIRAL.OSELTAMIVIR,Oseltamivir,antimicrobial,Tamiflu|influenza antiviral|oseltamivir capsules,attending
+RX.ANTIMALARIAL.ARTESUNATE,Artesunate,antimicrobial,IV artesunate|artemisinin|ACT antimalarial,attending
+RX.ANTIMALARIAL.CHLOROQUINE,Chloroquine with primaquine,antimicrobial,chloroquine|primaquine|vivax treatment,attending
+RX.ANTITB.FIRST_LINE,First-line antituberculous therapy,antimicrobial,ATT|HRZE|anti-TB treatment|DOTS|antitubercular therapy,attending
+RX.ANTIFUNGAL.AMPHOTERICIN,Amphotericin B,antimicrobial,ampho B|liposomal amphotericin|IV antifungal,attending
+RX.ANTIFUNGAL.AZOLE,Azole antifungal,antimicrobial,fluconazole|voriconazole|itraconazole,attending
+RX.ANTIDOTE.NAC,N-acetylcysteine,antidote,NAC|acetylcysteine|Parvolex|paracetamol antidote,attending
+RX.ANTIDOTE.ATROPINE_PRALIDOXIME,Atropine and pralidoxime,antidote,atropine|PAM|2-PAM|oxime therapy,attending
+RX.ANTIDOTE.NALOXONE,Naloxone,antidote,Narcan|opioid reversal|IV naloxone,attending
+RX.ANTIDOTE.CHARCOAL,Activated charcoal,antidote,charcoal|single-dose activated charcoal|gut decontamination,attending
+RX.ANTIDOTE.HYDROXOCOBALAMIN,Hydroxocobalamin (cyanide antidote),antidote,Cyanokit|cyanide antidote|high-dose IV hydroxocobalamin,attending
+RX.ANTIDOTE.FLUMAZENIL,Flumazenil,antidote,benzodiazepine reversal|Anexate|IV flumazenil,attending
+RX.ANTIDOTE.WHOLE_BOWEL_IRRIGATION,Whole bowel irrigation,antidote,WBI|polyethylene glycol bowel irrigation|bowel washout,attending
+RX.ANTIDOTE.HAEMIN,Intravenous haemin,antidote,hemin|haem arginate|IV heme,attending
+RX.ANALGESIA.SIMPLE,Simple analgesia,supportive,paracetamol|acetaminophen|painkillers|PCM,attending
+RX.ANALGESIA.OPIOID,Opioid analgesia,supportive,morphine|tramadol|strong painkillers,attending
+RX.ANTIEMETIC,Antiemetic,supportive,ondansetron|metoclopramide|anti-sickness medicine,attending
+RX.GI.PPI,Proton pump inhibitor,supportive,PPI|pantoprazole|omeprazole|acid suppression,attending
+RX.GI.LAXATIVE,Laxatives,supportive,lactulose|polyethylene glycol|stool softener|Movicol,attending
+RX.FLUIDS.IV,Intravenous fluids,supportive,IV fluids|normal saline|Ringer lactate|IVF|fluid resuscitation,attending
+RX.FLUIDS.ELECTROLYTE_REPLACEMENT,Electrolyte replacement,supportive,potassium replacement|magnesium replacement|IV KCl|electrolyte correction,attending
+RX.ENDO.INSULIN,Insulin,supportive,insulin infusion|sliding scale|VRIII|subcutaneous insulin,attending
+RX.ENDO.IV_DEXTROSE,Intravenous dextrose,supportive,glucose infusion|D10|IV glucose|dextrose,attending
+RX.CARDIO.ANTICOAGULATION,Anticoagulation,supportive,heparin|LMWH|enoxaparin|blood thinners|DOAC,attending
+RX.CARDIO.ANTIPLATELET,Antiplatelet therapy,supportive,aspirin|clopidogrel|DAPT,attending
+RX.CARDIO.DIURETIC,Diuretic,supportive,furosemide|frusemide|Lasix|water tablets,attending
+RX.CARDIO.ANTIHYPERTENSIVE,Antihypertensive,supportive,amlodipine|blood pressure tablets|BP medicine|labetalol,attending
+RX.CARDIO.BETA_BLOCKER,Beta-blocker,supportive,metoprolol|bisoprolol|propranolol,attending
+RX.RESP.BRONCHODILATOR,Bronchodilator,supportive,salbutamol|albuterol|nebulisation|inhaler,attending
+RX.RESP.OXYGEN,Supplemental oxygen,supportive,O2|oxygen therapy|nasal prongs oxygen|face mask oxygen,attending
+RX.RESP.NIV,Non-invasive ventilation,supportive,NIV|BiPAP|CPAP,attending
+RX.RESP.INTUBATION,Intubation and mechanical ventilation,supportive,intubate|ventilator|mechanical ventilation|ETT,attending
+RX.NEURO.ANTIEPILEPTIC,Antiepileptic,supportive,levetiracetam|phenytoin|anti-seizure medicine|lorazepam,attending
+RX.HAEM.FOLATE_HAEMOLYSIS,Folic acid in haemolysis,haematinic,folic acid for hemolysis|folate cover|folate in haemolytic states,attending
+RX.HAEM.TRANEXAMIC,Tranexamic acid,supportive,TXA|tranexamic|antifibrinolytic,attending
+RX.HAEM.EPO,Erythropoiesis-stimulating agent,supportive,erythropoietin|EPO injection|darbepoetin|ESA,attending
+RX.RENAL.HAEMODIALYSIS,Haemodialysis,supportive,hemodialysis|HD|dialysis|kidney machine,attending
+RX.GI.ENDOSCOPIC_REMOVAL,Endoscopic removal of ingested material,surgical,endoscopic retrieval|remove foreign body endoscopically|endoscopic extraction,attending
+RX.SURGERY.SPLENECTOMY,Splenectomy,surgical,remove the spleen|laparoscopic splenectomy|spleen removal,attending
+RX.SURGERY.LAPAROTOMY,Laparotomy,surgical,exploratory laparotomy|ex lap|open abdominal surgery,attending
+RX.SURGERY.CHOLECYSTECTOMY,Cholecystectomy,surgical,lap chole|gallbladder removal|laparoscopic cholecystectomy,attending
+RX.SURGERY.APPENDICECTOMY,Appendicectomy,surgical,appendectomy|lap appendicectomy|remove appendix,attending
+ACT.STOP_SUSPECTED_SOURCE,Stop exposure to the suspected source,public health,remove from exposure|stop the source|avoid the exposure|stop taking the product,attending
+ACT.STOP_CULPRIT_DRUG,Stop the suspected culprit drug,public health,withdraw offending drug|stop the medicine|discontinue culprit medication,attending
+ACT.NOTIFY_PUBLIC_HEALTH,Notify public health,public health,inform public health authorities|notify health department|IDSP notification|report to public health,attending
+ACT.SCREEN_CONTACTS,Screen household and exposed contacts,public health,contact screening|test family members|screen co-exposed people|contact tracing,attending
+ACT.TEST_PRODUCT,Send the suspected product for analysis,public health,test the supplement|product analysis|send sample of medicine for testing,attending
+ACT.REPORT_ADVERSE_EVENT,Report an adverse drug reaction,public health,pharmacovigilance report|PvPI report|yellow card|ADR reporting,attending
+ACT.OCCUPATIONAL_REVIEW,Occupational health review,public health,workplace assessment|occupational exposure review|refer to occupational health,attending
+ACT.ISOLATE,Isolate the patient,public health,isolation|barrier nursing|side room|infection control precautions,attending
+ACT.REPEAT_BLOOD_LEAD,Repeat blood lead level,monitoring,recheck blood lead|follow-up lead level|repeat BLL,attending
+ACT.REPEAT_BLOODS,Repeat blood tests,monitoring,recheck bloods|repeat labs|serial blood tests,attending
+ACT.MONITOR_OBS,Monitor observations,monitoring,vital signs monitoring|regular obs|NEWS monitoring|TPR chart,attending
+ACT.FLUID_BALANCE,Fluid balance chart,monitoring,input-output chart|I/O charting|strict intake and output,attending
+ACT.CARDIAC_MONITORING,Cardiac monitoring,monitoring,telemetry|continuous ECG monitoring|cardiac monitor,attending
+ACT.BLOOD_GLUCOSE_MONITORING,Capillary blood glucose monitoring,monitoring,CBG monitoring|GRBS|sugar charting|finger-prick glucose,attending
+ACT.ADMIT_WARD,Admit to the ward,disposition,admit|inpatient admission|admit to medicine ward,attending
+ACT.ADMIT_ICU,Admit to intensive care,disposition,ICU admission|critical care|HDU|MICU,attending
+ACT.DISCHARGE_FOLLOW_UP,Discharge with follow-up,disposition,discharge|send home with review|OPD follow-up|outpatient review,attending
+ACT.NIL_BY_MOUTH,Nil by mouth,supportive,NBM|NPO|keep fasting,attending
+ACT.DIETARY_ADVICE,Dietary advice,supportive,diet counselling|nutrition advice|dietitian input,attending
+ACT.SAFETY_NETTING,Safety-netting advice,communication,return precautions|red flag advice|when to come back,attending
+ACT.COUNSEL_PATIENT,Counsel the patient,communication,explain to patient|patient education|counselling,attending
+ACT.OBTAIN_CONSENT,Obtain informed consent,communication,consent|take consent|informed consent,attending
+ACT.REVIEW_MEDICATION,Medication review,communication,med rec|medicines reconciliation|review drug chart,attending
+ACT.CATHETERISE,Insert a urinary catheter,supportive,Foley catheter|catheterize|urinary catheterisation,attending
+ACT.NG_TUBE,Insert a nasogastric tube,supportive,NG tube|Ryles tube|nasogastric intubation,attending
+ACT.VTE_PROPHYLAXIS,Thromboprophylaxis,supportive,VTE prophylaxis|DVT prophylaxis|prophylactic heparin,attending
+ACT.VACCINATE,Vaccination,supportive,immunisation|immunization|vaccines|pneumococcal vaccine,attending
+ACT.PALLIATIVE_CARE,Palliative care,supportive,comfort care|end-of-life care|symptom control,attending

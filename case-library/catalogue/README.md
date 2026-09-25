@@ -50,5 +50,8 @@ All files are UTF-8 CSV with a header row. Lists inside a cell are separated by 
 | Haematology | Bain BJ, Bates I, Laffan MA (eds). *Dacie and Lewis Practical Haematology*, 12th ed. Elsevier, 2017 |
 | Chemistry, endocrinology, toxicology | Rifai N (ed). *Tietz Textbook of Laboratory Medicine*, 7th ed. Elsevier, 2022 |
 | Immunology, serology, microbiology | *Tietz Textbook of Laboratory Medicine*, 7th ed., unless the result is qualitative |
+| Bedside physiology and procedures (ECG, echocardiogram, spirometry, lumbar puncture, endoscopy) | Loscalzo J et al. (eds). *Harrison's Principles of Internal Medicine*, 21st ed. McGraw Hill, 2022 |
+
+Drug and toxin levels for substances a person is not normally exposed to (paracetamol, salicylate, ethanol, digoxin, lithium) are qualitative with the normal result `Not detected`, so the normal generator never invents a level for a patient who is not taking them.
 
 These are open item O-1 of SPEC §5.3: Atul reviews them once in L0.5.
