@@ -13,6 +13,7 @@ CASE_LIBRARY = Path(__file__).resolve().parents[1]
 ENV_KEYS = [
     "CASE_VAULT_DB_URL_READONLY",
     "CASE_VAULT_DB_URL_BACKUP",
+    "CASE_VAULT_DB_URL_OWNER",
     "CASE_VAULT_BACKUP_DIR",
     "NCBI_API_KEY",
     "NCBI_EMAIL",

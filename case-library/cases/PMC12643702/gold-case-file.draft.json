@@ -1,0 +1,865 @@
+{
+ "_status_note": "DRAFT gold case file (task L1.3). The Case Reviewer must verify every fact against the article before it is frozen as PMC12643702@v1. Units are SI with the printed value in each fact's note. The in-hospital INR series (S02) was read from Figure 2's data labels.",
+ "schema_version": "0.2",
+ "case_id": "PMC12643702",
+ "version": 1,
+ "status": "draft",
+ "case": {
+  "slug": "c-6e52g",
+  "display_title": "Two weeks of bleeding gums and nosebleeds",
+  "display_tags": [
+   "bleeding gums",
+   "nosebleeds",
+   "haematuria"
+  ],
+  "specialty": "haematology",
+  "lab_profile": {
+   "sex": "M",
+   "age_years": 37,
+   "components": {
+    "CMP.HB": {
+     "low": 130.0,
+     "high": 180.0,
+     "unit": "g/L"
+    },
+    "CMP.WBC": {
+     "low": 4.0,
+     "high": 10.0,
+     "unit": "x10^9/L"
+    },
+    "CMP.PLT": {
+     "low": 150.0,
+     "high": 410.0,
+     "unit": "x10^9/L"
+    },
+    "CMP.PT": {
+     "low": 11.0,
+     "high": 14.0,
+     "unit": "s"
+    },
+    "CMP.INR": {
+     "low": 0.8,
+     "high": 1.2,
+     "unit": "ratio"
+    },
+    "CMP.APTT": {
+     "low": 26.0,
+     "high": 36.0,
+     "unit": "s"
+    },
+    "CMP.FIBRINOGEN": {
+     "low": 1.5,
+     "high": 4.0,
+     "unit": "g/L"
+    },
+    "CMP.D_DIMER": {
+     "low": 0.0,
+     "high": 0.5,
+     "unit": "mg/L FEU",
+     "display": "<0.50"
+    },
+    "CMP.F2": {
+     "low": 50.0,
+     "high": 150.0,
+     "unit": "IU/dL"
+    },
+    "CMP.F5": {
+     "low": 50.0,
+     "high": 150.0,
+     "unit": "IU/dL"
+    },
+    "CMP.F7": {
+     "low": 50.0,
+     "high": 150.0,
+     "unit": "IU/dL"
+    },
+    "CMP.F9": {
+     "low": 50.0,
+     "high": 150.0,
+     "unit": "IU/dL"
+    },
+    "CMP.F10": {
+     "low": 50.0,
+     "high": 150.0,
+     "unit": "IU/dL"
+    }
+   }
+  }
+ },
+ "source": {
+  "title": "Superwarfarin Rodenticide Poisoning due to Consumption of Exotic Animals: A Case Report",
+  "authors": [
+   "Batoul Sadek",
+   "Cassandra Dasmarinas",
+   "Ishita Patel",
+   "Lynda Bowman",
+   "Peter Xie",
+   "Eric Irons",
+   "Albert Jang"
+  ],
+  "journal": "Case Reports in Hematology",
+  "volume": "2025",
+  "article_number": "9981550",
+  "published": "2025-11-17",
+  "doi": "10.1155/crh/9981550",
+  "pmcid": "PMC12643702",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12643702/",
+  "licence": "CC BY 4.0",
+  "production_ok": true,
+  "public_release_ok": true,
+  "licence_verified": "2026-09-25 from the JATS <license> element (cases/BATCH1.md)",
+  "attribution": "Adapted from Sadek B, Dasmarinas C, Patel I, Bowman L, Xie P, Irons E, Jang A. Superwarfarin Rodenticide Poisoning due to Consumption of Exotic Animals: A Case Report. Case Rep Hematol 2025: 9981550. doi:10.1155/crh/9981550. Licensed CC BY 4.0. Changes: restructured into atomic facts; diagnosis redacted from player-facing text; simulated findings added where marked."
+ },
+ "clock": {
+  "day_0": null,
+  "day_0_label": "Admission",
+  "semantics": "Integer day relative to admission. day = null means the fact is valid at any point in the admission (the article gives no date)."
+ },
+ "vignette": "A 37-year-old man with poorly controlled type 2 diabetes and chronic hepatitis B on tenofovir presents with two weeks of intermittent bleeding from the gums and nose and two days of blood in his urine.",
+ "opening_statement_lay": "For two weeks my gums and my nose keep bleeding, on and off, and for the last two days there's been blood in my urine. The tablets the dentist gave me didn't help.",
+ "facts": [
+  {
+   "id": "H01",
+   "category": "history",
+   "item": "Age, sex and background",
+   "release_text": "37-year-old man, originally from China, who has lived in the United States for 15 years.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case study"
+  },
+  {
+   "id": "H02",
+   "category": "history",
+   "item": "Past medical history",
+   "release_text": "Type 2 diabetes mellitus, poorly controlled. Chronic hepatitis B, treated with tenofovir.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.PMH.MEDICAL",
+    "HX.PMH.CHRONIC_CONDITIONS"
+   ]
+  },
+  {
+   "id": "H03",
+   "category": "history",
+   "item": "Presenting complaint: mucosal bleeding",
+   "release_text": "Intermittent bleeding from the gums and nose for two weeks.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.PC.ONSET_DURATION",
+    "HX.ENT.GUMS",
+    "HX.ENT.NOSE_THROAT",
+    "HX.GEN.BRUISING_BLEEDING"
+   ]
+  },
+  {
+   "id": "H04",
+   "category": "history",
+   "item": "Presenting complaint: blood in the urine",
+   "release_text": "Blood in the urine for two days.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.GU.URINE_COLOUR",
+    "HX.PC.ASSOCIATED"
+   ]
+  },
+  {
+   "id": "H05",
+   "category": "history",
+   "item": "Care before admission",
+   "release_text": "Seen by his primary care physician two weeks ago and referred urgently to gastroenterology for a suspected bleeding lesion of the upper gastrointestinal tract. After the endoscopy he was referred to a dentist, who prescribed oral tranexamic acid for two days, without improvement. The blood in the urine began after that.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.PC.TREATMENT_SO_FAR",
+    "HX.PC.PROGRESSION"
+   ]
+  },
+  {
+   "id": "H06",
+   "category": "history",
+   "item": "Previous records: outpatient endoscopy",
+   "release_text": "Upper gastrointestinal endoscopy before admission: no oesophageal or gastric bleeding; bleeding was seen in the oral cavity.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.RECORDS.PREVIOUS",
+    "HX.RECORDS.REFERRAL_LETTER"
+   ]
+  },
+  {
+   "id": "H07",
+   "category": "history",
+   "item": "Recent illness and contacts",
+   "release_text": "No recent illness, and no contacts with similar symptoms.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.GEN.RECENT_INFECTION",
+    "HX.EXPOSURE.SICK_CONTACTS",
+    "HX.FAMILY.SIMILAR_ILLNESS",
+    "HX.EXPOSURE.OTHERS_EXPOSED"
+   ]
+  },
+  {
+   "id": "H08",
+   "category": "history",
+   "item": "Patient's concern",
+   "release_text": "Worried that the bleeding is related to drinking alcohol at a party several weeks ago.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.PC.PATIENT_CONCERNS"
+   ]
+  },
+  {
+   "id": "H09",
+   "category": "history",
+   "item": "Previous bleeding history",
+   "release_text": "No previous bleeding problems: no earlier bleeding from the mouth or nose, no excessive bleeding after injuries or surgery, and no episodes of joint swelling and pain.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.PC.PREVIOUS_EPISODES",
+    "HX.MSK.JOINT_PAIN"
+   ]
+  },
+  {
+   "id": "H10",
+   "category": "history",
+   "item": "Anticoagulant use",
+   "release_text": "Takes no anticoagulant (blood-thinning) medicine, and no family member takes warfarin.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study; Discussion of the work-up",
+   "released_by": [
+    "HX.MEDS.ANTICOAGULANTS"
+   ]
+  },
+  {
+   "id": "H11",
+   "category": "history",
+   "item": "Smoking",
+   "release_text": "Current tobacco smoker.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.SOCIAL.SMOKING"
+   ]
+  },
+  {
+   "id": "H12",
+   "category": "history",
+   "item": "Alcohol",
+   "release_text": "Drinks alcohol occasionally.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.SOCIAL.ALCOHOL"
+   ]
+  },
+  {
+   "id": "H13",
+   "category": "history",
+   "item": "Diet",
+   "release_text": "Eats mostly leftover meats, with very few vegetables or fruit.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.SOCIAL.DIET",
+    "HX.SOCIAL.VEGETARIAN"
+   ]
+  },
+  {
+   "id": "H14",
+   "category": "history",
+   "item": "Occupation",
+   "release_text": "Works as a chef in a Chinese restaurant.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.EXPOSURE.OCCUPATION"
+   ]
+  },
+  {
+   "id": "H15",
+   "category": "history",
+   "item": "Travel",
+   "release_text": "Returned two months ago from a month-long trip to China.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.SOCIAL.TRAVEL"
+   ]
+  },
+  {
+   "id": "H16",
+   "category": "history",
+   "item": "Family history",
+   "release_text": "His sister has systemic lupus erythematosus. No family history of bleeding disorders.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.FAMILY.GENERAL",
+    "HX.FAMILY.AUTOIMMUNE",
+    "HX.FAMILY.BLOOD"
+   ]
+  },
+  {
+   "id": "H17",
+   "category": "history",
+   "item": "Living situation",
+   "release_text": "Lives with his sister.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.SOCIAL.LIVING"
+   ]
+  },
+  {
+   "id": "H18",
+   "category": "history",
+   "item": "Rat poison at home or work",
+   "release_text": "Firmly denies using rat poison at home or at work; there have been no problems with rats or mice at either place.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.EXPOSURE.RODENTICIDE",
+    "HX.EXPOSURE.TOXINS"
+   ]
+  },
+  {
+   "id": "H19",
+   "category": "history",
+   "item": "Unusual foods eaten abroad (hidden until asked specifically)",
+   "release_text": "While in China he ate rodents and other exotic animals bought at a street market.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "HX.EXPOSURE.FOOD"
+   ],
+   "pivotal": true,
+   "release_condition": {
+    "requires_topics": [
+     "unusual, exotic or wild-animal meat",
+     "food eaten while travelling abroad",
+     "street-market or bush meat"
+    ],
+    "note": "A general diet question returns H13 only, and a toxin or pesticide question returns H18. In the article he recalled eating rodents only on further questioning, after the rodenticide panel was positive."
+   }
+  },
+  {
+   "id": "E01",
+   "category": "exam",
+   "item": "Mouth and nose",
+   "release_text": "Dried blood on the lips and at the left nostril, with some oozing from both sites.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "EX.ORAL.CAVITY",
+    "EX.ENT.NOSE"
+   ]
+  },
+  {
+   "id": "E02",
+   "category": "exam",
+   "item": "Vital signs",
+   "release_text": "Blood pressure 106/71 mmHg; pulse 86/min; temperature 36.6 °C; respiratory rate 16/min; SpO2 96%.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case study",
+   "released_by": [
+    "EX.GEN.VITALS"
+   ]
+  }
+ ],
+ "series": [
+  {
+   "id": "S01",
+   "item": "International normalised ratio",
+   "code": null,
+   "unit": "ratio",
+   "ref_range": "0.8-1.2",
+   "points": [
+    {
+     "day": 0,
+     "value": "Too high to calculate",
+     "flag": "H"
+    },
+    {
+     "day": 11,
+     "value": 2.04,
+     "flag": "H"
+    }
+   ],
+   "note": "Day 0: 'incalculably high INR' with PT 112 s (text; not plotted in Figure 2). Day 11: the discharge value, 2.04 in the text and the last point of Figure 2 ('Day 11 at 5:00').",
+   "source_locator": "Case study; Figure 2",
+   "catalogue_ref": "CMP.INR"
+  },
+  {
+   "id": "S02",
+   "item": "International normalised ratio (in-hospital, Figure 2)",
+   "code": null,
+   "unit": "ratio",
+   "ref_range": "0.8-1.2",
+   "points": [
+    {
+     "day": 1,
+     "value": 8.57,
+     "flag": "H"
+    },
+    {
+     "day": 2,
+     "value": 3.37,
+     "flag": "H"
+    },
+    {
+     "day": 3,
+     "value": 6.31,
+     "flag": "H"
+    },
+    {
+     "day": 4,
+     "value": 3.28,
+     "flag": "H"
+    },
+    {
+     "day": 5,
+     "value": 7.11,
+     "flag": "H"
+    },
+    {
+     "day": 6,
+     "value": 2.51,
+     "flag": "H"
+    },
+    {
+     "day": 7,
+     "value": 2.37,
+     "flag": "H"
+    },
+    {
+     "day": 8,
+     "value": 2.27,
+     "flag": "H"
+    },
+    {
+     "day": 9,
+     "value": 2.03,
+     "flag": "H"
+    },
+    {
+     "day": 10,
+     "value": 1.91,
+     "flag": "H"
+    }
+   ],
+   "note": "Read from the figure image (data labels). Figure 2 plots 18 INR results against 'Day N at time'; figure Day N is taken as case day N (admission, day 0, carries the unplotted incalculable INR). One point per day: the day's last reading. All readings: Day 1 at 12:00 p.m. 7.00; Day 1 at 7:00 p.m. 8.57; Day 2 2:00 a.m. 3.37; Day 3 at 4:00 a.m. 6.31; Day 4 at 1:00 p.m. 5.36; Day 4 at 7:00 p.m. 3.28; Day 5 1:00 a.m. 2.37; Day 5 2:00 a.m. 7.11; Day 6 at 3:00 a.m. 7.23; Day 6 at 7:00 p.m. 2.51; Day 7 at 3:30 a.m. 4.34; Day 7 at 10:30 3.96; Day 7 at 8:30 p.m. 2.37; Day 8 at 1:30 a.m. 1.90; Day 8 at 3:00 p.m. 2.27; Day 9 at 2:00 a.m. 2.03; Day 10 at 5:30 a.m. 1.91; Day 11 at 5:00 2.04.",
+   "source_locator": "Figure 2",
+   "catalogue_ref": "CMP.INR"
+  }
+ ],
+ "single_results": [
+  {
+   "id": "L01",
+   "item": "White cell count",
+   "code": null,
+   "value": 6.6,
+   "unit": "x10^9/L",
+   "ref_range": "4.0-10.0",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.WBC",
+   "note": "printed 6.6 K/uL"
+  },
+  {
+   "id": "L02",
+   "item": "Haemoglobin",
+   "code": null,
+   "value": 72,
+   "unit": "g/L",
+   "ref_range": "130-180",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.HB",
+   "flag": "L",
+   "note": "printed 7.2 g/dL"
+  },
+  {
+   "id": "L03",
+   "item": "Platelet count",
+   "code": null,
+   "value": 226,
+   "unit": "x10^9/L",
+   "ref_range": "150-410",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.PLT",
+   "note": "printed 226 K/uL"
+  },
+  {
+   "id": "L04",
+   "item": "Prothrombin time",
+   "code": null,
+   "value": 112,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.PT",
+   "flag": "H"
+  },
+  {
+   "id": "L05",
+   "item": "Activated partial thromboplastin time",
+   "code": null,
+   "value": 112,
+   "unit": "s",
+   "ref_range": "26.0-36.0",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.APTT",
+   "flag": "H"
+  },
+  {
+   "id": "L06",
+   "item": "Fibrinogen",
+   "code": null,
+   "value": 4.35,
+   "unit": "g/L",
+   "ref_range": "1.5-4.0",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.FIBRINOGEN",
+   "flag": "H",
+   "note": "printed 435 mg/dL"
+  },
+  {
+   "id": "L07",
+   "item": "D-dimer",
+   "code": null,
+   "value": "<0.20",
+   "unit": "mg/L FEU",
+   "ref_range": "<0.50",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.D_DIMER",
+   "note": "printed < 200 ng/mL; fibrinogen-equivalent units assumed"
+  },
+  {
+   "id": "L08",
+   "item": "Factor II activity",
+   "code": null,
+   "value": 4,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.F2",
+   "flag": "L",
+   "note": "printed 4%"
+  },
+  {
+   "id": "L09",
+   "item": "Factor VII activity",
+   "code": null,
+   "value": "<1",
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.F7",
+   "flag": "L",
+   "note": "printed < 1%"
+  },
+  {
+   "id": "L10",
+   "item": "Factor IX activity",
+   "code": null,
+   "value": 5,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.F9",
+   "flag": "L",
+   "note": "printed 5%"
+  },
+  {
+   "id": "L11",
+   "item": "Factor X activity",
+   "code": null,
+   "value": 1,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.F10",
+   "flag": "L",
+   "note": "printed 1%"
+  },
+  {
+   "id": "L12",
+   "item": "Factor V activity",
+   "code": null,
+   "value": 75,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "day": 0,
+   "source_locator": "Case study",
+   "catalogue_ref": "CMP.F5",
+   "note": "printed 75%"
+  },
+  {
+   "id": "L13",
+   "item": "Anticoagulant rodenticide panel",
+   "code": null,
+   "value": "Positive for brodifacoum (qualitative).",
+   "unit": "",
+   "ref_range": "Not detected",
+   "day": null,
+   "source_locator": "Case study (anticoagulant poisoning panel)",
+   "catalogue_ref": "CMP.ANTICOAG_RODENTICIDE_SCREEN",
+   "flag": "H",
+   "reveals_dx": true,
+   "pivotal": true
+  }
+ ],
+ "raw_material": [],
+ "media": [
+  {
+   "id": "M01",
+   "figure": "Figure 1",
+   "specimen": "Chart of result times",
+   "stain": null,
+   "redacted_caption": "Times at which results were reported, by sequence number.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC12643702/F1.jpg",
+   "raw_fact_id": "S01"
+  },
+  {
+   "id": "M02",
+   "figure": "Figure 2",
+   "specimen": "Chart of INR values",
+   "stain": null,
+   "redacted_caption": "INR values during the admission.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC12643702/F2.jpg",
+   "raw_fact_id": "S01"
+  }
+ ],
+ "gaps": [
+  {
+   "id": "G01",
+   "item": "In-hospital PT and APTT (days 1-11)",
+   "guidance": "Not reported. PT follows Figure 2's INR; APTT falls unevenly from 112 s and is normal by discharge.",
+   "review_required": true
+  },
+  {
+   "id": "G02",
+   "item": "Discharge day",
+   "guidance": "Day 11: Figure 2's last point ('Day 11 at 5:00') is the discharge INR of 2.04.",
+   "review_required": true
+  },
+  {
+   "id": "G03",
+   "item": "Blood count indices and later counts",
+   "guidance": "Normocytic anaemia of blood loss; slow recovery without transfusion.",
+   "review_required": true
+  },
+  {
+   "id": "G04",
+   "item": "Diabetes treatment and control",
+   "guidance": "Poorly controlled type 2 diabetes: metformin with poor adherence; raised glucose and HbA1c; glycosuria.",
+   "review_required": true
+  },
+  {
+   "id": "G05",
+   "item": "Chronic hepatitis B status",
+   "guidance": "HBsAg and anti-HBc reactive; well suppressed on tenofovir; no cirrhosis.",
+   "review_required": true
+  },
+  {
+   "id": "G06",
+   "item": "Factor levels after vitamin K",
+   "guidance": "Partial rise of II, VII, IX and X, in step with the INR.",
+   "review_required": true
+  },
+  {
+   "id": "G07",
+   "item": "Examination beyond the mouth and nose",
+   "guidance": "Pallor; oozing gums; bruising at venepuncture sites; no stigmata of chronic liver disease; no haemarthrosis; no neurological signs.",
+   "review_required": true
+  },
+  {
+   "id": "G08",
+   "item": "Blood group",
+   "guidance": "Group B RhD positive (not reported).",
+   "review_required": true
+  },
+  {
+   "id": "G09",
+   "item": "Urinalysis and renal tract imaging",
+   "guidance": "Macroscopic haematuria with glycosuria on admission, clearing by day 5; normal renal tract imaging.",
+   "review_required": true
+  }
+ ],
+ "ground_truth": {
+  "final_diagnosis": {
+   "text": "Long-acting anticoagulant rodenticide (brodifacoum) poisoning, most likely from eating rodents or other animals bought at a street market in China, causing an acquired vitamin K-dependent coagulopathy with gum and nose bleeding and haematuria",
+   "icd10": [
+    "T60.4",
+    "D68.4"
+   ],
+   "accepted_synonyms": [
+    "superwarfarin poisoning",
+    "superwarfarin toxicity",
+    "brodifacoum poisoning",
+    "brodifacoum toxicity",
+    "long-acting anticoagulant rodenticide poisoning",
+    "anticoagulant rodenticide poisoning",
+    "LAAR poisoning",
+    "rat poison coagulopathy"
+   ],
+   "leak_terms": [
+    "superwarfarin",
+    "brodifacoum",
+    "bromadiolone",
+    "difenacoum"
+   ]
+  },
+  "secondary_findings": [
+   "Anaemia (haemoglobin 72 g/L) from two weeks of mucosal bleeding and haematuria",
+   "Poorly controlled type 2 diabetes (raised glucose and HbA1c, glycosuria)",
+   "Chronic hepatitis B, suppressed on tenofovir, without cirrhosis: not the cause of the coagulopathy (factor V and fibrinogen normal)"
+  ],
+  "accepted_differential": [
+   "Vitamin K deficiency from poor diet or malabsorption",
+   "Warfarin ingestion (accidental, concealed or malicious)",
+   "Coagulopathy of liver disease (chronic hepatitis B)",
+   "Disseminated intravascular coagulation",
+   "Acquired haemophilia or another acquired factor inhibitor",
+   "Congenital factor deficiency or von Willebrand disease",
+   "Deliberate self-poisoning or poisoning by another person",
+   "Haemorrhagic fever with renal involvement after travel (for example dengue, leptospirosis)"
+  ],
+  "red_herrings": [
+   "chronic hepatitis B",
+   "alcohol at a party several weeks earlier",
+   "upper gastrointestinal endoscopy and dental referral",
+   "sister with systemic lupus erythematosus",
+   "poor diet of leftover meats",
+   "tranexamic acid without effect",
+   "raised fibrinogen"
+  ],
+  "key_discriminators": [
+   "PT and APTT both 112 s with an unmeasurable INR",
+   "factors II, VII, IX and X very low with factor V normal",
+   "normal fibrinogen, D-dimer and platelets",
+   "mixing study corrects",
+   "partial and unstable response to 10 mg doses of vitamin K",
+   "no anticoagulant medicine in the home",
+   "positive anticoagulant rodenticide panel",
+   "rodents eaten at a street market abroad"
+  ],
+  "treatment_given": "Intravenous vitamin K 10 mg: four doses over 48 hours, then 13 more doses during the admission; bleeding stopped, APTT normalised and the INR fell to 2.04 at discharge. Discharged on oral vitamin K 100 mg daily with haematology follow-up for INR monitoring.",
+  "outcome": "INR labile between 1.00 and 1.91 over the next three months; 0.94 four months after discharge on oral vitamin K 100 mg daily. No further bleeding.",
+  "must_do": [
+   "Give vitamin K promptly (intravenously while bleeding) for bleeding with a markedly prolonged PT and APTT",
+   "Define the defect: vitamin K-dependent factor assays (II, VII, IX, X) with factor V as the control, or at least a mixing study",
+   "Ask about anticoagulant medicines and rat poison at home and at work",
+   "Send an anticoagulant rodenticide panel when no warfarin exposure explains a vitamin K-dependent factor deficiency",
+   "Take a detailed travel and dietary history, including unusual foods eaten abroad",
+   "Plan months of high-dose oral vitamin K with regular INR checks after discharge",
+   "Involve haematology in the work-up and long-term follow-up"
+  ],
+  "must_not_do": [
+   "Treat the bleeding with tranexamic acid alone, without vitamin K",
+   "Discharge without long-term high-dose vitamin K once the INR first improves (long-acting rodenticides persist for months)",
+   "Order a liver or kidney biopsy while the coagulopathy is uncorrected",
+   "Start anticoagulant or antiplatelet drugs, including pharmacological thromboprophylaxis",
+   "Conclude deliberate self-poisoning without first taking a full dietary and travel history"
+  ],
+  "diagnosis_rubric_anchors": {
+   "5": "Long-acting anticoagulant rodenticide poisoning, with eating animals bought at a street market abroad identified as the likely source",
+   "4": "Long-acting anticoagulant rodenticide poisoning, source not identified",
+   "3": "Vitamin K deficiency coagulopathy without naming a long-acting anticoagulant",
+   "2": "Coagulopathy of liver disease, DIC, acquired haemophilia, warfarin over-anticoagulation or deliberate self-poisoning as the final diagnosis",
+   "1": "Unrelated diagnosis, or one that would lead to harm"
+  },
+  "teaching_points": [
+   "A prolonged PT and APTT with normal platelets, fibrinogen and D-dimer, and low factors II, VII, IX and X with a normal factor V, is the signature of vitamin K deficiency or antagonism rather than liver disease or DIC.",
+   "When no warfarin is involved, a long-acting anticoagulant rodenticide is the leading cause; test for it and ask again about exposure, including food.",
+   "Long-acting rodenticides persist for months: standard vitamin K doses give an incomplete, unstable response, and treatment needs high-dose oral vitamin K for months with INR monitoring.",
+   "Rodenticides accumulate in the food chain: eating rodents, or animals that prey on them, is a possible route of exposure."
+  ]
+ }
+}

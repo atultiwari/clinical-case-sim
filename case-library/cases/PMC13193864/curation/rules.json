@@ -1,0 +1,11 @@
+[
+ {
+  "target": "LAB.CHEM.PSA",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: prostate-specific antigen is not measured for this patient."
+ },
+ {"target": "REF.DENTISTRY", "day_bucket": null, "value": {"text": "No specific dental or oral concerns from our side; happy to review if new problems arise."}, "release_text": "Dentistry: no specific dental or oral concerns from our side; happy to review if new problems arise."}
+]

@@ -1,0 +1,442 @@
+[
+ {
+  "test_item_id": "IMG.XR.CHEST",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "IMG.CT.CHEST",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "LAB.SERO.HIV",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "LAB.MICRO.AFB_SMEAR",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "LAB.MICRO.GENEXPERT",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "LAB.MICRO.SPUTUM_MYCO_CULTURE",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "PROC.RESP.BRONCHOSCOPY",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "LAB.MICRO.BAL_MYCOBACTERIA",
+  "utility": "essential",
+  "rationale": "Negative on day 3; the second lavage (day 25) was smear and PCR positive."
+ },
+ {
+  "test_item_id": "PROC.BIOPSY.LUNG",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "LAB.HAEM.CBC",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FERRITIN",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "PROC.BM.TREPHINE",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "LAB.BM.MYCOBACTERIA",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LFT",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "LAB.MICRO.BLOOD_CULTURE",
+  "utility": "essential",
+  "rationale": "Needed to reach the diagnosis or to find the haemophagocytic process and its trigger."
+ },
+ {
+  "test_item_id": "LAB.CHEM.RENAL",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CRP",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ESR",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LDH",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.SERO.IGRA",
+  "utility": "supportive",
+  "rationale": "Negative here, as in many patients with miliary disease: it cannot exclude it."
+ },
+ {
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.MICRO.URINE_MYCOBACTERIA",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.MICRO.BLOOD_MYCO_CULTURE",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LIPIDS",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FIBRINOGEN",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.HAEM.COAG_SCREEN",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PT_INR",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.HAEM.APTT",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.IMM.SIL2R",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "PROC.BIOPSY.LIVER",
+  "utility": "supportive",
+  "rationale": "Granulomas and negative stains; supportive, and risky later when platelets fall."
+ },
+ {
+  "test_item_id": "LAB.MICRO.CRAG",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.MICRO.HISTOPLASMA_AG",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.MICRO.GALACTOMANNAN",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.MICRO.BETA_D_GLUCAN",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.MOL.PLASMA_MCFDNA",
+  "utility": "supportive",
+  "rationale": "Negative early, positive on repeat (day 25): shows why repeat testing matters."
+ },
+ {
+  "test_item_id": "LAB.MOL.PATHOGEN_NGS",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CHEM.ABG",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LACTATE",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CHEM.ELECTROLYTES",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CHEM.PROCALCITONIN",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "IMG.CT.CTPA",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "PROC.CARD.ECHO",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "PROC.CARD.ECG",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.TBS.BLOOD_GROUP",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.TBS.ANTIBODY_SCREEN",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_B",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_C",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.MOL.EBV_PCR",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.SERO.EBV",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_RDT",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_SMEAR",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.MICRO.SPUTUM_CULTURE",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "PROC.NEURO.LP",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CSF.ANALYSIS",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CSF.CULTURE",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CHEM.GLUCOSE_RANDOM",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CAPILLARY_GLUCOSE",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.CHEM.BONE_PROFILE",
+  "utility": "supportive",
+  "rationale": "Helps the work-up or the safe care of this patient; not decisive on its own."
+ },
+ {
+  "test_item_id": "LAB.MICRO.PJP_PCR",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.IMM.CXCL9",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.CHEM.ACE",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "PROC.RESP.SPIROMETRY",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "IMG.MRI.BRAIN",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "IMG.NM.PET_CT",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.BM.FLOW",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PB_FLOW",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.SERO.BRUCELLA",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.HAEM.RETIC",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.CHEM.IRON_STUDIES",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.IMM.IMMUNOGLOBULINS",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.IMM.SPEP",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.IMM.B2M",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.ENDO.CORTISOL_8AM",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.CHEM.TROPONIN_I",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.CHEM.TROPONIN_T",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.CHEM.BNP",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.CHEM.NT_PROBNP",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.HAEM.D_DIMER",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "IMG.US.DOPPLER_LEGS",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.MICRO.URINE_CULTURE",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "IMG.US.ABDOMEN",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.SERO.CMV",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.SERO.SYPHILIS",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.HAEM.CD4",
+  "utility": "low_yield",
+  "rationale": "Reasonable on an alternative path but adds little here."
+ },
+ {
+  "test_item_id": "LAB.MOL.JCV_PCR",
+  "utility": "unnecessary",
+  "rationale": "No indication in an HIV-negative patient without neurological signs."
+ }
+]

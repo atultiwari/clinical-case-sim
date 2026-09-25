@@ -1,0 +1,297 @@
+[
+ {
+  "id": "CN01",
+  "specialty": "REF.NEPHROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to see a 60-year-old woman with severe oliguric acute kidney injury after an influenza-like illness. We reviewed the Chart so far. The degree of uraemia and the low urine output are indications for urgent haemodialysis. The kidney injury is accompanied by anaemia and markers of haemolysis, so a pigment-related or microangiopathic cause needs to be considered alongside glomerular disease. The cause is not yet clear. Happy to review again with the results.",
+  "recommendations": [
+   "Start haemodialysis now through a temporary dialysis catheter",
+   "Urinalysis with microscopy, urine protein:creatinine ratio and urine myoglobin",
+   "Kidney ultrasound with renal artery and vein Doppler",
+   "Blood film for red cell fragments, ADAMTS13 activity and creatine kinase",
+   "ANA, anti-dsDNA, ANCA, anti-GBM, complement and serum protein studies",
+   "Plan a kidney biopsy once the platelet count and clotting allow, if the cause remains unclear"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a nephrologist with the admission results would dialyse and set out the AKI work-up; a biopsy is what redirected the diagnosis in the article. Names no diagnosis.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN02",
+  "specialty": "REF.NEPHROLOGY",
+  "variant": 2,
+  "condition": {
+   "finding_released": [
+    "FND.HAEMOGLOBIN_CASTS"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now includes the kidney biopsy. It shows haemoglobin cast nephropathy with acute tubular injury, haemosiderin in the tubular epithelium and thrombi in intrarenal veins, with normal glomeruli. This is haem-pigment tubular injury from intravascular haemolysis, not a glomerulonephritis, and the venous thrombi suggest a prothrombotic haemolytic process. Recovery of urine output is encouraging. Happy to review again with the results.",
+  "recommendations": [
+   "Ask again about previous episodes of dark urine",
+   "Look for the cause of intravascular haemolysis with thrombosis with haematology, including high-sensitivity PNH flow cytometry",
+   "Leg vein ultrasound, given the venous thrombi and the raised D-dimer",
+   "Watch the biopsy site: check for a perirenal haematoma before full anticoagulation",
+   "Continue dialysis only as needed while the kidney recovers"
+  ],
+  "origin": "affected",
+  "rationale": "V2: after the biopsy a competent nephrologist names the lesion and asks for the cause of intravascular haemolysis with thrombosis. 'PNH flow cytometry' is the test's catalogue name (allowed).",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN03",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on anaemia with haemolysis and severe acute kidney injury. We reviewed the Chart so far. There is haemolysis with an inappropriately low reticulocyte response, which suggests the marrow is also involved. A positive direct antiglobulin test on its own does not establish autoimmune haemolysis, particularly with C3d and no spherocytes. If the film shows no red cell fragments and ADAMTS13 activity is not severely reduced, thrombotic thrombocytopenic purpura is unlikely. The cause is not yet clear. Happy to review again with the results.",
+  "recommendations": [
+   "Urine haemosiderin, plasma free haemoglobin and haptoglobin to look for intravascular haemolysis",
+   "Red cell eluate and antibody screen",
+   "Ask about previous episodes of dark urine",
+   "Consider PNH flow cytometry, ideally with a high-sensitivity FLAER-based method and before further transfusion",
+   "B12, folate and iron studies",
+   "No rituximab or other escalation of immunosuppression on the DAT alone"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a haematologist with the admission results would separate intravascular from extravascular haemolysis, question the DAT and include the standard screen for complement-mediated haemolysis. Recommendations name tests only.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN04",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 2,
+  "condition": {
+   "finding_released": [
+    "FND.HAEMOGLOBIN_CASTS"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now includes a kidney biopsy with haemoglobin casts, tubular haemosiderin and intrarenal venous thrombi. Chronic intravascular haemolysis with venous thrombosis and a poor marrow response is the key combination here, and the positive DAT is better explained by complement fragments on the red cells than by an autoantibody. A normal conventional CD55/CD59 result does not exclude a small abnormal cell population, especially after transfusion. Happy to review again with the results.",
+  "recommendations": [
+   "High-sensitivity PNH flow cytometry with FLAER on peripheral blood (granulocytes and red cells)",
+   "Leg vein ultrasound; anticoagulate once the biopsy site is stable",
+   "Bone marrow aspirate, trephine and marrow flow cytometry",
+   "Folic acid; transfuse washed red cells only if needed",
+   "Stop steroids if the DAT remains the only reason for them"
+  ],
+  "origin": "affected",
+  "rationale": "V2: with pigment nephropathy and venous thrombosis a competent haematologist asks for the high-sensitivity test and warns about the false-negative conventional result. 'GPI-deficient clone' is avoided as a leak term; 'PNH flow cytometry' is the test's name.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN05",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 3,
+  "condition": {
+   "released_any": [
+    "L51"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now includes high-sensitivity PNH flow cytometry with a granulocyte PNH clone of 98.46% and red cells 3.06% (after transfusion). This result, with intravascular haemolysis, haemoglobin cast nephropathy and venous thrombosis, accounts for the whole picture, including the kidney injury and the positive DAT. Happy to review again with the results.",
+  "recommendations": [
+   "Meningococcal vaccination (with antibiotic cover if treatment cannot wait two weeks) before a complement C5 inhibitor",
+   "Start a complement C5 inhibitor (eculizumab) once vaccinated",
+   "Continue anticoagulation for the iliac vein thrombosis",
+   "Stop steroids",
+   "Folic acid; iron only if iron deficiency develops",
+   "Send PIGA sequencing to support the result, if available"
+  ],
+  "origin": "affected",
+  "rationale": "V3: once the Chart holds the granulocyte clone, the consultant explains it in the test's own terms ('PNH clone' is a synonym of the test in the catalogue, so the leak scan allows it) and recommends the article's treatment in the right order.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN06",
+  "specialty": "REF.RHEUMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked whether a connective tissue disease or vasculitis could explain acute kidney injury with haemolysis and a positive direct antiglobulin test. We reviewed the Chart so far. There are no joint, skin, mucosal or respiratory features of lupus or vasculitis, and if ANA, anti-dsDNA and ANCA are negative with normal complement, a systemic autoimmune cause is unlikely. Happy to review again with the results.",
+  "recommendations": [
+   "Anti-GBM antibodies if not done",
+   "A kidney biopsy will settle whether there is a glomerulonephritis",
+   "No immunosuppression from a rheumatology point of view"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a rheumatologist with negative serology and no systemic features would find no autoimmune disease.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN07",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked whether an infection explains acute kidney injury and haemolysis after influenza A. We reviewed the Chart so far. She is afebrile with a normal procalcitonin and only a slightly raised CRP. There is no travel or animal exposure suggesting leptospirosis or malaria, and the loose stools are not bloody. We see no active infection to explain the picture. Happy to review again with the results.",
+  "recommendations": [
+   "Blood, urine and stool cultures",
+   "Malaria antigen test and leptospira serology only if the exposure history changes",
+   "No antibiotics on current evidence"
+  ],
+  "origin": "affected",
+  "rationale": "V1: an infectious diseases physician would find no active infection; the article reports none.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN08",
+  "specialty": "REF.CARDIOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific cardiac concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN09",
+  "specialty": "REF.GASTROENTEROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific gastrointestinal concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN10",
+  "specialty": "REF.NEUROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific neurological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN11",
+  "specialty": "REF.TOXICOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific toxicological concerns from our side; happy to advise if new information arises.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN12",
+  "specialty": "REF.ENDOCRINOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific endocrine concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN13",
+  "specialty": "REF.RESPIRATORY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific respiratory concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN14",
+  "specialty": "REF.PSYCHIATRY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific psychiatric concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN15",
+  "specialty": "REF.DERMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific skin concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN16",
+  "specialty": "REF.ONCOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific oncological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN17",
+  "specialty": "REF.OPHTHALMOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific eye concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN18",
+  "specialty": "REF.ENT",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific ear, nose or throat concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN19",
+  "specialty": "REF.GENERAL_SURGERY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific surgical concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN20",
+  "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN21",
+  "specialty": "REF.DIETETICS",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific nutritional concerns from our side; happy to review if intake or weight changes.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN22",
+  "specialty": "REF.PHYSIOTHERAPY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific mobility concerns from our side; happy to review if function changes.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ }
+]

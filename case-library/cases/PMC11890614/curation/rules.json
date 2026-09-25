@@ -1,0 +1,58 @@
+[
+ {
+  "target": "HX.GYN.MENSES",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: male patient."
+ },
+ {
+  "target": "HX.GYN.PREGNANCY",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: male patient."
+ },
+ {
+  "target": "HX.GYN.OBSTETRIC",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: male patient."
+ },
+ {
+  "target": "HX.GYN.CONTRACEPTION",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: male patient."
+ },
+ {
+  "target": "HX.GYN.MENOPAUSE",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: male patient."
+ },
+ {
+  "target": "HX.GYN.VAGINAL_DISCHARGE",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: male patient."
+ },
+ {
+  "target": "EX.GYN.PELVIC",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: male patient."
+ }
+]

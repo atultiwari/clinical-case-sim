@@ -1,0 +1,472 @@
+[
+ {
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "utility": "unnecessary",
+  "rationale": "Normal; radiation and contrast without clinical pointers."
+ },
+ {
+  "test_item_id": "IMG.CT.CHEST",
+  "utility": "unnecessary",
+  "rationale": "Normal; radiation without clinical pointers."
+ },
+ {
+  "test_item_id": "IMG.CT.HEAD",
+  "utility": "low_yield",
+  "rationale": "No neurological signs; normal."
+ },
+ {
+  "test_item_id": "IMG.MRI.BRAIN",
+  "utility": "unnecessary",
+  "rationale": "No neurological features; normal."
+ },
+ {
+  "test_item_id": "IMG.MRI.SPINE",
+  "utility": "low_yield",
+  "rationale": "Normal; no neurological signs."
+ },
+ {
+  "test_item_id": "IMG.US.ABDOMEN",
+  "utility": "low_yield",
+  "rationale": "Normal spleen and liver; reasonable only if the examination were abnormal."
+ },
+ {
+  "test_item_id": "IMG.US.KIDNEYS",
+  "utility": "low_yield",
+  "rationale": "Normal; creatinine normal."
+ },
+ {
+  "test_item_id": "IMG.XR.CHEST",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.BM.FLOW",
+  "utility": "low_yield",
+  "rationale": "No excess blasts; does not help."
+ },
+ {
+  "test_item_id": "LAB.BM.IRON_STAIN",
+  "utility": "low_yield",
+  "rationale": "Increased iron; no ring sideroblasts."
+ },
+ {
+  "test_item_id": "LAB.CHEM.AFP",
+  "utility": "unnecessary",
+  "rationale": "Tumour marker without pointers; normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.B12",
+  "utility": "essential",
+  "rationale": "Serum B12 56 pmol/L confirms the deficiency; must be sent before treatment."
+ },
+ {
+  "test_item_id": "LAB.CHEM.BONE_PROFILE",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CA19_9",
+  "utility": "unnecessary",
+  "rationale": "Tumour marker without pointers; normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CEA",
+  "utility": "unnecessary",
+  "rationale": "Tumour marker without pointers; normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.COPPER_CAERULOPLASMIN",
+  "utility": "low_yield",
+  "rationale": "Normal; a reasonable check only if the dysplasia persists after replacement."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CRP",
+  "utility": "supportive",
+  "rationale": "Normal; argues against infection or inflammation."
+ },
+ {
+  "test_item_id": "LAB.CHEM.EPO",
+  "utility": "low_yield",
+  "rationale": "Appropriately very high; does not separate the causes."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FERRITIN",
+  "utility": "supportive",
+  "rationale": "High ferritin excludes iron deficiency."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FOLATE",
+  "utility": "essential",
+  "rationale": "Normal folate excludes the other common cause and must be known before giving folic acid."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HAPTOGLOBIN",
+  "utility": "supportive",
+  "rationale": "Undetectable haptoglobin confirms haemolysis."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HOLOTC",
+  "utility": "supportive",
+  "rationale": "Very low active B12; an alternative to serum B12."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HOMOCYSTEINE",
+  "utility": "supportive",
+  "rationale": "Raised; supports the deficiency and the endothelial mechanism."
+ },
+ {
+  "test_item_id": "LAB.CHEM.IRON_STUDIES",
+  "utility": "supportive",
+  "rationale": "Iron replete (high serum iron): excludes iron deficiency."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LACTATE",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LDH",
+  "utility": "supportive",
+  "rationale": "Very high LDH (3115 U/L), disproportionate to the anaemia: ineffective erythropoiesis."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LFT",
+  "utility": "supportive",
+  "rationale": "Routine admission panel; unconjugated hyperbilirubinaemia and a mild AST rise."
+ },
+ {
+  "test_item_id": "LAB.CHEM.MMA",
+  "utility": "supportive",
+  "rationale": "Raised; confirms tissue B12 deficiency, but results take days and add little once the serum B12 is 56 pmol/L."
+ },
+ {
+  "test_item_id": "LAB.CHEM.PROCALCITONIN",
+  "utility": "low_yield",
+  "rationale": "Afebrile; normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.PSA",
+  "utility": "unnecessary",
+  "rationale": "Not indicated in a 37-year-old man; normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.RENAL",
+  "utility": "supportive",
+  "rationale": "Routine admission panel; normal creatinine argues against HUS; potassium to follow on treatment."
+ },
+ {
+  "test_item_id": "LAB.CHEM.STFR",
+  "utility": "low_yield",
+  "rationale": "Raised with the expanded marrow; does not help once iron studies are known."
+ },
+ {
+  "test_item_id": "LAB.CHEM.TROPONIN_I",
+  "utility": "supportive",
+  "rationale": "Normal; no cardiac involvement of a microangiopathy."
+ },
+ {
+  "test_item_id": "LAB.CHEM.TROPONIN_T",
+  "utility": "low_yield",
+  "rationale": "Normal; duplicates troponin I."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+  "utility": "low_yield",
+  "rationale": "Normal; not needed with a normal karyotype and a reversible cause."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+  "utility": "supportive",
+  "rationale": "Normal karyotype argues against a myelodysplastic neoplasm when the marrow is dysplastic."
+ },
+ {
+  "test_item_id": "LAB.ENDO.ANTI_TPO",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.ENDO.TFT",
+  "utility": "supportive",
+  "rationale": "Autoimmune thyroid disease travels with pernicious anaemia; normal."
+ },
+ {
+  "test_item_id": "LAB.ENDO.TSH",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.GI.FIT",
+  "utility": "low_yield",
+  "rationale": "Negative; iron replete, so no bleeding question."
+ },
+ {
+  "test_item_id": "LAB.GI.H_PYLORI_STOOL_AG",
+  "utility": "low_yield",
+  "rationale": "Negative; a minor cause of low B12."
+ },
+ {
+  "test_item_id": "LAB.GI.STOOL_MICROSCOPY",
+  "utility": "low_yield",
+  "rationale": "No tapeworm; reasonable only with a raw-fish history."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ADAMTS13",
+  "utility": "supportive",
+  "rationale": "Reasonable to send or store while TTP is not excluded; normal activity, but the result takes days (the authors did not send it)."
+ },
+ {
+  "test_item_id": "LAB.HAEM.APTT",
+  "utility": "supportive",
+  "rationale": "Normal; argues against DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.CBC",
+  "utility": "essential",
+  "rationale": "Pancytopenia with MCV 117.4 fL: the first clue."
+ },
+ {
+  "test_item_id": "LAB.HAEM.COAG_SCREEN",
+  "utility": "supportive",
+  "rationale": "Normal PT, APTT and fibrinogen argue against DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.D_DIMER",
+  "utility": "supportive",
+  "rationale": "Only slightly raised; argues against DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.EMA_BINDING",
+  "utility": "low_yield",
+  "rationale": "Normal; no spherocytes."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ESR",
+  "utility": "low_yield",
+  "rationale": "Raised by the anaemia alone; misleading."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FDP",
+  "utility": "supportive",
+  "rationale": "Only mildly raised; argues against DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FIBRINOGEN",
+  "utility": "supportive",
+  "rationale": "Normal; argues against DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM",
+  "utility": "essential",
+  "rationale": "Shows the fragments, nucleated red cells and macrocytes; leads to the review."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "utility": "essential",
+  "rationale": "The reviewed film shows megaloblastic nucleated red cells and hypersegmented neutrophils as well as fragments."
+ },
+ {
+  "test_item_id": "LAB.HAEM.G6PD",
+  "utility": "low_yield",
+  "rationale": "Normal; no oxidant exposure or bite cells."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_RDT",
+  "utility": "unnecessary",
+  "rationale": "No travel or fever; negative."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_SMEAR",
+  "utility": "unnecessary",
+  "rationale": "No travel or fever; negative."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PB_FLOW",
+  "utility": "low_yield",
+  "rationale": "Normal; no lymphoproliferative disorder."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PLASMA_HB",
+  "utility": "low_yield",
+  "rationale": "Mildly raised; does not separate the causes."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PNH_FLOW",
+  "utility": "low_yield",
+  "rationale": "Reasonable for haemolysis with cytopenias, but the megaloblastic features explain both; negative."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PT_INR",
+  "utility": "supportive",
+  "rationale": "Normal; argues against DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.RETIC",
+  "utility": "essential",
+  "rationale": "A low absolute reticulocyte count for the degree of haemolysis points to ineffective erythropoiesis, not TTP."
+ },
+ {
+  "test_item_id": "LAB.HAEM.SCHISTOCYTE_COUNT",
+  "utility": "supportive",
+  "rationale": "Quantifies the fragmentation and tracks its clearance."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANA",
+  "utility": "low_yield",
+  "rationale": "Negative; no clinical features of lupus."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANTI_DSDNA",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.IMM.COELIAC_TTG",
+  "utility": "supportive",
+  "rationale": "Malabsorption screen; negative."
+ },
+ {
+  "test_item_id": "LAB.IMM.COMPLEMENT",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.IMM.IF_GPC_ANTIBODIES",
+  "utility": "supportive",
+  "rationale": "Looks for pernicious anaemia as the cause; negative here."
+ },
+ {
+  "test_item_id": "LAB.MICRO.BLOOD_CULTURE",
+  "utility": "low_yield",
+  "rationale": "Afebrile; no growth."
+ },
+ {
+  "test_item_id": "LAB.MICRO.STOOL_CULTURE",
+  "utility": "low_yield",
+  "rationale": "No diarrhoea; HUS unlikely."
+ },
+ {
+  "test_item_id": "LAB.MICRO.URINE_CULTURE",
+  "utility": "low_yield",
+  "rationale": "No urinary symptoms; no growth."
+ },
+ {
+  "test_item_id": "LAB.MOL.MYELOID_NGS",
+  "utility": "low_yield",
+  "rationale": "Normal; expensive and slow; not indicated before B12 and folate are known."
+ },
+ {
+  "test_item_id": "LAB.SERO.CMV",
+  "utility": "low_yield",
+  "rationale": "Past infection only."
+ },
+ {
+  "test_item_id": "LAB.SERO.DENGUE",
+  "utility": "unnecessary",
+  "rationale": "No fever; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.EBV",
+  "utility": "low_yield",
+  "rationale": "Past infection only."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_B",
+  "utility": "low_yield",
+  "rationale": "Negative; baseline before transfusion is reasonable."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_C",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.HIV",
+  "utility": "supportive",
+  "rationale": "HIV-associated TMA is in the differential; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.PARVOVIRUS_B19",
+  "utility": "low_yield",
+  "rationale": "Past infection only; the low reticulocytes have another cause."
+ },
+ {
+  "test_item_id": "LAB.TBS.ANTIBODY_SCREEN",
+  "utility": "supportive",
+  "rationale": "Needed before transfusion; negative."
+ },
+ {
+  "test_item_id": "LAB.TBS.BLOOD_GROUP",
+  "utility": "supportive",
+  "rationale": "Needed before transfusion."
+ },
+ {
+  "test_item_id": "LAB.TBS.COLD_AGGLUTININ",
+  "utility": "low_yield",
+  "rationale": "DAT negative; not needed."
+ },
+ {
+  "test_item_id": "LAB.TBS.CROSSMATCH",
+  "utility": "supportive",
+  "rationale": "Needed for the day-1 transfusion."
+ },
+ {
+  "test_item_id": "LAB.TBS.DAT",
+  "utility": "supportive",
+  "rationale": "Negative DAT excludes immune haemolysis."
+ },
+ {
+  "test_item_id": "LAB.URINE.DIPSTICK",
+  "utility": "supportive",
+  "rationale": "Bedside check for blood and protein; raised urobilinogen."
+ },
+ {
+  "test_item_id": "LAB.URINE.HAEMOSIDERIN",
+  "utility": "low_yield",
+  "rationale": "Negative; does not change management."
+ },
+ {
+  "test_item_id": "LAB.URINE.PCR",
+  "utility": "low_yield",
+  "rationale": "No proteinuria; adds little to a bland urinalysis."
+ },
+ {
+  "test_item_id": "LAB.URINE.URINALYSIS",
+  "utility": "supportive",
+  "rationale": "Bland urine argues against renal TMA; raised urobilinogen."
+ },
+ {
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "utility": "supportive",
+  "rationale": "Megaloblastic marrow; done in the article to exclude cancer-related microangiopathy. Invasive, and not needed once the film and B12 are known."
+ },
+ {
+  "test_item_id": "PROC.BM.TREPHINE",
+  "utility": "low_yield",
+  "rationale": "Hypercellular with no infiltrate; adds little to the aspirate."
+ },
+ {
+  "test_item_id": "PROC.CARD.ECG",
+  "utility": "supportive",
+  "rationale": "Sinus tachycardia; baseline before transfusion."
+ },
+ {
+  "test_item_id": "PROC.CARD.ECHO",
+  "utility": "low_yield",
+  "rationale": "Hyperdynamic, normal valves; explains the murmur but does not change management."
+ },
+ {
+  "test_item_id": "PROC.ENDO.COLONOSCOPY",
+  "utility": "unnecessary",
+  "rationale": "No bowel symptoms and no bleeding; normal."
+ },
+ {
+  "test_item_id": "PROC.ENDO.OGD",
+  "utility": "unnecessary",
+  "rationale": "Normal with normal biopsies; indicated only if the antibodies were positive."
+ },
+ {
+  "test_item_id": "PROC.NEURO.NCS_EMG",
+  "utility": "low_yield",
+  "rationale": "Normal; no neurological symptoms."
+ }
+]

@@ -1,0 +1,312 @@
+[
+ {
+  "test_item_id": "LAB.HAEM.CBC",
+  "utility": "essential",
+  "rationale": "Anaemia (Hb 72 g/L) and a normal platelet count, which moves the problem to the clotting factors."
+ },
+ {
+  "test_item_id": "LAB.HAEM.COAG_SCREEN",
+  "utility": "essential",
+  "rationale": "PT and APTT both 112 s with normal fibrinogen: the key abnormality."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PT_INR",
+  "utility": "essential",
+  "rationale": "Defines the defect and tracks the response to vitamin K."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FACTOR_II",
+  "utility": "essential",
+  "rationale": "Very low: part of the vitamin K-dependent pattern."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FACTOR_VII",
+  "utility": "essential",
+  "rationale": "Below 1%: the most sensitive of the vitamin K-dependent factors."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FACTOR_X",
+  "utility": "essential",
+  "rationale": "Very low: part of the vitamin K-dependent pattern."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FACTOR_V",
+  "utility": "essential",
+  "rationale": "Normal factor V separates vitamin K deficiency from liver disease."
+ },
+ {
+  "test_item_id": "LAB.TOX.ANTICOAGULANT_RODENTICIDE_PANEL",
+  "utility": "essential",
+  "rationale": "Confirms the diagnosis."
+ },
+ {
+  "test_item_id": "LAB.HAEM.APTT",
+  "utility": "supportive",
+  "rationale": "Prolonged with the PT; its normalisation marks the response."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FIBRINOGEN",
+  "utility": "supportive",
+  "rationale": "Normal fibrinogen argues against consumption and liver failure."
+ },
+ {
+  "test_item_id": "LAB.HAEM.D_DIMER",
+  "utility": "supportive",
+  "rationale": "Normal D-dimer argues against DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MIXING_STUDY",
+  "utility": "supportive",
+  "rationale": "Correction excludes an inhibitor."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FACTOR_IX",
+  "utility": "supportive",
+  "rationale": "Low with the other vitamin K-dependent factors."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM",
+  "utility": "supportive",
+  "rationale": "Excludes fragments and a platelet problem."
+ },
+ {
+  "test_item_id": "LAB.HAEM.RETIC",
+  "utility": "supportive",
+  "rationale": "Shows an appropriate marrow response to blood loss."
+ },
+ {
+  "test_item_id": "LAB.TBS.BLOOD_GROUP",
+  "utility": "supportive",
+  "rationale": "Needed in case of transfusion."
+ },
+ {
+  "test_item_id": "LAB.TOX.WARFARIN_LEVEL",
+  "utility": "supportive",
+  "rationale": "Excludes warfarin as the anticoagulant."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LFT",
+  "utility": "supportive",
+  "rationale": "Near-normal liver tests argue against a hepatic coagulopathy."
+ },
+ {
+  "test_item_id": "LAB.CHEM.RENAL",
+  "utility": "supportive",
+  "rationale": "Normal renal function with haematuria and tenofovir."
+ },
+ {
+  "test_item_id": "LAB.URINE.URINALYSIS",
+  "utility": "supportive",
+  "rationale": "Confirms haematuria and shows its non-glomerular pattern."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_B",
+  "utility": "supportive",
+  "rationale": "Confirms the known chronic infection."
+ },
+ {
+  "test_item_id": "IMG.US.ABDOMEN",
+  "utility": "supportive",
+  "rationale": "Shows no cirrhosis or portal hypertension."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HBA1C",
+  "utility": "supportive",
+  "rationale": "Documents poor diabetes control."
+ },
+ {
+  "test_item_id": "LAB.CHEM.GLUCOSE_RANDOM",
+  "utility": "supportive",
+  "rationale": "Hyperglycaemia explains the glycosuria."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CAPILLARY_GLUCOSE",
+  "utility": "supportive",
+  "rationale": "Bedside monitoring of the diabetes."
+ },
+ {
+  "test_item_id": "IMG.CT.HEAD",
+  "utility": "supportive",
+  "rationale": "Reasonable to exclude intracranial bleeding if any neurological symptom; normal here."
+ },
+ {
+  "test_item_id": "LAB.HAEM.THROMBIN_TIME",
+  "utility": "supportive",
+  "rationale": "Normal: fibrinogen function intact, no heparin."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FACTOR_VIII",
+  "utility": "low_yield",
+  "rationale": "Normal; adds little once the mix corrects."
+ },
+ {
+  "test_item_id": "LAB.HAEM.VWF",
+  "utility": "low_yield",
+  "rationale": "Normal; mucosal bleeding is explained by the factor defect."
+ },
+ {
+  "test_item_id": "LAB.HAEM.LUPUS_ANTICOAGULANT",
+  "utility": "low_yield",
+  "rationale": "Hard to interpret with low vitamin K-dependent factors."
+ },
+ {
+  "test_item_id": "LAB.HAEM.THROMBOPHILIA",
+  "utility": "low_yield",
+  "rationale": "Protein C and S are low with the other vitamin K-dependent proteins; no clinical question here."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "utility": "low_yield",
+  "rationale": "No morphological clue beyond the screening film."
+ },
+ {
+  "test_item_id": "LAB.URINE.DIPSTICK",
+  "utility": "low_yield",
+  "rationale": "Duplicates the urinalysis."
+ },
+ {
+  "test_item_id": "LAB.URINE.PCR",
+  "utility": "low_yield",
+  "rationale": "Raised only by blood in the urine."
+ },
+ {
+  "test_item_id": "LAB.URINE.ACR",
+  "utility": "low_yield",
+  "rationale": "Raised only by blood in the urine."
+ },
+ {
+  "test_item_id": "LAB.MICRO.URINE_CULTURE",
+  "utility": "low_yield",
+  "rationale": "Sterile; no symptoms of infection."
+ },
+ {
+  "test_item_id": "IMG.US.KIDNEYS",
+  "utility": "low_yield",
+  "rationale": "Normal; reasonable only if haematuria persists after correction."
+ },
+ {
+  "test_item_id": "IMG.US.ELASTOGRAPHY",
+  "utility": "low_yield",
+  "rationale": "Routine hepatitis B care, not the coagulopathy."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_C",
+  "utility": "low_yield",
+  "rationale": "Negative; no risk factors."
+ },
+ {
+  "test_item_id": "LAB.CHEM.AMMONIA",
+  "utility": "low_yield",
+  "rationale": "Normal; no encephalopathy."
+ },
+ {
+  "test_item_id": "LAB.CHEM.AFP",
+  "utility": "low_yield",
+  "rationale": "Hepatitis B surveillance, not this problem."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LIPIDS",
+  "utility": "low_yield",
+  "rationale": "Diabetic dyslipidaemia; cardiovascular risk, not this problem."
+ },
+ {
+  "test_item_id": "LAB.CHEM.GLUCOSE_FASTING",
+  "utility": "low_yield",
+  "rationale": "Adds little to the random glucose and HbA1c."
+ },
+ {
+  "test_item_id": "LAB.CHEM.IRON_STUDIES",
+  "utility": "low_yield",
+  "rationale": "Iron beginning to fall after blood loss."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FERRITIN",
+  "utility": "low_yield",
+  "rationale": "Stores partly used; not the question."
+ },
+ {
+  "test_item_id": "LAB.TOX.ETHANOL",
+  "utility": "low_yield",
+  "rationale": "Not detected; the party was weeks ago."
+ },
+ {
+  "test_item_id": "LAB.GI.FIT",
+  "utility": "low_yield",
+  "rationale": "Negative; no lower GI bleeding."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANA",
+  "utility": "low_yield",
+  "rationale": "Negative; no features of lupus."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANTI_DSDNA",
+  "utility": "low_yield",
+  "rationale": "Negative; no features of lupus."
+ },
+ {
+  "test_item_id": "LAB.IMM.COMPLEMENT",
+  "utility": "low_yield",
+  "rationale": "Normal; no features of lupus."
+ },
+ {
+  "test_item_id": "LAB.IMM.COELIAC_TTG",
+  "utility": "low_yield",
+  "rationale": "Negative; no malabsorption."
+ },
+ {
+  "test_item_id": "LAB.GI.FAECAL_ELASTASE",
+  "utility": "low_yield",
+  "rationale": "Normal; no malabsorption."
+ },
+ {
+  "test_item_id": "LAB.SERO.DENGUE",
+  "utility": "unnecessary",
+  "rationale": "Afebrile, normal platelets, back from travel for two months."
+ },
+ {
+  "test_item_id": "LAB.SERO.LEPTOSPIRA",
+  "utility": "unnecessary",
+  "rationale": "No fever, jaundice or renal failure."
+ },
+ {
+  "test_item_id": "LAB.SERO.SCRUB_TYPHUS",
+  "utility": "unnecessary",
+  "rationale": "No fever or eschar."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_RDT",
+  "utility": "unnecessary",
+  "rationale": "Afebrile."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_SMEAR",
+  "utility": "unnecessary",
+  "rationale": "Afebrile."
+ },
+ {
+  "test_item_id": "LAB.MICRO.BLOOD_CULTURE",
+  "utility": "unnecessary",
+  "rationale": "Afebrile; no source of infection."
+ },
+ {
+  "test_item_id": "PROC.ENDO.OGD",
+  "utility": "unnecessary",
+  "rationale": "Already done before admission, showing no source; repeating it adds nothing."
+ },
+ {
+  "test_item_id": "PROC.ENDO.COLONOSCOPY",
+  "utility": "unnecessary",
+  "rationale": "No lower GI bleeding; an invasive test with an unmeasurable INR."
+ },
+ {
+  "test_item_id": "IMG.CT.KUB",
+  "utility": "unnecessary",
+  "rationale": "Radiation for little yield; the haematuria is explained by the coagulopathy."
+ },
+ {
+  "test_item_id": "PROC.BIOPSY.LIVER",
+  "utility": "risky",
+  "rationale": "Invasive with an unmeasurable INR; answers nothing about the coagulopathy."
+ }
+]

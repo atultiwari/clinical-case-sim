@@ -1,0 +1,181 @@
+[
+ {
+  "id": "RP01",
+  "test_item_id": "LAB.HAEM.FILM",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.POLYCHROMASIA"
+  ],
+  "report_text": "Red cells are normocytic and normochromic with mild anisocytosis and occasional polychromatic cells. No red cell fragments, spherocytes or inclusions. White cells are normal in number and morphology. Platelets are adequate in number with normal morphology.",
+  "impression": "Normocytic anaemia with mild polychromasia; platelets normal; no fragments.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No film is reported. Blood-loss anaemia with a reticulocyte response gives polychromasia; normal platelets and no fragments are consistent with the normal platelet count and D-dimer (no microangiopathy or DIC).",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP02",
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.POLYCHROMASIA"
+  ],
+  "report_text": "Film reviewed by a haematopathologist. Normocytic normochromic red cells with mild anisocytosis and some polychromasia. No red cell fragments, spherocytes, target cells or inclusions. Leucocytes show normal maturation and morphology, with no blasts or atypical cells. Platelets are adequate in number and morphologically unremarkable. Comment: the film does not explain the prolonged clotting times; correlate with coagulation factor assays.",
+  "impression": "Mild regenerative normocytic anaemia; no features of a microangiopathic process, marrow infiltration or a platelet disorder.",
+  "suggested_reflex": [
+   "LAB.HAEM.MIXING_STUDY"
+  ],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Same film as RP01, with the reviewer's comment. The comment points to factor assays without naming a cause.",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP03",
+  "test_item_id": "PROC.ENDO.OGD",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Outpatient endoscopy before this admission, to the second part of the duodenum. Normal oesophageal, gastric and duodenal mucosa. No ulcer, varices or source of bleeding in the oesophagus or stomach. Fresh blood was seen in the oral cavity.",
+  "impression": "No upper gastrointestinal bleeding source; bleeding from the mouth.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "The article's pre-admission endoscopy: no oesophageal or gastric bleeding, bleeding in the oral cavity. Normal duodenum and no varices are the curator's reading (no cirrhosis).",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP04",
+  "test_item_id": "PROC.ENDO.COLONOSCOPY",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Complete colonoscopy to the caecum with intubation of the terminal ileum; adequate bowel preparation. Normal mucosa throughout; no polyps, ulceration, angiodysplasia or source of bleeding.",
+  "impression": "Normal colonoscopy.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No lower GI bleeding in the article; a colonoscopy would be normal.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP05",
+  "test_item_id": "IMG.US.ABDOMEN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "The liver is normal in size (15 cm) with a smooth outline and mildly increased echogenicity; no focal lesion. The portal vein is of normal calibre with hepatopetal flow. The spleen is normal in size (10.5 cm). No ascites. The gallbladder, bile ducts, pancreas and both kidneys appear normal. The bladder is partly filled and contains a little echogenic debris.",
+  "impression": "Mild fatty infiltration of the liver; no features of cirrhosis or portal hypertension; debris in the bladder.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Chronic hepatitis B suppressed on tenofovir without cirrhosis (G05); poorly controlled diabetes makes mild steatosis likely; bladder debris fits visible haematuria on day 0.",
+  "confidence": 0.55
+ },
+ {
+  "id": "RP06",
+  "test_item_id": "IMG.US.ELASTOGRAPHY",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Ten valid measurements obtained. Median liver stiffness 6.2 kPa with an interquartile range under 30% of the median. Controlled attenuation parameter 268 dB/m.",
+  "impression": "Liver stiffness within the range expected without significant fibrosis; mild steatosis.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No cirrhosis (G05); mild steatosis to match the ultrasound.",
+  "confidence": 0.55
+ },
+ {
+  "id": "RP07",
+  "test_item_id": "PROC.BIOPSY.LIVER",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.INTERFACE_HEPATITIS"
+  ],
+  "report_text": "Core of liver with eleven portal tracts. Mild portal lymphocytic inflammation with minimal interface activity; occasional ground-glass hepatocytes. Mild macrovesicular steatosis (about 10% of hepatocytes). No bridging fibrosis or cirrhosis on reticulin and Masson trichrome. Perls stain shows no excess iron.",
+  "impression": "Mild chronic hepatitis with minimal activity and no significant fibrosis; mild steatosis.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "What a biopsy would show in suppressed chronic hepatitis B with diabetes. Ordering it is a must-not-do while the coagulopathy is uncorrected.",
+  "confidence": 0.5
+ },
+ {
+  "id": "RP08",
+  "test_item_id": "IMG.US.KIDNEYS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Both kidneys are normal in size (right 10.8 cm, left 11.1 cm) with preserved corticomedullary differentiation. No calculi, mass or pelvicalyceal dilatation. The bladder contains a little mobile echogenic debris; the bladder wall is smooth and no mass is seen.",
+  "impression": "Normal kidneys; mobile debris in the bladder in keeping with blood.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Haematuria from the coagulopathy, not a renal tract lesion (G09).",
+  "confidence": 0.6
+ },
+ {
+  "id": "RP09",
+  "test_item_id": "IMG.CT.KUB",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Non-contrast CT of the urinary tract. No urinary tract calculi. No hydronephrosis, hydroureter or perinephric stranding. Slightly dense fluid layering in the bladder, in keeping with blood; no bladder wall thickening.",
+  "impression": "No calculus or obstruction; blood in the bladder.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Haematuria from the coagulopathy (G09).",
+  "confidence": 0.6
+ },
+ {
+  "id": "RP10",
+  "test_item_id": "IMG.CT.HEAD",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Non-contrast CT of the head. No intracranial haemorrhage, mass effect or midline shift. Grey-white matter differentiation is preserved. The ventricles and extra-axial spaces are normal for age.",
+  "impression": "No intracranial haemorrhage.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No neurological symptoms or signs; the article reports no intracranial bleeding.",
+  "confidence": 0.8
+ }
+]

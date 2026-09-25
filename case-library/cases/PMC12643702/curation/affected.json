@@ -1,0 +1,3818 @@
+[
+ {
+  "target": "HX.MEDS.CURRENT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "text": "Tenofovir once daily for hepatitis B and metformin twice daily for diabetes. No blood thinners and no regular painkillers."
+  },
+  "release_text": "Tenofovir once daily for hepatitis B and metformin twice daily for diabetes. No blood thinners and no regular painkillers.",
+  "lay_text": "I take tenofovir for my hepatitis B, once a day, and metformin tablets for my sugar. Nothing to thin the blood, and no regular painkillers.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Tenofovir is in the article (H02). The diabetes treatment is not reported: metformin is the likeliest first-line drug for type 2 diabetes. Consistent with H10 (no anticoagulant).",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.MEDS.ADHERENCE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "text": "Takes tenofovir every day; often forgets or skips his metformin."
+  },
+  "release_text": "Takes tenofovir every day; often forgets or skips his metformin.",
+  "lay_text": "I never miss the hepatitis tablet. The diabetes tablets I forget quite a lot, to be honest.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "The article says the diabetes is poorly controlled; poor adherence is the commonest reason. Suppressed hepatitis B (G05) fits regular tenofovir.",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.MEDS.OTC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No over-the-counter medicines or painkillers."
+  },
+  "release_text": "No over-the-counter medicines or painkillers.",
+  "lay_text": "No, I don't buy anything from the chemist, not even painkillers.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No aspirin or NSAID is mentioned; bleeding tendency is fully explained by the factor pattern.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.MEDS.RECENT_CHANGES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Tranexamic acid tablets for two days, prescribed by his dentist; no other new medicines."
+  },
+  "release_text": "Tranexamic acid tablets for two days, prescribed by his dentist; no other new medicines.",
+  "lay_text": "The dentist gave me some tablets to stop the bleeding, for two days. Nothing else new.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From H05 (oral tranexamic acid for two days). Worded as a medicine change only.",
+  "confidence": 0.85
+ },
+ {
+  "target": "HX.MEDS.SUPPLEMENTS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No supplements, herbal or traditional remedies."
+  },
+  "release_text": "No supplements, herbal or traditional remedies.",
+  "lay_text": "No, I don't take any supplements or herbal medicines.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported; the authors list every exposure they considered and none is a remedy.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.MEDS.RECENT_ANTIBIOTICS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No antibiotics in the past three months."
+  },
+  "release_text": "No antibiotics in the past three months.",
+  "lay_text": "No antibiotics recently.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported; no infection (H07). Keeps antibiotic-related vitamin K deficiency off the table, as the authors did.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.EXPOSURE.HOME",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Lives in a rented apartment with his sister; no renovation; no pest control in the home."
+  },
+  "release_text": "Lives in a rented apartment with his sister; no renovation; no pest control in the home.",
+  "lay_text": "We rent an apartment, my sister and me. Nothing's been done to it and we've never had pest control in.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Article: no rodent infestation at home (H18). Answers the home-environment question only.",
+  "confidence": 0.65
+ },
+ {
+  "target": "HX.GEN.FATIGUE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "More tired than usual for the past week or two."
+  },
+  "release_text": "More tired than usual for the past week or two.",
+  "lay_text": "I've been more tired than normal the last week or two.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haemoglobin 72 g/L after two weeks of bleeding: tiredness is the expected symptom.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.CVS.BREATHLESSNESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Short of breath climbing stairs over the past week; not breathless at rest."
+  },
+  "release_text": "Short of breath climbing stairs over the past week; not breathless at rest.",
+  "lay_text": "I get out of breath going up the stairs this last week. I'm fine sitting down.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Anaemia of 72 g/L developing over two weeks; exertional breathlessness is likely.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.CVS.SYNCOPE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No blackouts or fainting; occasionally light-headed on standing up quickly."
+  },
+  "release_text": "No blackouts or fainting; occasionally light-headed on standing up quickly.",
+  "lay_text": "I haven't fainted. Sometimes I feel a bit light-headed if I stand up fast.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Blood pressure 106/71 with haemoglobin 72 g/L: mild orthostatic symptoms are likely; no syncope reported.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.NEURO.DIZZINESS_BALANCE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Brief light-headedness on standing quickly; no vertigo or unsteadiness."
+  },
+  "release_text": "Brief light-headedness on standing quickly; no vertigo or unsteadiness.",
+  "lay_text": "Just a bit light-headed if I get up too quickly. The room doesn't spin.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Consistent with the syncope answer and the anaemia.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.PC.IMPACT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Still working in the kitchen, but tired, and embarrassed by the bleeding at work."
+  },
+  "release_text": "Still working in the kitchen, but tired, and embarrassed by the bleeding at work.",
+  "lay_text": "I'm still working, but I'm tired, and it's embarrassing bleeding from the mouth in the kitchen.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Works as a chef (H14); tired from the anaemia.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.PC.AGGRAVATING_RELIEVING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Gum bleeding worse after brushing his teeth and eating; pressing on the nose stops the nosebleeds for a while."
+  },
+  "release_text": "Gum bleeding worse after brushing his teeth and eating; pressing on the nose stops the nosebleeds for a while.",
+  "lay_text": "The gums bleed more after I brush or eat. If I pinch my nose it stops for a bit.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Typical of mucosal bleeding from a coagulation defect; not reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.PC.PAIN_DETAILS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "No pain; some discomfort passing small clots in the urine."
+  },
+  "release_text": "No pain; some discomfort passing small clots in the urine.",
+  "lay_text": "No real pain. It's a bit uncomfortable when small clots come out when I pee.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Visible haematuria with a severe coagulopathy often passes clots; no loin or abdominal pain is reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.PMH.TRANSFUSION_PREGNANCY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No previous blood transfusions."
+  },
+  "release_text": "No previous blood transfusions.",
+  "lay_text": "I've never had a blood transfusion.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Male patient; no previous bleeding problems (H09). The pregnancy part of the template does not apply.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GEN.JAUNDICE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Has not noticed yellowing of his eyes or skin."
+  },
+  "release_text": "Has not noticed yellowing of his eyes or skin.",
+  "lay_text": "No, my eyes and skin haven't gone yellow.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Chronic hepatitis B suppressed on tenofovir (G05); bilirubin normal.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GI.ABDOMINAL_SWELLING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "No abdominal swelling."
+  },
+  "release_text": "No abdominal swelling.",
+  "lay_text": "No, my tummy isn't swollen.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No cirrhosis or ascites (G05).",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GI.BLEEDING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Has spat out blood from his mouth; has not vomited blood; stools a normal brown colour, never black or bloody."
+  },
+  "release_text": "Has spat out blood from his mouth; has not vomited blood; stools a normal brown colour, never black or bloody.",
+  "lay_text": "I spit out blood from my mouth, but I haven't vomited blood. My stools look normal, not black and no blood.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "The endoscopy found no upper GI bleeding and the blood came from the mouth (H06). The authors report no melaena; swallowed blood from the gums was probably why an upper GI source was suspected.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GU.DYSURIA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "No burning on passing urine; mild discomfort when small clots pass."
+  },
+  "release_text": "No burning on passing urine; mild discomfort when small clots pass.",
+  "lay_text": "It doesn't burn. Only a bit uncomfortable when a small clot comes out.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Consistent with the pain answer; no infection (sterile urine, G09).",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GU.FREQUENCY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "text": "Gets up once or twice a night to pass urine for some months; no urgency."
+  },
+  "release_text": "Gets up once or twice a night to pass urine for some months; no urgency.",
+  "lay_text": "I get up once or twice at night to pee, for a few months now. I don't have to rush.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Poorly controlled diabetes with glycosuria: mild nocturia is likely.",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.GEN.THIRST",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "text": "Often thirsty and drinks a lot of water, especially in the hot kitchen."
+  },
+  "release_text": "Often thirsty and drinks a lot of water, especially in the hot kitchen.",
+  "lay_text": "I'm thirsty a lot and drink plenty of water, especially at work in the hot kitchen.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Random glucose around 13 mmol/L with glycosuria (G04).",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.GI.BOWEL_HABIT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Bowels open daily; no diarrhoea; stools not pale or greasy."
+  },
+  "release_text": "Bowels open daily; no diarrhoea; stools not pale or greasy.",
+  "lay_text": "I go every day, normal. No diarrhoea and nothing greasy.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No malabsorption: faecal elastase and coeliac serology normal; the authors found no gastrointestinal cause.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GEN.FEVER_SWEATS_WEIGHT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No fever or night sweats; weight steady."
+  },
+  "release_text": "No fever or night sweats; weight steady.",
+  "lay_text": "No fevers or sweats, and my weight's the same.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Afebrile (36.6 °C, E02); no infection (H07).",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GI.NAUSEA_APPETITE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Appetite normal; no nausea or vomiting."
+  },
+  "release_text": "Appetite normal; no nausea or vomiting.",
+  "lay_text": "I'm eating as normal. No sickness.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported; nothing in the truth changes it.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.PSYCH.LOW_MOOD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Mood fine; worried about the bleeding, but still enjoys his work and life."
+  },
+  "release_text": "Mood fine; worried about the bleeding, but still enjoys his work and life.",
+  "lay_text": "My mood's fine. I'm worried about this bleeding, but otherwise I'm OK.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The authors considered self-harm and set it aside; nothing suggests depression.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.PSYCH.SELF_HARM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No thoughts of self-harm or suicide, now or before."
+  },
+  "release_text": "No thoughts of self-harm or suicide, now or before.",
+  "lay_text": "No, never. I've never thought about hurting myself.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The authors weighed a suicide attempt and rejected it; the food source explains the poisoning.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.PSYCH.STRESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No major stresses apart from the bleeding; gets on well with his sister."
+  },
+  "release_text": "No major stresses apart from the bleeding; gets on well with his sister.",
+  "lay_text": "Nothing big, apart from worrying about this. My sister and I get on fine.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No reported conflict or stress; relevant to the intentional-poisoning alternative.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.SOCIAL.RECREATIONAL_DRUGS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No recreational drugs, including cannabis."
+  },
+  "release_text": "No recreational drugs, including cannabis.",
+  "lay_text": "No drugs, no. Not even cannabis.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Contaminated synthetic cannabinoids are a known source of the truth's poison; the article reports no drug use.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.PSYCH.ANXIETY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Worried about the bleeding and what is causing it; no anxiety beyond that."
+  },
+  "release_text": "Worried about the bleeding and what is causing it; no anxiety beyond that.",
+  "lay_text": "I'm worried about all this bleeding and what's causing it. Otherwise I'm not an anxious person.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Consistent with his stated concern (H08); the template's 'no worry' would contradict it.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.GU.URINE_VOLUME",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "text": "Passing a little more urine than usual; never less."
+  },
+  "release_text": "Passing a little more urine than usual; never less.",
+  "lay_text": "I pee a bit more than I used to, not less.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Poorly controlled diabetes with glycosuria (G04); consistent with the thirst and nocturia answers.",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.SKIN.RASH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No rash."
+  },
+  "release_text": "No rash.",
+  "lay_text": "No rashes.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No features of lupus; family history only (H16).",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.ENT.MOUTH_ULCERS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No mouth ulcers; the bleeding comes from the gums."
+  },
+  "release_text": "No mouth ulcers; the bleeding comes from the gums.",
+  "lay_text": "No ulcers. It's just the gums bleeding.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Consistent with H03.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.NEURO.HEADACHE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No headache."
+  },
+  "release_text": "No headache.",
+  "lay_text": "No headaches.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No intracranial bleeding reported; normal consciousness.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.EXPOSURE.ANIMALS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No pets and no contact with farm animals; handles raw meat and poultry at work as a chef."
+  },
+  "release_text": "No pets and no contact with farm animals; handles raw meat and poultry at work as a chef.",
+  "lay_text": "No pets. I handle raw meat and chicken at work, being a chef.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Answers the contact question only (SPEC §6.4 rule 8). The market food is released by the food question (H19), as in the article.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.EXPOSURE.BITES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No recent bites or stings."
+  },
+  "release_text": "No recent bites or stings.",
+  "lay_text": "No bites or stings.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported; no fever or rash.",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.GEN.APPEARANCE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Alert and comfortable at rest; looks pale."
+  },
+  "release_text": "Alert and comfortable at rest; looks pale.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haemoglobin 72 g/L; stable vital signs (E02).",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.GEN.PALLOR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Pallor of the conjunctivae and palms."
+  },
+  "release_text": "Pallor of the conjunctivae and palms.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haemoglobin 72 g/L.",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.ORAL.GUMS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Slow oozing of blood from the gum margins; gums not swollen or hypertrophied; no obvious dental abscess."
+  },
+  "release_text": "Slow oozing of blood from the gum margins; gums not swollen or hypertrophied; no obvious dental abscess.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "History of gum bleeding (H03) and oozing from the mouth (E01). No local dental cause, since tranexamic acid failed and the bleeding stopped with vitamin K.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.SKIN.PURPURA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "No petechiae. Small bruises around venepuncture sites in both antecubital fossae."
+  },
+  "release_text": "No petechiae. Small bruises around venepuncture sites in both antecubital fossae.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Platelets normal (226), so no petechiae. With an unmeasurable INR, bruising at venepuncture sites is likely; the article reports mucosal bleeding only, so no spontaneous ecchymoses are added.",
+  "confidence": 0.5
+ },
+ {
+  "target": "EX.CVS.PULSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Pulse 86/min, regular, of normal volume."
+  },
+  "release_text": "Pulse 86/min, regular, of normal volume.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Pulse 86/min from the article's vital signs (E02).",
+  "confidence": 0.85
+ },
+ {
+  "target": "EX.BEDSIDE.POSTURAL_BP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Lying 106/71 mmHg, pulse 86/min; standing (3 min) 98/66 mmHg, pulse 98/min, mildly light-headed."
+  },
+  "release_text": "Lying 106/71 mmHg, pulse 86/min; standing (3 min) 98/66 mmHg, pulse 98/min, mildly light-headed.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Lying values from E02. Haemoglobin 72 g/L after two weeks of bleeding: a small postural drop below the 20 mmHg threshold is likely.",
+  "confidence": 0.5
+ },
+ {
+  "target": "EX.GEN.JAUNDICE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "No scleral icterus."
+  },
+  "release_text": "No scleral icterus.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No liver failure (G05).",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.GEN.HANDS_NAILS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "No palmar erythema, leukonychia or clubbing; no flapping tremor."
+  },
+  "release_text": "No palmar erythema, leukonychia or clubbing; no flapping tremor.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No stigmata of chronic liver disease (G05).",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.ABD.LIVER_SPLEEN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Liver and spleen not palpable."
+  },
+  "release_text": "Liver and spleen not palpable.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No cirrhosis or portal hypertension (G05).",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.ABD.PERCUSSION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Percussion note tympanic; no shifting dullness."
+  },
+  "release_text": "Percussion note tympanic; no shifting dullness.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No ascites (G05).",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.SKIN.INSPECTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "No spider naevi, jaundice or rash; bruising only as noted at venepuncture sites."
+  },
+  "release_text": "No spider naevi, jaundice or rash; bruising only as noted at venepuncture sites.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No stigmata of chronic liver disease (G05); consistent with the purpura examination.",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.NEURO.INVOLUNTARY_MOVEMENTS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "No tremor, asterixis or other involuntary movements."
+  },
+  "release_text": "No tremor, asterixis or other involuntary movements.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No hepatic encephalopathy.",
+  "confidence": 0.85
+ },
+ {
+  "target": "EX.ABD.RECTAL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Normal perianal skin; no rectal mass; brown stool on the glove with no blood or melaena."
+  },
+  "release_text": "Normal perianal skin; no rectal mass; brown stool on the glove with no blood or melaena.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No lower GI bleeding reported; consistent with the negative FIT.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.GU.RENAL_ANGLE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "No renal angle tenderness."
+  },
+  "release_text": "No renal angle tenderness.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haematuria from the coagulopathy, not a renal lesion (G09).",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.ABD.KIDNEYS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Kidneys not ballotable."
+  },
+  "release_text": "Kidneys not ballotable.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal renal ultrasound (G09).",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.MSK.JOINTS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "No joint swelling, warmth or restricted movement."
+  },
+  "release_text": "No joint swelling, warmth or restricted movement.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No haemarthrosis; no previous joint bleeds (H09).",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.BEDSIDE.CAPILLARY_GLUCOSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "text": "Capillary blood glucose 236 mg/dL (13.1 mmol/L)."
+  },
+  "release_text": "Capillary blood glucose 236 mg/dL (13.1 mmol/L).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Poorly controlled diabetes (H02); matches the random plasma glucose.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.GEN.HEIGHT_WEIGHT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Height 170 cm; weight 76 kg; BMI 26.3 kg/m2."
+  },
+  "release_text": "Height 170 cm; weight 76 kg; BMI 26.3 kg/m2.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Not reported. A mildly overweight BMI is typical of type 2 diabetes in a man of this age.",
+  "confidence": 0.45
+ },
+ {
+  "target": "EX.GEN.CONSCIOUSNESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Alert and oriented to time, place and person; GCS 15/15."
+  },
+  "release_text": "Alert and oriented to time, place and person; GCS 15/15.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No intracranial bleeding; he gave a detailed history.",
+  "confidence": 0.9
+ },
+ {
+  "target": "EX.EYE.FUNDOSCOPY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Optic discs pink with sharp margins; no retinal haemorrhages or exudates."
+  },
+  "release_text": "Optic discs pink with sharp margins; no retinal haemorrhages or exudates.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No bleeding beyond the mucosae and urine; retinopathy not reported.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 1,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 73.7,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 73.7 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From the day's INR in Figure 2 (8.57) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 33.9,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 33.9 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From the day's INR in Figure 2 (3.37) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 57.1,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 57.1 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From the day's INR in Figure 2 (6.31) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 33.1,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 33.1 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From the day's INR in Figure 2 (3.28) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 63.1,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 63.1 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From the day's INR in Figure 2 (7.11) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 6,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 26.5,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 26.5 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From the day's INR in Figure 2 (2.51) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 25.2,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 25.2 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From the day's INR in Figure 2 (2.37) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 8,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 24.4,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 24.4 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From the day's INR in Figure 2 (2.27) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 22.2,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 22.2 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From the day's INR in Figure 2 (2.03) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 10,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 21.1,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 21.1 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From the day's INR in Figure 2 (1.91) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 22.3,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 22.3 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "From the day's INR in Figure 2 (2.04) with ISI 1.2 and mean normal PT 12.3 s, consistent with PT 112 s when the INR was too high to calculate.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 1,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 68.5,
+   "unit": "s",
+   "ref_range": "26.0-36.0",
+   "flag": "H"
+  },
+  "release_text": "Activated partial thromboplastin time 68.5 s (26.0-36.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 46.2,
+   "unit": "s",
+   "ref_range": "26.0-36.0",
+   "flag": "H"
+  },
+  "release_text": "Activated partial thromboplastin time 46.2 s (26.0-36.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 55.8,
+   "unit": "s",
+   "ref_range": "26.0-36.0",
+   "flag": "H"
+  },
+  "release_text": "Activated partial thromboplastin time 55.8 s (26.0-36.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 44.0,
+   "unit": "s",
+   "ref_range": "26.0-36.0",
+   "flag": "H"
+  },
+  "release_text": "Activated partial thromboplastin time 44.0 s (26.0-36.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 58.3,
+   "unit": "s",
+   "ref_range": "26.0-36.0",
+   "flag": "H"
+  },
+  "release_text": "Activated partial thromboplastin time 58.3 s (26.0-36.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 6,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 39.8,
+   "unit": "s",
+   "ref_range": "26.0-36.0",
+   "flag": "H"
+  },
+  "release_text": "Activated partial thromboplastin time 39.8 s (26.0-36.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 38.2,
+   "unit": "s",
+   "ref_range": "26.0-36.0",
+   "flag": "H"
+  },
+  "release_text": "Activated partial thromboplastin time 38.2 s (26.0-36.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 8,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 37.1,
+   "unit": "s",
+   "ref_range": "26.0-36.0",
+   "flag": "H"
+  },
+  "release_text": "Activated partial thromboplastin time 37.1 s (26.0-36.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 35.6,
+   "unit": "s",
+   "ref_range": "26.0-36.0"
+  },
+  "release_text": "Activated partial thromboplastin time 35.6 s (26.0-36.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 10,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 34.8,
+   "unit": "s",
+   "ref_range": "26.0-36.0"
+  },
+  "release_text": "Activated partial thromboplastin time 34.8 s (26.0-36.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 34.2,
+   "unit": "s",
+   "ref_range": "26.0-36.0"
+  },
+  "release_text": "Activated partial thromboplastin time 34.2 s (26.0-36.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "APTT 112 s on admission and 'normalized' by discharge (article); rises and falls with Figure 2's INR, normal from day 9.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.FIBRINOGEN",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 4.1,
+   "unit": "g/L",
+   "ref_range": "1.5-4.0",
+   "flag": "H"
+  },
+  "release_text": "Fibrinogen 4.1 g/L (1.5-4.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Fibrinogen is not vitamin K-dependent; 4.35 g/L on admission as an acute-phase rise, settling as the bleeding stops.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.FIBRINOGEN",
+  "day_bucket": 8,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 3.6,
+   "unit": "g/L",
+   "ref_range": "1.5-4.0"
+  },
+  "release_text": "Fibrinogen 3.6 g/L (1.5-4.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Fibrinogen is not vitamin K-dependent; 4.35 g/L on admission as an acute-phase rise, settling as the bleeding stops.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.FIBRINOGEN",
+  "day_bucket": 10,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 3.3,
+   "unit": "g/L",
+   "ref_range": "1.5-4.0"
+  },
+  "release_text": "Fibrinogen 3.3 g/L (1.5-4.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Fibrinogen is not vitamin K-dependent; 4.35 g/L on admission as an acute-phase rise, settling as the bleeding stops.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.F2",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 7,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "flag": "L"
+  },
+  "release_text": "Factor II activity 7 IU/dL (50-150), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 3 (6.31): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.F7",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 5,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "flag": "L"
+  },
+  "release_text": "Factor VII activity 5 IU/dL (50-150), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 3 (6.31): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.F9",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 9,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "flag": "L"
+  },
+  "release_text": "Factor IX activity 9 IU/dL (50-150), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 3 (6.31): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.F10",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 5,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "flag": "L"
+  },
+  "release_text": "Factor X activity 5 IU/dL (50-150), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 3 (6.31): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.F5",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 80,
+   "unit": "IU/dL",
+   "ref_range": "50-150"
+  },
+  "release_text": "Factor V activity 80 IU/dL (50-150).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Factor V is not vitamin K-dependent and stays normal.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.F2",
+  "day_bucket": 10,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 34,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "flag": "L"
+  },
+  "release_text": "Factor II activity 34 IU/dL (50-150), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 10 (1.91): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.F7",
+  "day_bucket": 10,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 38,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "flag": "L"
+  },
+  "release_text": "Factor VII activity 38 IU/dL (50-150), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 10 (1.91): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.F9",
+  "day_bucket": 10,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 40,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "flag": "L"
+  },
+  "release_text": "Factor IX activity 40 IU/dL (50-150), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 10 (1.91): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.F10",
+  "day_bucket": 10,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 30,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "flag": "L"
+  },
+  "release_text": "Factor X activity 30 IU/dL (50-150), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Partial recovery on vitamin K, in step with Figure 2's INR on day 10 (1.91): an INR near 6 goes with activities under 10%, near 2 with about 30-40%.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.F5",
+  "day_bucket": 10,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 88,
+   "unit": "IU/dL",
+   "ref_range": "50-150"
+  },
+  "release_text": "Factor V activity 88 IU/dL (50-150).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Factor V is not vitamin K-dependent and stays normal.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.HCT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.215,
+   "unit": "L/L",
+   "ref_range": "0.4-0.52",
+   "flag": "L"
+  },
+  "release_text": "Haematocrit 0.21 L/L (0.4-0.52), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normocytic anaemia of two weeks' blood loss (Hb 72 g/L, article); red cell count and haematocrit chosen so MCV about 84 fL and MCHC about 335 g/L; differential sums to the article's white count of 6.6.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.RBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 2.55,
+   "unit": "x10^12/L",
+   "ref_range": "4.5-5.5",
+   "flag": "L"
+  },
+  "release_text": "Red cell count 2.55 x10^12/L (4.5-5.5), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normocytic anaemia of two weeks' blood loss (Hb 72 g/L, article); red cell count and haematocrit chosen so MCV about 84 fL and MCHC about 335 g/L; differential sums to the article's white count of 6.6.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.RDW",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 15.1,
+   "unit": "%",
+   "ref_range": "11.6-14.0",
+   "flag": "H"
+  },
+  "release_text": "Red cell distribution width 15.1 % (11.6-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normocytic anaemia of two weeks' blood loss (Hb 72 g/L, article); red cell count and haematocrit chosen so MCV about 84 fL and MCHC about 335 g/L; differential sums to the article's white count of 6.6.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.NEUT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 4.4,
+   "unit": "x10^9/L",
+   "ref_range": "2.0-7.0"
+  },
+  "release_text": "Neutrophils 4.40 x10^9/L (2.0-7.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normocytic anaemia of two weeks' blood loss (Hb 72 g/L, article); red cell count and haematocrit chosen so MCV about 84 fL and MCHC about 335 g/L; differential sums to the article's white count of 6.6.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.LYMPH",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 1.6,
+   "unit": "x10^9/L",
+   "ref_range": "1.0-3.0"
+  },
+  "release_text": "Lymphocytes 1.60 x10^9/L (1.0-3.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normocytic anaemia of two weeks' blood loss (Hb 72 g/L, article); red cell count and haematocrit chosen so MCV about 84 fL and MCHC about 335 g/L; differential sums to the article's white count of 6.6.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.MONO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.45,
+   "unit": "x10^9/L",
+   "ref_range": "0.2-1.0"
+  },
+  "release_text": "Monocytes 0.45 x10^9/L (0.2-1.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normocytic anaemia of two weeks' blood loss (Hb 72 g/L, article); red cell count and haematocrit chosen so MCV about 84 fL and MCHC about 335 g/L; differential sums to the article's white count of 6.6.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.EOS",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.12,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.5"
+  },
+  "release_text": "Eosinophils 0.12 x10^9/L (0.02-0.5).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normocytic anaemia of two weeks' blood loss (Hb 72 g/L, article); red cell count and haematocrit chosen so MCV about 84 fL and MCHC about 335 g/L; differential sums to the article's white count of 6.6.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BASO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.03,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.1"
+  },
+  "release_text": "Basophils 0.03 x10^9/L (0.02-0.1).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normocytic anaemia of two weeks' blood loss (Hb 72 g/L, article); red cell count and haematocrit chosen so MCV about 84 fL and MCHC about 335 g/L; differential sums to the article's white count of 6.6.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.NRBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0,
+   "unit": "/100 WBC",
+   "ref_range": "0"
+  },
+  "release_text": "Nucleated red cells 0 /100 WBC (0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normocytic anaemia of two weeks' blood loss (Hb 72 g/L, article); red cell count and haematocrit chosen so MCV about 84 fL and MCHC about 335 g/L; differential sums to the article's white count of 6.6.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.HB",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 70,
+   "unit": "g/L",
+   "ref_range": "130-180",
+   "flag": "L"
+  },
+  "release_text": "Haemoglobin 70 g/L (130-180), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.HCT",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.21,
+   "unit": "L/L",
+   "ref_range": "0.4-0.52",
+   "flag": "L"
+  },
+  "release_text": "Haematocrit 0.21 L/L (0.4-0.52), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.RBC",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 2.48,
+   "unit": "x10^12/L",
+   "ref_range": "4.5-5.5",
+   "flag": "L"
+  },
+  "release_text": "Red cell count 2.48 x10^12/L (4.5-5.5), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.RDW",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 15.6,
+   "unit": "%",
+   "ref_range": "11.6-14.0",
+   "flag": "H"
+  },
+  "release_text": "Red cell distribution width 15.6 % (11.6-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.WBC",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 6.1,
+   "unit": "x10^9/L",
+   "ref_range": "4.0-10.0"
+  },
+  "release_text": "White cell count 6.1 x10^9/L (4.0-10.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.NEUT",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 3.9,
+   "unit": "x10^9/L",
+   "ref_range": "2.0-7.0"
+  },
+  "release_text": "Neutrophils 3.90 x10^9/L (2.0-7.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.LYMPH",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 1.6,
+   "unit": "x10^9/L",
+   "ref_range": "1.0-3.0"
+  },
+  "release_text": "Lymphocytes 1.60 x10^9/L (1.0-3.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.MONO",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.45,
+   "unit": "x10^9/L",
+   "ref_range": "0.2-1.0"
+  },
+  "release_text": "Monocytes 0.45 x10^9/L (0.2-1.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.EOS",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.12,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.5"
+  },
+  "release_text": "Eosinophils 0.12 x10^9/L (0.02-0.5).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.BASO",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.03,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.1"
+  },
+  "release_text": "Basophils 0.03 x10^9/L (0.02-0.1).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.NRBC",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0,
+   "unit": "/100 WBC",
+   "ref_range": "0"
+  },
+  "release_text": "Nucleated red cells 0 /100 WBC (0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.PLT",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 241,
+   "unit": "x10^9/L",
+   "ref_range": "150-410"
+  },
+  "release_text": "Platelet count 241 x10^9/L (150-410).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bleeding has stopped with vitamin K; slight fall from haemodilution; no transfusion reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.HB",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 78,
+   "unit": "g/L",
+   "ref_range": "130-180",
+   "flag": "L"
+  },
+  "release_text": "Haemoglobin 78 g/L (130-180), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.HCT",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.235,
+   "unit": "L/L",
+   "ref_range": "0.4-0.52",
+   "flag": "L"
+  },
+  "release_text": "Haematocrit 0.23 L/L (0.4-0.52), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.RBC",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 2.72,
+   "unit": "x10^12/L",
+   "ref_range": "4.5-5.5",
+   "flag": "L"
+  },
+  "release_text": "Red cell count 2.72 x10^12/L (4.5-5.5), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.RDW",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 16.2,
+   "unit": "%",
+   "ref_range": "11.6-14.0",
+   "flag": "H"
+  },
+  "release_text": "Red cell distribution width 16.2 % (11.6-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.WBC",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 6.4,
+   "unit": "x10^9/L",
+   "ref_range": "4.0-10.0"
+  },
+  "release_text": "White cell count 6.4 x10^9/L (4.0-10.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.NEUT",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 4.1,
+   "unit": "x10^9/L",
+   "ref_range": "2.0-7.0"
+  },
+  "release_text": "Neutrophils 4.10 x10^9/L (2.0-7.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.LYMPH",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 1.7,
+   "unit": "x10^9/L",
+   "ref_range": "1.0-3.0"
+  },
+  "release_text": "Lymphocytes 1.70 x10^9/L (1.0-3.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.MONO",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.44,
+   "unit": "x10^9/L",
+   "ref_range": "0.2-1.0"
+  },
+  "release_text": "Monocytes 0.44 x10^9/L (0.2-1.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.EOS",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.13,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.5"
+  },
+  "release_text": "Eosinophils 0.13 x10^9/L (0.02-0.5).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.BASO",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.03,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.1"
+  },
+  "release_text": "Basophils 0.03 x10^9/L (0.02-0.1).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.NRBC",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0,
+   "unit": "/100 WBC",
+   "ref_range": "0"
+  },
+  "release_text": "Nucleated red cells 0 /100 WBC (0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.PLT",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 268,
+   "unit": "x10^9/L",
+   "ref_range": "150-410"
+  },
+  "release_text": "Platelet count 268 x10^9/L (150-410).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Recovery at about 1 g/L a day with a reticulocyte response and a wider RDW.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.HB",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 85,
+   "unit": "g/L",
+   "ref_range": "130-180",
+   "flag": "L"
+  },
+  "release_text": "Haemoglobin 85 g/L (130-180), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.HCT",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.256,
+   "unit": "L/L",
+   "ref_range": "0.4-0.52",
+   "flag": "L"
+  },
+  "release_text": "Haematocrit 0.26 L/L (0.4-0.52), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.RBC",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 2.95,
+   "unit": "x10^12/L",
+   "ref_range": "4.5-5.5",
+   "flag": "L"
+  },
+  "release_text": "Red cell count 2.95 x10^12/L (4.5-5.5), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.RDW",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 16.0,
+   "unit": "%",
+   "ref_range": "11.6-14.0",
+   "flag": "H"
+  },
+  "release_text": "Red cell distribution width 16.0 % (11.6-14.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.WBC",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 6.8,
+   "unit": "x10^9/L",
+   "ref_range": "4.0-10.0"
+  },
+  "release_text": "White cell count 6.8 x10^9/L (4.0-10.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.NEUT",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 4.3,
+   "unit": "x10^9/L",
+   "ref_range": "2.0-7.0"
+  },
+  "release_text": "Neutrophils 4.30 x10^9/L (2.0-7.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.LYMPH",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 1.9,
+   "unit": "x10^9/L",
+   "ref_range": "1.0-3.0"
+  },
+  "release_text": "Lymphocytes 1.90 x10^9/L (1.0-3.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.MONO",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.44,
+   "unit": "x10^9/L",
+   "ref_range": "0.2-1.0"
+  },
+  "release_text": "Monocytes 0.44 x10^9/L (0.2-1.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.EOS",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.13,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.5"
+  },
+  "release_text": "Eosinophils 0.13 x10^9/L (0.02-0.5).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.BASO",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.03,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.1"
+  },
+  "release_text": "Basophils 0.03 x10^9/L (0.02-0.1).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.NRBC",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0,
+   "unit": "/100 WBC",
+   "ref_range": "0"
+  },
+  "release_text": "Nucleated red cells 0 /100 WBC (0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.PLT",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 254,
+   "unit": "x10^9/L",
+   "ref_range": "150-410"
+  },
+  "release_text": "Platelet count 254 x10^9/L (150-410).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Continued recovery by discharge (day 11).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.RETIC_ABS",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 118,
+   "unit": "x10^9/L",
+   "ref_range": "50-100",
+   "flag": "H"
+  },
+  "release_text": "Reticulocytes (absolute) 118 x10^9/L (50-100), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Marrow response to blood loss; normal marrow.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.IRF",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 17.0,
+   "unit": "%",
+   "ref_range": "1.6-12.1",
+   "flag": "H"
+  },
+  "release_text": "Immature reticulocyte fraction 17.0 % (1.6-12.1), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Active regeneration after bleeding.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.RETIC_ABS",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 160,
+   "unit": "x10^9/L",
+   "ref_range": "50-100",
+   "flag": "H"
+  },
+  "release_text": "Reticulocytes (absolute) 160 x10^9/L (50-100), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Marrow response to blood loss; normal marrow.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.IRF",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 20.5,
+   "unit": "%",
+   "ref_range": "1.6-12.1",
+   "flag": "H"
+  },
+  "release_text": "Immature reticulocyte fraction 20.5 % (1.6-12.1), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Active regeneration after bleeding.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.IRON",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 8.0,
+   "unit": "umol/L",
+   "ref_range": "11.6-31.3",
+   "flag": "L"
+  },
+  "release_text": "Iron, serum 8.0 umol/L (11.6-31.3), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Two weeks of blood loss with a diet low in vegetables; iron falling but stores not yet exhausted.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.TRANSFERRIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 2.55,
+   "unit": "g/L",
+   "ref_range": "2.0-3.6"
+  },
+  "release_text": "Transferrin 2.55 g/L (2.0-3.6).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal to high-normal after recent blood loss.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.TIBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 64,
+   "unit": "umol/L",
+   "ref_range": "45-72"
+  },
+  "release_text": "Total iron-binding capacity 64 umol/L (45-72).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "About 25 x transferrin (g/L).",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.FERRITIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 62,
+   "unit": "ug/L",
+   "ref_range": "30-400"
+  },
+  "release_text": "Ferritin 62 ug/L (30-400).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Meat-rich diet; stores partly used by two weeks of bleeding.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 6.4,
+   "unit": "mmol/L",
+   "ref_range": "2.5-7.8"
+  },
+  "release_text": "Urea 6.4 mmol/L (2.5-7.8).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No gastrointestinal bleed to raise urea; normal renal function.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CREATININE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 84,
+   "unit": "umol/L",
+   "ref_range": "64-104"
+  },
+  "release_text": "Creatinine 84 umol/L (64-104).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal renal function on tenofovir.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 104,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 104 mL/min/1.73m2 (>90).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "CKD-EPI for a 37-year-old man with creatinine 84 umol/L.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.NA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 135,
+   "unit": "mmol/L",
+   "ref_range": "135-145"
+  },
+  "release_text": "Sodium 135 mmol/L (135-145).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild dilutional effect of hyperglycaemia.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.K",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 4.3,
+   "unit": "mmol/L",
+   "ref_range": "3.5-5.1"
+  },
+  "release_text": "Potassium 4.3 mmol/L (3.5-5.1).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 100,
+   "unit": "mmol/L",
+   "ref_range": "98-107"
+  },
+  "release_text": "Chloride 100 mmol/L (98-107).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BICARB",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 24,
+   "unit": "mmol/L",
+   "ref_range": "22-29"
+  },
+  "release_text": "Bicarbonate 24 mmol/L (22-29).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No acidosis.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BILI_TOTAL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 11,
+   "unit": "umol/L",
+   "ref_range": "3-21"
+  },
+  "release_text": "Bilirubin, total 11 umol/L (3-21).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Chronic hepatitis B suppressed on tenofovir without cirrhosis (G05).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BILI_CONJ",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 3,
+   "unit": "umol/L",
+   "ref_range": "<5"
+  },
+  "release_text": "Bilirubin, conjugated (direct) 3 umol/L (<5).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Chronic hepatitis B suppressed on tenofovir without cirrhosis (G05).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ALP",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 92,
+   "unit": "U/L",
+   "ref_range": "40-129"
+  },
+  "release_text": "Alkaline phosphatase 92 U/L (40-129).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Chronic hepatitis B suppressed on tenofovir without cirrhosis (G05).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.AST",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 29,
+   "unit": "U/L",
+   "ref_range": "<40"
+  },
+  "release_text": "Aspartate aminotransferase 29 U/L (<40).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Chronic hepatitis B suppressed on tenofovir without cirrhosis (G05).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ALT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 36,
+   "unit": "U/L",
+   "ref_range": "<41"
+  },
+  "release_text": "Alanine aminotransferase 36 U/L (<41).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Chronic hepatitis B suppressed on tenofovir without cirrhosis (G05). ALT at the upper part of normal.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.GGT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 58,
+   "unit": "U/L",
+   "ref_range": "8-61"
+  },
+  "release_text": "Gamma-glutamyl transferase 58 U/L (8-61).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Occasional alcohol and diabetes; high-normal.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.ALBUMIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 36,
+   "unit": "g/L",
+   "ref_range": "35-52"
+  },
+  "release_text": "Albumin 36 g/L (35-52).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low-normal: poor diet and acute illness; synthetic liver function preserved.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.TOTAL_PROTEIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 70,
+   "unit": "g/L",
+   "ref_range": "64-83"
+  },
+  "release_text": "Total protein 70 g/L (64-83).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.AMMONIA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 26,
+   "unit": "umol/L",
+   "ref_range": "11-51"
+  },
+  "release_text": "Ammonia 26 umol/L (11-51).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No liver failure.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.AFP",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 3.1,
+   "unit": "kIU/L",
+   "ref_range": "<7.0"
+  },
+  "release_text": "Alpha-fetoprotein 3.1 kIU/L (<7.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No hepatocellular carcinoma.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.GLUCOSE_RANDOM",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 13.4,
+   "unit": "mmol/L",
+   "ref_range": "3.9-7.8",
+   "flag": "H"
+  },
+  "release_text": "Glucose, random plasma 13.4 mmol/L (3.9-7.8), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Poorly controlled type 2 diabetes (H02).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.GLUCOSE_FASTING",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 9.8,
+   "unit": "mmol/L",
+   "ref_range": "3.9-5.5",
+   "flag": "H"
+  },
+  "release_text": "Glucose, fasting plasma 9.8 mmol/L (3.9-5.5), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Poorly controlled type 2 diabetes (H02).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.GLUCOSE_CAPILLARY",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 13.1,
+   "unit": "mmol/L",
+   "ref_range": "3.9-7.8",
+   "flag": "H"
+  },
+  "release_text": "Glucose, capillary (point of care) 13.1 mmol/L (3.9-7.8), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Matches the bedside capillary glucose.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.HBA1C",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 8.6,
+   "unit": "%",
+   "ref_range": "4.0-5.6",
+   "flag": "H"
+  },
+  "release_text": "Haemoglobin A1c (NGSP) 8.6 % (4.0-5.6), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Poorly controlled diabetes; blood loss and red cell turnover lower the HbA1c somewhat, so the true level of control is worse.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.CHOL_TOTAL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 5.4,
+   "unit": "mmol/L",
+   "ref_range": "<5.2",
+   "flag": "H"
+  },
+  "release_text": "Cholesterol, total 5.4 mmol/L (<5.2), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Diabetic dyslipidaemia with a meat-heavy diet (H13).",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.TRIGLYCERIDE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 2.6,
+   "unit": "mmol/L",
+   "ref_range": "<1.7",
+   "flag": "H"
+  },
+  "release_text": "Triglycerides 2.6 mmol/L (<1.7), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Poorly controlled type 2 diabetes raises triglycerides.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.CHOL_HDL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.9,
+   "unit": "mmol/L",
+   "ref_range": ">1.0",
+   "flag": "L"
+  },
+  "release_text": "HDL cholesterol 0.9 mmol/L (>1.0), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low HDL typical of type 2 diabetes and smoking.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.CHOL_LDL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 3.3,
+   "unit": "mmol/L",
+   "ref_range": "<3.0",
+   "flag": "H"
+  },
+  "release_text": "LDL cholesterol 3.3 mmol/L (<3.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Friedewald: total - HDL - triglycerides/2.2.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.UPCR",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 34,
+   "unit": "mg/mmol",
+   "ref_range": "<15",
+   "flag": "H"
+  },
+  "release_text": "Urine protein:creatinine ratio 34 mg/mmol (<15), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Protein from blood in the urine, plus a little from diabetes.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.UACR",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 6.2,
+   "unit": "mg/mmol",
+   "ref_range": "<3.0",
+   "flag": "H"
+  },
+  "release_text": "Urine albumin:creatinine ratio 6.2 mg/mmol (<3.0), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Blood in the urine raises albumin; mild diabetic microalbuminuria possible.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.TT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 16.4,
+   "unit": "s",
+   "ref_range": "14.0-19.0"
+  },
+  "release_text": "Thrombin time 16.4 s (14.0-19.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Thrombin time is independent of the vitamin K-dependent factors; fibrinogen normal.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.F8",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 138,
+   "unit": "IU/dL",
+   "ref_range": "50-150"
+  },
+  "release_text": "Factor VIII activity 138 IU/dL (50-150).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not vitamin K-dependent; high-normal as an acute-phase protein.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.VWF_AG",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 128,
+   "unit": "IU/dL",
+   "ref_range": "50-150"
+  },
+  "release_text": "von Willebrand factor antigen 128 IU/dL (50-150).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No von Willebrand disease; acute-phase high-normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.VWF_ACT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 121,
+   "unit": "IU/dL",
+   "ref_range": "50-150"
+  },
+  "release_text": "von Willebrand factor activity 121 IU/dL (50-150).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No von Willebrand disease.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.DRVVT_RATIO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.08,
+   "unit": "ratio",
+   "ref_range": "0.8-1.2"
+  },
+  "release_text": "DRVVT normalised ratio 1.08 ratio (0.8-1.2).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Screen and confirm both prolonged by the low II and X; the normalised ratio stays near 1 without a lupus anticoagulant.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.PROTEIN_C",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 12,
+   "unit": "IU/dL",
+   "ref_range": "70-140",
+   "flag": "L"
+  },
+  "release_text": "Protein C activity 12 IU/dL (70-140), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Protein C is vitamin K-dependent and falls with the factors.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.PROTEIN_S_FREE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 24,
+   "unit": "IU/dL",
+   "ref_range": "65-140",
+   "flag": "L"
+  },
+  "release_text": "Free protein S antigen 24 IU/dL (65-140), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Protein S is vitamin K-dependent.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ANTITHROMBIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 96,
+   "unit": "IU/dL",
+   "ref_range": "80-120"
+  },
+  "release_text": "Antithrombin activity 96 IU/dL (80-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not vitamin K-dependent; liver synthesis preserved.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ANTI_DSDNA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 2,
+   "unit": "IU/mL",
+   "ref_range": "<10"
+  },
+  "release_text": "Anti-double-stranded DNA antibodies 2 IU/mL (<10).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No lupus.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.C3",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.24,
+   "unit": "g/L",
+   "ref_range": "0.9-1.8"
+  },
+  "release_text": "Complement C3 1.24 g/L (0.9-1.8).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No lupus.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.C4",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0.27,
+   "unit": "g/L",
+   "ref_range": "0.1-0.4"
+  },
+  "release_text": "Complement C4 0.27 g/L (0.1-0.4).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No lupus.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.TTG_IGA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0.9,
+   "unit": "U/mL",
+   "ref_range": "<7.0"
+  },
+  "release_text": "Anti-tissue transglutaminase IgA 0.9 U/mL (<7.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No coeliac disease.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.IGA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 2.1,
+   "unit": "g/L",
+   "ref_range": "0.7-4.0"
+  },
+  "release_text": "Immunoglobulin A 2.10 g/L (0.7-4.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal total IgA, so the tTG-IgA is valid.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.FAECAL_ELASTASE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 410,
+   "unit": "ug/g",
+   "ref_range": ">200"
+  },
+  "release_text": "Faecal elastase-1 410 ug/g (>200).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No pancreatic insufficiency.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_SG",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 1.024,
+   "unit": "ratio",
+   "ref_range": "1.005-1.03"
+  },
+  "release_text": "Urine specific gravity 1.024 ratio (1.005-1.03).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Glycosuria raises the specific gravity.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.U_PH",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 6.0,
+   "unit": "pH",
+   "ref_range": "5.0-8.0"
+  },
+  "release_text": "Urine pH 6.0 pH (5.0-8.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.U_MICRO_WBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 3,
+   "unit": "/HPF",
+   "ref_range": "0-5"
+  },
+  "release_text": "Urine microscopy, pus cells 3 /HPF (0-5).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No infection.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.U_SG",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 1.018,
+   "unit": "ratio",
+   "ref_range": "1.005-1.03"
+  },
+  "release_text": "Urine specific gravity 1.018 ratio (1.005-1.03).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Less glycosuria as glucose improves.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.U_PH",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 6.0,
+   "unit": "pH",
+   "ref_range": "5.0-8.0"
+  },
+  "release_text": "Urine pH 6.0 pH (5.0-8.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.U_MICRO_RBC",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 4,
+   "unit": "/HPF",
+   "ref_range": "0-2",
+   "flag": "H"
+  },
+  "release_text": "Urine microscopy, red cells 4 /HPF (0-2), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Haematuria almost gone once the bleeding stopped (article: resolution of all bleeding).",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.U_MICRO_WBC",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 1,
+   "unit": "/HPF",
+   "ref_range": "0-5"
+  },
+  "release_text": "Urine microscopy, pus cells 1 /HPF (0-5).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No infection.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.U_MICRO_RBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": ">100",
+   "unit": "/HPF",
+   "ref_range": "0-2",
+   "flag": "H"
+  },
+  "release_text": "Urine red cells >100 /HPF (0-2), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Two days of visible haematuria (H04).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.MIXING_STUDY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Corrects"
+  },
+  "release_text": "1:1 mix with normal pooled plasma: PT and APTT both correct into the reference range, immediately and after 2 h incubation at 37 °C.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "A factor deficiency without an inhibitor corrects; all four vitamin K-dependent factors are low.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.ABO_GROUP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "text": "Group B"
+  },
+  "release_text": "Forward and reverse grouping concordant: group B.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Not reported. Group B is common in people of Chinese origin (about a quarter); any group fits the case.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.RHD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "text": "RhD positive"
+  },
+  "release_text": "RhD positive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "RhD negative is rare (under 1%) in people of Chinese origin.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.WARFARIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Warfarin: not detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No warfarin exposure (H10); the panel found brodifacoum only.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.HBSAG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Reactive"
+  },
+  "release_text": "HBsAg reactive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Chronic hepatitis B (H02).",
+  "confidence": 0.95
+ },
+ {
+  "target": "CMP.ANTI_HBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Reactive"
+  },
+  "release_text": "Anti-HBc (total) reactive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Chronic hepatitis B (H02).",
+  "confidence": 0.95
+ },
+ {
+  "target": "CMP.ANTI_HCV",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Non-reactive"
+  },
+  "release_text": "Anti-HCV non-reactive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No hepatitis C reported.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.ETHANOL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Ethanol: not detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Occasional drinker; the party was weeks ago (H08, H12).",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.ANA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "No nuclear or cytoplasmic staining at the 1:80 screening dilution.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No lupus; family history only.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.LUPUS_ANTICOAGULANT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Lupus anticoagulant not detected (dRVVT screen and confirm both prolonged, normalised ratio normal). Interpret with caution: vitamin K-dependent factors are markedly reduced.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low II and X prolong both dRVVT steps; the laboratory comment is standard for plasma with low vitamin K-dependent factors.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.FIT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Faecal immunochemical test negative for faecal occult blood.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Swallowed blood from the gums is digested in the upper gut and is not detected by FIT; no lower GI bleeding.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.URINE_CULTURE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "No significant growth"
+  },
+  "release_text": "No significant growth.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haematuria from the coagulopathy, not infection.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.DENGUE_NS1",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Dengue NS1 antigen not detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Afebrile, platelets normal, back from travel two months ago.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.DENGUE_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Dengue IgM negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No recent dengue.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.LEPTO_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Leptospira IgM negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No fever, jaundice or renal failure.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.SCRUB_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Scrub typhus IgM ELISA negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No fever or eschar.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.MALARIA_PF_AG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Plasmodium falciparum HRP2 antigen not detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Afebrile.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.MALARIA_PAN_AG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Pan-malarial pLDH antigen not detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Afebrile.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.MALARIA_SMEAR_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Thick and thin films examined under oil immersion (200 fields). No malarial parasites seen.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Afebrile.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.BLOOD_CULTURE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No growth"
+  },
+  "release_text": "No growth after 5 days.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No infection.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.U_COLOUR",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Red, cloudy"
+  },
+  "release_text": "Red and cloudy, with small clots.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Visible haematuria from the coagulopathy (H04) with glycosuria from poorly controlled diabetes; isomorphic red cells and no casts point away from a glomerular cause.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_PROTEIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "1+"
+  },
+  "release_text": "Protein 1+.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Visible haematuria from the coagulopathy (H04) with glycosuria from poorly controlled diabetes; isomorphic red cells and no casts point away from a glomerular cause.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_GLUCOSE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "2+"
+  },
+  "release_text": "Glucose 2+.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Visible haematuria from the coagulopathy (H04) with glycosuria from poorly controlled diabetes; isomorphic red cells and no casts point away from a glomerular cause.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_KETONES",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Visible haematuria from the coagulopathy (H04) with glycosuria from poorly controlled diabetes; isomorphic red cells and no casts point away from a glomerular cause.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_BLOOD",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "3+"
+  },
+  "release_text": "Blood 3+ (large).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Visible haematuria from the coagulopathy (H04) with glycosuria from poorly controlled diabetes; isomorphic red cells and no casts point away from a glomerular cause.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_BILIRUBIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Visible haematuria from the coagulopathy (H04) with glycosuria from poorly controlled diabetes; isomorphic red cells and no casts point away from a glomerular cause.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_UROBILINOGEN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Normal"
+  },
+  "release_text": "Normal.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Visible haematuria from the coagulopathy (H04) with glycosuria from poorly controlled diabetes; isomorphic red cells and no casts point away from a glomerular cause.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_LEUCOCYTES",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Trace"
+  },
+  "release_text": "Leucocyte esterase trace.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Visible haematuria from the coagulopathy (H04) with glycosuria from poorly controlled diabetes; isomorphic red cells and no casts point away from a glomerular cause.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_NITRITE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Visible haematuria from the coagulopathy (H04) with glycosuria from poorly controlled diabetes; isomorphic red cells and no casts point away from a glomerular cause.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_CASTS",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "None seen"
+  },
+  "release_text": "No casts or crystals. Red cells of uniform, non-dysmorphic appearance.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Visible haematuria from the coagulopathy (H04) with glycosuria from poorly controlled diabetes; isomorphic red cells and no casts point away from a glomerular cause.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_COLOUR",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Yellow, clear"
+  },
+  "release_text": "Yellow and clear.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haematuria clearing after vitamin K (article: resolution of all bleeding); glycosuria persists.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_PROTEIN",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haematuria clearing after vitamin K (article: resolution of all bleeding); glycosuria persists.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_GLUCOSE",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "1+"
+  },
+  "release_text": "Glucose 1+.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haematuria clearing after vitamin K (article: resolution of all bleeding); glycosuria persists.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_KETONES",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haematuria clearing after vitamin K (article: resolution of all bleeding); glycosuria persists.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_BLOOD",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Trace"
+  },
+  "release_text": "Blood trace.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Haematuria clearing after vitamin K (article: resolution of all bleeding); glycosuria persists.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_BILIRUBIN",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haematuria clearing after vitamin K (article: resolution of all bleeding); glycosuria persists.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_UROBILINOGEN",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Normal"
+  },
+  "release_text": "Normal.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haematuria clearing after vitamin K (article: resolution of all bleeding); glycosuria persists.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_LEUCOCYTES",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haematuria clearing after vitamin K (article: resolution of all bleeding); glycosuria persists.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_NITRITE",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haematuria clearing after vitamin K (article: resolution of all bleeding); glycosuria persists.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_CASTS",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "text": "None seen"
+  },
+  "release_text": "No casts seen. No crystals seen.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Haematuria clearing after vitamin K (article: resolution of all bleeding); glycosuria persists.",
+  "confidence": 0.55
+ }
+]

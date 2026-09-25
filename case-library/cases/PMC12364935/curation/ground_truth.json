@@ -1,0 +1,319 @@
+{
+ "final_diagnosis": {
+  "text": "Visceral leishmaniasis (kala-azar) acquired in her endemic home province (Shanxi), misdiagnosed as systemic lupus erythematosus because of autoantibodies, a positive direct antiglobulin test, hypocomplementaemia and polyclonal hypergammaglobulinaemia",
+  "icd10": [
+   "B55.0"
+  ],
+  "accepted_synonyms": [
+   "visceral leishmaniasis",
+   "kala-azar",
+   "kala azar",
+   "leishmaniasis",
+   "black fever",
+   "Dumdum fever",
+   "Leishmania donovani infection",
+   "visceral leishmania infection"
+  ]
+ },
+ "final_dx": {
+  "id": "DX.KALA_AZAR",
+  "text": "Visceral leishmaniasis (kala-azar) acquired in her endemic home province (Shanxi), misdiagnosed as systemic lupus erythematosus because of autoantibodies, a positive direct antiglobulin test, hypocomplementaemia and polyclonal hypergammaglobulinaemia",
+  "icd10": [
+   "B55.0"
+  ],
+  "accepted_synonyms": [
+   "visceral leishmaniasis",
+   "kala-azar",
+   "kala azar",
+   "leishmaniasis",
+   "black fever",
+   "Dumdum fever",
+   "Leishmania donovani infection",
+   "visceral leishmania infection"
+  ]
+ },
+ "secondary_findings": [
+  "ANA 1:160-1:320, anti-dsDNA (earlier), anti-PM-Scl, anti-M2 and a positive DAT with low C3: autoantibodies from polyclonal B-cell activation in the infection, not lupus",
+  "Pancytopenia from splenic pooling and marrow parasitisation, with an inadequate reticulocyte response",
+  "Low-level EBV DNA under immunosuppression: an incidental reactivation",
+  "Probable adrenal suppression after abrupt withdrawal of long-term prednisone"
+ ],
+ "accepted_differential": [
+  "Systemic lupus erythematosus (the referral diagnosis)",
+  "Secondary haemophagocytic lymphohistiocytosis",
+  "Lymphoma, including splenic lymphoma",
+  "Brucellosis",
+  "Disseminated tuberculosis",
+  "Malaria or enteric fever",
+  "Chronic liver disease with portal hypertension and hypersplenism",
+  "Myelofibrosis or chronic myeloid leukaemia (massive spleen)",
+  "Drug-induced marrow suppression"
+ ],
+ "red_herrings": [
+  "ANA 1:320 and 1:160",
+  "anti-dsDNA positive at the other hospital",
+  "anti-PM-Scl",
+  "anti-M2 antibody",
+  "positive DAT",
+  "low C3 and C4",
+  "two earlier marrows without parasites",
+  "EBV DNA detected",
+  "living and working in a non-endemic province"
+ ],
+ "key_discriminators": [
+  "spleen 25.9 cm",
+  "no response to intensive immunosuppression",
+  "IgG 41.7 g/L, polyclonal",
+  "home town in Shanxi with regular travel there",
+  "amastigotes in the marrow aspirate",
+  "Leishmania PCR positive",
+  "anti-dsDNA and anti-Sm negative at this admission"
+ ],
+ "treatment_given": "Liposomal amphotericin B 1.3 mg/kg daily, extended to 30 days because of the long illness and prior immunosuppression; immunosuppression stopped; confirmation by the Chinese Center for Disease Control and Prevention.",
+ "outcome": "Fever settled within 48 hours; counts normal 21 days after discharge; marrow and PCR negative three weeks after treatment; spleen 16.6 cm at four months. Discharged well in March 2025.",
+ "teaching_points": [
+  "Ask every migrant worker where they come from and how often they go home: the endemic exposure may be far from where they live and work.",
+  "A spleen over 20 cm is very unusual in lupus; look for infection, a haematological cancer or portal hypertension.",
+  "ANA, anti-dsDNA, low complement and a positive DAT occur in visceral leishmaniasis; autoantibodies never outweigh clinicopathological correlation.",
+  "Failure of intensive immunosuppression argues against the autoimmune diagnosis, and immunosuppression worsens an unrecognised infection.",
+  "A negative marrow does not exclude the diagnosis: repeat it and ask for a specific search, or use rK39 and PCR. Splenic aspiration is the most sensitive but is contraindicated with very low platelets.",
+  "Liposomal amphotericin B is first-line; test for HIV and notify public health."
+ ],
+ "must_do": [
+  {
+   "text": "Take a full residence and travel history, including her home province and visits home",
+   "if": {
+    "asked_any": [
+     "HX.SOCIAL.TRAVEL",
+     "HX.SOCIAL.RESIDENCE"
+    ]
+   }
+  },
+  {
+   "text": "Look for the parasite directly: a repeat bone marrow aspirate examined for amastigotes, or Leishmania PCR, despite the two earlier negative marrows",
+   "if": {
+    "any": [
+     {
+      "finding_released": {
+       "findings": [
+        "FND.LD_BODIES"
+       ]
+      }
+     },
+     {
+      "ordered_any": [
+       "LAB.MOL.LEISHMANIA_PCR"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Test for HIV before treatment",
+   "if": {
+    "ordered_any": [
+     "LAB.SERO.HIV"
+    ]
+   }
+  },
+  {
+   "text": "Treat with liposomal amphotericin B",
+   "if": {
+    "plan_has_any": [
+     "RX.ANTIPARASITIC.LIPOSOMAL_AMPHOTERICIN",
+     "RX.ANTIFUNGAL.AMPHOTERICIN"
+    ]
+   }
+  },
+  {
+   "text": "Keep all immunosuppression stopped",
+   "if": {
+    "plan_has": [
+     "RX.IMMUNO.STOP"
+    ]
+   }
+  },
+  {
+   "text": "Notify the public health authority",
+   "if": {
+    "plan_has": [
+     "ACT.NOTIFY_PUBLIC_HEALTH"
+    ]
+   }
+  },
+  {
+   "text": "Arrange follow-up for response and relapse (counts, spleen size, test of cure)",
+   "if": {
+    "plan_has_any": [
+     "ACT.DISCHARGE_FOLLOW_UP",
+     "ACT.REPEAT_BLOODS"
+    ]
+   }
+  }
+ ],
+ "must_not_do": [
+  {
+   "text": "Restart or escalate immunosuppression for presumed lupus",
+   "if": {
+    "plan_has_any": [
+     "RX.STEROID.HIGH_DOSE",
+     "RX.IMMUNO.ESCALATE",
+     "RX.IMMUNO.CYCLOPHOSPHAMIDE",
+     "RX.IMMUNO.MYCOPHENOLATE",
+     "RX.IMMUNO.RITUXIMAB",
+     "RX.IMMUNO.AZATHIOPRINE",
+     "RX.IMMUNO.METHOTREXATE",
+     "RX.IMMUNO.IVIG"
+    ]
+   }
+  },
+  {
+   "text": "Commit to lupus without a parasitological work-up despite a massive spleen and failure of intensive immunosuppression",
+   "if": {
+    "all": [
+     {
+      "dx_in": [
+       "DX.SLE",
+       "DX.MCTD",
+       "DX.DRUG_INDUCED_LUPUS"
+      ]
+     },
+     {
+      "not": {
+       "ordered_any": [
+        "PROC.BM.ASPIRATE",
+        "PROC.SPLEEN.ASPIRATE",
+        "LAB.SERO.RK39",
+        "LAB.MOL.LEISHMANIA_PCR"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Splenectomy for the cytopenias or the spleen",
+   "if": {
+    "plan_has": [
+     "RX.SURGERY.SPLENECTOMY"
+    ]
+   }
+  },
+  {
+   "text": "Splenic aspiration while platelets are 29 x10^9/L and the PT is prolonged",
+   "if": {
+    "ordered_any": [
+     "PROC.SPLEEN.ASPIRATE"
+    ]
+   }
+  }
+ ],
+ "diagnosis_rubric_anchors": {
+  "5": "Visceral leishmaniasis, with the endemic home province identified as the source",
+  "4": "Visceral leishmaniasis, exposure not identified",
+  "3": "Secondary HLH or hypersplenism from an unnamed chronic infection",
+  "2": "Lupus, another specific infection (brucellosis, tuberculosis, malaria, enteric fever), lymphoma, a myeloproliferative neoplasm or chronic liver disease as the final diagnosis",
+  "1": "Unrelated diagnosis, or one that would lead to harm"
+ },
+ "rubric": {
+  "rubric": [
+   {
+    "score": 5,
+    "text": "Visceral leishmaniasis, with the endemic home province identified as the source",
+    "if": {
+     "all": [
+      {
+       "dx_in": [
+        "DX.KALA_AZAR"
+       ]
+      },
+      {
+       "evidence_has": [
+        "H11"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "score": 4,
+    "text": "Visceral leishmaniasis, exposure not identified",
+    "if": {
+     "dx_in": [
+      "DX.KALA_AZAR"
+     ]
+    }
+   },
+   {
+    "score": 3,
+    "text": "Secondary HLH or hypersplenism from an unnamed chronic infection",
+    "if": {
+     "dx_in": [
+      "DX.HLH",
+      "DX.HYPERSPLENISM"
+     ]
+    }
+   },
+   {
+    "score": 2,
+    "text": "Lupus, another specific infection, lymphoma, a myeloproliferative neoplasm or chronic liver disease as the final diagnosis",
+    "if": {
+     "dx_in": [
+      "DX.SLE",
+      "DX.MCTD",
+      "DX.DRUG_INDUCED_LUPUS",
+      "DX.WARM_AIHA",
+      "DX.BRUCELLOSIS",
+      "DX.MILIARY_TB",
+      "DX.TYPHOID_FEVER",
+      "DX.VIVAX_MALARIA",
+      "DX.FALCIPARUM_MALARIA",
+      "DX.NHL",
+      "DX.HODGKIN_LYMPHOMA",
+      "DX.MARGINAL_ZONE_LYMPHOMA",
+      "DX.HAIRY_CELL_LEUKAEMIA",
+      "DX.PRIMARY_MYELOFIBROSIS",
+      "DX.CML",
+      "DX.CIRRHOSIS",
+      "DX.PORTAL_HYPERTENSION",
+      "DX.PBC",
+      "DX.AUTOIMMUNE_HEPATITIS"
+     ]
+    }
+   },
+   {
+    "score": 1,
+    "text": "Unrelated diagnosis, or one that would lead to harm",
+    "if": {
+     "not": {
+      "dx_in": [
+       "DX.KALA_AZAR",
+       "DX.HLH",
+       "DX.HYPERSPLENISM",
+       "DX.SLE",
+       "DX.MCTD",
+       "DX.DRUG_INDUCED_LUPUS",
+       "DX.WARM_AIHA",
+       "DX.BRUCELLOSIS",
+       "DX.MILIARY_TB",
+       "DX.TYPHOID_FEVER",
+       "DX.VIVAX_MALARIA",
+       "DX.FALCIPARUM_MALARIA",
+       "DX.NHL",
+       "DX.HODGKIN_LYMPHOMA",
+       "DX.MARGINAL_ZONE_LYMPHOMA",
+       "DX.HAIRY_CELL_LEUKAEMIA",
+       "DX.PRIMARY_MYELOFIBROSIS",
+       "DX.CML",
+       "DX.CIRRHOSIS",
+       "DX.PORTAL_HYPERTENSION",
+       "DX.PBC",
+       "DX.AUTOIMMUNE_HEPATITIS"
+      ]
+     }
+    }
+   }
+  ],
+  "default_score": 1
+ }
+}

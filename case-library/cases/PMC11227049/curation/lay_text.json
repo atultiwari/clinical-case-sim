@@ -1,0 +1,12 @@
+[
+ {"fact": "H07", "lay_text": "No, I don't feel sick with it, and I haven't vomited."},
+ {"fact": "H08", "lay_text": "No, I haven't had any fever."},
+ {"fact": "H09", "lay_text": "No, no loose motions."},
+ {"fact": "H10", "lay_text": "No, my breathing is fine."},
+ {"fact": "H11", "lay_text": "No, I haven't seen any black stools, and I haven't vomited blood."},
+ {"fact": "H12", "lay_text": "Before this I was quite well."},
+ {"fact": "H13", "lay_text": "I used to take metformin for my sugar, but I stopped it about two months ago."},
+ {"fact": "H14", "lay_text": "I take a thyroid tablet every day. My thyroid is under control."},
+ {"fact": "H15", "lay_text": "Oh, yes. I was taking some herbal capsules for my sugar that I bought on the internet. I took them for about a month and a half, and I stopped before I came into hospital."},
+ {"fact": "H16", "lay_text": "They were Ayurvedic capsules for diabetes. I ordered them online. I took them for about six weeks and stopped before I came in."}
+]

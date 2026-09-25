@@ -1,0 +1,382 @@
+[
+ {
+  "test_item_id": "LAB.HAEM.CBC",
+  "utility": "essential",
+  "rationale": "Defines the pancytopenia; part of the routine admission panel."
+ },
+ {
+  "test_item_id": "LAB.HAEM.RETIC",
+  "utility": "supportive",
+  "rationale": "An inappropriately low count shows a production failure and later shows the response to replacement."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM",
+  "utility": "essential",
+  "rationale": "Shows dysplastic neutrophils and the relative eosinophilia; the basis for a marrow and haematinics."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "utility": "supportive",
+  "rationale": "The haematopathologist's comment points to B12, folate and copper before a marrow label."
+ },
+ {
+  "test_item_id": "LAB.CHEM.B12",
+  "utility": "essential",
+  "rationale": "Must be known before folate is given alone; replete here, which points away from B12."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FOLATE",
+  "utility": "essential",
+  "rationale": "The decisive test: 2.6 ng/mL."
+ },
+ {
+  "test_item_id": "LAB.CHEM.RBC_FOLATE",
+  "utility": "supportive",
+  "rationale": "Confirms depleted stores; less affected by recent intake, a little by the transfused unit."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HOMOCYSTEINE",
+  "utility": "supportive",
+  "rationale": "Raised, supporting a functional deficiency."
+ },
+ {
+  "test_item_id": "LAB.CHEM.MMA",
+  "utility": "supportive",
+  "rationale": "Normal, which separates folate from B12 deficiency."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LDH",
+  "utility": "supportive",
+  "rationale": "Raised by ineffective erythropoiesis; non-specific."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LFT",
+  "utility": "supportive",
+  "rationale": "Routine admission panel; shows the low albumin of malnutrition."
+ },
+ {
+  "test_item_id": "LAB.CHEM.RENAL",
+  "utility": "supportive",
+  "rationale": "Routine admission panel; low potassium and bicarbonate after diarrhoea."
+ },
+ {
+  "test_item_id": "LAB.CHEM.IRON_STUDIES",
+  "utility": "supportive",
+  "rationale": "Replete iron with a high saturation; argues against iron deficiency after the sleeve."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FERRITIN",
+  "utility": "supportive",
+  "rationale": "High from inflammation and iron loading; relevant to the HLH question."
+ },
+ {
+  "test_item_id": "LAB.CHEM.COPPER_CAERULOPLASMIN",
+  "utility": "supportive",
+  "rationale": "Copper deficiency after bariatric surgery mimics a myelodysplastic neoplasm; normal here."
+ },
+ {
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "utility": "supportive",
+  "rationale": "Reasonable in unexplained pancytopenia, but its morphology alone misleads towards a neoplasm; read it with the haematinics."
+ },
+ {
+  "test_item_id": "PROC.BM.TREPHINE",
+  "utility": "supportive",
+  "rationale": "Gives cellularity and the CD34 blast estimate; shows the marrow is not aplastic."
+ },
+ {
+  "test_item_id": "LAB.BM.FLOW",
+  "utility": "supportive",
+  "rationale": "Blasts without an aberrant phenotype, which favours a reactive process."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+  "utility": "essential",
+  "rationale": "A normal karyotype removes the support for a myeloid neoplasm; needed before any disease-directed therapy."
+ },
+ {
+  "test_item_id": "LAB.MOL.MYELOID_NGS",
+  "utility": "supportive",
+  "rationale": "Finds only a low-level DNMT3A variant and a VUS; needs careful interpretation."
+ },
+ {
+  "test_item_id": "LAB.TBS.BLOOD_GROUP",
+  "utility": "supportive",
+  "rationale": "Needed for transfusion."
+ },
+ {
+  "test_item_id": "LAB.TBS.ANTIBODY_SCREEN",
+  "utility": "supportive",
+  "rationale": "Needed with the group for safe transfusion."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PB_FLOW",
+  "utility": "low_yield",
+  "rationale": "Shows the relative eosinophilia and 1.5% blasts; adds little to the marrow."
+ },
+ {
+  "test_item_id": "LAB.BM.IRON_STAIN",
+  "utility": "low_yield",
+  "rationale": "No ring sideroblasts; increased stores fit the ferritin."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+  "utility": "unnecessary",
+  "rationale": "Adds nothing to a normal karyotype and SNP microarray."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.FISH_AML",
+  "utility": "low_yield",
+  "rationale": "Normal; reasonable while AML is on the table."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.SNP_ARRAY",
+  "utility": "supportive",
+  "rationale": "Normal; strengthens the case against a clonal disorder."
+ },
+ {
+  "test_item_id": "LAB.MOL.AML_TARGETED_PANEL",
+  "utility": "low_yield",
+  "rationale": "Normal; only relevant if AML treatment were planned."
+ },
+ {
+  "test_item_id": "LAB.MOL.BCR_ABL",
+  "utility": "low_yield",
+  "rationale": "Negative; little reason to suspect a BCR::ABL1 neoplasm."
+ },
+ {
+  "test_item_id": "LAB.MOL.PML_RARA",
+  "utility": "unnecessary",
+  "rationale": "No coagulopathy or promyelocytes to suggest APL."
+ },
+ {
+  "test_item_id": "LAB.HAEM.COAG_SCREEN",
+  "utility": "supportive",
+  "rationale": "Baseline before procedures with a platelet count below 6; INR mildly raised."
+ },
+ {
+  "test_item_id": "LAB.CHEM.URATE",
+  "utility": "low_yield",
+  "rationale": "Upper-normal; tumour lysis is not a concern."
+ },
+ {
+  "test_item_id": "LAB.SERO.HIV",
+  "utility": "supportive",
+  "rationale": "HIV causes marrow dysplasia and opportunistic infection; must be excluded."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_B",
+  "utility": "supportive",
+  "rationale": "Before transfusion-heavy care and any immunosuppression; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_C",
+  "utility": "supportive",
+  "rationale": "Hepatitis-associated marrow failure and transfusion baseline; negative."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PNH_FLOW",
+  "utility": "low_yield",
+  "rationale": "Granulocytes too few to assess; the marrow is not aplastic."
+ },
+ {
+  "test_item_id": "LAB.SERO.PARVOVIRUS_B19",
+  "utility": "low_yield",
+  "rationale": "Past infection only; does not explain trilineage failure."
+ },
+ {
+  "test_item_id": "LAB.SERO.EBV",
+  "utility": "low_yield",
+  "rationale": "Past infection only."
+ },
+ {
+  "test_item_id": "LAB.SERO.CMV",
+  "utility": "low_yield",
+  "rationale": "Past infection only."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.FISH_EOSINOPHILIA",
+  "utility": "low_yield",
+  "rationale": "Negative; the eosinophilia is relative."
+ },
+ {
+  "test_item_id": "LAB.GI.STOOL_MICROSCOPY",
+  "utility": "low_yield",
+  "rationale": "Negative; the absolute eosinophil count is normal."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANCA",
+  "utility": "unnecessary",
+  "rationale": "No features of vasculitis."
+ },
+ {
+  "test_item_id": "LAB.MICRO.BLOOD_CULTURE",
+  "utility": "essential",
+  "rationale": "Mandatory in profound neutropenia on antimicrobials."
+ },
+ {
+  "test_item_id": "LAB.MICRO.URINE_CULTURE",
+  "utility": "supportive",
+  "rationale": "Part of a neutropenic infection screen."
+ },
+ {
+  "test_item_id": "LAB.MICRO.STOOL_CULTURE",
+  "utility": "supportive",
+  "rationale": "Presumed colitis with diarrhoea."
+ },
+ {
+  "test_item_id": "LAB.MICRO.CDIFF",
+  "utility": "supportive",
+  "rationale": "Diarrhoea on antibiotics."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CRP",
+  "utility": "supportive",
+  "rationale": "Tracks the inflammatory response; moderately raised."
+ },
+ {
+  "test_item_id": "LAB.CHEM.PROCALCITONIN",
+  "utility": "low_yield",
+  "rationale": "Mildly raised; does not change neutropenic management."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LACTATE",
+  "utility": "low_yield",
+  "rationale": "Normal; she is not in shock."
+ },
+ {
+  "test_item_id": "LAB.URINE.URINALYSIS",
+  "utility": "supportive",
+  "rationale": "Cheap part of an infection screen; normal."
+ },
+ {
+  "test_item_id": "LAB.HAEM.CD4",
+  "utility": "low_yield",
+  "rationale": "Very low because all lymphocytes are low; informs prophylaxis, not the diagnosis."
+ },
+ {
+  "test_item_id": "IMG.XR.CHEST",
+  "utility": "supportive",
+  "rationale": "Part of a neutropenic infection screen; clear on day 0."
+ },
+ {
+  "test_item_id": "IMG.CT.CHEST",
+  "utility": "low_yield",
+  "rationale": "Faint ground-glass change on day 0; useful if respiratory symptoms develop."
+ },
+ {
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "utility": "low_yield",
+  "rationale": "No colitis or collection with a soft abdomen; radiation and contrast for little yield."
+ },
+ {
+  "test_item_id": "LAB.CHEM.ZINC",
+  "utility": "low_yield",
+  "rationale": "Low, as often after bariatric surgery; does not explain the marrow."
+ },
+ {
+  "test_item_id": "LAB.CHEM.VITAMIN_D",
+  "utility": "low_yield",
+  "rationale": "Low; matters for long-term care, not for the pancytopenia."
+ },
+ {
+  "test_item_id": "LAB.CHEM.VITAMIN_B1",
+  "utility": "supportive",
+  "rationale": "Thiamine status before refeeding in a malnourished patient."
+ },
+ {
+  "test_item_id": "LAB.CHEM.VITAMIN_B6",
+  "utility": "unnecessary",
+  "rationale": "Low-normal; no sideroblastic picture."
+ },
+ {
+  "test_item_id": "LAB.CHEM.BONE_PROFILE",
+  "utility": "supportive",
+  "rationale": "Low phosphate and calcium matter for refeeding."
+ },
+ {
+  "test_item_id": "LAB.CHEM.MAGNESIUM",
+  "utility": "supportive",
+  "rationale": "Low after diarrhoea; relevant to refeeding and the QT interval."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HOLOTC",
+  "utility": "unnecessary",
+  "rationale": "Serum B12 is already above 1500 pg/mL."
+ },
+ {
+  "test_item_id": "LAB.IMM.IF_GPC_ANTIBODIES",
+  "utility": "unnecessary",
+  "rationale": "B12 is replete; pernicious anaemia is irrelevant here."
+ },
+ {
+  "test_item_id": "LAB.IMM.COELIAC_TTG",
+  "utility": "low_yield",
+  "rationale": "Negative; the malabsorption follows the sleeve gastrectomy."
+ },
+ {
+  "test_item_id": "LAB.ENDO.TFT",
+  "utility": "supportive",
+  "rationale": "Known hypothyroidism on replacement; normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LIPIDS",
+  "utility": "low_yield",
+  "rationale": "Triglycerides normal, which counts against HLH."
+ },
+ {
+  "test_item_id": "PROC.ENDO.OGD",
+  "utility": "risky",
+  "rationale": "Invasive with platelets below 6 and neutrophils 0.06; it shows only the sleeve anatomy."
+ },
+ {
+  "test_item_id": "IMG.US.NECK",
+  "utility": "unnecessary",
+  "rationale": "Shows only the thyroidectomy bed."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FIBRINOGEN",
+  "utility": "low_yield",
+  "rationale": "Not low; counts against HLH."
+ },
+ {
+  "test_item_id": "IMG.US.ABDOMEN",
+  "utility": "low_yield",
+  "rationale": "Spleen normal; counts against HLH."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANA",
+  "utility": "low_yield",
+  "rationale": "Negative; no autoimmune features."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANTI_DSDNA",
+  "utility": "unnecessary",
+  "rationale": "Negative; ANA negative."
+ },
+ {
+  "test_item_id": "LAB.IMM.COMPLEMENT",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.IMM.RF",
+  "utility": "unnecessary",
+  "rationale": "Negative; no joint disease."
+ },
+ {
+  "test_item_id": "LAB.TBS.DAT",
+  "utility": "low_yield",
+  "rationale": "Negative; no immune haemolysis."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ESR",
+  "utility": "low_yield",
+  "rationale": "Raised by anaemia and infection; non-specific."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HAPTOGLOBIN",
+  "utility": "low_yield",
+  "rationale": "Low from intramedullary haemolysis; non-specific."
+ }
+]

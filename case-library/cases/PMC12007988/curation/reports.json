@@ -1,0 +1,404 @@
+[
+ {
+  "id": "RP01",
+  "test_item_id": "LAB.HAEM.FILM",
+  "variant": "only",
+  "status": "final",
+  "status_line": "Screening film reported by a biomedical scientist. A haematopathologist review can be requested.",
+  "findings": [
+   "FND.SCHISTOCYTES",
+   "FND.NUCLEATED_RED_CELLS",
+   "FND.MACROCYTOSIS"
+  ],
+  "report_text": "Red cells: marked anisopoikilocytosis with numerous red cell fragments (schistocytes); many macrocytes. Nucleated red cells present (about 6 per 100 white cells). No spherocytes or agglutination. White cells: reduced to low-normal in number. Platelets: reduced, confirmed on the film; no clumps. Comment: marked red cell fragmentation with thrombocytopenia; urgent review by a haematopathologist recommended.",
+  "impression": "Marked red cell fragmentation with macrocytosis, nucleated red cells and thrombocytopenia.",
+  "suggested_reflex": [
+   "LAB.HAEM.FILM_REVIEW",
+   "LAB.HAEM.SCHISTOCYTE_COUNT"
+  ],
+  "based_on": [
+   "R01",
+   "R02"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Schistocytosis, nucleated red cells and thrombocytopenia are from the article (R01, Figures 1A-1C, platelets 105). The screening film does not describe the nuclear detail of the nucleated red cells or the neutrophil lobes: the article's point is that a thorough review of the film finds the megaloblasts (Discussion and Conclusions). Macrocytes follow MCV 117.4 fL; no spherocytes (DAT negative). Curator's judgement: the screening report stops at what a busy first read reports.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP02",
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "variant": "only",
+  "status": "final",
+  "status_line": "Final report, reviewed by a haematopathologist.",
+  "findings": [
+   "FND.SCHISTOCYTES",
+   "FND.NUCLEATED_RED_CELLS",
+   "FND.CIRCULATING_MEGALOBLASTS",
+   "FND.HYPERSEGMENTED_NEUTROPHILS",
+   "FND.MACROCYTOSIS"
+  ],
+  "report_text": "Film reviewed by a haematopathologist. Red cells: marked anisopoikilocytosis with numerous schistocytes; oval macrocytes; no spherocytes, no agglutination, no polychromasia of note. Nucleated red cells about 6 per 100 white cells, several with dysplastic features: nuclear fragmentation, nuclear atypia and large erythroblasts with finely dispersed, open chromatin (megaloblastic nuclear pattern). White cells: hypersegmented neutrophils, some with six or more lobes. No blasts. Platelets: reduced; no clumps. Comment: red cell fragmentation together with a megaloblastic picture in the nucleated red cells and neutrophils. Suggest serum B12 and folate before any transfusion or vitamin treatment. ADAMTS13 activity may be sent if a thrombotic thrombocytopenic purpura remains a concern.",
+  "impression": "Marked red cell fragmentation; megaloblastic nucleated red cells with dysplastic features; hypersegmented neutrophils; oval macrocytes; thrombocytopenia.",
+  "suggested_reflex": [
+   "LAB.CHEM.B12",
+   "LAB.CHEM.FOLATE",
+   "LAB.HAEM.ADAMTS13"
+  ],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "All morphology is from the article (R01; Figures 1 and 2; the Discussion's hypersegmented neutrophils with more than six segments; 'hyperfragmented' in the Figure 1B caption read as hypersegmented, decided Q7). Oval macrocytes and the absence of blasts follow G16. The comment names tests, never the diagnosis; it mirrors the article's own reasoning.",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP03",
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.MEGALOBLASTIC_CHANGE",
+   "FND.ERYTHROID_HYPERPLASIA",
+   "FND.DYSERYTHROPOIESIS",
+   "FND.GIANT_METAMYELOCYTES",
+   "FND.DYSGRANULOPOIESIS",
+   "FND.DYSMEGAKARYOPOIESIS"
+  ],
+  "report_text": "Particulate aspirate, hypercellular. Erythropoiesis is expanded and shows marked megaloblastic change throughout maturation, with fine chromatin evenly dispersed through large nuclei and nuclear-cytoplasmic asynchrony; irregular nuclei and multinucleated erythroblasts are present. Granulopoiesis: giant metamyelocytes and band forms, and hypersegmented and giant neutrophils. Megakaryocytes are present with separated, multinucleated forms. Blasts 1%. No abnormal infiltrate. Comment: megaloblastic erythropoiesis with dysplastic features in all three lineages. Suggest serum B12 and folate; dysplasia of this kind should not be taken as evidence of a myelodysplastic neoplasm until these are known. See the karyotype.",
+  "impression": "Hypercellular marrow with marked megaloblastic change and trilineage dysplastic features; no excess of blasts; no infiltrate.",
+  "suggested_reflex": [
+   "LAB.CHEM.B12",
+   "LAB.CHEM.FOLATE",
+   "LAB.CYTOGEN.KARYOTYPE"
+  ],
+  "based_on": [
+   "R03"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Hypercellularity, megaloblastic change, hypersegmented and giant neutrophils, dyserythropoiesis and dysmegakaryopoiesis are from the article (R03, Figure 4). Blast count and 'no infiltrate' are affected (G22: no infiltrate; the marrow was done to exclude cancer). The comment names tests; it is what a competent haematopathologist writes.",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP04",
+  "test_item_id": "PROC.BM.TREPHINE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.ERYTHROID_HYPERPLASIA"
+  ],
+  "report_text": "Adequate trephine core (18 mm). Hypercellular for age (about 80%) with marked erythroid expansion and left-shifted, immature-looking erythropoiesis. Granulopoiesis and megakaryocytes present in normal numbers; some large megakaryocytes. No fibrosis (reticulin grade 0). No granulomas and no infiltrate by lymphoma or carcinoma. No increase in CD34-positive cells.",
+  "impression": "Hypercellular marrow with erythroid hyperplasia; no fibrosis and no infiltrate.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G22: not in the article. A hypercellular marrow with expanded erythropoiesis fits the aspirate; no infiltrate answers the cancer question the authors had.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP05",
+  "test_item_id": "LAB.BM.IRON_STAIN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Perls stain. Storage iron increased (grade 4) in marrow fragments. Many erythroblasts contain coarse siderotic granules; no ring sideroblasts are seen.",
+  "impression": "Increased storage iron; no ring sideroblasts.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G22: serum iron 45.7 umol/L and ferritin 722 ug/L (article) with ineffective erythropoiesis go with increased storage iron and heavily granulated erythroblasts; no ring sideroblasts, so the sideroblastic path stays closed.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP06",
+  "test_item_id": "LAB.BM.FLOW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Erythroid precursors increased, with a raised proportion of early (CD117-positive, CD71-bright) forms. Myeloid maturation shows mild asynchrony without an aberrant immunophenotype. CD34-positive blasts 0.8% with a normal phenotype. B cells polyclonal; plasma cells polyclonal. No abnormal population detected.",
+  "impression": "No excess of blasts and no abnormal population; erythroid expansion.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Megaloblastic marrows show erythroid expansion and mild maturation asynchrony without an aberrant blast population; keeps the myelodysplasia trap open only as far as a real marrow would.",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP07",
+  "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Two hundred interphase nuclei scored per probe. Normal signal patterns for 5q31, 7q31, chromosome 8 centromere and 20q12; no deletion or gain detected.",
+  "impression": "No abnormality detected with the myelodysplasia FISH panel.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "The article's karyotype is normal (L19) and the dysplasia reversed with treatment; the FISH panel is normal.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP08",
+  "test_item_id": "LAB.MOL.MYELOID_NGS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Targeted sequencing of a myeloid gene panel achieved adequate coverage across all regions. No pathogenic or likely pathogenic variants were detected at a variant allele frequency of 2% or more.",
+  "impression": "No pathogenic variant detected.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No clonal disorder: normal karyotype (article) and full recovery with diet and B12.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP09",
+  "test_item_id": "LAB.HAEM.PB_FLOW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Lymphocytes comprise a polyclonal mixture of T, B and NK cells with normal antigen expression. B cells show a normal kappa to lambda ratio. No blasts or abnormal populations. Granulocytes and monocytes express CD55 and CD59 normally.",
+  "impression": "No abnormal population in the blood.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No lymphoproliferative disorder or PNH clone; consistent with the PNH flow result.",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP10",
+  "test_item_id": "IMG.XR.CHEST",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "PA erect chest radiograph. The heart size and mediastinal contours are within normal limits. The lungs are clear and both costophrenic angles are sharp. No hilar enlargement. No bony abnormality.",
+  "impression": "Normal chest radiograph.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No malignancy, infection or heart failure.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP11",
+  "test_item_id": "IMG.CT.CHEST",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "CT of the chest with contrast. The lungs are clear with no nodules, consolidation or interstitial change. The airways are patent. No mediastinal, hilar or axillary lymph node enlargement. No pleural or pericardial effusion. No bone lesion.",
+  "impression": "Normal CT chest.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G20: no malignancy (the cancer-related microangiopathy path).",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP12",
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Contrast-enhanced CT of the abdomen and pelvis in the portal venous phase. The liver, spleen (11 cm), pancreas, adrenal glands and kidneys are normal. The stomach and bowel are unremarkable. No lymph node enlargement, mass or free fluid. No bone lesion.",
+  "impression": "Normal CT abdomen and pelvis; spleen not enlarged.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G20: no splenomegaly (article: spleen not palpable), mass or lymphadenopathy.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP13",
+  "test_item_id": "IMG.US.ABDOMEN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "The liver is normal in size and echotexture with no focal lesion. The gallbladder is thin-walled without calculi and the common bile duct is not dilated. The spleen is normal in size (10.8 cm). The pancreas, where seen, is normal. Both kidneys are normal in size with no hydronephrosis. No free fluid.",
+  "impression": "Normal abdominal ultrasound; spleen not enlarged.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G20: no splenomegaly or mass; no pigment gallstones (a month of haemolysis only).",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP14",
+  "test_item_id": "IMG.CT.HEAD",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Non-contrast CT of the head. Grey-white matter differentiation is preserved. No intracranial haemorrhage, infarct, mass effect or midline shift. The ventricles and sulci are normal for age.",
+  "impression": "Normal CT head.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No neurological symptoms or signs (E05); no TTP-related infarcts.",
+  "confidence": 0.9
+ },
+ {
+  "id": "RP15",
+  "test_item_id": "PROC.ENDO.OGD",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Endoscopy to the second part of the duodenum. Normal oesophageal, gastric and duodenal mucosa; normal gastric body folds. No ulceration, varices or bleeding. Biopsies from the gastric body and antrum and from the duodenum: normal gastric mucosa with preserved oxyntic glands, no atrophy or intestinal metaplasia, no Helicobacter organisms; normal duodenal villous architecture.",
+  "impression": "Normal upper GI endoscopy and biopsies; no atrophic body gastritis.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G19: not done in the article. Consistent with the authors' dietary attribution and the negative intrinsic factor and parietal cell antibodies (curator's decision on G13).",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP16",
+  "test_item_id": "PROC.ENDO.COLONOSCOPY",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Complete colonoscopy to the caecum with intubation of the terminal ileum; good bowel preparation. Normal mucosa throughout with no polyps, ulceration or bleeding. Terminal ileum normal.",
+  "impression": "Normal colonoscopy and terminal ileum.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No gastrointestinal malignancy or ileal disease; faecal occult blood negative.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP17",
+  "test_item_id": "IMG.MRI.SPINE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "MRI of the whole spine. Normal vertebral marrow signal and alignment. The spinal cord is of normal calibre and signal throughout, including the dorsal columns of the cervical and thoracic cord. No compression. No disc protrusion of significance.",
+  "impression": "Normal MRI spine; normal cord signal.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No neurological signs (E05); no dorsal column change. Diffuse low marrow signal can occur with marrow hyperplasia but is not reported, to keep the imaging neutral.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP18",
+  "test_item_id": "IMG.MRI.BRAIN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "MRI of the brain with diffusion-weighted and post-contrast imaging. Normal grey and white matter signal with no restricted diffusion. The ventricles and sulci are normal. No enhancing lesion.",
+  "impression": "Normal MRI brain.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No neurological or cognitive features.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP19",
+  "test_item_id": "PROC.NEURO.NCS_EMG",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Motor and sensory nerve conduction studies of the upper and lower limbs show normal amplitudes, latencies and conduction velocities, including the sural sensory responses. Concentric needle EMG of selected muscles is normal.",
+  "impression": "Normal nerve conduction studies and EMG; no neuropathy.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No neurological symptoms or signs (E05, G03).",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP20",
+  "test_item_id": "IMG.US.KIDNEYS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Both kidneys are normal in size (right 10.9 cm, left 11.2 cm) with preserved corticomedullary differentiation. No calculi and no pelvicalyceal dilatation. The bladder is unremarkable.",
+  "impression": "Normal renal tract ultrasound.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G20: kidneys normal; creatinine 64 umol/L.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP21",
+  "test_item_id": "LAB.HAEM.MALARIA_SMEAR",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Thick and thin films examined under oil immersion (200 fields). No malarial parasites seen. Incidental: numerous red cell fragments and macrocytes; see the blood film report.",
+  "impression": "No malarial parasites seen.",
+  "suggested_reflex": [
+   "LAB.HAEM.FILM_REVIEW"
+  ],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "No travel or fever. The thin film would show the same fragments and macrocytes as R01, so the incidental comment keeps the smear consistent with the blood film.",
+  "confidence": 0.8
+ }
+]

@@ -1,0 +1,360 @@
+{
+ "final_diagnosis": {
+  "text": "Long-acting anticoagulant rodenticide (brodifacoum) poisoning, most likely from eating rodents or other animals bought at a street market in China, causing an acquired vitamin K-dependent coagulopathy with gum and nose bleeding and haematuria",
+  "icd10": [
+   "T60.4",
+   "D68.4"
+  ],
+  "accepted_synonyms": [
+   "superwarfarin poisoning",
+   "superwarfarin toxicity",
+   "brodifacoum poisoning",
+   "brodifacoum toxicity",
+   "long-acting anticoagulant rodenticide poisoning",
+   "anticoagulant rodenticide poisoning",
+   "LAAR poisoning",
+   "rat poison coagulopathy"
+  ],
+  "leak_terms": [
+   "superwarfarin",
+   "brodifacoum",
+   "bromadiolone",
+   "difenacoum"
+  ]
+ },
+ "final_dx": {
+  "id": "DX.SUPERWARFARIN_POISONING",
+  "text": "Long-acting anticoagulant rodenticide (brodifacoum) poisoning, most likely from eating rodents or other animals bought at a street market in China, causing an acquired vitamin K-dependent coagulopathy with gum and nose bleeding and haematuria",
+  "icd10": [
+   "T60.4",
+   "D68.4"
+  ],
+  "accepted_synonyms": [
+   "superwarfarin poisoning",
+   "superwarfarin toxicity",
+   "brodifacoum poisoning",
+   "brodifacoum toxicity",
+   "long-acting anticoagulant rodenticide poisoning",
+   "anticoagulant rodenticide poisoning",
+   "LAAR poisoning",
+   "rat poison coagulopathy"
+  ],
+  "leak_terms": [
+   "superwarfarin",
+   "brodifacoum",
+   "bromadiolone",
+   "difenacoum"
+  ]
+ },
+ "secondary_findings": [
+  "Anaemia (haemoglobin 72 g/L) from two weeks of mucosal bleeding and haematuria",
+  "Poorly controlled type 2 diabetes (raised glucose and HbA1c, glycosuria)",
+  "Chronic hepatitis B, suppressed on tenofovir, without cirrhosis: not the cause of the coagulopathy (factor V and fibrinogen normal)"
+ ],
+ "accepted_differential": [
+  "Vitamin K deficiency from poor diet or malabsorption",
+  "Warfarin ingestion (accidental, concealed or malicious)",
+  "Coagulopathy of liver disease (chronic hepatitis B)",
+  "Disseminated intravascular coagulation",
+  "Acquired haemophilia or another acquired factor inhibitor",
+  "Congenital factor deficiency or von Willebrand disease",
+  "Deliberate self-poisoning or poisoning by another person",
+  "Haemorrhagic fever with renal involvement after travel (for example dengue, leptospirosis)"
+ ],
+ "red_herrings": [
+  "chronic hepatitis B",
+  "alcohol at a party several weeks earlier",
+  "upper gastrointestinal endoscopy and dental referral",
+  "sister with systemic lupus erythematosus",
+  "poor diet of leftover meats",
+  "tranexamic acid without effect",
+  "raised fibrinogen"
+ ],
+ "key_discriminators": [
+  "PT and APTT both 112 s with an unmeasurable INR",
+  "factors II, VII, IX and X very low with factor V normal",
+  "normal fibrinogen, D-dimer and platelets",
+  "mixing study corrects",
+  "partial and unstable response to 10 mg doses of vitamin K",
+  "no anticoagulant medicine in the home",
+  "positive anticoagulant rodenticide panel",
+  "rodents eaten at a street market abroad"
+ ],
+ "treatment_given": "Intravenous vitamin K 10 mg: four doses over 48 hours, then 13 more doses during the admission; bleeding stopped, APTT normalised and the INR fell to 2.04 at discharge. Discharged on oral vitamin K 100 mg daily with haematology follow-up for INR monitoring.",
+ "outcome": "INR labile between 1.00 and 1.91 over the next three months; 0.94 four months after discharge on oral vitamin K 100 mg daily. No further bleeding.",
+ "must_do": [
+  {
+   "text": "Give vitamin K promptly (intravenously while bleeding) for bleeding with a markedly prolonged PT and APTT",
+   "if": {
+    "plan_has_any": [
+     "RX.VITAMIN.K",
+     "RX.VITAMIN.K_HIGH_DOSE_ORAL"
+    ]
+   }
+  },
+  {
+   "text": "Define the defect: vitamin K-dependent factor assays (II, VII, IX, X) with factor V as the control, or at least a mixing study",
+   "if": {
+    "any": [
+     {
+      "all": [
+       {
+        "ordered_any": [
+         "LAB.HAEM.FACTOR_II",
+         "LAB.HAEM.FACTOR_VII",
+         "LAB.HAEM.FACTOR_IX",
+         "LAB.HAEM.FACTOR_X"
+        ]
+       },
+       {
+        "ordered_any": [
+         "LAB.HAEM.FACTOR_V"
+        ]
+       }
+      ]
+     },
+     {
+      "ordered_any": [
+       "LAB.HAEM.MIXING_STUDY"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Ask about anticoagulant medicines and rat poison at home and at work",
+   "if": {
+    "asked_any": [
+     "HX.MEDS.ANTICOAGULANTS",
+     "HX.EXPOSURE.RODENTICIDE",
+     "HX.EXPOSURE.TOXINS"
+    ]
+   }
+  },
+  {
+   "text": "Send an anticoagulant rodenticide panel when no warfarin exposure explains a vitamin K-dependent factor deficiency",
+   "if": {
+    "ordered_any": [
+     "LAB.TOX.ANTICOAGULANT_RODENTICIDE_PANEL"
+    ]
+   }
+  },
+  {
+   "text": "Take a detailed travel and dietary history, including unusual foods eaten abroad",
+   "if": {
+    "all": [
+     {
+      "asked_any": [
+       "HX.EXPOSURE.FOOD"
+      ]
+     },
+     {
+      "asked_any": [
+       "HX.SOCIAL.TRAVEL"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Plan months of high-dose oral vitamin K with regular INR checks after discharge",
+   "if": {
+    "all": [
+     {
+      "plan_has": [
+       "RX.VITAMIN.K_HIGH_DOSE_ORAL"
+      ]
+     },
+     {
+      "plan_has": [
+       "ACT.INR_MONITORING"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Involve haematology in the work-up and long-term follow-up",
+   "if": {
+    "any": [
+     {
+      "referred_any": [
+       "REF.HAEMATOLOGY"
+      ]
+     },
+     {
+      "plan_has": [
+       "REF.HAEMATOLOGY"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "must_not_do": [
+  {
+   "text": "Treat the bleeding with tranexamic acid alone, without vitamin K",
+   "if": {
+    "all": [
+     {
+      "plan_has": [
+       "RX.HAEM.TRANEXAMIC"
+      ]
+     },
+     {
+      "not": {
+       "plan_has_any": [
+        "RX.VITAMIN.K",
+        "RX.VITAMIN.K_HIGH_DOSE_ORAL"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Discharge without long-term high-dose vitamin K once the INR first improves (long-acting rodenticides persist for months)",
+   "if": {
+    "all": [
+     {
+      "plan_has": [
+       "ACT.DISCHARGE_FOLLOW_UP"
+      ]
+     },
+     {
+      "not": {
+       "plan_has": [
+        "RX.VITAMIN.K_HIGH_DOSE_ORAL"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Order a liver or kidney biopsy while the coagulopathy is uncorrected",
+   "if": {
+    "ordered_any": [
+     "PROC.BIOPSY.LIVER",
+     "PROC.BIOPSY.KIDNEY"
+    ]
+   }
+  },
+  {
+   "text": "Start anticoagulant or antiplatelet drugs, including pharmacological thromboprophylaxis",
+   "if": {
+    "plan_has_any": [
+     "RX.CARDIO.ANTICOAGULATION",
+     "RX.CARDIO.ANTIPLATELET",
+     "ACT.VTE_PROPHYLAXIS"
+    ]
+   }
+  },
+  {
+   "text": "Conclude deliberate self-poisoning without first taking a full dietary and travel history",
+   "if": {
+    "all": [
+     {
+      "dx_in": [
+       "DX.DELIBERATE_SELF_POISONING",
+       "DX.FACTITIOUS_DISORDER"
+      ]
+     },
+     {
+      "not": {
+       "asked_any": [
+        "HX.EXPOSURE.FOOD"
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "diagnosis_rubric_anchors": {
+  "5": "Long-acting anticoagulant rodenticide poisoning, with eating animals bought at a street market abroad identified as the likely source",
+  "4": "Long-acting anticoagulant rodenticide poisoning, source not identified",
+  "3": "Vitamin K deficiency coagulopathy without naming a long-acting anticoagulant",
+  "2": "Coagulopathy of liver disease, DIC, acquired haemophilia, warfarin over-anticoagulation or deliberate self-poisoning as the final diagnosis",
+  "1": "Unrelated diagnosis, or one that would lead to harm"
+ },
+ "rubric": {
+  "rubric": [
+   {
+    "score": 5,
+    "text": "Long-acting anticoagulant rodenticide poisoning, with eating animals bought at a street market abroad identified as the likely source",
+    "if": {
+     "all": [
+      {
+       "dx_in": [
+        "DX.SUPERWARFARIN_POISONING"
+       ]
+      },
+      {
+       "evidence_has": [
+        "H19"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "score": 4,
+    "text": "Long-acting anticoagulant rodenticide poisoning, source not identified",
+    "if": {
+     "dx_in": [
+      "DX.SUPERWARFARIN_POISONING"
+     ]
+    }
+   },
+   {
+    "score": 3,
+    "text": "Vitamin K deficiency coagulopathy without naming a long-acting anticoagulant",
+    "if": {
+     "dx_in": [
+      "DX.VITAMIN_K_DEFICIENCY"
+     ]
+    }
+   },
+   {
+    "score": 2,
+    "text": "Coagulopathy of liver disease, DIC, acquired haemophilia, warfarin over-anticoagulation or deliberate self-poisoning as the final diagnosis",
+    "if": {
+     "dx_in": [
+      "DX.COAGULOPATHY_LIVER_DISEASE",
+      "DX.CIRRHOSIS",
+      "DX.DIC",
+      "DX.ACQUIRED_HAEMOPHILIA",
+      "DX.WARFARIN_OVERANTICOAGULATION",
+      "DX.DELIBERATE_SELF_POISONING"
+     ]
+    }
+   },
+   {
+    "score": 1,
+    "text": "Unrelated diagnosis, or one that would lead to harm",
+    "if": {
+     "not": {
+      "dx_in": [
+       "DX.ACQUIRED_HAEMOPHILIA",
+       "DX.CIRRHOSIS",
+       "DX.COAGULOPATHY_LIVER_DISEASE",
+       "DX.DELIBERATE_SELF_POISONING",
+       "DX.DIC",
+       "DX.SUPERWARFARIN_POISONING",
+       "DX.VITAMIN_K_DEFICIENCY",
+       "DX.WARFARIN_OVERANTICOAGULATION"
+      ]
+     }
+    }
+   }
+  ],
+  "default_score": 1
+ },
+ "teaching_points": [
+  "A prolonged PT and APTT with normal platelets, fibrinogen and D-dimer, and low factors II, VII, IX and X with a normal factor V, is the signature of vitamin K deficiency or antagonism rather than liver disease or DIC.",
+  "When no warfarin is involved, a long-acting anticoagulant rodenticide is the leading cause; test for it and ask again about exposure, including food.",
+  "Long-acting rodenticides persist for months: standard vitamin K doses give an incomplete, unstable response, and treatment needs high-dose oral vitamin K for months with INR monitoring.",
+  "Rodenticides accumulate in the food chain: eating rodents, or animals that prey on them, is a possible route of exposure."
+ ]
+}

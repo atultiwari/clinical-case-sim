@@ -1,0 +1,434 @@
+{
+ "final_diagnosis": {
+  "id": "DX.MILIARY_TB",
+  "ids": [
+   "DX.MILIARY_TB",
+   "DX.HLH"
+  ],
+  "text": "Miliary tuberculosis with repeatedly negative initial microbiological tests, mistaken for sarcoidosis on non-necrotising granulomas, treated with high-dose steroid and complicated by secondary haemophagocytic lymphohistiocytosis",
+  "icd10": [
+   "A19.9",
+   "D76.1"
+  ],
+  "accepted_synonyms": [
+   "miliary tuberculosis",
+   "miliary TB",
+   "disseminated tuberculosis",
+   "disseminated TB",
+   "tuberculosis",
+   "tuberculosis-associated haemophagocytic lymphohistiocytosis",
+   "tuberculosis-associated hemophagocytic lymphohistiocytosis",
+   "TB-associated HLH",
+   "secondary HLH"
+  ]
+ },
+ "final_dx": {
+  "id": "DX.MILIARY_TB",
+  "ids": [
+   "DX.MILIARY_TB",
+   "DX.HLH"
+  ],
+  "text": "Miliary tuberculosis with repeatedly negative initial microbiological tests, mistaken for sarcoidosis on non-necrotising granulomas, treated with high-dose steroid and complicated by secondary haemophagocytic lymphohistiocytosis",
+  "icd10": [
+   "A19.9",
+   "D76.1"
+  ],
+  "accepted_synonyms": [
+   "miliary tuberculosis",
+   "miliary TB",
+   "disseminated tuberculosis",
+   "disseminated TB",
+   "tuberculosis",
+   "tuberculosis-associated haemophagocytic lymphohistiocytosis",
+   "tuberculosis-associated hemophagocytic lymphohistiocytosis",
+   "TB-associated HLH",
+   "secondary HLH"
+  ]
+ },
+ "secondary_findings": [
+  "Secondary haemophagocytic lymphohistiocytosis (fever, cytopenias, ferritin 7821 ug/L, soluble IL-2 receptor 7593 ng/L, CXCL9 52 784 ng/L, marrow haemophagocytes; H-score 256)",
+  "Moderate splenomegaly",
+  "Acute hypoxic respiratory failure and shock from day 18 (acute respiratory distress syndrome suspected)"
+ ],
+ "accepted_differential": [
+  "Sarcoidosis, including miliary sarcoidosis",
+  "Disseminated fungal infection (histoplasmosis, cryptococcosis)",
+  "Disseminated non-tuberculous mycobacterial infection",
+  "Lymphoma (with secondary haemophagocytosis)",
+  "Haemophagocytic lymphohistiocytosis from another trigger (EBV, lymphoma)",
+  "Metastatic malignancy with miliary spread"
+ ],
+ "red_herrings": [
+  "Negative interferon-gamma release assay",
+  "Negative sputum AFB smears, MTB PCR and mycobacterial cultures",
+  "Negative first bronchoalveolar lavage",
+  "Negative first cell-free DNA and pathogen sequencing",
+  "Non-necrotising (non-caseating) granulomas in the lung and marrow",
+  "Mildly raised serum ACE"
+ ],
+ "key_discriminators": [
+  "Random miliary nodules with four months of fever, cough, night sweats and weight loss",
+  "Origin in a high-incidence country (Haiti)",
+  "The low sensitivity of every single TB test in miliary disease",
+  "No response to high-dose steroid, then worsening",
+  "Pancytopenia with rising ferritin and transaminases (secondary haemophagocytosis)",
+  "Repeat sequencing and second lavage AFB stain and PCR positive on day 25"
+ ],
+ "teaching_points": [
+  "In miliary disease a negative IGRA, smear, PCR, culture or even cell-free DNA sequencing does not exclude tuberculosis; pretest probability should drive empirical treatment.",
+  "Non-necrotising granulomas do not separate tuberculosis from sarcoidosis; sarcoidosis is a diagnosis of exclusion.",
+  "Never start high-dose steroid for presumed sarcoidosis without cover when miliary tuberculosis is still possible.",
+  "In secondary haemophagocytic lymphohistiocytosis, treating the trigger is the only intervention clearly linked to survival."
+ ],
+ "treatment_given": "High-dose steroid for presumed sarcoidosis (curator's day 7); then dexamethasone and etoposide (HLH-2004, day 15); empirical broad-spectrum antibiotics and antifungals, intubation and vasopressors from day 18; rifampicin, isoniazid, pyrazinamide and ethambutol from day 25 with HLH chemotherapy withheld.",
+ "outcome": "Multi-organ failure; died about one week after starting anti-tuberculosis treatment. Autopsy declined, so whether tuberculosis was present from the start or reactivated under immunosuppression is not proven; the authors think it was present from the start, and the case follows them.",
+ "must_do": [
+  {
+   "text": "Keep tuberculosis high on the list despite negative tests, given the miliary pattern, the symptoms and the origin",
+   "if": {
+    "any": [
+     {
+      "dx_in": [
+       "DX.MILIARY_TB"
+      ]
+     },
+     {
+      "plan_has": [
+       "RX.ANTITB.FIRST_LINE"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Start empirical anti-tuberculosis treatment when suspicion stays high despite negative tests, and before or with any steroid",
+   "if": {
+    "all": [
+     {
+      "plan_has": [
+       "RX.ANTITB.FIRST_LINE"
+      ]
+     },
+     {
+      "any": [
+       {
+        "not": {
+         "plan_has_any": [
+          "RX.STEROID.HIGH_DOSE",
+          "RX.STEROID.PREDNISOLONE",
+          "RX.STEROID.DEXAMETHASONE"
+         ]
+        }
+       },
+       {
+        "plan_before": [
+         "RX.ANTITB.FIRST_LINE",
+         "RX.STEROID.*"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Send samples from more than one site (sputum and lavage, marrow, urine, blood or liver) for AFB stain, MTB PCR and mycobacterial culture, and repeat testing when the course changes",
+   "if": {
+    "all": [
+     {
+      "ordered_any": [
+       "LAB.MICRO.AFB_SMEAR",
+       "LAB.MICRO.GENEXPERT",
+       "LAB.MICRO.SPUTUM_MYCO_CULTURE"
+      ]
+     },
+     {
+      "ordered_any": [
+       "LAB.MICRO.BAL_MYCOBACTERIA",
+       "LAB.BM.MYCOBACTERIA",
+       "LAB.MICRO.URINE_MYCOBACTERIA",
+       "LAB.MICRO.BLOOD_MYCO_CULTURE",
+       "PROC.BIOPSY.LIVER"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Recognise secondary haemophagocytosis (cytopenias, ferritin, triglycerides, fibrinogen, soluble IL-2 receptor, marrow) and treat its trigger",
+   "if": {
+    "all": [
+     {
+      "ordered_any": [
+       "LAB.CHEM.FERRITIN"
+      ]
+     },
+     {
+      "ordered_any": [
+       "LAB.IMM.SIL2R",
+       "LAB.CHEM.LIPIDS",
+       "LAB.HAEM.FIBRINOGEN",
+       "LAB.HAEM.COAG_SCREEN"
+      ]
+     },
+     {
+      "ordered_any": [
+       "PROC.BM.ASPIRATE",
+       "PROC.BM.TREPHINE"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Isolate the patient while tuberculosis is possible and involve infectious diseases early",
+   "if": {
+    "all": [
+     {
+      "plan_has": [
+       "ACT.ISOLATE"
+      ]
+     },
+     {
+      "any": [
+       {
+        "referred_any": [
+         "REF.INFECTIOUS_DISEASES"
+        ]
+       },
+       {
+        "plan_has": [
+         "REF.INFECTIOUS_DISEASES"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Test for HIV",
+   "if": {
+    "ordered_any": [
+     "LAB.SERO.HIV"
+    ]
+   }
+  },
+  {
+   "text": "Notify public health and arrange screening of household contacts",
+   "if": {
+    "any": [
+     {
+      "plan_has": [
+       "ACT.NOTIFY_PUBLIC_HEALTH"
+      ]
+     },
+     {
+      "plan_has": [
+       "ACT.SCREEN_CONTACTS"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "must_not_do": [
+  {
+   "text": "Diagnose sarcoidosis and start high-dose steroid without anti-tuberculosis cover while miliary tuberculosis has not been reliably excluded",
+   "if": {
+    "all": [
+     {
+      "plan_has_any": [
+       "RX.STEROID.HIGH_DOSE",
+       "RX.STEROID.PREDNISOLONE",
+       "RX.STEROID.DEXAMETHASONE"
+      ]
+     },
+     {
+      "not": {
+       "plan_has": [
+        "RX.ANTITB.FIRST_LINE"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Treat haemophagocytosis with etoposide or escalating immunosuppression without treating the trigger",
+   "if": {
+    "all": [
+     {
+      "plan_has_any": [
+       "RX.IMMUNO.ETOPOSIDE",
+       "RX.IMMUNO.ESCALATE"
+      ]
+     },
+     {
+      "not": {
+       "plan_has": [
+        "RX.ANTITB.FIRST_LINE"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Take a negative interferon-gamma release assay, smears or sequencing as excluding miliary tuberculosis and commit to sarcoidosis",
+   "if": {
+    "dx_in": [
+     "DX.SARCOIDOSIS"
+    ]
+   }
+  }
+ ],
+ "diagnosis_rubric_anchors": {
+  "5": "Miliary (disseminated) tuberculosis with secondary haemophagocytic lymphohistiocytosis recognised",
+  "4": "Miliary or other tuberculosis without recognising the haemophagocytosis, or haemophagocytic lymphohistiocytosis with tuberculosis named as its trigger",
+  "3": "Another disseminated granulomatous infection (non-tuberculous mycobacteria, histoplasmosis)",
+  "2": "Sarcoidosis, lymphoma or haemophagocytic lymphohistiocytosis without its trigger",
+  "1": "Unrelated diagnosis, or one that would lead to harm"
+ },
+ "rubric": {
+  "rubric": [
+   {
+    "score": 5,
+    "text": "Miliary (disseminated) tuberculosis with secondary haemophagocytic lymphohistiocytosis recognised",
+    "if": {
+     "all": [
+      {
+       "dx_in": [
+        "DX.MILIARY_TB"
+       ]
+      },
+      {
+       "any": [
+        {
+         "evidence_has": [
+          "L16"
+         ]
+        },
+        {
+         "evidence_has": [
+          "L17"
+         ]
+        },
+        {
+         "evidence_has": [
+          "S05.d17"
+         ]
+        },
+        {
+         "evidence_has": [
+          "S01.d17"
+         ]
+        },
+        {
+         "evidence_has": [
+          "RP08"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "score": 4,
+    "text": "Miliary or other tuberculosis without recognising the haemophagocytosis, or haemophagocytic lymphohistiocytosis with tuberculosis named as its trigger",
+    "if": {
+     "any": [
+      {
+       "dx_in": [
+        "DX.MILIARY_TB",
+        "DX.PULMONARY_TB",
+        "DX.DRUG_RESISTANT_TB"
+       ]
+      },
+      {
+       "all": [
+        {
+         "dx_in": [
+          "DX.HLH"
+         ]
+        },
+        {
+         "any": [
+          {
+           "evidence_has": [
+            "L19"
+           ]
+          },
+          {
+           "evidence_has": [
+            "L20"
+           ]
+          },
+          {
+           "evidence_has": [
+            "L21"
+           ]
+          },
+          {
+           "evidence_has": [
+            "L22"
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "score": 3,
+    "text": "Another disseminated granulomatous infection (non-tuberculous mycobacteria, histoplasmosis)",
+    "if": {
+     "dx_in": [
+      "DX.DISSEMINATED_NTM",
+      "DX.DISSEMINATED_HISTOPLASMOSIS"
+     ]
+    }
+   },
+   {
+    "score": 2,
+    "text": "Sarcoidosis, lymphoma or haemophagocytic lymphohistiocytosis without its trigger",
+    "if": {
+     "dx_in": [
+      "DX.SARCOIDOSIS",
+      "DX.HLH",
+      "DX.NHL",
+      "DX.HODGKIN_LYMPHOMA",
+      "DX.T_CELL_LYMPHOMA",
+      "DX.DLBCL"
+     ]
+    }
+   },
+   {
+    "score": 1,
+    "text": "Unrelated diagnosis, or one that would lead to harm",
+    "if": {
+     "not": {
+      "dx_in": [
+       "DX.MILIARY_TB",
+       "DX.HLH",
+       "DX.PULMONARY_TB",
+       "DX.DRUG_RESISTANT_TB",
+       "DX.DISSEMINATED_NTM",
+       "DX.DISSEMINATED_HISTOPLASMOSIS",
+       "DX.SARCOIDOSIS",
+       "DX.NHL",
+       "DX.HODGKIN_LYMPHOMA",
+       "DX.T_CELL_LYMPHOMA",
+       "DX.DLBCL",
+       "DX.METASTATIC_CANCER_UNKNOWN_PRIMARY"
+      ]
+     }
+    }
+   }
+  ],
+  "default_score": 1
+ }
+}

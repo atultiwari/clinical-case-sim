@@ -227,3 +227,10 @@ REF.GENERAL_SURGERY,No specific surgical concerns from our side; happy to review
 REF.OBSTETRICS_GYNAECOLOGY,No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.,approved
 REF.DIETETICS,No specific nutritional concerns from our side; happy to review if intake or weight changes.,approved
 REF.PHYSIOTHERAPY,No specific mobility concerns from our side; happy to review if function changes.,approved
+HX.SOCIAL.TRAVEL_PROPHYLAXIS,No travel for which antimalarial prophylaxis would be needed.,approved
+HX.SOCIAL.RESIDENCE,Born and brought up locally; has not lived elsewhere.,approved
+HX.MEDS.ANTICOAGULANTS,Not taking any anticoagulant or antiplatelet medicines.,approved
+HX.EXPOSURE.RODENTICIDE,No rat poison or other rodenticide used or handled at home or at work.,approved
+EX.ENT.NOSE,"Nasal mucosa normal; septum central; no bleeding point, clot or crusting.",approved
+REF.DENTISTRY,No specific dental concerns from our side; happy to review if new problems arise.,approved
+HX.PMH.THROMBOSIS,No previous blood clots in the legs or lungs.,approved

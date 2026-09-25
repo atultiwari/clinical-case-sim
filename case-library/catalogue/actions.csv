@@ -115,3 +115,19 @@ ACT.NG_TUBE,Insert a nasogastric tube,supportive,NG tube|Ryles tube|nasogastric 
 ACT.VTE_PROPHYLAXIS,Thromboprophylaxis,supportive,VTE prophylaxis|DVT prophylaxis|prophylactic heparin,attending
 ACT.VACCINATE,Vaccination,supportive,immunisation|immunization|vaccines|pneumococcal vaccine,attending
 ACT.PALLIATIVE_CARE,Palliative care,supportive,comfort care|end-of-life care|symptom control,attending
+RX.ANTIMALARIAL.ARTEMETHER_LUMEFANTRINE,Artemether-lumefantrine,antimicrobial,Coartem|Riamet|oral ACT|artemether lumefantrine|AL,attending
+RX.IMMUNO.CAPLACIZUMAB,Caplacizumab,immunosuppression,Cablivi|anti-vWF nanobody|caplacizumab for TTP,attending
+RX.ENDO.ORAL_HYPOGLYCAEMIC,Oral glucose-lowering medicine,supportive,metformin|oral hypoglycaemic agent|OHA|oral antidiabetic|restart metformin|diabetes tablets,attending
+RX.IMMUNO.ETOPOSIDE,Etoposide,immunosuppression,VP-16|etoposide chemotherapy|HLH-2004 etoposide|IV etoposide,attending
+RX.ANTIPARASITIC.LIPOSOMAL_AMPHOTERICIN,Liposomal amphotericin B (antiparasitic course),antimicrobial,L-AmB|LAmB|AmBisome|liposomal amphotericin,attending
+RX.ANTIPARASITIC.MILTEFOSINE,Miltefosine,antimicrobial,oral miltefosine|Impavido|hexadecylphosphocholine,attending
+RX.ANTIPARASITIC.ANTIMONIAL,Pentavalent antimonial,antimicrobial,sodium stibogluconate|SSG|meglumine antimoniate|Glucantime|antimony,attending
+RX.VITAMIN.K_HIGH_DOSE_ORAL,"High-dose oral vitamin K, long term",haematinic,long-term oral vitamin K|oral phytomenadione 50-100 mg daily|maintenance vitamin K|oral vitamin K1 for months,attending
+RX.HAEM.PCC,Prothrombin complex concentrate,transfusion,PCC|four-factor PCC|4F-PCC|factor concentrate for reversal,attending
+ACT.INR_MONITORING,Serial INR monitoring,monitoring,INR checks|repeat PT/INR|coagulation monitoring|INR follow-up clinic,attending
+RX.COMPLEMENT.ECULIZUMAB,Eculizumab (complement C5 inhibitor),complement inhibitor,C5 inhibitor|anti-C5 monoclonal antibody|terminal complement inhibitor|complement inhibition,attending
+RX.VACCINE.MENINGOCOCCAL,Meningococcal vaccination,vaccination,meningococcal vaccine|MenACWY and MenB vaccines|vaccinate against Neisseria meningitidis|meningitis vaccine,attending
+RX.CHEMO.HYPOMETHYLATING,Hypomethylating agent (azacitidine or decitabine),chemotherapy,azacitidine|decitabine|HMA|hypomethylating therapy,attending
+RX.CHEMO.AML_INDUCTION,Intensive AML induction chemotherapy,chemotherapy,7+3|cytarabine and daunorubicin|induction chemotherapy|remission induction,attending
+RX.IMMUNO.ATG_CICLOSPORIN,Antithymocyte globulin with ciclosporin,immunosuppression,ATG|ATG and cyclosporine|immunosuppressive therapy for aplastic anaemia|antithymocyte globulin|hATG,attending
+ACT.REPEAT_BONE_MARROW,Repeat bone marrow examination,monitoring,repeat marrow|follow-up bone marrow biopsy|repeat BMA|marrow reassessment,attending

@@ -1,0 +1,275 @@
+[
+  {
+    "id": "RP01",
+    "test_item_id": "LAB.HAEM.FILM",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [
+      "FND.COARSE_BASOPHILIC_STIPPLING",
+      "FND.POLYCHROMASIA"
+    ],
+    "report_text": "Red cells are normocytic and normochromic. Coarse basophilic stippling is seen in a proportion of red cells. Polychromasia is present. Occasional normoblasts are seen. No spherocytes, target cells or red cell fragments. White cells are normal in number and morphology. Platelets are adequate in number.",
+    "impression": "Normocytic normochromic anaemia with coarse basophilic stippling, polychromasia and normoblasts.",
+    "suggested_reflex": [],
+    "based_on": [
+      "R01"
+    ],
+    "origins": [
+      "article",
+      "affected"
+    ],
+    "rationale": "Stippling, normoblasts, polychromasia and the normocytic normochromic picture are from the article (R01, Figure 1). The article describes one careful examination and no earlier report that missed the stippling, so the screening film carries the full findings, final (decision D1). Absent spherocytes and fragments, and normal white cells and platelets, follow the normal counts and differential.",
+    "confidence": 0.85
+  },
+  {
+    "id": "RP02",
+    "test_item_id": "LAB.HAEM.FILM_REVIEW",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [
+      "FND.COARSE_BASOPHILIC_STIPPLING",
+      "FND.POLYCHROMASIA"
+    ],
+    "report_text": "Film reviewed by a haematopathologist. Red cells are normocytic and normochromic with coarse basophilic stippling in a proportion of cells, polychromasia and occasional normoblasts. No spherocytes, target cells or red cell fragments. White cells and platelets show no morphological abnormality. Comment: coarse basophilic stippling with polychromasia; suggest a blood lead level, haemoglobin studies and a detailed history of medicines and remedies.",
+    "impression": "Coarse basophilic stippling with polychromasia and normoblasts.",
+    "suggested_reflex": [
+      "LAB.TOX.BLOOD_LEAD",
+      "LAB.HAEM.HB_HPLC"
+    ],
+    "based_on": [
+      "R01"
+    ],
+    "origins": [
+      "article",
+      "affected"
+    ],
+    "rationale": "The pathologist co-author examined the film (author contributions). The comment is a judgement call: a haematopathologist seeing coarse stippling routinely suggests a blood lead and haemoglobin studies; it names tests, not a diagnosis.",
+    "confidence": 0.8
+  },
+  {
+    "id": "RP03",
+    "test_item_id": "PROC.BM.ASPIRATE",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [
+      "FND.ERYTHROID_HYPERPLASIA",
+      "FND.DYSERYTHROPOIESIS"
+    ],
+    "report_text": "Particulate, cellular aspirate. Marked erythroid hyperplasia, with a myeloid to erythroid ratio of about 1:2. Erythropoiesis is normoblastic with mild dyserythropoietic changes (occasional binucleate forms and nuclear budding). Granulopoiesis matures normally. Megakaryocytes are adequate with normal morphology. Blasts 1%. Plasma cells 2%. See the iron stain report.",
+    "impression": "Erythroid hyperplasia with mild dyserythropoiesis.",
+    "suggested_reflex": [],
+    "based_on": [
+      "R02"
+    ],
+    "origins": [
+      "article",
+      "affected"
+    ],
+    "rationale": "Erythroid hyperplasia is from the article (R02). The article's report raised a myelodysplastic syndrome, which suggests some dysplasia; G16 and decision D8 set it as mild dyserythropoiesis only, with normal blasts. The report gives morphology, not the article's differential, which is in the iron stain comment.",
+    "confidence": 0.7
+  },
+  {
+    "id": "RP04",
+    "test_item_id": "LAB.BM.IRON_STAIN",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [
+      "FND.RING_SIDEROBLASTS"
+    ],
+    "report_text": "Perls stain. Storage iron is increased (grade 4) in marrow fragments. Many ring sideroblasts are present, about 30% of erythroblasts. Comment: ring sideroblasts occur in acquired sideroblastic anaemia (toxins, drugs, alcohol, copper deficiency) and in myelodysplastic neoplasms. Suggest correlation with the history of medicines, remedies and exposures, a blood lead level, serum copper and cytogenetics.",
+    "impression": "Many ring sideroblasts; storage iron increased.",
+    "suggested_reflex": [
+      "LAB.TOX.BLOOD_LEAD",
+      "LAB.CHEM.COPPER_CAERULOPLASMIN",
+      "LAB.CYTOGEN.KARYOTYPE"
+    ],
+    "based_on": [
+      "R03"
+    ],
+    "origins": [
+      "article",
+      "affected"
+    ],
+    "rationale": "Many ring sideroblasts are from the article (R03, Figure 2). The percentage (about 30%) and increased stores are decision D8: 'many' in a report usually means well above 15%, and serum iron, saturation and ferritin are all high. The comment follows the article's own marrow report, which raised an acquired sideroblastic anaemia and a myelodysplastic syndrome, worded as a pathologist's differential without naming the answer.",
+    "confidence": 0.7
+  },
+  {
+    "id": "RP05",
+    "test_item_id": "PROC.BM.TREPHINE",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [
+      "FND.ERYTHROID_HYPERPLASIA"
+    ],
+    "report_text": "Adequate trephine core. Cellularity about 60%, increased for age, with erythroid hyperplasia. Granulopoiesis and megakaryocytes are normal in number and morphology. No excess of blasts. No infiltrate, granulomas or fibrosis on reticulin stain.",
+    "impression": "Hypercellular marrow with erythroid hyperplasia; no infiltrate, excess blasts or fibrosis.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "The article reports no trephine. Erythroid hyperplasia matches the aspirate; nothing else abnormal (G16).",
+    "confidence": 0.7
+  },
+  {
+    "id": "RP06",
+    "test_item_id": "LAB.BM.FLOW",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Bone marrow aspirate. CD34-positive blasts are under 2% with a normal phenotype; no abnormal blast population. Erythroid precursors are increased, in keeping with active erythropoiesis. Myeloid and monocytic maturation patterns are normal. Plasma cells are few and polyclonal.",
+    "impression": "No abnormal blast population; erythroid precursors increased.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "G16: no clonal disorder; erythroid expansion matches the aspirate.",
+    "confidence": 0.8
+  },
+  {
+    "id": "RP07",
+    "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Twenty metaphases analysed at a 400-band level. Karyotype 46,XX. No clonal abnormality detected.",
+    "impression": "Normal female karyotype, 46,XX.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "G16: normal karyotype; the marrow changes are acquired and reversible (the film was near normal after treatment, O03).",
+    "confidence": 0.85
+  },
+  {
+    "id": "RP08",
+    "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Two hundred interphase nuclei scored per probe. Normal signal patterns for 5q31, 7q31, the chromosome 8 centromere and 20q12; no deletion or gain detected.",
+    "impression": "Normal FISH panel.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "G16: no clonal marrow disorder.",
+    "confidence": 0.85
+  },
+  {
+    "id": "RP09",
+    "test_item_id": "LAB.MOL.MYELOID_NGS",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Targeted sequencing of a myeloid gene panel, including SF3B1, achieved adequate coverage across all regions. No pathogenic or likely pathogenic variants were detected above the 2% variant allele frequency limit of detection.",
+    "impression": "No pathogenic variants detected.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "G16: the ring sideroblasts are not clonal, so no SF3B1 variant. Low-level clonal haematopoiesis is possible at 58 but none is added, because it would distract without being in the article.",
+    "confidence": 0.8
+  },
+  {
+    "id": "RP10",
+    "test_item_id": "IMG.US.ABDOMEN",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "The liver is normal in size and echotexture with no focal lesion. The gallbladder is thin-walled without calculi and the common bile duct is not dilated. The spleen measures 10 cm and is homogeneous. The pancreas, both kidneys and the aorta appear normal. No free fluid.",
+    "impression": "Normal abdominal ultrasound.",
+    "suggested_reflex": [],
+    "based_on": [
+      "R04"
+    ],
+    "origins": [
+      "article",
+      "affected"
+    ],
+    "rationale": "The article reports an ultrasound with no abnormality (R04); the organ-by-organ detail fills that out without adding a finding. No fatty liver is added, although she has diabetes, because the article says no abnormality.",
+    "confidence": 0.8
+  },
+  {
+    "id": "RP11",
+    "test_item_id": "IMG.XR.ABDOMEN",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Supine abdominal radiograph. The bowel gas pattern is normal with no dilated loops. No abnormal calcification or radio-opaque material is seen. The visible bones and soft tissue outlines are unremarkable.",
+    "impression": "No acute abnormality.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "Not in the article. She stopped the capsules before admission, so no radio-opaque material; nothing acute.",
+    "confidence": 0.75
+  },
+  {
+    "id": "RP12",
+    "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Contrast-enhanced CT of the abdomen and pelvis in the portal venous phase. The liver, spleen, pancreas, adrenal glands and kidneys are normal. The bowel is of normal calibre with no wall thickening. No lymph node enlargement, free fluid or free gas.",
+    "impression": "No abdominal or pelvic abnormality.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "Not in the article; matches the normal ultrasound (R04) and the normal abdominal examination (E11).",
+    "confidence": 0.8
+  },
+  {
+    "id": "RP13",
+    "test_item_id": "PROC.ENDO.OGD",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Endoscopy to the second part of the duodenum. Normal oesophagus. Mild patchy erythema of the gastric antrum without erosions or ulceration. Normal duodenum. No varices or bleeding. Antral biopsies: mild non-specific chronic inflammation; no Helicobacter organisms.",
+    "impression": "Mild non-specific antral gastritis. No ulcer or source of bleeding.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "G18: normal or non-specific findings; matches the negative H. pylori stool antigen and no bleeding (H11).",
+    "confidence": 0.7
+  },
+  {
+    "id": "RP14",
+    "test_item_id": "PROC.ENDO.COLONOSCOPY",
+    "variant": "only",
+    "status": "final",
+    "status_line": null,
+    "findings": [],
+    "report_text": "Complete colonoscopy to the caecum with intubation of the terminal ileum; good bowel preparation. Normal mucosa throughout with no polyps, ulceration or source of bleeding.",
+    "impression": "Normal colonoscopy.",
+    "suggested_reflex": [],
+    "based_on": [],
+    "origins": [
+      "affected"
+    ],
+    "rationale": "Not in the article; no gastrointestinal bleeding (H11), FIT negative and iron replete.",
+    "confidence": 0.8
+  }
+]

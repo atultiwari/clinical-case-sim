@@ -67,3 +67,4 @@ EX.BEDSIDE.CAPILLARY_GLUCOSE,Capillary blood glucose,bedside test,CBG|finger-pri
 EX.BEDSIDE.POSTURAL_BP,Lying and standing blood pressure,bedside test,postural BP|orthostatic BP|orthostatic hypotension check,attending|consultant.*
 EX.BEDSIDE.TOURNIQUET_TEST,Tourniquet test,bedside test,Hess test|capillary fragility test|Rumpel-Leede test,attending|consultant.*
 EX.BEDSIDE.PEAK_FLOW,Peak expiratory flow,bedside test,PEFR|peak flow|PEF,attending|consultant.*
+EX.ENT.NOSE,Nose (anterior rhinoscopy),oral and ENT,nasal examination|anterior rhinoscopy|nostrils|Little's area|look for a nosebleed source,attending|consultant.*

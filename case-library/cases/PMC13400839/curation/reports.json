@@ -1,0 +1,407 @@
+[
+ {
+  "id": "RP01",
+  "test_item_id": "LAB.HAEM.FILM",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.EOSINOPHILIA",
+   "FND.DYSGRANULOPOIESIS"
+  ],
+  "report_text": "Marked leucopenia. Eosinophils make up about half of the leucocytes, and many show atypical nuclear segmentation. Neutrophils are very scanty; rare hypogranular forms are seen. Red cells show minimal anisopoikilocytosis. Platelets are markedly reduced.",
+  "impression": "Pancytopenia with a relative eosinophilia; rare hypogranular neutrophils.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article"
+  ],
+  "rationale": "The article's film description (R01). One report only; the article describes no revised report. Platelets markedly reduced follows the count below 6 x10^9/L.",
+  "confidence": 0.9
+ },
+ {
+  "id": "RP02",
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "variant": "only",
+  "status": "final",
+  "status_line": "Final report, reviewed by a haematopathologist.",
+  "findings": [
+   "FND.EOSINOPHILIA",
+   "FND.DYSGRANULOPOIESIS"
+  ],
+  "report_text": "Film reviewed by a haematopathologist. Severe leucopenia with very few neutrophils, some of them hypogranular. Eosinophils make up about half of the leucocytes; many show atypical nuclear segmentation, but the absolute eosinophil count is not raised. Red cells show minimal anisopoikilocytosis; a transfused population may contribute. Platelets are markedly reduced with no clumps. No circulating blasts identified on this film. Comment: in pancytopenia with dysplastic neutrophils, suggest serum vitamin B12, folate and copper, and a bone marrow examination with cytogenetics if the cause is not found.",
+  "impression": "Pancytopenia with a relative eosinophilia and hypogranular neutrophils.",
+  "suggested_reflex": [
+   "LAB.CHEM.B12",
+   "LAB.CHEM.FOLATE",
+   "LAB.CHEM.COPPER_CAERULOPLASMIN",
+   "PROC.BM.ASPIRATE"
+  ],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Findings are the article's (R01). The comment is the standard work-up a haematopathologist suggests for pancytopenia with dysplastic neutrophils and names tests, not a diagnosis. Blasts were 1.5% by flow only, so none is claimed on the film (judgement call).",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP03",
+  "test_item_id": "LAB.HAEM.PB_FLOW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.EOSINOPHILIA",
+   "FND.BLASTS"
+  ],
+  "report_text": "Peripheral blood. Eosinophils are increased, making up 54% of viable leucocytes. Myeloid blasts are slightly increased at 1.5% of viable leucocytes. No abnormal B-cell, T-cell, NK-cell or mast cell population is identified.",
+  "impression": "Relative eosinophilia; slight increase in circulating myeloid blasts (1.5%); no abnormal lymphoid or mast cell population.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R02"
+  ],
+  "origins": [
+   "article"
+  ],
+  "rationale": "The article's peripheral blood flow cytometry (R02).",
+  "confidence": 0.9
+ },
+ {
+  "id": "RP04",
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.INCREASED_BLASTS",
+   "FND.DYSERYTHROPOIESIS",
+   "FND.MEGALOBLASTIC_CHANGE",
+   "FND.DYSMEGAKARYOPOIESIS",
+   "FND.HAEMOPHAGOCYTOSIS",
+   "FND.EOSINOPHILIA"
+  ],
+  "report_text": "Aspirate with erythroid-predominant trilineage haematopoiesis. Blasts 12% and eosinophils 15% on the differential count. Erythropoiesis is left-shifted, with increased pronormoblasts and basophilic normoblasts; many erythroid precursors show megaloblastic change, cytoplasmic vacuolation, irregular nuclear contours, nuclear budding, macronuclei or multinucleation. Megakaryocytes include frequent small hypolobate forms, forms with hyperlobate nuclei and forms with widely separated nuclear lobes. Granulopoiesis shows a prominent left shift; the blasts have amphophilic to basophilic cytoplasm, a high nuclear to cytoplasmic ratio, immature chromatin, variably prominent nucleoli and sparse red granules. Occasional histiocytes show haemophagocytosis. See the iron stain, trephine and flow cytometry reports. Comment: the findings are highly suspicious for a myelodysplastic neoplasm with increased blasts; correlation with cytogenetic and molecular studies is recommended.",
+  "impression": "Trilineage dysplasia with megaloblastic erythroid change and increased blasts (12%); occasional haemophagocytosis.",
+  "suggested_reflex": [
+   "LAB.CYTOGEN.KARYOTYPE",
+   "LAB.MOL.MYELOID_NGS"
+  ],
+  "based_on": [
+   "R03"
+  ],
+  "origins": [
+   "article"
+  ],
+  "rationale": "All morphology and the suspicion of a high-grade myelodysplastic neoplasm are the article's (R03, Figure 1). The original read is the case's trap and is kept as reported.",
+  "confidence": 0.9
+ },
+ {
+  "id": "RP05",
+  "test_item_id": "LAB.BM.IRON_STAIN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Perls stain on the aspirate. Storage iron is increased in the marrow fragments. Sideroblastic iron is adequate. No ring sideroblasts are seen.",
+  "impression": "Increased storage iron; no ring sideroblasts.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R04"
+  ],
+  "origins": [
+   "article"
+  ],
+  "rationale": "The article's iron stain (R04), consistent with ferritin 1531 ng/mL and transferrin saturation 65%.",
+  "confidence": 0.9
+ },
+ {
+  "id": "RP06",
+  "test_item_id": "PROC.BM.TREPHINE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.HYPOCELLULAR_MARROW",
+   "FND.INCREASED_BLASTS",
+   "FND.DYSMEGAKARYOPOIESIS",
+   "FND.MEGALOBLASTIC_CHANGE"
+  ],
+  "report_text": "Trephine core. Cellularity about 20%, reduced for age. Immunohistochemistry: CD34 highlights increased myeloid blasts, about 15% of the cellularity; CD61 shows increased megakaryocytes, including many small forms and forms with atypical nuclei; E-cadherin shows increased immature erythroid precursors, including megaloblastic forms. No significant reticulin fibrosis. No granulomas or non-haemopoietic infiltrate.",
+  "impression": "Hypocellular marrow (about 20%) with increased CD34-positive blasts (about 15%), dysplastic megakaryocytes and increased immature erythroid precursors.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R05"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Cellularity and immunohistochemistry are the article's (R05, Figure 2; the text also calls the core normocellular, but the caption and the opening sentence give 20%, used here). Reticulin and the absence of granulomas or infiltrate are not reported; they are the likeliest findings in a reactive process (G13).",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP07",
+  "test_item_id": "LAB.BM.FLOW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.INCREASED_BLASTS",
+   "FND.EOSINOPHILIA"
+  ],
+  "report_text": "Bone marrow aspirate. Myeloid blasts are increased at 18% of viable leucocytes. They express CD34, CD13, CD33, CD38, CD117, CD123, HLA-DR and MPO, and are negative for CD3, CD5, CD7, CD10, CD14, CD19, CD56, CD64 and TdT. No definite immunophenotypic aberrancy is detected. Eosinophils are increased at 45% of viable leucocytes.",
+  "impression": "Increased myeloid blasts (18%) without a definite aberrant immunophenotype; eosinophils increased.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R06"
+  ],
+  "origins": [
+   "article"
+  ],
+  "rationale": "The article's marrow flow cytometry (R06, Figure 3).",
+  "confidence": 0.9
+ },
+ {
+  "id": "RP08",
+  "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Twenty metaphases analysed at a 400-band level. Karyotype 46,XX. No clonal abnormality detected.",
+  "impression": "Normal female karyotype, 46,XX.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R07"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "The article reports a normal karyotype (R07); the number of metaphases and band level are the laboratory's usual reporting format.",
+  "confidence": 0.9
+ },
+ {
+  "id": "RP09",
+  "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Two hundred interphase nuclei scored per probe. Normal signal patterns for 5q31, 7q31, the chromosome 8 centromere and 20q12; no deletion or gain detected.",
+  "impression": "Normal MDS FISH panel.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Not performed in the article; the normal karyotype and SNP microarray make a normal MDS FISH panel certain in practice.",
+  "confidence": 0.9
+ },
+ {
+  "id": "RP10",
+  "test_item_id": "LAB.CYTOGEN.FISH_AML",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Two hundred interphase nuclei scored per probe. No RUNX1::RUNX1T1, CBFB::MYH11, PML::RARA or KMT2A rearrangement, and no loss of 5q, 7q or 17p (TP53) detected.",
+  "impression": "Normal AML FISH panel.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R08"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "The article reports the AML FISH panel as normal (R08); the probe list is the usual panel.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP11",
+  "test_item_id": "LAB.CYTOGEN.FISH_EOSINOPHILIA",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Two hundred interphase nuclei scored per probe. No FIP1L1::PDGFRA fusion (CHIC2 deletion) and no PDGFRB, FGFR1 or JAK2 rearrangement detected.",
+  "impression": "Normal eosinophilia FISH panel.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R09"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "The article reports the eosinophilia FISH panel as normal and the cytogenetics as not supporting a tyrosine kinase fusion (R09); the probe list is the usual panel.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP12",
+  "test_item_id": "LAB.CYTOGEN.SNP_ARRAY",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Genome-wide cytogenomic SNP microarray on the marrow specimen. No clinically significant copy number alteration or copy-neutral loss of heterozygosity detected.",
+  "impression": "Normal SNP microarray.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R10"
+  ],
+  "origins": [
+   "article"
+  ],
+  "rationale": "The article's SNP microarray (R10).",
+  "confidence": 0.9
+ },
+ {
+  "id": "RP13",
+  "test_item_id": "LAB.MOL.AML_TARGETED_PANEL",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Rapid targeted next-generation sequencing for AML therapy targets, including FLT3 (internal tandem duplication and tyrosine kinase domain), IDH1, IDH2 and NPM1. No mutation detected.",
+  "impression": "No targetable AML mutation detected.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R11"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "The article's rapid AML targeted therapy panel was normal (R11); the genes listed are the usual content of such a panel.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP14",
+  "test_item_id": "LAB.MOL.MYELOID_NGS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Myeloid malignancies mutation and copy number panel by next-generation sequencing, adequate coverage. Tier 1 variant: DNMT3A, variant allele frequency 1.2%. Variant of uncertain clinical significance (reported as Tier 2): KMT2A, variant allele frequency 49.6%; a frequency near 50% may indicate a constitutional variant. No other variants or copy number changes detected. Comment: a low-level DNMT3A variant can be found in clonal haematopoiesis of indeterminate potential; interpret with the morphology and cytogenetics.",
+  "impression": "Low-level DNMT3A variant (VAF 1.2%); KMT2A variant of uncertain significance (VAF 49.6%).",
+  "suggested_reflex": [],
+  "based_on": [
+   "R12"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Variants and frequencies are the article's (R12). The comment on clonal haematopoiesis is the article's discussion, written as a laboratory comment without a conclusion.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP15",
+  "test_item_id": "IMG.XR.CHEST",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "PA erect chest radiograph. The heart size and mediastinal contours are normal. The lungs are clear and the costophrenic angles are sharp. Surgical clips project over the left upper quadrant of the abdomen.",
+  "impression": "No acute cardiopulmonary abnormality.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "On day 0 a chest film is usually clear three days before a Pneumocystis pneumonia is diagnosed; the sleeve gastrectomy staple line projects over the upper abdomen.",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP16",
+  "test_item_id": "IMG.CT.CHEST",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "CT of the chest. Faint patchy ground-glass opacity in both upper lobes. No consolidation, nodules, cavitation or interstitial thickening. The airways are patent. No mediastinal or hilar lymph node enlargement and no pleural or pericardial fluid. In the upper abdomen, a narrow tubular stomach with a staple line.",
+  "impression": "Faint bilateral upper-lobe ground-glass opacity, non-specific; in a neutropenic patient an early infection cannot be excluded.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Pneumocystis pneumonia was diagnosed on day 3 and needed intubation (article). CT is more sensitive than a chest film, and early bilateral ground-glass change on day 0 is likely; described without naming an organism (judgement call).",
+  "confidence": 0.5
+ },
+ {
+  "id": "RP17",
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Contrast-enhanced CT of the abdomen and pelvis in the portal venous phase. Post-surgical appearance of a sleeve gastrectomy with an intact staple line and no leak or collection. The liver, spleen, pancreas, adrenal glands and kidneys are normal; the spleen is not enlarged. The bowel is of normal calibre with no wall thickening. No lymph node enlargement, free fluid or free gas.",
+  "impression": "Sleeve gastrectomy. No colitis, collection or splenomegaly.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Examination unremarkable and the presumed colitis settling (article), so no wall thickening; the sleeve gastrectomy is shown as imaging would show it.",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP18",
+  "test_item_id": "IMG.US.ABDOMEN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "The liver is normal in size and echotexture with no focal lesion. The gallbladder is thin-walled without calculi and the common bile duct is not dilated. The spleen measures 10 cm and is homogeneous. Both kidneys, the pancreas and the aorta appear normal. No free fluid.",
+  "impression": "Normal abdominal ultrasound; spleen not enlarged.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "HLH path: no splenomegaly (examination unremarkable, article).",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP19",
+  "test_item_id": "PROC.ENDO.OGD",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Endoscopy to the second part of the duodenum. Normal oesophagus. Post-surgical tubular stomach after sleeve gastrectomy with an intact staple line; mild patchy erythema of the gastric mucosa without ulceration. Normal duodenal mucosa. No bleeding. Duodenal biopsies: normal villous architecture.",
+  "impression": "Appearance after sleeve gastrectomy; no ulceration or source of bleeding; normal duodenal histology.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Malabsorption path. The anatomy follows the article's sleeve gastrectomy; normal duodenal histology fits negative coeliac serology. With platelets below 6 x10^9/L endoscopy would be deferred in practice, which the test utility records.",
+  "confidence": 0.6
+ },
+ {
+  "id": "RP20",
+  "test_item_id": "IMG.US.NECK",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Thyroidectomy bed: no residual thyroid tissue or mass. No enlarged or morphologically abnormal cervical lymph nodes. The salivary glands appear normal.",
+  "impression": "Post-thyroidectomy appearance; no mass or lymphadenopathy.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Remote total thyroidectomy (article).",
+  "confidence": 0.85
+ }
+]

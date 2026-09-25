@@ -18,3 +18,4 @@ REF.GENERAL_SURGERY,General surgery,surgical,surgeon|surgical team|gen surg,atte
 REF.OBSTETRICS_GYNAECOLOGY,Obstetrics and gynaecology,surgical,OBGYN|OB/GYN|gynaecologist|gynecology|obstetrician,attending
 REF.DIETETICS,Dietetics,allied,dietitian|dietician|nutritionist|nutrition team,attending
 REF.PHYSIOTHERAPY,Physiotherapy,allied,physio|physical therapy|rehabilitation,attending
+REF.DENTISTRY,Dentistry,surgical,dentist|dental surgeon|oral surgery|dental team,attending

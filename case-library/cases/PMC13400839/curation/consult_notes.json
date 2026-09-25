@@ -1,0 +1,309 @@
+[
+ {
+  "id": "CN01",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on severe pancytopenia in a woman transferred as possible aplastic anaemia. We reviewed the Chart so far. The counts are profoundly low with a normal MCV, but one unit of red cells was given before transfer, so the indices are hard to interpret. The differential is wide: marrow failure, a myeloid neoplasm or infiltrate, a nutritional deficiency such as vitamin B12, folate or copper, drugs and infection. Nutritional causes need to be excluded early because they are reversible. Happy to review again with the results.",
+  "recommendations": [
+   "Send serum vitamin B12, folate and copper, and iron studies, before further transfusion where possible",
+   "Reticulocyte count, LDH and a blood film reviewed by a haematopathologist",
+   "Take a full nutritional, surgical and medicine history, including supplements",
+   "Bone marrow aspirate and trephine with flow cytometry, cytogenetics and molecular studies",
+   "Continue empirical antimicrobials for neutropenia; transfuse platelets for bleeding or below 10 x10^9/L"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a competent haematologist faced with pancytopenia after transfer lists the reversible causes first and asks for haematinics, a film review and a marrow. Names tests, never the diagnosis.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN02",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 2,
+  "condition": {
+   "finding_released": [
+    "FND.INCREASED_BLASTS"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now includes a marrow with increased blasts and trilineage dysplasia. On morphology alone this could fit a high-grade myelodysplastic neoplasm. However, the erythroid precursors show megaloblastic change, and severe vitamin B12 or folate depletion, copper deficiency, drugs and infection can all produce dysplasia and a transient rise in blasts. We would not make a diagnosis of a myeloid neoplasm, or start disease-directed treatment, until the haematinics, cytogenetics and molecular results are back. Happy to review again with the results.",
+  "recommendations": [
+   "Chase serum vitamin B12, folate and copper urgently",
+   "Await karyotype, FISH, SNP microarray and the myeloid NGS panel",
+   "No hypomethylating or induction chemotherapy at this stage",
+   "Supportive care: antimicrobials, platelet and red cell transfusion as needed"
+  ],
+  "origin": "affected",
+  "rationale": "V2: a haematologist reading this marrow before the haematinics are back names the neoplasm as a possibility but, seeing megaloblastic change, holds treatment until reversible causes and cytogenetics are known. The article's authors did the same. No diagnosis name.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN03",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 3,
+  "condition": {
+   "released_any": [
+    "L07"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now includes a serum folate of 2.6 ng/mL with vitamin B12 above 1500 pg/mL. Folate at this level can produce megaloblastic trilineage dysplasia, a hypocellular or left-shifted marrow and a transient increase in blasts that resembles a myelodysplastic neoplasm. After a sleeve gastrectomy with poor intake, stores run out within months. We recommend folate replacement with supportive care, and interpreting the marrow again once the cytogenetic and molecular results are available and the counts have had time to respond. Happy to review again with the results.",
+  "recommendations": [
+   "Oral folic acid 5 mg daily (intravenous if oral absorption is in doubt), having confirmed that vitamin B12 is replete",
+   "Full blood count and reticulocytes every two to three days; expect a reticulocyte response within a week",
+   "Repeat bone marrow after two to three weeks of replacement to confirm that the blasts and dysplasia resolve",
+   "No cytotoxic or hypomethylating treatment",
+   "Dietetic review and long-term bariatric vitamin supplementation"
+  ],
+  "origin": "affected",
+  "rationale": "V3: with the folate result in the Chart the haematologist explains the marrow and recommends replacement, supportive care and a repeat marrow, as in the article (normal counts by day 18, repeat marrow 1% blasts). Written without the diagnosis's synonyms.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN04",
+  "specialty": "REF.DIETETICS",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to assess nutrition. She had a sleeve gastrectomy and now manages only small amounts of soft food, with very little fruit or vegetables; she stopped the daily multivitamin advised after the operation about a year ago. She has lost about 8 kg in the past year and her BMI is 19.4. Intake of protein and of several micronutrients is likely to be poor. She is at risk of refeeding problems. Happy to review again with the results.",
+  "recommendations": [
+   "Micronutrient screen after bariatric surgery: folate, vitamin B12, iron studies, vitamin D, zinc, copper and thiamine",
+   "Thiamine before increasing feeding; monitor phosphate, magnesium and potassium daily for the first few days",
+   "High-protein oral nutritional supplements in small, frequent portions",
+   "Restart a complete bariatric multivitamin and mineral supplement for life once acute issues settle"
+  ],
+  "origin": "affected",
+  "rationale": "A dietitian takes the diet and supplement history as part of the assessment, so the note carries it (consistent with HX.SOCIAL.DIET and HX.MEDS.SUPPLEMENTS). Recommends a screen, not a diagnosis.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN05",
+  "specialty": "REF.DIETETICS",
+  "variant": 2,
+  "condition": {
+   "released_any": [
+    "L07"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now includes a serum folate of 2.6 ng/mL. With a sleeve gastrectomy, a diet with very little fruit or vegetables and no supplement for a year, a very low folate is expected. Replacement is for the medical team; our role is to rebuild intake and prevent recurrence. Happy to review again with the results.",
+  "recommendations": [
+   "Folate-rich foods she can manage: soft cooked lentils and beans, green vegetables in soups, fortified cereals",
+   "High-protein oral nutritional supplements in small, frequent portions",
+   "Refeeding monitoring as before",
+   "A complete bariatric multivitamin and mineral supplement for life, with annual micronutrient checks"
+  ],
+  "origin": "affected",
+  "rationale": "V2 after the folate result: supports replacement and long-term prevention. No diagnosis name.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN06",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on antimicrobials in profound neutropenia. We reviewed the Chart so far. She is on cefepime, metronidazole and fluconazole, started for presumed colitis and mucositis; the diarrhoea is settling and the abdomen is soft. The lymphocyte count is also very low, which raises the risk of opportunistic infection, including Pneumocystis. Happy to review again with the results.",
+  "recommendations": [
+   "Continue cefepime while neutropenic; add cover if she becomes febrile or unstable",
+   "Stop metronidazole if C. difficile testing and stool cultures are negative and the diarrhoea has settled",
+   "Blood cultures with any fever; low threshold for CT chest if respiratory symptoms or oxygen requirement develop",
+   "Check a CD4 count and consider Pneumocystis prophylaxis once the platelet and neutrophil counts allow",
+   "The marrow picture is for haematology; infection alone does not explain it"
+  ],
+  "origin": "affected",
+  "rationale": "An infectious diseases consultant would continue neutropenic cover and flag the profound lymphopenia (0.09 x10^9/L); the article's Pneumocystis pneumonia on day 3 makes this realistic advice, without predicting it.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN07",
+  "specialty": "REF.GASTROENTEROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on diarrhoea and nutrition. We reviewed the Chart so far. The loose stools are settling and the abdomen is soft; with neutrophils this low and platelets below 6 x10^9/L, endoscopy is not safe or needed now. After a sleeve gastrectomy, reduced intake and non-adherence to supplements are the usual reasons for micronutrient deficiency rather than a new gut disease. Happy to review again with the results.",
+  "recommendations": [
+   "Stool culture and C. difficile testing",
+   "Micronutrient screen, including folate, vitamin B12, iron, zinc, copper and vitamin D",
+   "No endoscopy while the counts are this low",
+   "Dietetic input"
+  ],
+  "origin": "affected",
+  "rationale": "A gastroenterologist would decline endoscopy at these counts and point to intake after bariatric surgery. Names tests only.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN08",
+  "specialty": "REF.GENERAL_SURGERY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to review. She had a sleeve gastrectomy some years ago. There is no sign of a surgical complication: the abdomen is soft and non-tender. After a sleeve, small meals, early satiety and stopping the recommended supplements commonly lead to deficiencies of iron, vitamin B12, folate, vitamin D, zinc and copper. No surgical intervention is needed. Happy to review again with the results.",
+  "recommendations": [
+   "Full post-bariatric micronutrient screen",
+   "Lifelong bariatric multivitamin and mineral supplement, with vitamin B12 as she already has",
+   "Dietetic follow-up; bariatric clinic follow-up after discharge"
+  ],
+  "origin": "affected",
+  "rationale": "A bariatric surgeon would note the deficiency risk after a sleeve and exclude a surgical complication. Lists several deficiencies without singling one out.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN09",
+  "specialty": "REF.ONCOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about treatment for a possible myeloid neoplasm. We reviewed the Chart so far. Myeloid neoplasms are managed by haematology here. Before any hypomethylating or intensive treatment we would need a confirmed diagnosis, with cytogenetic and molecular results, and reversible causes of dysplasia excluded. We would not start treatment on the current information. Happy to review again with the results.",
+  "recommendations": [
+   "Discuss with haematology",
+   "Await cytogenetics, FISH, SNP microarray and NGS",
+   "Supportive care in the meantime"
+  ],
+  "origin": "affected",
+  "rationale": "Trap path (P2): an oncologist declines to treat without a confirmed diagnosis, which is what a competent colleague would say.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN10",
+  "specialty": "REF.RHEUMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked whether an autoimmune disease could explain the pancytopenia. We reviewed the Chart so far. She has no joint, skin or other features of a connective tissue disease. If the autoimmune screen is negative, we have nothing further to add. Happy to review again with the results.",
+  "recommendations": [
+   "ANA, anti-dsDNA, complement and rheumatoid factor if not already sent",
+   "Direct antiglobulin test"
+  ],
+  "origin": "affected",
+  "rationale": "Alternative path P8; the article reports rheumatological testing as unrevealing.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN11",
+  "specialty": "REF.ENDOCRINOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to review hypothyroidism after total thyroidectomy. We reviewed the Chart so far. Hypothyroidism can contribute to a mild anaemia but does not cause pancytopenia of this degree. Absorption of levothyroxine can change after bariatric surgery. Happy to review again with the results.",
+  "recommendations": [
+   "Thyroid function tests",
+   "Continue levothyroxine at the current dose if TSH is in range",
+   "Vitamin D and bone profile, given the bariatric surgery"
+  ],
+  "origin": "affected",
+  "rationale": "Alternative path P6: thyroid disease is a weak explanation; conditional wording so the note stays correct with the affected TSH.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN12",
+  "specialty": "REF.CARDIOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific cardiac concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN13",
+  "specialty": "REF.NEUROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific neurological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN14",
+  "specialty": "REF.TOXICOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific toxicological concerns from our side; happy to advise if new information arises.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN15",
+  "specialty": "REF.NEPHROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific renal concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN16",
+  "specialty": "REF.RESPIRATORY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific respiratory concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN17",
+  "specialty": "REF.PSYCHIATRY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific psychiatric concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN18",
+  "specialty": "REF.DERMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific skin concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN19",
+  "specialty": "REF.OPHTHALMOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific eye concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN20",
+  "specialty": "REF.ENT",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific ear, nose or throat concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN21",
+  "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN22",
+  "specialty": "REF.PHYSIOTHERAPY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific mobility concerns from our side; happy to review if function changes.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ }
+]

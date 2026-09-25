@@ -1,0 +1,3304 @@
+[
+ {
+  "target": "HX.PC.ONSET_DURATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Increasingly tired for about six weeks; breathless on exertion for the past two to three weeks."
+  },
+  "release_text": "Increasingly tired for about six weeks; breathless on exertion for the past two to three weeks.",
+  "lay_text": "I've been getting more and more tired for about six weeks, and for the last two or three weeks I get out of breath when I walk about.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "The article gives no symptom history. A pancytopenia of this depth (Hb 77 g/L, neutrophils 0.06) develops over weeks; folate stores last months, so a subacute onset fits.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.PC.PROGRESSION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Steadily worse. In the week before transfer she developed loose stools and a sore mouth, and the other hospital found very low blood counts."
+  },
+  "release_text": "Steadily worse. In the week before transfer she developed loose stools and a sore mouth, and the other hospital found very low blood counts.",
+  "lay_text": "It's just got worse and worse. Then last week I had diarrhoea and a sore mouth, and when I went to the other hospital they said my blood counts were very low.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Links the subacute anaemia symptoms to the article's presumptive colitis and mucositis, for which she was on cefepime, metronidazole and fluconazole.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.PC.ASSOCIATED",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Sore mouth and loose stools over the past week; poor appetite."
+  },
+  "release_text": "Sore mouth and loose stools over the past week; poor appetite.",
+  "lay_text": "My mouth has been sore and I've had loose motions this past week. I don't feel like eating.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The referring hospital treated presumed colitis and mucositis (article); a sore mouth and loose stools are the symptoms that label implies. Appetite is poor after a sleeve gastrectomy with malnutrition.",
+  "confidence": 0.65
+ },
+ {
+  "target": "HX.PC.IMPACT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Spending most of the day resting; has stopped going out and doing housework."
+  },
+  "release_text": "Spending most of the day resting; has stopped going out and doing housework.",
+  "lay_text": "I spend most of the day resting. I've stopped going out and I can't manage the housework.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Expected impact of symptomatic anaemia of this depth.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.PC.PAIN_DETAILS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Mild crampy lower abdominal discomfort with the loose stools last week; none now. No other pain."
+  },
+  "release_text": "Mild crampy lower abdominal discomfort with the loose stools last week; none now. No other pain.",
+  "lay_text": "I had some crampy tummy aches with the diarrhoea last week, but nothing now.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Fits presumed colitis (article) with an unremarkable examination on arrival (article): symptoms settling on treatment.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GEN.FATIGUE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Marked tiredness for about six weeks, worse in the past two weeks."
+  },
+  "release_text": "Marked tiredness for about six weeks, worse in the past two weeks.",
+  "lay_text": "I'm exhausted all the time, for about six weeks now, and it's been worse the last two weeks.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Symptomatic anaemia (Hb 77 g/L after one unit of red cells).",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GEN.FEVER_SWEATS_WEIGHT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "text": "Felt hot and shivery once or twice last week (not measured); no night sweats. Has lost about 8 kg over the past year and her clothes are loose."
+  },
+  "release_text": "Felt hot and shivery once or twice last week (not measured); no night sweats. Has lost about 8 kg over the past year and her clothes are loose.",
+  "lay_text": "I felt hot once or twice last week, but I didn't take my temperature. No night sweats. I've lost about 8 kilos this past year; my clothes are hanging off me.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Weight loss follows the article's malnutrition after sleeve gastrectomy; possible fevers fit the referring team's decision to start broad-spectrum antimicrobials in profound neutropenia. The answer does not name the operation, which stays behind the surgical question.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GEN.RECENT_INFECTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Loose stools and a sore mouth in the week before transfer; no cough, urinary symptoms or skin infections."
+  },
+  "release_text": "Loose stools and a sore mouth in the week before transfer; no cough, urinary symptoms or skin infections.",
+  "lay_text": "Just the diarrhoea and the sore mouth last week. No cough, no water infection, nothing on my skin.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The article's presumptive colitis and mucositis; nothing else is reported before the Pneumocystis pneumonia on day 3.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.GEN.RIGORS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No shaking chills."
+  },
+  "release_text": "No shaking chills.",
+  "lay_text": "No, I haven't had any shivering fits.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No rigors reported; the referring team treated presumptively rather than for a proven bacteraemia.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GEN.BRUISING_BLEEDING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No nosebleeds, gum bleeding, blood in the urine or stool, or unusual bruising that she has noticed."
+  },
+  "release_text": "No nosebleeds, gum bleeding, blood in the urine or stool, or unusual bruising that she has noticed.",
+  "lay_text": "No, I haven't had any bleeding or noticed any bruises.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Platelets below 6 x10^9/L can go with little bleeding; the article records an unremarkable examination, so no bleeding history is invented.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GEN.JAUNDICE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Has not noticed yellowing of the eyes or skin."
+  },
+  "release_text": "Has not noticed yellowing of the eyes or skin.",
+  "lay_text": "No, I haven't gone yellow.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bilirubin only mildly raised (affected row, 24 umol/L); no clinical jaundice.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.CVS.BREATHLESSNESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Breathless walking up stairs or across the house for two to three weeks; not breathless at rest."
+  },
+  "release_text": "Breathless walking up stairs or across the house for two to three weeks; not breathless at rest.",
+  "lay_text": "I get out of breath going up the stairs or walking round the house, for the last two or three weeks. I'm fine sitting down.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Exertional breathlessness is the expected symptom of Hb 77 g/L. The Pneumocystis pneumonia is diagnosed on day 3, so no breathlessness at rest yet (judgement call).",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.CVS.PALPITATIONS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Aware of her heart pounding when she walks about."
+  },
+  "release_text": "Aware of her heart pounding when she walks about.",
+  "lay_text": "I can feel my heart thumping when I walk about.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Anaemia with a resting pulse around 100/min.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.RESP.COUGH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No cough."
+  },
+  "release_text": "No cough.",
+  "lay_text": "No, no cough.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No respiratory symptoms are reported before the Pneumocystis pneumonia is diagnosed on day 3 (secondary finding).",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GI.NAUSEA_APPETITE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Poor appetite; feels full after a few mouthfuls; occasional nausea, no vomiting."
+  },
+  "release_text": "Poor appetite; feels full after a few mouthfuls; occasional nausea, no vomiting.",
+  "lay_text": "I've got no appetite. I feel full after a few mouthfuls, and sometimes I feel a bit sick, but I haven't been sick.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Early satiety is expected after sleeve gastrectomy, and poor intake underlies the article's malnutrition. Early satiety is a fair clue without naming the operation.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GI.BOWEL_HABIT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Loose, watery stools three or four times a day for about a week before transfer, now settling; no blood or mucus."
+  },
+  "release_text": "Loose, watery stools three or four times a day for about a week before transfer, now settling; no blood or mucus.",
+  "lay_text": "I've had loose, watery motions three or four times a day for about a week, but it's settling now. No blood.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "The referring hospital treated presumed colitis (article); the examination on arrival was unremarkable, so the diarrhoea is settling.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GI.ABDOMINAL_PAIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Mild crampy lower abdominal discomfort with the loose stools last week; none now."
+  },
+  "release_text": "Mild crampy lower abdominal discomfort with the loose stools last week; none now.",
+  "lay_text": "Just some cramps with the diarrhoea last week. Nothing now.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "As HX.PC.PAIN_DETAILS: presumed colitis with an unremarkable examination on arrival.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.ENT.MOUTH_ULCERS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Sore mouth and a sore, red tongue for about two weeks; hot or spicy food stings."
+  },
+  "release_text": "Sore mouth and a sore, red tongue for about two weeks; hot or spicy food stings.",
+  "lay_text": "My mouth and tongue have been sore for a couple of weeks. Anything hot or spicy stings.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "The referring team treated presumed mucositis (article); a sore, smooth tongue is common in megaloblastic states and in severe neutropenia. Not pathognomonic.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.NEURO.SENSORY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No numbness, tingling or pins and needles; no unsteadiness."
+  },
+  "release_text": "No numbness, tingling or pins and needles; no unsteadiness.",
+  "lay_text": "No numbness or pins and needles, and I'm steady on my feet.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Folate deficiency rarely causes a neuropathy and vitamin B12 is replete (>1500 pg/mL); the answer helps separate B12 from folate deficiency.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.SKIN.HAIR_NAILS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "text": "Hair has been thinning over the past year."
+  },
+  "release_text": "Hair has been thinning over the past year.",
+  "lay_text": "My hair's been thinning over the last year or so.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Hair thinning is common after bariatric surgery with protein malnutrition (article: protein deficiency).",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.SKIN.RASH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No rash."
+  },
+  "release_text": "No rash.",
+  "lay_text": "No rashes.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No rash reported; relevant to the eosinophilia and autoimmune paths.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.RESP.WHEEZE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No wheeze and no history of asthma."
+  },
+  "release_text": "No wheeze and no history of asthma.",
+  "lay_text": "No wheezing, and I've never had asthma.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Eosinophilia path: nothing suggests an allergic or vasculitic process; the eosinophilia is relative (absolute count 0.17 x10^9/L).",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.MSK.JOINT_PAIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No joint pain or swelling."
+  },
+  "release_text": "No joint pain or swelling.",
+  "lay_text": "No, my joints are fine.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Autoimmune path; the article reports rheumatological testing as unrevealing.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.PMH.ADMISSIONS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Admitted for her thyroid operation years ago and for her stomach operation; no other admissions before this illness."
+  },
+  "release_text": "Admitted for her thyroid operation years ago and for her stomach operation; no other admissions before this illness.",
+  "lay_text": "Only when I had my thyroid out, and when I had my stomach operation.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows H03 (surgical history). A direct question about admissions is a fair route to the sleeve gastrectomy.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.PMH.TRANSFUSION_PREGNANCY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "One unit of red cells at the other hospital before transfer; no transfusions before that. Two pregnancies, both normal deliveries."
+  },
+  "release_text": "One unit of red cells at the other hospital before transfer; no transfusions before that. Two pregnancies, both normal deliveries.",
+  "lay_text": "They gave me one bag of blood at the other hospital. I'd never had a transfusion before. I've had two children, both normal births.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Transfusion from the article (H05). Obstetric history is not reported; an ordinary history is assumed.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.PMH.IMMUNOSUPPRESSION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Has never had chemotherapy, radiotherapy, radioactive iodine or immunosuppressive treatment."
+  },
+  "release_text": "Has never had chemotherapy, radiotherapy, radioactive iodine or immunosuppressive treatment.",
+  "lay_text": "No, I've never had chemotherapy, radiation or anything like that.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Therapy-related myeloid neoplasm path: no prior cytotoxic or radiation exposure is reported. Radioactive iodine after thyroidectomy is not mentioned and is assumed not given (judgement call).",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.MEDS.CURRENT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "text": "Levothyroxine 100 micrograms each morning; vitamin B12 injections every month from her family doctor; intravenous cefepime, metronidazole and fluconazole started at the other hospital."
+  },
+  "release_text": "Levothyroxine 100 micrograms each morning; vitamin B12 injections every month from her family doctor; intravenous cefepime, metronidazole and fluconazole started at the other hospital.",
+  "lay_text": "I take my thyroid tablet every morning and I have a B12 injection once a month from my doctor. And the drip antibiotics they started at the other hospital.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Levothyroxine is required after total thyroidectomy (dose assumed). Monthly B12 injections are routine after bariatric surgery and explain a serum B12 above 1500 pg/mL (article) alongside severe folate depletion. Antimicrobials from the article.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.MEDS.ADHERENCE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "text": "Takes her thyroid tablet every morning and has had her B12 injection every month."
+  },
+  "release_text": "Takes her thyroid tablet every morning and has had her B12 injection every month.",
+  "lay_text": "I never miss my thyroid tablet, and I have my B12 injection every month.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Consistent with HX.MEDS.CURRENT; the multivitamin she stopped belongs to the supplements question.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.MEDS.RECENT_CHANGES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Intravenous antibiotics and an antifungal started at the other hospital in the past few days; no other changes."
+  },
+  "release_text": "Intravenous antibiotics and an antifungal started at the other hospital in the past few days; no other changes.",
+  "lay_text": "Only the drips they started at the other hospital a few days ago.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Antimicrobials from the article (H05). No new marrow-toxic drug is reported, which matters for the aplastic anaemia path.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.MEDS.SUPPLEMENTS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "text": "She was advised to take a daily multivitamin after her stomach operation but stopped it about a year ago because it upset her stomach. No herbal or traditional remedies."
+  },
+  "release_text": "She was advised to take a daily multivitamin after her stomach operation but stopped it about a year ago because it upset her stomach. No herbal or traditional remedies.",
+  "lay_text": "They told me to take a multivitamin every day after my stomach operation, but it upset my stomach, so I stopped it about a year ago. No herbal things.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "The article names inadequate supplementation after bariatric surgery as a cause of rapid folate depletion; stopping the supplement is the likeliest route to severe deficiency with B12 kept up by injections. Hidden until supplements are asked about.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.MEDS.SUPPLEMENT_DETAILS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "text": "A chewable once-daily multivitamin and mineral tablet advised after the operation; stopped about a year ago. No other supplements or remedies."
+  },
+  "release_text": "A chewable once-daily multivitamin and mineral tablet advised after the operation; stopped about a year ago. No other supplements or remedies.",
+  "lay_text": "It was a chewable multivitamin, one a day. I stopped it about a year ago. Nothing else.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Detail of HX.MEDS.SUPPLEMENTS (judgement call G04).",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.MEDS.ALLERGIES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No known drug allergies."
+  },
+  "release_text": "No known drug allergies.",
+  "lay_text": "Not that I know of.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No allergy reported; eosinophilia path (drug reaction) keeps a plain answer.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.SOCIAL.DIET",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Since her stomach operation she eats very small meals of soft food: toast, crackers, pasta, soup and milky tea. She eats very little fresh fruit, salad or green vegetables, which she finds hard to manage, and her appetite has been poor for months."
+  },
+  "release_text": "Since her stomach operation she eats very small meals of soft food: toast, crackers, pasta, soup and milky tea. She eats very little fresh fruit, salad or green vegetables, which she finds hard to manage, and her appetite has been poor for months.",
+  "lay_text": "Since the operation I can only manage small amounts. Mostly toast, crackers, pasta, soup and milky tea. I hardly eat any fruit or salad or green vegetables; I find them hard to get down. And I've not felt like eating for months.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "The article reports malnutrition after sleeve gastrectomy and cites inadequate intake; folate comes mainly from leafy vegetables and fruit. The detail of the diet is not reported, so the pattern is the likeliest one (judgement call). Pivotal hidden history.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.SOCIAL.ALCOHOL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Rarely drinks: a glass of wine a few times a year."
+  },
+  "release_text": "Rarely drinks: a glass of wine a few times a year.",
+  "lay_text": "Hardly ever. A glass of wine a few times a year.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Alcohol is a classic cause of folate deficiency; the article gives none and attributes the deficiency to the sleeve and malnutrition, so alcohol is minimal.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.SOCIAL.FUNCTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Independent, but for the past few weeks too tired to do much housework or go out."
+  },
+  "release_text": "Independent, but for the past few weeks too tired to do much housework or go out.",
+  "lay_text": "I can look after myself, but I've been too tired to do much round the house or go out.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Symptomatic anaemia.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.SOCIAL.TRAVEL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No recent travel; has not been abroad in the past few years."
+  },
+  "release_text": "No recent travel; has not been abroad in the past few years.",
+  "lay_text": "No, I haven't been anywhere.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Eosinophilia path: no travel that would suggest a parasitic cause.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.EXPOSURE.TOXINS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No known exposure to chemicals, solvents or pesticides."
+  },
+  "release_text": "No known exposure to chemicals, solvents or pesticides.",
+  "lay_text": "Not that I know of.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Aplastic anaemia and myeloid neoplasm paths. The answer keeps to the question and names no specific toxin (SPEC §6.4 rule 8).",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.EXPOSURE.OCCUPATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Works part-time in a school office."
+  },
+  "release_text": "Works part-time in a school office.",
+  "lay_text": "I work part-time in the office at a school.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported; an ordinary office job with no occupational exposure. The answer gives the job only (rule 8).",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.EXPOSURE.RADIATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No radiation treatment or unusual radiation exposure."
+  },
+  "release_text": "No radiation treatment or unusual radiation exposure.",
+  "lay_text": "No, never.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Therapy-related neoplasm path; consistent with HX.PMH.IMMUNOSUPPRESSION.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.FAMILY.BLOOD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No family history of blood disorders or of needing transfusions."
+  },
+  "release_text": "No family history of blood disorders or of needing transfusions.",
+  "lay_text": "No, nobody in the family has had blood problems.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Myeloid neoplasm path (germline predisposition). The KMT2A variant at a VAF near 50% may be constitutional but is of uncertain significance; no family history is reported.",
+  "confidence": 0.65
+ },
+ {
+  "target": "HX.FAMILY.CANCER",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No cancers in close family that she knows of."
+  },
+  "release_text": "No cancers in close family that she knows of.",
+  "lay_text": "Not that I know of.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported; neutral answer.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GYN.MENSES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Periods stopped at about 51; no bleeding since."
+  },
+  "release_text": "Periods stopped at about 51; no bleeding since.",
+  "lay_text": "My periods stopped when I was about 51, and I haven't bled since.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Patient-dependent normal (Q1): a 56-year-old woman is most likely postmenopausal. No bleeding also fits the platelet count.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GYN.MENOPAUSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Menopause at about 51; no postmenopausal bleeding."
+  },
+  "release_text": "Menopause at about 51; no postmenopausal bleeding.",
+  "lay_text": "They stopped at about 51 and I haven't had any bleeding since.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Patient-dependent normal (Q1), consistent with HX.GYN.MENSES.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GYN.PREGNANCY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No possibility of pregnancy: postmenopausal."
+  },
+  "release_text": "No possibility of pregnancy: postmenopausal.",
+  "lay_text": "No, I'm past the change.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Patient-dependent normal (Q1).",
+  "confidence": 0.9
+ },
+ {
+  "target": "HX.GYN.CONTRACEPTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No contraception needed since the menopause."
+  },
+  "release_text": "No contraception needed since the menopause.",
+  "lay_text": "I don't need any now.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Patient-dependent normal (Q1).",
+  "confidence": 0.9
+ },
+ {
+  "target": "HX.GYN.OBSTETRIC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Two pregnancies, both uncomplicated vaginal deliveries."
+  },
+  "release_text": "Two pregnancies, both uncomplicated vaginal deliveries.",
+  "lay_text": "Two children, both normal deliveries.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported; ordinary history, consistent with HX.PMH.TRANSFUSION_PREGNANCY.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GYN.VAGINAL_DISCHARGE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No vaginal discharge or bleeding."
+  },
+  "release_text": "No vaginal discharge or bleeding.",
+  "lay_text": "No, nothing like that.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Patient-dependent normal (Q1): the template mentions periods; she is postmenopausal.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.RECORDS.PREVIOUS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "The referring hospital's notes and results from this admission are available; no earlier blood counts are to hand."
+  },
+  "release_text": "The referring hospital's notes and results from this admission are available; no earlier blood counts are to hand.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The article gives the transfer details only; no earlier counts are reported.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.RECORDS.DISCHARGE_SUMMARIES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No discharge summaries from her earlier operations are to hand."
+  },
+  "release_text": "No discharge summaries from her earlier operations are to hand.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. The operations themselves are found by asking the surgical history (H03).",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.GEN.VITALS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Temperature 37.4 °C; pulse 102/min, regular; blood pressure 112/68 mmHg; respiratory rate 18/min; SpO2 96% on room air."
+  },
+  "release_text": "Temperature 37.4 °C; pulse 102/min, regular; blood pressure 112/68 mmHg; respiratory rate 18/min; SpO2 96% on room air.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Not reported. Tachycardia from anaemia; low-grade temperature at most in a neutropenic patient on antimicrobials; SpO2 slightly low three days before a Pneumocystis pneumonia that needed intubation, but no respiratory distress yet.",
+  "confidence": 0.55
+ },
+ {
+  "target": "EX.CVS.PULSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Pulse 102/min, regular, of normal volume; no radio-femoral delay."
+  },
+  "release_text": "Pulse 102/min, regular, of normal volume; no radio-femoral delay.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Patient-dependent normal (Q2), matching the vital signs.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.GEN.PALLOR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Mild conjunctival pallor."
+  },
+  "release_text": "Mild conjunctival pallor.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Hb 77 g/L after one unit of red cells makes some pallor likely. The article records the examination as unremarkable, so the pallor is mild (judgement call).",
+  "confidence": 0.55
+ },
+ {
+  "target": "EX.GEN.JAUNDICE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "No scleral icterus."
+  },
+  "release_text": "No scleral icterus.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bilirubin only mildly raised (24 umol/L); examination unremarkable (article).",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.GEN.LYMPH_NODES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "No palpable cervical, axillary or inguinal lymph nodes."
+  },
+  "release_text": "No palpable cervical, axillary or inguinal lymph nodes.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Examination unremarkable (article); relevant to the myeloid neoplasm and HLH paths.",
+  "confidence": 0.85
+ },
+ {
+  "target": "EX.ABD.LIVER_SPLEEN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Liver and spleen not palpable."
+  },
+  "release_text": "Liver and spleen not palpable.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Examination unremarkable (article); no organomegaly argues against HLH and an infiltrative process.",
+  "confidence": 0.85
+ },
+ {
+  "target": "EX.ABD.PALPATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Soft and non-tender; no masses; no guarding."
+  },
+  "release_text": "Soft and non-tender; no masses; no guarding.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Examination unremarkable (article); the presumed colitis is settling.",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.ABD.INSPECTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Five small healed laparoscopic port-site scars on the upper abdomen; no distension."
+  },
+  "release_text": "Five small healed laparoscopic port-site scars on the upper abdomen; no distension.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Sleeve gastrectomy (article) is done laparoscopically and leaves port-site scars; an unremarkable examination still records scars. A fair examination clue to the hidden surgical history.",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.NECK.THYROID",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Healed transverse collar scar at the base of the neck; no thyroid tissue or lumps palpable."
+  },
+  "release_text": "Healed transverse collar scar at the base of the neck; no thyroid tissue or lumps palpable.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Remote total thyroidectomy (article).",
+  "confidence": 0.9
+ },
+ {
+  "target": "EX.ORAL.CAVITY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Tongue smooth and slightly red; oral mucosa mildly reddened; no ulcers, white plaques or bleeding."
+  },
+  "release_text": "Tongue smooth and slightly red; oral mucosa mildly reddened; no ulcers, white plaques or bleeding.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "The referring team treated presumed mucositis (article) and the examination on arrival was unremarkable: mild changes only. A smooth red tongue fits a megaloblastic state and is not specific.",
+  "confidence": 0.55
+ },
+ {
+  "target": "EX.SKIN.PURPURA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "No petechiae, purpura or bruising."
+  },
+  "release_text": "No petechiae, purpura or bruising.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Platelets below 6 x10^9/L often cause petechiae, but the article records an unremarkable examination; nothing is invented.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.SKIN.INSPECTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "No rash or skin lesions."
+  },
+  "release_text": "No rash or skin lesions.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Examination unremarkable (article).",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.MSK.JOINTS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "No joint swelling, tenderness or deformity."
+  },
+  "release_text": "No joint swelling, tenderness or deformity.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Examination unremarkable (article); rheumatological testing unrevealing.",
+  "confidence": 0.85
+ },
+ {
+  "target": "EX.RESP.AUSCULTATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Vesicular breath sounds; no crackles or wheeze."
+  },
+  "release_text": "Vesicular breath sounds; no crackles or wheeze.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Examination unremarkable (article) on arrival; the Pneumocystis pneumonia is diagnosed on day 3 and often has few chest signs.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.GEN.HEIGHT_WEIGHT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "text": "Height 162 cm; weight 51 kg; BMI 19.4 kg/m2."
+  },
+  "release_text": "Height 162 cm; weight 51 kg; BMI 19.4 kg/m2.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Patient-dependent normal (Q2). Weights are not reported; a low-normal BMI with recent weight loss fits malnutrition after a sleeve gastrectomy.",
+  "confidence": 0.55
+ },
+ {
+  "target": "EX.BEDSIDE.CAPILLARY_GLUCOSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Capillary blood glucose 5.2 mmol/L (94 mg/dL)."
+  },
+  "release_text": "Capillary blood glucose 5.2 mmol/L (94 mg/dL).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Patient-dependent normal (Q2): no diabetes; poor intake.",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.BEDSIDE.POSTURAL_BP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Lying 112/68 mmHg, pulse 102/min; standing after three minutes 104/64 mmHg, pulse 114/min; no symptoms on standing."
+  },
+  "release_text": "Lying 112/68 mmHg, pulse 102/min; standing after three minutes 104/64 mmHg, pulse 114/min; no symptoms on standing.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Patient-dependent normal (Q2): anaemia and recent diarrhoea give a rise in pulse without a postural drop by the usual criteria.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.BEDSIDE.PEAK_FLOW",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Best of three 380 L/min, about 95% of predicted for her age, sex and height."
+  },
+  "release_text": "Best of three 380 L/min, about 95% of predicted for her age, sex and height.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Patient-dependent normal (Q2) for a 56-year-old woman 162 cm tall.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.GYN.PELVIC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Atrophic postmenopausal vulval and vaginal changes; cervix looks normal; no masses, tenderness or bleeding."
+  },
+  "release_text": "Atrophic postmenopausal vulval and vaginal changes; cervix looks normal; no masses, tenderness or bleeding.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Patient-dependent normal (Q2) for a postmenopausal woman.",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.GEN.HYDRATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Mucous membranes slightly dry; capillary refill under 2 seconds."
+  },
+  "release_text": "Mucous membranes slightly dry; capillary refill under 2 seconds.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "A week of loose stools; mild only, since the examination was recorded as unremarkable.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.MSK.MUSCLES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Mild generalised loss of muscle bulk; no tenderness."
+  },
+  "release_text": "Mild generalised loss of muscle bulk; no tenderness.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Protein malnutrition after sleeve gastrectomy (article).",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.NEURO.MOTOR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Mild generalised reduction in muscle bulk; tone normal; no fasciculation; power 5/5 throughout."
+  },
+  "release_text": "Mild generalised reduction in muscle bulk; tone normal; no fasciculation; power 5/5 throughout.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Consistent with EX.MSK.MUSCLES (protein malnutrition); no neurological weakness.",
+  "confidence": 0.65
+ },
+ {
+  "target": "EX.NEURO.REFLEXES_SENSATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "text": "Reflexes normal and symmetrical; plantars flexor; light touch, pinprick, vibration and joint position sense intact."
+  },
+  "release_text": "Reflexes normal and symmetrical; plantars flexor; light touch, pinprick, vibration and joint position sense intact.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Folate deficiency with replete B12: no neuropathy or posterior column signs. Separates B12 from folate deficiency.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.GLUCOSE_CAPILLARY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 5.2,
+   "unit": "mmol/L",
+   "ref_range": "3.9-7.8"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Matches the bedside capillary glucose on examination (EX.BEDSIDE.CAPILLARY_GLUCOSE).",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.RBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 2.44,
+   "unit": "x10^12/L",
+   "ref_range": "3.8-4.8",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Calculated from the article's haematocrit and MCV (0.225 / 92.2 fL), so MCV, MCH and MCHC stay consistent.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.RDW",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 15.6,
+   "unit": "%",
+   "ref_range": "11.6-14",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Megaloblastic erythropoiesis with one transfused unit (a mixed population) raises the RDW; the film showed only minimal anisopoikilocytosis, so the rise is modest.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.LYMPH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 0.09,
+   "unit": "x10^9/L",
+   "ref_range": "1-3",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "WBC 0.33 with neutrophils 0.06 and eosinophils about 50% (article): the remainder is split so that the differential sums to the total. Profound lymphopenia fits the later Pneumocystis pneumonia.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.MONO",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 0.01,
+   "unit": "x10^9/L",
+   "ref_range": "0.2-1",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Remainder of the differential (article WBC 0.33); monocytes are usually very low in severe marrow failure.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.EOS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 0.17,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.5"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Article: eosinophils 50% of leucocytes on the film (54% by flow) of WBC 0.33, so about 0.17 x10^9/L. A relative eosinophilia: the absolute count is normal.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.BASO",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 0.0,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.1"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Remainder of the differential; none seen. Not flagged: laboratories do not flag a low basophil count.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.NRBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 0,
+   "unit": "/100 WBC",
+   "ref_range": "0"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No nucleated red cells are mentioned on the film.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.RETIC_ABS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 12,
+   "unit": "x10^9/L",
+   "ref_range": "50-100",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": false,
+  "rationale": "Ineffective erythropoiesis in a hypocellular megaloblastic marrow gives an inappropriately low reticulocyte count.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.RETIC_PCT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 0.49,
+   "unit": "%",
+   "ref_range": "0.5-2.5",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Calculated from the absolute count and the red cell count (0.1 x 12 / 2.44).",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.IRF",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 9.8,
+   "unit": "%",
+   "ref_range": "1.6-12.1"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Within range; a low count with no regenerative surge before treatment.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.TRANSFERRIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 1.14,
+   "unit": "g/L",
+   "ref_range": "2-3.6",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Calculated from the article's TIBC (159 ug/dL = 28.5 umol/L; transferrin g/L about TIBC / 25.1). Low from malnutrition and inflammation.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.CAERULOPLASMIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 0.27,
+   "unit": "g/L",
+   "ref_range": "0.2-0.6"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Serum copper normal (article); caeruloplasmin in range.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.RBC_FOLATE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 262,
+   "unit": "nmol/L",
+   "ref_range": "340-1020",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": false,
+  "rationale": "Red cell folate reflects stores over the red cell lifespan and is low in severe depletion; one transfused unit raises it a little, so it is low but not extreme.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.HOMOCYSTEINE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 41.6,
+   "unit": "umol/L",
+   "ref_range": "5-15",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": false,
+  "rationale": "Homocysteine rises in both folate and B12 deficiency; markedly raised here.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.MMA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 0.21,
+   "unit": "umol/L",
+   "ref_range": "<0.40"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": false,
+  "rationale": "Methylmalonic acid is normal when B12 is replete (serum B12 >1500 pg/mL, article); this separates folate from B12 deficiency.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.LDH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "value": 742,
+   "unit": "U/L",
+   "ref_range": "135-214",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Ineffective (intramedullary) erythropoiesis in megaloblastic states raises LDH, often markedly; with a hypocellular marrow the rise is moderate.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BILI_TOTAL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "value": 24,
+   "unit": "umol/L",
+   "ref_range": "3-21",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild unconjugated rise from intramedullary haemolysis.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BILI_CONJ",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "value": 4,
+   "unit": "umol/L",
+   "ref_range": "<5"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mostly unconjugated.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "value": 78,
+   "unit": "U/L",
+   "ref_range": "35-104"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No liver disease reported.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.AST",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "value": 36,
+   "unit": "U/L",
+   "ref_range": "<32",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "LDH and AST leak from dying erythroid precursors; slightly raised.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.ALT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "value": 18,
+   "unit": "U/L",
+   "ref_range": "<33"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal liver.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.GGT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "value": 22,
+   "unit": "U/L",
+   "ref_range": "5-36"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal; little alcohol.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALBUMIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "value": 28,
+   "unit": "g/L",
+   "ref_range": "35-52",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": false,
+  "rationale": "The article reports severe malnutrition with protein deficiency; hypoalbuminaemia also from inflammation.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.TOTAL_PROTEIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "value": 57,
+   "unit": "g/L",
+   "ref_range": "64-83",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Protein malnutrition (article).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 2.3,
+   "unit": "mmol/L",
+   "ref_range": "2.5-7.8",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low protein intake.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CREATININE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 47,
+   "unit": "umol/L",
+   "ref_range": "49-90",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low muscle mass in malnutrition; normal renal function.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 106,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal renal function.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.NA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 136,
+   "unit": "mmol/L",
+   "ref_range": "135-145"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.K",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 3.3,
+   "unit": "mmol/L",
+   "ref_range": "3.5-5.1",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "A week of diarrhoea and poor intake.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 104,
+   "unit": "mmol/L",
+   "ref_range": "98-107"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.BICARB",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 21,
+   "unit": "mmol/L",
+   "ref_range": "22-29",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild bicarbonate loss with diarrhoea.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 2.02,
+   "unit": "mmol/L",
+   "ref_range": "2.15-2.55",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low total calcium from hypoalbuminaemia (albumin 28 g/L).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CA_ADJ",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 2.26,
+   "unit": "mmol/L",
+   "ref_range": "2.15-2.55"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Albumin-adjusted calcium normal: 2.02 + 0.02 x (40 - 28).",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.PHOSPHATE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 0.76,
+   "unit": "mmol/L",
+   "ref_range": "0.81-1.45",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Malnutrition and poor intake.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.MG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G09",
+  "value": {
+   "value": 0.62,
+   "unit": "mmol/L",
+   "ref_range": "0.66-1.07",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Diarrhoea and malnutrition after bariatric surgery.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ZINC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 8.6,
+   "unit": "umol/L",
+   "ref_range": "11-18",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Zinc deficiency is common after bariatric surgery with protein malnutrition, and low albumin lowers the measured level.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.VIT_D_25OH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 29,
+   "unit": "nmol/L",
+   "ref_range": "50-125",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Vitamin D deficiency is common after bariatric surgery when supplements are stopped.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.THIAMINE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 74,
+   "unit": "nmol/L",
+   "ref_range": "70-180"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low-normal after poor intake.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PLP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 22,
+   "unit": "nmol/L",
+   "ref_range": "20-125"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low-normal after poor intake.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PTH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 9.6,
+   "unit": "pmol/L",
+   "ref_range": "1.6-6.9",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Secondary hyperparathyroidism from vitamin D deficiency.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.HOLOTC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": ">150",
+   "unit": "pmol/L",
+   "ref_range": ">50",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Serum B12 above 1500 pg/mL (article) with monthly injections: active B12 above the assay's upper limit.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.ANTI_IF",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected."
+  },
+  "release_text": "Not detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "B12 is replete on injections; no autoimmune gastritis is suggested.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.ANTI_GPC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No parietal cell staining on rodent stomach sections."
+  },
+  "release_text": "No parietal cell staining on rodent stomach sections.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "As anti-intrinsic factor.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.TTG_IGA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.1,
+   "unit": "U/mL",
+   "ref_range": "<7.0"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No coeliac disease; the malabsorption follows the sleeve gastrectomy.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.IGA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.62,
+   "unit": "g/L",
+   "ref_range": "0.7-4"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.IGG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 7.8,
+   "unit": "g/L",
+   "ref_range": "6-16"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low-normal in malnutrition.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0.62,
+   "unit": "g/L",
+   "ref_range": "0.4-2.3"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low-normal.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.TSH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G10",
+  "value": {
+   "value": 2.6,
+   "unit": "mIU/L",
+   "ref_range": "0.27-4.2"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Treated hypothyroidism on levothyroxine; the article names hypothyroidism as a chronic disease but gives no thyroid results. Normal TSH keeps anaemia of hypothyroidism a weak alternative.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.FT4",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G10",
+  "value": {
+   "value": 15.8,
+   "unit": "pmol/L",
+   "ref_range": "12-22"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "On replacement.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.FT3",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G10",
+  "value": {
+   "value": 3.3,
+   "unit": "pmol/L",
+   "ref_range": "3.1-6.8"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low-normal in acute illness.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.CHOL_TOTAL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 3.1,
+   "unit": "mmol/L",
+   "ref_range": "<5.2"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Malnutrition.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.TRIGLYCERIDE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.2,
+   "unit": "mmol/L",
+   "ref_range": "<1.7"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal; relevant to the HLH criteria (not raised).",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CHOL_HDL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.1,
+   "unit": "mmol/L",
+   "ref_range": ">1.2",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low HDL in malnutrition and acute illness.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.CHOL_LDL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.5,
+   "unit": "mmol/L",
+   "ref_range": "<3.0"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Friedewald: 3.1 - 1.1 - 1.2/2.2.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CHOL_NON_HDL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 2.0,
+   "unit": "mmol/L",
+   "ref_range": "<3.9"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Total minus HDL.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.URATE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 318,
+   "unit": "umol/L",
+   "ref_range": "142-339"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "High cell turnover in ineffective erythropoiesis balanced by low intake: upper-normal.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G11",
+  "value": {
+   "value": 14.6,
+   "unit": "s",
+   "ref_range": "11-14",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild vitamin K deficiency from malnutrition and broad-spectrum antibiotics.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.INR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G11",
+  "value": {
+   "value": 1.3,
+   "unit": "ratio",
+   "ref_range": "0.8-1.2",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "As the prothrombin time.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G11",
+  "value": {
+   "value": 33.5,
+   "unit": "s",
+   "ref_range": "26-36"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.FIBRINOGEN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G11",
+  "value": {
+   "value": 4.3,
+   "unit": "g/L",
+   "ref_range": "1.5-4",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Acute-phase rise with infection; not low (HLH path).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.D_DIMER",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G11",
+  "value": {
+   "value": 0.9,
+   "unit": "mg/L FEU",
+   "ref_range": "<0.50",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Non-specific rise in an acutely unwell inpatient with infection.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.F7",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G11",
+  "value": {
+   "value": 46,
+   "unit": "IU/dL",
+   "ref_range": "50-150",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Factor VII falls first in vitamin K deficiency, matching INR 1.3.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.HBSAG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Non-reactive."
+  },
+  "release_text": "Non-reactive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No hepatitis B reported.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.ANTI_HBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Non-reactive."
+  },
+  "release_text": "Non-reactive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No hepatitis B reported.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.ANTI_HCV",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Non-reactive."
+  },
+  "release_text": "Non-reactive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No hepatitis C reported (hepatitis-associated aplasia path).",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.HIV_AG_AB",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Non-reactive for HIV-1 p24 antigen and HIV-1/2 antibodies."
+  },
+  "release_text": "Non-reactive for HIV-1 p24 antigen and HIV-1/2 antibodies.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": false,
+  "rationale": "HIV causes marrow dysplasia (article discussion) and Pneumocystis pneumonia; the article attributes the picture to folate deficiency with no mention of HIV, so non-reactive.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.PML_RARA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "PML-RARA fusion transcripts not detected."
+  },
+  "release_text": "PML-RARA fusion transcripts not detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No features of acute promyelocytic leukaemia (no coagulopathy beyond INR 1.3, fibrinogen not low, no promyelocyte excess); the AML FISH panel was normal (article).",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.PARVO_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative."
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No acute parvovirus infection; reticulocytopenia is explained by ineffective erythropoiesis.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.PARVO_IGG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Positive."
+  },
+  "release_text": "Positive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Past infection, common in adults.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.EBV_VCA_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative."
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No acute EBV (HLH path).",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.EBV_VCA_IGG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Positive."
+  },
+  "release_text": "Positive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Past infection.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.EBV_EBNA_IGG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Positive."
+  },
+  "release_text": "Positive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Past infection.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CMV_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative."
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No acute CMV.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.CMV_IGG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Positive."
+  },
+  "release_text": "Positive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Past infection, common in adults.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PNH_RBC_CLONE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0.0,
+   "unit": "%",
+   "ref_range": "<0.01"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No PNH clone on red cells; the transfused unit dilutes the sample, noted in practice.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.PNH_GRAN_CLONE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not assessable: too few granulocytes in the sample (neutrophils 0.06 x10^9/L)."
+  },
+  "release_text": "Not assessable: too few granulocytes in the sample (neutrophils 0.06 x10^9/L).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "With a neutrophil count of 0.06 a FLAER granulocyte analysis cannot reach the events needed; laboratories report it as not assessable.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PNH_MONO_CLONE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not assessable: too few monocytes in the sample."
+  },
+  "release_text": "Not assessable: too few monocytes in the sample.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Monocytes 0.01 x10^9/L.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.STOOL_OVA_PARASITES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No ova, cysts or trophozoites seen. No pus cells or red cells seen."
+  },
+  "release_text": "No ova, cysts or trophozoites seen. No pus cells or red cells seen.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Eosinophilia and diarrhoea paths: no parasite; neutropenia means no pus cells.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.ANCA_IIF",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative."
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Rheumatological testing unrevealing (article).",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.MPO_ANCA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0.4,
+   "unit": "IU/mL",
+   "ref_range": "<3.5"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Negative.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.PR3_ANCA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0.3,
+   "unit": "IU/mL",
+   "ref_range": "<2.0"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Negative.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.BLOOD_CULTURE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No growth after 5 days."
+  },
+  "release_text": "No growth after 5 days.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No bacteraemia reported; the referring team treated presumptively.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.URINE_CULTURE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No significant growth."
+  },
+  "release_text": "No significant growth.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No urinary infection reported.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.STOOL_CULTURE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No Salmonella, Shigella, Campylobacter or Vibrio isolated."
+  },
+  "release_text": "No Salmonella, Shigella, Campylobacter or Vibrio isolated.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Presumed colitis without a proven pathogen.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CDIFF_TOXIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "GDH antigen and toxin A/B not detected."
+  },
+  "release_text": "GDH antigen and toxin A/B not detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No C. difficile reported; the diarrhoea is settling.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CRP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G12",
+  "value": {
+   "value": 46.0,
+   "unit": "mg/L",
+   "ref_range": "<5",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Inflammation from presumed colitis and mucositis and an evolving pulmonary infection.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.PCT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G12",
+  "value": {
+   "value": 0.28,
+   "unit": "ug/L",
+   "ref_range": "<0.05",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mildly raised; no proven bacteraemia.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.LACTATE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G12",
+  "value": {
+   "value": 1.3,
+   "unit": "mmol/L",
+   "ref_range": "0.5-2.2"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not in shock.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ESR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 48,
+   "unit": "mm/h",
+   "ref_range": "<20",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Raised by anaemia, infection and low albumin.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.HAPTOGLOBIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0.18,
+   "unit": "g/L",
+   "ref_range": "0.3-2",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Intramedullary haemolysis in megaloblastic erythropoiesis lowers haptoglobin; the acute-phase response keeps it from being undetectable.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.ANA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative at the 1:80 screening dilution."
+  },
+  "release_text": "Negative at the 1:80 screening dilution.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Rheumatological testing unrevealing (article).",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.ANTI_DSDNA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 2,
+   "unit": "IU/mL",
+   "ref_range": "<10"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Rheumatological testing unrevealing (article).",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.C3",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.08,
+   "unit": "g/L",
+   "ref_range": "0.9-1.8"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.C4",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0.21,
+   "unit": "g/L",
+   "ref_range": "0.1-0.4"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.RF",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 8,
+   "unit": "IU/mL",
+   "ref_range": "<14"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Rheumatological testing unrevealing (article).",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.DAT_IGG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Direct antiglobulin test negative with anti-IgG."
+  },
+  "release_text": "Direct antiglobulin test negative with anti-IgG.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No immune haemolysis is reported.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.DAT_C3D",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Direct antiglobulin test negative with anti-C3d."
+  },
+  "release_text": "Direct antiglobulin test negative with anti-C3d.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No immune haemolysis is reported.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.ABO_GROUP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Forward and reverse grouping concordant: group O."
+  },
+  "release_text": "Forward and reverse grouping concordant: group O.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Blood group not reported; group O is the commonest group (Q2: always record the blood group).",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.RHD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "RhD positive."
+  },
+  "release_text": "RhD positive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported; RhD positive is the commonest type.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ANTIBODY_SCREEN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No irregular red cell antibodies detected by indirect antiglobulin technique."
+  },
+  "release_text": "No irregular red cell antibodies detected by indirect antiglobulin technique.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "One recent transfusion and two pregnancies; no alloantibody is reported.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.CD4_ABS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 38,
+   "unit": "x10^6/L",
+   "ref_range": "500-1500",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Total lymphocytes 0.09 x10^9/L, so CD4 T cells are very low (about 40% of lymphocytes); fits the Pneumocystis pneumonia on day 3.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CD4_PCT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 42,
+   "unit": "%",
+   "ref_range": "30-60"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Proportion preserved; the absolute count is low because all lymphocytes are low.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_COLOUR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Pale yellow and clear."
+  },
+  "release_text": "Pale yellow and clear.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_SG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.022,
+   "unit": "ratio",
+   "ref_range": "1.005-1.03"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Slightly concentrated after diarrhoea.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.U_PH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 6.0,
+   "unit": "pH",
+   "ref_range": "5-8"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_PROTEIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative."
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.U_GLUCOSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative."
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.U_KETONES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Trace."
+  },
+  "release_text": "Trace.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Poor intake.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.U_BLOOD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative."
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No haematuria despite the platelet count (examination unremarkable).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.U_BILIRUBIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative."
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Unconjugated hyperbilirubinaemia does not reach the urine.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.U_UROBILINOGEN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Slightly increased."
+  },
+  "release_text": "Slightly increased.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Increased haem turnover from intramedullary haemolysis.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.U_LEUCOCYTES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative."
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Profound neutropenia; no urinary infection.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.U_NITRITE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative."
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No urinary infection.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.U_MICRO_RBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0,
+   "unit": "/HPF",
+   "ref_range": "0-2"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No haematuria.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.U_MICRO_WBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0,
+   "unit": "/HPF",
+   "ref_range": "0-5"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Profound neutropenia.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_CASTS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No casts seen. No crystals seen."
+  },
+  "release_text": "No casts seen. No crystals seen.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 212.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Appropriately raised for Hb 77 g/L with normal renal function.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.STFR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 5.2,
+   "unit": "mg/L",
+   "ref_range": "1.9-4.4",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Erythroid-predominant, left-shifted marrow expands the erythroid mass despite low output; mildly raised.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.NT_PROBNP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 290,
+   "unit": "ng/L",
+   "ref_range": "<125",
+   "flag": "H"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild rise with anaemia and tachycardia; no heart failure.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.BNP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 88,
+   "unit": "ng/L",
+   "ref_range": "<100"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Upper-normal with anaemia.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.BASE_EXCESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": -3.0,
+   "unit": "mmol/L",
+   "ref_range": "-2 to +2",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Consistent with bicarbonate 21 mmol/L after diarrhoea.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.SO2",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 96,
+   "unit": "%",
+   "ref_range": "95-99"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Matches the SpO2 on the vital signs.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.XR_ABDOMEN_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Supine abdominal radiograph. A surgical staple line runs along the stomach in the left upper quadrant. The bowel gas pattern is normal with no dilated loops. No abnormal calcification. The visible bones are unremarkable."
+  },
+  "release_text": "Supine abdominal radiograph. A surgical staple line runs along the stomach in the left upper quadrant. The bowel gas pattern is normal with no dilated loops. No abnormal calcification. The visible bones are unremarkable.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Sleeve gastrectomy (article) leaves a staple line visible on plain films; no obstruction or free gas with a soft abdomen.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.CT_KUB_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Non-contrast CT of the urinary tract. No urinary tract calculi, hydronephrosis or perinephric stranding. The bladder is unremarkable. Incidental note: post-surgical appearance of a narrow tubular stomach with a staple line."
+  },
+  "release_text": "Non-contrast CT of the urinary tract. No urinary tract calculi, hydronephrosis or perinephric stranding. The bladder is unremarkable. Incidental note: post-surgical appearance of a narrow tubular stomach with a staple line.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Sleeve gastrectomy is visible in the field of view.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CT_NECK_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Contrast-enhanced CT of the neck. Post-thyroidectomy appearance with no residual thyroid tissue or mass in the thyroid bed. The pharynx, larynx and salivary glands are normal. No enlarged cervical lymph nodes."
+  },
+  "release_text": "Contrast-enhanced CT of the neck. Post-thyroidectomy appearance with no residual thyroid tissue or mass in the thyroid bed. The pharynx, larynx and salivary glands are normal. No enlarged cervical lymph nodes.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Remote total thyroidectomy (article).",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.WBLDCT_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Whole-body low-dose CT from vertex to knees. No lytic or destructive bone lesion. Post-surgical changes of a sleeve gastrectomy and a previous thyroidectomy. No extramedullary soft tissue mass; spleen not enlarged."
+  },
+  "release_text": "Whole-body low-dose CT from vertex to knees. No lytic or destructive bone lesion. Post-surgical changes of a sleeve gastrectomy and a previous thyroidectomy. No extramedullary soft tissue mass; spleen not enlarged.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Both operations are visible; no infiltrative disease.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.PET_CT_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "FDG PET-CT from skull base to mid-thigh. No abnormal hypermetabolic focus in lymph nodes, organs or bone; marrow uptake is not increased. Post-surgical changes of a sleeve gastrectomy; thyroid bed empty."
+  },
+  "release_text": "FDG PET-CT from skull base to mid-thigh. No abnormal hypermetabolic focus in lymph nodes, organs or bone; marrow uptake is not increased. Post-surgical changes of a sleeve gastrectomy; thyroid bed empty.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No lymphoma or infiltrate; hypocellular marrow does not increase uptake.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.DXA_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "DXA of the lumbar spine and both hips. Lumbar spine T-score -1.8; left femoral neck T-score -1.6. Osteopenia."
+  },
+  "release_text": "DXA of the lumbar spine and both hips. Lumbar spine T-score -1.8; left femoral neck T-score -1.6. Osteopenia.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Bone loss is common after bariatric surgery with vitamin D deficiency and malnutrition in a postmenopausal woman.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.CTPA_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Good opacification of the pulmonary arteries with no filling defect. The right ventricle is not dilated. Faint patchy ground-glass opacity in both upper lobes; no consolidation or pleural fluid."
+  },
+  "release_text": "Good opacification of the pulmonary arteries with no filling defect. The right ventricle is not dilated. Faint patchy ground-glass opacity in both upper lobes; no consolidation or pleural fluid.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Consistent with the CT chest (judgement call on early Pneumocystis changes on day 0); no pulmonary embolism.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.SPEP_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Albumin reduced. Alpha-1 and alpha-2 globulins mildly increased; beta and gamma fractions within normal limits. No paraprotein band detected."
+  },
+  "release_text": "Albumin reduced. Alpha-1 and alpha-2 globulins mildly increased; beta and gamma fractions within normal limits. No paraprotein band detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low albumin from malnutrition (affected row, 28 g/L) and an acute-phase pattern; no paraprotein.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.IGRA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Indeterminate: the mitogen (positive) control response is below the cut-off."
+  },
+  "release_text": "Indeterminate: the mitogen (positive) control response is below the cut-off.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Severe lymphopenia (0.09 x10^9/L) makes an interferon-gamma release assay indeterminate.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.ECG_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Sinus tachycardia at 104/min. Normal axis. PR, QRS and QTc intervals within normal limits. No ST-segment or T-wave abnormality."
+  },
+  "release_text": "Sinus tachycardia at 104/min. Normal axis. PR, QRS and QTc intervals within normal limits. No ST-segment or T-wave abnormality.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Patient-dependent normal (Q2): rate from the vital signs; anaemia.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.QTC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 452,
+   "unit": "ms",
+   "ref_range": "350-460"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Upper-normal with low potassium and magnesium.",
+  "confidence": 0.55
+ }
+]

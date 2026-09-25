@@ -1,0 +1,295 @@
+[
+ {
+  "id": "CN01",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to see a 37-year-old man with a month of fatigue, anorexia and weight loss, and a haemolytic picture with thrombocytopenia. We reviewed the counts, haemolysis markers, coagulation and antiglobulin tests in the Chart so far. Haemolysis with thrombocytopenia and red cell fragments means a thrombotic thrombocytopenic purpura must be considered and excluded. Some features are unusual for it, however: if the MCV is high, the reticulocyte response poor, the white count low and the LDH very high out of proportion, a marrow production problem with fragmentation is more likely than a consumptive microangiopathy. Renal function and clotting argue against HUS and DIC. Happy to review again with the results.",
+  "recommendations": [
+   "Ask for the blood film to be reviewed by a haematopathologist, looking at the nucleated red cells and the neutrophils as well as the fragments",
+   "Send serum B12 and folate now, before any transfusion or vitamin treatment",
+   "Store a citrated sample for ADAMTS13 activity before any plasma is given",
+   "Take a full diet history, including how often he eats meat, fish, eggs and dairy",
+   "Do not transfuse platelets unless he bleeds; transfuse red cells only for symptoms"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a competent haematologist with the admission results would keep TTP in mind but notice the features the article lists against it (Discussion: high MCV, low reticulocytes, low white count, high LDH). Conditional wording because V1 carries no condition on what the Chart holds. Names tests, not the diagnosis.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN02",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 2,
+  "condition": {
+   "any": [
+    {
+     "finding_released": [
+      "FND.CIRCULATING_MEGALOBLASTS"
+     ]
+    },
+    {
+     "finding_released": [
+      "FND.MEGALOBLASTIC_CHANGE"
+     ]
+    }
+   ]
+  },
+  "note_text": "Asked to advise on haemolysis with thrombocytopenia and fragmentation; the Chart now shows megaloblastic nucleated red cells or a megaloblastic marrow. A severe megaloblastic process causes ineffective erythropoiesis with intramedullary haemolysis, a very high LDH, pancytopenia and red cell fragmentation, and can closely mimic a thrombotic microangiopathy. The dysplastic features are expected in this setting and are not evidence of a myelodysplastic neoplasm. Plasma exchange is not indicated on this picture while the vitamin levels are awaited. Happy to review again with the results.",
+  "recommendations": [
+   "Make sure serum B12 and folate were sent before treatment",
+   "Start parenteral B12 replacement once the samples are taken; do not give folic acid alone",
+   "Transfuse red cells slowly for symptomatic anaemia",
+   "Monitor potassium and the reticulocyte count over the first week of treatment",
+   "Take a diet history and send intrinsic factor and parietal cell antibodies"
+  ],
+  "origin": "affected",
+  "rationale": "V2: the megaloblastic film or marrow (article: the authors started cyanocobalamin on that basis before the B12 result). Names the morphology and the treatment class, never the final diagnosis.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN03",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 3,
+  "condition": {
+   "released_any": [
+    "S07.d0"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now includes a serum B12 of 56 pmol/L (172-675). This very low B12, with the megaloblastic features, accounts for the anaemia, thrombocytopenia, leucopenia, haemolysis and red cell fragmentation. The fragmentation and haemolysis should settle with replacement; there is no indication for plasma exchange or immunosuppression, and the marrow dysplasia should not be labelled as myelodysplasia. The cause still needs to be established. Happy to review again with the results.",
+  "recommendations": [
+   "Continue parenteral B12 replacement",
+   "Look for the cause: diet history, intrinsic factor and parietal cell antibodies, and past gastric or ileal surgery",
+   "Dietetic advice if intake of animal foods is low",
+   "Repeat the blood count, reticulocytes, LDH and potassium during the first week; expect a reticulocyte response by days 5 to 7",
+   "Review the counts at four to six weeks, with the blood film"
+  ],
+  "origin": "affected",
+  "rationale": "V3: after the B12 result (S07 day 0). The consultant interprets a released result but still asks for the cause rather than naming diet or pernicious anaemia.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN04",
+  "specialty": "REF.DIETETICS",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Seen for a dietary assessment. He is not vegetarian or vegan but eats meat or seafood only about once a month; most meals are rice, noodles and vegetables, with occasional eggs and little dairy. Appetite has been poor for a month. Intake of animal foods is well below recommended amounts. Happy to review again.",
+  "recommendations": [
+   "Eat meat, fish, eggs or dairy daily; practical options for a busy working day discussed",
+   "Consider fortified foods",
+   "Review intake at follow-up alongside the blood results"
+  ],
+  "origin": "affected",
+  "rationale": "A dietitian takes a diet history, so this note gives the article's diet fact (H09) to a player who refers; a referral to dietetics is itself a diet question. Eggs and dairy are the curator's detail (the article names only meat and seafood). The note describes intake, not the diagnosis.",
+  "confidence": 0.65
+ },
+ {
+  "id": "CN05",
+  "specialty": "REF.GASTROENTEROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about a gastrointestinal cause for his anaemia and weight loss. No abdominal pain, dysphagia, dyspepsia, change in bowel habit or bleeding; no previous gastrointestinal surgery; no acid-suppressing or other medicines. Abdomen soft with no masses or organomegaly. We see no gastrointestinal red flags. If a malabsorptive cause is being considered, the first steps are serological. Happy to review again with the results.",
+  "recommendations": [
+   "Intrinsic factor and parietal cell antibodies",
+   "Coeliac serology (tTG-IgA with total IgA)",
+   "Helicobacter pylori stool antigen",
+   "Upper GI endoscopy with gastric body and duodenal biopsies only if the antibodies are positive or new symptoms appear"
+  ],
+  "origin": "affected",
+  "rationale": "P7: the cause of the deficiency. Built from the article's negatives (no surgery, no medicines) and G07.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN06",
+  "specialty": "REF.NEUROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to assess for neurological involvement. No numbness, paraesthesiae, unsteadiness, visual or cognitive symptoms. On examination: cranial nerves normal; tone, power and reflexes normal with flexor plantars; joint position, vibration and pinprick sensation intact; Romberg negative; gait normal. No neurological deficit. Happy to review if symptoms develop.",
+  "recommendations": [
+   "No neuroimaging or nerve studies needed at present",
+   "Check serum B12 and folate if not already sent, and avoid nitrous oxide until they are known",
+   "Re-examine at follow-up"
+  ],
+  "origin": "affected",
+  "rationale": "P9: the article reports no neurological abnormality (E05); the consultant confirms it and advises on what would change that.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN07",
+  "specialty": "REF.NEPHROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about renal involvement in a possible thrombotic microangiopathy. Creatinine 64 umol/L with eGFR 99; normal urine output; blood pressure normal; urinalysis bland with no blood or protein. There is no evidence of renal thrombotic microangiopathy or hypertensive injury. Happy to review if renal function changes.",
+  "recommendations": [
+   "Monitor creatinine and urine output",
+   "No renal indication for plasma exchange"
+  ],
+  "origin": "affected",
+  "rationale": "P2 and P11: normal renal function (article) and urine argue against HUS and malignant hypertension.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN08",
+  "specialty": "REF.ONCOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about an underlying malignancy as a cause of a microangiopathic picture with weight loss. No lymphadenopathy, organomegaly, bone pain or focal symptoms. We would expect a cancer-related microangiopathy to show a leucoerythroblastic film and marrow infiltration. Happy to review again with the results.",
+  "recommendations": [
+   "Bone marrow examination if the cause of the cytopenias remains unclear",
+   "Imaging only if the marrow or clinical findings point to a malignancy"
+  ],
+  "origin": "affected",
+  "rationale": "P4: the authors did the marrow to exclude cancer-related TMA. An oncologist would not over-investigate without pointers.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN09",
+  "specialty": "REF.RHEUMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about a connective tissue disease. No joint pain, rash, photosensitivity, mouth ulcers or Raynaud's; examination shows no synovitis or skin changes. Nothing clinically to suggest lupus or another connective tissue disease. Happy to review with autoantibody results.",
+  "recommendations": [
+   "ANA and complement if not already sent"
+  ],
+  "origin": "affected",
+  "rationale": "P6: connective tissue disease-associated TMA is in the article's differential; the history is negative.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN10",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about an infective cause of haemolysis and cytopenias. Afebrile, no travel in the past year, no risk factors for blood-borne viruses and no unwell contacts. Infection seems unlikely. Happy to review with the results.",
+  "recommendations": [
+   "HIV, hepatitis B and C serology as a baseline",
+   "Malaria testing is not needed without travel or fever"
+  ],
+  "origin": "affected",
+  "rationale": "P10: an Indian player may test for malaria and dengue; the consultant weighs the history.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN11",
+  "specialty": "REF.CARDIOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about tachycardia and a systolic murmur. Resting sinus tachycardia and a soft ejection systolic murmur fit a high-output state from severe anaemia; no chest pain, no signs of heart failure, troponin normal. Echocardiogram, if done, would be expected to show a hyperdynamic ventricle with normal valves. No primary cardiac problem. Happy to review if new problems arise.",
+  "recommendations": [
+   "Transfuse slowly, one unit at a time, with a fluid balance chart",
+   "No cardiac investigation needed beyond the ECG"
+  ],
+  "origin": "affected",
+  "rationale": "P11 and P1: tachycardia and a flow murmur (EX.CVS.AUSCULTATION) from Hb 62 g/L.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN12",
+  "specialty": "REF.TOXICOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific toxicological concerns from our side; happy to advise if new information arises.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN13",
+  "specialty": "REF.ENDOCRINOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific endocrine concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN14",
+  "specialty": "REF.RESPIRATORY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific respiratory concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN15",
+  "specialty": "REF.PSYCHIATRY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific psychiatric concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN16",
+  "specialty": "REF.DERMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific skin concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN17",
+  "specialty": "REF.OPHTHALMOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific eye concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN18",
+  "specialty": "REF.ENT",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific ear, nose or throat concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN19",
+  "specialty": "REF.GENERAL_SURGERY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific surgical concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN20",
+  "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN21",
+  "specialty": "REF.PHYSIOTHERAPY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific mobility concerns from our side; happy to review if function changes.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ }
+]

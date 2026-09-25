@@ -1,0 +1,1876 @@
+{
+ "_status_note": "DRAFT gold case file for batch 1 (L1.3). The Case Reviewer (Dr Atul Tiwari) must verify every fact against the article before it is frozen as PMC12364935@v1. Values were transcribed from Table 1 and the text and converted to SI; printed values and units are in the notes. Items under 'gaps' are not article facts.",
+ "schema_version": "0.2",
+ "case_id": "PMC12364935",
+ "version": 1,
+ "status": "draft",
+ "case": {
+  "slug": "c-4bz2k",
+  "display_title": "Nine months of fever despite treatment",
+  "display_tags": [
+   "fever",
+   "pancytopenia",
+   "splenomegaly"
+  ],
+  "specialty": "infectious diseases",
+  "lab_profile": {
+   "sex": "F",
+   "age_years": 36,
+   "source_note": "Ranges printed in Table 1 (converted to SI); relatives of those components from WS/T 405-2012 and WS/T 404 (the Chinese adult reference intervals the article's ranges match)",
+   "components": {
+    "CMP.HB": {
+     "low": 115,
+     "high": 150,
+     "unit": "g/L"
+    },
+    "CMP.HCT": {
+     "low": 0.35,
+     "high": 0.45,
+     "unit": "L/L"
+    },
+    "CMP.RBC": {
+     "low": 3.8,
+     "high": 5.1,
+     "unit": "x10^12/L"
+    },
+    "CMP.MCV": {
+     "low": 82,
+     "high": 100,
+     "unit": "fL"
+    },
+    "CMP.MCH": {
+     "low": 27,
+     "high": 34,
+     "unit": "pg"
+    },
+    "CMP.MCHC": {
+     "low": 316,
+     "high": 354,
+     "unit": "g/L"
+    },
+    "CMP.WBC": {
+     "low": 3.5,
+     "high": 9.5,
+     "unit": "x10^9/L"
+    },
+    "CMP.NEUT": {
+     "low": 1.8,
+     "high": 6.3,
+     "unit": "x10^9/L"
+    },
+    "CMP.LYMPH": {
+     "low": 1.1,
+     "high": 3.2,
+     "unit": "x10^9/L"
+    },
+    "CMP.MONO": {
+     "low": 0.1,
+     "high": 0.6,
+     "unit": "x10^9/L"
+    },
+    "CMP.EOS": {
+     "low": 0.02,
+     "high": 0.52,
+     "unit": "x10^9/L"
+    },
+    "CMP.BASO": {
+     "low": 0,
+     "high": 0.06,
+     "unit": "x10^9/L"
+    },
+    "CMP.PLT": {
+     "low": 125,
+     "high": 350,
+     "unit": "x10^9/L"
+    },
+    "CMP.CRP": {
+     "low": 0,
+     "high": 10,
+     "unit": "mg/L",
+     "display": "<=10"
+    },
+    "CMP.ESR": {
+     "low": 0,
+     "high": 20,
+     "unit": "mm/h"
+    },
+    "CMP.FERRITIN": {
+     "low": 4.63,
+     "high": 204,
+     "unit": "ug/L"
+    },
+    "CMP.LDH": {
+     "low": 120,
+     "high": 250,
+     "unit": "U/L"
+    },
+    "CMP.AST": {
+     "low": 13,
+     "high": 35,
+     "unit": "U/L"
+    },
+    "CMP.ALT": {
+     "low": 7,
+     "high": 40,
+     "unit": "U/L"
+    },
+    "CMP.ALP": {
+     "low": 35,
+     "high": 100,
+     "unit": "U/L"
+    },
+    "CMP.GGT": {
+     "low": 7,
+     "high": 45,
+     "unit": "U/L"
+    },
+    "CMP.ALBUMIN": {
+     "low": 40,
+     "high": 55,
+     "unit": "g/L"
+    },
+    "CMP.TOTAL_PROTEIN": {
+     "low": 65,
+     "high": 85,
+     "unit": "g/L"
+    },
+    "CMP.CREATININE": {
+     "low": 45,
+     "high": 84,
+     "unit": "umol/L"
+    },
+    "CMP.D_DIMER": {
+     "low": 0,
+     "high": 0.25,
+     "unit": "mg/L FEU",
+     "display": "<=0.25"
+    },
+    "CMP.RF": {
+     "low": 0,
+     "high": 20,
+     "unit": "IU/mL"
+    },
+    "CMP.C3": {
+     "low": 0.9,
+     "high": 1.8,
+     "unit": "g/L"
+    },
+    "CMP.C4": {
+     "low": 0.1,
+     "high": 0.4,
+     "unit": "g/L"
+    },
+    "CMP.IGG": {
+     "low": 7,
+     "high": 16,
+     "unit": "g/L"
+    }
+   }
+  }
+ },
+ "source": {
+  "title": "Case Report: Visceral leishmaniasis misdiagnosed as systemic lupus erythematosus in a 36-year-old migrant worker",
+  "authors": [
+   "Li-Ping Sheng",
+   "Bo-Zhi Lin",
+   "Li-Na Han",
+   "Gui-Qiang Wang",
+   "Feng-Qin Hou"
+  ],
+  "affiliations": [
+   "Department of Infectious Diseases and Center for Liver Diseases, Peking University International Hospital, Beijing, China",
+   "Department of Infectious Diseases, Peking University First Hospital, Beijing, China"
+  ],
+  "journal": "Frontiers in Medicine",
+  "volume": "12",
+  "article_number": "1614790",
+  "published": "2025-08-06",
+  "doi": "10.3389/fmed.2025.1614790",
+  "pmid": "40842548",
+  "pmcid": "PMC12364935",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12364935/",
+  "licence": "CC BY 4.0",
+  "production_ok": true,
+  "public_release_ok": true,
+  "licence_verified": "2026-09-25 from the <license> element of the cached JATS XML (https://creativecommons.org/licenses/by/4.0/), recorded in cases/BATCH1.md; figure captions carry no separate credit line",
+  "jats_sha256": "fee449838b89d202ad3862c284d07a14ce3029460ccda52e33c98f444c8239df",
+  "attribution": "Adapted from Sheng L-P, Lin B-Z, Han L-N, Wang G-Q, Hou F-Q. Case Report: Visceral leishmaniasis misdiagnosed as systemic lupus erythematosus in a 36-year-old migrant worker. Front Med 12: 1614790 (2025). doi:10.3389/fmed.2025.1614790. Licensed CC BY 4.0. Changes: restructured into a simulation; diagnosis hidden until the debrief; simulated findings added where marked."
+ },
+ "clock": {
+  "day_0": null,
+  "day_0_label": "Admission to the infectious diseases department (the article's 'This hospital, Day 1'; February 2025, exact date not reported)",
+  "semantics": "Integer day relative to admission. Negative days are the earlier hospitals' results, placed by the curator (G09). Results after treatment starts are outcome facts (release 'never'). day = null means valid at any point in the admission."
+ },
+ "vignette": "A 36-year-old woman, a migrant worker living in Zhongshan, Guangdong Province, has had fever, fatigue, joint swelling and weight loss for nine months. Another hospital diagnosed systemic lupus erythematosus and treated her with steroids and several immunosuppressants without benefit. She is admitted with high spiking fevers ten days after stopping prednisone and cyclosporine herself.",
+ "opening_statement_lay": "I've had fevers on and off for about nine months, and I'm worn out and much thinner. The lupus treatment never really helped, and since I stopped my tablets the high fevers have come back.",
+ "facts": [
+  {
+   "id": "H01",
+   "category": "history",
+   "item": "Age and sex",
+   "release_text": "36-year-old woman.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case presentation"
+  },
+  {
+   "id": "H02",
+   "category": "history",
+   "item": "Presenting complaint",
+   "release_text": "Fever, fatigue, joint swelling and weight loss for nine months.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PC.ONSET_DURATION",
+    "HX.PC.ASSOCIATED"
+   ]
+  },
+  {
+   "id": "H03",
+   "category": "history",
+   "item": "Fever, fatigue and weight loss",
+   "release_text": "Fever for nine months, at times spiking to 40 °C, with profound fatigue and significant weight loss.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.GEN.FEVER_SWEATS_WEIGHT",
+    "HX.GEN.FATIGUE"
+   ]
+  },
+  {
+   "id": "H04",
+   "category": "history",
+   "item": "Course of the illness",
+   "release_text": "The illness has worsened over nine months. On steroids and immunosuppressants a low-grade fever persisted and the blood counts improved very little. Ten days after she stopped prednisone and cyclosporine herself, high spiking fevers returned.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PC.PROGRESSION"
+   ]
+  },
+  {
+   "id": "H05",
+   "category": "history",
+   "item": "Joint swelling",
+   "release_text": "Joint swelling during the illness; the joints involved are not recorded.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.MSK.JOINT_PAIN"
+   ]
+  },
+  {
+   "id": "H06",
+   "category": "history",
+   "item": "Past medical history",
+   "release_text": "Asthma for four years, never treated. No other past medical history.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PMH.MEDICAL",
+    "HX.PMH.CHRONIC_CONDITIONS"
+   ]
+  },
+  {
+   "id": "H07",
+   "category": "history",
+   "item": "Animal contact",
+   "release_text": "No contact with animals.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.EXPOSURE.ANIMALS"
+   ]
+  },
+  {
+   "id": "H08",
+   "category": "history",
+   "item": "Sick contacts",
+   "release_text": "No contact with anyone with a fever.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.EXPOSURE.SICK_CONTACTS"
+   ]
+  },
+  {
+   "id": "H09",
+   "category": "history",
+   "item": "Work and household",
+   "release_text": "A migrant worker who lives and works in Zhongshan, Guangdong Province, with her husband. Type of work not recorded.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.SOCIAL.LIVING",
+    "HX.EXPOSURE.OCCUPATION"
+   ]
+  },
+  {
+   "id": "H10",
+   "category": "history",
+   "item": "Husband and family",
+   "release_text": "Her husband is well. No family history of recurrent or unusual infections.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.FAMILY.GENERAL",
+    "HX.FAMILY.SIMILAR_ILLNESS",
+    "HX.EXPOSURE.OTHERS_EXPOSED"
+   ]
+  },
+  {
+   "id": "H11",
+   "category": "history",
+   "item": "Home province and travel (hidden until asked specifically)",
+   "release_text": "Her home town is in Shanxi Province, northern China. She travels regularly between her home in Shanxi and her work in Zhongshan.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Abstract, Introduction, Case presentation and Discussion",
+   "pivotal": true,
+   "release_condition": {
+    "requires_topics": [
+     "home town, native place or where she grew up",
+     "places she has lived",
+     "travel, including regular visits home"
+    ],
+    "note": "In the article the home province came to light only with 'more targeted history taking' after nine months; earlier teams missed it. The vignette gives only her place of work."
+   },
+   "released_by": [
+    "HX.SOCIAL.TRAVEL",
+    "HX.SOCIAL.RESIDENCE"
+   ]
+  },
+  {
+   "id": "H12",
+   "category": "history",
+   "item": "Previous records: local hospital",
+   "release_text": "Records from a local hospital in Zhongshan, early in the illness: haemoglobin 91 g/L, white cells 2.0 x10^9/L, platelets 73 x10^9/L; CRP 35 mg/L, ESR 59 mm/h, ferritin 256 ug/L; ANA positive at 1:320 and anti-mitochondrial M2 antibody positive; IgG 53 g/L; liver and renal function normal; serum and urine immunofixation normal. Bone marrow examination was reported as a hypercellular marrow with erythroid hyperplasia and no evidence of malignancy or parasites. CT of the abdomen showed an enlarged liver and spleen.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.RECORDS.PREVIOUS"
+   ]
+  },
+  {
+   "id": "H13",
+   "category": "history",
+   "item": "Previous records: rheumatology admission",
+   "release_text": "Discharge summary from the rheumatology department of a tertiary hospital, where she was admitted when the fever rose to 40 °C: pancytopenia; polyclonal gammopathy; ANA 1:320; anti-dsDNA and anti-PM-Scl antibodies positive; direct antiglobulin test positive; low C3 and C4. Ultrasound showed an enlarged liver and spleen, the spleen 25 cm in its long axis. Repeat bone marrow smears and biopsy were reported as showing nothing diagnostic. Diagnosis: systemic lupus erythematosus.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.RECORDS.DISCHARGE_SUMMARIES",
+    "HX.RECORDS.REFERRAL_LETTER",
+    "HX.PMH.ADMISSIONS"
+   ]
+  },
+  {
+   "id": "H14",
+   "category": "history",
+   "item": "Treatment so far",
+   "release_text": "Treated for systemic lupus erythematosus with high-dose glucocorticoids, cyclosporine, hydroxychloroquine, tofacitinib and telitacicept (a BLyS/APRIL inhibitor). The fever persisted at a low grade and the blood counts improved very little.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PC.TREATMENT_SO_FAR",
+    "HX.PMH.IMMUNOSUPPRESSION"
+   ]
+  },
+  {
+   "id": "H15",
+   "category": "history",
+   "item": "Current medicines and adherence",
+   "release_text": "Prednisone had been tapered to 20 mg daily, with cyclosporine 50 mg twice daily. She stopped both herself ten days before admission.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.MEDS.CURRENT",
+    "HX.MEDS.ADHERENCE",
+    "HX.MEDS.RECENT_CHANGES"
+   ]
+  }
+ ],
+ "series": [
+  {
+   "id": "S01",
+   "item": "Haemoglobin",
+   "code": {
+    "system": "LOINC",
+    "code": "718-7"
+   },
+   "unit": "g/L",
+   "ref_range": "115-150",
+   "points": [
+    {
+     "day": -200,
+     "value": 91,
+     "flag": "L"
+    },
+    {
+     "day": -120,
+     "value": 63,
+     "flag": "L"
+    },
+    {
+     "day": -75,
+     "value": 74,
+     "flag": "L"
+    },
+    {
+     "day": 0,
+     "value": 59,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Case presentation (local hospital) and Table 1",
+   "catalogue_ref": "CMP.HB",
+   "note": "Table 1 prints the unit as g/dl, but the values and the range (115-150) are g/L; recorded in g/L. The local hospital's value (91 g/L) is from the text."
+  },
+  {
+   "id": "S02",
+   "item": "Haematocrit",
+   "code": {
+    "system": "LOINC",
+    "code": "4544-3"
+   },
+   "unit": "L/L",
+   "ref_range": "0.35-0.45",
+   "points": [
+    {
+     "day": -120,
+     "value": 0.22,
+     "flag": "L"
+    },
+    {
+     "day": -75,
+     "value": 0.23,
+     "flag": "L"
+    },
+    {
+     "day": 0,
+     "value": 0.188,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.HCT",
+   "note": "Printed as % (22, 23, 18.8); converted to L/L."
+  },
+  {
+   "id": "S03",
+   "item": "White cell count",
+   "code": {
+    "system": "LOINC",
+    "code": "6690-2"
+   },
+   "unit": "x10^9/L",
+   "ref_range": "3.5-9.5",
+   "points": [
+    {
+     "day": -200,
+     "value": 2.0,
+     "flag": "L"
+    },
+    {
+     "day": -120,
+     "value": 0.77,
+     "flag": "L"
+    },
+    {
+     "day": -75,
+     "value": 0.9,
+     "flag": "L"
+    },
+    {
+     "day": 0,
+     "value": 0.87,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Case presentation (local hospital) and Table 1",
+   "catalogue_ref": "CMP.WBC",
+   "note": "Kept as printed (two decimals). The day-0 differential (0.47 + 0.32 + 0) sums with the monocytes and basophils to 0.87."
+  },
+  {
+   "id": "S04",
+   "item": "Neutrophils",
+   "code": null,
+   "unit": "x10^9/L",
+   "ref_range": "1.80-6.30",
+   "points": [
+    {
+     "day": -120,
+     "value": 0.34,
+     "flag": "L"
+    },
+    {
+     "day": -75,
+     "value": 0.4,
+     "flag": "L"
+    },
+    {
+     "day": 0,
+     "value": 0.47,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.NEUT",
+   "note": "Table 1 heads the differential 'Differential (%)', but the values and ranges are absolute counts (x10^9/L); recorded as absolute counts."
+  },
+  {
+   "id": "S05",
+   "item": "Lymphocytes",
+   "code": null,
+   "unit": "x10^9/L",
+   "ref_range": "1.10-3.20",
+   "points": [
+    {
+     "day": -120,
+     "value": 0.27,
+     "flag": "L"
+    },
+    {
+     "day": -75,
+     "value": 0.4,
+     "flag": "L"
+    },
+    {
+     "day": 0,
+     "value": 0.32,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.LYMPH",
+   "note": "Absolute counts; see S04."
+  },
+  {
+   "id": "S06",
+   "item": "Eosinophils",
+   "code": null,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.52",
+   "points": [
+    {
+     "day": -120,
+     "value": 0.0,
+     "flag": "L"
+    },
+    {
+     "day": -75,
+     "value": 0.01,
+     "flag": "L"
+    },
+    {
+     "day": 0,
+     "value": 0.0,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.EOS",
+   "note": "Absolute counts; see S04."
+  },
+  {
+   "id": "S07",
+   "item": "Platelets",
+   "code": {
+    "system": "LOINC",
+    "code": "777-3"
+   },
+   "unit": "x10^9/L",
+   "ref_range": "125-350",
+   "points": [
+    {
+     "day": -200,
+     "value": 73,
+     "flag": "L"
+    },
+    {
+     "day": -120,
+     "value": 63,
+     "flag": "L"
+    },
+    {
+     "day": -75,
+     "value": 71,
+     "flag": "L"
+    },
+    {
+     "day": 0,
+     "value": 29,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Case presentation (local hospital) and Table 1",
+   "catalogue_ref": "CMP.PLT"
+  },
+  {
+   "id": "S08",
+   "item": "C-reactive protein",
+   "code": {
+    "system": "LOINC",
+    "code": "1988-5"
+   },
+   "unit": "mg/L",
+   "ref_range": "<=10",
+   "points": [
+    {
+     "day": -200,
+     "value": 35,
+     "flag": "H"
+    },
+    {
+     "day": -120,
+     "value": 28,
+     "flag": "H"
+    },
+    {
+     "day": -75,
+     "value": 66,
+     "flag": "H"
+    },
+    {
+     "day": 0,
+     "value": 44.5,
+     "flag": "H"
+    }
+   ],
+   "source_locator": "Case presentation (local hospital) and Table 1",
+   "catalogue_ref": "CMP.CRP"
+  },
+  {
+   "id": "S09",
+   "item": "Erythrocyte sedimentation rate",
+   "code": {
+    "system": "LOINC",
+    "code": "4537-7"
+   },
+   "unit": "mm/h",
+   "ref_range": "0-20",
+   "points": [
+    {
+     "day": -200,
+     "value": 59,
+     "flag": "H"
+    },
+    {
+     "day": -120,
+     "value": 119,
+     "flag": "H"
+    },
+    {
+     "day": -75,
+     "value": 80,
+     "flag": "H"
+    },
+    {
+     "day": 0,
+     "value": 84,
+     "flag": "H"
+    }
+   ],
+   "source_locator": "Case presentation (local hospital) and Table 1",
+   "catalogue_ref": "CMP.ESR"
+  },
+  {
+   "id": "S10",
+   "item": "Ferritin",
+   "code": {
+    "system": "LOINC",
+    "code": "2276-4"
+   },
+   "unit": "ug/L",
+   "ref_range": "5-204",
+   "points": [
+    {
+     "day": -200,
+     "value": 256,
+     "flag": "H"
+    },
+    {
+     "day": -120,
+     "value": 354,
+     "flag": "H"
+    },
+    {
+     "day": 0,
+     "value": 1007,
+     "flag": "H"
+    }
+   ],
+   "source_locator": "Case presentation (local hospital) and Table 1",
+   "catalogue_ref": "CMP.FERRITIN",
+   "note": "Printed in ng/mL (= ug/L)."
+  },
+  {
+   "id": "S11",
+   "item": "Lactate dehydrogenase",
+   "code": {
+    "system": "LOINC",
+    "code": "2532-0"
+   },
+   "unit": "U/L",
+   "ref_range": "120-250",
+   "points": [
+    {
+     "day": 0,
+     "value": 284,
+     "flag": "H"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.LDH",
+   "note": "The other hospital's day-1 entry is printed 'Negative' for this quantitative test and is not transcribed."
+  },
+  {
+   "id": "S12",
+   "item": "AST",
+   "code": {
+    "system": "LOINC",
+    "code": "1920-8"
+   },
+   "unit": "U/L",
+   "ref_range": "13-35",
+   "points": [
+    {
+     "day": -120,
+     "value": 12,
+     "flag": "L"
+    },
+    {
+     "day": -75,
+     "value": 8,
+     "flag": "L"
+    },
+    {
+     "day": 0,
+     "value": 23
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.AST"
+  },
+  {
+   "id": "S13",
+   "item": "ALT",
+   "code": {
+    "system": "LOINC",
+    "code": "1742-6"
+   },
+   "unit": "U/L",
+   "ref_range": "7-40",
+   "points": [
+    {
+     "day": -120,
+     "value": 5,
+     "flag": "L"
+    },
+    {
+     "day": -75,
+     "value": 6,
+     "flag": "L"
+    },
+    {
+     "day": 0,
+     "value": 7
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.ALT"
+  },
+  {
+   "id": "S14",
+   "item": "Albumin",
+   "code": {
+    "system": "LOINC",
+    "code": "1751-7"
+   },
+   "unit": "g/L",
+   "ref_range": "40-55",
+   "points": [
+    {
+     "day": -120,
+     "value": 25.2,
+     "flag": "L"
+    },
+    {
+     "day": -75,
+     "value": 30,
+     "flag": "L"
+    },
+    {
+     "day": 0,
+     "value": 20,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.ALBUMIN",
+   "note": "Printed 25.2 g/L; the component has no decimals, so the other hospital's day-1 value is kept as printed."
+  },
+  {
+   "id": "S15",
+   "item": "Creatinine",
+   "code": {
+    "system": "LOINC",
+    "code": "2160-0"
+   },
+   "unit": "umol/L",
+   "ref_range": "45-84",
+   "points": [
+    {
+     "day": -120,
+     "value": 78
+    },
+    {
+     "day": 0,
+     "value": 80
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.CREATININE"
+  },
+  {
+   "id": "S16",
+   "item": "D-dimer",
+   "code": null,
+   "unit": "mg/L FEU",
+   "ref_range": "<=0.25",
+   "points": [
+    {
+     "day": 0,
+     "value": 3.94,
+     "flag": "H"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.D_DIMER",
+   "note": "Printed 3,936 ng/mL (reference <=250 ng/mL); converted to mg/L (1 mg/L = 1,000 ng/mL). The assay's unit type (FEU or DDU) is not stated. The other hospital's entry is printed 'Negative' and is not transcribed."
+  },
+  {
+   "id": "S17",
+   "item": "Antinuclear antibodies",
+   "code": null,
+   "unit": "",
+   "ref_range": "Negative",
+   "points": [
+    {
+     "day": -200,
+     "value": "Positive, titre 1:320"
+    },
+    {
+     "day": -120,
+     "value": "Positive, titre 1:320"
+    },
+    {
+     "day": 0,
+     "value": "Positive, titre 1:160"
+    }
+   ],
+   "source_locator": "Case presentation and Table 1",
+   "catalogue_ref": "CMP.ANA",
+   "note": "Reference <1:40 in the article. The pattern is not reported."
+  },
+  {
+   "id": "S18",
+   "item": "Rheumatoid factor",
+   "code": null,
+   "unit": "IU/mL",
+   "ref_range": "0-20",
+   "points": [
+    {
+     "day": -120,
+     "value": 12
+    }
+   ],
+   "source_locator": "Table 1 (rheumatology department, other hospital, days 1 and 45)",
+   "catalogue_ref": "CMP.RF"
+  },
+  {
+   "id": "S19",
+   "item": "Anti-Sm antibodies",
+   "code": null,
+   "unit": "",
+   "ref_range": "Negative",
+   "points": [
+    {
+     "day": -120,
+     "value": "Negative"
+    },
+    {
+     "day": 0,
+     "value": "Negative"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.ANTI_SM"
+  },
+  {
+   "id": "S20",
+   "item": "Anti-dsDNA antibodies",
+   "code": null,
+   "unit": "IU/mL",
+   "ref_range": "<10",
+   "points": [
+    {
+     "day": -120,
+     "value": "Positive"
+    },
+    {
+     "day": 0,
+     "value": "Negative"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.ANTI_DSDNA",
+   "note": "Reported qualitatively; no titres given."
+  },
+  {
+   "id": "S21",
+   "item": "Lupus anticoagulant",
+   "code": null,
+   "unit": "",
+   "ref_range": "Not detected",
+   "points": [
+    {
+     "day": -120,
+     "value": "Not detected"
+    }
+   ],
+   "source_locator": "Table 1 (rheumatology department, other hospital, days 1 and 45)",
+   "catalogue_ref": "CMP.LUPUS_ANTICOAGULANT",
+   "note": "Printed 'Negative'."
+  },
+  {
+   "id": "S22",
+   "item": "Direct antiglobulin test",
+   "code": null,
+   "unit": "",
+   "ref_range": "Negative",
+   "points": [
+    {
+     "day": -120,
+     "value": "Positive"
+    },
+    {
+     "day": 0,
+     "value": "Positive"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.DAT_IGG",
+   "note": "The article reports the direct Coombs test as positive without its specificity; recorded against the IgG reagent. The C3d reagent is resolved separately."
+  },
+  {
+   "id": "S23",
+   "item": "Anti-mitochondrial antibodies (M2)",
+   "code": null,
+   "unit": "",
+   "ref_range": "Negative",
+   "points": [
+    {
+     "day": -200,
+     "value": "Positive (anti-M2)"
+    },
+    {
+     "day": -120,
+     "value": "Positive (anti-M2)"
+    }
+   ],
+   "source_locator": "Case presentation and Table 1",
+   "catalogue_ref": "CMP.AMA"
+  },
+  {
+   "id": "S24",
+   "item": "Complement C3",
+   "code": null,
+   "unit": "g/L",
+   "ref_range": "0.90-1.80",
+   "points": [
+    {
+     "day": -120,
+     "value": 0.6,
+     "flag": "L"
+    },
+    {
+     "day": 0,
+     "value": 0.56,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.C3",
+   "note": "Table 1 prints the unit as mg/dl, but the values and range (0.9-1.8) are g/L."
+  },
+  {
+   "id": "S25",
+   "item": "Complement C4",
+   "code": null,
+   "unit": "g/L",
+   "ref_range": "0.10-0.40",
+   "points": [
+    {
+     "day": 0,
+     "value": 0.18
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.C4",
+   "note": "Unit as for C3 (g/L). The other hospital's day-1 C4 is printed 'Negative'; the text describes low C3 and C4 there. Not transcribed as a value."
+  },
+  {
+   "id": "S26",
+   "item": "Immunoglobulin G",
+   "code": null,
+   "unit": "g/L",
+   "ref_range": "7.0-16.0",
+   "points": [
+    {
+     "day": -200,
+     "value": 53.0,
+     "flag": "H"
+    },
+    {
+     "day": -120,
+     "value": 39.0,
+     "flag": "H"
+    },
+    {
+     "day": -75,
+     "value": 32.0,
+     "flag": "H"
+    },
+    {
+     "day": 0,
+     "value": 41.7,
+     "flag": "H"
+    }
+   ],
+   "source_locator": "Case presentation (local hospital) and Table 1",
+   "catalogue_ref": "CMP.IGG",
+   "note": "Table 1 prints the unit as mg/dl, but the values and range (7-16) are g/L."
+  },
+  {
+   "id": "S27",
+   "item": "Hepatitis B surface antigen",
+   "code": null,
+   "unit": "",
+   "ref_range": "Non-reactive",
+   "points": [
+    {
+     "day": -120,
+     "value": "Non-reactive"
+    },
+    {
+     "day": 0,
+     "value": "Non-reactive"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.HBSAG",
+   "note": "Printed 'Viral hepatitis B and C: Negative'."
+  },
+  {
+   "id": "S28",
+   "item": "Hepatitis C antibody",
+   "code": null,
+   "unit": "",
+   "ref_range": "Non-reactive",
+   "points": [
+    {
+     "day": -120,
+     "value": "Non-reactive"
+    },
+    {
+     "day": 0,
+     "value": "Non-reactive"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.ANTI_HCV",
+   "note": "Printed 'Viral hepatitis B and C: Negative'."
+  },
+  {
+   "id": "S29",
+   "item": "Cytomegalovirus",
+   "code": null,
+   "unit": "",
+   "ref_range": "Not detected",
+   "points": [
+    {
+     "day": -120,
+     "value": "Not detected"
+    },
+    {
+     "day": 0,
+     "value": "Not detected"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.CMV_DNA",
+   "note": "Printed 'Cytomegalovirus: Negative'; the assay is not named. Read as plasma CMV DNA, the curator's decision (CASE.md)."
+  },
+  {
+   "id": "S30",
+   "item": "Epstein-Barr virus",
+   "code": null,
+   "unit": "",
+   "ref_range": "Not detected",
+   "points": [
+    {
+     "day": -120,
+     "value": "Not detected"
+    },
+    {
+     "day": 0,
+     "value": "Detected"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.EBV_DNA",
+   "note": "Printed 'Epstein-Barr virus: Negative' (other hospital) and 'Positive' (this hospital); the assay is not named. Read as plasma EBV DNA, the curator's decision (CASE.md)."
+  },
+  {
+   "id": "S31",
+   "item": "HIV",
+   "code": null,
+   "unit": "",
+   "ref_range": "Non-reactive",
+   "points": [
+    {
+     "day": -120,
+     "value": "Non-reactive"
+    },
+    {
+     "day": 0,
+     "value": "Non-reactive"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.HIV_AG_AB",
+   "note": "Printed 'Negative'."
+  },
+  {
+   "id": "S32",
+   "item": "Anti-PM-Scl antibodies",
+   "code": null,
+   "unit": "",
+   "ref_range": "Negative",
+   "points": [
+    {
+     "day": -120,
+     "value": "Positive"
+    }
+   ],
+   "source_locator": "Case presentation (rheumatology department)",
+   "catalogue_ref": "CMP.ANTI_PMSCL"
+  },
+  {
+   "id": "S33",
+   "item": "Serum immunofixation",
+   "code": null,
+   "unit": "",
+   "ref_range": "Normal",
+   "points": [
+    {
+     "day": -200,
+     "value": "No monoclonal protein identified"
+    }
+   ],
+   "source_locator": "Case presentation (local hospital)",
+   "catalogue_ref": "CMP.IFE_REPORT",
+   "note": "Printed 'normal'."
+  },
+  {
+   "id": "S34",
+   "item": "Urine immunofixation",
+   "code": null,
+   "unit": "",
+   "ref_range": "Not detected",
+   "points": [
+    {
+     "day": -200,
+     "value": "Not detected"
+    }
+   ],
+   "source_locator": "Case presentation (local hospital)",
+   "catalogue_ref": "CMP.URINE_BJP",
+   "note": "Printed 'normal'."
+  },
+  {
+   "id": "S35",
+   "item": "Leishmania PCR (bone marrow aspirate)",
+   "code": null,
+   "unit": "",
+   "ref_range": "Not detected",
+   "points": [
+    {
+     "day": 0,
+     "value": "Detected (Ct 32.5; positive control Ct 24.7; negative control not detected)"
+    }
+   ],
+   "source_locator": "Text and Figure 3A",
+   "catalogue_ref": "CMP.LEISHMANIA_PCR",
+   "note": "Day of the test not stated; placed on day 0 with the diagnostic marrow.",
+   "pivotal": true
+  }
+ ],
+ "single_results": [
+  {
+   "id": "O01",
+   "item": "Blood results after 30 days of treatment (outcome)",
+   "value": "Hb 99 g/L; haematocrit 0.31 L/L; white cells 2.0 x10^9/L (neutrophils 0.9, lymphocytes 0.86, eosinophils 0.01); platelets 143 x10^9/L; CRP 2.6 mg/L; ESR 87 mm/h; ferritin 100 ug/L; AST 19 U/L; ALT 11 U/L; albumin 31.8 g/L; creatinine 74 umol/L; D-dimer 154 ng/mL; ANA 1:160; C3 0.81 g/L; C4 0.15 g/L; IgG 42.7 g/L",
+   "source_locator": "Table 1 (this hospital, day 30)",
+   "code": null,
+   "unit": "",
+   "ref_range": "",
+   "day": null,
+   "release": "never",
+   "note": "Outcome for the debrief. No catalogue link, so it never answers a request during the admission."
+  },
+  {
+   "id": "O02",
+   "item": "Blood results 21 days after discharge (outcome)",
+   "value": "Hb 117 g/L; haematocrit 0.40 L/L; white cells 4.4 x10^9/L (neutrophils 2.3, lymphocytes 1.6, eosinophils 0.03); platelets 170 x10^9/L; ESR 87 mm/h; IgG 45 g/L",
+   "source_locator": "Table 1 (21 days after discharge)",
+   "code": null,
+   "unit": "",
+   "ref_range": "",
+   "day": null,
+   "release": "never",
+   "note": "Outcome for the debrief. No catalogue link, so it never answers a request during the admission."
+  },
+  {
+   "id": "O03",
+   "item": "Response to treatment (outcome)",
+   "value": "Fever settled within 48 hours of starting liposomal amphotericin B (1.3 mg/kg daily, extended to 30 days because of relapse risk); counts improved gradually; discharged well in March 2025",
+   "source_locator": "Case presentation",
+   "code": null,
+   "unit": "",
+   "ref_range": "",
+   "day": null,
+   "release": "never",
+   "note": "Outcome for the debrief. No catalogue link, so it never answers a request during the admission."
+  },
+  {
+   "id": "O04",
+   "item": "Bone marrow three weeks after treatment (outcome)",
+   "value": "No parasites seen on marrow cytology; Leishmania PCR negative",
+   "source_locator": "Case presentation, Figures 2C and 3B",
+   "code": null,
+   "unit": "",
+   "ref_range": "",
+   "day": null,
+   "release": "never",
+   "note": "Outcome for the debrief. No catalogue link, so it never answers a request during the admission."
+  },
+  {
+   "id": "O05",
+   "item": "CT four months after treatment (outcome)",
+   "value": "Spleen 16.64 cm in coronal length (from 25.85 cm); 10.10 x 6.19 cm at the hilum (from 14.98 x 9.30 cm)",
+   "source_locator": "Figure 1B and D",
+   "code": null,
+   "unit": "",
+   "ref_range": "",
+   "day": null,
+   "release": "never",
+   "note": "Outcome for the debrief. No catalogue link, so it never answers a request during the admission."
+  }
+ ],
+ "raw_material": [
+  {
+   "id": "R01",
+   "test": "Bone marrow aspirate (Giemsa)",
+   "release": "service.pathology",
+   "day": 0,
+   "findings": "Giemsa-stained aspirate smears show intracellular Leishmania amastigotes (Leishman-Donovan bodies) within marrow macrophages, seen at 400x and 1000x. Specimen preparation and staining followed the national standard for smear microscopy (WS/T 10018-2024); the finding was confirmed by the national reference laboratory. Background marrow cellularity and other lineages are not described.",
+   "media": [
+    "M03",
+    "M04"
+   ],
+   "source_locator": "Case presentation, Figure 2A and B",
+   "note": "Day of the aspirate not stated; placed on day 0. Two earlier marrows at other hospitals were reported without parasites (H12, H13).",
+   "test_item_id": "PROC.BM.ASPIRATE"
+  },
+  {
+   "id": "R02",
+   "test": "Leishmania real-time PCR (bone marrow aspirate)",
+   "release": "service.pathology",
+   "day": 0,
+   "findings": "Amplification in the patient's marrow aspirate at Ct 32.520; positive control Ct 24.707; negative control no amplification.",
+   "media": [
+    "M06"
+   ],
+   "source_locator": "Figure 3A",
+   "test_item_id": "LAB.MOL.LEISHMANIA_PCR"
+  },
+  {
+   "id": "R03",
+   "test": "CT abdomen (non-contrast)",
+   "release": "service.radiology",
+   "day": 0,
+   "findings": "Marked hepatosplenomegaly. Spleen 25.85 cm in coronal length; 14.98 x 9.30 cm in axial section at the splenic hilum.",
+   "media": [
+    "M01"
+   ],
+   "source_locator": "Case presentation, Figure 1A and C",
+   "note": "Measurements read from the figure's labels (the alt text).",
+   "test_item_id": "IMG.CT.ABDOMEN_PELVIS"
+  },
+  {
+   "id": "R04",
+   "test": "CT abdomen four months after treatment (outcome)",
+   "release": "never",
+   "day": null,
+   "findings": "Spleen 16.64 cm in coronal length; 10.10 x 6.19 cm at the hilum.",
+   "media": [
+    "M02"
+   ],
+   "source_locator": "Figure 1B and D",
+   "test_item_id": "IMG.CT.ABDOMEN_PELVIS"
+  },
+  {
+   "id": "R05",
+   "test": "Bone marrow aspirate three weeks after treatment (outcome)",
+   "release": "never",
+   "day": null,
+   "findings": "No parasites seen at 1000x.",
+   "media": [
+    "M05"
+   ],
+   "source_locator": "Figure 2C",
+   "test_item_id": "PROC.BM.ASPIRATE"
+  },
+  {
+   "id": "R06",
+   "test": "Leishmania real-time PCR after treatment (outcome)",
+   "release": "never",
+   "day": null,
+   "findings": "No amplification in the repeat marrow aspirate; positive control Ct 24.762.",
+   "media": [
+    "M07"
+   ],
+   "source_locator": "Figure 3B",
+   "test_item_id": "LAB.MOL.LEISHMANIA_PCR"
+  }
+ ],
+ "media": [
+  {
+   "id": "M01",
+   "figure": "Figure 1A and C",
+   "specimen": "CT abdomen (non-contrast)",
+   "stain": null,
+   "redacted_caption": "Non-contrast CT abdomen, axial and coronal images at the splenic hilum, with measurements.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC12364935/F1.jpg",
+   "raw_fact_id": "R03"
+  },
+  {
+   "id": "M02",
+   "figure": "Figure 1B and D",
+   "specimen": "CT abdomen (non-contrast)",
+   "stain": null,
+   "redacted_caption": "Non-contrast CT abdomen at follow-up, axial and coronal images, with measurements.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC12364935/F1.jpg",
+   "raw_fact_id": "R04"
+  },
+  {
+   "id": "M03",
+   "figure": "Figure 2A",
+   "specimen": "Bone marrow aspirate",
+   "stain": "Giemsa",
+   "redacted_caption": "Bone marrow aspirate, Giemsa stain, 400x; arrows mark cells of interest.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC12364935/F2.jpg",
+   "raw_fact_id": "R01"
+  },
+  {
+   "id": "M04",
+   "figure": "Figure 2B",
+   "specimen": "Bone marrow aspirate",
+   "stain": "Giemsa",
+   "redacted_caption": "Bone marrow aspirate, Giemsa stain, 1000x; arrows mark cells of interest.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC12364935/F2.jpg",
+   "raw_fact_id": "R01"
+  },
+  {
+   "id": "M05",
+   "figure": "Figure 2C",
+   "specimen": "Bone marrow aspirate",
+   "stain": "Giemsa",
+   "redacted_caption": "Bone marrow aspirate at follow-up, Giemsa stain, 1000x.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC12364935/F2.jpg",
+   "raw_fact_id": "R05"
+  },
+  {
+   "id": "M06",
+   "figure": "Figure 3A",
+   "specimen": "Bone marrow aspirate (PCR)",
+   "stain": null,
+   "redacted_caption": "Real-time PCR amplification plot of a bone marrow aspirate, with positive and negative controls.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC12364935/F3.jpg",
+   "raw_fact_id": "R02"
+  },
+  {
+   "id": "M07",
+   "figure": "Figure 3B",
+   "specimen": "Bone marrow aspirate (PCR)",
+   "stain": null,
+   "redacted_caption": "Real-time PCR amplification plot of a follow-up marrow aspirate, with positive and negative controls.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC12364935/F3.jpg",
+   "raw_fact_id": "R06"
+  }
+ ],
+ "ground_truth": {
+  "final_diagnosis": {
+   "text": "Visceral leishmaniasis (kala-azar) acquired in her endemic home province (Shanxi), misdiagnosed as systemic lupus erythematosus because of autoantibodies, a positive direct antiglobulin test, hypocomplementaemia and polyclonal hypergammaglobulinaemia",
+   "icd10": [
+    "B55.0"
+   ],
+   "accepted_synonyms": [
+    "visceral leishmaniasis",
+    "kala-azar",
+    "kala azar",
+    "leishmaniasis",
+    "black fever",
+    "Dumdum fever",
+    "Leishmania donovani infection",
+    "visceral leishmania infection"
+   ]
+  },
+  "final_dx": {
+   "id": "DX.KALA_AZAR",
+   "text": "Visceral leishmaniasis (kala-azar) acquired in her endemic home province (Shanxi), misdiagnosed as systemic lupus erythematosus because of autoantibodies, a positive direct antiglobulin test, hypocomplementaemia and polyclonal hypergammaglobulinaemia",
+   "icd10": [
+    "B55.0"
+   ],
+   "accepted_synonyms": [
+    "visceral leishmaniasis",
+    "kala-azar",
+    "kala azar",
+    "leishmaniasis",
+    "black fever",
+    "Dumdum fever",
+    "Leishmania donovani infection",
+    "visceral leishmania infection"
+   ]
+  },
+  "secondary_findings": [
+   "ANA 1:160-1:320, anti-dsDNA (earlier), anti-PM-Scl, anti-M2 and a positive DAT with low C3: autoantibodies from polyclonal B-cell activation in the infection, not lupus",
+   "Pancytopenia from splenic pooling and marrow parasitisation, with an inadequate reticulocyte response",
+   "Low-level EBV DNA under immunosuppression: an incidental reactivation",
+   "Probable adrenal suppression after abrupt withdrawal of long-term prednisone"
+  ],
+  "accepted_differential": [
+   "Systemic lupus erythematosus (the referral diagnosis)",
+   "Secondary haemophagocytic lymphohistiocytosis",
+   "Lymphoma, including splenic lymphoma",
+   "Brucellosis",
+   "Disseminated tuberculosis",
+   "Malaria or enteric fever",
+   "Chronic liver disease with portal hypertension and hypersplenism",
+   "Myelofibrosis or chronic myeloid leukaemia (massive spleen)",
+   "Drug-induced marrow suppression"
+  ],
+  "red_herrings": [
+   "ANA 1:320 and 1:160",
+   "anti-dsDNA positive at the other hospital",
+   "anti-PM-Scl",
+   "anti-M2 antibody",
+   "positive DAT",
+   "low C3 and C4",
+   "two earlier marrows without parasites",
+   "EBV DNA detected",
+   "living and working in a non-endemic province"
+  ],
+  "key_discriminators": [
+   "spleen 25.9 cm",
+   "no response to intensive immunosuppression",
+   "IgG 41.7 g/L, polyclonal",
+   "home town in Shanxi with regular travel there",
+   "amastigotes in the marrow aspirate",
+   "Leishmania PCR positive",
+   "anti-dsDNA and anti-Sm negative at this admission"
+  ],
+  "treatment_given": "Liposomal amphotericin B 1.3 mg/kg daily, extended to 30 days because of the long illness and prior immunosuppression; immunosuppression stopped; confirmation by the Chinese Center for Disease Control and Prevention.",
+  "outcome": "Fever settled within 48 hours; counts normal 21 days after discharge; marrow and PCR negative three weeks after treatment; spleen 16.6 cm at four months. Discharged well in March 2025.",
+  "teaching_points": [
+   "Ask every migrant worker where they come from and how often they go home: the endemic exposure may be far from where they live and work.",
+   "A spleen over 20 cm is very unusual in lupus; look for infection, a haematological cancer or portal hypertension.",
+   "ANA, anti-dsDNA, low complement and a positive DAT occur in visceral leishmaniasis; autoantibodies never outweigh clinicopathological correlation.",
+   "Failure of intensive immunosuppression argues against the autoimmune diagnosis, and immunosuppression worsens an unrecognised infection.",
+   "A negative marrow does not exclude the diagnosis: repeat it and ask for a specific search, or use rK39 and PCR. Splenic aspiration is the most sensitive but is contraindicated with very low platelets.",
+   "Liposomal amphotericin B is first-line; test for HIV and notify public health."
+  ],
+  "must_do": [
+   {
+    "text": "Take a full residence and travel history, including her home province and visits home",
+    "if": {
+     "asked_any": [
+      "HX.SOCIAL.TRAVEL",
+      "HX.SOCIAL.RESIDENCE"
+     ]
+    }
+   },
+   {
+    "text": "Look for the parasite directly: a repeat bone marrow aspirate examined for amastigotes, or Leishmania PCR, despite the two earlier negative marrows",
+    "if": {
+     "any": [
+      {
+       "finding_released": {
+        "findings": [
+         "FND.LD_BODIES"
+        ]
+       }
+      },
+      {
+       "ordered_any": [
+        "LAB.MOL.LEISHMANIA_PCR"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "text": "Test for HIV before treatment",
+    "if": {
+     "ordered_any": [
+      "LAB.SERO.HIV"
+     ]
+    }
+   },
+   {
+    "text": "Treat with liposomal amphotericin B",
+    "if": {
+     "plan_has_any": [
+      "RX.ANTIPARASITIC.LIPOSOMAL_AMPHOTERICIN",
+      "RX.ANTIFUNGAL.AMPHOTERICIN"
+     ]
+    }
+   },
+   {
+    "text": "Keep all immunosuppression stopped",
+    "if": {
+     "plan_has": [
+      "RX.IMMUNO.STOP"
+     ]
+    }
+   },
+   {
+    "text": "Notify the public health authority",
+    "if": {
+     "plan_has": [
+      "ACT.NOTIFY_PUBLIC_HEALTH"
+     ]
+    }
+   },
+   {
+    "text": "Arrange follow-up for response and relapse (counts, spleen size, test of cure)",
+    "if": {
+     "plan_has_any": [
+      "ACT.DISCHARGE_FOLLOW_UP",
+      "ACT.REPEAT_BLOODS"
+     ]
+    }
+   }
+  ],
+  "must_not_do": [
+   {
+    "text": "Restart or escalate immunosuppression for presumed lupus",
+    "if": {
+     "plan_has_any": [
+      "RX.STEROID.HIGH_DOSE",
+      "RX.IMMUNO.ESCALATE",
+      "RX.IMMUNO.CYCLOPHOSPHAMIDE",
+      "RX.IMMUNO.MYCOPHENOLATE",
+      "RX.IMMUNO.RITUXIMAB",
+      "RX.IMMUNO.AZATHIOPRINE",
+      "RX.IMMUNO.METHOTREXATE",
+      "RX.IMMUNO.IVIG"
+     ]
+    }
+   },
+   {
+    "text": "Commit to lupus without a parasitological work-up despite a massive spleen and failure of intensive immunosuppression",
+    "if": {
+     "all": [
+      {
+       "dx_in": [
+        "DX.SLE",
+        "DX.MCTD",
+        "DX.DRUG_INDUCED_LUPUS"
+       ]
+      },
+      {
+       "not": {
+        "ordered_any": [
+         "PROC.BM.ASPIRATE",
+         "PROC.SPLEEN.ASPIRATE",
+         "LAB.SERO.RK39",
+         "LAB.MOL.LEISHMANIA_PCR"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "text": "Splenectomy for the cytopenias or the spleen",
+    "if": {
+     "plan_has": [
+      "RX.SURGERY.SPLENECTOMY"
+     ]
+    }
+   },
+   {
+    "text": "Splenic aspiration while platelets are 29 x10^9/L and the PT is prolonged",
+    "if": {
+     "ordered_any": [
+      "PROC.SPLEEN.ASPIRATE"
+     ]
+    }
+   }
+  ],
+  "diagnosis_rubric_anchors": {
+   "5": "Visceral leishmaniasis, with the endemic home province identified as the source",
+   "4": "Visceral leishmaniasis, exposure not identified",
+   "3": "Secondary HLH or hypersplenism from an unnamed chronic infection",
+   "2": "Lupus, another specific infection (brucellosis, tuberculosis, malaria, enteric fever), lymphoma, a myeloproliferative neoplasm or chronic liver disease as the final diagnosis",
+   "1": "Unrelated diagnosis, or one that would lead to harm"
+  },
+  "rubric": {
+   "rubric": [
+    {
+     "score": 5,
+     "text": "Visceral leishmaniasis, with the endemic home province identified as the source",
+     "if": {
+      "all": [
+       {
+        "dx_in": [
+         "DX.KALA_AZAR"
+        ]
+       },
+       {
+        "evidence_has": [
+         "H11"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "score": 4,
+     "text": "Visceral leishmaniasis, exposure not identified",
+     "if": {
+      "dx_in": [
+       "DX.KALA_AZAR"
+      ]
+     }
+    },
+    {
+     "score": 3,
+     "text": "Secondary HLH or hypersplenism from an unnamed chronic infection",
+     "if": {
+      "dx_in": [
+       "DX.HLH",
+       "DX.HYPERSPLENISM"
+      ]
+     }
+    },
+    {
+     "score": 2,
+     "text": "Lupus, another specific infection, lymphoma, a myeloproliferative neoplasm or chronic liver disease as the final diagnosis",
+     "if": {
+      "dx_in": [
+       "DX.SLE",
+       "DX.MCTD",
+       "DX.DRUG_INDUCED_LUPUS",
+       "DX.WARM_AIHA",
+       "DX.BRUCELLOSIS",
+       "DX.MILIARY_TB",
+       "DX.TYPHOID_FEVER",
+       "DX.VIVAX_MALARIA",
+       "DX.FALCIPARUM_MALARIA",
+       "DX.NHL",
+       "DX.HODGKIN_LYMPHOMA",
+       "DX.MARGINAL_ZONE_LYMPHOMA",
+       "DX.HAIRY_CELL_LEUKAEMIA",
+       "DX.PRIMARY_MYELOFIBROSIS",
+       "DX.CML",
+       "DX.CIRRHOSIS",
+       "DX.PORTAL_HYPERTENSION",
+       "DX.PBC",
+       "DX.AUTOIMMUNE_HEPATITIS"
+      ]
+     }
+    },
+    {
+     "score": 1,
+     "text": "Unrelated diagnosis, or one that would lead to harm",
+     "if": {
+      "not": {
+       "dx_in": [
+        "DX.KALA_AZAR",
+        "DX.HLH",
+        "DX.HYPERSPLENISM",
+        "DX.SLE",
+        "DX.MCTD",
+        "DX.DRUG_INDUCED_LUPUS",
+        "DX.WARM_AIHA",
+        "DX.BRUCELLOSIS",
+        "DX.MILIARY_TB",
+        "DX.TYPHOID_FEVER",
+        "DX.VIVAX_MALARIA",
+        "DX.FALCIPARUM_MALARIA",
+        "DX.NHL",
+        "DX.HODGKIN_LYMPHOMA",
+        "DX.MARGINAL_ZONE_LYMPHOMA",
+        "DX.HAIRY_CELL_LEUKAEMIA",
+        "DX.PRIMARY_MYELOFIBROSIS",
+        "DX.CML",
+        "DX.CIRRHOSIS",
+        "DX.PORTAL_HYPERTENSION",
+        "DX.PBC",
+        "DX.AUTOIMMUNE_HEPATITIS"
+       ]
+      }
+     }
+    }
+   ],
+   "default_score": 1
+  }
+ },
+ "gaps": [
+  {
+   "id": "G01",
+   "item": "Vital signs on admission",
+   "guidance": "High spiking fever (the reason for admission); tachycardia from fever and Hb 59 g/L; blood pressure low-normal; SpO2 normal.",
+   "review_required": true
+  },
+  {
+   "id": "G02",
+   "item": "Abdominal examination",
+   "guidance": "Massive, firm, non-tender spleen consistent with 25.9 cm on CT; liver palpable; no ascites reported.",
+   "review_required": true
+  },
+  {
+   "id": "G03",
+   "item": "General examination and weight",
+   "guidance": "Pallor; thin after significant weight loss; mild ankle oedema possible with albumin 20 g/L; no rash or synovitis reported; no significant lymphadenopathy reported.",
+   "review_required": true
+  },
+  {
+   "id": "G04",
+   "item": "rK39 rapid test (not done in the article)",
+   "guidance": "Likely positive in active disease; sensitivity may be lower after months of immunosuppression.",
+   "review_required": true
+  },
+  {
+   "id": "G05",
+   "item": "Complete blood count indices and reticulocytes on day 0",
+   "guidance": "Normocytic anaemia; reticulocyte response inadequate for Hb 59 g/L; monocytes and basophils must make the differential sum to 0.87 x10^9/L.",
+   "review_required": false
+  },
+  {
+   "id": "G06",
+   "item": "Markers of haemolysis",
+   "guidance": "DAT positive from polyclonal hypergammaglobulinaemia; at most mild haemolysis (LDH 284 U/L).",
+   "review_required": true
+  },
+  {
+   "id": "G07",
+   "item": "HLH markers (triglycerides, fibrinogen, soluble CD25)",
+   "guidance": "Raised triglycerides and soluble CD25 are common in active disease; the article does not report them or HLH. Keep below the HLH-2004 thresholds.",
+   "review_required": true
+  },
+  {
+   "id": "G08",
+   "item": "Bone marrow trephine and other marrow studies at this admission",
+   "guidance": "Not reported. Reactive, plasma-cell rich marrow; no lymphoma or clonal process.",
+   "review_required": true
+  },
+  {
+   "id": "G09",
+   "item": "Timing of the earlier admissions",
+   "guidance": "The article gives no dates; the local hospital, rheumatology day 1 and day 45 are placed on days -200, -120 and -75.",
+   "review_required": true
+  },
+  {
+   "id": "G10",
+   "item": "Blood group",
+   "guidance": "Not reported; set from population frequencies.",
+   "review_required": false
+  }
+ ]
+}

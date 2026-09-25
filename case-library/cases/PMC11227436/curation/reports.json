@@ -1,0 +1,246 @@
+[
+ {
+  "id": "RP01",
+  "test_item_id": "LAB.HAEM.FILM",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.MACROCYTOSIS",
+   "FND.SCHISTOCYTES",
+   "FND.HYPERSEGMENTED_NEUTROPHILS"
+  ],
+  "report_text": "Red cells show marked anisopoikilocytosis with many oval macrocytes. Red cell fragments (schistocytes) are present, about 2% of red cells. Occasional nucleated red cells. Polychromasia is scanty. Neutrophils are reduced, and several are hypersegmented (six or more lobes). Platelets are reduced, with no clumps.",
+  "impression": "Macrocytic red cells with fragments, hypersegmented neutrophils and thrombocytopenia.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Schistocytes about 2% are from the article (R01, L11). The macrocytes, anisopoikilocytosis, scanty polychromasia and hypersegmented neutrophils follow G07 and the count (MCV 113 fL, retic 92 x10^9/L); hypersegmentation is expected and not pathognomonic. One final report: the article describes no revision.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP02",
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.MACROCYTOSIS",
+   "FND.SCHISTOCYTES",
+   "FND.HYPERSEGMENTED_NEUTROPHILS"
+  ],
+  "report_text": "Film reviewed by a haematopathologist. Red cells show marked anisopoikilocytosis with many oval macrocytes. Red cell fragments (schistocytes) are present, about 2% of red cells. Occasional nucleated red cells. Polychromasia is scanty. Neutrophils are reduced, and several are hypersegmented (six or more lobes). Platelets are reduced, with no clumps. No spherocytes, blasts or parasites seen. Comment: the reticulocyte response is inappropriately low for the degree of anaemia; suggest serum B12 and folate before transfusion, and ADAMTS13 if a thrombotic microangiopathy is still being considered.",
+  "impression": "Macrocytic anaemia with fragments and hypersegmented neutrophils; poor reticulocyte response.",
+  "suggested_reflex": [
+   "LAB.CHEM.B12",
+   "LAB.CHEM.FOLATE",
+   "LAB.HAEM.ADAMTS13"
+  ],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "As RP01, with a haematopathologist's comment. A competent reviewer seeing oval macrocytes, hypersegmented neutrophils and scanty polychromasia asks for B12 and folate; the comment names tests, not a diagnosis. No spherocytes weakens the warm AIHA trap.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP03",
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.MEGALOBLASTIC_CHANGE",
+   "FND.ERYTHROID_HYPERPLASIA"
+  ],
+  "report_text": "Particulate, markedly hypercellular aspirate. Erythroid hyperplasia with megaloblastic erythropoiesis: large erythroblasts with fine, open chromatin, prominent nucleoli and nuclear-cytoplasmic asynchrony. Giant metamyelocytes and band forms are present. Megakaryocytes are present in normal numbers. Blasts 1%. No abnormal infiltrate. See the iron stain report.",
+  "impression": "Hypercellular marrow with erythroid hyperplasia and megaloblastic change.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R02"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Hypercellularity, increased erythroblasts and megaloblasts with fine chromatin and prominent nucleoli are from the article (R02, Figure 1). Giant metamyelocytes, megakaryocyte numbers and the blast count are not reported (G24) and follow the usual picture. Curator's decision (Q5): both aspirate and trephine are resolved from R02.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP04",
+  "test_item_id": "PROC.BM.TREPHINE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.MEGALOBLASTIC_CHANGE",
+   "FND.ERYTHROID_HYPERPLASIA"
+  ],
+  "report_text": "Trephine core with marked hypercellularity (about 90%). Expanded erythroid precursors, including megaloblasts with fine chromatin and prominent nucleoli. Granulopoiesis is present with left-shifted maturation; megakaryocytes are adequate. No fibrosis on reticulin stain. No infiltrate or granulomas.",
+  "impression": "Markedly hypercellular marrow with erythroid expansion and megaloblastic change.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R02"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "R02 and Figure 1 (H&E at x100 and x400, a section). Cellularity figure, reticulin and absence of infiltrate follow G24.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP05",
+  "test_item_id": "LAB.BM.IRON_STAIN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Perls stain shows increased storage iron (grade 3) in marrow fragments. No ring sideroblasts are seen.",
+  "impression": "Increased storage iron; no ring sideroblasts.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R02"
+  ],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G24: ineffective erythropoiesis leaves iron unused (ferritin 380 ug/L); no sideroblastic process.",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP06",
+  "test_item_id": "LAB.BM.FLOW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Erythroid precursors are increased. Myeloid and monocytic maturation patterns are normal. CD34-positive blasts under 1% with a normal phenotype. B cells polyclonal; no abnormal population.",
+  "impression": "No evidence of a clonal haematological neoplasm.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G24: megaloblastic marrow without a clonal process.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP07",
+  "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Twenty metaphases analysed at a 400-band level. 46,XX. No clonal abnormality detected.",
+  "impression": "Normal female karyotype.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G24: no myelodysplasia. Megaloblastic change can produce chromosome breaks, but the likeliest result is normal.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP08",
+  "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Two hundred interphase nuclei scored per probe. Normal signal patterns for 5q31, 7q31, chromosome 8 centromere and 20q12; no deletion or gain detected.",
+  "impression": "Normal MDS FISH panel.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G24: no myelodysplasia.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP09",
+  "test_item_id": "PROC.ENDO.OGD",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.GASTRIC_FUNDIC_ATROPHY"
+  ],
+  "report_text": "Endoscopy to the second part of the duodenum. Normal oesophagus. The mucosa of the gastric body and fundus is pale and thin, with prominent submucosal vessels and loss of rugal folds; the antrum looks normal. No ulcer or mass. Normal duodenum. Biopsies taken from the body, fundus and antrum for histology.",
+  "impression": "Pale, thin mucosa of the gastric body and fundus; antrum and duodenum normal. Biopsies taken.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G15: the article does not describe the endoscopic appearance. Body-predominant thinning with visible vessels and a normal antrum is the usual appearance with the histology in R03. Judgement call: the mucosa can look normal at endoscopy. Histology comes from PROC.BIOPSY.GASTRIC.",
+  "confidence": 0.55
+ },
+ {
+  "id": "RP10",
+  "test_item_id": "PROC.BIOPSY.GASTRIC",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.GASTRIC_FUNDIC_ATROPHY",
+   "FND.INTESTINAL_METAPLASIA"
+  ],
+  "report_text": "Biopsies from the gastric body and fundus: atrophy of the oxyntic (fundic) mucosa with loss of parietal and chief cells and a lymphoplasmacytic infiltrate in the lamina propria. Intestinal metaplasia with goblet cells. No dysplasia. Antral biopsy: mild chronic inflammation without atrophy. No Helicobacter-like organisms seen.",
+  "impression": "Atrophy of the body and fundic mucosa with intestinal metaplasia; antrum spared; no dysplasia.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R03"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Fundic atrophy and intestinal metaplasia are from the article (R03, Figure 2). Loss of parietal and chief cells, the infiltrate, antral sparing and no Helicobacter follow the usual pattern (G15); no dysplasia is the likeliest result.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP11",
+  "test_item_id": "IMG.US.ABDOMEN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "The liver is normal in size and echotexture with no focal lesion. The gallbladder is thin-walled without calculi, and the common bile duct is not dilated. The spleen measures 10.5 cm. Both kidneys are normal in size and echotexture without hydronephrosis. No free fluid or mass.",
+  "impression": "Normal abdominal ultrasound; no splenomegaly.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G17: no organomegaly (article: no tumour syndrome); normal liver, so the low prothrombin activity is not hepatic.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP12",
+  "test_item_id": "PROC.ENDO.COLONOSCOPY",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Complete colonoscopy to the caecum with intubation of the terminal ileum; fair bowel preparation. Normal colonic and ileal mucosa. No polyps, ulceration or bleeding source. Random colonic biopsies taken: normal colonic mucosa, no microscopic colitis.",
+  "impression": "Normal colonoscopy and random biopsies.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G16: the diarrhoea is not colonic; no inflammatory bowel disease or microscopic colitis.",
+  "confidence": 0.7
+ }
+]

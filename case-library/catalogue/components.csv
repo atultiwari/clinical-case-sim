@@ -370,3 +370,66 @@ CMP.LP_OPENING_PRESSURE,CSF opening pressure,,cmH2O,,,0,
 CMP.FEV1_PCT_PRED,FEV1 (% predicted),,%,,,0,
 CMP.FVC_PCT_PRED,FVC (% predicted),,%,,,0,
 CMP.FEV1_FVC_RATIO,FEV1/FVC ratio,,%,,,0,
+CMP.ADAMTS13_ANTIBODY,Anti-ADAMTS13 antibody (IgG),,U/mL,,,0,
+CMP.MALARIA_PARASITAEMIA,Malaria parasitaemia (parasitised red cells),,%,,,2,
+CMP.GIARDIA_AG,Giardia antigen (stool),,,,,,Giardia lamblia antigen not detected.
+CMP.GLOBULIN,Globulin (calculated),,g/L,g/dL,0.1,0,
+CMP.AG_RATIO,Albumin/globulin ratio,,ratio,,,1,
+CMP.T3_TOTAL,Total triiodothyronine (T3),,nmol/L,ng/mL,0.651,2,
+CMP.T4_TOTAL,Total thyroxine (T4),,nmol/L,ug/dL,0.0777,0,
+CMP.PT_ACTIVITY,Prothrombin activity (Quick),,%,,,0,
+CMP.BILI_UNCONJ,"Bilirubin, unconjugated (indirect)",,umol/L,mg/dL,0.0585,0,
+CMP.SCHISTOCYTE_PCT,Schistocytes (fragmented red cells),,%,,,1,Schistocytes under 1% of red cells.
+CMP.ADAMTS13_ACT,ADAMTS13 activity,,%,,,0,ADAMTS13 activity within the reference interval.
+CMP.GASTRIN,"Gastrin, fasting",,ng/L,pg/mL,1,0,
+CMP.PEPSINOGEN_I,Pepsinogen I,,ug/L,ng/mL,1,0,
+CMP.PEPSINOGEN_RATIO,Pepsinogen I/II ratio,,ratio,,,1,
+CMP.HOMOCYSTEINE,Total homocysteine,,umol/L,,,1,Total homocysteine within the reference interval.
+CMP.MMA,Methylmalonic acid,,umol/L,,,2,Methylmalonic acid within the reference interval.
+CMP.GASTRIC_BIOPSY_REPORT,Gastric biopsy report,,,,,,"Biopsies from the gastric body and antrum show normal oxyntic and antral mucosa. No atrophy, intestinal metaplasia, dysplasia or active inflammation. No Helicobacter-like organisms seen."
+CMP.STEC_PCR,"Shiga toxin genes (stx1/stx2), stool PCR",,,,,,Shiga toxin genes stx1 and stx2 not detected.
+CMP.SPUTUM_MYCO_CULTURE,Sputum mycobacterial culture,,,,,,No mycobacteria isolated to date (liquid culture continues to 6 weeks).
+CMP.BAL_AFB_SMEAR,BAL acid-fast bacilli smear,,,,,,No acid-fast bacilli seen.
+CMP.BAL_MTB_PCR,BAL MTB complex PCR,,,,,,MTB complex DNA not detected.
+CMP.BAL_MYCO_CULTURE,BAL mycobacterial culture,,,,,,No mycobacteria isolated to date (liquid culture continues to 6 weeks).
+CMP.BM_AFB_SMEAR,Bone marrow acid-fast bacilli stain,,,,,,No acid-fast bacilli seen.
+CMP.BM_MTB_PCR,Bone marrow MTB complex PCR,,,,,,MTB complex DNA not detected.
+CMP.BM_MYCO_CULTURE,Bone marrow mycobacterial culture,,,,,,No mycobacteria isolated to date (liquid culture continues to 6 weeks).
+CMP.URINE_AFB_SMEAR,Urine acid-fast bacilli smear,,,,,,No acid-fast bacilli seen.
+CMP.URINE_MYCO_CULTURE,Urine mycobacterial culture,,,,,,No mycobacteria isolated to date (culture continues to 6 weeks).
+CMP.BLOOD_MYCO_CULTURE,Mycobacterial blood culture,,,,,,No mycobacteria isolated to date (culture continues to 6 weeks).
+CMP.MCFDNA_NGS,Plasma microbial cell-free DNA sequencing,,,,,,No microbial cell-free DNA detected above the reporting threshold.
+CMP.PATHOGEN_NGS,Pathogen next-generation sequencing,,,,,,No pathogen DNA detected.
+CMP.SIL2R,Soluble interleukin-2 receptor,,U/mL,,,0,
+CMP.CXCL9,CXCL9,,ng/L,pg/mL,1,0,
+CMP.CRAG,Cryptococcal antigen,,,,,,Cryptococcal antigen not detected.
+CMP.HISTOPLASMA_AG,Histoplasma antigen,,,,,,Histoplasma antigen not detected.
+CMP.GALACTOMANNAN,Aspergillus galactomannan,,,,,,Negative (index below 0.5).
+CMP.BETA_D_GLUCAN,"(1,3)-beta-D-glucan",,,,,,Negative (below 60 pg/mL).
+CMP.PJP_PCR,Pneumocystis jirovecii PCR,,,,,,Pneumocystis jirovecii DNA not detected.
+CMP.JCV_PCR,JC virus DNA,,,,,,JC virus DNA not detected.
+CMP.EBV_DNA,EBV DNA (plasma PCR),,,,,,EBV DNA not detected (below the assay's lower limit of detection).
+CMP.ACE,Angiotensin-converting enzyme,,U/L,U/L,1,0,
+CMP.LUNG_BIOPSY_REPORT,Transbronchial lung biopsy report,,,,,,"Transbronchial lung biopsy: alveolated lung parenchyma with preserved architecture. No granulomas, vasculitis, dysplasia or malignancy."
+CMP.FDP,Fibrin degradation products,,mg/L,ug/mL,1,1,Fibrin degradation products not raised.
+CMP.RK39,rK39 antibody (rapid test),,,,,,Negative: control band only; no test band.
+CMP.LEISHMANIA_PCR,Leishmania DNA (PCR),,,,,,Leishmania DNA not detected; positive and negative controls valid.
+CMP.BRUCELLA_SAT,Brucella agglutinins (standard agglutination test),,,,,,Brucella agglutinin titre less than 1:80.
+CMP.CMV_DNA,CMV DNA (plasma PCR),,,,,,CMV DNA not detected (below the assay's lower limit of detection).
+CMP.ACL_IGG,Anticardiolipin IgG,,GPL U/mL,,,0,
+CMP.ACL_IGM,Anticardiolipin IgM,,MPL U/mL,,,0,
+CMP.B2GP1_IGG,Anti-beta-2-glycoprotein I IgG,,U/mL,,,0,
+CMP.SPLENIC_ASPIRATE_REPORT,Splenic aspirate report,,,,,,"Splenic aspirate smears show a mixture of lymphoid cells and red pulp cells with no organisms, granulomas or abnormal infiltrate."
+CMP.ANTICOAG_RODENTICIDE_SCREEN,Anticoagulant rodenticide screen,,,,,,Not detected: no coumarin or indandione anticoagulant rodenticides detected by liquid chromatography-mass spectrometry.
+CMP.WARFARIN,Warfarin,,,,,,Not detected
+CMP.CD55_RBC,Red cells expressing CD55,,%,,,2,
+CMP.CD59_RBC,Red cells expressing CD59,,%,,,2,
+CMP.CD55_NEUT,Neutrophils expressing CD55,,%,,,2,
+CMP.CD59_NEUT,Neutrophils expressing CD59,,%,,,2,
+CMP.PIGA_REPORT,PIGA sequencing report,,,,,,Targeted sequencing of PIGA with adequate coverage of all coding exons. No pathogenic or likely pathogenic variant detected.
+CMP.DOPPLER_RENAL_REPORT,Renal artery and vein Doppler report,,,,,,Both renal arteries and main renal veins are patent with normal spectral waveforms. Intrarenal resistive indices are normal. No thrombus or stenosis is seen.
+CMP.RBC_FOLATE,"Folate, red cell",,nmol/L,ng/mL,0.441,0,
+CMP.FISH_AML_REPORT,AML FISH panel report,,,,,,"Two hundred interphase nuclei scored per probe. No RUNX1::RUNX1T1, CBFB::MYH11, PML::RARA or KMT2A rearrangement, and no loss of 5q, 7q or 17p (TP53) detected."
+CMP.FISH_EOSINOPHILIA_REPORT,Eosinophilia FISH panel report,,,,,,"Two hundred interphase nuclei scored per probe. No FIP1L1::PDGFRA fusion (CHIC2 deletion) and no PDGFRB, FGFR1 or JAK2 rearrangement detected."
+CMP.SNP_ARRAY_REPORT,SNP microarray report,,,,,,Genome-wide cytogenomic SNP microarray. No clinically significant copy number alteration or copy-neutral loss of heterozygosity detected.
+CMP.AML_TARGETED_PANEL_REPORT,Rapid AML targeted mutation panel report,,,,,,"Rapid targeted testing for FLT3 internal tandem duplication and tyrosine kinase domain mutations, and for IDH1, IDH2 and NPM1 mutations. No mutation detected."

@@ -4,6 +4,19 @@ Every change to the shared contract (S-004) gets an entry here, newest first. Ea
 
 Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
+## 2026-09-25: catalogue v2 (Case Library L1.3, batch 1)
+
+- Items the nine batch-1 cases need, proposed by each case's curator and merged by the lead curator (Claude), under Atul's instruction to decide on his behalf: 5 history questions, 1 examination, 51 tests, 16 actions, 1 referral (`REF.DENTISTRY`), 4 diagnoses, 14 findings, 63 components with 64 reference ranges, 3 value rules. Totals: history 146, exam 69, test 302, action 132, referral 20, diagnosis 496, finding 74, component 434. New prices are estimates; the 4 new diagnoses have unverified codes.
+- The 7 new normal templates were approved by Atul in chat on 2026-09-25.
+- Merge decisions: `LAB.HAEM.ADAMTS13` is activity only (`CMP.ADAMTS13_ACT`), with a separate `LAB.HAEM.ADAMTS13_INHIBITOR` (`CMP.ADAMTS13_ANTIBODY`); `CMP.SIL2R` is in U/mL (HLH-2004), and a case whose laboratory reports another unit states it in its `lab_profile`; `LAB.SERO.BRUCELLA` reports one agglutination titre (`CMP.BRUCELLA_SAT`); the synonym "CD55 CD59" moved from `LAB.HAEM.PNH_FLOW` to the new conventional `LAB.HAEM.PNH_CD55_CD59`.
+- Value rules `R.GLOBULIN` and `R.AG_RATIO` chain (the ratio uses the calculated globulin), so the skill's normals step runs the formula pass twice.
+- The published pilot resolves the new items without changing its frozen content (new ledger rows only), so it gets bundle revision `PMC12949993@v1.r2` once v2 is loaded.
+
+Acknowledgements:
+
+- [ ] Nidana: pin catalogue v2 (or keep v1 with a reason) and import `PMC12949993@v1.r2` when it is published.
+- [ ] Sambhasha: regenerate `configs/prices_inr.yaml` and `configs/turnaround.yaml` from the catalogue v2 export.
+
 ## 2026-09-25: a day without a result returns the latest earlier result (bundle schema 0.3, planned)
 
 - When a player or seat orders a test on a day for which the case holds no value for a component, the engine returns the most recent earlier value of that component, marked with the day it was taken ("result from day 0"). A value with no day is valid throughout the admission. Only the days before a component's first value need their own value (Case Library SPEC §10.2).

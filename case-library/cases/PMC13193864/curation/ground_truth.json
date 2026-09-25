@@ -1,0 +1,357 @@
+{
+ "final_diagnosis": {
+  "text": "Paroxysmal nocturnal haemoglobinuria presenting as dialysis-dependent acute kidney injury from haemoglobin cast nephropathy, with a positive DAT (IgG and C3d), intrarenal and right iliac venous thrombosis, and a falsely normal conventional CD55/CD59 flow cytometry after transfusion",
+  "icd10": [
+   "D59.5",
+   "N17.0"
+  ],
+  "accepted_synonyms": [
+   "PNH",
+   "paroxysmal nocturnal haemoglobinuria",
+   "paroxysmal nocturnal hemoglobinuria",
+   "Marchiafava-Micheli syndrome"
+  ]
+ },
+ "secondary_findings": [
+  "Positive DAT (IgG and C3d), most likely complement fragment deposition from ongoing complement activation, not autoimmune haemolytic anaemia",
+  "Right iliac vein thrombosis and intrarenal venous thrombosis",
+  "Inappropriately low reticulocyte count and falling platelets: marrow involvement",
+  "Small perirenal haematoma after the kidney biopsy"
+ ],
+ "accepted_differential": [
+  "Warm or mixed autoimmune haemolytic anaemia (positive DAT)",
+  "Thrombotic microangiopathy: TTP, HUS after diarrhoea, or complement-mediated (atypical) HUS",
+  "Rhabdomyolysis or other pigment nephropathy",
+  "Rapidly progressive glomerulonephritis, lupus nephritis or ANCA vasculitis",
+  "Myeloma cast nephropathy",
+  "Drug-induced or infection-associated haemolysis and AKI (after influenza)",
+  "Aplastic anaemia or another marrow failure syndrome",
+  "Heparin-induced thrombocytopenia (platelets falling on dialysis heparin, and to 45 x10^9/L after LMWH was started)"
+ ],
+ "red_herrings": [
+  "positive DAT (IgG and C3d)",
+  "normal conventional CD55/CD59 flow cytometry",
+  "recent influenza A",
+  "loose stools",
+  "raised ferritin",
+  "normal admission bilirubin"
+ ],
+ "key_discriminators": [
+  "recurring dark urine since 2016",
+  "urine blood 2+ with few red cells",
+  "low reticulocytes despite haemolysis",
+  "no schistocytes and ADAMTS13 53%",
+  "haemoglobin casts with tubular haemosiderin on biopsy",
+  "venous thrombosis",
+  "high-sensitivity FLAER result: granulocyte clone 98.46%"
+ ],
+ "treatment_given": "Emergency haemodialysis (12-16 March), four units of washed red cells, empirical methylprednisolone 40 mg/day from 19 March (stopped 21 April). Prophylactic low-molecular-weight heparin 5,000 IU daily from 23 March because of a small post-biopsy perirenal haematoma, then therapeutic rivaroxaban 15 mg twice daily from 2 April. Meningococcal vaccination at the patient's request before eculizumab, started 21 April (600 mg weekly for four weeks, then 900 mg every two weeks).",
+ "outcome": "Haematological remission and progressive renal recovery: haemoglobin, LDH, creatinine and platelets returned to normal over seven months of follow-up (values only in Figure 1).",
+ "must_do": [
+  {
+   "text": "Dialyse urgently for oliguric AKI with uraemia and hyperkalaemia",
+   "if": {
+    "plan_has": [
+     "RX.RENAL.HAEMODIALYSIS"
+    ]
+   }
+  },
+  {
+   "text": "Ask specifically about previous episodes of dark urine",
+   "if": {
+    "asked_any": [
+     "HX.PC.PREVIOUS_EPISODES"
+    ]
+   }
+  },
+  {
+   "text": "Exclude a thrombotic microangiopathy: blood film for fragments and ADAMTS13 activity",
+   "if": {
+    "all": [
+     {
+      "ordered_any": [
+       "LAB.HAEM.FILM",
+       "LAB.HAEM.FILM_REVIEW"
+      ]
+     },
+     {
+      "ordered_any": [
+       "LAB.HAEM.ADAMTS13"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Obtain a kidney biopsy to establish the cause of the AKI",
+   "if": {
+    "ordered_any": [
+     "PROC.BIOPSY.KIDNEY"
+    ]
+   }
+  },
+  {
+   "text": "Send high-sensitivity FLAER-based flow cytometry, and do not accept a normal conventional CD55/CD59 result after transfusion",
+   "if": {
+    "ordered_any": [
+     "LAB.HAEM.PNH_FLOW"
+    ]
+   }
+  },
+  {
+   "text": "Look for venous thrombosis and anticoagulate once the biopsy site allows",
+   "if": {
+    "all": [
+     {
+      "ordered_any": [
+       "IMG.US.DOPPLER_LEGS"
+      ]
+     },
+     {
+      "plan_has_any": [
+       "RX.CARDIO.ANTICOAGULATION",
+       "ACT.VTE_PROPHYLAXIS"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Vaccinate against meningococcus before starting a complement C5 inhibitor, then start it",
+   "if": {
+    "all": [
+     {
+      "plan_has_any": [
+       "RX.COMPLEMENT.*"
+      ]
+     },
+     {
+      "plan_has": [
+       "RX.VACCINE.MENINGOCOCCAL"
+      ]
+     },
+     {
+      "plan_before": [
+       "RX.VACCINE.MENINGOCOCCAL",
+       "RX.COMPLEMENT.*"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Involve haematology",
+   "if": {
+    "any": [
+     {
+      "referred_any": [
+       "REF.HAEMATOLOGY"
+      ]
+     },
+     {
+      "plan_has": [
+       "REF.HAEMATOLOGY"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "must_not_do": [
+  {
+   "text": "Escalate immunosuppression for presumed autoimmune haemolysis on the DAT alone (rituximab, cytotoxics, splenectomy)",
+   "if": {
+    "plan_has_any": [
+     "RX.IMMUNO.RITUXIMAB",
+     "RX.IMMUNO.ESCALATE",
+     "RX.IMMUNO.CYCLOPHOSPHAMIDE",
+     "RX.SURGERY.SPLENECTOMY"
+    ]
+   }
+  },
+  {
+   "text": "Start plasma exchange for presumed TTP with no red cell fragments and ADAMTS13 activity of 53%",
+   "if": {
+    "plan_has": [
+     "RX.IMMUNO.PLASMA_EXCHANGE"
+    ]
+   }
+  },
+  {
+   "text": "Start a complement inhibitor without meningococcal vaccination",
+   "if": {
+    "all": [
+     {
+      "plan_has_any": [
+       "RX.COMPLEMENT.*"
+      ]
+     },
+     {
+      "not": {
+       "plan_has": [
+        "RX.VACCINE.MENINGOCOCCAL"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Exclude the diagnosis on a normal conventional CD55/CD59 result without a high-sensitivity test",
+   "if": {
+    "all": [
+     {
+      "ordered_any": [
+       "LAB.HAEM.PNH_CD55_CD59"
+      ]
+     },
+     {
+      "not": {
+       "ordered_any": [
+        "LAB.HAEM.PNH_FLOW"
+       ]
+      }
+     },
+     {
+      "not": {
+       "dx_in": [
+        "DX.PNH"
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "diagnosis_rubric_anchors": {
+  "5": "Paroxysmal nocturnal haemoglobinuria, with the kidney injury attributed to haemolysis (haemoglobin cast nephropathy)",
+  "4": "Paroxysmal nocturnal haemoglobinuria, without explaining the kidney injury",
+  "3": "Haem-pigment nephropathy or tubular necrosis from intravascular haemolysis, cause not identified",
+  "2": "Autoimmune haemolysis, a thrombotic microangiopathy (TTP, HUS or complement-mediated HUS), rhabdomyolysis or aplastic anaemia as the final diagnosis",
+  "1": "Unrelated diagnosis, or one that would lead to harm"
+ },
+ "teaching_points": [
+  "Dark urine with dipstick blood but few red cells on microscopy means haemoglobinuria or myoglobinuria; the CK separates them.",
+  "Haemolysis with a low reticulocyte count points to marrow involvement, not isolated autoimmune haemolysis.",
+  "A positive DAT (including C3d) can occur in complement-mediated haemolysis; it does not establish AIHA on its own.",
+  "Conventional CD55/CD59 flow cytometry can be falsely normal after transfusion and with limited gating; high-sensitivity FLAER-based testing on granulocytes is the standard.",
+  "Kidney biopsy with haemoglobin casts and tubular haemosiderin identifies haem-pigment injury and can redirect the work-up.",
+  "Vaccinate against meningococcus (or give antibiotic cover) before complement C5 inhibition."
+ ],
+ "final_dx": {
+  "id": "DX.PNH",
+  "text": "Paroxysmal nocturnal haemoglobinuria presenting as dialysis-dependent acute kidney injury from haemoglobin cast nephropathy, with a positive DAT (IgG and C3d), intrarenal and right iliac venous thrombosis, and a falsely normal conventional CD55/CD59 flow cytometry after transfusion",
+  "icd10": [
+   "D59.5",
+   "N17.0"
+  ],
+  "accepted_synonyms": [
+   "PNH",
+   "paroxysmal nocturnal haemoglobinuria",
+   "paroxysmal nocturnal hemoglobinuria",
+   "Marchiafava-Micheli syndrome"
+  ],
+  "leak_terms": [
+   "GPI-deficient clone",
+   "complement-mediated intravascular haemolysis"
+  ]
+ },
+ "rubric": {
+  "rubric": [
+   {
+    "score": 5,
+    "text": "Paroxysmal nocturnal haemoglobinuria, with the kidney injury attributed to haemolysis (haemoglobin cast nephropathy)",
+    "if": {
+     "all": [
+      {
+       "dx_in": [
+        "DX.PNH"
+       ]
+      },
+      {
+       "any": [
+        {
+         "evidence_has": [
+          "RP05"
+         ]
+        },
+        {
+         "finding_released": {
+          "findings": [
+           "FND.HAEMOGLOBIN_CASTS",
+           "FND.TUBULAR_HAEMOSIDERIN"
+          ],
+          "from_tests": [
+           "PROC.BIOPSY.KIDNEY"
+          ]
+         }
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "score": 4,
+    "text": "Paroxysmal nocturnal haemoglobinuria, without explaining the kidney injury",
+    "if": {
+     "dx_in": [
+      "DX.PNH"
+     ]
+    }
+   },
+   {
+    "score": 3,
+    "text": "Haem-pigment nephropathy or tubular necrosis from intravascular haemolysis, cause not identified",
+    "if": {
+     "dx_in": [
+      "DX.PIGMENT_NEPHROPATHY",
+      "DX.ACUTE_TUBULAR_NECROSIS"
+     ]
+    }
+   },
+   {
+    "score": 2,
+    "text": "Autoimmune haemolysis, a thrombotic microangiopathy (TTP, HUS or complement-mediated HUS), rhabdomyolysis or aplastic anaemia as the final diagnosis",
+    "if": {
+     "dx_in": [
+      "DX.WARM_AIHA",
+      "DX.MIXED_AIHA",
+      "DX.DRUG_INDUCED_IMMUNE_HAEMOLYSIS",
+      "DX.PAROXYSMAL_COLD_HAEMOGLOBINURIA",
+      "DX.TTP",
+      "DX.HUS",
+      "DX.ATYPICAL_HUS",
+      "DX.MAHA_OTHER",
+      "DX.RHABDOMYOLYSIS",
+      "DX.APLASTIC_ANAEMIA"
+     ]
+    }
+   },
+   {
+    "score": 1,
+    "text": "Unrelated diagnosis, or one that would lead to harm",
+    "if": {
+     "not": {
+      "dx_in": [
+       "DX.PNH",
+       "DX.PIGMENT_NEPHROPATHY",
+       "DX.ACUTE_TUBULAR_NECROSIS",
+       "DX.WARM_AIHA",
+       "DX.MIXED_AIHA",
+       "DX.DRUG_INDUCED_IMMUNE_HAEMOLYSIS",
+       "DX.PAROXYSMAL_COLD_HAEMOGLOBINURIA",
+       "DX.TTP",
+       "DX.HUS",
+       "DX.ATYPICAL_HUS",
+       "DX.MAHA_OTHER",
+       "DX.RHABDOMYOLYSIS",
+       "DX.APLASTIC_ANAEMIA"
+      ]
+     }
+    }
+   }
+  ],
+  "default_score": 1
+ }
+}

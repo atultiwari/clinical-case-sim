@@ -140,3 +140,8 @@ HX.EXPOSURE.RADIATION,Radiation exposure,exposure,radiation|X-ray work|radioacti
 HX.RECORDS.PREVIOUS,"Previous records, test results and prescriptions",records,old reports|previous investigations|old prescriptions|past results|file,attending|consultant.*
 HX.RECORDS.DISCHARGE_SUMMARIES,Previous discharge summaries,records,discharge summary|discharge card|old admission notes,attending|consultant.*
 HX.RECORDS.REFERRAL_LETTER,Referral letter,records,referral note|GP letter|reference letter,attending|consultant.*
+HX.SOCIAL.TRAVEL_PROPHYLAXIS,Antimalarial prophylaxis and bite precautions during travel,social,malaria prophylaxis|did you take malaria tablets|chemoprophylaxis|mosquito nets and repellent|travel medicines,attending|consultant.*
+HX.SOCIAL.RESIDENCE,"Birthplace, native place and places lived",social,native place|hometown|where are you from|places lived|residence history|domicile|home state,attending|consultant.*
+HX.MEDS.ANTICOAGULANTS,Anticoagulant or antiplatelet medicines,medicines,blood thinners|warfarin|aspirin or clopidogrel|DOAC|anticoagulant use|heparin injections,attending|consultant.*
+HX.EXPOSURE.RODENTICIDE,Rat poison or rodenticide exposure,exposure,rat poison|rodenticide|rat killer|mouse bait|pest control at home or work,attending|consultant.*
+HX.PMH.THROMBOSIS,Previous blood clots,past medical history,previous DVT|history of thrombosis|clots in the legs or lungs|previous pulmonary embolism|past VTE,attending|consultant.*

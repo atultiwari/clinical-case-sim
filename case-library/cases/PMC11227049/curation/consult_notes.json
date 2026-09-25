@@ -1,0 +1,295 @@
+[
+  {
+    "id": "CN01",
+    "specialty": "REF.HAEMATOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "Asked to advise on anaemia in a 58-year-old woman with type 2 diabetes and treated hypothyroidism, with two weeks of tiredness, poor appetite and pain after meals. We reviewed the Chart so far. If the reticulocyte count is raised, the marrow is responding, so this is not a simple failure of production; if the red cells are not microcytic and there is no history of bleeding, iron deficiency is unlikely. The possibilities include a haemolytic process, ineffective red cell production, and a toxic or nutritional cause. Treated hypothyroidism and diabetes do not explain an anaemia of this depth. Happy to review again with the results.",
+    "recommendations": [
+      "Ask for the blood film to be reviewed by a haematopathologist, looking specifically for red cell inclusions",
+      "LDH, haptoglobin and a direct antiglobulin test; iron studies, B12 and folate if not already done",
+      "Take a full medicine history, including herbal, Ayurvedic and other traditional remedies and anything bought online",
+      "No iron and no transfusion on current evidence while she is stable"
+    ],
+    "origin": "affected",
+    "rationale": "V1: a competent haematologist with the admission panel would look at the film, screen for haemolysis and take a full remedy history. Conditional wording because V1 has no condition on what the Chart holds.",
+    "confidence": 0.75
+  },
+  {
+    "id": "CN02",
+    "specialty": "REF.HAEMATOLOGY",
+    "variant": 2,
+    "condition": {
+      "finding_released": [
+        "FND.COARSE_BASOPHILIC_STIPPLING"
+      ]
+    },
+    "note_text": "Asked to advise on anaemia; the Chart now includes coarse basophilic stippling. Coarse stippling with polychromasia and a reticulocytosis is an important finding: it points to a disturbance of haem synthesis or red cell maturation, a globin disorder or a red cell enzyme defect, and away from a nutritional cause. The iron indices, if high, fit a block in haem synthesis rather than iron deficiency. Happy to review again with the results.",
+    "recommendations": [
+      "Send a blood lead level",
+      "Send haemoglobin studies (HPLC)",
+      "Take a full remedy and supplement history, including Ayurvedic products and anything bought online",
+      "A bone marrow is not needed before these results",
+      "Do not start iron"
+    ],
+    "origin": "affected",
+    "rationale": "V2: stippling calls for a blood lead, haemoglobin studies and a remedy history before a marrow. Names tests, never the diagnosis.",
+    "confidence": 0.75
+  },
+  {
+    "id": "CN03",
+    "specialty": "REF.HAEMATOLOGY",
+    "variant": 3,
+    "condition": {
+      "released_any": [
+        "L32"
+      ]
+    },
+    "note_text": "Asked to advise on anaemia; the Chart now includes a blood lead of 121.2 ug/dL. This markedly raised level accounts for the anaemia, the coarse basophilic stippling and the reticulocytosis, and for any ring sideroblasts and dyserythropoiesis in the marrow, which are expected to resolve with treatment; they should not be labelled as a myelodysplastic process. Serum iron and ferritin are not low, so iron is not indicated. Happy to review again with the results.",
+    "recommendations": [
+      "Chelation under specialist guidance, once the source is identified and stopped",
+      "No iron: stores are replete",
+      "Full blood count and reticulocytes weekly during treatment",
+      "Repeat blood lead after the course and again for rebound",
+      "Cytogenetics only if the counts do not recover after treatment"
+    ],
+    "origin": "affected",
+    "rationale": "V3: with the blood lead in the Chart the consultant supports chelation and follow-up counts, and warns against a myelodysplasia label. Written without the diagnosis's synonyms so the leak scan stays clean; the value makes it clear.",
+    "confidence": 0.8
+  },
+  {
+    "id": "CN04",
+    "specialty": "REF.TOXICOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "Asked whether a toxic or environmental cause could explain abdominal pain after meals, poor appetite and anaemia in a woman with diabetes. We reviewed the Chart so far. Abdominal pain with an unexplained anaemia justifies a careful exposure history and targeted testing. No exposure is documented yet, so no specific toxic cause can be supported at present. Happy to review again with the results.",
+    "recommendations": [
+      "Take a detailed exposure history: herbal, Ayurvedic, traditional and imported remedies and supplements, including products bought online or taken for her diabetes; occupation; hobbies; home and water supply",
+      "Send a venous blood lead level",
+      "Keep any product she has been taking, even if she has stopped it, in case it needs testing"
+    ],
+    "origin": "affected",
+    "rationale": "V1: asks for an exposure history and suggests a blood lead, which a toxicologist would do for pain with anaemia. Asking about products taken for her diabetes is what a competent toxicologist asks a diabetic patient in India; it names no diagnosis.",
+    "confidence": 0.75
+  },
+  {
+    "id": "CN05",
+    "specialty": "REF.TOXICOLOGY",
+    "variant": 2,
+    "condition": {
+      "released_any": [
+        "L32"
+      ]
+    },
+    "note_text": "Asked to advise; the Chart now includes a blood lead of 121.2 ug/dL. This level, in a symptomatic adult, warrants chelation. The source must be found and removed; Ayurvedic and other traditional remedies are a common source in India and should be stopped now. Happy to review again with the results.",
+    "recommendations": [
+      "Stop the suspected source before or alongside chelation",
+      "Chelation: parenteral dimercaprol (BAL) or calcium disodium EDTA at this level, followed by an oral agent (succimer, or d-penicillamine where succimer is not available)",
+      "Check full blood count, renal and liver function during the course",
+      "Repeat blood lead after the course and again two to three weeks later for rebound",
+      "Send the product to the drug analyst for testing, including for mercury and arsenic, and notify the drug regulator and public health"
+    ],
+    "origin": "affected",
+    "rationale": "V2: stop the source, chelate with what is available in India, monitor, repeat the blood lead, test the product and notify. The article used BAL then d-penicillamine; the note allows any appropriate chelator (decision D10).",
+    "confidence": 0.8
+  },
+  {
+    "id": "CN06",
+    "specialty": "REF.GASTROENTEROLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "Asked to advise on two weeks of abdominal pain after meals with poor appetite, anaemia and raised liver enzymes. We reviewed the Chart so far. There are no features of a surgical abdomen, and with no history of bleeding, blood loss is an unlikely cause of the anaemia. The transaminase rise has several possible causes, including viral hepatitis, fatty liver and drugs or remedies, which can injure the liver. Pain after meals with a soft abdomen and a normal ultrasound is unlikely to be primarily gastrointestinal. Happy to review again with the results.",
+    "recommendations": [
+      "Hepatitis B, C, A and E serology and a prothrombin time",
+      "Abdominal ultrasound if not already done",
+      "Endoscopy is not urgent; we would consider it for persistent dyspepsia, bleeding or iron deficiency",
+      "Review all medicines and remedies, including herbal products, as a cause of the liver tests",
+      "Consider metabolic and toxic causes of abdominal pain with anaemia"
+    ],
+    "origin": "affected",
+    "rationale": "V1. The suggestion to review remedies for the liver tests is what a competent gastroenterologist would say for unexplained transaminases; it names no diagnosis. Conditional on the ultrasound, which the article reports normal.",
+    "confidence": 0.7
+  },
+  {
+    "id": "CN07",
+    "specialty": "REF.ENDOCRINOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "Asked to advise on diabetes and thyroid disease in a woman admitted with anaemia and abdominal pain. We reviewed the Chart so far. Her diabetes is poorly controlled (HbA1c 9%) since she stopped metformin two months ago; with a reticulocytosis, the HbA1c may even underestimate her average glucose. Her hypothyroidism is controlled on thyroxine, and neither condition explains an anaemia of this depth. Happy to review again with the results.",
+    "recommendations": [
+      "Restart glucose-lowering treatment: metformin is suitable with her renal function",
+      "Capillary glucose monitoring while an inpatient",
+      "Ask what she has been using for her diabetes since stopping metformin, including any herbal or Ayurvedic products",
+      "Continue thyroxine at the current dose",
+      "Check B12 periodically if metformin is restarted"
+    ],
+    "origin": "affected",
+    "rationale": "V1: a competent endocrinologist restarts treatment and asks what replaced metformin, a routine question in India where many patients switch to remedies. It names no diagnosis.",
+    "confidence": 0.75
+  },
+  {
+    "id": "CN08",
+    "specialty": "REF.CARDIOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific cardiac concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN09",
+    "specialty": "REF.NEUROLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific neurological concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN10",
+    "specialty": "REF.NEPHROLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific renal concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN11",
+    "specialty": "REF.RHEUMATOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific rheumatological concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN12",
+    "specialty": "REF.INFECTIOUS_DISEASES",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific infection concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN13",
+    "specialty": "REF.RESPIRATORY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific respiratory concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN14",
+    "specialty": "REF.PSYCHIATRY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific psychiatric concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN15",
+    "specialty": "REF.DERMATOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific skin concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN16",
+    "specialty": "REF.ONCOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific oncological concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN17",
+    "specialty": "REF.OPHTHALMOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific eye concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN18",
+    "specialty": "REF.ENT",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific ear, nose or throat concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN19",
+    "specialty": "REF.GENERAL_SURGERY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific surgical concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN20",
+    "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN21",
+    "specialty": "REF.DIETETICS",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific nutritional concerns from our side; happy to review if intake or weight changes.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN22",
+    "specialty": "REF.PHYSIOTHERAPY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific mobility concerns from our side; happy to review if function changes.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  }
+]

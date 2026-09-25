@@ -1,0 +1,378 @@
+[
+ {
+  "id": "CN01",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to see a 36-year-old man from Haiti with four months of fever, dry cough, night sweats and weight loss, and a diffuse miliary nodular pattern on imaging. We reviewed the Chart so far. With this presentation and origin in a high-incidence country, disseminated mycobacterial infection is the leading concern; endemic fungal infection is the main alternative. Please keep him in an airborne-isolation room until infection is excluded. No single test is sensitive enough in disseminated disease, so sample widely and do not let one negative result reassure you.",
+  "recommendations": [
+   "Airborne isolation",
+   "Three sputum samples for AFB smear, MTB PCR and mycobacterial culture",
+   "HIV test, and hepatitis B and C serology as a baseline",
+   "If sputum is negative, bronchoscopy with lavage for AFB, PCR and culture, and transbronchial biopsy",
+   "Urine and blood mycobacterial cultures; fungal antigens (cryptococcal, histoplasma)",
+   "An interferon-gamma release assay adds little: a negative result does not exclude disease",
+   "If suspicion stays high after sampling, start empirical four-drug antimycobacterial treatment"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a competent infectious diseases physician with the vignette and imaging names disseminated mycobacterial infection first (the article's team did too) without naming the diagnosis in player-visible text.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN02",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 2,
+  "condition": {
+   "released_any": [
+    "L06",
+    "L08",
+    "L09",
+    "RP06"
+   ]
+  },
+  "note_text": "Reviewed again with the negative sputum and lavage results, the negative sequencing and the transbronchial biopsy showing non-necrotising granulomas. None of this excludes disseminated mycobacterial infection: smears, PCR, interferon-gamma release assays and cell-free DNA are all insensitive in miliary disease, and granulomas without necrosis occur in it. The picture has not changed. We would not attribute this to sarcoidosis while infection remains this likely, and we advise against steroids without antimycobacterial cover.",
+  "recommendations": [
+   "Start empirical four-drug antimycobacterial treatment now",
+   "If steroids are considered, give them only with antimycobacterial treatment already started",
+   "Send marrow, liver or urine samples for AFB stain, PCR and culture if another site is sampled",
+   "Repeat testing, including sequencing, if he deteriorates"
+  ],
+  "origin": "affected",
+  "rationale": "V2: the article's own discussion; a competent colleague weighs pretest probability over a string of insensitive tests.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN03",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 3,
+  "condition": {
+   "released_any": [
+    "L19",
+    "L20",
+    "L21",
+    "L22"
+   ]
+  },
+  "note_text": "The MTB complex results from the repeat sequencing and the second lavage confirm the infection we were concerned about. Start rifampicin, isoniazid, pyrazinamide and ethambutol today, dosed for his liver and kidney function, with daily liver tests. Continue airborne isolation. With the trigger now being treated, further etoposide should be withheld; dexamethasone may continue at the haematology team's discretion. Please notify public health so his household can be screened.",
+  "recommendations": [
+   "Start four-drug treatment today",
+   "Withhold further etoposide",
+   "Airborne isolation",
+   "Notify public health; screen household contacts",
+   "Check drug susceptibility on the culture isolate"
+  ],
+  "origin": "affected",
+  "rationale": "V3: after the pivotal results; mirrors what the article's team did (RIPE started, HLH chemotherapy withheld).",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN04",
+  "specialty": "REF.RESPIRATORY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about diffuse miliary nodules with four months of fever and cough. We reviewed the Chart so far. The random distribution of the nodules, with no hilar lymph node enlargement, points to haematogenous spread of an infection rather than to sarcoidosis, which usually follows the lymphatics and comes with hilar nodes. Saturation is mildly reduced at rest.",
+  "recommendations": [
+   "Induced or early-morning sputum for AFB, PCR and culture first",
+   "We are happy to do bronchoscopy with lavage and transbronchial biopsy if sputum is negative",
+   "Airborne precautions for the procedure"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a respiratory physician reading the CT (RP02).",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN05",
+  "specialty": "REF.RESPIRATORY",
+  "variant": 2,
+  "condition": {
+   "released_any": [
+    "RP06"
+   ]
+  },
+  "note_text": "The transbronchial biopsy shows non-necrotising granulomas with negative stains. This does not separate infection from sarcoidosis: granulomas without necrosis occur in disseminated mycobacterial infection, and sarcoidosis remains a diagnosis of exclusion. Given the random nodules, the fever and the absence of hilar nodes, we would not call this sarcoidosis.",
+  "recommendations": [
+   "Ask the laboratory to hold tissue for mycobacterial culture and PCR",
+   "Treat infection first if steroids are being considered"
+  ],
+  "origin": "affected",
+  "rationale": "V2: after the biopsy; a competent chest physician.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN06",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about a mild normocytic anaemia with lymphopenia and a very high ferritin in a febrile man with splenomegaly. We reviewed the Chart so far. The pattern fits anaemia of chronic inflammation, and a ferritin at this level is an acute-phase response to his illness. There is nothing to suggest a primary blood disorder at present.",
+  "recommendations": [
+   "Blood film",
+   "Repeat counts and ferritin",
+   "Marrow examination if the counts fall further, with samples sent for mycobacterial culture as well as morphology"
+  ],
+  "origin": "affected",
+  "rationale": "V1 (admission counts): helpful but not more diagnostic than the Chart.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN07",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 2,
+  "condition": {
+   "released_any": [
+    "L16",
+    "L17",
+    "S01.d17",
+    "S05.d17",
+    "RP08"
+   ]
+  },
+  "note_text": "Reviewed with the falling counts, rising ferritin and transaminases, the soluble IL-2 receptor and CXCL9 results and the marrow. Together with the fever and splenomegaly these meet the criteria for a secondary haemophagocytic process. The trigger matters more than the marrow findings: in a man with marrow and lung granulomas, the likeliest trigger is the underlying granulomatous infection, and immunosuppression alone will not control it.",
+  "recommendations": [
+   "Treat the trigger; antimycobacterial treatment should be in place before or with any etoposide or further steroid",
+   "Dexamethasone may be used alongside treatment of the trigger",
+   "Send marrow for AFB stain, PCR and culture if not already done",
+   "Transfuse red cells and platelets to usual thresholds; monitor fibrinogen"
+  ],
+  "origin": "affected",
+  "rationale": "V2: a haematologist recognises secondary haemophagocytosis and asks for its trigger, as the article's discussion recommends.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN08",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 3,
+  "condition": {
+   "released_any": [
+    "L19",
+    "L20",
+    "L21",
+    "L22"
+   ]
+  },
+  "note_text": "With the MTB complex results, the haemophagocytic process has a treatable trigger. We agree with withholding further etoposide now that four-drug treatment has started; continue dexamethasone and blood product support.",
+  "recommendations": [
+   "Withhold further etoposide",
+   "Continue dexamethasone and transfusion support"
+  ],
+  "origin": "affected",
+  "rationale": "V3: after the pivotal results.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN09",
+  "specialty": "REF.RHEUMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about possible sarcoidosis. We reviewed the Chart so far. Sarcoidosis is a diagnosis of exclusion; with high fever, weight loss, random miliary nodules without hilar nodes and origin in a high-incidence country, infection has to be excluded first, and a raised ACE does not separate the two. There are no eye, skin or joint features of sarcoidosis.",
+  "recommendations": [
+   "Exclude infection before any steroid",
+   "Slit-lamp examination",
+   "ACE is not diagnostic"
+  ],
+  "origin": "affected",
+  "rationale": "Sarcoidosis trap: a competent rheumatologist is cautious, as the article's discussion is.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN10",
+  "specialty": "REF.ONCOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about possible malignancy. We reviewed the Chart so far. There is no lymph node mass, no focal organ lesion and no abnormal cell population in the blood; the pattern does not suggest lymphoma or metastatic cancer.",
+  "recommendations": [
+   "Marrow and flow cytometry if the counts fall",
+   "No oncological intervention indicated"
+  ],
+  "origin": "affected",
+  "rationale": "Lymphoma and metastasis path: no evidence of malignancy (abstract).",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN11",
+  "specialty": "REF.OPHTHALMOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to examine the eyes. Visual acuity 6/6 in each eye. Anterior segments quiet with no uveitis. Dilated fundoscopy: optic discs and vessels normal; no choroidal lesions, haemorrhages or exudates.",
+  "recommendations": [
+   "No ophthalmic treatment needed",
+   "Baseline acuity and colour vision recorded, useful if ethambutol is started"
+  ],
+  "origin": "affected",
+  "rationale": "G04: no choroidal lesions are invented (skill rule 2).",
+  "confidence": 0.65
+ },
+ {
+  "id": "CN12",
+  "specialty": "REF.CARDIOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about tachycardia. We reviewed the Chart so far. The sinus tachycardia fits the fever and anaemia. The echocardiogram shows no vegetations, pericardial effusion or dysfunction.",
+  "recommendations": [
+   "No cardiac intervention needed",
+   "Treat the fever and anaemia"
+  ],
+  "origin": "affected",
+  "rationale": "Endocarditis and shock path.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN13",
+  "specialty": "REF.NEUROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to assess for neurological involvement. He is alert with no focal deficit and no meningism; the only headache is with the fevers. There is no clinical evidence of meningitis or of focal brain lesions.",
+  "recommendations": [
+   "Lumbar puncture and MRI only if headache, confusion or focal signs develop, or before steroids if meningeal involvement is suspected"
+  ],
+  "origin": "affected",
+  "rationale": "Meningeal spread path (G17).",
+  "confidence": 0.65
+ },
+ {
+  "id": "CN14",
+  "specialty": "REF.GASTROENTEROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about abnormal liver tests. We reviewed the Chart so far. A raised ALP and GGT with a modest transaminase rise and splenomegaly suggest an infiltrative process in the liver; granulomatous disease is the likeliest in this context. Viral hepatitis serology is negative.",
+  "recommendations": [
+   "Ultrasound abdomen",
+   "Liver biopsy can sample granulomas for histology, AFB stain and culture if other sites are unhelpful",
+   "Monitor liver tests closely, especially if liver-toxic treatment starts"
+  ],
+  "origin": "affected",
+  "rationale": "Liver involvement path.",
+  "confidence": 0.65
+ },
+ {
+  "id": "CN15",
+  "specialty": "REF.NEPHROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about kidney function. We reviewed the Chart so far. Renal function was normal on admission. If it worsens, the likeliest causes here are reduced perfusion and nephrotoxic medicines rather than primary kidney disease.",
+  "recommendations": [
+   "Avoid nephrotoxic medicines",
+   "Dose drugs for kidney function",
+   "Renal replacement therapy if needed in shock"
+  ],
+  "origin": "affected",
+  "rationale": "Acute kidney injury from day 18.",
+  "confidence": 0.6
+ },
+ {
+  "id": "CN16",
+  "specialty": "REF.ENDOCRINOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about the sodium and glucose. We reviewed the Chart so far. The mild hyponatraemia fits inappropriate ADH secretion with his lung disease. High-dose steroid will raise glucose and suppress cortisol; a low cortisol on steroid does not mean adrenal failure.",
+  "recommendations": [
+   "Capillary glucose monitoring on steroids",
+   "Insulin if glucose stays above 11 mmol/L",
+   "Stress-dose hydrocortisone in shock if steroids have been stopped"
+  ],
+  "origin": "affected",
+  "rationale": "Endocrine questions of the course.",
+  "confidence": 0.6
+ },
+ {
+  "id": "CN17",
+  "specialty": "REF.DIETETICS",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to review nutrition. Weight 62 kg, BMI 19.6 kg/m², with about 10 kg lost over four months and a poor appetite. Albumin is low.",
+  "recommendations": [
+   "High-energy, high-protein diet with oral supplements",
+   "Weekly weights"
+  ],
+  "origin": "affected",
+  "rationale": "Weight loss (H07; EX.GEN.HEIGHT_WEIGHT).",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN18",
+  "specialty": "REF.TOXICOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific toxicological concerns from our side; happy to advise if new information arises.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN19",
+  "specialty": "REF.PSYCHIATRY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific psychiatric concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN20",
+  "specialty": "REF.DERMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific skin concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN21",
+  "specialty": "REF.ENT",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific ear, nose or throat concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN22",
+  "specialty": "REF.GENERAL_SURGERY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific surgical concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN23",
+  "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN24",
+  "specialty": "REF.PHYSIOTHERAPY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific mobility concerns from our side; happy to review if function changes.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN25",
+  "specialty": "REF.DENTISTRY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific dental concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ }
+]
