@@ -4,7 +4,8 @@ Each part has its own PLAN. This file holds the umbrella tasks and the order in 
 
 ## Umbrella tasks
 
-- [ ] **U0.0 Git and the private GitHub repository**
+- [x] **U0.0 Git and the private GitHub repository**
+  - Done 25 Sep 2026: private repository https://github.com/atultiwari/clinical-case-sim created and `main` pushed; grep secret scan clean (gitleaks not installed), no file over 20 MB, nothing ignored is tracked.
   - Build: in the first Claude Code session, started at `Clinical-Case-Sim` with the prompt in [SESSION_PROMPTS.md](SESSION_PROMPTS.md): check that git and the GitHub CLI (`gh`) are installed and signed in, that the folder is not inside another Git repository, and that no repository named `clinical-case-sim` exists yet; review the root `.gitignore`; scan for secrets and large files; `git init -b main` and a first commit on `main`; create the private GitHub repository `clinical-case-sim` with `gh repo create --private` and push. From then on, the Git and GitHub section of [`../CLAUDE.md`](../CLAUDE.md) applies.
   - Accept: `gh repo view` reports visibility `PRIVATE`; `main` is level with `origin/main`; no tracked file matches `.gitignore` (`git ls-files -ci --exclude-standard` prints nothing); the scan found no secret.
   - Depends on: S-005.
