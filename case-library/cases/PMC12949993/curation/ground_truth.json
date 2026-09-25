@@ -1,0 +1,317 @@
+{
+  "final_diagnosis": {
+    "text": "Lead poisoning from an unlabelled herbal supplement, presenting with abdominal pain and anaemia with coarse basophilic stippling and ring sideroblasts",
+    "icd10": [
+      "T56.0",
+      "D64.2"
+    ],
+    "accepted_synonyms": [
+      "lead toxicity",
+      "lead poisoning",
+      "plumbism",
+      "saturnism",
+      "lead intoxication",
+      "heavy-metal (lead) poisoning"
+    ]
+  },
+  "secondary_findings": [
+    "Weakly positive IgG-only DAT, most likely passive antibody from IVIG rather than warm autoimmune haemolytic anaemia",
+    "Agglutination on the film and a cold agglutinin titre of 32 with low thermal amplitude: not clinically significant",
+    "Raised CK explained by inclusion body myositis"
+  ],
+  "accepted_differential": [
+    "Warm autoimmune haemolytic anaemia",
+    "IVIG-associated haemolysis or passive DAT positivity",
+    "Drug-induced anaemia (mycophenolate)",
+    "Myelodysplastic neoplasm with ring sideroblasts",
+    "Other acquired sideroblastic anaemia (copper deficiency, alcohol, isoniazid)",
+    "Arsenic or mercury toxicity",
+    "Acute porphyria",
+    "Thalassaemia trait (basophilic stippling)"
+  ],
+  "red_herrings": [
+    "IgG 1+ DAT",
+    "film agglutination",
+    "cold agglutinin titre 32",
+    "atypical plasma cells",
+    "raised polyclonal free light chains",
+    "mild transaminase rise",
+    "raised CK"
+  ],
+  "key_discriminators": [
+    "coarse basophilic stippling",
+    "Pappenheimer bodies",
+    "ring sideroblasts",
+    "normal MCV with reticulocytosis",
+    "supplement history",
+    "blood lead 77.8 ug/dL"
+  ],
+  "treatment_given": "Oral succimer (DMSA) after clinical toxicology consultation. Public health investigation confirmed the supplement as the source of lead, with mercury and arsenic also reported.",
+  "outcome": "Progressive haematological recovery and symptomatic improvement. Follow-up values not reported.",
+  "must_do": [
+    {
+      "text": "Ask specifically about supplements, herbal, traditional or imported medicines and over-the-counter products",
+      "if": {
+        "asked_any": [
+          "HX.MEDS.SUPPLEMENTS",
+          "HX.MEDS.SUPPLEMENT_DETAILS"
+        ]
+      }
+    },
+    {
+      "text": "Have the peripheral blood film reviewed for basophilic stippling",
+      "if": {
+        "finding_released": {
+          "findings": [
+            "FND.COARSE_BASOPHILIC_STIPPLING"
+          ],
+          "from_tests": [
+            "LAB.HAEM.FILM",
+            "LAB.HAEM.FILM_REVIEW"
+          ]
+        }
+      }
+    },
+    {
+      "text": "Measure venous blood lead",
+      "if": {
+        "ordered_any": [
+          "LAB.TOX.BLOOD_LEAD"
+        ]
+      }
+    },
+    {
+      "text": "Stop the exposure before or alongside chelation",
+      "if": {
+        "all": [
+          {
+            "plan_has": [
+              "ACT.STOP_SUSPECTED_SOURCE"
+            ]
+          },
+          {
+            "plan_before": [
+              "ACT.STOP_SUSPECTED_SOURCE",
+              "RX.CHELATION.*"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "text": "Chelate with oral succimer (symptomatic, blood lead about 78 ug/dL), with clinical toxicology input",
+      "if": {
+        "all": [
+          {
+            "plan_has": [
+              "RX.CHELATION.SUCCIMER_ORAL"
+            ]
+          },
+          {
+            "any": [
+              {
+                "referred_any": [
+                  "REF.TOXICOLOGY"
+                ]
+              },
+              {
+                "plan_has": [
+                  "REF.TOXICOLOGY"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "text": "Notify public health, arrange testing of the product and ask who else took it",
+      "if": {
+        "all": [
+          {
+            "plan_has": [
+              "ACT.NOTIFY_PUBLIC_HEALTH"
+            ]
+          },
+          {
+            "any": [
+              {
+                "asked_any": [
+                  "HX.EXPOSURE.OTHERS_EXPOSED"
+                ]
+              },
+              {
+                "plan_has": [
+                  "ACT.SCREEN_CONTACTS"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "text": "Plan a repeat blood lead after chelation, because levels rebound",
+      "if": {
+        "plan_has": [
+          "ACT.REPEAT_BLOOD_LEAD"
+        ]
+      }
+    }
+  ],
+  "must_not_do": [
+    {
+      "text": "Escalate immunosuppression for presumed warm AIHA on a weak IgG-only DAT in a patient on IVIG without re-evaluating",
+      "if": {
+        "plan_has_any": [
+          "RX.STEROID.HIGH_DOSE",
+          "RX.IMMUNO.RITUXIMAB",
+          "RX.IMMUNO.ESCALATE",
+          "RX.SURGERY.SPLENECTOMY"
+        ]
+      }
+    },
+    {
+      "text": "Label myelodysplasia with ring sideroblasts before excluding reversible causes such as lead, copper deficiency, alcohol and drugs",
+      "if": {
+        "all": [
+          {
+            "dx_in": [
+              "DX.MDS_RING_SIDEROBLASTS"
+            ]
+          },
+          {
+            "not": {
+              "ordered_all": [
+                "LAB.TOX.BLOOD_LEAD",
+                "LAB.CHEM.COPPER_CAERULOPLASMIN"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": "Chelate while the exposure continues",
+      "if": {
+        "all": [
+          {
+            "plan_has_any": [
+              "RX.CHELATION.*"
+            ]
+          },
+          {
+            "not": {
+              "plan_has": [
+                "ACT.STOP_SUSPECTED_SOURCE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": "Start empirical iron therapy (iron studies are replete; transferrin saturation 53%)",
+      "if": {
+        "plan_has_any": [
+          "RX.IRON.ORAL",
+          "RX.IRON.IV"
+        ]
+      }
+    }
+  ],
+  "diagnosis_rubric_anchors": {
+    "5": "Lead poisoning, with the herbal supplement identified as the source",
+    "4": "Lead poisoning, source not identified",
+    "3": "Heavy-metal poisoning without naming lead, or toxic sideroblastic anaemia without naming lead",
+    "2": "Warm AIHA, IVIG-related haemolysis, MDS with ring sideroblasts or drug-induced anaemia as the final diagnosis",
+    "1": "Unrelated diagnosis, or one that would lead to harm"
+  },
+  "final_dx": {
+    "id": "DX.LEAD_POISONING",
+    "text": "Lead poisoning from an unlabelled herbal supplement, presenting with abdominal pain and anaemia with coarse basophilic stippling and ring sideroblasts",
+    "icd10": [
+      "T56.0",
+      "D64.2"
+    ],
+    "accepted_synonyms": [
+      "lead toxicity",
+      "lead poisoning",
+      "plumbism",
+      "saturnism",
+      "lead intoxication",
+      "heavy-metal (lead) poisoning"
+    ]
+  },
+  "rubric": {
+    "rubric": [
+      {
+        "score": 5,
+        "text": "Lead poisoning, with the herbal supplement identified as the source",
+        "if": {
+          "all": [
+            {
+              "dx_in": [
+                "DX.LEAD_POISONING"
+              ]
+            },
+            {
+              "evidence_has": [
+                "H10"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "score": 4,
+        "text": "Lead poisoning, source not identified",
+        "if": {
+          "dx_in": [
+            "DX.LEAD_POISONING"
+          ]
+        }
+      },
+      {
+        "score": 3,
+        "text": "Heavy-metal poisoning without naming lead, or toxic sideroblastic anaemia without naming lead",
+        "if": {
+          "dx_in": [
+            "DX.HEAVY_METAL_POISONING",
+            "DX.SIDEROBLASTIC_ANAEMIA_TOXIC"
+          ]
+        }
+      },
+      {
+        "score": 2,
+        "text": "Warm AIHA, IVIG-related haemolysis, MDS with ring sideroblasts or drug-induced anaemia as the final diagnosis",
+        "if": {
+          "dx_in": [
+            "DX.WARM_AIHA",
+            "DX.IVIG_HAEMOLYSIS",
+            "DX.MDS_RING_SIDEROBLASTS",
+            "DX.DRUG_INDUCED_ANAEMIA"
+          ]
+        }
+      },
+      {
+        "score": 1,
+        "text": "Unrelated diagnosis, or one that would lead to harm",
+        "if": {
+          "not": {
+            "dx_in": [
+              "DX.LEAD_POISONING",
+              "DX.HEAVY_METAL_POISONING",
+              "DX.SIDEROBLASTIC_ANAEMIA_TOXIC",
+              "DX.WARM_AIHA",
+              "DX.IVIG_HAEMOLYSIS",
+              "DX.MDS_RING_SIDEROBLASTS",
+              "DX.DRUG_INDUCED_ANAEMIA"
+            ]
+          }
+        }
+      }
+    ],
+    "default_score": 1
+  }
+}

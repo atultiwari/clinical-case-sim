@@ -4,10 +4,21 @@ Every change to the shared contract (S-004) gets an entry here, newest first. Ea
 
 Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
+## 2026-09-25: a day without a result returns the latest earlier result (bundle schema 0.3, planned)
+
+- When a player or seat orders a test on a day for which the case holds no value for a component, the engine returns the most recent earlier value of that component, marked with the day it was taken ("result from day 0"). A value with no day is valid throughout the admission. Only the days before a component's first value need their own value (Case Library SPEC §10.2).
+- The Case Vault's coverage check and normal generator follow the same rule (migration `20260925140203_casevault_carry_forward.sql`, Case Library L0.9). Bundle rows are unchanged: a bundle simply holds fewer rows per component.
+
+Acknowledgements:
+
+- [ ] Nidana: the game server answers an order on a day without a value with the latest earlier value and shows its day.
+- [ ] Sambhasha: the Gatekeeper does the same when it releases results to the Chart.
+
 ## 2026-09-25: catalogue v1 (Case Library L0.5)
 
 - `case-library/catalogue/normal_templates.csv` gains a `review_status` column (`pending` or `approved`); the Case Vault loader takes it from the CSV, and the normal generator uses approved templates only.
 - Test prices carry their source: `CGHS 2025, Tier I NABH (OM 03.10.2025)` where a CGHS rate matches, `reviewer` where Atul set it, and `estimate` otherwise. Sambhasha's `prices_inr.yaml` and `turnaround.yaml` are generated from these.
+- The MCV formula check (`R.MCV`) tolerates 4% rather than 2%: analysers measure MCV and calculate the haematocrit, and published tables round both haematocrit and red cell count to two decimals (the pilot differs by 2.5% on days 5 and 6).
 - Atul approved the catalogue review pack as a whole in chat on 2026-09-25, to be checked again before Nidana's production release. Claude filled the pack from that approval (`review/catalogue-v1/catalogue-review-v1.decided.xlsx`, not in Git): every reference range, price, turnaround and diagnosis code approved as proposed, and the 54 normal texts with an audit suggestion replaced by it. All 228 normal templates are approved.
 - Prices: 190 tests take the CGHS NABH Tier I rate; 61 remain flagged estimates. Diagnosis codes: the proposed ICD-10 and ICD-11 codes, 15 of them corrected by the audit.
 - Units and sources: urea's conventional unit is now `mg/dL` (factor 6.006, as Indian reports give "blood urea"), no longer BUN. Normal report components that cited Tietz now cite `Catalogue review, Dr Atul Tiwari (2026)`. HbA1c stays in % only; LOINC codes stay empty until a later version.

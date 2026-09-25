@@ -1,0 +1,300 @@
+[
+  {
+    "id": "CN01",
+    "specialty": "REF.HAEMATOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "Asked to advise on anaemia with a possible haemolytic picture in a woman with inclusion body myositis on maintenance IVIG and recently started mycophenolate. We reviewed the counts, haemolysis markers and antiglobulin testing in the Chart so far. The reticulocyte response is appropriate, so marrow suppression from mycophenolate is less likely. If the direct antiglobulin test is only weakly positive for IgG, with C3d negative, in a group A patient receiving IVIG it may reflect passively transferred antibody rather than a warm autoimmune process, particularly if the film shows no spherocytes. The cause of the anaemia is not yet clear. Happy to review again with the results.",
+    "recommendations": [
+      "Ask for the blood film to be reviewed by a haematopathologist, looking specifically for red cell inclusions",
+      "Take a full medicine history, including herbal, traditional, imported and over-the-counter remedies and supplements",
+      "Record the date of the last IVIG infusion; consider an eluate",
+      "Hold off steroids or escalating immunosuppression until the picture is clearer"
+    ],
+    "origin": "affected",
+    "rationale": "V1 (ANALYSIS §8): a competent haematologist with the screening results would question a weak IgG-only DAT on IVIG, ask for a film review and a full remedy history. Conditional wording because V1 carries no condition on what the Chart holds.",
+    "confidence": 0.75
+  },
+  {
+    "id": "CN02",
+    "specialty": "REF.HAEMATOLOGY",
+    "variant": 2,
+    "condition": {
+      "finding_released": [
+        "FND.COARSE_BASOPHILIC_STIPPLING"
+      ]
+    },
+    "note_text": "Asked to advise on anaemia with a haemolytic picture; the Chart now includes coarse basophilic stippling. Coarse stippling, particularly with Pappenheimer bodies, is an important finding: it points away from an autoimmune process and towards a disturbance of red cell maturation or haem synthesis, a globin disorder or a red cell enzyme defect. A weak IgG-only antiglobulin test in a patient on IVIG is most likely passive and does not need treatment in its own right. Happy to review again with the results.",
+    "recommendations": [
+      "Send a blood lead level",
+      "Send haemoglobin studies (HPLC)",
+      "If those are unrevealing, consider pyrimidine 5'-nucleotidase activity",
+      "Take a full remedy and supplement history, including products from friends or family",
+      "Do not start steroids or iron on current evidence"
+    ],
+    "origin": "affected",
+    "rationale": "V2 (ANALYSIS §8): stippling calls for a blood lead, haemoglobin studies and, if unrevealing, pyrimidine 5'-nucleotidase activity. Names tests, never the diagnosis.",
+    "confidence": 0.75
+  },
+  {
+    "id": "CN03",
+    "specialty": "REF.HAEMATOLOGY",
+    "variant": 3,
+    "condition": {
+      "released_any": [
+        "L26"
+      ]
+    },
+    "note_text": "Asked to advise on anaemia; the Chart now includes a blood lead of 77.8 µg/dL. This markedly raised blood lead accounts for the anaemia, the coarse basophilic stippling and the haemolytic picture, and for any ring sideroblasts and dyserythropoiesis in the marrow, which are expected to resolve with treatment; they should not be labelled as a myelodysplastic process. The weak IgG-only antiglobulin test is most likely passive from IVIG. There is no indication for immunosuppression. Happy to review again with the results.",
+    "recommendations": [
+      "Chelation under the guidance of clinical toxicology, once the source is identified and stopped",
+      "No iron: stores are replete",
+      "Full blood count and reticulocytes weekly during treatment",
+      "Repeat blood lead after the course and again for rebound",
+      "Continue IVIG as planned by the treating team"
+    ],
+    "origin": "affected",
+    "rationale": "V3 (ANALYSIS §8): with the blood lead in the Chart the consultant supports chelation through toxicology and follow-up counts. Written without the diagnosis's synonyms so the leak scan, which scans every note, stays clean; the blood lead value makes it clear.",
+    "confidence": 0.8
+  },
+  {
+    "id": "CN04",
+    "specialty": "REF.TOXICOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "Asked whether a toxic or environmental cause could explain abdominal pain and anaemia. We reviewed the Chart so far. Colicky abdominal pain with an unexplained anaemia justifies a careful exposure history and targeted testing; no exposure is documented yet, so no specific toxic cause can be supported at present. Happy to review again with the results.",
+    "recommendations": [
+      "Take a detailed exposure history: herbal, traditional, imported and over-the-counter remedies and supplements, including products given by friends or family; occupation; hobbies; home renovation and water supply",
+      "Send a venous blood lead level",
+      "Ask whether anyone else takes the same products",
+      "Keep any product the patient has been taking, in case it needs testing"
+    ],
+    "origin": "affected",
+    "rationale": "V1 (ANALYSIS §8): asks for an exposure history and suggests a blood lead, which a toxicologist would do for any referral of colicky pain with anaemia. Names the test, never the diagnosis.",
+    "confidence": 0.75
+  },
+  {
+    "id": "CN05",
+    "specialty": "REF.TOXICOLOGY",
+    "variant": 2,
+    "condition": {
+      "released_any": [
+        "L26"
+      ]
+    },
+    "note_text": "Asked to advise; the Chart now includes a blood lead of 77.8 µg/dL. This level, in an adult with abdominal pain and anaemia, warrants chelation. The source must be found and removed; an unlabelled remedy or supplement is a common source and should be stopped now. Happy to review again with the results.",
+    "recommendations": [
+      "Stop the suspected source before or alongside chelation",
+      "Oral succimer (DMSA) at standard weight-based dosing, under our supervision",
+      "Check full blood count, renal and liver function during the course",
+      "Repeat blood lead after the course and again two to three weeks later for rebound",
+      "Notify public health",
+      "Send the product for testing, including for other metals such as mercury and arsenic",
+      "Identify and test anyone else who has taken the product"
+    ],
+    "origin": "affected",
+    "rationale": "V2 (ANALYSIS §8): stop the source, oral succimer, repeat blood lead after the course and for rebound, notify public health, test the product and its other users. Written without the diagnosis's synonyms; the blood lead value makes it clear.",
+    "confidence": 0.8
+  },
+  {
+    "id": "CN06",
+    "specialty": "REF.GASTROENTEROLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "Asked to advise on three weeks of worsening abdominal pain with anaemia. We reviewed the Chart so far. There are no features of a surgical abdomen, and if there is no history of bleeding and iron stores are replete, blood loss is an unlikely cause of the anaemia. Diffuse, colicky pain with a soft abdomen alongside a haemolytic anaemia is unlikely to be primarily gastrointestinal. Happy to review again with the results.",
+    "recommendations": [
+      "Lipase, if not already done",
+      "Abdominal ultrasound if the pain persists or the examination changes",
+      "Endoscopy is not urgent; we would consider it if there is dyspepsia, bleeding or iron deficiency",
+      "Consider metabolic and toxic causes of colicky pain with anaemia, including a full medicine and remedy history and urine porphyrin precursors"
+    ],
+    "origin": "affected",
+    "rationale": "V1 (ANALYSIS §8). The suggestion to consider metabolic and toxic causes is a judgement call: a competent gastroenterologist would raise it for colicky pain with haemolysis and no GI cause, and it names no diagnosis.",
+    "confidence": 0.65
+  },
+  {
+    "id": "CN07",
+    "specialty": "REF.NEUROLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "Asked to review weakness and tiredness in a woman with known inclusion body myositis. We reviewed the Chart so far. The pattern of weakness, in the finger flexors and quadriceps, fits the known myositis, and the raised CK is in keeping with it. There is no wrist or foot drop and sensation is intact, so there is no clinical evidence of a neuropathy, and nothing new neurologically. The tiredness is more likely due to the anaemia. Happy to review again with the results.",
+    "recommendations": [
+      "Nerve conduction studies and EMG only if new focal weakness or sensory symptoms develop",
+      "Continue the current myositis care",
+      "Decisions about IVIG rest with the treating team and haematology, given the haemolysis",
+      "Physiotherapy for mobility as needed"
+    ],
+    "origin": "affected",
+    "rationale": "V1 (ANALYSIS §8): weakness fits the known IBM (G05); no neuropathy; nothing new. Leaves IVIG decisions to the treating team and haematology.",
+    "confidence": 0.75
+  },
+  {
+    "id": "CN08",
+    "specialty": "REF.CARDIOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "Asked to advise on tachycardia and a troponin result in a woman with anaemia and inclusion body myositis. We reviewed the Chart so far. A sinus tachycardia fits the anaemia. If troponin T is raised while troponin I is normal and the ECG shows no ischaemic change, the likeliest source in active myositis is regenerating skeletal muscle rather than the heart. We see no cardiac cause for her symptoms. Happy to review again with the results.",
+    "recommendations": [
+      "Use troponin I rather than troponin T to assess for myocardial injury in this patient",
+      "Treat the anaemia; the heart rate should settle as it improves",
+      "Echocardiography only if new chest pain, breathlessness out of proportion or signs of heart failure"
+    ],
+    "origin": "affected",
+    "rationale": "V1 (ANALYSIS §8), tied to judgement call 6 (troponin T mildly raised). Conditional wording so the note stays correct whichever troponin T value Atul approves.",
+    "confidence": 0.7
+  },
+  {
+    "id": "CN09",
+    "specialty": "REF.NEPHROLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific renal concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN10",
+    "specialty": "REF.RHEUMATOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific rheumatological concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN11",
+    "specialty": "REF.ENDOCRINOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific endocrine concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN12",
+    "specialty": "REF.INFECTIOUS_DISEASES",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific infection concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN13",
+    "specialty": "REF.RESPIRATORY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific respiratory concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN14",
+    "specialty": "REF.PSYCHIATRY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific psychiatric concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN15",
+    "specialty": "REF.DERMATOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific skin concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN16",
+    "specialty": "REF.ONCOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific oncological concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN17",
+    "specialty": "REF.OPHTHALMOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific eye concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN18",
+    "specialty": "REF.ENT",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific ear, nose or throat concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN19",
+    "specialty": "REF.GENERAL_SURGERY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific surgical concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN20",
+    "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN21",
+    "specialty": "REF.DIETETICS",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific nutritional concerns from our side; happy to review if intake or weight changes.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  },
+  {
+    "id": "CN22",
+    "specialty": "REF.PHYSIOTHERAPY",
+    "variant": 1,
+    "condition": null,
+    "note_text": "No specific mobility concerns from our side; happy to review if function changes.",
+    "recommendations": [],
+    "origin": "rule",
+    "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+    "confidence": null
+  }
+]

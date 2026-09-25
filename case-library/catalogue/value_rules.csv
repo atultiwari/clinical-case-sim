@@ -1,7 +1,7 @@
 id,kind,target,inputs,factor,tolerance_pct,formula
 R.MCH,ratio,CMP.MCH,CMP.HB|CMP.RBC,1,2,MCH (pg) = haemoglobin (g/L) / red cell count (x10^12/L)
 R.MCHC,ratio,CMP.MCHC,CMP.HB|CMP.HCT,1,2,MCHC (g/L) = haemoglobin (g/L) / haematocrit (L/L)
-R.MCV,ratio,CMP.MCV,CMP.HCT|CMP.RBC,1000,2,MCV (fL) = 1000 x haematocrit (L/L) / red cell count (x10^12/L)
+R.MCV,ratio,CMP.MCV,CMP.HCT|CMP.RBC,1000,4,MCV (fL) = 1000 x haematocrit (L/L) / red cell count (x10^12/L)
 R.RETIC_PCT,ratio,CMP.RETIC_PCT,CMP.RETIC_ABS|CMP.RBC,0.1,2,Reticulocytes (%) = 0.1 x reticulocytes (x10^9/L) / red cell count (x10^12/L)
 R.WBC_DIFF_SUM,sum_equals,CMP.WBC,CMP.NEUT|CMP.LYMPH|CMP.MONO|CMP.EOS|CMP.BASO,1,5,"White cell count (x10^9/L) = neutrophils + lymphocytes + monocytes + eosinophils + basophils (each x10^9/L), within 5%"
 R.TSAT,ratio,CMP.TSAT,CMP.IRON|CMP.TIBC,100,5,Transferrin saturation (%) = serum iron (umol/L) / TIBC (umol/L) x 100

@@ -159,9 +159,10 @@ def test_coverage_lists_what_is_still_open(db: psycopg.Connection) -> None:
     _derive(db, cv)
     _normals(db, cv)
 
+    # The blood count is covered: Hb and RBC from day 0 carry forward to days 1-2.
     assert _missing(db, cv) == {
         "referral": ["REF.TOXICOLOGY"],
-        "test": ["LAB.CBC", "LAB.FILM"],
+        "test": ["LAB.FILM"],
     }
 
 
@@ -190,7 +191,7 @@ def test_coverage_is_complete_once_everything_resolves(db: psycopg.Connection) -
     assert gaps == (0,)
 
 
-def test_coverage_gaps_name_component_and_day(db: psycopg.Connection) -> None:
+def test_coverage_carries_the_latest_earlier_value_forward(db: psycopg.Connection) -> None:
     cv = seed_mini_case(db)
 
     rows = db.execute(
@@ -199,8 +200,46 @@ def test_coverage_gaps_name_component_and_day(db: psycopg.Connection) -> None:
         (cv,),
     ).fetchall()
 
-    assert ("LAB.CBC", "CMP.RBC", 2) in rows
-    assert ("LAB.CBC", "CMP.HB", 0) not in rows
+    assert ("LAB.CBC", "CMP.RBC", 2) not in rows  # RBC day 0 answers a day-2 order
+    assert ("LAB.CBC", "CMP.MCH", 1) in rows  # nothing derived yet
+
+
+def test_coverage_leaves_the_days_before_the_first_value_open(db: psycopg.Connection) -> None:
+    cv = seed_mini_case(db)
+    db.execute("delete from casevault.fact where case_version_id = %s and id = 'L01'", (cv,))
+    db.execute(
+        "insert into casevault.synthetic_ledger (case_version_id, target, day_bucket, tier, value,"
+        " rationale, confidence, generator, skill_version) values"
+        " (%s, 'CMP.RBC', 2, 'affected', '{\"value\": 2.7}', 'Tracks Hb', 0.7, 'g', 'v0')",
+        (cv,),
+    )
+
+    rows = db.execute(
+        "select day from casevault.coverage_gaps(%s) where component_id = 'CMP.RBC' order by day",
+        (cv,),
+    ).fetchall()
+
+    assert rows == [(0,), (1,)]
+
+
+def test_normals_never_fill_a_component_the_case_has_measured(db: psycopg.Connection) -> None:
+    cv = seed_mini_case(db)
+    db.execute(
+        "insert into casevault.fact (case_version_id, id, category, item, catalogue_ref, value,"
+        " value_num, unit, day, origin, release, source_locator, generator, skill_version) values"
+        " (%s, 'L99', 'chemistry', 'Sodium', 'CMP.NA', '131', 131, 'mmol/L', 1, 'article',"
+        " 'chart', 'Table 9', 'g', 'v0')",
+        (cv,),
+    )
+
+    _normals(db, cv)
+
+    assert {t for t, _, _ in _ledger(db, cv)} >= {"CMP.K"}
+    assert "CMP.NA" not in {t for t, _, _ in _ledger(db, cv)}
+    gaps = db.execute(
+        "select day from casevault.coverage_gaps(%s) where component_id = 'CMP.NA'", (cv,)
+    ).fetchall()
+    assert gaps == [(0,)]  # day 0 comes before the first value: Claude resolves it
 
 
 # --- Consistency checks ------------------------------------------------------
