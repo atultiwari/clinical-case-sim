@@ -83,9 +83,10 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
 
 ## Phase 1: the first ten cases
 
-- [ ] **L1.1 Case sourcing**
+- [x] **L1.1 Case sourcing** (done 2026-09-25, ahead of LM0 at Atul's request: `cases/SHORTLIST-batch1.md`)
   - Build: Claude proposes about 15 open-access haematology case reports, scored with the pilot's selection criteria (`cases/PMC12949993/PILOT_CASE.md`), with their licence flags, plus two or three common presentations (for example iron deficiency from menorrhagia, B12 deficiency in a vegetarian, thalassaemia trait against iron deficiency) as report-based or de novo cases.
   - Accept: a shortlist with licence, flags, reasons and a score for each.
+  - Note (2026-09-25): 25 E-utilities queries, 923 records screened, 39 full texts cached in `data/articles/`. About 15 CC-licensed candidates scored against the pilot's ten criteria (top: PMC12364935, visceral leishmaniasis misdiagnosed as SLE, 9/10), three common presentations (a von Willebrand report for menorrhagia; de novo NID-0001, B12 deficiency in a vegetarian, and NID-0002, thalassaemia trait at antenatal booking), and the catalogue areas the top five would add. Licences were read from each article's JATS `<license>` element because PMC's OA service returned 404; they are re-verified at L1.2. Scores may shift after the pilot review.
   - Depends on: LM0.
 
 - [ ] **L1.2 [human] Choose batch 1**
