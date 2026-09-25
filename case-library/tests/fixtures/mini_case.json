@@ -1,0 +1,61 @@
+{
+  "case_id": "PMC0000001",
+  "version": 1,
+  "source": {
+    "pmcid": "PMC0000001",
+    "doi": "10.0000/fixture.1",
+    "title": "A fixture case for Case Vault tests",
+    "journal": "Test Journal",
+    "published": "2026-01-01",
+    "licence": "CC BY 4.0",
+    "attribution": "Adapted from a fixture case. Licensed CC BY 4.0.",
+    "production_ok": true,
+    "public_release_ok": true
+  },
+  "case": {
+    "slug": "c-fx001",
+    "display_title": "Tired and pale",
+    "display_tags": ["haematology"],
+    "specialty": "haematology",
+    "lab_profile": {"sex": "F", "age_years": 49}
+  },
+  "clock": {"day_0": "2026-01-01", "day_0_label": "Admission"},
+  "vignette": "A 49-year-old woman has been tired and pale for a month.",
+  "opening_statement_lay": "I've been so tired lately, doctor.",
+  "facts": [
+    {"id": "H01", "category": "history", "item": "Presenting complaint", "catalogue_ref": "HX.PRESENTING",
+     "release_text": "Tiredness for a month.", "day": 0, "release": "vignette", "source_locator": "Case"},
+    {"id": "H02", "category": "history", "item": "Supplements", "released_by": ["HX.SUPPLEMENTS"],
+     "release_text": "Takes a herbal supplement.", "day": 0, "release": "chart", "pivotal": true,
+     "source_locator": "Case"}
+  ],
+  "series": [
+    {"id": "S01", "item": "Haemoglobin", "catalogue_ref": "CMP.HB", "unit": "g/L", "ref_range": "115-165",
+     "source_locator": "Table 1", "points": [{"day": 0, "value": 72, "flag": "L"}, {"day": 2, "value": 80, "flag": "L"}]}
+  ],
+  "single_results": [
+    {"id": "L01", "item": "Red cell count", "catalogue_ref": "CMP.RBC", "value": 2.4, "unit": "x10^12/L",
+     "ref_range": "3.8-4.8", "flag": "L", "day": 0, "source_locator": "Table 1"},
+    {"id": "L02", "item": "Blood lead", "catalogue_ref": "CMP.PB", "value": 77.8, "unit": "ug/dL",
+     "ref_range": "0-5", "flag": "H", "day": null, "reveals_dx": true, "source_locator": "Table 2"}
+  ],
+  "raw_material": [
+    {"id": "R01", "test": "Peripheral blood film", "test_item_id": "LAB.FILM", "release": "service.pathology",
+     "day": 0, "findings": "Coarse basophilic stippling.", "media": ["M01"], "source_locator": "Figure 1"}
+  ],
+  "media": [
+    {"id": "M01", "figure": "Figure 1", "specimen": "Blood film", "stain": "Romanowsky",
+     "redacted_caption": "Blood film at presentation.", "licence": "CC BY 4.0",
+     "production_ok": true, "public_release_ok": true}
+  ],
+  "gaps": [{"id": "G01", "item": "Vital signs", "guidance": "Normal.", "review_required": false}],
+  "ground_truth": {
+    "final_dx": {"id": "DX.LEAD_POISONING", "text": "Lead poisoning from a supplement",
+                 "accepted_synonyms": ["lead poisoning", "plumbism"]},
+    "accepted_differential": ["Iron deficiency"],
+    "must_do": [{"text": "Measure blood lead", "if": {"ordered_any": ["LAB.BLOOD_LEAD"]}}],
+    "must_not_do": [],
+    "treatment_given": "Chelation.",
+    "outcome": "Recovered."
+  }
+}
