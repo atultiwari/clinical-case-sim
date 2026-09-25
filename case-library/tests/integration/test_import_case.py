@@ -91,7 +91,7 @@ def test_release_conditions_and_figure_flags(db: psycopg.Connection) -> None:
     ).fetchone()
 
     assert condition == (True,)
-    assert flagged == (0,)  # figures wait for Atul's own flags
+    assert flagged == (4,)  # Atul's own figure flags, set 2026-09-25 (L0.8)
 
 
 def test_same_version_cannot_be_imported_twice(db: psycopg.Connection) -> None:

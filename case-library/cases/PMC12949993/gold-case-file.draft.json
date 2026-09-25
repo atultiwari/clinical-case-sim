@@ -115,10 +115,10 @@
   ],
 
   "media": [
-    {"id": "M01", "figure": "Figure 1", "specimen": "Peripheral blood film", "stain": "Romanowsky", "redacted_caption": "Peripheral blood film at presentation.", "licence": "CC BY 4.0", "has_annotations": true, "file_path": "PMC12949993/M01.jpg", "raw_fact_id": "R01"},
-    {"id": "M02", "figure": "Figure 2A", "specimen": "Bone marrow aspirate", "stain": "May-Grunwald-Giemsa", "redacted_caption": "Bone marrow aspirate, May-Grunwald-Giemsa stain.", "licence": "CC BY 4.0", "has_annotations": true, "file_path": "PMC12949993/M02.jpg", "raw_fact_id": "R02"},
-    {"id": "M03", "figure": "Figure 2B", "specimen": "Bone marrow aspirate", "stain": "Prussian blue (iron)", "redacted_caption": "Bone marrow aspirate, Prussian blue stain.", "licence": "CC BY 4.0", "has_annotations": true, "file_path": "PMC12949993/M03.jpg", "raw_fact_id": "R03"},
-    {"id": "M04", "figure": "Figure 3", "specimen": "Peripheral blood film", "stain": "Romanowsky", "redacted_caption": "Peripheral blood film, second field.", "licence": "CC BY 4.0", "has_annotations": true, "file_path": "PMC12949993/M04.jpg", "raw_fact_id": "R01"}
+    {"id": "M01", "figure": "Figure 1", "specimen": "Peripheral blood film", "stain": "Romanowsky", "redacted_caption": "Peripheral blood film at presentation.", "licence": "CC BY 4.0", "production_ok": true, "public_release_ok": true, "has_annotations": true, "file_path": "PMC12949993/F1.jpg", "raw_fact_id": "R01"},
+    {"id": "M02", "figure": "Figure 2A", "specimen": "Bone marrow aspirate", "stain": "May-Grunwald-Giemsa", "redacted_caption": "Bone marrow aspirate, May-Grunwald-Giemsa stain.", "licence": "CC BY 4.0", "production_ok": true, "public_release_ok": true, "has_annotations": true, "file_path": "PMC12949993/F2.jpg", "raw_fact_id": "R02"},
+    {"id": "M03", "figure": "Figure 2B", "specimen": "Bone marrow aspirate", "stain": "Prussian blue (iron)", "redacted_caption": "Bone marrow aspirate, Prussian blue stain.", "licence": "CC BY 4.0", "production_ok": true, "public_release_ok": true, "has_annotations": true, "file_path": "PMC12949993/F2.jpg", "raw_fact_id": "R03"},
+    {"id": "M04", "figure": "Figure 3", "specimen": "Peripheral blood film", "stain": "Romanowsky", "redacted_caption": "Peripheral blood film, second field.", "licence": "CC BY 4.0", "production_ok": true, "public_release_ok": true, "has_annotations": true, "file_path": "PMC12949993/F3.jpg", "raw_fact_id": "R01"}
   ],
 
   "ground_truth": {

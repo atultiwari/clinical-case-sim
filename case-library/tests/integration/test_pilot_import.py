@@ -110,16 +110,22 @@ def test_figures_carry_their_licence_and_annotation_flag(pilot: psycopg.Connecti
         (CV,),
     ).fetchall()
     assert [r[0] for r in rows] == ["M01", "M02", "M03", "M04"]
-    for media_id, licence, prod, public, annotated, path, decision in rows:
-        # The figures' own licence flags wait for Atul: licence decisions are his.
+    for _, licence, prod, public, annotated, _, decision in rows:
+        # Atul set the figures' own flags on 2026-09-25 (CC BY 4.0, no separate credit).
         assert (licence, prod, public, annotated, decision) == (
             "CC BY 4.0",
-            False,
-            False,
+            True,
+            True,
             True,
             "pending",
         )
-        assert path == f"PMC12949993/{media_id}.jpg"
+    # One file per published figure: Figure 2 holds panels A (M02) and B (M03).
+    assert [r[5] for r in rows] == [
+        "PMC12949993/F1.jpg",
+        "PMC12949993/F2.jpg",
+        "PMC12949993/F2.jpg",
+        "PMC12949993/F3.jpg",
+    ]
 
 
 def test_ground_truth_and_gaps_import(pilot: psycopg.Connection) -> None:
