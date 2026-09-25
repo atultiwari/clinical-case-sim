@@ -256,6 +256,16 @@ def _load_checked(directory: Path) -> Catalogue | None:
     return catalogue
 
 
+def _write_parts(document: dict[str, Any], out: Path, max_bytes: int) -> None:
+    from scripts.catalogue_parts import dumps, split_document
+
+    pieces = split_document(document, max_bytes)
+    for number, piece in enumerate(pieces, start=1):
+        path = out.with_name(f"{out.stem}.part{number:02d}.json")
+        path.write_text(dumps(piece) + "\n", encoding="utf-8")
+    print(f"Wrote {len(pieces)} parts beside it; load them in order.")
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = parser.add_subparsers(dest="command", required=True)
@@ -265,6 +275,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     build = sub.choices["build"]
     build.add_argument("--version", type=int, required=True)
     build.add_argument("--out", type=Path)
+    build.add_argument(
+        "--max-bytes", type=int, help="also write <out>.part<n>.json parts of at most this size"
+    )
     args = parser.parse_args(argv)
 
     catalogue = _load_checked(args.dir)
@@ -277,6 +290,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         document = build_document(catalogue, args.version)
         out.write_text(json.dumps(document, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         print(f"Wrote {out}.")
+        if args.max_bytes:
+            _write_parts(document, out, args.max_bytes)
     return 0
 
 
