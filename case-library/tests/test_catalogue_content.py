@@ -175,3 +175,13 @@ def test_v1_prices_are_cghs_rates_or_flagged_estimates() -> None:
     # L0.5: CGHS NABH Tier I where a rate matches, otherwise a flagged estimate.
     sources = {r["price_source"] for r in _catalogue().rows("tests.csv")}
     assert sources == {"CGHS 2025, Tier I NABH (OM 03.10.2025)", "estimate"}
+
+
+def test_player_visible_texts_carry_no_authoring_notes() -> None:
+    # Normal texts reach players verbatim; notes to the generator or curator belong elsewhere.
+    note = re.compile(r"\((?:Generator|Curator|Better:|Keep for|TODO|Note:)", re.IGNORECASE)
+    catalogue = _catalogue()
+    texts = [r["normal_text"] for r in catalogue.rows("components.csv")] + [
+        r["template"] for r in catalogue.rows("normal_templates.csv")
+    ]
+    assert [t for t in texts if note.search(t or "")] == []
