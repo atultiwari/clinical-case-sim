@@ -1,17 +1,19 @@
 """scripts/backup_case_vault.py with a fake `supabase db dump` (no network)."""
 
+import secrets
 import subprocess
 from collections.abc import Mapping, Sequence
 from datetime import UTC, datetime
 from pathlib import Path
+from urllib.parse import quote
 
 import pytest
 
 from scripts import backup_case_vault as bk
 
-# A fake password for the tests, never a real one.
-FAKE_PASSWORD = "s3cr@t"  # noqa: S105 - test value
-URL = "postgresql://postgres.ref:s3cr%40t@pooler.example.com:5432/postgres"
+# Made up per run (with an "@" so the URL must percent-encode it); never a real one.
+FAKE_PASSWORD = f"{secrets.token_hex(4)}@{secrets.token_hex(4)}"
+URL = f"postgresql://postgres.ref:{quote(FAKE_PASSWORD, safe='')}@pooler.example.com:5432/postgres"
 SCHEMA_SQL = "".join(f'CREATE TABLE "casevault"."t{i}" (id int);\n' for i in range(24))
 
 
