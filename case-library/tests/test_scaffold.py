@@ -10,7 +10,13 @@ import pytest
 from tests.conftest import LOCAL_DB_URL
 
 CASE_LIBRARY = Path(__file__).resolve().parents[1]
-ENV_KEYS = ["CASE_VAULT_DB_URL_READONLY", "NCBI_API_KEY", "NCBI_EMAIL"]
+ENV_KEYS = [
+    "CASE_VAULT_DB_URL_READONLY",
+    "CASE_VAULT_DB_URL_BACKUP",
+    "CASE_VAULT_BACKUP_DIR",
+    "NCBI_API_KEY",
+    "NCBI_EMAIL",
+]
 
 
 def _env_example_entries() -> dict[str, str]:
