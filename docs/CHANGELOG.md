@@ -14,12 +14,16 @@ Acknowledgements:
 - [ ] Nidana: the game server answers an order on a day without a value with the latest earlier value and shows its day.
 - [ ] Sambhasha: the Gatekeeper does the same when it releases results to the Chart.
 
-## 2026-09-25: catalogue v1 (in review, Case Library L0.5)
+## 2026-09-25: catalogue v1 (Case Library L0.5)
 
 - `case-library/catalogue/normal_templates.csv` gains a `review_status` column (`pending` or `approved`); the Case Vault loader takes it from the CSV, and the normal generator uses approved templates only.
 - Test prices carry their source: `CGHS 2025, Tier I NABH (OM 03.10.2025)` where a CGHS rate matches, `reviewer` where Atul set it, and `estimate` otherwise. Sambhasha's `prices_inr.yaml` and `turnaround.yaml` are generated from these.
 - The MCV formula check (`R.MCV`) tolerates 4% rather than 2%: analysers measure MCV and calculate the haematocrit, and published tables round both haematocrit and red cell count to two decimals (the pilot differs by 2.5% on days 5 and 6).
-- The rest of v1 (reference ranges, normal texts, prices, turnaround, diagnosis codes) is Atul's review; this entry is completed when his decisions are applied.
+- Atul approved the catalogue review pack as a whole in chat on 2026-09-25, to be checked again before Nidana's production release. Claude filled the pack from that approval (`review/catalogue-v1/catalogue-review-v1.decided.xlsx`, not in Git): every reference range, price, turnaround and diagnosis code approved as proposed, and the 54 normal texts with an audit suggestion replaced by it. All 228 normal templates are approved.
+- Prices: 190 tests take the CGHS NABH Tier I rate; 61 remain flagged estimates. Diagnosis codes: the proposed ICD-10 and ICD-11 codes, 15 of them corrected by the audit.
+- Units and sources: urea's conventional unit is now `mg/dL` (factor 6.006, as Indian reports give "blood urea"), no longer BUN. Normal report components that cited Tietz now cite `Catalogue review, Dr Atul Tiwari (2026)`. HbA1c stays in % only; LOINC codes stay empty until a later version.
+- Normal texts that depend on the patient (menstrual history, pelvic examination, pulse, ECG rate, postural blood pressure, height and weight, peak flow, capillary glucose) are neutral in v1; the curator writes them from the case's own sex and vital signs where they differ. The curator also records the blood group of every case. Past-infection serology: CMV and EBV IgG detected, IgM not detected, parvovirus IgG not detected.
+- Contents unchanged in size: 141 history questions, 68 examinations, 251 tests, 371 components, 116 actions, 19 referrals, 492 diagnoses, 60 findings.
 
 Acknowledgements:
 

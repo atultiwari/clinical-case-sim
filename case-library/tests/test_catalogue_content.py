@@ -171,6 +171,7 @@ def test_exogenous_drug_levels_are_not_detected_by_default() -> None:
         assert components[cid]["unit_si"] == ""
 
 
-def test_v0_prices_are_all_flagged_as_estimates() -> None:
-    # Until L0.5 matches them against the CGHS rate list (catalogue/README.md).
-    assert {r["price_source"] for r in _catalogue().rows("tests.csv")} == {"estimate"}
+def test_v1_prices_are_cghs_rates_or_flagged_estimates() -> None:
+    # L0.5: CGHS NABH Tier I where a rate matches, otherwise a flagged estimate.
+    sources = {r["price_source"] for r in _catalogue().rows("tests.csv")}
+    assert sources == {"CGHS 2025, Tier I NABH (OM 03.10.2025)", "estimate"}
