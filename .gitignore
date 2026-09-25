@@ -53,4 +53,6 @@ htmlcov/
 # Local data, raw downloads, run data and review packs
 /case-library/data/
 /case-library/review/
+# Worktrees the desktop app makes for background sessions started in case-library/
+/case-library/.claude/worktrees/
 /sambhasha/data/
