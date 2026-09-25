@@ -5,7 +5,7 @@ import postgres from "postgres";
 import { describeDatabaseHost, type DatabaseHost } from "@/lib/db-host";
 import { DB_URL_VARIABLE, readDatabaseUrl } from "@/server/env";
 
-/** The role every Studio query runs as (migration 20260925210000). */
+/** The role every Studio query runs as (migration 20260925132542). */
 const READER_ROLE = "casevault_reader";
 
 export type Reader = postgres.TransactionSql;

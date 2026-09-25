@@ -8,7 +8,7 @@ The private, read-only viewer of the Case Vault (Case Library task L0.7; `docs/S
 
 - Everything is read on the server (React Server Components). The browser receives only the rendered page.
 - One module, `src/server/db.ts`, opens the connection. It reads `CASE_VAULT_DB_URL_READONLY` from the server environment (never a `NEXT_PUBLIC_` variable).
-- Every query runs inside a `READ ONLY` transaction that first switches to the role `casevault_reader` (migration `20260925210000_casevault_reader_role.sql`). That role can only `SELECT` and call the functions that read. So even the local superuser URL cannot write through the Studio.
+- Every query runs inside a `READ ONLY` transaction that first switches to the role `casevault_reader` (migration `20260925132542_casevault_reader_role.sql`). That role can only `SELECT` and call the functions that read. So even the local superuser URL cannot write through the Studio.
 - Queries use postgres.js tagged templates, which send every value as a parameter.
 
 ## Run it locally

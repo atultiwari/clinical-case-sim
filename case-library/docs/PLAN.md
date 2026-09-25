@@ -57,6 +57,7 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
 - [ ] **L0.7 Case Studio v1 (read-only)**
   - Build: `studio/`, a Next.js app (package `@case-library/studio`) with the screens in SPEC §8, reading the Case Vault server-side through a read-only database role; licence badges on cases and figures; no Supabase Auth; a separate login and an allow-list if deployed.
   - Accept: the Studio lists the fixture case and the pilot once imported, shows every tab, and cannot write (the role has no write rights); an anonymous Nidana tester's session cannot open it. Runs locally with `pnpm --filter @case-library/studio dev`.
+  - Note (2026-09-25): built on branch `case-library/L0.7-case-studio` (from main). `casevault_reader` (migration `20260925132542`, applied to the Case Vault; the security advisor is now clean) reads every table and runs only the read functions; tests show it cannot write and that Nidana's `anon` and `authenticated` roles see nothing. The Studio (`studio/`, `@case-library/studio`) has every SPEC §8 screen; each query runs in a read-only transaction as `casevault_reader`. Checked locally on the fixture case; the pilot appears once L0.8 imports it. Waiting on Atul: create the `studio_reader` login role in the Supabase SQL editor (command in `studio/README.md`) and put its URL in `studio/.env.local`, never in Git or a chat.
   - Depends on: L0.3.
 
 - [ ] **L0.8 Pilot import**
