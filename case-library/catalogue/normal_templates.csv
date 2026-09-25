@@ -141,7 +141,7 @@ HX.RECORDS.PREVIOUS,No previous records or test results available.,approved
 HX.RECORDS.DISCHARGE_SUMMARIES,No previous discharge summaries.,approved
 HX.RECORDS.REFERRAL_LETTER,Referral letter gives no further information.,approved
 EX.GEN.APPEARANCE,Comfortable at rest; alert and not in distress.,approved
-EX.GEN.VITALS,"Temperature 36.8 °C; pulse 76/min, regular; blood pressure 118/76 mmHg; respiratory rate 14/min; SpO2 98% on room air. (Keep for adults only; age-specific set for children.)",approved
+EX.GEN.VITALS,"Temperature 36.8 °C; pulse 76/min, regular; blood pressure 118/76 mmHg; respiratory rate 14/min; SpO2 98% on room air.",approved
 EX.GEN.CONSCIOUSNESS,"Alert and oriented to time, place and person; GCS 15/15.",approved
 EX.GEN.PALLOR,"No pallor of the conjunctivae, palms or nail beds.",approved
 EX.GEN.JAUNDICE,No scleral icterus.,approved

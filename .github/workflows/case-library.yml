@@ -80,3 +80,61 @@ jobs:
       - name: Stop the local database
         if: always()
         run: supabase stop --no-backup
+
+  # The Case Studio (L0.7): runs only when the Studio, the lockfile or this workflow change.
+  studio:
+    name: Case Studio (lint, type-check, tests, build)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Did the Studio change?
+        id: changes
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          # Unknown base (a new branch, a force push): run the job anyway.
+          if git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null \
+            && git diff --quiet "$BASE_SHA" HEAD -- case-library/studio pnpm-lock.yaml .github/workflows/case-library.yml; then
+            echo "studio=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "studio=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+        if: steps.changes.outputs.studio == 'true'
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        if: steps.changes.outputs.studio == 'true'
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install
+        if: steps.changes.outputs.studio == 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        if: steps.changes.outputs.studio == 'true'
+        run: pnpm --filter @case-library/studio lint
+
+      - name: Type-check
+        if: steps.changes.outputs.studio == 'true'
+        run: pnpm --filter @case-library/studio typecheck
+
+      # Unit tests; the integration tests skip without CASE_VAULT_DB_URL_READONLY.
+      - name: Tests
+        if: steps.changes.outputs.studio == 'true'
+        run: pnpm --filter @case-library/studio test
+
+      - name: Build
+        if: steps.changes.outputs.studio == 'true'
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+        run: pnpm --filter @case-library/studio build

@@ -338,8 +338,8 @@ For the pilot: about 90 `affected` or reviewer-set rows (about 25 of them judgem
 The basic development CMS Atul asked for (S-008): a private web app for viewing and accessing cases.
 
 - **Where:** `case-library/studio/`, a Next.js app. It runs on Atul's machine (`pnpm dev`) or privately on the VPS behind a login. It is never public and never part of the game.
-- **Data access:** server-side only, through a read-only database role on the Case Vault.
-- **Access control:** the Studio shows every diagnosis, so it never uses the project's Supabase Auth, where Nidana's anonymous testers also sign in. Locally it needs no login; if deployed, it sits behind a separate login at the proxy (for example an access proxy or basic authentication) and an allow-list with Atul's account only.
+- **Data access:** server-side only, through a read-only database role on the Case Vault (`casevault_reader`). Version 2 writes through a second role, `casevault_studio_writer`, which can only record review decisions and set figure production decisions.
+- **Access control:** the Studio shows every diagnosis, so it never uses the project's Supabase Auth, where Nidana's anonymous testers also sign in. Locally it needs no login (version 1 behaviour: read-only, answering on localhost only). Deployed on the VPS, it has its own in-app login page (Atul's decision, 2026-09-25, replacing the earlier plan of a login at the proxy): username and password for an allow-list of accounts set in the server's environment (`STUDIO_USERS`, scrypt hashes), a signed, HttpOnly, Secure, SameSite=Strict session cookie for 12 hours, rate limiting against guessing, and HTTPS through a reverse proxy with the Studio bound to localhost. Every page, route and server action checks the session (`studio/README.md`).
 
 | Screen | Shows |
 | --- | --- |
@@ -355,7 +355,7 @@ The basic development CMS Atul asked for (S-008): a private web app for viewing 
 | Catalogue | Items, synonyms, prices, turnaround and reference ranges |
 | Missing requests | Requests from Nidana and Sambhasha, by frequency, with their status |
 
-**Version 1 is read-only.** Version 2 (task L1.5, optional) adds review decisions and per-figure production decisions in the Studio, as an alternative to the Excel pack. Those are Atul's own writes through the Studio's server, recorded in `review_decision`; Claude's writes still go only through the MCP.
+**Version 1 is read-only.** Version 2 (task L1.5) adds review decisions (Approve, Edit with the new value, or Reject, on the ledger, reports and consult notes, and article facts) and per-figure production decisions (use, mask or exclude) in the Studio, as an alternative to the Excel pack. Those are Atul's own writes through the Studio's server: review decisions are recorded in `review_decision` under a batch `studio-<YYYY-MM-DD>-<username>`, and figure decisions go to the figure's `media` row. The Studio only records review decisions; Claude applies them to the content through the MCP as in §7.3, and Claude's writes still go only through the MCP.
 
 ---
 

@@ -39,15 +39,17 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
   - Note (2026-09-25): after the move to `~/Projects/research`, the LaunchAgent was installed and started with `launchctl kickstart`; it exited 0 and `~/CaseVaultBackups/backup.log` records `backup ok` (schema.sql 83,468 bytes, data.sql 7,827 bytes). Scheduled runs follow at 02:30.
   - Depends on: L0.2.
 
-- [ ] **L0.4 Catalogue v0**
+- [x] **L0.4 Catalogue v0** (done 2026-09-25: loaded into the Case Vault as the reviewed v1; see the notes)
   - Build: CSV files in `catalogue/` for history questions (about 120), examinations (about 70), tests with components (about 200 tests), actions (about 100), referrals (about 15), diagnoses (about 300, ICD-11 with ICD-10 cross-reference) and findings (about 60). Each item has at least two synonyms. Tests have route, specimen, INR price (CGHS where available, otherwise estimated and flagged), turnaround and components; components have units, conversion factors, decimals and reference ranges with their source. Normal templates for history, examination, imaging and consult notes. Load through the MCP.
   - Accept: the load succeeds; every test has at least one component; every component has a unit and a reference range; every item has at least two synonyms; every item on the pilot's paths (`ANALYSIS.md` §5–§6) exists.
   - Note (2026-09-25): built on branch `case-library/L0.4-catalogue-v0`. CSV files in `catalogue/` (formats and rules in its README): 141 history questions, 68 examinations, 251 tests, 371 components with 397 reference ranges, 116 actions, 19 referrals, 492 diagnoses, 60 findings, 228 normal templates, 13 value rules. `scripts/catalogue.py check` enforces the acceptance rules; `tests/test_catalogue_content.py` checks every id in `ANALYSIS.md` and every laboratory result in the pilot. Interpretive tests carry one qualitative report component whose normal text is the imaging or report template. A qualitative component has normal text and a text range in place of a unit. Prices are all estimates, and 460 of 492 diagnoses have no ICD-11 code yet (left blank rather than guessed); both go to L0.5. `casevault.load_catalogue` is applied to the Case Vault, and the whole catalogue loads into the local database. At over 450 KB the data is too large to type through the connector, so Atul chose to hold the Case Vault load until the reviewed catalogue v1 (L0.5); L0.4 closes then.
+  - Note (2026-09-25): closed with L0.5; catalogue v1 is in the Case Vault (see L0.5).
   - Depends on: L0.3.
 
-- [ ] **L0.5 [human] Catalogue review**
+- [x] **L0.5 [human] Catalogue review** (done 2026-09-25: Atul approved the pack as a whole; recheck before the production release)
   - Build: a catalogue review pack (Excel) covering reference ranges and their sources, normal templates, prices and turnaround. Atul decides; Claude applies the decisions and records catalogue v1 in `../../docs/CHANGELOG.md`.
   - Accept: no undecided rows; catalogue version 1 recorded. Can run in parallel with L0.6–L0.9.
+  - Note (2026-09-25): Atul approved the catalogue in chat ("I approve it for now"), to be checked again before Nidana's production release. On his instruction Claude filled every row of the pack (`review/catalogue-v1/catalogue-review-v1.decided.xlsx`, not in Git): ranges, prices, turnaround and diagnosis codes approved as proposed; the 54 normal texts with an audit suggestion take it; the nine questions take Claude's recommendation, except Q1 (neutral texts for v1 rather than a new column). Catalogue v1 is recorded in `../../docs/CHANGELOG.md`. Atul chose to skip the v0 load: v1 was loaded into the Case Vault in four parts through the dashboard's SQL editor (Claude, in Atul's Chrome, with his permission), and five rows with non-ASCII text that the clipboard had mangled were reloaded through the MCP. All seven catalogue tables then matched the local build's fingerprints exactly. 801 items keep `since_version = 0` from the earlier partial v0 load; the other 346 show 1.
   - Depends on: L0.4.
 
 - [x] **L0.6 Curation skill v0.1** (done 2026-09-25: skill, 17 SQL snippets, dry-run planner and case review pack; see the note)
@@ -59,6 +61,7 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
 - [ ] **L0.7 Case Studio v1 (read-only)**
   - Build: `studio/`, a Next.js app (package `@case-library/studio`) with the screens in SPEC §8, reading the Case Vault server-side through a read-only database role; licence badges on cases and figures; no Supabase Auth; a separate login and an allow-list if deployed.
   - Accept: the Studio lists the fixture case and the pilot once imported, shows every tab, and cannot write (the role has no write rights); an anonymous Nidana tester's session cannot open it. Runs locally with `pnpm --filter @case-library/studio dev`.
+  - Note (2026-09-25): built on branch `case-library/L0.7-case-studio` (from main). `casevault_reader` (migration `20260925132542`, applied to the Case Vault; the security advisor is now clean) reads every table and runs only the read functions; tests show it cannot write and that Nidana's `anon` and `authenticated` roles see nothing. The Studio (`studio/`, `@case-library/studio`) has every SPEC §8 screen; each query runs in a read-only transaction as `casevault_reader`. Checked locally on the fixture case; the pilot appears once L0.8 imports it. Waiting on Atul: create the `studio_reader` login role in the Supabase SQL editor (command in `studio/README.md`) and put its URL in `studio/.env.local`, never in Git or a chat.
   - Depends on: L0.3.
 
 - [ ] **L0.8 Pilot import**
@@ -87,9 +90,10 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
 
 ## Phase 1: the first ten cases
 
-- [ ] **L1.1 Case sourcing**
+- [x] **L1.1 Case sourcing** (done 2026-09-25, ahead of LM0 at Atul's request: `cases/SHORTLIST-batch1.md`)
   - Build: Claude proposes about 15 open-access haematology case reports, scored with the pilot's selection criteria (`cases/PMC12949993/PILOT_CASE.md`), with their licence flags, plus two or three common presentations (for example iron deficiency from menorrhagia, B12 deficiency in a vegetarian, thalassaemia trait against iron deficiency) as report-based or de novo cases.
   - Accept: a shortlist with licence, flags, reasons and a score for each.
+  - Note (2026-09-25): 25 E-utilities queries, 923 records screened, 39 full texts cached in `data/articles/`. About 15 CC-licensed candidates scored against the pilot's ten criteria (top: PMC12364935, visceral leishmaniasis misdiagnosed as SLE, 9/10), three common presentations (a von Willebrand report for menorrhagia; de novo NID-0001, B12 deficiency in a vegetarian, and NID-0002, thalassaemia trait at antenatal booking), and the catalogue areas the top five would add. Licences were read from each article's JATS `<license>` element because PMC's OA service returned 404; they are re-verified at L1.2. Scores may shift after the pilot review.
   - Depends on: LM0.
 
 - [ ] **L1.2 [human] Choose batch 1**
@@ -112,6 +116,9 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
   - Build: review decisions and per-figure production decisions in the Studio, written by Atul through the Studio's server into `review_decision`, as an alternative to the Excel pack.
   - Accept: a decision made in the Studio appears in `review_decision` and in the next export; Claude's writes still go only through the MCP.
   - Depends on: L0.7; Atul's preference.
+  - Note (2026-09-25): Atul chose to build it, deployable to his VPS, with an in-app login (username and password for an allow-list in `STUDIO_USERS`, signed session cookie, rate limiting) instead of a login at the proxy; never Supabase Auth. Writes go through the role `casevault_studio_writer` (migration `20260925143811`), which can only insert Studio batches and review decisions and set the four figure-decision columns of `media`. Before use on the cloud Case Vault: apply that migration through the MCP, and Atul creates the `studio_writer` login role himself (`studio/README.md`).
+  - Note (2026-09-25): the writer's row-level security now also checks case status: a review decision needs a target row that exists, in a case version listed in its batch, whose status is `draft` or `in_review`; a figure decision is refused once the version is retired (still allowed when frozen, SPEC §9).
+  - Note (2026-09-25): migration `20260925143811_casevault_studio_writer` applied to the Case Vault through the MCP; security advisors clean. The `studio_writer` login role is still Atul's to create.
 
 - [ ] **L1.6 Extension runs (recurring)**
   - Build: process missing requests from Nidana and out-of-catalogue requests from Sambhasha: add catalogue items, resolve them for every published case, review the `affected` rows, activate the items, record the catalogue version in the changelog and export new bundle revisions.
