@@ -15,7 +15,8 @@
 --
 -- It cannot delete anything, cannot touch any other table or column, and can run
 -- only casevault.case_version_status (which the frozen-content trigger on media
--- and the policies below call) and casevault.review_target_case_version. Claude still applies review decisions to the content through the MCP
+-- and the policies below call) and casevault.review_target_case_version.
+-- Claude still applies review decisions to the content through the MCP
 -- (SPEC §7.3); the Studio only records them.
 --
 -- The role has no login. Atul creates a login role that is a member of it, with a

@@ -23,7 +23,7 @@ A malformed `STUDIO_USERS` or a missing or short secret makes the Studio refuse 
 
 - Everything runs on the server (React Server Components and server actions). The browser receives only the rendered page.
 - Reads: `src/server/db.ts` uses `CASE_VAULT_DB_URL_READONLY`. Every query runs in a `READ ONLY` transaction that first switches to `casevault_reader` (migration `20260925132542`), which can only `SELECT` and call the functions that read.
-- Writes: `src/server/writer-db.ts` uses `CASE_VAULT_DB_URL_STUDIO_WRITER`. Each write runs in its own transaction as `casevault_studio_writer` (migration `20260926090000`). That role can insert Studio batches and review decisions, add a case version to an open Studio batch, and set `production_decision`, `masked_path`, `decided_by` and `decided_at` on `media`; nothing else, and no deletes. Row-level security repeats those limits.
+- Writes: `src/server/writer-db.ts` uses `CASE_VAULT_DB_URL_STUDIO_WRITER`. Each write runs in its own transaction as `casevault_studio_writer` (migration `20260925143811`). That role can insert Studio batches and review decisions, add a case version to an open Studio batch, and set `production_decision`, `masked_path`, `decided_by` and `decided_at` on `media`; nothing else, and no deletes. Row-level security repeats those limits.
 - Every server action checks, on its own: writes are enabled, the `Origin` header names this site, the session is valid; then it validates each field against an allow-list or a narrow pattern and checks that the row belongs to the case version. `decided_by` is the logged-in username.
 - Queries use postgres.js tagged templates, which send every value as a parameter.
 
@@ -76,7 +76,7 @@ CASE_VAULT_DB_URL_READONLY=postgresql://studio_reader.vxiymbaxsiavxuyxzhnt:<pass
 CASE_VAULT_DB_URL_STUDIO_WRITER=postgresql://studio_writer.vxiymbaxsiavxuyxzhnt:<password 2>@aws-0-ap-northeast-1.pooler.supabase.com:5432/postgres
 ```
 
-`studio_reader` may already exist from v1. The migration `20260926090000_casevault_studio_writer.sql` must be applied to the cloud project first (a Case Library session does this through the MCP).
+`studio_reader` may already exist from v1. The migration `20260925143811_casevault_studio_writer.sql` must be applied to the cloud project first (a Case Library session does this through the MCP).
 
 ## Deploying on the VPS (Atul)
 

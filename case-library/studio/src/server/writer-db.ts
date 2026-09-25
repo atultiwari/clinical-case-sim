@@ -4,7 +4,7 @@ import postgres from "postgres";
 
 import { readWriterDatabaseUrl, WRITER_DB_URL_VARIABLE } from "@/server/env";
 
-/** The role every Studio write runs as (migration 20260926090000). */
+/** The role every Studio write runs as (migration 20260925143811). */
 const WRITER_ROLE = "casevault_studio_writer";
 
 export type Writer = postgres.TransactionSql;
