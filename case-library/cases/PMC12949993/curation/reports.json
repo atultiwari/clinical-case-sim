@@ -59,7 +59,7 @@
       "FND.COARSE_BASOPHILIC_STIPPLING",
       "FND.ATYPICAL_PLASMA_CELLS"
     ],
-    "report_text": "Particulate aspirate; cellularity [to be set by the reviewer]. Erythropoiesis is active, with dyserythropoietic features. Coarse basophilic stippling is seen in erythroid precursors. Granulopoiesis matures normally and megakaryocytes are adequate with normal morphology. Plasma cells are not increased, but some show atypical morphology. Blasts [to be set by the reviewer]. See the iron stain report.",
+    "report_text": "Particulate aspirate; cellularity about 60%, mildly increased for age. Erythropoiesis is active, with dyserythropoietic features. Coarse basophilic stippling is seen in erythroid precursors. Granulopoiesis matures normally and megakaryocytes are adequate with normal morphology. Plasma cells are not increased, but some show atypical morphology. Blasts 2%. See the iron stain report.",
     "impression": "Dyserythropoiesis with basophilic stippling of erythroid precursors; some atypical plasma cells.",
     "suggested_reflex": [],
     "based_on": [
@@ -81,7 +81,7 @@
     "findings": [
       "FND.RING_SIDEROBLASTS"
     ],
-    "report_text": "Perls stain. Storage iron is present in marrow fragments. Ring sideroblasts are present, [to be set by the reviewer]% of erythroblasts.",
+    "report_text": "Perls stain. Storage iron is present in marrow fragments. Ring sideroblasts are present, 12% of erythroblasts.",
     "impression": "Ring sideroblasts present; iron stores present.",
     "suggested_reflex": [],
     "based_on": [
@@ -103,7 +103,7 @@
     "findings": [
       "FND.ERYTHROID_HYPERPLASIA"
     ],
-    "report_text": "Adequate trephine core. Cellularity [to be set by the reviewer], with erythroid hyperplasia. Granulopoiesis and megakaryocytes are normal in number and morphology. No excess of blasts. Plasma cells are not increased and show no infiltrative pattern. No fibrosis on reticulin stain. No granulomas.",
+    "report_text": "Adequate trephine core. Cellularity about 60%, mildly increased for age, with erythroid hyperplasia. Granulopoiesis and megakaryocytes are normal in number and morphology. No excess of blasts. Plasma cells are not increased and show no infiltrative pattern. No fibrosis on reticulin stain. No granulomas.",
     "impression": "Erythroid hyperplasia; no infiltrate, excess blasts or fibrosis.",
     "suggested_reflex": [],
     "based_on": [],
