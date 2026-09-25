@@ -1,0 +1,1199 @@
+{
+ "_status_note": "DRAFT gold case file for L1.3 (batch 1). The Case Reviewer (Dr Atul Tiwari) must verify every fact against the article before it is frozen as PMC11015937@v1. Values are converted to SI with the printed value in each note. Items under 'gaps' are not article facts; the affected rows in curation/ resolve them and a human reviews them.",
+ "schema_version": "0.2",
+ "case_id": "PMC11015937",
+ "version": 1,
+ "status": "draft",
+ "case": {
+  "slug": "c-r8tq2",
+  "display_title": "Ten days of fever, abdominal pain and loose stools",
+  "display_tags": [
+   "fever",
+   "diarrhoea",
+   "thrombocytopenia",
+   "confusion"
+  ],
+  "specialty": "haematology",
+  "lab_profile": {
+   "sex": "F",
+   "age_years": 55,
+   "components": {
+    "CMP.HB": {
+     "low": 110,
+     "high": 150,
+     "unit": "g/L"
+    },
+    "CMP.HCT": {
+     "low": 0.35,
+     "high": 0.46,
+     "unit": "L/L"
+    },
+    "CMP.MCV": {
+     "low": 80,
+     "high": 100,
+     "unit": "fL"
+    },
+    "CMP.MCH": {
+     "low": 26.0,
+     "high": 33.0,
+     "unit": "pg"
+    },
+    "CMP.PLT": {
+     "low": 130,
+     "high": 400,
+     "unit": "x10^9/L"
+    },
+    "CMP.RETIC_PCT": {
+     "low": 0.5,
+     "high": 2.0,
+     "unit": "%"
+    },
+    "CMP.LDH": {
+     "low": 140,
+     "high": 271,
+     "unit": "U/L"
+    },
+    "CMP.HAPTOGLOBIN": {
+     "low": 0.17,
+     "high": 3.17,
+     "unit": "g/L"
+    },
+    "CMP.ADAMTS13_ACT": {
+     "low": 66.8,
+     "high": 150,
+     "unit": "%",
+     "display": ">66.8"
+    },
+    "CMP.ADAMTS13_ANTIBODY": {
+     "low": 0,
+     "high": 12,
+     "unit": "U/mL",
+     "display": "<12"
+    }
+   }
+  }
+ },
+ "source": {
+  "title": "Plasmodium falciparum Malaria Presenting as a Thrombotic Thrombocytopenic Purpura (TTP) Mimic: A Case Report",
+  "authors": [
+   "Kalendra Kunwar",
+   "Sailesh Karki",
+   "Monika Jain",
+   "Sushma Edara",
+   "James Y Rixey",
+   "Frances Schmidt"
+  ],
+  "affiliations": [
+   "Internal Medicine, One Brooklyn Health/Interfaith Medical Center, Brooklyn, USA",
+   "Internal Medicine, Brookdale University Hospital and Medical Center, Brooklyn, USA",
+   "Pulmonary Medicine, Interfaith Medical Center, Brooklyn, USA"
+  ],
+  "journal": "Cureus",
+  "volume": "16",
+  "issue": "3",
+  "article_number": "e56181",
+  "published": "2024-03-14",
+  "doi": "10.7759/cureus.56181",
+  "pmcid": "PMC11015937",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11015937/",
+  "licence": "CC BY 4.0",
+  "production_ok": true,
+  "public_release_ok": true,
+  "licence_verified": "2026-09-25 from the JATS <license> element (cases/BATCH1.md); figures carry no separate credit line",
+  "attribution": "Adapted from Kunwar K, Karki S, Jain M, Edara S, Rixey JY, Schmidt F. Plasmodium falciparum Malaria Presenting as a Thrombotic Thrombocytopenic Purpura (TTP) Mimic: A Case Report. Cureus 16(3): e56181 (2024). doi:10.7759/cureus.56181. Licensed CC BY 4.0. Changes: restructured into atomic facts; diagnosis redacted from player-facing text; simulated findings added where marked."
+ },
+ "clock": {
+  "day_0": null,
+  "day_0_label": "Admission (date not reported)",
+  "semantics": "Integer day relative to admission. Table 1's 'Day 2', 'Day 4', 'Day 7', 'Day 9' are kept as days 2, 4, 7 and 9. day = null means valid at any point in the admission."
+ },
+ "vignette": "A 55-year-old woman comes to the emergency department with ten days of fever, abdominal pain, loose stools, nausea and vomiting. She was seen here a few days ago with the same complaints and sent home on oral antibiotics.",
+ "opening_statement_lay": "I've had a fever and tummy pain for ten days, with diarrhoea and vomiting. They gave me antibiotics here the other day, but I'm getting worse.",
+ "facts": [
+  {
+   "id": "H01",
+   "category": "history",
+   "item": "Age and sex",
+   "release_text": "55-year-old woman.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case presentation"
+  },
+  {
+   "id": "H02",
+   "category": "history",
+   "item": "Presenting complaints",
+   "release_text": "Abdominal pain, loose stools, nausea, vomiting and fever for 10 days.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PC.ONSET_DURATION",
+    "HX.PC.ASSOCIATED"
+   ]
+  },
+  {
+   "id": "H03",
+   "category": "history",
+   "item": "Earlier emergency visit",
+   "release_text": "Seen in the emergency department a few days earlier with the same complaints and discharged on oral antibiotics.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PC.TREATMENT_SO_FAR"
+   ]
+  },
+  {
+   "id": "H04",
+   "category": "history",
+   "item": "Recent travel (hidden until asked)",
+   "release_text": "Travelled to Nigeria for four weeks and returned to the United States two weeks ago.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.SOCIAL.TRAVEL"
+   ],
+   "pivotal": true,
+   "release_condition": {
+    "requires_topics": [
+     "recent travel",
+     "time spent abroad or outside the home area"
+    ],
+    "note": "The vignette does not mention travel. At the first emergency visit she was discharged without it being recorded."
+   }
+  },
+  {
+   "id": "H05",
+   "category": "history",
+   "item": "Antimalarial prophylaxis",
+   "release_text": "She took no antimalarial prophylaxis for the trip.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.SOCIAL.TRAVEL_PROPHYLAXIS",
+    "HX.SOCIAL.TRAVEL"
+   ],
+   "release_condition": {
+    "requires_topics": [
+     "recent travel",
+     "antimalarial prophylaxis"
+    ]
+   }
+  },
+  {
+   "id": "E01",
+   "category": "exam",
+   "item": "General appearance",
+   "release_text": "Ill-looking.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation (examination)",
+   "released_by": [
+    "EX.GEN.APPEARANCE"
+   ]
+  },
+  {
+   "id": "E02",
+   "category": "exam",
+   "item": "Pallor",
+   "release_text": "Pale.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation (examination)",
+   "released_by": [
+    "EX.GEN.PALLOR"
+   ]
+  },
+  {
+   "id": "E03",
+   "category": "exam",
+   "item": "Hydration",
+   "release_text": "Dehydrated, with dry mucous membranes.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation (examination)",
+   "released_by": [
+    "EX.GEN.HYDRATION"
+   ]
+  },
+  {
+   "id": "E04",
+   "category": "exam",
+   "item": "Mental state",
+   "release_text": "Confused.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation (examination)",
+   "released_by": [
+    "EX.NEURO.MENTAL_STATE"
+   ]
+  },
+  {
+   "id": "E05",
+   "category": "exam",
+   "item": "Abdomen",
+   "release_text": "Abdomen soft and non-tender.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation (examination)",
+   "released_by": [
+    "EX.ABD.PALPATION"
+   ]
+  },
+  {
+   "id": "X01",
+   "category": "interpretation",
+   "item": "PLASMIC score (calculated by the treating team)",
+   "release_text": "PLASMIC score 6, read by the team as a high probability of TTP.",
+   "day": null,
+   "kind": "interpretation",
+   "reveals_dx": false,
+   "release": "never",
+   "source_locator": "Case presentation, paragraph after Table 1",
+   "note": "Kept out of play: players calculate it themselves. Platelets never fell below 30 x10^9/L, so the score is 6 of 7."
+  }
+ ],
+ "series": [
+  {
+   "id": "S01",
+   "item": "Haemoglobin",
+   "code": null,
+   "unit": "g/L",
+   "ref_range": "110-150",
+   "points": [
+    {
+     "day": 0,
+     "value": 106,
+     "flag": "L"
+    },
+    {
+     "day": 2,
+     "value": 85,
+     "flag": "L"
+    },
+    {
+     "day": 4,
+     "value": 68,
+     "flag": "L"
+    },
+    {
+     "day": 7,
+     "value": 60,
+     "flag": "L"
+    },
+    {
+     "day": 9,
+     "value": 92,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.HB",
+   "note": "Printed in g/dL (10.6, 8.5, 6.8, 6.0, 9.2; the text prints 10.6 'mg/dL', a misprint for g/dL); converted x10. 'Day 2', 'Day 4' etc. are kept as day 2, day 4 with admission as day 0."
+  },
+  {
+   "id": "S02",
+   "item": "Haematocrit",
+   "code": null,
+   "unit": "L/L",
+   "ref_range": "0.35-0.46",
+   "points": [
+    {
+     "day": 0,
+     "value": 0.321,
+     "flag": "L"
+    },
+    {
+     "day": 2,
+     "value": 0.251,
+     "flag": "L"
+    },
+    {
+     "day": 4,
+     "value": 0.215,
+     "flag": "L"
+    },
+    {
+     "day": 7,
+     "value": 0.18,
+     "flag": "L"
+    },
+    {
+     "day": 9,
+     "value": 0.284,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.HCT",
+   "note": "Printed as % (32.1, 25.1, 21.5, 18.0, 28.4; range 35-46%); converted to L/L, three decimals kept."
+  },
+  {
+   "id": "S03",
+   "item": "Mean cell volume",
+   "code": null,
+   "unit": "fL",
+   "ref_range": "80-100",
+   "points": [
+    {
+     "day": 0,
+     "value": 77.6,
+     "flag": "L"
+    },
+    {
+     "day": 2,
+     "value": 75.4,
+     "flag": "L"
+    },
+    {
+     "day": 4,
+     "value": 78.3,
+     "flag": "L"
+    },
+    {
+     "day": 7,
+     "value": 74.0,
+     "flag": "L"
+    },
+    {
+     "day": 9,
+     "value": 79.7,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.MCV"
+  },
+  {
+   "id": "S04",
+   "item": "Mean cell haemoglobin",
+   "code": null,
+   "unit": "pg",
+   "ref_range": "26.0-33.0",
+   "points": [
+    {
+     "day": 0,
+     "value": 25.8,
+     "flag": "L"
+    },
+    {
+     "day": 2,
+     "value": 25.5,
+     "flag": "L"
+    },
+    {
+     "day": 4,
+     "value": 24.7,
+     "flag": "L"
+    },
+    {
+     "day": 7,
+     "value": 24.8,
+     "flag": "L"
+    },
+    {
+     "day": 9,
+     "value": 25.9,
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.MCH"
+  },
+  {
+   "id": "S05",
+   "item": "Platelets",
+   "code": null,
+   "unit": "x10^9/L",
+   "ref_range": "130-400",
+   "points": [
+    {
+     "day": 0,
+     "value": 125,
+     "flag": "L"
+    },
+    {
+     "day": 2,
+     "value": 66,
+     "flag": "L"
+    },
+    {
+     "day": 4,
+     "value": 102,
+     "flag": "L"
+    },
+    {
+     "day": 7,
+     "value": 288
+    },
+    {
+     "day": 9,
+     "value": 444,
+     "flag": "H"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.PLT",
+   "note": "Printed as 10^3/uL (numerically the same). Figure 1 shows the daily trend; only the tabulated days are transcribed."
+  },
+  {
+   "id": "S06",
+   "item": "Reticulocytes (percentage)",
+   "code": null,
+   "unit": "%",
+   "ref_range": "0.5-2.0",
+   "points": [
+    {
+     "day": 0,
+     "value": 0.57
+    },
+    {
+     "day": 2,
+     "value": 0.59
+    },
+    {
+     "day": 4,
+     "value": 0.37,
+     "flag": "L"
+    },
+    {
+     "day": 7,
+     "value": 2.58,
+     "flag": "H"
+    },
+    {
+     "day": 9,
+     "value": 7.78,
+     "flag": "H"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.RETIC_PCT"
+  },
+  {
+   "id": "S07",
+   "item": "Lactate dehydrogenase",
+   "code": null,
+   "unit": "U/L",
+   "ref_range": "140-271",
+   "points": [
+    {
+     "day": 0,
+     "value": 287,
+     "flag": "H"
+    },
+    {
+     "day": 2,
+     "value": 289,
+     "flag": "H"
+    },
+    {
+     "day": 4,
+     "value": 291,
+     "flag": "H"
+    },
+    {
+     "day": 7,
+     "value": 419,
+     "flag": "H"
+    },
+    {
+     "day": 9,
+     "value": 393,
+     "flag": "H"
+    }
+   ],
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.LDH",
+   "note": "The text gives LDH 289 U/L at presentation; Table 1 gives 287 on admission and 289 on day 2. The table is used."
+  },
+  {
+   "id": "S08",
+   "item": "Haptoglobin",
+   "code": null,
+   "unit": "g/L",
+   "ref_range": "0.17-3.17",
+   "points": [
+    {
+     "day": 0,
+     "value": "<0.10",
+     "flag": "L"
+    },
+    {
+     "day": 2,
+     "value": "<0.10",
+     "flag": "L"
+    },
+    {
+     "day": 4,
+     "value": "<0.10",
+     "flag": "L"
+    },
+    {
+     "day": 7,
+     "value": "<0.10",
+     "flag": "L"
+    },
+    {
+     "day": 9,
+     "value": "<0.10",
+     "flag": "L"
+    }
+   ],
+   "source_locator": "Case presentation (day 0) and Table 1 (days 2-9)",
+   "catalogue_ref": "CMP.HAPTOGLOBIN",
+   "note": "Printed <10 mg/dL (range 17-317 mg/dL); converted to g/L. Table 1 marks admission 'NA', but the text reports haptoglobin <10 mg/dL at presentation, so day 0 is taken from the text."
+  }
+ ],
+ "single_results": [
+  {
+   "id": "L01",
+   "item": "Lactate",
+   "code": null,
+   "value": 2.3,
+   "unit": "mmol/L",
+   "ref_range": "0.5-2.2",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.LACTATE",
+   "flag": "H"
+  },
+  {
+   "id": "L02",
+   "item": "Prothrombin time",
+   "code": null,
+   "value": 16.4,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.PT",
+   "flag": "H"
+  },
+  {
+   "id": "L03",
+   "item": "INR",
+   "code": null,
+   "value": 1.37,
+   "unit": "ratio",
+   "ref_range": "0.8-1.2",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.INR",
+   "flag": "H"
+  },
+  {
+   "id": "L04",
+   "item": "Total bilirubin",
+   "code": null,
+   "value": 38,
+   "unit": "umol/L",
+   "ref_range": "3-21",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.BILI_TOTAL",
+   "flag": "H",
+   "note": "Printed 2.2 mg/dL; x17.1 = 37.6 umol/L."
+  },
+  {
+   "id": "L05",
+   "item": "Urea",
+   "code": null,
+   "value": 12.5,
+   "unit": "mmol/L",
+   "ref_range": "2.5-7.8",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.UREA",
+   "flag": "H",
+   "note": "Printed as blood urea nitrogen 35 mg/dL; urea = BUN / 2.8 = 12.5 mmol/L (urea 75 mg/dL)."
+  },
+  {
+   "id": "L06",
+   "item": "Creatinine",
+   "code": null,
+   "value": 150,
+   "unit": "umol/L",
+   "ref_range": "49-90",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.CREATININE",
+   "flag": "H",
+   "note": "Printed 1.7 mg/dL; x88.4 = 150 umol/L."
+  },
+  {
+   "id": "L07",
+   "item": "Blood culture",
+   "code": null,
+   "value": "No growth",
+   "unit": "",
+   "ref_range": "No growth",
+   "day": 0,
+   "source_locator": "Case presentation, after Table 1",
+   "catalogue_ref": "CMP.BLOOD_CULTURE"
+  },
+  {
+   "id": "L08",
+   "item": "Stool occult blood",
+   "code": null,
+   "value": "Negative",
+   "unit": "",
+   "ref_range": "Negative",
+   "day": 0,
+   "source_locator": "Case presentation, after Table 1",
+   "catalogue_ref": "CMP.FIT"
+  },
+  {
+   "id": "L09",
+   "item": "Stool culture",
+   "code": null,
+   "value": "No enteric pathogens isolated",
+   "unit": "",
+   "ref_range": "No enteric pathogens isolated",
+   "day": 0,
+   "source_locator": "Case presentation, after Table 1",
+   "catalogue_ref": "CMP.STOOL_CULTURE"
+  },
+  {
+   "id": "L10",
+   "item": "Stool Giardia antigen",
+   "code": null,
+   "value": "Not detected",
+   "unit": "",
+   "ref_range": "Not detected",
+   "day": 0,
+   "source_locator": "Case presentation, after Table 1",
+   "catalogue_ref": "CMP.GIARDIA_AG"
+  },
+  {
+   "id": "L11",
+   "item": "Stool leucocytes",
+   "code": null,
+   "value": "Negative",
+   "unit": "",
+   "ref_range": "Negative",
+   "day": 0,
+   "source_locator": "Case presentation, after Table 1",
+   "catalogue_ref": null,
+   "note": "No catalogue component of its own; the stool microscopy answer (affected) agrees: no pus cells."
+  },
+  {
+   "id": "L12",
+   "item": "Clostridioides difficile PCR and toxins A and B",
+   "code": null,
+   "value": "Not detected (PCR and toxins A and B negative)",
+   "unit": "",
+   "ref_range": "Not detected",
+   "day": 0,
+   "source_locator": "Case presentation, after Table 1",
+   "catalogue_ref": "CMP.CDIFF_TOXIN"
+  },
+  {
+   "id": "L13",
+   "item": "ADAMTS13 antibody",
+   "code": null,
+   "value": 22,
+   "unit": "U/mL",
+   "ref_range": "<12",
+   "day": null,
+   "source_locator": "Case presentation, after Table 1",
+   "catalogue_ref": "CMP.ADAMTS13_ANTIBODY",
+   "flag": "H",
+   "note": "Day not reported; results of this send-out assay arrive after several days (turnaround in the catalogue). Resulted by LAB.HAEM.ADAMTS13_INHIBITOR."
+  },
+  {
+   "id": "L14",
+   "item": "ADAMTS13 activity (reflex)",
+   "code": null,
+   "value": 49.1,
+   "unit": "%",
+   "ref_range": ">66.8",
+   "day": null,
+   "source_locator": "Case presentation, after Table 1",
+   "catalogue_ref": "CMP.ADAMTS13_ACT",
+   "flag": "L",
+   "note": "Printed '49.1 (normal value: >66.8; less than 10% relatively specific for TTP)'; unit taken as %."
+  }
+ ],
+ "raw_material": [
+  {
+   "id": "R01",
+   "test": "Thick and thin peripheral blood smear",
+   "release": "service.pathology",
+   "day": 0,
+   "findings": "Plasmodium falciparum seen on thick and thin films. Occasional schistocytes.",
+   "media": [],
+   "source_locator": "Case presentation, after Table 1",
+   "test_item_id": "LAB.HAEM.MALARIA_SMEAR",
+   "note": "The article gives no parasite density in the text; Figure 2 plots the percentage of infected red cells over the admission."
+  },
+  {
+   "id": "R02",
+   "test": "Percentage of parasitised red cells over the admission",
+   "release": "service.pathology",
+   "day": null,
+   "findings": "Percentage of red cells infected fell progressively on antimalarial treatment.",
+   "media": [
+    "M02"
+   ],
+   "source_locator": "Figure 2",
+   "test_item_id": "LAB.HAEM.MALARIA_PARASITAEMIA"
+  },
+  {
+   "id": "R03",
+   "test": "Chest X-ray",
+   "release": "service.radiology",
+   "day": 0,
+   "findings": "Negative.",
+   "media": [],
+   "source_locator": "Case presentation, after Table 1",
+   "test_item_id": "IMG.XR.CHEST"
+  },
+  {
+   "id": "R04",
+   "test": "CT abdomen and pelvis",
+   "release": "service.radiology",
+   "day": 0,
+   "findings": "Negative.",
+   "media": [],
+   "source_locator": "Case presentation, after Table 1",
+   "test_item_id": "IMG.CT.ABDOMEN_PELVIS"
+  }
+ ],
+ "media": [
+  {
+   "id": "M01",
+   "figure": "Figure 1",
+   "specimen": "Chart of platelet counts",
+   "stain": null,
+   "redacted_caption": "Platelet count during the admission.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC11015937/F1.jpg",
+   "raw_fact_id": null
+  },
+  {
+   "id": "M02",
+   "figure": "Figure 2",
+   "specimen": "Chart of parasitised red cells (%)",
+   "stain": null,
+   "redacted_caption": "Percentage of parasitised red cells during treatment.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC11015937/F2.jpg",
+   "raw_fact_id": "R02"
+  }
+ ],
+ "ground_truth": {
+  "final_diagnosis": {
+   "text": "Plasmodium falciparum malaria in a traveller returned from Nigeria without prophylaxis, with microangiopathic haemolysis, thrombocytopenia, acute kidney injury and confusion mimicking thrombotic thrombocytopenic purpura",
+   "icd10": [
+    "B50.8"
+   ],
+   "accepted_synonyms": [
+    "falciparum malaria",
+    "Plasmodium falciparum malaria",
+    "P. falciparum malaria",
+    "Pf malaria",
+    "severe falciparum malaria",
+    "malignant tertian malaria",
+    "falciparum malaria with thrombotic microangiopathy"
+   ]
+  },
+  "final_dx": {
+   "id": "DX.FALCIPARUM_MALARIA",
+   "ids": [
+    "DX.SEVERE_MALARIA"
+   ],
+   "text": "Plasmodium falciparum malaria in a traveller returned from Nigeria without prophylaxis, with microangiopathic haemolysis, thrombocytopenia, acute kidney injury and confusion mimicking thrombotic thrombocytopenic purpura",
+   "icd10": [
+    "B50.8"
+   ],
+   "accepted_synonyms": [
+    "falciparum malaria",
+    "Plasmodium falciparum malaria",
+    "P. falciparum malaria",
+    "Pf malaria",
+    "severe falciparum malaria",
+    "malignant tertian malaria",
+    "falciparum malaria with thrombotic microangiopathy"
+   ]
+  },
+  "secondary_findings": [
+   "Confusion and acute kidney injury meet CDC and WHO-style criteria for severe infection (impaired consciousness, renal impairment); the treating team used oral artemether-lumefantrine",
+   "Raised ADAMTS13 antibody (22 U/mL) with only mildly reduced ADAMTS13 activity (49.1%): not immune TTP",
+   "Lifelong microcytosis, proposed as homozygous alpha-plus thalassaemia (curator's judgement call, not in the article)"
+  ],
+  "accepted_differential": [
+   "Thrombotic thrombocytopenic purpura",
+   "Other thrombotic microangiopathy (HUS, DIC)",
+   "Bacterial sepsis or enteric fever",
+   "Infective gastroenteritis (including Giardia and C. difficile)",
+   "Dengue, leptospirosis or viral hepatitis",
+   "Encephalitis or meningitis"
+  ],
+  "red_herrings": [
+   "PLASMIC score 6",
+   "ADAMTS13 antibody 22 U/mL",
+   "ADAMTS13 activity 49.1% (mildly reduced)",
+   "occasional schistocytes",
+   "diarrhoea and abdominal pain",
+   "raised procalcitonin",
+   "microcytosis",
+   "earlier discharge with antibiotics"
+  ],
+  "key_discriminators": [
+   "travel to Nigeria without prophylaxis (H04, H05)",
+   "P. falciparum on thick and thin films",
+   "ADAMTS13 activity above 10%",
+   "platelets recovering with antimalarial treatment alone",
+   "parasitaemia falling on treatment"
+  ],
+  "treatment_given": "Artemether-lumefantrine for four days; two units of packed red cells; supportive care. No plasma exchange.",
+  "outcome": "Afebrile after day 2; symptoms resolved by day 5; platelets normalised and she was discharged. At one month she was well, with haemoglobin 11.6 g/dL and haematocrit 36.7% (follow-up values kept out of play).",
+  "teaching_points": [
+   "Ask every febrile patient about travel: the first emergency visit missed it",
+   "Fever in a traveller back from sub-Saharan Africa is falciparum malaria until thick and thin films say otherwise, and the films should be repeated if negative",
+   "Falciparum malaria causes a thrombotic microangiopathy with schistocytes, undetectable haptoglobin, AKI and confusion that can score high on PLASMIC",
+   "An ADAMTS13 antibody alone is not diagnostic; immune TTP needs activity below 10%",
+   "Impaired consciousness or renal impairment make falciparum infection severe: intravenous artesunate is preferred",
+   "Travellers visiting friends and relatives are the group least likely to take prophylaxis"
+  ],
+  "must_do": [
+   {
+    "text": "Take a travel history, including antimalarial prophylaxis",
+    "if": {
+     "asked_any": [
+      "HX.SOCIAL.TRAVEL",
+      "HX.SOCIAL.TRAVEL_PROPHYLAXIS"
+     ]
+    }
+   },
+   {
+    "text": "Send thick and thin blood films (or a rapid antigen test) for malaria urgently",
+    "if": {
+     "ordered_any": [
+      "LAB.HAEM.MALARIA_SMEAR",
+      "LAB.HAEM.MALARIA_RDT"
+     ]
+    }
+   },
+   {
+    "text": "Grade severity: conscious level, blood glucose and parasite count",
+    "if": {
+     "all": [
+      {
+       "ordered_any": [
+        "LAB.CHEM.GLUCOSE_RANDOM",
+        "LAB.CHEM.CAPILLARY_GLUCOSE"
+       ]
+      },
+      {
+       "ordered_any": [
+        "LAB.HAEM.MALARIA_PARASITAEMIA",
+        "LAB.HAEM.MALARIA_SMEAR"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "text": "Start artemisinin-based treatment promptly (intravenous artesunate while confused or vomiting, or a full course of artemether-lumefantrine)",
+    "if": {
+     "plan_has_any": [
+      "RX.ANTIMALARIAL.ARTESUNATE",
+      "RX.ANTIMALARIAL.ARTEMETHER_LUMEFANTRINE"
+     ]
+    }
+   },
+   {
+    "text": "Rehydrate with intravenous fluids and monitor renal function",
+    "if": {
+     "plan_has_any": [
+      "RX.FLUIDS.IV"
+     ]
+    }
+   },
+   {
+    "text": "Monitor parasite counts and blood counts until the parasitaemia clears",
+    "if": {
+     "any": [
+      {
+       "plan_has": [
+        "ACT.REPEAT_BLOODS"
+       ]
+      },
+      {
+       "ordered_any": [
+        "LAB.HAEM.MALARIA_PARASITAEMIA"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "text": "Transfuse red cells when the haemoglobin falls to about 6-7 g/dL",
+    "if": {
+     "plan_has": [
+      "RX.TRANSFUSION.RED_CELLS"
+     ]
+    }
+   },
+   {
+    "text": "Notify public health",
+    "if": {
+     "plan_has": [
+      "ACT.NOTIFY_PUBLIC_HEALTH"
+     ]
+    }
+   }
+  ],
+  "must_not_do": [
+   {
+    "text": "Start plasma exchange for presumed TTP",
+    "if": {
+     "plan_has_any": [
+      "RX.IMMUNO.PLASMA_EXCHANGE"
+     ]
+    }
+   },
+   {
+    "text": "Give high-dose steroids, rituximab or caplacizumab for presumed TTP",
+    "if": {
+     "plan_has_any": [
+      "RX.STEROID.HIGH_DOSE",
+      "RX.IMMUNO.RITUXIMAB",
+      "RX.IMMUNO.CAPLACIZUMAB"
+     ]
+    }
+   },
+   {
+    "text": "Send her home again, or treat as gastroenteritis with antibiotics alone, without testing for malaria",
+    "if": {
+     "all": [
+      {
+       "plan_has_any": [
+        "ACT.DISCHARGE_FOLLOW_UP",
+        "RX.ANTIBIOTIC.*"
+       ]
+      },
+      {
+       "not": {
+        "ordered_any": [
+         "LAB.HAEM.MALARIA_SMEAR",
+         "LAB.HAEM.MALARIA_RDT",
+         "LAB.HAEM.FILM"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "text": "Treat falciparum infection acquired in Nigeria with chloroquine",
+    "if": {
+     "plan_has": [
+      "RX.ANTIMALARIAL.CHLOROQUINE"
+     ]
+    }
+   },
+   {
+    "text": "Transfuse platelets without bleeding",
+    "if": {
+     "plan_has": [
+      "RX.TRANSFUSION.PLATELETS"
+     ]
+    }
+   }
+  ],
+  "diagnosis_rubric_anchors": {
+   "5": "Falciparum malaria (severe or not), with the travel exposure identified",
+   "4": "Falciparum malaria, travel exposure not cited",
+   "3": "Malaria without the right species, or malarial haemolysis",
+   "2": "TTP, another thrombotic microangiopathy, DIC, sepsis, enteric fever or infective gastroenteritis as the final diagnosis",
+   "1": "Unrelated diagnosis, or one that would lead to harm"
+  },
+  "rubric": {
+   "rubric": [
+    {
+     "score": 5,
+     "text": "Falciparum malaria (severe or not), with the travel exposure identified",
+     "if": {
+      "all": [
+       {
+        "dx_in": [
+         "DX.FALCIPARUM_MALARIA",
+         "DX.SEVERE_MALARIA"
+        ]
+       },
+       {
+        "evidence_has": [
+         "H04"
+        ]
+       }
+      ]
+     }
+    },
+    {
+     "score": 4,
+     "text": "Falciparum malaria, travel exposure not cited",
+     "if": {
+      "dx_in": [
+       "DX.FALCIPARUM_MALARIA",
+       "DX.SEVERE_MALARIA"
+      ]
+     }
+    },
+    {
+     "score": 3,
+     "text": "Malaria without the right species, or malarial haemolysis",
+     "if": {
+      "dx_in": [
+       "DX.MALARIA_HAEMOLYSIS",
+       "DX.MIXED_MALARIA",
+       "DX.VIVAX_MALARIA",
+       "DX.KNOWLESI_MALARIA"
+      ]
+     }
+    },
+    {
+     "score": 2,
+     "text": "TTP, another thrombotic microangiopathy, DIC, sepsis, enteric fever or infective gastroenteritis as the final diagnosis",
+     "if": {
+      "dx_in": [
+       "DX.TTP",
+       "DX.MAHA_OTHER",
+       "DX.HUS",
+       "DX.ATYPICAL_HUS",
+       "DX.DIC",
+       "DX.SEPSIS",
+       "DX.TYPHOID_FEVER",
+       "DX.INFECTIOUS_DIARRHOEA"
+      ]
+     }
+    },
+    {
+     "score": 1,
+     "text": "Unrelated diagnosis, or one that would lead to harm",
+     "if": {
+      "not": {
+       "dx_in": [
+        "DX.FALCIPARUM_MALARIA",
+        "DX.SEVERE_MALARIA",
+        "DX.MALARIA_HAEMOLYSIS",
+        "DX.MIXED_MALARIA",
+        "DX.VIVAX_MALARIA",
+        "DX.KNOWLESI_MALARIA",
+        "DX.TTP",
+        "DX.MAHA_OTHER",
+        "DX.HUS",
+        "DX.ATYPICAL_HUS",
+        "DX.DIC",
+        "DX.SEPSIS",
+        "DX.TYPHOID_FEVER",
+        "DX.INFECTIOUS_DIARRHOEA"
+       ]
+      }
+     }
+    }
+   ],
+   "default_score": 1
+  },
+  "efficient_path": [
+   "Travel history (H04, H05)",
+   "Thick and thin films and rapid antigen test",
+   "Severity: GCS, glucose, lactate, renal function, parasite count",
+   "Artemisinin-based treatment; fluids; transfusion when Hb falls",
+   "Notify public health"
+  ]
+ },
+ "gaps": [
+  {
+   "id": "G01",
+   "item": "Vital signs",
+   "guidance": "Febrile on admission (afebrile after day 2); tachycardic; blood pressure low-normal from dehydration; mild tachypnoea; SpO2 normal (chest X-ray negative).",
+   "review_required": true
+  },
+  {
+   "id": "G02",
+   "item": "Conscious level",
+   "guidance": "Confused but not comatose: GCS about 14; no focal signs; no neck stiffness.",
+   "review_required": true
+  },
+  {
+   "id": "G03",
+   "item": "Parasite density",
+   "guidance": "Only in Figure 2. The day-0 value is a reviewer row, to be read off the figure; later days follow the plotted fall.",
+   "review_required": true
+  },
+  {
+   "id": "G04",
+   "item": "White cell count and differential, RDW, red cell count",
+   "guidance": "Not reported. White count normal to low with lymphopenia (usual in falciparum infection); RBC from Hb / MCH; RDW raised.",
+   "review_required": true
+  },
+  {
+   "id": "G05",
+   "item": "Renal function and electrolytes after day 0",
+   "guidance": "AKI peaking around day 2, then recovering with fluids and treatment; mild hyponatraemia and hypokalaemia from vomiting and diarrhoea; mild metabolic acidosis.",
+   "review_required": true
+  },
+  {
+   "id": "G06",
+   "item": "Liver function, coagulation beyond PT/INR",
+   "guidance": "Mostly unconjugated hyperbilirubinaemia; mild transaminase rise; albumin low; APTT and fibrinogen normal (no DIC); D-dimer raised.",
+   "review_required": true
+  },
+  {
+   "id": "G07",
+   "item": "Cause of the microcytosis",
+   "guidance": "MCV 74-80 fL and MCH about 25 pg on admission, before much haemolysis. Iron studies are unreliable in acute infection (ferritin raised as an acute-phase protein). Proposed: homozygous alpha-plus thalassaemia, common in people of West African descent; HPLC normal.",
+   "review_required": true
+  },
+  {
+   "id": "G08",
+   "item": "Earlier emergency visit and antibiotic",
+   "guidance": "Assessed as gastroenteritis; oral ciprofloxacin; travel not documented.",
+   "review_required": true
+  },
+  {
+   "id": "G09",
+   "item": "Imaging and CSF not in the article",
+   "guidance": "CT head normal; ultrasound consistent with the negative CT; CSF normal if a lumbar puncture is done.",
+   "review_required": true
+  },
+  {
+   "id": "G10",
+   "item": "Tropical fever serology",
+   "guidance": "Typhoid, dengue, leptospira, hepatitis A and E, chikungunya negative; Widal titres below the significant level.",
+   "review_required": false
+  }
+ ]
+}

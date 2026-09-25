@@ -1,0 +1,446 @@
+[
+ {
+  "id": "RP01",
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.LD_BODIES",
+   "FND.INCREASED_PLASMA_CELLS",
+   "FND.ERYTHROID_HYPERPLASIA"
+  ],
+  "report_text": "Particulate, hypercellular aspirate. Erythroid hyperplasia with normoblastic maturation. Granulopoiesis matures normally but is relatively reduced. Megakaryocytes present in normal numbers. Plasma cells are increased (about 8%) with mature, polyclonal-appearing morphology. Macrophages are prominent, and many contain numerous small oval intracellular bodies, 2-4 um across, each with a nucleus and a rod-shaped kinetoplast, typical of Leishmania amastigotes (Leishman-Donovan bodies); a few lie free between cells. Blasts are not increased and there is no malignant infiltrate. Comment: the organisms were sought specifically; please correlate with Leishmania PCR or serology and notify the public health authority.",
+  "impression": "Leishmania amastigotes (Leishman-Donovan bodies) in marrow macrophages; reactive plasmacytosis and erythroid hyperplasia; no malignancy.",
+  "suggested_reflex": [
+   "LAB.MOL.LEISHMANIA_PCR",
+   "LAB.SERO.RK39"
+  ],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "The amastigotes in macrophages are the article's finding (R01, Figure 2A and B). Background cellularity, erythroid hyperplasia and plasmacytosis are not reported for this marrow (G08); they follow the local hospital's report (H12) and the polyclonal gammopathy. The comment names tests and notification only, as a haematopathologist would.",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP02",
+  "test_item_id": "PROC.BM.TREPHINE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.INCREASED_PLASMA_CELLS",
+   "FND.ERYTHROID_HYPERPLASIA"
+  ],
+  "report_text": "Adequate core with about 70% cellularity. Erythroid hyperplasia; granulopoiesis relatively reduced; megakaryocytes adequate. Interstitial plasma cells are increased, polyclonal for kappa and lambda. Histiocytes are prominent. No lymphoma infiltrate, granulomas or fibrosis on reticulin stain. Organisms are not identified with confidence on sections; please correlate with the aspirate.",
+  "impression": "Hypercellular reactive marrow with polyclonal plasmacytosis and prominent histiocytes; no lymphoma, granulomas or fibrosis.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G08: not reported. The rheumatology department's biopsy was 'without diagnostic clue' (H13); trephine sections are less sensitive than aspirate smears for amastigotes, so none are called here.",
+  "confidence": 0.6
+ },
+ {
+  "id": "RP03",
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.SPLENOMEGALY",
+   "FND.HEPATOMEGALY"
+  ],
+  "report_text": "Non-contrast CT of the abdomen and pelvis. Marked splenomegaly: the spleen measures 25.9 cm in coronal length and 15.0 x 9.3 cm in axial section at the hilum, with homogeneous attenuation and no focal lesion on this unenhanced study. The liver is enlarged with smooth contours. No enlarged abdominal or pelvic lymph nodes. No ascites. The kidneys, pancreas and adrenal glands are unremarkable.",
+  "impression": "Marked hepatosplenomegaly (spleen 25.9 cm); no lymphadenopathy or ascites.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R03"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Hepatosplenomegaly and the spleen measurements are the article's (R03, Figure 1A and C). The absence of lymph nodes and ascites is not reported; none is mentioned in the article and none is expected.",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP04",
+  "test_item_id": "IMG.US.ABDOMEN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.SPLENOMEGALY",
+   "FND.HEPATOMEGALY"
+  ],
+  "report_text": "The spleen is markedly enlarged, 25 cm in its long axis, with homogeneous echotexture and no focal lesion. The liver is enlarged (right lobe 17 cm) with normal echotexture and smooth margins. Portal vein 12 mm with normal hepatopetal flow; no collaterals. The gallbladder, bile ducts, pancreas and kidneys are normal. No ascites. No enlarged lymph nodes seen.",
+  "impression": "Massive splenomegaly and hepatomegaly with normal portal flow; no ascites.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "The rheumatology ultrasound measured the spleen at 25 cm (H13); CT at this admission 25.85 cm. Normal portal flow and no collaterals answer the portal hypertension path.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP05",
+  "test_item_id": "LAB.HAEM.FILM",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.ROULEAUX"
+  ],
+  "report_text": "Red cells normocytic and normochromic with mild anisocytosis and marked rouleaux. No spherocytes, fragments or parasites seen. White cells markedly reduced; the few neutrophils and lymphocytes look normal. Platelets markedly reduced, no clumps. No blasts.",
+  "impression": "Pancytopenia with marked rouleaux; no abnormal cells.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Pancytopenia is the article's (Table 1). Rouleaux follow the IgG of 41.7 g/L. Amastigotes are rarely seen in peripheral blood films, so none are reported.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP06",
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.ROULEAUX"
+  ],
+  "report_text": "Film reviewed by a haematopathologist. Normocytic normochromic red cells with marked rouleaux, in keeping with the raised globulins; no spherocytes, red cell fragments, inclusions or parasites. Leucocytes are markedly reduced but morphologically normal, with no blasts or atypical cells. Platelets are markedly reduced and of normal size. The picture suggests peripheral consumption or pooling together with a marrow process; the massive spleen should be taken into account. Comment: a bone marrow aspirate with a careful search for infiltration and organisms, and serum protein electrophoresis, would help.",
+  "impression": "Pancytopenia with rouleaux; no spherocytes, fragments or abnormal cells.",
+  "suggested_reflex": [
+   "PROC.BM.ASPIRATE",
+   "LAB.IMM.SPEP"
+  ],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "As RP05. The comment suggests a marrow examination with a search for organisms, which any haematopathologist would advise for unexplained pancytopenia with a 25 cm spleen; it names no diagnosis.",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP07",
+  "test_item_id": "LAB.IMM.SPEP",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Albumin reduced (20 g/L). Alpha-1 and alpha-2 fractions normal. Beta fraction normal. Broad-based, marked increase in the gamma region. No discrete paraprotein band. Total protein 83 g/L.",
+  "impression": "Marked polyclonal hypergammaglobulinaemia with hypoalbuminaemia; no paraprotein.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Polyclonal gammopathy is reported at the rheumatology admission (H13); IgG 41.7 g/L and albumin 20 g/L on day 0.",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP08",
+  "test_item_id": "LAB.IMM.IFE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Immunofixation with anti-IgG, IgA, IgM, kappa and lambda antisera shows a diffuse polyclonal increase, most marked for IgG. No monoclonal protein identified.",
+  "impression": "Polyclonal increase; no monoclonal protein.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Serum and urine immunofixation were normal at the local hospital (H12); polyclonal gammopathy since.",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP09",
+  "test_item_id": "IMG.XR.CHEST",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "PA erect chest radiograph. Heart size and mediastinal contours normal. Lungs clear; costophrenic angles sharp. The left hemidiaphragm is slightly elevated by a large left upper quadrant soft-tissue mass in keeping with the spleen.",
+  "impression": "Clear lungs; elevated left hemidiaphragm from the enlarged spleen.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No chest disease reported; the massive spleen elevates the left hemidiaphragm.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP10",
+  "test_item_id": "IMG.CT.CHEST",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.SPLENOMEGALY",
+   "FND.HEPATOMEGALY"
+  ],
+  "report_text": "CT of the chest. Lungs clear with no nodules, consolidation or interstitial change. No mediastinal, hilar or axillary lymph node enlargement. No pleural or pericardial effusion. The upper abdomen shows a massively enlarged spleen and an enlarged liver.",
+  "impression": "No thoracic lymphadenopathy or lung disease; hepatosplenomegaly in the upper abdomen.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Lymphoma and tuberculosis paths: no chest disease is reported and none is expected.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP11",
+  "test_item_id": "IMG.NM.PET_CT",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.SPLENOMEGALY",
+   "FND.HEPATOMEGALY"
+  ],
+  "report_text": "FDG PET-CT from skull base to mid-thigh. Massive splenomegaly with diffusely increased FDG uptake (SUVmax 4.1) and no focal lesion. Hepatomegaly with mildly increased diffuse uptake. Diffusely increased marrow uptake throughout the axial skeleton. No hypermetabolic lymph nodes and no focal organ or bone lesion.",
+  "impression": "Diffuse splenic and marrow uptake without focal disease: a systemic inflammatory or infective process is more likely than lymphoma.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Lymphoma path. Diffuse splenic and marrow uptake is typical of an infiltrative infection with immune activation; no focal disease is expected.",
+  "confidence": 0.55
+ },
+ {
+  "id": "RP12",
+  "test_item_id": "LAB.BM.FLOW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.INCREASED_PLASMA_CELLS"
+  ],
+  "report_text": "Myeloid maturation normal; CD34-positive blasts 0.8% with a normal phenotype. B cells polyclonal. Plasma cells increased (about 6% of events) with a normal polyclonal phenotype (CD19+, CD56-). No aberrant T-cell population. Monocytes and macrophage-lineage cells prominent.",
+  "impression": "Reactive; polyclonal plasma cells; no clonal population.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Lymphoma and plasma cell paths: a reactive, polyclonal marrow.",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP13",
+  "test_item_id": "LAB.HAEM.PB_FLOW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Lymphocytes markedly reduced in number. T, B and NK cells present in normal proportions, with normal antigen expression; kappa to lambda ratio normal. No blasts or aberrant populations.",
+  "impression": "No clonal lymphoid population.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Lymphoma path; lymphopenia (0.32 x10^9/L) after months of immunosuppression.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP14",
+  "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Twenty metaphases analysed at a 400-band level. 46,XX. No clonal abnormality detected.",
+  "impression": "Normal female karyotype.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No clonal marrow disorder.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP15",
+  "test_item_id": "LAB.HAEM.MALARIA_SMEAR",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Thick and thin films examined under oil immersion (200 fields). No malarial parasites seen.",
+  "impression": "No malarial parasites seen.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Other tropical infections path: no malaria.",
+  "confidence": 0.85
+ },
+ {
+  "id": "RP16",
+  "test_item_id": "IMG.US.ELASTOGRAPHY",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Ten valid measurements obtained. Median liver stiffness 6.8 kPa with an interquartile range under 30% of the median, at the upper end of normal; no evidence of advanced fibrosis or cirrhosis.",
+  "impression": "No advanced fibrosis or cirrhosis.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Chronic liver disease path: hepatomegaly from infiltration and congestion, not cirrhosis.",
+  "confidence": 0.6
+ },
+ {
+  "id": "RP17",
+  "test_item_id": "PROC.ENDO.OGD",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Endoscopy to the second part of the duodenum. No oesophageal or gastric varices and no portal hypertensive gastropathy. The stomach is compressed externally along the greater curve. Normal mucosa throughout; no ulceration or bleeding.",
+  "impression": "No varices; extrinsic compression of the stomach from the spleen.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Portal hypertension path: no varices; the massive spleen indents the stomach.",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP18",
+  "test_item_id": "PROC.BIOPSY.LIVER",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.LD_BODIES"
+  ],
+  "report_text": "Core of liver with ten portal tracts. Kupffer cells are hyperplastic, and some contain small intracellular bodies consistent with Leishmania amastigotes. Portal tracts show a mild infiltrate rich in plasma cells, without interface hepatitis. No fibrosis on reticulin and trichrome; no steatosis or excess iron.",
+  "impression": "Kupffer cell hyperplasia with intracellular amastigotes; mild plasma-cell rich portal infiltrate; no fibrosis.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "A risky test here (platelets 29 x10^9/L). The liver is commonly parasitised in this disease, so a biopsy would show the organisms; stated plainly because a liver biopsy is itself a confirmatory specimen.",
+  "confidence": 0.5
+ },
+ {
+  "id": "RP19",
+  "test_item_id": "PROC.SPLEEN.ASPIRATE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.LD_BODIES"
+  ],
+  "report_text": "Splenic aspirate smears (Giemsa). Numerous intracellular and extracellular amastigotes (Leishman-Donovan bodies) within macrophages; parasite density high (about 1-10 parasites per field at 1000x). Background of lymphoid and red pulp cells.",
+  "impression": "Abundant Leishmania amastigotes in splenic macrophages.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Splenic aspirate is the most sensitive specimen for this infection, but it carries a risk of haemorrhage and is contraindicated with platelets 29 x10^9/L and a prolonged PT; the result is given if a player does it anyway.",
+  "confidence": 0.6
+ },
+ {
+  "id": "RP20",
+  "test_item_id": "LAB.BM.IRON_STAIN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Perls stain shows increased storage iron (grade 4) in marrow macrophages. Sideroblasts are reduced; no ring sideroblasts.",
+  "impression": "Increased storage iron with reduced sideroblasts: the pattern of anaemia of inflammation.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Ferritin 1,007 ug/L with low serum iron: iron is sequestered in macrophages.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP21",
+  "test_item_id": "IMG.XR.ABDOMEN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.SPLENOMEGALY",
+   "FND.HEPATOMEGALY"
+  ],
+  "report_text": "Supine abdominal radiograph. A large soft-tissue mass occupies the left abdomen, displacing the bowel gas to the right, in keeping with a massively enlarged spleen; the liver shadow is also enlarged. The bowel gas pattern is otherwise normal. No abnormal calcification.",
+  "impression": "Massive splenomegaly displacing bowel; hepatomegaly.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Chronic liver disease path; the catalogue's normal report would contradict a 25.9 cm spleen.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP22",
+  "test_item_id": "IMG.MRI.MRCP",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.SPLENOMEGALY",
+   "FND.HEPATOMEGALY"
+  ],
+  "report_text": "MRI of the liver with MRCP. The liver is enlarged with homogeneous signal and no focal lesion. The intrahepatic and common bile ducts are of normal calibre with no filling defect or stricture. The pancreatic duct is normal. The spleen is massively enlarged with homogeneous signal.",
+  "impression": "Hepatosplenomegaly; normal biliary tree.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Chronic liver disease path; the catalogue's normal report would call the liver normal in size.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP23",
+  "test_item_id": "IMG.CT.WHOLE_BODY_LOW_DOSE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.SPLENOMEGALY",
+   "FND.HEPATOMEGALY"
+  ],
+  "report_text": "Whole-body low-dose CT from vertex to knees. The axial and appendicular skeleton is of normal density with no lytic or destructive lesion. No extramedullary soft tissue mass. Massive splenomegaly and hepatomegaly in the field of view.",
+  "impression": "No lytic bone lesions; hepatosplenomegaly.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Lymphoma path (bone lesions); the catalogue's normal report would call the other organs unremarkable.",
+  "confidence": 0.75
+ }
+]

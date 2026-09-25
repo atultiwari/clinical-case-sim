@@ -1,0 +1,397 @@
+[
+ {
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "utility": "low_yield",
+  "rationale": "Negative in the article; radiation and contrast in AKI for little yield."
+ },
+ {
+  "test_item_id": "IMG.CT.HEAD",
+  "utility": "low_yield",
+  "rationale": "No focal signs; only if the GCS falls."
+ },
+ {
+  "test_item_id": "IMG.US.ABDOMEN",
+  "utility": "low_yield",
+  "rationale": "Normal; only if the pain changes."
+ },
+ {
+  "test_item_id": "IMG.US.KIDNEYS",
+  "utility": "low_yield",
+  "rationale": "No obstruction; reasonable in AKI but not needed once the cause is clear."
+ },
+ {
+  "test_item_id": "IMG.XR.CHEST",
+  "utility": "low_yield",
+  "rationale": "Negative; done in the article."
+ },
+ {
+  "test_item_id": "LAB.CHEM.ABG",
+  "utility": "supportive",
+  "rationale": "Severity assessment (lactate, acidosis)."
+ },
+ {
+  "test_item_id": "LAB.CHEM.AMMONIA",
+  "utility": "low_yield",
+  "rationale": "Normal; confusion is not hepatic."
+ },
+ {
+  "test_item_id": "LAB.CHEM.AMYLASE",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.B12",
+  "utility": "low_yield",
+  "rationale": "Microcytosis work-up is better done after recovery; iron studies are distorted by acute infection."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CAPILLARY_GLUCOSE",
+  "utility": "essential",
+  "rationale": "Hypoglycaemia must be excluded in a confused patient with falciparum infection."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CK",
+  "utility": "low_yield",
+  "rationale": "Rules out alternative causes of AKI; normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CRP",
+  "utility": "low_yield",
+  "rationale": "Non-specific inflammation markers; procalcitonin misleads towards sepsis."
+ },
+ {
+  "test_item_id": "LAB.CHEM.ELECTROLYTES",
+  "utility": "supportive",
+  "rationale": "Electrolytes after vomiting and diarrhoea."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FERRITIN",
+  "utility": "low_yield",
+  "rationale": "Microcytosis work-up is better done after recovery; iron studies are distorted by acute infection."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FOLATE",
+  "utility": "low_yield",
+  "rationale": "Microcytosis work-up is better done after recovery; iron studies are distorted by acute infection."
+ },
+ {
+  "test_item_id": "LAB.CHEM.GLUCOSE_RANDOM",
+  "utility": "essential",
+  "rationale": "Hypoglycaemia must be excluded in a confused patient with falciparum infection."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HAPTOGLOBIN",
+  "utility": "supportive",
+  "rationale": "Haemolysis markers."
+ },
+ {
+  "test_item_id": "LAB.CHEM.IRON_STUDIES",
+  "utility": "low_yield",
+  "rationale": "Microcytosis work-up is better done after recovery; iron studies are distorted by acute infection."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LACTATE",
+  "utility": "supportive",
+  "rationale": "Severity assessment (lactate, acidosis)."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LDH",
+  "utility": "supportive",
+  "rationale": "Haemolysis markers."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LFT",
+  "utility": "supportive",
+  "rationale": "Routine admission panel; bilirubin and transaminases in haemolysis."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LIPASE",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.PROCALCITONIN",
+  "utility": "low_yield",
+  "rationale": "Non-specific inflammation markers; procalcitonin misleads towards sepsis."
+ },
+ {
+  "test_item_id": "LAB.CHEM.RENAL",
+  "utility": "essential",
+  "rationale": "AKI is a severity criterion."
+ },
+ {
+  "test_item_id": "LAB.CHEM.TROPONIN_I",
+  "utility": "low_yield",
+  "rationale": "TTP organ-involvement screen; normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.TROPONIN_T",
+  "utility": "low_yield",
+  "rationale": "TTP organ-involvement screen; normal."
+ },
+ {
+  "test_item_id": "LAB.CSF.ANALYSIS",
+  "utility": "low_yield",
+  "rationale": "No meningism; platelets falling; not needed once parasites are seen."
+ },
+ {
+  "test_item_id": "LAB.CSF.CULTURE",
+  "utility": "low_yield",
+  "rationale": "No meningism; platelets falling; not needed once parasites are seen."
+ },
+ {
+  "test_item_id": "LAB.ENDO.BHCG",
+  "utility": "unnecessary",
+  "rationale": "Postmenopausal; the urine test suffices if any doubt."
+ },
+ {
+  "test_item_id": "LAB.GI.CALPROTECTIN",
+  "utility": "low_yield",
+  "rationale": "Negative in the article; reasonable for diarrhoea but not the answer."
+ },
+ {
+  "test_item_id": "LAB.GI.FIT",
+  "utility": "low_yield",
+  "rationale": "Negative in the article; reasonable for diarrhoea but not the answer."
+ },
+ {
+  "test_item_id": "LAB.GI.GIARDIA_AG",
+  "utility": "low_yield",
+  "rationale": "Negative in the article; reasonable for diarrhoea but not the answer."
+ },
+ {
+  "test_item_id": "LAB.GI.STOOL_MICROSCOPY",
+  "utility": "low_yield",
+  "rationale": "Negative in the article; reasonable for diarrhoea but not the answer."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ADAMTS13",
+  "utility": "supportive",
+  "rationale": "Taken before any plasma when TTP is considered; activity 49.1%, well above 10%, argues against immune TTP."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ADAMTS13_INHIBITOR",
+  "utility": "low_yield",
+  "rationale": "Antibody 22 U/mL is raised but not specific; it misleads towards TTP when activity is above 10%. Useful only alongside the activity."
+ },
+ {
+  "test_item_id": "LAB.HAEM.APTT",
+  "utility": "low_yield",
+  "rationale": "TTP organ-involvement screen; normal."
+ },
+ {
+  "test_item_id": "LAB.HAEM.CBC",
+  "utility": "essential",
+  "rationale": "Platelets and haemoglobin drive the case and the transfusion decision."
+ },
+ {
+  "test_item_id": "LAB.HAEM.COAG_SCREEN",
+  "utility": "supportive",
+  "rationale": "Mild coagulopathy; excludes DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.D_DIMER",
+  "utility": "low_yield",
+  "rationale": "TTP organ-involvement screen; normal."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ESR",
+  "utility": "low_yield",
+  "rationale": "Non-specific inflammation markers; procalcitonin misleads towards sepsis."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FIBRINOGEN",
+  "utility": "supportive",
+  "rationale": "Mild coagulopathy; excludes DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM",
+  "utility": "supportive",
+  "rationale": "Film shows the parasites and the schistocytes."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "utility": "supportive",
+  "rationale": "Film shows the parasites and the schistocytes."
+ },
+ {
+  "test_item_id": "LAB.HAEM.G6PD",
+  "utility": "low_yield",
+  "rationale": "Not needed for artemisinin treatment; relevant only if primaquine were planned."
+ },
+ {
+  "test_item_id": "LAB.HAEM.HB_HPLC",
+  "utility": "low_yield",
+  "rationale": "Microcytosis work-up is better done after recovery; iron studies are distorted by acute infection."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_PARASITAEMIA",
+  "utility": "essential",
+  "rationale": "Parasite density grades severity and shows the response to treatment."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_RDT",
+  "utility": "essential",
+  "rationale": "Rapid confirmation while films are read; positive here."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_SMEAR",
+  "utility": "essential",
+  "rationale": "Confirms the diagnosis and the species."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PLASMA_HB",
+  "utility": "low_yield",
+  "rationale": "TTP organ-involvement screen; normal."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PT_INR",
+  "utility": "supportive",
+  "rationale": "Mild coagulopathy; excludes DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.RETIC",
+  "utility": "supportive",
+  "rationale": "Haemolysis markers."
+ },
+ {
+  "test_item_id": "LAB.HAEM.SICKLING",
+  "utility": "low_yield",
+  "rationale": "Microcytosis work-up is better done after recovery; iron studies are distorted by acute infection."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANA",
+  "utility": "low_yield",
+  "rationale": "TTP organ-involvement screen; normal."
+ },
+ {
+  "test_item_id": "LAB.MICRO.BLOOD_CULTURE",
+  "utility": "supportive",
+  "rationale": "Bacteraemia co-exists with severe falciparum infection; negative here."
+ },
+ {
+  "test_item_id": "LAB.MICRO.CDIFF",
+  "utility": "low_yield",
+  "rationale": "Negative in the article; reasonable for diarrhoea but not the answer."
+ },
+ {
+  "test_item_id": "LAB.MICRO.STOOL_CULTURE",
+  "utility": "low_yield",
+  "rationale": "Negative in the article; reasonable for diarrhoea but not the answer."
+ },
+ {
+  "test_item_id": "LAB.MICRO.URINE_CULTURE",
+  "utility": "low_yield",
+  "rationale": "Rules out alternative causes of AKI; normal."
+ },
+ {
+  "test_item_id": "LAB.MOL.ALPHA_GLOBIN",
+  "utility": "unnecessary",
+  "rationale": "Genetic confirmation of the microcytosis is not needed in the acute admission."
+ },
+ {
+  "test_item_id": "LAB.SERO.CHIKUNGUNYA",
+  "utility": "low_yield",
+  "rationale": "Reasonable in a febrile traveller before films; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.DENGUE",
+  "utility": "low_yield",
+  "rationale": "Reasonable in a febrile traveller before films; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_A_IGM",
+  "utility": "low_yield",
+  "rationale": "Reasonable in a febrile traveller before films; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_B",
+  "utility": "low_yield",
+  "rationale": "Reasonable in a febrile traveller before films; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_C",
+  "utility": "low_yield",
+  "rationale": "Reasonable in a febrile traveller before films; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_E_IGM",
+  "utility": "low_yield",
+  "rationale": "Reasonable in a febrile traveller before films; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.HIV",
+  "utility": "low_yield",
+  "rationale": "Reasonable in a febrile traveller before films; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.LEPTOSPIRA",
+  "utility": "low_yield",
+  "rationale": "Reasonable in a febrile traveller before films; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.TYPHOID_IGM",
+  "utility": "low_yield",
+  "rationale": "Reasonable in a febrile traveller before films; negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.WIDAL",
+  "utility": "unnecessary",
+  "rationale": "Unreliable and non-specific; blood culture is the test for enteric fever."
+ },
+ {
+  "test_item_id": "LAB.TBS.ANTIBODY_SCREEN",
+  "utility": "supportive",
+  "rationale": "Needed for the transfusion she received."
+ },
+ {
+  "test_item_id": "LAB.TBS.BLOOD_GROUP",
+  "utility": "supportive",
+  "rationale": "Needed for the transfusion she received."
+ },
+ {
+  "test_item_id": "LAB.TBS.CROSSMATCH",
+  "utility": "supportive",
+  "rationale": "Needed for the transfusion she received."
+ },
+ {
+  "test_item_id": "LAB.TBS.DAT",
+  "utility": "supportive",
+  "rationale": "Autoimmune haemolysis to exclude in the TMA work-up."
+ },
+ {
+  "test_item_id": "LAB.URINE.DIPSTICK",
+  "utility": "supportive",
+  "rationale": "AKI assessment."
+ },
+ {
+  "test_item_id": "LAB.URINE.MYOGLOBIN",
+  "utility": "low_yield",
+  "rationale": "Rules out alternative causes of AKI; normal."
+ },
+ {
+  "test_item_id": "LAB.URINE.PCR",
+  "utility": "low_yield",
+  "rationale": "Rules out alternative causes of AKI; normal."
+ },
+ {
+  "test_item_id": "LAB.URINE.PREGNANCY",
+  "utility": "supportive",
+  "rationale": "Pregnancy status before treatment choices (postmenopausal)."
+ },
+ {
+  "test_item_id": "LAB.URINE.URINALYSIS",
+  "utility": "supportive",
+  "rationale": "AKI assessment."
+ },
+ {
+  "test_item_id": "PROC.CARD.ECG",
+  "utility": "supportive",
+  "rationale": "QTc before artemether-lumefantrine; tachycardia."
+ },
+ {
+  "test_item_id": "PROC.NEURO.LP",
+  "utility": "low_yield",
+  "rationale": "No meningism; platelets falling; not needed once parasites are seen."
+ }
+]

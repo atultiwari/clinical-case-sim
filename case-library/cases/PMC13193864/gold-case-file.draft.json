@@ -1,0 +1,1361 @@
+{
+ "_status_note": "DRAFT gold case file (L1.3, batch 1). The Case Reviewer (Dr Atul Tiwari) verifies every fact against the article before PMC13193864@v1 is frozen. Values from Tables 1-3 and the text, converted to SI (printed values in notes). The serial values are only in Figure 1 and are not transcribed; the curation files hold affected values for later days, marked as judgement calls. Items under 'gaps' are not article facts.",
+ "schema_version": "0.2",
+ "case_id": "PMC13193864",
+ "version": 1,
+ "status": "draft",
+ "case": {
+  "slug": "c-q7m2k",
+  "display_title": "Tired and off her food after the flu, with failing kidneys",
+  "display_tags": [
+   "acute kidney injury",
+   "anaemia",
+   "fatigue"
+  ],
+  "specialty": "nephrology",
+  "lab_profile": {
+   "sex": "F",
+   "age_years": 60,
+   "components": {
+    "CMP.HB": {
+     "low": 115,
+     "high": 150,
+     "unit": "g/L"
+    },
+    "CMP.RBC": {
+     "low": 3.8,
+     "high": 5.1,
+     "unit": "x10^12/L"
+    },
+    "CMP.WBC": {
+     "low": 3.5,
+     "high": 9.5,
+     "unit": "x10^9/L"
+    },
+    "CMP.PLT": {
+     "low": 125,
+     "high": 350,
+     "unit": "x10^9/L"
+    },
+    "CMP.RETIC_ABS": {
+     "low": 24,
+     "high": 84,
+     "unit": "x10^9/L"
+    },
+    "CMP.PT": {
+     "low": 9.8,
+     "high": 12.1,
+     "unit": "s"
+    },
+    "CMP.APTT": {
+     "low": 23.5,
+     "high": 36.0,
+     "unit": "s"
+    },
+    "CMP.D_DIMER": {
+     "low": 0,
+     "high": 0.55,
+     "unit": "mg/L FEU",
+     "display": "<=0.55"
+    },
+    "CMP.ADAMTS13_ACT": {
+     "low": 42.16,
+     "high": 126.37,
+     "unit": "%"
+    },
+    "CMP.TOTAL_PROTEIN": {
+     "low": 65,
+     "high": 85,
+     "unit": "g/L"
+    },
+    "CMP.ALBUMIN": {
+     "low": 40,
+     "high": 55,
+     "unit": "g/L"
+    },
+    "CMP.LDH": {
+     "low": 120,
+     "high": 250,
+     "unit": "U/L"
+    },
+    "CMP.BILI_TOTAL": {
+     "low": 0,
+     "high": 23,
+     "unit": "umol/L",
+     "display": "<=23.0"
+    },
+    "CMP.URATE": {
+     "low": 149,
+     "high": 417,
+     "unit": "umol/L"
+    },
+    "CMP.UREA": {
+     "low": 3.1,
+     "high": 8.8,
+     "unit": "mmol/L"
+    },
+    "CMP.CREATININE": {
+     "low": 41,
+     "high": 81,
+     "unit": "umol/L"
+    },
+    "CMP.K": {
+     "low": 3.5,
+     "high": 5.3,
+     "unit": "mmol/L"
+    },
+    "CMP.CA": {
+     "low": 2.17,
+     "high": 2.75,
+     "unit": "mmol/L"
+    },
+    "CMP.PHOSPHATE": {
+     "low": 0.81,
+     "high": 1.45,
+     "unit": "mmol/L"
+    },
+    "CMP.FERRITIN": {
+     "low": 13,
+     "high": 150,
+     "unit": "ug/L"
+    },
+    "CMP.CK": {
+     "low": 40,
+     "high": 200,
+     "unit": "U/L"
+    },
+    "CMP.CRP": {
+     "low": 0,
+     "high": 6,
+     "unit": "mg/L",
+     "display": "<=6.00"
+    },
+    "CMP.PCT": {
+     "low": 0,
+     "high": 0.05,
+     "unit": "ug/L",
+     "display": "<0.052"
+    },
+    "CMP.C3": {
+     "low": 0.7,
+     "high": 1.4,
+     "unit": "g/L"
+    },
+    "CMP.C4": {
+     "low": 0.1,
+     "high": 0.4,
+     "unit": "g/L"
+    },
+    "CMP.IGG": {
+     "low": 8.6,
+     "high": 17.4,
+     "unit": "g/L"
+    },
+    "CMP.IGA": {
+     "low": 1.0,
+     "high": 4.2,
+     "unit": "g/L"
+    },
+    "CMP.IGM": {
+     "low": 0.5,
+     "high": 2.8,
+     "unit": "g/L"
+    },
+    "CMP.UACR": {
+     "low": 0,
+     "high": 3.4,
+     "unit": "mg/mmol",
+     "display": "<=3.4"
+    },
+    "CMP.UPCR": {
+     "low": 0,
+     "high": 22.6,
+     "unit": "mg/mmol",
+     "display": "<=22.6"
+    },
+    "CMP.CD55_RBC": {
+     "low": 40,
+     "high": 100,
+     "unit": "%",
+     "display": ">40.00"
+    },
+    "CMP.CD59_RBC": {
+     "low": 90,
+     "high": 100,
+     "unit": "%",
+     "display": ">90.00"
+    },
+    "CMP.CD55_NEUT": {
+     "low": 90,
+     "high": 100,
+     "unit": "%",
+     "display": ">90.00"
+    },
+    "CMP.CD59_NEUT": {
+     "low": 90,
+     "high": 100,
+     "unit": "%",
+     "display": ">90.00"
+    }
+   }
+  }
+ },
+ "source": {
+  "title": "Paroxysmal nocturnal hemoglobinuria with a positive Coombs test presenting as acute kidney injury: a case report",
+  "authors": [
+   "Luyao Jiang",
+   "Tianxi Chen",
+   "Linlin Xu",
+   "Miaojun Shi",
+   "Wen Huang"
+  ],
+  "affiliations": [
+   "Department of Rehabilitation Medicine, The First People's Hospital of Yongkang, Jinhua, Zhejiang, China",
+   "Department of Nephrology, The First People's Hospital of Yongkang, Jinhua, Zhejiang, China",
+   "Department of Nephrology, The Second Affiliated Hospital and Yuying Children's Hospital of Wenzhou Medical University, Wenzhou, Zhejiang, China"
+  ],
+  "journal": "Frontiers in Medicine",
+  "volume": "13",
+  "article_number": "1778834",
+  "published": "2026-05-08",
+  "doi": "10.3389/fmed.2026.1778834",
+  "pmcid": "PMC13193864",
+  "pmid": "42180722",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13193864/",
+  "licence": "CC BY 4.0",
+  "production_ok": true,
+  "public_release_ok": true,
+  "licence_verified": "2026-09-25 from the JATS <license> element (cases/BATCH1.md); figures carry no separate credit line",
+  "jats_sha256": "67d86f5e05817bb2c85e76ae13bef44ef050374d1818000d8b590723fdc3e731",
+  "attribution": "Adapted from Jiang L, Chen T, Xu L, Shi M, Huang W. Paroxysmal nocturnal hemoglobinuria with a positive Coombs test presenting as acute kidney injury: a case report. Front Med 13: 1778834 (2026). doi:10.3389/fmed.2026.1778834. Licensed CC BY 4.0. Changes: restructured into atomic facts; diagnosis redacted from player-facing text; simulated findings added where marked."
+ },
+ "clock": {
+  "day_0": "2025-03-12",
+  "day_0_label": "Admission work-up (admitted on 11 March 2025; first laboratory results 12 March)",
+  "semantics": "Integer day relative to 12 March 2025. day = null means the fact is valid at any point in the admission (the article gives no date)."
+ },
+ "vignette": "A 60-year-old woman is admitted with tiredness and poor appetite that began after influenza A in February 2025. Outpatient blood tests suggested severe kidney impairment.",
+ "opening_statement_lay": "Ever since I had the flu last month I've felt completely worn out, and I don't feel like eating. My doctor did some blood tests and said my kidneys aren't working properly, so they sent me in.",
+ "facts": [
+  {
+   "id": "H01",
+   "category": "history",
+   "item": "Age and sex",
+   "release_text": "60-year-old woman.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case presentation"
+  },
+  {
+   "id": "H02",
+   "category": "history",
+   "item": "Presenting complaint",
+   "release_text": "Fatigue and poor appetite (anorexia).",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case presentation; abstract",
+   "released_by": [
+    "HX.GEN.FATIGUE",
+    "HX.GI.NAUSEA_APPETITE"
+   ]
+  },
+  {
+   "id": "H03",
+   "category": "history",
+   "item": "Onset after influenza",
+   "release_text": "The symptoms followed an influenza A infection in February 2025.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PC.ONSET_DURATION",
+    "HX.GEN.RECENT_INFECTION"
+   ]
+  },
+  {
+   "id": "H04",
+   "category": "history",
+   "item": "Loose stools",
+   "release_text": "Loose, watery stools since the influenza.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.GI.BOWEL_HABIT",
+    "HX.PC.ASSOCIATED"
+   ]
+  },
+  {
+   "id": "H05",
+   "category": "history",
+   "item": "Urine colour now",
+   "release_text": "Dark, tea-coloured urine since the influenza.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.GU.URINE_COLOUR",
+    "HX.PC.ASSOCIATED"
+   ]
+  },
+  {
+   "id": "H06",
+   "category": "history",
+   "item": "Previous episodes of dark urine (hidden until asked specifically)",
+   "release_text": "Recurring episodes of dark urine since 2016, coming and going, more frequent over the past two years; each episode settled by itself in 2-3 days. Earlier medical evaluations did not find a cause.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "pivotal": true,
+   "release": "chart",
+   "release_condition": {
+    "requires_topics": [
+     "previous episodes of dark or discoloured urine",
+     "whether the dark urine has happened before",
+     "similar episodes in the past"
+    ],
+    "note": "In the article this came out only on 'further history' after the first work-up. A question about the current urine colour returns H05 only."
+   },
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PC.PREVIOUS_EPISODES"
+   ]
+  },
+  {
+   "id": "H07",
+   "category": "history",
+   "item": "Past medical history",
+   "release_text": "No significant past medical history.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PMH.MEDICAL",
+    "HX.PMH.CHRONIC_CONDITIONS"
+   ]
+  },
+  {
+   "id": "H08",
+   "category": "history",
+   "item": "Family history",
+   "release_text": "Family history unremarkable.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.FAMILY.GENERAL",
+    "HX.FAMILY.BLOOD"
+   ]
+  },
+  {
+   "id": "H09",
+   "category": "history",
+   "item": "Social history",
+   "release_text": "Social history unremarkable.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.SOCIAL.LIVING"
+   ]
+  },
+  {
+   "id": "H10",
+   "category": "history",
+   "item": "Urine output",
+   "release_text": "Passing very little urine: 200 mL over 13 hours after admission.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.GU.URINE_VOLUME"
+   ]
+  },
+  {
+   "id": "H11",
+   "category": "history",
+   "item": "Outpatient tests before admission",
+   "release_text": "Outpatient blood tests before admission showed mild anaemia, creatinine 123.7 umol/L, total bilirubin 76.4 umol/L and LDH 1,868 U/L; she was admitted with suspected severe kidney impairment.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.RECORDS.REFERRAL_LETTER",
+    "HX.RECORDS.PREVIOUS"
+   ]
+  },
+  {
+   "id": "E01",
+   "category": "exam",
+   "item": "Vital signs",
+   "release_text": "Temperature 36.5 C; blood pressure 144/89 mmHg; heart rate 86 beats/min.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "EX.GEN.VITALS"
+   ]
+  },
+  {
+   "id": "E02",
+   "category": "exam",
+   "item": "Pallor",
+   "release_text": "Pallor present.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "EX.GEN.PALLOR"
+   ]
+  },
+  {
+   "id": "E03",
+   "category": "exam",
+   "item": "Oedema",
+   "release_text": "Mild pitting oedema of both lower limbs.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "EX.GEN.OEDEMA"
+   ]
+  },
+  {
+   "id": "E04",
+   "category": "exam",
+   "item": "Rest of the examination",
+   "release_text": "No other remarkable findings on physical examination.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "never",
+   "source_locator": "Case presentation",
+   "note": "Documentation only: every other examination item is written as an affected row consistent with this statement."
+  }
+ ],
+ "series": [
+  {
+   "id": "S01",
+   "item": "Platelet count",
+   "code": null,
+   "unit": "x10^9/L",
+   "ref_range": "125-350",
+   "points": [
+    {
+     "day": 0,
+     "value": 233
+    },
+    {
+     "day": 7,
+     "value": 45,
+     "flag": "L"
+    }
+   ],
+   "note": "Day 0 from Table 1. The abstract gives the nadir as 45 x10^9/L; the text says the count fell progressively between 12 and 19 March, so the nadir is placed on 19 March (day 7), the curator's reading. Figure 1 holds the other values.",
+   "source_locator": "Table 1, abstract and text",
+   "catalogue_ref": "CMP.PLT"
+  }
+ ],
+ "single_results": [
+  {
+   "id": "L01",
+   "item": "Urine blood (dipstick)",
+   "code": null,
+   "value": "2+",
+   "unit": "",
+   "ref_range": "Negative",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.U_BLOOD",
+   "note": "Printed as occult blood 2+."
+  },
+  {
+   "id": "L02",
+   "item": "Urine glucose (dipstick)",
+   "code": null,
+   "value": "Negative",
+   "unit": "",
+   "ref_range": "Negative",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.U_GLUCOSE",
+   "note": "Printed '-'."
+  },
+  {
+   "id": "L03",
+   "item": "Urine microscopy, red cells",
+   "code": null,
+   "value": 2,
+   "unit": "/HPF",
+   "ref_range": "0-2",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.U_MICRO_RBC",
+   "note": "Printed 13.3/uL (reference <13.9/uL, within range); converted at about 5.5/uL per high-power field."
+  },
+  {
+   "id": "L04",
+   "item": "Urine microscopy, pus cells",
+   "code": null,
+   "value": 0,
+   "unit": "/HPF",
+   "ref_range": "0-5",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.U_MICRO_WBC",
+   "note": "Printed 2.3/uL (reference <13.2/uL); converted at about 5.5/uL per high-power field."
+  },
+  {
+   "id": "L05",
+   "item": "Urine urobilinogen (dipstick)",
+   "code": null,
+   "value": "Negative",
+   "unit": "",
+   "ref_range": "Normal",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.U_UROBILINOGEN",
+   "note": "Printed '-'."
+  },
+  {
+   "id": "L06",
+   "item": "Urine albumin:creatinine ratio",
+   "code": null,
+   "value": 26.6,
+   "unit": "mg/mmol",
+   "ref_range": "<=3.4",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.UACR",
+   "note": "Printed 235.0 mg/g creatinine (reference <=30 mg/g); converted at 1 mg/mmol = 8.84 mg/g."
+  },
+  {
+   "id": "L07",
+   "item": "Urine protein:creatinine ratio",
+   "code": null,
+   "value": 63,
+   "unit": "mg/mmol",
+   "ref_range": "<=22.6",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.UPCR",
+   "note": "Printed 558.19 mg/g creatinine (reference <=200 mg/g); converted at 1 mg/mmol = 8.84 mg/g."
+  },
+  {
+   "id": "L08",
+   "item": "Total protein",
+   "code": null,
+   "value": 58.5,
+   "unit": "g/L",
+   "ref_range": "65-85",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "L",
+   "catalogue_ref": "CMP.TOTAL_PROTEIN"
+  },
+  {
+   "id": "L09",
+   "item": "Albumin",
+   "code": null,
+   "value": 34.6,
+   "unit": "g/L",
+   "ref_range": "40-55",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "L",
+   "catalogue_ref": "CMP.ALBUMIN"
+  },
+  {
+   "id": "L10",
+   "item": "Lactate dehydrogenase",
+   "code": null,
+   "value": 685,
+   "unit": "U/L",
+   "ref_range": "120-250",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.LDH"
+  },
+  {
+   "id": "L11",
+   "item": "Total bilirubin",
+   "code": null,
+   "value": 7.1,
+   "unit": "umol/L",
+   "ref_range": "<=23.0",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.BILI_TOTAL",
+   "note": "Printed 7.1 umol/L (<=23.0). The outpatient value before admission was 76.4 umol/L (H11)."
+  },
+  {
+   "id": "L12",
+   "item": "Urate",
+   "code": null,
+   "value": 766,
+   "unit": "umol/L",
+   "ref_range": "149-417",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.URATE"
+  },
+  {
+   "id": "L13",
+   "item": "Urea",
+   "code": null,
+   "value": 65.9,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.UREA",
+   "note": "Printed as BUN 65.9 mmol/L (3.10-8.80); a molar urea nitrogen value equals urea in mmol/L."
+  },
+  {
+   "id": "L14",
+   "item": "Creatinine",
+   "code": null,
+   "value": 2065,
+   "unit": "umol/L",
+   "ref_range": "41-81",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.CREATININE"
+  },
+  {
+   "id": "L15",
+   "item": "Potassium",
+   "code": null,
+   "value": 5.81,
+   "unit": "mmol/L",
+   "ref_range": "3.5-5.3",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.K"
+  },
+  {
+   "id": "L16",
+   "item": "Calcium",
+   "code": null,
+   "value": 1.88,
+   "unit": "mmol/L",
+   "ref_range": "2.17-2.75",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "L",
+   "catalogue_ref": "CMP.CA"
+  },
+  {
+   "id": "L17",
+   "item": "Phosphate",
+   "code": null,
+   "value": 1.86,
+   "unit": "mmol/L",
+   "ref_range": "0.81-1.45",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.PHOSPHATE"
+  },
+  {
+   "id": "L18",
+   "item": "Ferritin",
+   "code": null,
+   "value": 1058,
+   "unit": "ug/L",
+   "ref_range": "13-150",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.FERRITIN",
+   "note": "Printed 1058 ng/mL (13-150); ng/mL equals ug/L."
+  },
+  {
+   "id": "L19",
+   "item": "Creatine kinase",
+   "code": null,
+   "value": 33,
+   "unit": "U/L",
+   "ref_range": "40-200",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "L",
+   "catalogue_ref": "CMP.CK"
+  },
+  {
+   "id": "L20",
+   "item": "White cell count",
+   "code": null,
+   "value": 5.39,
+   "unit": "x10^9/L",
+   "ref_range": "3.5-9.5",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.WBC"
+  },
+  {
+   "id": "L21",
+   "item": "Red cell count",
+   "code": null,
+   "value": 2.2,
+   "unit": "x10^12/L",
+   "ref_range": "3.8-5.1",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "L",
+   "catalogue_ref": "CMP.RBC"
+  },
+  {
+   "id": "L22",
+   "item": "Haemoglobin",
+   "code": null,
+   "value": 69,
+   "unit": "g/L",
+   "ref_range": "115-150",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "L",
+   "catalogue_ref": "CMP.HB"
+  },
+  {
+   "id": "L24",
+   "item": "Reticulocytes (absolute)",
+   "code": null,
+   "value": 12.8,
+   "unit": "x10^9/L",
+   "ref_range": "24-84",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "L",
+   "catalogue_ref": "CMP.RETIC_ABS",
+   "note": "Printed as ARC 12.8 x10^9/L (24.0-84.0)."
+  },
+  {
+   "id": "L25",
+   "item": "Direct antiglobulin test, IgG",
+   "code": null,
+   "value": "Positive",
+   "unit": "",
+   "ref_range": "Negative",
+   "day": 0,
+   "source_locator": "Table 1 and text",
+   "catalogue_ref": "CMP.DAT_IGG",
+   "note": "Table 1 lists the DAT with the admission results; the text dates the IgG and C3d result to 13 March (day 1). Recorded on day 0."
+  },
+  {
+   "id": "L25b",
+   "item": "Direct antiglobulin test, C3d",
+   "code": null,
+   "value": "Positive",
+   "unit": "",
+   "ref_range": "Negative",
+   "day": 0,
+   "source_locator": "Table 1 and text",
+   "catalogue_ref": "CMP.DAT_C3D",
+   "note": "See L25."
+  },
+  {
+   "id": "L26",
+   "item": "Procalcitonin",
+   "code": null,
+   "value": 0.05,
+   "unit": "ug/L",
+   "ref_range": "<0.052",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.PCT",
+   "note": "Printed 0.051 ng/mL (<0.052); ng/mL equals ug/L; rounded to the catalogue's two decimals."
+  },
+  {
+   "id": "L27",
+   "item": "Prothrombin time",
+   "code": null,
+   "value": 12.2,
+   "unit": "s",
+   "ref_range": "9.8-12.1",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.PT"
+  },
+  {
+   "id": "L28",
+   "item": "Activated partial thromboplastin time",
+   "code": null,
+   "value": 29.1,
+   "unit": "s",
+   "ref_range": "23.5-36",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.APTT"
+  },
+  {
+   "id": "L29",
+   "item": "D-dimer",
+   "code": null,
+   "value": 8.82,
+   "unit": "mg/L FEU",
+   "ref_range": "<=0.55",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.D_DIMER",
+   "note": "Printed 8.82 mg/L (<=0.55); fibrinogen-equivalent units assumed."
+  },
+  {
+   "id": "L30",
+   "item": "ADAMTS13 activity",
+   "code": null,
+   "value": 53.2,
+   "unit": "%",
+   "ref_range": "42.16-126.37",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.ADAMTS13_ACT"
+  },
+  {
+   "id": "L31",
+   "item": "C-reactive protein",
+   "code": null,
+   "value": 7.47,
+   "unit": "mg/L",
+   "ref_range": "<=6.00",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.CRP"
+  },
+  {
+   "id": "L32",
+   "item": "Antinuclear antibodies",
+   "code": null,
+   "value": "Negative",
+   "unit": "",
+   "ref_range": "Negative",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.ANA",
+   "note": "Printed '-'."
+  },
+  {
+   "id": "L33",
+   "item": "Anti-double-stranded DNA antibodies",
+   "code": null,
+   "value": "Negative",
+   "unit": "",
+   "ref_range": "<10",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.ANTI_DSDNA",
+   "note": "Printed '-'; no titre given."
+  },
+  {
+   "id": "L34",
+   "item": "ANCA",
+   "code": null,
+   "value": "Negative",
+   "unit": "",
+   "ref_range": "Negative",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.ANCA_IIF",
+   "note": "Printed '-'; the method is not stated."
+  },
+  {
+   "id": "L35",
+   "item": "Complement C3",
+   "code": null,
+   "value": 1.1,
+   "unit": "g/L",
+   "ref_range": "0.7-1.4",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.C3"
+  },
+  {
+   "id": "L36",
+   "item": "Complement C4",
+   "code": null,
+   "value": 0.47,
+   "unit": "g/L",
+   "ref_range": "0.1-0.4",
+   "day": 0,
+   "source_locator": "Table 1",
+   "flag": "H",
+   "catalogue_ref": "CMP.C4"
+  },
+  {
+   "id": "L37",
+   "item": "Immunoglobulin G",
+   "code": null,
+   "value": 8.83,
+   "unit": "g/L",
+   "ref_range": "8.6-17.4",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.IGG"
+  },
+  {
+   "id": "L38",
+   "item": "Immunoglobulin A",
+   "code": null,
+   "value": 1.57,
+   "unit": "g/L",
+   "ref_range": "1-4.2",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.IGA"
+  },
+  {
+   "id": "L39",
+   "item": "Immunoglobulin M",
+   "code": null,
+   "value": 0.64,
+   "unit": "g/L",
+   "ref_range": "0.5-2.8",
+   "day": 0,
+   "source_locator": "Table 1",
+   "catalogue_ref": "CMP.IGM"
+  },
+  {
+   "id": "L40",
+   "item": "Red cells expressing CD55 (conventional flow cytometry)",
+   "code": null,
+   "value": 99.99,
+   "unit": "%",
+   "ref_range": ">40.00",
+   "day": 12,
+   "source_locator": "Table 2",
+   "catalogue_ref": "CMP.CD55_RBC"
+  },
+  {
+   "id": "L41",
+   "item": "Red cells expressing CD59 (conventional flow cytometry)",
+   "code": null,
+   "value": 99.99,
+   "unit": "%",
+   "ref_range": ">90.00",
+   "day": 12,
+   "source_locator": "Table 2",
+   "catalogue_ref": "CMP.CD59_RBC"
+  },
+  {
+   "id": "L42",
+   "item": "Neutrophils expressing CD55 (conventional flow cytometry)",
+   "code": null,
+   "value": 99.99,
+   "unit": "%",
+   "ref_range": ">90.00",
+   "day": 12,
+   "source_locator": "Table 2",
+   "catalogue_ref": "CMP.CD55_NEUT"
+  },
+  {
+   "id": "L43",
+   "item": "Neutrophils expressing CD59 (conventional flow cytometry)",
+   "code": null,
+   "value": 99.99,
+   "unit": "%",
+   "ref_range": ">90.00",
+   "day": 12,
+   "source_locator": "Table 2",
+   "catalogue_ref": "CMP.CD59_NEUT"
+  },
+  {
+   "id": "L50",
+   "item": "Red cells lacking CD59, type II + type III (high-sensitivity flow cytometry)",
+   "code": null,
+   "value": 3.06,
+   "unit": "%",
+   "ref_range": "<0.01",
+   "day": 16,
+   "source_locator": "Table 3",
+   "flag": "H",
+   "catalogue_ref": "CMP.PNH_RBC_CLONE",
+   "note": "Measured after four units of washed red cells (transfused on admission).",
+   "release_text": "Red cells: type II (partial CD59 loss) 0.00%; type III (complete CD59 loss) 3.06%; total 3.06%.",
+   "reveals_dx": true
+  },
+  {
+   "id": "L51",
+   "item": "Granulocytes lacking FLAER and CD24 (high-sensitivity flow cytometry)",
+   "code": null,
+   "value": 98.46,
+   "unit": "%",
+   "ref_range": "<0.01",
+   "day": 16,
+   "source_locator": "Table 3",
+   "flag": "H",
+   "catalogue_ref": "CMP.PNH_GRAN_CLONE",
+   "release_text": "Granulocytes (FLAER-negative, CD24-negative): 98.46%.",
+   "reveals_dx": true,
+   "pivotal": true
+  },
+  {
+   "id": "L60",
+   "item": "PIGA sequencing (targeted NGS, peripheral blood leucocytes)",
+   "code": null,
+   "value": "PIGA variant NM_002641.3 (exon 2): c.548G>A (p.Cys183Tyr), variant allele frequency 3.27%; interpreted as likely pathogenic.",
+   "unit": "",
+   "ref_range": "No pathogenic variant",
+   "day": null,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.PIGA_REPORT",
+   "note": "Unsorted leucocytes, so the allele frequency is far below the granulocyte clone size (Discussion).",
+   "reveals_dx": true
+  }
+ ],
+ "raw_material": [
+  {
+   "id": "R01",
+   "test": "Peripheral blood film",
+   "release": "service.pathology",
+   "day": 0,
+   "findings": "No schistocytes (0%).",
+   "media": [],
+   "note": "The article reports only the absence of schistocytes; the rest of the film report is the curator's (see reports.json).",
+   "source_locator": "Table 1 and text",
+   "test_item_id": "LAB.HAEM.FILM"
+  },
+  {
+   "id": "R02",
+   "test": "Ultrasound kidneys and urinary tract",
+   "release": "service.radiology",
+   "day": 1,
+   "findings": "Both kidneys enlarged.",
+   "media": [],
+   "source_locator": "Case presentation",
+   "test_item_id": "IMG.US.KIDNEYS"
+  },
+  {
+   "id": "R03",
+   "test": "Renal artery and vein Doppler",
+   "release": "service.radiology",
+   "day": 1,
+   "findings": "No thrombosis in the renal arteries or veins.",
+   "media": [],
+   "source_locator": "Case presentation",
+   "test_item_id": "IMG.US.DOPPLER_RENAL"
+  },
+  {
+   "id": "R04",
+   "test": "Percutaneous kidney biopsy (18 March, reported 20 March)",
+   "release": "service.pathology",
+   "day": 6,
+   "findings": "Tubular epithelial necrosis and sloughing with necrotic debris in tubular lumina; haemosiderin granules in tubular epithelial cytoplasm (H&E); glomeruli unremarkable (PAM); blue intracytoplasmic granules in tubular epithelium (Prussian blue); electron-dense granules in tubular lumina (electron microscopy). Reported as haemoglobin cast nephropathy with thrombosis in intrarenal veins.",
+   "media": [
+    "M02",
+    "M03",
+    "M04",
+    "M05"
+   ],
+   "source_locator": "Case presentation; Figure 2",
+   "test_item_id": "PROC.BIOPSY.KIDNEY"
+  },
+  {
+   "id": "R05",
+   "test": "Venous ultrasound of the lower limbs",
+   "release": "service.radiology",
+   "day": 9,
+   "findings": "Thrombosis of the right iliac vein.",
+   "media": [],
+   "note": "Done after the biopsy report of 20 March, before 23 March; the same imaging showed a small perirenal haematoma from the biopsy, which is not part of this test's report.",
+   "source_locator": "Case presentation",
+   "test_item_id": "IMG.US.DOPPLER_LEGS"
+  },
+  {
+   "id": "R06",
+   "test": "Bone marrow flow cytometry",
+   "release": "service.pathology",
+   "day": null,
+   "findings": "Partial reduction of CD16 expression on granulocytes and partial loss of CD14 expression on monocytes.",
+   "media": [
+    "M06"
+   ],
+   "source_locator": "Case presentation; Figure 3",
+   "test_item_id": "LAB.BM.FLOW"
+  },
+  {
+   "id": "R07",
+   "test": "High-sensitivity FLAER-based peripheral blood flow cytometry (28 March)",
+   "release": "service.pathology",
+   "day": 16,
+   "findings": "Granulocytes lacking FLAER and CD24 binding 98.46%; red cells with complete CD59 loss (type III) 3.06%, partial loss (type II) 0.00%. Negative control from the laboratory shown alongside.",
+   "media": [
+    "M07",
+    "M08"
+   ],
+   "source_locator": "Table 3; Figure 4",
+   "test_item_id": "LAB.HAEM.PNH_FLOW"
+  }
+ ],
+ "media": [
+  {
+   "id": "M01",
+   "figure": "Figure 1",
+   "specimen": "Trend chart",
+   "stain": null,
+   "redacted_caption": "Trends in laboratory values during follow-up.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC13193864/F1.jpg",
+   "raw_fact_id": null,
+   "note": "Shows treatment and outcome; never shown to a player. Annotation flag from the machine-generated alt text, which appears to belong to another figure (see CASE.md); check at download."
+  },
+  {
+   "id": "M02",
+   "figure": "Figure 2A",
+   "specimen": "Kidney biopsy",
+   "stain": "H&E",
+   "redacted_caption": "Kidney biopsy, H&E stain.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC13193864/F2.jpg",
+   "raw_fact_id": "R04"
+  },
+  {
+   "id": "M03",
+   "figure": "Figure 2B",
+   "specimen": "Kidney biopsy",
+   "stain": "PAM (periodic acid-methenamine silver)",
+   "redacted_caption": "Kidney biopsy, silver stain.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC13193864/F2.jpg",
+   "raw_fact_id": "R04"
+  },
+  {
+   "id": "M04",
+   "figure": "Figure 2C",
+   "specimen": "Kidney biopsy",
+   "stain": "Prussian blue (Perls)",
+   "redacted_caption": "Kidney biopsy, Prussian blue stain.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC13193864/F2.jpg",
+   "raw_fact_id": "R04"
+  },
+  {
+   "id": "M05",
+   "figure": "Figure 2D",
+   "specimen": "Kidney biopsy",
+   "stain": "Electron microscopy",
+   "redacted_caption": "Kidney biopsy, electron micrograph.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC13193864/F2.jpg",
+   "raw_fact_id": "R04"
+  },
+  {
+   "id": "M06",
+   "figure": "Figure 3",
+   "specimen": "Bone marrow",
+   "stain": "Flow cytometry",
+   "redacted_caption": "Bone marrow flow cytometry.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC13193864/F3.jpg",
+   "raw_fact_id": "R06"
+  },
+  {
+   "id": "M07",
+   "figure": "Figure 4A",
+   "specimen": "Peripheral blood",
+   "stain": "Flow cytometry (FLAER)",
+   "redacted_caption": "High-sensitivity peripheral blood flow cytometry, patient sample.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC13193864/F4.jpg",
+   "raw_fact_id": "R07"
+  },
+  {
+   "id": "M08",
+   "figure": "Figure 4B",
+   "specimen": "Peripheral blood",
+   "stain": "Flow cytometry (FLAER)",
+   "redacted_caption": "High-sensitivity peripheral blood flow cytometry, laboratory negative control.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC13193864/F4.jpg",
+   "raw_fact_id": "R07"
+  }
+ ],
+ "gaps": [
+  {
+   "id": "G01",
+   "item": "Respiratory rate and oxygen saturation",
+   "guidance": "Not reported; the vital-signs fact carries the article's temperature, blood pressure and heart rate only.",
+   "review_required": false
+  },
+  {
+   "id": "G02",
+   "item": "Red cell indices and white cell differential",
+   "guidance": "Not reported. MCH is derived (Hb / RBC = 31.4 pg); MCV about 96 fL and haematocrit 0.21 fit it; the differential sums to the white count.",
+   "review_required": true
+  },
+  {
+   "id": "G03",
+   "item": "Serial values (creatinine, haemoglobin, platelets, LDH)",
+   "guidance": "Only in Figure 1. The case gives affected values on days 2, 4, 7, 12 and 16 from the text: dialysis from day 0 to day 4, urine output 2,300 mL/day by day 4, four units of washed red cells, platelets falling to 45 x10^9/L by day 7.",
+   "review_required": true
+  },
+  {
+   "id": "G04",
+   "item": "Haemolysis markers not reported (haptoglobin, plasma free haemoglobin, urine haemosiderin)",
+   "guidance": "Intravascular haemolysis: haptoglobin undetectable, plasma free haemoglobin raised, urine haemosiderin positive (the biopsy shows tubular haemosiderin).",
+   "review_required": true
+  },
+  {
+   "id": "G05",
+   "item": "Electrolytes and acid-base",
+   "guidance": "Sodium, chloride and bicarbonate not reported: metabolic acidosis of severe AKI on day 0, corrected by dialysis.",
+   "review_required": false
+  },
+  {
+   "id": "G06",
+   "item": "Bone marrow morphology",
+   "guidance": "The article reports 'bone marrow evaluation' and marrow flow cytometry only. Aspirate and trephine: mildly hypocellular with erythropoiesis not increased (the reticulocytes are low), no dysplasia, no excess blasts.",
+   "review_required": true
+  },
+  {
+   "id": "G07",
+   "item": "Blood group",
+   "guidance": "Not reported; set to group A RhD positive (affected, judgement call).",
+   "review_required": true
+  },
+  {
+   "id": "G08",
+   "item": "Pre-transfusion high-sensitivity result",
+   "guidance": "The high-sensitivity test was done on day 16 after transfusion. If a player orders it earlier, the granulocyte clone is the same and the red cell clone is larger (before dilution by donor cells).",
+   "review_required": true
+  },
+  {
+   "id": "G09",
+   "item": "Obstetric and transfusion history",
+   "guidance": "Not reported; two pregnancies and no earlier transfusions (judgement call).",
+   "review_required": true
+  }
+ ],
+ "ground_truth": {
+  "final_diagnosis": {
+   "text": "Paroxysmal nocturnal haemoglobinuria presenting as dialysis-dependent acute kidney injury from haemoglobin cast nephropathy, with a positive DAT (IgG and C3d), intrarenal and right iliac venous thrombosis, and a falsely normal conventional CD55/CD59 flow cytometry after transfusion",
+   "icd10": [
+    "D59.5",
+    "N17.0"
+   ],
+   "accepted_synonyms": [
+    "PNH",
+    "paroxysmal nocturnal haemoglobinuria",
+    "paroxysmal nocturnal hemoglobinuria",
+    "Marchiafava-Micheli syndrome"
+   ]
+  },
+  "secondary_findings": [
+   "Positive DAT (IgG and C3d), most likely complement fragment deposition from ongoing complement activation, not autoimmune haemolytic anaemia",
+   "Right iliac vein thrombosis and intrarenal venous thrombosis",
+   "Inappropriately low reticulocyte count and falling platelets: marrow involvement",
+   "Small perirenal haematoma after the kidney biopsy"
+  ],
+  "accepted_differential": [
+   "Warm or mixed autoimmune haemolytic anaemia (positive DAT)",
+   "Thrombotic microangiopathy: TTP, HUS after diarrhoea, or complement-mediated (atypical) HUS",
+   "Rhabdomyolysis or other pigment nephropathy",
+   "Rapidly progressive glomerulonephritis, lupus nephritis or ANCA vasculitis",
+   "Myeloma cast nephropathy",
+   "Drug-induced or infection-associated haemolysis and AKI (after influenza)",
+   "Aplastic anaemia or another marrow failure syndrome",
+   "Heparin-induced thrombocytopenia (falling platelets on dialysis heparin)"
+  ],
+  "red_herrings": [
+   "positive DAT (IgG and C3d)",
+   "normal conventional CD55/CD59 flow cytometry",
+   "recent influenza A",
+   "loose stools",
+   "raised ferritin",
+   "normal admission bilirubin"
+  ],
+  "key_discriminators": [
+   "recurring dark urine since 2016",
+   "urine blood 2+ with few red cells",
+   "low reticulocytes despite haemolysis",
+   "no schistocytes and ADAMTS13 53%",
+   "haemoglobin casts with tubular haemosiderin on biopsy",
+   "venous thrombosis",
+   "high-sensitivity FLAER result: granulocyte clone 98.46%"
+  ],
+  "treatment_given": "Emergency haemodialysis (12-16 March), four units of washed red cells, empirical methylprednisolone 40 mg/day from 19 March (stopped 21 April). Prophylactic low-molecular-weight heparin 5,000 IU daily from 23 March because of a small post-biopsy perirenal haematoma, then therapeutic rivaroxaban 15 mg twice daily from 2 April. Meningococcal vaccination at the patient's request before eculizumab, started 21 April (600 mg weekly for four weeks, then 900 mg every two weeks).",
+  "outcome": "Haematological remission and progressive renal recovery: haemoglobin, LDH, creatinine and platelets returned to normal over seven months of follow-up (values only in Figure 1).",
+  "must_do": [
+   "Dialyse urgently for oliguric AKI with uraemia and hyperkalaemia",
+   "Ask specifically about previous episodes of dark urine",
+   "Exclude a thrombotic microangiopathy: blood film for fragments and ADAMTS13 activity",
+   "Obtain a kidney biopsy to establish the cause of the AKI",
+   "Send high-sensitivity FLAER-based flow cytometry, and do not accept a normal conventional CD55/CD59 result after transfusion",
+   "Look for venous thrombosis and anticoagulate once the biopsy site allows",
+   "Vaccinate against meningococcus before starting a complement C5 inhibitor, then start it",
+   "Involve haematology"
+  ],
+  "must_not_do": [
+   "Escalate immunosuppression for presumed autoimmune haemolysis on the DAT alone (rituximab, cytotoxics, splenectomy)",
+   "Start plasma exchange for presumed TTP with no red cell fragments and ADAMTS13 activity of 53%",
+   "Start a complement inhibitor without meningococcal vaccination",
+   "Exclude the diagnosis on a normal conventional CD55/CD59 result without a high-sensitivity test"
+  ],
+  "diagnosis_rubric_anchors": {
+   "5": "Paroxysmal nocturnal haemoglobinuria, with the kidney injury attributed to haemolysis (haemoglobin cast nephropathy)",
+   "4": "Paroxysmal nocturnal haemoglobinuria, without explaining the kidney injury",
+   "3": "Haem-pigment nephropathy or tubular necrosis from intravascular haemolysis, cause not identified",
+   "2": "Autoimmune haemolysis, a thrombotic microangiopathy (TTP, HUS or complement-mediated HUS), rhabdomyolysis or aplastic anaemia as the final diagnosis",
+   "1": "Unrelated diagnosis, or one that would lead to harm"
+  }
+ }
+}

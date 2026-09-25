@@ -1,0 +1,388 @@
+{
+ "final_dx": {
+  "id": "DX.B12_DEFICIENCY_ANAEMIA",
+  "text": "Vitamin B12 deficiency from low dietary intake of animal foods, presenting as pseudo-thrombotic microangiopathy: haemolytic anaemia with massive schistocytosis, thrombocytopenia, a very high LDH, macrocytosis, circulating megaloblasts and a megaloblastic marrow",
+  "icd10": [
+   "D51.3"
+  ],
+  "accepted_synonyms": [
+   "vitamin B12 deficiency",
+   "B12 deficiency",
+   "cobalamin deficiency",
+   "dietary vitamin B12 deficiency",
+   "nutritional vitamin B12 deficiency",
+   "vitamin B12 deficiency anaemia",
+   "vitamin B12 deficiency anemia",
+   "pseudo-thrombotic microangiopathy",
+   "pseudothrombotic microangiopathy",
+   "pseudo-TMA",
+   "pseudo-microangiopathy",
+   "metabolism-mediated thrombotic microangiopathy"
+  ],
+  "leak_terms": [
+   "megaloblastic anaemia",
+   "megaloblastic anemia",
+   "megaloblastemia",
+   "megaloblastaemia"
+  ]
+ },
+ "secondary_findings": [
+  "Thrombocytopenia and later leucopenia (pancytopenia) from ineffective haematopoiesis, recovering with treatment",
+  "Dysplastic marrow features (dyserythropoiesis, dysmegakaryopoiesis) from B12 deficiency, with a normal karyotype: not a myelodysplastic neoplasm",
+  "Raised serum iron and ferritin with ineffective erythropoiesis and haemolysis; no iron deficiency"
+ ],
+ "accepted_differential": [
+  "Thrombotic thrombocytopenic purpura",
+  "Haemolytic uraemic syndrome or atypical HUS",
+  "Disseminated intravascular coagulation",
+  "Cancer-related microangiopathic haemolytic anaemia (disseminated malignancy)",
+  "Malignant hypertension",
+  "Connective tissue disease-associated thrombotic microangiopathy",
+  "Pernicious anaemia (autoimmune cause of B12 deficiency)",
+  "Folate deficiency",
+  "Myelodysplastic neoplasm",
+  "Autoimmune haemolytic anaemia or Evans syndrome",
+  "Paroxysmal nocturnal haemoglobinuria"
+ ],
+ "red_herrings": [
+  "massive schistocytosis",
+  "thrombocytopenia with haemolysis",
+  "LDH 3115 U/L",
+  "PLASMIC score 5 (intermediate risk)",
+  "slightly raised D-dimer",
+  "dyserythropoiesis and dysmegakaryopoiesis in the marrow",
+  "raised serum iron and ferritin"
+ ],
+ "key_discriminators": [
+  "MCV 117.4 fL",
+  "reticulocytes 44.8 x10^9/L: inadequate response for the degree of haemolysis",
+  "megaloblastic nucleated red cells on the reviewed film",
+  "hypersegmented neutrophils",
+  "leucopenia",
+  "LDH disproportionately high",
+  "normal renal function",
+  "normal coagulation apart from a slightly raised D-dimer",
+  "negative direct and indirect antiglobulin tests",
+  "diet: meat or seafood about once a month",
+  "serum B12 56 pmol/L (172-675; printed 76 pg/mL, 233-914)",
+  "megaloblastic marrow with a normal karyotype",
+  "red cell histogram peak around 10 fL (fragments)"
+ ],
+ "treatment_given": "Red cell transfusion on day 1 for severe exertional breathlessness, then intramuscular cyanocobalamin from day 1 on suspicion of B12 deficiency (after the marrow). ADAMTS13 activity was considered but not sent; no plasma exchange. Serum B12 76 pg/mL (56 pmol/L) reported on day 4. Cyanocobalamin injections stopped at discharge on day 7; dietary advice to eat meat. Intrinsic factor and parietal cell antibodies were not tested (not covered by national health insurance in Japan).",
+ "outcome": "Discharged on day 7 with improving symptoms (Hb 88 g/L, platelets 48 x10^9/L, WBC 3.2 x10^9/L, LDH 1353 U/L). Five weeks after presentation (day 35, outside the playable admission): Hb 131 g/L (printed 13.1 g/dL), MCV 91.5 fL, platelets 219 x10^9/L, WBC 10.2 x10^9/L, LDH 211 U/L, B12 277 pmol/L (printed 375 pg/mL); schistocytes gone and analyser histograms normal. The authors attribute the deficiency to diet rather than pernicious anaemia.",
+ "must_do": [
+  {
+   "text": "Take a diet history, including how often he eats meat, fish, eggs and dairy",
+   "if": {
+    "any": [
+     {
+      "asked_any": [
+       "HX.SOCIAL.DIET",
+       "HX.SOCIAL.VEGETARIAN"
+      ]
+     },
+     {
+      "referred_any": [
+       "REF.DIETETICS"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Send serum B12 (or active B12) and folate before transfusion or vitamin treatment",
+   "if": {
+    "all": [
+     {
+      "ordered_any": [
+       "LAB.CHEM.B12",
+       "LAB.CHEM.HOLOTC"
+      ]
+     },
+     {
+      "ordered_any": [
+       "LAB.CHEM.FOLATE"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Have the blood film reviewed for megaloblastic nucleated red cells and hypersegmented neutrophils, not only schistocytes",
+   "if": {
+    "any": [
+     {
+      "finding_released": {
+       "findings": [
+        "FND.CIRCULATING_MEGALOBLASTS"
+       ],
+       "from_tests": [
+        "LAB.HAEM.FILM",
+        "LAB.HAEM.FILM_REVIEW"
+       ]
+      }
+     },
+     {
+      "finding_released": {
+       "findings": [
+        "FND.HYPERSEGMENTED_NEUTROPHILS"
+       ],
+       "from_tests": [
+        "LAB.HAEM.FILM",
+        "LAB.HAEM.FILM_REVIEW"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Recognise that a high MCV, a poor reticulocyte response, leucopenia and a disproportionately high LDH argue against TTP",
+   "if": {
+    "any": [
+     {
+      "evidence_has": [
+       "S04.d0"
+      ]
+     },
+     {
+      "evidence_has": [
+       "L01"
+      ]
+     },
+     {
+      "evidence_has": [
+       "S05.d0"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Start parenteral B12 replacement promptly once the deficiency is likely and the samples are taken",
+   "if": {
+    "plan_has": [
+     "RX.VITAMIN.B12"
+    ]
+   }
+  },
+  {
+   "text": "Look for the cause of the deficiency, including intrinsic factor antibodies for pernicious anaemia",
+   "if": {
+    "all": [
+     {
+      "any": [
+       {
+        "asked_any": [
+         "HX.SOCIAL.DIET",
+         "HX.SOCIAL.VEGETARIAN"
+        ]
+       },
+       {
+        "referred_any": [
+         "REF.DIETETICS"
+        ]
+       }
+      ]
+     },
+     {
+      "ordered_any": [
+       "LAB.IMM.IF_GPC_ANTIBODIES"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Give dietary advice, or refer to a dietitian, to correct the low intake of animal foods",
+   "if": {
+    "any": [
+     {
+      "plan_has": [
+       "ACT.DIETARY_ADVICE"
+      ]
+     },
+     {
+      "plan_has": [
+       "REF.DIETETICS"
+      ]
+     },
+     {
+      "referred_any": [
+       "REF.DIETETICS"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Follow the blood count, reticulocytes, LDH and potassium to confirm the response to treatment",
+   "if": {
+    "plan_has": [
+     "ACT.REPEAT_BLOODS"
+    ]
+   }
+  }
+ ],
+ "must_not_do": [
+  {
+   "text": "Start plasma exchange or rituximab (or place a central line for plasma exchange) when the picture is explained by the vitamin deficiency",
+   "if": {
+    "plan_has_any": [
+     "RX.IMMUNO.PLASMA_EXCHANGE",
+     "RX.IMMUNO.RITUXIMAB"
+    ]
+   }
+  },
+  {
+   "text": "Diagnose a myelodysplastic neoplasm on marrow dysplasia before excluding B12 and folate deficiency",
+   "if": {
+    "dx_in": [
+     "DX.MDS",
+     "DX.MDS_RING_SIDEROBLASTS",
+     "DX.MDS_EXCESS_BLASTS",
+     "DX.MDS_DEL5Q",
+     "DX.CMML"
+    ]
+   }
+  },
+  {
+   "text": "Give folic acid alone without B12",
+   "if": {
+    "all": [
+     {
+      "plan_has_any": [
+       "RX.VITAMIN.FOLATE",
+       "RX.HAEM.FOLATE_HAEMOLYSIS"
+      ]
+     },
+     {
+      "not": {
+       "plan_has": [
+        "RX.VITAMIN.B12"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Transfuse platelets in the absence of bleeding while a thrombotic microangiopathy is not excluded",
+   "if": {
+    "plan_has_any": [
+     "RX.TRANSFUSION.PLATELETS"
+    ]
+   }
+  }
+ ],
+ "diagnosis_rubric_anchors": {
+  "5": "Vitamin B12 deficiency with low intake of animal foods identified as the cause",
+  "4": "Vitamin B12 deficiency, cause not identified",
+  "3": "Pernicious anaemia, megaloblastic anaemia unspecified or mixed nutritional anaemia as the final diagnosis",
+  "2": "TTP, HUS or another thrombotic microangiopathy, DIC, myelodysplasia, folate deficiency, autoimmune haemolysis or disseminated cancer as the final diagnosis",
+  "1": "Unrelated diagnosis, or one that would lead to harm"
+ },
+ "rubric": {
+  "rubric": [
+   {
+    "score": 5,
+    "text": "Vitamin B12 deficiency with low intake of animal foods identified as the cause",
+    "if": {
+     "all": [
+      {
+       "dx_in": [
+        "DX.B12_DEFICIENCY_ANAEMIA"
+       ]
+      },
+      {
+       "evidence_has": [
+        "H09"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "score": 4,
+    "text": "Vitamin B12 deficiency, cause not identified",
+    "if": {
+     "dx_in": [
+      "DX.B12_DEFICIENCY_ANAEMIA"
+     ]
+    }
+   },
+   {
+    "score": 3,
+    "text": "Pernicious anaemia, megaloblastic anaemia unspecified or mixed nutritional anaemia as the final diagnosis",
+    "if": {
+     "dx_in": [
+      "DX.PERNICIOUS_ANAEMIA",
+      "DX.MEGALOBLASTIC_ANAEMIA",
+      "DX.MIXED_NUTRITIONAL_ANAEMIA"
+     ]
+    }
+   },
+   {
+    "score": 2,
+    "text": "TTP, HUS or another thrombotic microangiopathy, DIC, myelodysplasia, folate deficiency, autoimmune haemolysis or disseminated cancer as the final diagnosis",
+    "if": {
+     "dx_in": [
+      "DX.TTP",
+      "DX.MAHA_OTHER",
+      "DX.HUS",
+      "DX.ATYPICAL_HUS",
+      "DX.DIC",
+      "DX.MDS",
+      "DX.MDS_RING_SIDEROBLASTS",
+      "DX.MDS_EXCESS_BLASTS",
+      "DX.FOLATE_DEFICIENCY_ANAEMIA",
+      "DX.WARM_AIHA",
+      "DX.METASTATIC_CANCER_UNKNOWN_PRIMARY"
+     ]
+    }
+   },
+   {
+    "score": 1,
+    "text": "Unrelated diagnosis, or one that would lead to harm",
+    "if": {
+     "not": {
+      "dx_in": [
+       "DX.B12_DEFICIENCY_ANAEMIA",
+       "DX.PERNICIOUS_ANAEMIA",
+       "DX.MEGALOBLASTIC_ANAEMIA",
+       "DX.MIXED_NUTRITIONAL_ANAEMIA",
+       "DX.TTP",
+       "DX.MAHA_OTHER",
+       "DX.HUS",
+       "DX.ATYPICAL_HUS",
+       "DX.DIC",
+       "DX.MDS",
+       "DX.MDS_RING_SIDEROBLASTS",
+       "DX.MDS_EXCESS_BLASTS",
+       "DX.FOLATE_DEFICIENCY_ANAEMIA",
+       "DX.WARM_AIHA",
+       "DX.METASTATIC_CANCER_UNKNOWN_PRIMARY"
+      ]
+     }
+    }
+   }
+  ],
+  "default_score": 1
+ },
+ "efficient_path": [
+  "History with a diet question (releases H09) and the neurological review",
+  "Full blood count, reticulocytes, haemolysis screen, DAT, renal function and coagulation",
+  "Blood film reviewed by a haematopathologist: megaloblastic nucleated red cells and hypersegmented neutrophils as well as fragments",
+  "Serum B12 and folate sent before transfusion or treatment; ADAMTS13 stored or sent",
+  "Parenteral B12, red cells for symptoms, no plasma exchange; potassium and reticulocytes followed",
+  "Cause sought: diet, intrinsic factor and parietal cell antibodies; dietary advice"
+ ],
+ "teaching_points": [
+  "B12 deficiency can mimic thrombotic microangiopathy (pseudo-TMA), with schistocytes, thrombocytopenia and a very high LDH",
+  "Features favouring B12 deficiency over TTP: high MCV, low reticulocytes, leucopenia, very high LDH, megaloblasts on the film",
+  "A PLASMIC score in the intermediate range does not settle the question",
+  "ADAMTS13 takes days to return; the film and indices, available within hours, can steer away from plasma exchange (the authors did not send it)",
+  "Send B12 and folate before treatment: a single injection makes the serum B12 uninterpretable",
+  "Analyser red cell and platelet histograms can support the detection of schistocytes and track their clearance"
+ ]
+}

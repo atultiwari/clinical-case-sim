@@ -1,0 +1,352 @@
+[
+ {
+  "id": "RP01",
+  "test_item_id": "LAB.HAEM.FILM",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Red cells are normocytic with mild anisocytosis. No red cell fragments (schistocytes 0%). No spherocytes, agglutination or polychromasia. White cells are normal in number and morphology. Platelets are adequate in number.",
+  "impression": "Anaemia without red cell fragments or spherocytes.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Absence of schistocytes is the article's (R01, Table 1). Mild anisocytosis fits RDW 15.4%; no polychromasia fits the low reticulocyte count (12.8 x10^9/L); no spherocytes because there is no autoimmune process.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP02",
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Film reviewed by a haematopathologist. Red cells are normocytic with mild anisocytosis. No red cell fragments, spherocytes, agglutination or inclusions. Polychromasia is not increased, which is inappropriate for the degree of anaemia. White cells and platelets show no morphological abnormality. Comment: the absence of fragments argues against a microangiopathic process; correlate with haemolysis markers, including urine haemosiderin and plasma free haemoglobin.",
+  "impression": "No fragments or spherocytes; reticulocyte response inappropriately low.",
+  "suggested_reflex": [
+   "LAB.URINE.HAEMOSIDERIN",
+   "LAB.HAEM.PLASMA_HB"
+  ],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "As RP01. The comment is what a haematopathologist would add for haemolysis without fragments or spherocytes; it names tests, not a diagnosis.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP03",
+  "test_item_id": "IMG.US.KIDNEYS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Both kidneys are enlarged, with increased cortical echogenicity and preserved corticomedullary differentiation. No hydronephrosis and no calculi. The bladder is collapsed around a catheter.",
+  "impression": "Bilaterally enlarged kidneys, as in acute kidney injury; no obstruction.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R02"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Enlarged kidneys are the article's (R02). Echogenicity, no obstruction and the catheter (oliguria on a measured output) are the curator's.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP04",
+  "test_item_id": "IMG.US.DOPPLER_RENAL",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Both renal arteries and main renal veins are patent with normal flow. No thrombus is seen. Intrarenal resistive indices are raised at 0.78-0.80.",
+  "impression": "No renal artery or renal vein thrombosis.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R03"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "No thrombosis in the renal artery or vein is the article's (R03). Raised resistive indices are usual in acute tubular injury (curator's). The intrarenal venous thrombi seen on biopsy are too small for Doppler.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP05",
+  "test_item_id": "PROC.BIOPSY.KIDNEY",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.HAEMOGLOBIN_CASTS",
+   "FND.TUBULAR_HAEMOSIDERIN",
+   "FND.TUBULAR_NECROSIS",
+   "FND.INTRARENAL_VENOUS_THROMBI"
+  ],
+  "report_text": "Percutaneous kidney biopsy. Light microscopy: the glomeruli are unremarkable (PAM). There is tubular epithelial necrosis with sloughing and detachment, and necrotic debris in the tubular lumina. Haemosiderin granules are seen in the cytoplasm of tubular epithelial cells (H&E); Prussian blue staining shows blue intracytoplasmic granules in the tubular epithelium. Pigmented casts in the tubules are consistent with haemoglobin casts. Thrombi are present in intrarenal veins. Immunofluorescence: no glomerular immune deposits; the casts show no light-chain restriction. Electron microscopy: electron-dense granules within the tubular lumina.",
+  "impression": "Haemoglobin cast nephropathy with acute tubular injury and tubular haemosiderin deposition; thrombosis in intrarenal veins.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R04"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Light and electron microscopy, the Prussian blue result, haemoglobin cast nephropathy and intrarenal venous thrombosis are the article's (R04, Figure 2). The immunofluorescence sentence is the curator's: the article does not report it, and it answers the myeloma alternative (P7).",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP06",
+  "test_item_id": "IMG.US.DOPPLER_LEGS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.DEEP_VEIN_THROMBUS"
+  ],
+  "report_text": "Echogenic thrombus in the right iliac vein with absent flow. The right common femoral, femoral and popliteal veins are compressible with phasic flow. The left leg veins are patent and compressible.",
+  "impression": "Right iliac vein thrombosis.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R05"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Right iliac vein thrombosis is the article's (R05). The detail of the femoral and popliteal segments is the curator's. The perirenal haematoma seen on the same imaging is not part of this test.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP07",
+  "test_item_id": "LAB.BM.FLOW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Bone marrow flow cytometry. Granulocytes show partial reduction of CD16 expression and monocytes show partial loss of CD14 expression; these antigens share a GPI anchor. No increase in CD34-positive blasts; lymphocytes show a normal T, B and NK distribution; plasma cells are not increased. Comment: suggest high-sensitivity flow cytometry with FLAER on peripheral blood.",
+  "impression": "Partial loss of CD16 on granulocytes and CD14 on monocytes; no blast excess.",
+  "suggested_reflex": [
+   "LAB.HAEM.PNH_FLOW"
+  ],
+  "based_on": [
+   "R06"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "CD16 and CD14 loss are the article's (R06, Figure 3); the caption calls them suggestive of the truth. The comment names the confirmatory test, as a flow cytometrist would; blasts, lymphocytes and plasma cells are the curator's.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP08",
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Particulate aspirate, mildly hypocellular for age. Erythropoiesis is normoblastic and present but not increased despite the anaemia. Granulopoiesis matures normally; megakaryocytes are present in normal numbers with normal morphology. No dysplasia and no increase in blasts (1%). No infiltrate.",
+  "impression": "Mildly hypocellular marrow with an inadequate erythroid response; no dysplasia or excess blasts.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G06: the article reports a 'bone marrow evaluation' without morphology. Low reticulocytes and falling platelets suggested marrow involvement (Discussion); a mildly hypocellular marrow without dysplasia is the likeliest finding. Judgement call.",
+  "confidence": 0.5
+ },
+ {
+  "id": "RP09",
+  "test_item_id": "PROC.BM.TREPHINE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.HYPOCELLULAR_MARROW"
+  ],
+  "report_text": "Adequate trephine core, mildly hypocellular for age (about 30%), with trilineage haematopoiesis. No fibrosis on reticulin stain. No infiltrate, granulomas or excess blasts.",
+  "impression": "Mildly hypocellular marrow; no fibrosis or infiltrate.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G06: as RP08.",
+  "confidence": 0.5
+ },
+ {
+  "id": "RP10",
+  "test_item_id": "LAB.BM.IRON_STAIN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Perls stain shows storage iron present (grade 2) in marrow fragments. No ring sideroblasts.",
+  "impression": "Storage iron present; no ring sideroblasts.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G06: ferritin 1,058 ug/L with urinary iron loss; storage iron present. No sideroblastic change.",
+  "confidence": 0.55
+ },
+ {
+  "id": "RP11",
+  "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Twenty metaphases analysed. 46,XX. No clonal abnormality detected.",
+  "impression": "Normal female karyotype.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No myeloid neoplasm in the article.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP12",
+  "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Two hundred interphase nuclei scored per probe. Normal signal patterns for 5q31, 7q31, chromosome 8 centromere and 20q12.",
+  "impression": "Normal MDS FISH panel.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No myelodysplasia.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP13",
+  "test_item_id": "LAB.MOL.MYELOID_NGS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Targeted sequencing of a myeloid gene panel with adequate coverage. No pathogenic or likely pathogenic variants detected in the genes on this panel.",
+  "impression": "No myeloid driver variant detected.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No myeloid neoplasm. PIGA is not on standard myeloid panels; its result belongs to the separate PIGA test (L60).",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP14",
+  "test_item_id": "IMG.US.ABDOMEN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "The liver is normal in size and echotexture. The gallbladder is normal without calculi; the bile ducts are not dilated. The spleen is normal in size (10.5 cm). The pancreas is unremarkable. Both kidneys are enlarged without hydronephrosis. The hepatic and portal veins are patent. No free fluid.",
+  "impression": "Enlarged kidneys; otherwise normal. No splenomegaly; hepatic and portal veins patent.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R02"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Enlarged kidneys from R02; the rest is the curator's (examination unremarkable). Patent hepatic and portal veins: no abdominal thrombosis is reported.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP15",
+  "test_item_id": "IMG.XR.CHEST",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "PA chest radiograph. Heart size normal. The lungs are clear; no pleural effusion and no features of pulmonary oedema.",
+  "impression": "Normal chest radiograph.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No respiratory or cardiac problem in the article; oedema is mild.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP16",
+  "test_item_id": "PROC.CARD.ECHO",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Transthoracic echocardiogram. Normal left ventricular size and systolic function (LVEF 60%). Normal valves. Normal right ventricle; estimated pulmonary artery pressure not raised. No pericardial effusion. IVC normal in size with respiratory variation.",
+  "impression": "Normal echocardiogram.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No cardiac disease reported.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP18",
+  "test_item_id": "IMG.CT.KUB",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Non-contrast CT of the urinary tract. Both kidneys are enlarged with mild perinephric stranding. No calculi, hydronephrosis or hydroureter. The bladder is decompressed around a catheter.",
+  "impression": "Enlarged kidneys; no calculi or obstruction.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R02"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Enlarged kidneys from R02; no obstruction, as on ultrasound.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP17",
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Non-contrast CT of the abdomen and pelvis (contrast withheld because of acute kidney injury). Both kidneys are enlarged with mild perinephric stranding; no hydronephrosis or calculi. Liver, spleen, pancreas and adrenal glands normal. No lymphadenopathy. No free fluid. Vascular patency cannot be assessed without contrast.",
+  "impression": "Enlarged kidneys; no obstruction or other abdominal abnormality on a non-contrast study.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R02"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Enlarged kidneys from R02. A contrast study would be avoided in dialysis-dependent AKI; the report says so.",
+  "confidence": 0.7
+ }
+]

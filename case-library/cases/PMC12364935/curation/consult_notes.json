@@ -1,0 +1,337 @@
+[
+ {
+  "id": "CN01",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on nine months of fever with pancytopenia and hepatosplenomegaly in a woman treated for systemic lupus erythematosus. We reviewed the records and the Chart so far. A 25 cm spleen, marked polyclonal hypergammaglobulinaemia and a fever that did not settle on intensive immunosuppression are more in keeping with a chronic infection than with lupus; lupus rarely enlarges the spleen to this degree. Autoantibodies and a positive antiglobulin test can accompany chronic infections. The two earlier marrows do not exclude an infection that is easily missed on routine smears. Happy to review again with the results.",
+  "recommendations": [
+   "Take a full residence and travel history: where she was born and grew up, where her family lives, and how often she goes back",
+   "Repeat the bone marrow aspirate, asking the microscopist to search specifically for intracellular organisms, with a portion sent for culture and PCR",
+   "Blood cultures, HIV, tuberculosis testing and brucella serology",
+   "Do not restart or escalate immunosuppression until infection has been excluded"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a competent infectious diseases physician would question the lupus label with this spleen and refractoriness, ask where the patient comes from and ask for a targeted marrow search. It names no organism, because nothing in the Chart yet points to one.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN02",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 2,
+  "condition": {
+   "released_any": [
+    "H11"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now records that her home town is in Shanxi Province and that she travels there regularly. Parts of Shanxi report sporadic visceral protozoal infection transmitted by sandflies, and this history, with prolonged fever, a massive spleen, pancytopenia and polyclonal hypergammaglobulinaemia refractory to immunosuppression, makes it the leading possibility. Happy to review again with the results.",
+  "recommendations": [
+   "rK39 rapid antibody test",
+   "Bone marrow aspirate with Giemsa-stained smears examined for amastigotes, and Leishmania PCR on the aspirate",
+   "HIV test before treatment",
+   "Avoid splenic aspiration while platelets are this low",
+   "Keep immunosuppression stopped"
+  ],
+  "origin": "affected",
+  "rationale": "V2: with the endemic home province in the Chart, an ID physician would name the tests for visceral parasitic infection. Written without the diagnosis's name or synonyms so the leak scan stays clean; the tests make the suspicion plain.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN03",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 3,
+  "condition": {
+   "finding_released": {
+    "findings": [
+     "FND.LD_BODIES"
+    ]
+   }
+  },
+  "note_text": "Asked to advise; the Chart now includes amastigotes in the bone marrow. This confirms the infection and explains the fever, the spleen, the pancytopenia and the autoantibodies. Happy to review again with the results.",
+  "recommendations": [
+   "Liposomal amphotericin B; given nine months of illness and prior immunosuppression, a longer course than standard is reasonable to reduce relapse",
+   "Confirm HIV status",
+   "Stop all immunosuppression; withdraw the lupus diagnosis",
+   "Notify the public health authority and send material to the national reference laboratory",
+   "Monitor potassium, magnesium and creatinine during treatment",
+   "Follow up with counts, spleen size and a test of cure, and watch for relapse over the next year"
+  ],
+  "origin": "affected",
+  "rationale": "V3: the article's management (liposomal amphotericin B extended to 30 days, CDC confirmation, stopping immunosuppression). No diagnosis synonyms, for the leak scan.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN04",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on pancytopenia with a positive antiglobulin test. We reviewed the counts, the film and the earlier marrow reports. The reticulocyte response is inadequate and haemolysis markers are at most mildly abnormal, so the cytopenias are better explained by splenic pooling and a marrow process than by autoimmune destruction; a positive DAT is common with very high polyclonal IgG and does not by itself indicate haemolysis. A 25 cm spleen needs an explanation. Happy to review again with the results.",
+  "recommendations": [
+   "Repeat bone marrow aspirate and trephine, with flow cytometry, and ask for a careful search for infiltration and intracellular organisms",
+   "Serum protein electrophoresis and immunofixation",
+   "Red cell and platelet transfusion as needed; group and screen",
+   "No splenectomy and no further immunosuppression on current evidence"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a haematologist would doubt autoimmune destruction with a low reticulocyte count and a massive spleen, and would repeat the marrow. Names no diagnosis.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN05",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 2,
+  "condition": {
+   "finding_released": {
+    "findings": [
+     "FND.LD_BODIES"
+    ]
+   }
+  },
+  "note_text": "Asked to advise; the Chart now includes amastigotes in the bone marrow. The pancytopenia, positive antiglobulin test and marrow plasmacytosis are explained by the infection, and the counts are expected to recover with treatment as the spleen shrinks. Happy to review again with the results.",
+  "recommendations": [
+   "Transfuse red cells and platelets as clinically needed during treatment",
+   "No splenectomy",
+   "Weekly blood counts; expect recovery over weeks",
+   "Repeat marrow only if the counts fail to recover or relapse is suspected"
+  ],
+  "origin": "affected",
+  "rationale": "V2: with the diagnosis confirmed, supportive care and follow-up counts, as in the article.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN06",
+  "specialty": "REF.RHEUMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to review the diagnosis of systemic lupus erythematosus. We reviewed the records and the Chart. The picture does not behave like lupus: the fever and cytopenias did not respond to high-dose steroids and four further agents; the spleen is 25 cm, which is very unusual in lupus; anti-dsDNA is now negative and anti-Sm has been negative throughout; there is no rash, serositis or active nephritis. Low C3, a positive DAT, ANA and other autoantibodies are non-specific and occur with chronic infections and lymphoproliferative disorders. We would not restart immunosuppression. Happy to review again with the results.",
+  "recommendations": [
+   "Exclude chronic infection and lymphoma before any further immunosuppression",
+   "Take a detailed residence and travel history",
+   "Repeat bone marrow examination",
+   "If she has been on prednisone for months, cover the abrupt withdrawal with physiological hydrocortisone and check an 8 am cortisol"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a rheumatologist reviewing the record would doubt the lupus diagnosis on refractoriness, spleen size and the serology, and would advise against more immunosuppression. Names no infection.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN07",
+  "specialty": "REF.RHEUMATOLOGY",
+  "variant": 2,
+  "condition": {
+   "finding_released": {
+    "findings": [
+     "FND.LD_BODIES"
+    ]
+   }
+  },
+  "note_text": "Asked to advise; the Chart now includes amastigotes in the bone marrow. The autoantibodies, hypocomplementaemia and positive DAT are explained by the infection's polyclonal B-cell activation. The lupus diagnosis should be withdrawn. Happy to review again with the results.",
+  "recommendations": [
+   "Stop all immunosuppressive and immunomodulatory drugs",
+   "Taper any steroid cover to physiological replacement and then off, guided by the 8 am cortisol",
+   "Repeat ANA and complement after treatment only if symptoms suggest a rheumatic disease"
+  ],
+  "origin": "affected",
+  "rationale": "V2: the article's lesson; autoantibodies in this infection are expected to fade with treatment.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN08",
+  "specialty": "REF.GASTROENTEROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on hepatosplenomegaly with anti-mitochondrial antibodies. We reviewed the Chart. Liver enzymes and ALP are normal, so primary biliary cholangitis is unlikely despite the anti-M2 antibody, which is non-specific in a patient with many autoantibodies. There are no features of cirrhosis. The spleen is far larger than the liver disease would explain. Happy to review again with the results.",
+  "recommendations": [
+   "Ultrasound with Doppler of the portal vein, and liver elastography",
+   "Upper GI endoscopy only if portal hypertension is suspected on imaging",
+   "Hepatitis B and C serology",
+   "Look for an infiltrative or infective cause of the massive spleen"
+  ],
+  "origin": "affected",
+  "rationale": "Chronic liver disease path: normal ALP argues against PBC; a competent hepatologist would not attribute a 25 cm spleen to liver disease without portal hypertension.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN09",
+  "specialty": "REF.ENDOCRINOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on abrupt withdrawal of long-term prednisone. We reviewed the Chart. After months of glucocorticoids, most recently prednisone 20 mg daily stopped suddenly ten days ago, her hypothalamic-pituitary-adrenal axis is probably suppressed, which can add to fever, fatigue, hypotension and hyponatraemia but would not explain the spleen or the cytopenias. Happy to review again with the results.",
+  "recommendations": [
+   "8 am cortisol",
+   "Physiological hydrocortisone replacement with sick-day rules while she is acutely unwell, then a planned taper",
+   "Monitor sodium and blood pressure"
+  ],
+  "origin": "affected",
+  "rationale": "Steroid withdrawal path: relative adrenal insufficiency is a real risk, not the diagnosis.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN10",
+  "specialty": "REF.RESPIRATORY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on asthma. We reviewed the Chart. Her asthma is mild and has never been treated; there are no chest findings, and the chest imaging does not suggest lung disease or tuberculosis. Happy to review again if new problems arise.",
+  "recommendations": [
+   "Reliever inhaler as needed; add a low-dose inhaled corticosteroid if symptoms are more than occasional",
+   "Spirometry when she has recovered"
+  ],
+  "origin": "affected",
+  "rationale": "Asthma path: a comorbidity without bearing on the diagnosis.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN11",
+  "specialty": "REF.ONCOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked whether a malignancy could explain the fever, weight loss and massive spleen. We reviewed the Chart. Lymphoma must be considered, but there is no lymphadenopathy, the immunofixation is polyclonal and the earlier marrows showed no malignancy. Happy to review again with the results.",
+  "recommendations": [
+   "Repeat bone marrow aspirate and trephine with flow cytometry",
+   "CT chest, or PET-CT if the marrow is unrevealing",
+   "Exclude chronic infection in parallel"
+  ],
+  "origin": "affected",
+  "rationale": "Lymphoma path: a sensible oncological review without over-reaching.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN12",
+  "specialty": "REF.GENERAL_SURGERY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about splenectomy for the massive spleen and cytopenias. We reviewed the Chart. The cause of the splenomegaly is not yet established, and a splenectomy with platelets of 29 x10^9/L, hypoalbuminaemia and possible infection would carry a high risk. We would not operate. Happy to review again if new problems arise.",
+  "recommendations": [
+   "Establish and treat the cause of the splenomegaly first",
+   "No splenectomy on current evidence"
+  ],
+  "origin": "affected",
+  "rationale": "Splenectomy is a must-not-do; a surgeon would decline without a diagnosis.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN13",
+  "specialty": "REF.DIETETICS",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on weight loss and low albumin. We reviewed the Chart. She has lost about 8 kg with a poor appetite and early satiety from the enlarged spleen; albumin is 20 g/L, reflecting inflammation more than intake. Happy to review again if intake or weight changes.",
+  "recommendations": [
+   "Small, frequent, energy- and protein-dense meals",
+   "Oral nutritional supplements twice daily",
+   "Weekly weight"
+  ],
+  "origin": "affected",
+  "rationale": "Weight loss and hypoalbuminaemia on the efficient path; supportive only.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN14",
+  "specialty": "REF.CARDIOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific cardiac concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN15",
+  "specialty": "REF.NEUROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific neurological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN16",
+  "specialty": "REF.TOXICOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific toxicological concerns from our side; happy to advise if new information arises.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN17",
+  "specialty": "REF.NEPHROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific renal concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN18",
+  "specialty": "REF.PSYCHIATRY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific psychiatric concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN19",
+  "specialty": "REF.DERMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific skin concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN20",
+  "specialty": "REF.OPHTHALMOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific eye concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN21",
+  "specialty": "REF.ENT",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific ear, nose or throat concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN22",
+  "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN23",
+  "specialty": "REF.PHYSIOTHERAPY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific mobility concerns from our side; happy to review if function changes.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ }
+]

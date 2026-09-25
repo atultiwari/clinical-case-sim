@@ -1,0 +1,855 @@
+{
+ "_status_note": "DRAFT gold case file for PMC13400839 (Case Library task L1.3). The Case Reviewer (Dr Atul Tiwari) must verify every fact against the article before it is frozen as PMC13400839@v1. Values were transcribed from the article's text (it has no tables) and converted to SI units; the printed values are in each fact's note. LOINC codes are suggestions. Items under 'gaps' are not article facts: they guide the affected rows in curation/affected.json.",
+ "schema_version": "0.2",
+ "case_id": "PMC13400839",
+ "version": 1,
+ "status": "draft",
+ "case": {
+  "slug": "c-w4n9t",
+  "display_title": "Transferred with very low blood counts",
+  "display_tags": [
+   "pancytopenia",
+   "neutropenia",
+   "transfer"
+  ],
+  "specialty": "haematology",
+  "lab_profile": {
+   "sex": "F",
+   "age_years": 56,
+   "components": {
+    "CMP.HB": {
+     "low": 126,
+     "high": 159,
+     "unit": "g/L"
+    },
+    "CMP.HCT": {
+     "low": 0.36,
+     "high": 0.49,
+     "unit": "L/L"
+    },
+    "CMP.MCV": {
+     "low": 81.9,
+     "high": 101.0,
+     "unit": "fL"
+    },
+    "CMP.PLT": {
+     "low": 159,
+     "high": 439,
+     "unit": "x10^9/L"
+    },
+    "CMP.WBC": {
+     "low": 4.3,
+     "high": 11.3,
+     "unit": "x10^9/L"
+    },
+    "CMP.FOLATE": {
+     "low": 13.4,
+     "high": 60.0,
+     "unit": "nmol/L",
+     "display": ">=13.4"
+    },
+    "CMP.B12": {
+     "low": 133,
+     "high": 675,
+     "unit": "pmol/L"
+    },
+    "CMP.IRON": {
+     "low": 5.0,
+     "high": 30.4,
+     "unit": "umol/L"
+    },
+    "CMP.TIBC": {
+     "low": 43.0,
+     "high": 80.6,
+     "unit": "umol/L"
+    },
+    "CMP.TSAT": {
+     "low": 20,
+     "high": 50,
+     "unit": "%"
+    },
+    "CMP.FERRITIN": {
+     "low": 13,
+     "high": 150,
+     "unit": "ug/L"
+    },
+    "CMP.COPPER": {
+     "low": 12.6,
+     "high": 24.4,
+     "unit": "umol/L"
+    }
+   }
+  }
+ },
+ "source": {
+  "title": "Severe Folate Deficiency Mimicking Myelodysplastic Syndrome/Acute Myeloid Leukemia: A Case Report",
+  "authors": [
+   "Scott Potter",
+   "Margaret Williams",
+   "Timothy M. Hanley"
+  ],
+  "affiliations": [
+   "Department of Pathology, Spencer Fox Eccles School of Medicine, University of Utah, Salt Lake City, Utah, USA",
+   "ARUP Laboratories, Salt Lake City, Utah, USA"
+  ],
+  "journal": "Case Reports in Hematology",
+  "volume": "2026",
+  "issue": null,
+  "article_number": "8212282",
+  "published": "2026-07-24",
+  "doi": "10.1155/crh/8212282",
+  "pmcid": "PMC13400839",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13400839/",
+  "licence": "CC BY 4.0",
+  "production_ok": true,
+  "public_release_ok": true,
+  "licence_verified": "2026-09-25 from the JATS <license> element (https://creativecommons.org/licenses/by/4.0/), cases/BATCH1.md; figures carry no separate credit line",
+  "attribution": "Adapted from Potter S, Williams M, Hanley TM. Severe Folate Deficiency Mimicking Myelodysplastic Syndrome/Acute Myeloid Leukemia: A Case Report. Case Rep Hematol 2026: 8212282. doi:10.1155/crh/8212282. Licensed CC BY 4.0. Changes: restructured into atomic facts; diagnosis redacted from seat-facing text; simulated findings added where marked."
+ },
+ "clock": {
+  "day_0": null,
+  "day_0_label": "Transfer (admission to the reporting hospital)",
+  "semantics": "Integer day relative to the transfer. The article gives no calendar dates. Day 18 is the follow-up marrow (outcome only). day = null means the fact is valid at any point in the admission."
+ },
+ "vignette": "A 56-year-old woman is transferred from another hospital with severe pancytopenia; the referring team was concerned about aplastic anaemia. She received one unit of red cells before transfer and is on intravenous antimicrobials for presumed colitis and mucositis.",
+ "opening_statement_lay": "I've been so tired and weak for weeks, and I get out of breath just walking around the house. The other hospital said my blood counts were very low and sent me here.",
+ "facts": [
+  {
+   "id": "H01",
+   "category": "history",
+   "item": "Age and sex",
+   "release_text": "56-year-old woman.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case presentation"
+  },
+  {
+   "id": "H02",
+   "category": "history",
+   "item": "Past medical history",
+   "release_text": "Hypothyroidism after a total thyroidectomy some years ago. The referring team also records malnutrition.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PMH.MEDICAL",
+    "HX.PMH.CHRONIC_CONDITIONS"
+   ]
+  },
+  {
+   "id": "H03",
+   "category": "history",
+   "item": "Previous operations (hidden until the surgical history is taken)",
+   "release_text": "Total thyroidectomy some years ago, and a sleeve gastrectomy.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "pivotal": true,
+   "release": "chart",
+   "release_condition": {
+    "requires_topics": [
+     "previous operations or surgery",
+     "bariatric or weight-loss surgery"
+    ],
+    "note": "The article lists the gastric sleeve in the past history. The transfer letter (H04) and the medical history (H02) do not name it, so a player must take the surgical history (or find the port-site scars or ask about admissions)."
+   },
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PMH.SURGICAL"
+   ]
+  },
+  {
+   "id": "H04",
+   "category": "history",
+   "item": "Transfer letter",
+   "release_text": "Transferred from another hospital with severe pancytopenia; the referring team was concerned about aplastic anaemia.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "vignette",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.RECORDS.REFERRAL_LETTER"
+   ]
+  },
+  {
+   "id": "H05",
+   "category": "history",
+   "item": "Treatment before transfer",
+   "release_text": "At the referring hospital she received one unit of packed red cells before transfer and was started on intravenous cefepime, metronidazole and fluconazole for presumed colitis and mucositis.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "HX.PC.TREATMENT_SO_FAR",
+    "HX.MEDS.RECENT_ANTIBIOTICS"
+   ]
+  },
+  {
+   "id": "H06",
+   "category": "examination",
+   "item": "Physical examination on arrival",
+   "release_text": "Physical examination on arrival recorded as unremarkable.",
+   "day": 0,
+   "kind": "raw",
+   "reveals_dx": false,
+   "release": "chart",
+   "source_locator": "Case presentation",
+   "released_by": [
+    "EX.GEN.APPEARANCE"
+   ]
+  }
+ ],
+ "series": [],
+ "single_results": [
+  {
+   "id": "L01",
+   "item": "Haemoglobin",
+   "code": {
+    "system": "LOINC",
+    "code": "718-7"
+   },
+   "value": 77,
+   "unit": "g/L",
+   "ref_range": "126-159",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.HB",
+   "flag": "L",
+   "note": "Printed 7.7 g/dL (normal 12.6-15.9 g/dL). After one unit of packed red cells at the referring hospital."
+  },
+  {
+   "id": "L02",
+   "item": "Haematocrit",
+   "code": {
+    "system": "LOINC",
+    "code": "4544-3"
+   },
+   "value": 0.225,
+   "unit": "L/L",
+   "ref_range": "0.36-0.49",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.HCT",
+   "flag": "L",
+   "note": "Printed 22.5% (normal 36.0%-49.0%)."
+  },
+  {
+   "id": "L03",
+   "item": "Mean cell volume",
+   "code": {
+    "system": "LOINC",
+    "code": "787-2"
+   },
+   "value": 92.2,
+   "unit": "fL",
+   "ref_range": "81.9-101.0",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.MCV",
+   "note": "Printed 92.2 fL. Normocytic despite the deficiency; the authors cite the transfusion, hypothyroidism, protein malnutrition and the later pneumonia."
+  },
+  {
+   "id": "L04",
+   "item": "Platelets",
+   "code": {
+    "system": "LOINC",
+    "code": "777-3"
+   },
+   "value": "<6",
+   "unit": "x10^9/L",
+   "ref_range": "159-439",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.PLT",
+   "flag": "L",
+   "note": "Printed '< 6 k/L' (normal 159-439 k/uL); read as <6 x10^9/L, an obvious misprint of k/uL."
+  },
+  {
+   "id": "L05",
+   "item": "White cell count",
+   "code": {
+    "system": "LOINC",
+    "code": "6690-2"
+   },
+   "value": 0.33,
+   "unit": "x10^9/L",
+   "ref_range": "4.3-11.3",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.WBC",
+   "flag": "L",
+   "note": "Printed 0.33 k/uL (normal 4.30-11.30 k/uL)."
+  },
+  {
+   "id": "L06",
+   "item": "Neutrophils (absolute)",
+   "code": null,
+   "value": 0.06,
+   "unit": "x10^9/L",
+   "ref_range": "2.0-7.0",
+   "day": 0,
+   "source_locator": "Case presentation",
+   "catalogue_ref": "CMP.NEUT",
+   "flag": "L",
+   "note": "Printed absolute neutrophil count 0.06 k/uL; no reference range printed, catalogue range used."
+  },
+  {
+   "id": "L07",
+   "item": "Serum folate",
+   "code": {
+    "system": "LOINC",
+    "code": "14732-1"
+   },
+   "value": 5.9,
+   "unit": "nmol/L",
+   "ref_range": ">=13.4",
+   "day": 0,
+   "source_locator": "Case presentation, third paragraph",
+   "catalogue_ref": "CMP.FOLATE",
+   "flag": "L",
+   "note": "Printed 2.6 pg/mL (normal >=5.9 pg/mL); pg/mL is a misprint for ng/mL, so 2.6 ng/mL = 5.9 nmol/L and the limit 5.9 ng/mL = 13.4 nmol/L. Reported one day after the marrow; placed on day 0 as sent with the admission bloods (method decision, turnaround applies in play).",
+   "pivotal": true,
+   "reveals_dx": false
+  },
+  {
+   "id": "L08",
+   "item": "Vitamin B12",
+   "code": {
+    "system": "LOINC",
+    "code": "14685-2"
+   },
+   "value": ">1107",
+   "unit": "pmol/L",
+   "ref_range": "133-675",
+   "day": 0,
+   "source_locator": "Case presentation, third paragraph",
+   "catalogue_ref": "CMP.B12",
+   "flag": "H",
+   "note": "Printed >1500 pg/mL (normal 180-914 pg/mL)."
+  },
+  {
+   "id": "L09",
+   "item": "Serum iron",
+   "code": {
+    "system": "LOINC",
+    "code": "14798-3"
+   },
+   "value": 18.4,
+   "unit": "umol/L",
+   "ref_range": "5.0-30.4",
+   "day": 0,
+   "source_locator": "Case presentation, third paragraph",
+   "catalogue_ref": "CMP.IRON",
+   "note": "Printed 103 ug/dL (normal 28-170 ug/dL)."
+  },
+  {
+   "id": "L10",
+   "item": "Total iron-binding capacity",
+   "code": {
+    "system": "LOINC",
+    "code": "14800-7"
+   },
+   "value": 28.5,
+   "unit": "umol/L",
+   "ref_range": "43.0-80.6",
+   "day": 0,
+   "source_locator": "Case presentation, third paragraph",
+   "catalogue_ref": "CMP.TIBC",
+   "flag": "L",
+   "note": "Printed 159 ug/dL (normal 240-450 ug/dL)."
+  },
+  {
+   "id": "L11",
+   "item": "Transferrin saturation",
+   "code": {
+    "system": "LOINC",
+    "code": "2502-3"
+   },
+   "value": 65,
+   "unit": "%",
+   "ref_range": "20-50",
+   "day": 0,
+   "source_locator": "Case presentation, third paragraph",
+   "catalogue_ref": "CMP.TSAT",
+   "flag": "H",
+   "note": "Printed 65% (normal 20%-50%); agrees with iron/TIBC (64.6%)."
+  },
+  {
+   "id": "L12",
+   "item": "Ferritin",
+   "code": {
+    "system": "LOINC",
+    "code": "2276-4"
+   },
+   "value": 1531,
+   "unit": "ug/L",
+   "ref_range": "13-150",
+   "day": 0,
+   "source_locator": "Case presentation, third paragraph",
+   "catalogue_ref": "CMP.FERRITIN",
+   "flag": "H",
+   "note": "Printed 1531 ng/mL (normal 13-150 ng/mL)."
+  },
+  {
+   "id": "L13",
+   "item": "Serum copper",
+   "code": null,
+   "value": 13.5,
+   "unit": "umol/L",
+   "ref_range": "12.6-24.4",
+   "day": 0,
+   "source_locator": "Case presentation, third paragraph",
+   "catalogue_ref": "CMP.COPPER",
+   "note": "Printed 86 ug/dL (normal 80-155 ug/dL)."
+  },
+  {
+   "id": "L14",
+   "item": "BCR::ABL1",
+   "code": null,
+   "value": "Not detected",
+   "unit": "",
+   "ref_range": "Not detected",
+   "day": 0,
+   "source_locator": "Case presentation, third paragraph",
+   "catalogue_ref": "CMP.BCR_ABL",
+   "note": "Tested by FISH on the marrow in the article; the catalogue's BCR-ABL1 test is recorded with the same result."
+  }
+ ],
+ "raw_material": [
+  {
+   "id": "R01",
+   "test": "Peripheral blood film",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "LAB.HAEM.FILM",
+   "findings": "Red cells with minimal anisopoikilocytosis. Eosinophils increased (50% of leucocytes) with frequent atypical nuclear segmentation. Rare hypogranular neutrophils.",
+   "media": [],
+   "source_locator": "Case presentation, second paragraph"
+  },
+  {
+   "id": "R02",
+   "test": "Peripheral blood flow cytometry",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "LAB.HAEM.PB_FLOW",
+   "findings": "Eosinophils increased (54% of viable leucocytes); myeloid blasts slightly increased (1.5% of viable leucocytes); no abnormal B-cell, T-cell, NK-cell or mast cell populations.",
+   "media": [],
+   "source_locator": "Case presentation, second paragraph"
+  },
+  {
+   "id": "R03",
+   "test": "Bone marrow aspirate",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "PROC.BM.ASPIRATE",
+   "findings": "Erythroid-predominant trilineage haematopoiesis; 12% blasts and 15% eosinophils by morphology; dyserythropoiesis and dysmegakaryopoiesis. Erythroid maturation left-shifted with increased pronormoblasts and basophilic normoblasts; frequent erythroid precursors with megaloblastic changes, cytoplasmic vacuolisation, nuclear contour irregularities, nuclear budding, macronuclei and multinucleation. Frequent small hypolobate megakaryocytes, megakaryocytes with hyperlobate nuclei and with widely spaced nuclear lobes. Granulocytes with a prominent left shift; blasts with amphophilic to basophilic cytoplasm, high nuclear to cytoplasmic ratio, immature chromatin, variably prominent nucleoli and sparse red granules. Occasional histiocytes with haemophagocytosis. Pathologists' reading: highly suspicious for MDS-IB2 (WHO 5th edition) or MDS/AML (ICC 2022).",
+   "media": [
+    "M01",
+    "M02",
+    "M03",
+    "M04"
+   ],
+   "source_locator": "Case presentation, second paragraph; Figure 1"
+  },
+  {
+   "id": "R04",
+   "test": "Bone marrow iron stain",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "LAB.BM.IRON_STAIN",
+   "findings": "Increased storage iron; adequate sideroblastic iron; no ring sideroblasts.",
+   "media": [],
+   "source_locator": "Case presentation, second paragraph"
+  },
+  {
+   "id": "R05",
+   "test": "Bone marrow trephine with immunohistochemistry",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "PROC.BM.TREPHINE",
+   "findings": "Marrow cellularity about 20% on H&E (the text also calls the core normocellular; the caption and the opening sentence give 20%). CD34: increased myeloid blasts, about 15% of cellularity. CD61: increased megakaryocytes, many small, with atypical nuclear features. E-cadherin: increased immature erythroid precursors including megaloblastic forms.",
+   "media": [
+    "M05",
+    "M06",
+    "M07",
+    "M08"
+   ],
+   "source_locator": "Case presentation, second paragraph; Figure 2"
+  },
+  {
+   "id": "R06",
+   "test": "Bone marrow flow cytometry",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "LAB.BM.FLOW",
+   "findings": "Myeloid blasts 18% of viable leucocytes without immunophenotypic aberrancy: positive for CD34, CD13, CD33, CD38, CD117, CD123, HLA-DR and MPO; negative for CD3, CD5, CD7, CD10, CD14, CD19, CD56, CD64 and TdT. Eosinophils 45% of viable leucocytes.",
+   "media": [
+    "M09"
+   ],
+   "source_locator": "Case presentation, second paragraph; Figure 3"
+  },
+  {
+   "id": "R07",
+   "test": "Karyotype",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+   "findings": "No abnormalities.",
+   "media": [],
+   "source_locator": "Case presentation, fourth paragraph"
+  },
+  {
+   "id": "R08",
+   "test": "AML panel FISH",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "LAB.CYTOGEN.FISH_AML",
+   "findings": "No abnormalities.",
+   "media": [],
+   "source_locator": "Case presentation, fourth paragraph"
+  },
+  {
+   "id": "R09",
+   "test": "Eosinophilia panel FISH",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "LAB.CYTOGEN.FISH_EOSINOPHILIA",
+   "findings": "No abnormalities; not supportive of a myeloid neoplasm with eosinophilia and a tyrosine kinase gene fusion.",
+   "media": [],
+   "source_locator": "Case presentation, third and fourth paragraphs"
+  },
+  {
+   "id": "R10",
+   "test": "Cytogenomic SNP microarray",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "LAB.CYTOGEN.SNP_ARRAY",
+   "findings": "No abnormalities.",
+   "media": [],
+   "source_locator": "Case presentation, fourth paragraph"
+  },
+  {
+   "id": "R11",
+   "test": "Rapid AML targeted therapy mutation panel (NGS)",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "LAB.MOL.AML_TARGETED_PANEL",
+   "findings": "No abnormalities.",
+   "media": [],
+   "source_locator": "Case presentation, fourth paragraph"
+  },
+  {
+   "id": "R12",
+   "test": "Myeloid malignancies mutation and copy number panel (NGS)",
+   "release": "service.pathology",
+   "day": 0,
+   "test_item_id": "LAB.MOL.MYELOID_NGS",
+   "findings": "One Tier 1 variant in DNMT3A, variant allele frequency 1.2%; a Tier 2 variant of unknown clinical significance in KMT2A, variant allele frequency 49.6%.",
+   "media": [],
+   "source_locator": "Case presentation, fourth paragraph"
+  },
+  {
+   "id": "R13",
+   "test": "Follow-up bone marrow (outcome only)",
+   "release": "never",
+   "day": 18,
+   "test_item_id": null,
+   "findings": "Normocellular marrow (60%) with myeloid-predominant trilineage haematopoiesis, mild dysmegakaryopoiesis and no increase in blasts (1% by morphology). Increased small hypolobate megakaryocytes and rare erythroid precursors with nuclear contour irregularities; dysplasia improved compared with the first marrow.",
+   "media": [],
+   "note": "Outcome only, after 18 days of folate: never released in play, so the case stays within the admission day.",
+   "source_locator": "Case presentation, fifth paragraph"
+  }
+ ],
+ "media": [
+  {
+   "id": "M01",
+   "figure": "Figure 1A",
+   "specimen": "Bone marrow aspirate",
+   "stain": "Romanowsky (not stated)",
+   "redacted_caption": "Bone marrow aspirate at presentation: erythroid precursors.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": false,
+   "file_path": "PMC13400839/F1.jpg",
+   "raw_fact_id": "R03"
+  },
+  {
+   "id": "M02",
+   "figure": "Figure 1B",
+   "specimen": "Bone marrow aspirate",
+   "stain": "Romanowsky (not stated)",
+   "redacted_caption": "Bone marrow aspirate at presentation: megakaryocytes.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": false,
+   "file_path": "PMC13400839/F1.jpg",
+   "raw_fact_id": "R03"
+  },
+  {
+   "id": "M03",
+   "figure": "Figure 1C",
+   "specimen": "Bone marrow aspirate",
+   "stain": "Romanowsky (not stated)",
+   "redacted_caption": "Bone marrow aspirate at presentation: immature cells.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": true,
+   "file_path": "PMC13400839/F1.jpg",
+   "raw_fact_id": "R03"
+  },
+  {
+   "id": "M04",
+   "figure": "Figure 1D",
+   "specimen": "Bone marrow aspirate",
+   "stain": "Romanowsky (not stated)",
+   "redacted_caption": "Bone marrow aspirate at presentation: a histiocyte.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": false,
+   "file_path": "PMC13400839/F1.jpg",
+   "raw_fact_id": "R03"
+  },
+  {
+   "id": "M05",
+   "figure": "Figure 2A",
+   "specimen": "Bone marrow trephine",
+   "stain": "Haematoxylin and eosin",
+   "redacted_caption": "Bone marrow core biopsy, haematoxylin and eosin.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": false,
+   "file_path": "PMC13400839/F2.jpg",
+   "raw_fact_id": "R05"
+  },
+  {
+   "id": "M06",
+   "figure": "Figure 2B",
+   "specimen": "Bone marrow trephine",
+   "stain": "Immunohistochemistry, CD34",
+   "redacted_caption": "Bone marrow core biopsy, CD34 immunostain.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": false,
+   "file_path": "PMC13400839/F2.jpg",
+   "raw_fact_id": "R05"
+  },
+  {
+   "id": "M07",
+   "figure": "Figure 2C",
+   "specimen": "Bone marrow trephine",
+   "stain": "Immunohistochemistry, CD61",
+   "redacted_caption": "Bone marrow core biopsy, CD61 immunostain.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": false,
+   "file_path": "PMC13400839/F2.jpg",
+   "raw_fact_id": "R05"
+  },
+  {
+   "id": "M08",
+   "figure": "Figure 2D",
+   "specimen": "Bone marrow trephine",
+   "stain": "Immunohistochemistry, E-cadherin",
+   "redacted_caption": "Bone marrow core biopsy, E-cadherin immunostain.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": false,
+   "file_path": "PMC13400839/F2.jpg",
+   "raw_fact_id": "R05"
+  },
+  {
+   "id": "M09",
+   "figure": "Figure 3",
+   "specimen": "Bone marrow aspirate",
+   "stain": "Flow cytometry",
+   "redacted_caption": "Flow cytometry of the bone marrow aspirate: immature myeloid population.",
+   "licence": "CC BY 4.0",
+   "production_ok": true,
+   "public_release_ok": true,
+   "has_annotations": false,
+   "file_path": "PMC13400839/F3.jpg",
+   "raw_fact_id": "R06"
+  }
+ ],
+ "gaps": [
+  {
+   "id": "G01",
+   "item": "Presenting symptoms and their course",
+   "guidance": "About six weeks of increasing tiredness, two to three weeks of exertional breathlessness; loose stools and a sore mouth in the week before transfer (the referring team's presumed colitis and mucositis), now settling.",
+   "review_required": true
+  },
+  {
+   "id": "G02",
+   "item": "Diet since the sleeve gastrectomy",
+   "guidance": "Small soft meals with very little fruit, salad or green vegetables; poor appetite for months. Hidden until diet is asked.",
+   "review_required": true
+  },
+  {
+   "id": "G03",
+   "item": "Weight and nutritional state",
+   "guidance": "About 8 kg lost over a year; BMI about 19; hair thinning.",
+   "review_required": true
+  },
+  {
+   "id": "G04",
+   "item": "Medicines and supplements",
+   "guidance": "Levothyroxine; monthly vitamin B12 injections (explains B12 >1500 pg/mL); stopped the post-bariatric multivitamin about a year ago; antimicrobials from the referring hospital.",
+   "review_required": true
+  },
+  {
+   "id": "G05",
+   "item": "Vital signs and examination details",
+   "guidance": "Examination recorded as unremarkable: tachycardia about 100/min, low-grade temperature at most, SpO2 about 96% on air, mild pallor, laparoscopic port-site and thyroidectomy scars; no purpura, nodes or organomegaly.",
+   "review_required": true
+  },
+  {
+   "id": "G06",
+   "item": "Rest of the blood count and reticulocytes",
+   "guidance": "Red cell count from Hct/MCV; differential summing to WBC 0.33 with eosinophils about 50%; low reticulocyte count; modest RDW rise.",
+   "review_required": true
+  },
+  {
+   "id": "G07",
+   "item": "Other haematinics and micronutrients",
+   "guidance": "Red cell folate low, homocysteine raised, MMA normal, active B12 high; zinc and vitamin D low; thiamine and B6 low-normal.",
+   "review_required": true
+  },
+  {
+   "id": "G08",
+   "item": "LDH, bilirubin and liver panel",
+   "guidance": "LDH moderately raised and mild unconjugated bilirubin rise from ineffective erythropoiesis; albumin low from protein malnutrition.",
+   "review_required": true
+  },
+  {
+   "id": "G09",
+   "item": "Renal function, electrolytes and bone profile",
+   "guidance": "Low urea and creatinine; mild hypokalaemia, low bicarbonate, low phosphate and magnesium after diarrhoea and malnutrition; adjusted calcium normal.",
+   "review_required": false
+  },
+  {
+   "id": "G10",
+   "item": "Thyroid function",
+   "guidance": "Treated hypothyroidism; normal on replacement.",
+   "review_required": true
+  },
+  {
+   "id": "G11",
+   "item": "Coagulation",
+   "guidance": "INR mildly raised (vitamin K from malnutrition and antibiotics); fibrinogen not low.",
+   "review_required": false
+  },
+  {
+   "id": "G12",
+   "item": "Inflammatory markers and cultures",
+   "guidance": "CRP moderately raised; cultures and C. difficile negative; subtle ground-glass change on CT chest only (Pneumocystis pneumonia diagnosed on day 3).",
+   "review_required": true
+  },
+  {
+   "id": "G13",
+   "item": "Trephine features not reported",
+   "guidance": "No significant reticulin fibrosis; no granulomas or non-haemopoietic infiltrate.",
+   "review_required": false
+  }
+ ],
+ "ground_truth": {
+  "final_diagnosis": {
+   "text": "Severe folate deficiency after sleeve gastrectomy with malnutrition, causing pancytopenia with megaloblastic trilineage dysplasia and a transient increase in marrow blasts that mimicked a high-risk myelodysplastic neoplasm (MDS-IB2) or MDS/AML",
+   "icd10": [
+    "D52.8"
+   ],
+   "accepted_synonyms": [
+    "folate deficiency",
+    "folic acid deficiency",
+    "folate deficiency anaemia",
+    "folate deficiency anemia",
+    "megaloblastic anaemia due to folate deficiency",
+    "nutritional folate deficiency"
+   ]
+  },
+  "secondary_findings": [
+   "Pneumocystis jirovecii pneumonia diagnosed on day 3, needing intubation for hypoxic respiratory failure",
+   "Low-level DNMT3A variant (VAF 1.2%), most likely clonal haematopoiesis of indeterminate potential; KMT2A variant of uncertain significance (VAF 49.6%)",
+   "Normocytic indices despite the deficiency: recent transfusion, hypothyroidism, protein malnutrition and acute illness",
+   "Relative eosinophilia (about 50% of leucocytes, absolute count normal) and occasional marrow haemophagocytosis, both reactive",
+   "Hyperferritinaemia (1531 ng/mL) with increased marrow storage iron"
+  ],
+  "accepted_differential": [
+   "Myelodysplastic neoplasm with increased blasts (MDS-IB2) or MDS/AML",
+   "Acute myeloid leukaemia, including acute erythroid leukaemia",
+   "Aplastic anaemia or hypoplastic myelodysplastic neoplasm",
+   "Vitamin B12 deficiency",
+   "Copper deficiency after bariatric surgery",
+   "Myeloid neoplasm with eosinophilia and a tyrosine kinase gene fusion",
+   "Haemophagocytic lymphohistiocytosis",
+   "Marrow suppression from sepsis or drugs",
+   "HIV-associated marrow dysplasia"
+  ],
+  "red_herrings": [
+   "12% blasts on the aspirate and 18% by flow",
+   "trilineage dysplasia",
+   "DNMT3A variant at 1.2% VAF",
+   "KMT2A variant of uncertain significance at 49.6% VAF",
+   "eosinophils about 50% of leucocytes",
+   "occasional haemophagocytosis",
+   "ferritin 1531 ng/mL",
+   "normal MCV",
+   "the referral label of aplastic anaemia",
+   "hypocellular marrow"
+  ],
+  "key_discriminators": [
+   "serum folate 2.6 ng/mL with vitamin B12 above 1500 pg/mL",
+   "megaloblastic erythroid change",
+   "blasts without immunophenotypic aberrancy",
+   "normal karyotype, FISH panels and SNP microarray",
+   "sleeve gastrectomy with malnutrition",
+   "recovery of counts and marrow with folate"
+  ],
+  "treatment_given": "Folate supplementation (dose not reported) with supportive care: red cell transfusion and antimicrobials for neutropenia. Pneumocystis pneumonia on day 3 needed intubation.",
+  "outcome": "Cytopenias normalised over 18 days of folate. A repeat marrow at that time was 60% cellular with myeloid-predominant haematopoiesis, mild dysmegakaryopoiesis and 1% blasts. The findings were judged an unusual reactive process due to folate deficiency.",
+  "must_do": [
+   "Measure serum folate and vitamin B12 before attributing the marrow to a myeloid neoplasm",
+   "Take a surgical, dietary and supplement history (sleeve gastrectomy, intake, stopped multivitamin)",
+   "Replace folic acid, having checked vitamin B12",
+   "Await cytogenetic and molecular results before any disease-directed treatment",
+   "Give supportive care for profound neutropenia and thrombocytopenia: continue empirical broad-spectrum antimicrobials and transfuse platelets",
+   "Confirm the response with repeat counts and a repeat marrow after replacement",
+   "Involve dietetics for nutritional rehabilitation and lifelong bariatric supplements"
+  ],
+  "must_not_do": [
+   "Start hypomethylating therapy or AML induction chemotherapy",
+   "Label the marrow a myelodysplastic neoplasm or AML without serum folate and vitamin B12",
+   "Treat as aplastic anaemia with antithymocyte globulin and ciclosporin",
+   "Give folic acid alone without checking vitamin B12"
+  ],
+  "diagnosis_rubric_anchors": {
+   "5": "Folate deficiency, with the sleeve gastrectomy or poor intake identified as the cause",
+   "4": "Folate deficiency, cause not identified",
+   "3": "Megaloblastic or nutritional anaemia without naming folate, or vitamin B12 deficiency",
+   "2": "Myelodysplastic neoplasm, AML or aplastic anaemia as the final diagnosis",
+   "1": "Unrelated diagnosis, or one that would lead to harm"
+  },
+  "teaching_points": [
+   "Severe folate or B12 deficiency can produce trilineage dysplasia and a transient rise in blasts that looks like a high-grade myelodysplastic neoplasm or AML.",
+   "Check haematinics (B12, folate, copper) before labelling a myeloid neoplasm, particularly after bariatric surgery or with malnutrition.",
+   "Blasts without an aberrant immunophenotype and a normal karyotype, FISH and SNP array argue against a clonal disorder; a low-VAF DNMT3A variant can be clonal haematopoiesis.",
+   "Folate stores last only months; after a sleeve gastrectomy, poor intake and stopped supplements deplete them quickly, while B12 injections can keep the B12 level normal.",
+   "Macrocytosis can be absent after transfusion or with coexisting conditions.",
+   "Recovery of the counts and marrow after replacement confirms the diagnosis."
+  ]
+ }
+}

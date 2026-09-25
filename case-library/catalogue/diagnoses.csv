@@ -491,3 +491,7 @@ DX.SEROTONIN_SYNDROME,Serotonin syndrome,drug-related,serotonin toxicity|seroton
 DX.NMS,Neuroleptic malignant syndrome,drug-related,NMS|neuroleptic malignant hyperthermia|antipsychotic induced hyperthermia,attending,8A0Y,G21.0,true
 DX.ANAPHYLAXIS,Anaphylaxis,drug-related,anaphylactic shock|severe allergic reaction|anaphylactic reaction,attending,4A84.Z,T78.2,true
 DX.AYURVEDIC_METAL_TOXICITY,Heavy metal toxicity from traditional medicine,toxicology,bhasma toxicity|Ayurvedic lead poisoning|herbal remedy metal poisoning|traditional remedy toxicity,attending,,T56.9,true
+DX.DISSEMINATED_HISTOPLASMOSIS,Disseminated histoplasmosis,infection,progressive disseminated histoplasmosis|disseminated Histoplasma infection|histoplasmosis,attending,,B39.3,false
+DX.DISSEMINATED_NTM,Disseminated non-tuberculous mycobacterial infection,infection,disseminated NTM|disseminated MAC|atypical mycobacterial infection,attending,,A31.8,false
+DX.SUPERWARFARIN_POISONING,Long-acting anticoagulant rodenticide poisoning,toxicology,superwarfarin poisoning|brodifacoum poisoning|LAAR poisoning|superwarfarin toxicity|rodenticide-induced coagulopathy,attending,,T60.4,false
+DX.COAGULOPATHY_LIVER_DISEASE,Coagulopathy of liver disease,haematology,hepatic coagulopathy|liver disease coagulopathy|coagulopathy due to cirrhosis|synthetic liver failure coagulopathy,attending,,D68.4,false

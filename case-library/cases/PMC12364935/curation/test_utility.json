@@ -1,0 +1,427 @@
+[
+ {
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "utility": "essential",
+  "rationale": "Direct demonstration of the parasite decides the case; earlier marrows missed it."
+ },
+ {
+  "test_item_id": "LAB.HAEM.CBC",
+  "utility": "essential",
+  "rationale": "Defines the pancytopenia and transfusion needs."
+ },
+ {
+  "test_item_id": "LAB.SERO.HIV",
+  "utility": "essential",
+  "rationale": "Co-infection changes treatment and prognosis; test before treatment."
+ },
+ {
+  "test_item_id": "LAB.SERO.RK39",
+  "utility": "supportive",
+  "rationale": "Positive supports the diagnosis quickly; less sensitive after immunosuppression."
+ },
+ {
+  "test_item_id": "LAB.MOL.LEISHMANIA_PCR",
+  "utility": "supportive",
+  "rationale": "Confirms the organism on the aspirate and serves as a test of cure."
+ },
+ {
+  "test_item_id": "IMG.US.ABDOMEN",
+  "utility": "supportive",
+  "rationale": "Measures the spleen and liver and checks portal flow."
+ },
+ {
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "utility": "supportive",
+  "rationale": "Shows the massive hepatosplenomegaly and no lymphadenopathy."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM",
+  "utility": "supportive",
+  "rationale": "Excludes blasts, fragments and malarial parasites."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "utility": "supportive",
+  "rationale": "Rouleaux and pancytopenia point to a marrow or splenic process."
+ },
+ {
+  "test_item_id": "LAB.HAEM.RETIC",
+  "utility": "supportive",
+  "rationale": "The inadequate response argues against autoimmune destruction."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ESR",
+  "utility": "supportive",
+  "rationale": "Markedly raised with the polyclonal gammopathy."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CRP",
+  "utility": "supportive",
+  "rationale": "Raised; tracks the response to treatment."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FERRITIN",
+  "utility": "supportive",
+  "rationale": "Very high; part of the HLH assessment."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LFT",
+  "utility": "supportive",
+  "rationale": "Low albumin, normal enzymes and ALP."
+ },
+ {
+  "test_item_id": "LAB.CHEM.RENAL",
+  "utility": "supportive",
+  "rationale": "Baseline before amphotericin."
+ },
+ {
+  "test_item_id": "LAB.CHEM.ELECTROLYTES",
+  "utility": "supportive",
+  "rationale": "Potassium and sodium before and during amphotericin."
+ },
+ {
+  "test_item_id": "LAB.IMM.IMMUNOGLOBULINS",
+  "utility": "supportive",
+  "rationale": "Marked polyclonal IgG rise, a clue to chronic infection."
+ },
+ {
+  "test_item_id": "LAB.IMM.SPEP",
+  "utility": "supportive",
+  "rationale": "Polyclonal, not monoclonal, gammopathy."
+ },
+ {
+  "test_item_id": "LAB.HAEM.COAG_SCREEN",
+  "utility": "supportive",
+  "rationale": "Needed before a marrow and to judge bleeding risk."
+ },
+ {
+  "test_item_id": "LAB.TBS.BLOOD_GROUP",
+  "utility": "supportive",
+  "rationale": "Transfusion is likely."
+ },
+ {
+  "test_item_id": "LAB.TBS.ANTIBODY_SCREEN",
+  "utility": "supportive",
+  "rationale": "Crossmatching with a positive DAT."
+ },
+ {
+  "test_item_id": "LAB.MICRO.BLOOD_CULTURE",
+  "utility": "supportive",
+  "rationale": "Excludes bacteraemia and brucellosis in prolonged fever."
+ },
+ {
+  "test_item_id": "LAB.TBS.DAT",
+  "utility": "supportive",
+  "rationale": "Explains the positive DAT as immunoglobulin coating rather than haemolysis, with the haemolysis markers."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LDH",
+  "utility": "supportive",
+  "rationale": "Mildly raised; argues against brisk haemolysis."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HAPTOGLOBIN",
+  "utility": "supportive",
+  "rationale": "Not absent; haemolysis is at most mild."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANA",
+  "utility": "supportive",
+  "rationale": "Already known positive; a repeat adds little but frames the lupus question."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANTI_DSDNA",
+  "utility": "supportive",
+  "rationale": "Now negative; weakens the lupus label."
+ },
+ {
+  "test_item_id": "LAB.IMM.ENA",
+  "utility": "supportive",
+  "rationale": "Anti-Sm negative; weakens the lupus label."
+ },
+ {
+  "test_item_id": "LAB.IMM.COMPLEMENT",
+  "utility": "supportive",
+  "rationale": "Low C3 is non-specific here."
+ },
+ {
+  "test_item_id": "LAB.URINE.URINALYSIS",
+  "utility": "supportive",
+  "rationale": "No active nephritis."
+ },
+ {
+  "test_item_id": "LAB.URINE.PCR",
+  "utility": "supportive",
+  "rationale": "No proteinuria."
+ },
+ {
+  "test_item_id": "PROC.BM.TREPHINE",
+  "utility": "supportive",
+  "rationale": "Excludes lymphoma and fibrosis alongside the aspirate."
+ },
+ {
+  "test_item_id": "LAB.BM.FLOW",
+  "utility": "supportive",
+  "rationale": "Excludes a clonal process."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LIPIDS",
+  "utility": "supportive",
+  "rationale": "Triglycerides for the HLH assessment."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FIBRINOGEN",
+  "utility": "supportive",
+  "rationale": "Fibrinogen for the HLH assessment and before procedures."
+ },
+ {
+  "test_item_id": "LAB.IMM.SIL2R",
+  "utility": "supportive",
+  "rationale": "Raised but below the HLH threshold."
+ },
+ {
+  "test_item_id": "PROC.CARD.ECG",
+  "utility": "supportive",
+  "rationale": "Baseline before amphotericin; sinus tachycardia."
+ },
+ {
+  "test_item_id": "LAB.ENDO.CORTISOL_8AM",
+  "utility": "supportive",
+  "rationale": "Checks for adrenal suppression after abrupt steroid withdrawal."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_B",
+  "utility": "supportive",
+  "rationale": "Needed before any immunosuppression and for the liver question."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_C",
+  "utility": "supportive",
+  "rationale": "Part of the liver and chronic infection screen."
+ },
+ {
+  "test_item_id": "LAB.MOL.EBV_DNA",
+  "utility": "supportive",
+  "rationale": "Low-level viraemia under immunosuppression; a red herring for HLH."
+ },
+ {
+  "test_item_id": "LAB.CHEM.IRON_STUDIES",
+  "utility": "supportive",
+  "rationale": "Low iron with high ferritin: anaemia of inflammation, not iron deficiency."
+ },
+ {
+  "test_item_id": "LAB.IMM.IFE",
+  "utility": "low_yield",
+  "rationale": "Polyclonal; SPEP is enough."
+ },
+ {
+  "test_item_id": "LAB.IMM.FLC",
+  "utility": "low_yield",
+  "rationale": "Both chains raised in proportion; no clone."
+ },
+ {
+  "test_item_id": "LAB.IMM.B2M",
+  "utility": "low_yield",
+  "rationale": "Raised non-specifically."
+ },
+ {
+  "test_item_id": "LAB.IMM.URINE_BJP",
+  "utility": "low_yield",
+  "rationale": "Normal before; unlikely to change."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PB_FLOW",
+  "utility": "low_yield",
+  "rationale": "No circulating clone; lymphopenic sample."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+  "utility": "low_yield",
+  "rationale": "Normal; no clonal marrow disease suspected."
+ },
+ {
+  "test_item_id": "LAB.MOL.BCR_ABL",
+  "utility": "low_yield",
+  "rationale": "No features of a myeloproliferative neoplasm on the film."
+ },
+ {
+  "test_item_id": "LAB.MOL.JAK2",
+  "utility": "low_yield",
+  "rationale": "No features of a myeloproliferative neoplasm on the film."
+ },
+ {
+  "test_item_id": "IMG.CT.CHEST",
+  "utility": "low_yield",
+  "rationale": "No thoracic disease; reasonable only if lymphoma remains a concern."
+ },
+ {
+  "test_item_id": "IMG.XR.CHEST",
+  "utility": "low_yield",
+  "rationale": "Clear lungs; a baseline only."
+ },
+ {
+  "test_item_id": "LAB.SERO.EBV",
+  "utility": "low_yield",
+  "rationale": "Past infection only."
+ },
+ {
+  "test_item_id": "LAB.SERO.CMV",
+  "utility": "low_yield",
+  "rationale": "Past infection only."
+ },
+ {
+  "test_item_id": "LAB.MOL.CMV_DNA",
+  "utility": "low_yield",
+  "rationale": "Not detected."
+ },
+ {
+  "test_item_id": "LAB.SERO.BRUCELLA",
+  "utility": "low_yield",
+  "rationale": "Negative; a reasonable screen in prolonged fever."
+ },
+ {
+  "test_item_id": "LAB.SERO.IGRA",
+  "utility": "low_yield",
+  "rationale": "Negative; lymphopenia lowers its reliability."
+ },
+ {
+  "test_item_id": "LAB.MICRO.AFB_SMEAR",
+  "utility": "low_yield",
+  "rationale": "No cough or sputum."
+ },
+ {
+  "test_item_id": "LAB.MICRO.GENEXPERT",
+  "utility": "low_yield",
+  "rationale": "No pulmonary disease."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_SMEAR",
+  "utility": "low_yield",
+  "rationale": "Negative; the fever pattern and course do not suggest malaria."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_RDT",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.TYPHOID_IGM",
+  "utility": "low_yield",
+  "rationale": "Nine months of fever is not enteric fever."
+ },
+ {
+  "test_item_id": "LAB.CHEM.PROCALCITONIN",
+  "utility": "low_yield",
+  "rationale": "Mildly raised; does not discriminate."
+ },
+ {
+  "test_item_id": "LAB.MICRO.URINE_CULTURE",
+  "utility": "low_yield",
+  "rationale": "No urinary symptoms."
+ },
+ {
+  "test_item_id": "LAB.IMM.LIVER_AUTOANTIBODIES",
+  "utility": "low_yield",
+  "rationale": "Anti-M2 already known; normal ALP makes PBC unlikely."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PT_INR",
+  "utility": "low_yield",
+  "rationale": "Covered by the coagulation screen."
+ },
+ {
+  "test_item_id": "IMG.US.ELASTOGRAPHY",
+  "utility": "low_yield",
+  "rationale": "No cirrhosis."
+ },
+ {
+  "test_item_id": "LAB.HAEM.LUPUS_ANTICOAGULANT",
+  "utility": "low_yield",
+  "rationale": "Negative before; no thrombosis."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANTIPHOSPHOLIPID",
+  "utility": "low_yield",
+  "rationale": "No thrombosis or pregnancy loss."
+ },
+ {
+  "test_item_id": "LAB.IMM.RF",
+  "utility": "low_yield",
+  "rationale": "Non-specific."
+ },
+ {
+  "test_item_id": "PROC.CARD.ECHO",
+  "utility": "low_yield",
+  "rationale": "No murmur beyond a flow murmur; useful only if endocarditis or serositis is suspected."
+ },
+ {
+  "test_item_id": "LAB.CHEM.GLUCOSE_RANDOM",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "PROC.RESP.SPIROMETRY",
+  "utility": "low_yield",
+  "rationale": "Not needed acutely; for later asthma care."
+ },
+ {
+  "test_item_id": "LAB.CHEM.B12",
+  "utility": "low_yield",
+  "rationale": "Normal; not the cause."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FOLATE",
+  "utility": "low_yield",
+  "rationale": "Low-normal; not the cause."
+ },
+ {
+  "test_item_id": "LAB.SERO.PARVOVIRUS_B19",
+  "utility": "low_yield",
+  "rationale": "No red cell aplasia."
+ },
+ {
+  "test_item_id": "LAB.BM.IRON_STAIN",
+  "utility": "low_yield",
+  "rationale": "Confirms the inflammatory iron pattern; adds little."
+ },
+ {
+  "test_item_id": "IMG.NM.PET_CT",
+  "utility": "low_yield",
+  "rationale": "Diffuse uptake only; costly and unnecessary once the marrow is diagnostic."
+ },
+ {
+  "test_item_id": "IMG.XR.ABDOMEN",
+  "utility": "low_yield",
+  "rationale": "Shows only the spleen displacing bowel; ultrasound is better."
+ },
+ {
+  "test_item_id": "IMG.MRI.MRCP",
+  "utility": "low_yield",
+  "rationale": "Normal biliary tree; not needed with normal ALP and enzymes."
+ },
+ {
+  "test_item_id": "IMG.CT.WHOLE_BODY_LOW_DOSE",
+  "utility": "unnecessary",
+  "rationale": "No paraprotein and no bone pain; radiation without indication."
+ },
+ {
+  "test_item_id": "LAB.SERO.WIDAL",
+  "utility": "unnecessary",
+  "rationale": "Unreliable and irrelevant to a nine-month fever."
+ },
+ {
+  "test_item_id": "PROC.ENDO.OGD",
+  "utility": "unnecessary",
+  "rationale": "No bleeding and no signs of portal hypertension."
+ },
+ {
+  "test_item_id": "PROC.SPLEEN.ASPIRATE",
+  "utility": "risky",
+  "rationale": "Most sensitive specimen, but contraindicated with platelets 29 x10^9/L and a prolonged PT: risk of splenic haemorrhage."
+ },
+ {
+  "test_item_id": "PROC.BIOPSY.LIVER",
+  "utility": "risky",
+  "rationale": "Bleeding risk with platelets 29 x10^9/L; the marrow gives the answer safely."
+ }
+]

@@ -1,113 +1,136 @@
 # Case PMC11890614: miliary tuberculosis mistaken for sarcoidosis, then haemophagocytic lymphohistiocytosis
 
-Case id `PMC11890614` · Status: **draft, awaiting Case Reviewer verification** · Structured data: [`gold-case-file.draft.json`](gold-case-file.draft.json) · Path analysis: not yet written (waits for the pilot review)
+> Spoiler warning. This file, the JSON beside it and everything in `curation/` contain the answer. They are for the Case Reviewer and for developers, never for a player or a seat.
 
-> Spoiler warning. This file and the JSON contain the answer. They are for the Case Reviewer and for developers, never for a player or a seat.
+Case version `PMC11890614@v1` · Status: **curated locally (steps 1–9), awaiting Case Reviewer verification** · Structured data: [`gold-case-file.draft.json`](gold-case-file.draft.json) · Curation rows: [`curation/`](curation/)
 
-Drafted on 25 Sep 2026 for Case Library task L1.3 (batch 1, curation steps 1–5 only). Nothing has been written to the Case Vault.
+Case Library task L1.3 (batch 1, Sambhasha starter case), 25 Sep 2026, Claude (Case Curator). Nothing has been written to the Case Vault. `uv run python -m scripts.case_replay cases/PMC11890614` replays the whole curation on the local database (rolled back) and reports **0 open problems**. Educational and research use only; nothing here is clinical advice.
 
 ## Source
 
 Li W, Mann P, De La Hoz I, Constantakos A, Gordon D, Everett G, Maharam E. *A Perplexing Case Highlighting the Diagnostic Conundrum of Miliary Tuberculosis Mimicking Sarcoidosis and Progressing Into Hemophagocytic Lymphohistiocytosis.* Cureus 17(2): e78636. Published 6 Feb 2025. doi:[10.7759/cureus.78636](https://doi.org/10.7759/cureus.78636) · [PMC11890614](https://pmc.ncbi.nlm.nih.gov/articles/PMC11890614/) · PMID 40062127
 
-- **Licence:** CC BY 4.0, read from the JATS `<license>` element of the cached XML (`data/articles/PMC11890614/jats.xml`, SHA-256 `0ebdccaf…63b565`). No figure carries its own permissions or credit line, so the article licence covers them. `production_ok` and `public_release_ok` are true for the article; every figure's flags are false until Atul decides.
+- **Licence:** CC BY 4.0, read from the JATS `<license>` element of the cached XML (`data/articles/PMC11890614/jats.xml`, SHA-256 `0ebdccaf…63b565`). No figure carries its own permissions or credit line, so the article licence covers them: every figure's flags are set true (brief), `has_annotations` from the captions (panel letters on Figures 1, 3 and 4; Figure 2 has none in its caption, to be checked on the image).
 - **Attribution to reuse:** "Adapted from Li W, Mann P, De La Hoz I, et al., Cureus 17(2): e78636 (2025), CC BY 4.0. Restructured into a simulation; diagnosis hidden until the debrief; simulated findings added where marked."
 - **Setting:** AdventHealth, Orlando, USA.
 
 ## The case in brief
 
-A 36-year-old man from Haiti, previously well, had four months of recurrent fever, dry cough, night sweats and weight loss. On admission he was febrile (39.0 °C) and tachycardic (115/min), with mild normocytic anaemia, raised inflammatory markers, ferritin 1364 ng/mL and AST 63 U/L. HIV was negative. The chest X-ray and CT showed innumerable bilateral miliary nodules, and abdominal CT showed moderate splenomegaly.
+A 36-year-old man from Haiti, previously well, had four months of recurrent fever, dry cough, night sweats and weight loss. On admission he was febrile (39.0 °C) and tachycardic (115/min), with mild normocytic anaemia (Hb 99 g/L), raised inflammatory markers, ferritin 1364 µg/L and AST 63 U/L. HIV was negative. The chest X-ray and CT showed innumerable bilateral miliary nodules, and abdominal CT moderate splenomegaly.
 
-Miliary tuberculosis was expected, but the interferon-gamma release assay, repeated sputum AFB smears, MTB complex PCR and mycobacterial cultures, a bronchoalveolar lavage (AFB smear and culture), and two sequencing tests (Karius cell-free DNA and MicroGenDX) were all negative. A transbronchial lung biopsy showed non-necrotising granulomas with a negative AFB stain. Fungal, other bacterial and viral tests were negative. Sarcoidosis was diagnosed by exclusion and high-dose steroid started.
-
-Fever and cough continued. Pancytopenia developed, with rising ferritin and transaminases (day 17: Hb 6.8 g/dL, WBC 0.03 ×10³/µL, platelets 40 ×10³/µL, ferritin 7821 ng/mL, AST 335, ALT 325 U/L). The H-score was 256; soluble IL-2 receptor 7593 pg/mL and CXCL9 52 784 pg/mL. The marrow showed non-caseating granulomas and occasional haemophagocytes. He was treated for HLH with steroids and etoposide. On day 18 he developed hypoxic respiratory failure and shock. On day 25 the repeat sequencing tests and a second lavage (AFB stain, PCR, later culture) found *Mycobacterium tuberculosis*. Four-drug treatment started and HLH chemotherapy was withheld, but he died about a week later. There was no autopsy.
+The interferon-gamma release assay, repeated sputum AFB smears, MTB complex PCR and cultures, a bronchoalveolar lavage (smear and culture), and two sequencing tests (Karius cell-free DNA and MicroGenDX) were all negative. A transbronchial biopsy showed non-necrotising granulomas with a negative AFB stain. Fungal, other bacterial and viral tests were negative. Sarcoidosis was diagnosed by exclusion and high-dose steroid started. Fever continued; pancytopenia developed with rising ferritin and transaminases (day 17: Hb 68 g/L, WBC 0.03 ×10⁹/L, platelets 40 ×10⁹/L, ferritin 7821 µg/L, AST 335, ALT 325 U/L). The H-score was 256; sIL-2R 7593 ng/L and CXCL9 52 784 ng/L. The marrow showed non-caseating granulomas and occasional haemophagocytes, and he was given dexamethasone and etoposide (HLH-2004). On day 18 he developed hypoxic respiratory failure and shock. On day 25 repeat sequencing and a second lavage (AFB stain, PCR, later culture) found *Mycobacterium tuberculosis*. Four-drug treatment started and HLH chemotherapy was withheld, but he died about a week later. No autopsy.
 
 ## What the players start with
 
-> A 36-year-old man, originally from Haiti and with no significant past medical history, presents to the emergency department with four months of recurrent fever and a dry cough.
+> A 36-year-old man, originally from Haiti and with no significant past medical history, presents to the emergency department with four months of recurrent fever and a dry cough. At triage his temperature is 39.0 °C and his heart rate 115 per minute.
 
 Opening words: "I've had fevers on and off and a dry cough for about four months now, and they just won't go away."
 
-Night sweats and weight loss are in the Chart, released by the fever, sweats and weight question (`HX.GEN.FEVER_SWEATS_WEIGHT`) or the associated-symptoms question. No fact is hidden behind a specific question the way the pilot's supplement was: the difficulty here is that the tests are falsely reassuring, not that the history hides something.
+Display title "Four months of fever and dry cough in a young man" · slug `c-c149v` · tags infectious disease, respiratory medicine, haematology, internal medicine · difficulty hard. Nothing is hidden behind a specific question: the difficulty is that the early tests are falsely reassuring.
 
-Display title: "Four months of fever and dry cough in a young man" · slug `c-c149v` · tags: infectious disease, respiratory medicine, haematology, internal medicine · difficulty hard.
+## Timeline (day 0 = admission = hospital day 1)
 
-## Timeline in the article
+The text dates only admission, day 17 (Table 1 "Day 18"), day 18 (hospital day 19), day 25 (hospital day 26, abstract) and day 29 (Figure 4b "day 30"). Figure 5, a timeline image, was not available, so the other days are **the curator's reading of the text**, marked in each fact's note. Each test fact's day is the day its sample was taken; a later request returns the latest earlier result.
 
-Day 0 is admission, the article's hospital day 1 (no calendar date is given). Hospital day N is day N−1 here.
+| Day | Event | Dated by |
+| --- | --- | --- |
+| 0 | Admission; HIV, IGRA, three sputum samples (days 0–2: smear, PCR, culture), serum and urine fungal and other screens (cryptococcal and histoplasma antigen, galactomannan, brucella, JC virus); CXR, CT chest, CT abdomen | text order: "initial work-up" |
+| 3 | First bronchoscopy: lavage (AFB smear, culture, PJP PCR) and transbronchial biopsy; Karius and MicroGenDX sent "concurrently" | curator |
+| 7 | High-dose steroid for presumed sarcoidosis | curator |
+| 10 | No improvement (C02) | curator |
+| 13 | sIL-2R and CXCL9 | curator |
+| 14 | Bone marrow; H-score 256 | curator |
+| 15 | Dexamethasone and etoposide (HLH-2004) | curator |
+| 17 | Table 1 values: Hb 68, WBC 0.03, ANC 0, platelets 40, ferritin 7821, AST 335, ALT 325 | article |
+| 18 | Hypoxic respiratory failure, intubation, vasopressors; CT pulmonary angiogram; empirical antibiotics and antifungals | article |
+| 25 | Repeat Karius and MicroGenDX positive; second lavage AFB and PCR positive; culture sent (grows later); four-drug treatment; HLH chemotherapy withheld | article |
+| 29 | CT chest (Figure 4b): reticulonodular, flocculent and consolidative opacities | article |
+| about 32 | Death | article ("one week later") |
 
-| Day | Event |
-| --- | --- |
-| 0 | Admission. T 39.0 °C, HR 115. Hb 9.9, WBC 4.5, ANC 2.9, platelets 227, ferritin 1364, AST 63, ALT 40. HIV negative. Chest X-ray and CT: miliary nodules. CT abdomen: moderate splenomegaly |
-| Not dated | IGRA, sputum AFB, MTB PCR and cultures, first lavage, fungal and other tests: all negative. Lung biopsy: non-necrotising granulomas, AFB negative. First Karius and MicroGenDX: negative |
-| Not dated | High-dose steroid for presumed sarcoidosis; no improvement |
-| Not dated (before day 18) | sIL-2R and CXCL9 very high; H-score 256; marrow: granulomas and haemophagocytes; HLH-2004 steroids and etoposide |
-| 17 | Hb 6.8, WBC 0.03, ANC 0, platelets 40, ferritin 7821, AST 335, ALT 325 |
-| 18 | Hypoxic respiratory failure, intubation, shock on vasopressors; empirical antibiotics and antifungals; CT pulmonary angiogram: no embolism, new bilateral airspace opacities |
-| 25 | Repeat Karius and MicroGenDX: MTB complex detected. Second lavage: AFB stain and MTB PCR positive within hours. Rifampin, isoniazid, pyrazinamide and ethambutol started; HLH chemotherapy withheld |
-| 29 | CT chest (Figure 4b, "day 30"): diffuse reticulonodular, flocculent and consolidative opacities |
-| About 32 | Death after multi-organ failure; later, lavage culture grew *M. tuberculosis* |
+## Facts
 
-The text dates only admission, day 18 (hospital day 19) and day 25 (hospital day 26). Undated results carry `day: null` and a note. Figure 5, a timeline image not read for this draft, probably dates them (gap G21).
+53 article facts: 7 history (H01–H07), 2 examination (E01–E02, now vignette facts), 7 course facts (C01–C07, never released), 7 series in SI (S01–S07: 14 values), 23 single results (L01–L23), plus 8 raw-material items (R01–R08) and 8 figures (M01–M08). Every converted value keeps its printed value in its note (for example "Printed 9.9 and 6.8 g/dL").
 
-## Hidden and conditional facts
+## Hidden and pivotal facts
 
-None beyond the ordinary Chart. The positive tuberculosis results (L19–L23) are marked `reveals_dx` and `pivotal`, and they belong to day 25. Before day 25, every microbiology result the article reports is negative.
+No fact is hidden behind a specific question. L19–L23 (the positive sequencing, second lavage smear, PCR and culture) are `reveals_dx` and `pivotal`, all on day 25. Before day 25 every mycobacterial result, article or curated, is negative. Figure 5 (M08) names the diagnosis and is debrief-only.
 
-## Raw material for the diagnostic services
+## Path analysis (curation/paths.json)
 
-| Id | Test | Day | Raw findings |
-| --- | --- | --- | --- |
-| R01 | Chest X-ray | 0 | Innumerable small nodules in both lungs, miliary pattern |
-| R02 | CT chest | 0 | Innumerable bilateral miliary nodules filling both lungs |
-| R03 | CT abdomen | 0 | Moderate splenomegaly |
-| R04 | CT pulmonary angiogram | 18 | No embolism; new bilateral airspace opacities, worse than on admission |
-| R05 | CT chest | 29 | Diffuse reticulonodular, flocculent and consolidative opacities |
-| R06 | Transbronchial lung biopsy (attached to `PROC.RESP.BRONCHOSCOPY`) | not dated | Non-necrotising granulomas; AFB stain negative |
-| R07 | Bone marrow trephine | not dated | Multiple small foci of non-caseating granulomas |
-| R08 | Bone marrow aspirate | not dated | Occasional haemophagocytic cells |
+| Path | Kind | What the case must show |
+| --- | --- | --- |
+| P1 Disseminated mycobacterial infection, sampled widely, treated empirically | efficient | every early test negative; non-necrotising granulomas; the day-25 positives |
+| P2 Sarcoidosis | trap | random nodules without hilar nodes; no eye, skin or joint features; calcium normal; ACE only mildly raised; no response to steroid |
+| P3 Haemophagocytosis treated without its trigger | trap | the inputs of an H-score of 256 on day 14; marrow granulomas; EBV negative |
+| P4 Disseminated fungal infection | alternative | every fungal test negative; Grocott negative; no exposure |
+| P5 Lymphoma or metastatic malignancy | alternative | no nodes or mass; polyclonal immunoglobulins; normal flow cytometry |
+| P6 HIV and other causes of chronic fever | alternative | HIV negative, normal CD4 %, malaria, brucella, syphilis, viral tests negative; normal echo |
+| P7 Deterioration on day 18 | alternative | no embolus; cultures negative; lactic acidosis, AKI, coagulopathy |
+| P8 Meningeal or brain involvement | alternative | no meningism; normal CSF and MRI |
+| P9 Liver involvement and nutrition | alternative | infiltrative liver tests; granulomas on biopsy; low albumin |
 
-Figures M01–M07 come from Figures 1–4, with neutral captions. Figure 5 (the timeline) is left out of the media because it names the diagnosis and is not a clinical image.
+Resolution: 357 hand-written `affected` rows plus 29 calculated from them (MCV, MCH, MCHC, reticulocyte %, TSAT, anion gap, non-HDL; 386 in all), 7 `rule` rows (gynaecological items for a man), 3126 `normal` rows for everything off the paths, 0 `reviewer` rows. Values change over the course in day buckets 0, 7, 8, 13, 17, 18 and 25. 22 reports (all `only`, final), 25 consult notes (17 authored, 8 generic `rule`, including dentistry added at the catalogue merge), 6 lay texts, 88 test-utility ratings.
 
-## Gaps to fill
+## Curator's decisions
 
-The article reports only two vital signs, no examination, no inflammatory-marker values, and none of the H-score inputs beyond ferritin and the counts. The 22 gaps (G01–G22) are in the JSON. Four are set **not to auto-generate**, because a positive result would end the case early or has to follow the true course: urine and other extrapulmonary mycobacterial samples (G14), marrow AFB and culture (G15), liver biopsy (G16), and the dates of the undated work-up (G21).
+Atul delegated the open questions on 25 Sep 2026. Each is recorded here; values the article does not anchor are `affected` rows flagged as judgement calls (36 in all), so they lead the review pack.
 
-## Ground truth (draft)
+**The questions of the first draft (Batch 1 answers).**
 
-**Final diagnosis:** miliary tuberculosis (`DX.MILIARY_TB`, A19.9), complicated by secondary haemophagocytic lymphohistiocytosis (`DX.HLH`, D76.1), after a false diagnosis of sarcoidosis and high-dose steroid. The leak scan uses both ids.
+1. **Undated work-up (Q1, method).** Dated from the text and figure captions only, since the Figure 5 image is not available (timeline above). The first lavage, sequencing and PJP PCR are dated day 3; because a request before day 3 must also resolve, day-0 `affected` rows carry the same negative results (reasoning: same patient, same low bacillary load).
+2. **Platelet range (Q2).** "139-36" read as 139–361 ×10⁹/L, now in `lab_profile`.
+3. **Units (Q3, method).** SI throughout; `lab_profile` in SI; the printed values in each fact's note. sIL-2R and CXCL9 in ng/L (numerically equal to pg/mL).
+4. **Two scans (Q4).** Kept: the CT angiogram of day 18 (R04) and the CT chest of day 29 (R05). Reports carry no day in the Case Vault, so the stored CT chest report describes the admission scan; R05 stays as raw material for Sambhasha's services.
+5. **Vignette (Q5).** Kept, with one change: the triage temperature and heart rate are added. The article's two vital signs (E01, E02) are now vignette facts, because the check forbids a ledger row on an item an article fact already answers, and the full vital signs (with the curated blood pressure, respiratory rate and saturation) are one `EX.GEN.VITALS` row.
+6. **Final diagnosis (Q6).** Both ids (`DX.MILIARY_TB`, `DX.HLH`) for the leak scan; ICD-10 D76.1 kept (the catalogue's code).
+7. **Reverse causation (Q7).** The case follows the authors: tuberculosis was present from the start.
+8. **Steroid without cover (Q8).** A must-not-do, with a condition (any high-dose steroid, prednisolone or dexamethasone in the plan without `RX.ANTITB.FIRST_LINE`).
+9. **L04 (Q9, method).** Kept on Xpert MTB/RIF (`CMP.XPERT_MTB_RIF`); no generic sputum PCR item is proposed.
 
-Rubric anchors, must-do and must-not-do are in the JSON as plain text; their conditions over catalogue ids wait for step 6.
+**Gaps the first draft left to the reviewer, now decided.**
 
-## Catalogue items this case needs that the catalogue lacks
+10. **G14 urine, G15 marrow, G16 liver (not auto-generated before).** All negative for mycobacteria within the case: smears and stains negative, PCR not detected, cultures "no growth to date" (they would read out after the case ends). Reason: every early sample in the article was negative, so the bacillary load was low. Marrow PCR (confidence 0.45) is the closest call and is marked high priority. The liver biopsy shows non-necrotising granulomas.
+11. **G21 dates.** As in the timeline.
+12. **G11 H-score inputs.** Chosen so the H-score is exactly 256 on day 14: temperature 38.9 °C (33), splenomegaly without hepatomegaly (23), three cytopenias (34), ferritin 6400 µg/L on day 13 (50), triglycerides 3.4 mmol/L (44), fibrinogen 3.2 g/L (0), AST ≥30 (19), marrow haemophagocytes (35), on high-dose steroid (18).
+13. **G04 fundoscopy.** No choroidal lesions (skill rule 2: no invented near-pathognomonic sign).
+14. **G17 CNS.** Normal CSF and MRI; headache only with fevers.
+15. **G05 contacts and migration.** No known contact; came from Haiti about four years ago; lives with his wife and her sister; BCG in childhood.
+16. **G06, G07 social history and medicines.** Warehouse worker; no animal, bird or cave exposure; no antibiotics or regular medicines (paracetamol only). No recent fluoroquinolone is invented, although one would explain the negative early tests.
+17. **G13 blood cultures.** Negative on day 0 and day 18; mycobacterial blood culture no growth to date.
+18. **Blood group.** O RhD positive (the commonest group in people of Haitian origin).
+19. **sIL-2R and CXCL9 on admission.** Raised (2450 and 3800 ng/L) by the infection itself, far below the day-13 values.
+20. **Serum ACE.** Mildly raised (74 U/L), a non-specific rise that keeps the sarcoidosis trap open.
+21. **First-lavage PCR.** Not reported; set "not detected" on day 3 (and day 0), consistent with the same fluid's negative smear, culture and sequencing.
+22. **Weight.** 62 kg, BMI 19.6, about 10 kg lost (the article gives no amount).
+23. **Leak rule in reports and notes.** The article's radiology impression named the infection; the stored reports give the radiologist's differential instead, and consult notes say "disseminated mycobacterial infection" until the day-25 results. The sick-contacts answer says "TB" because the question itself asks about it.
+24. **Reviewer rows.** None: no value here must be left to Atul.
+25. **After the lead curator's catalogue merge.** Brucella serology is now the standard agglutination test (`CMP.BRUCELLA_SAT`): L14 reads "titre less than 1:80". `CMP.SIL2R` is now in U/mL in the catalogue; the case keeps the reporting laboratory's ng/L values and range (175.3–858.2) in its `lab_profile`, because the two units are assay-dependent and have no fixed conversion.
 
-- Mycobacterial (AFB) culture, for sputum, lavage, marrow and blood
-- MTB complex PCR as a generic test (only Xpert MTB/RIF exists; L04 is linked to it for now)
-- Bronchoalveolar lavage with AFB smear, PCR and culture; transbronchial or lung biopsy (`PROC.BIOPSY.LUNG`)
-- Plasma microbial cell-free DNA sequencing (Karius) and a pathogen NGS test (MicroGenDX)
-- Soluble IL-2 receptor (sCD25) and CXCL9
-- Fungal tests: cryptococcal antigen, histoplasma antigen, aspergillus galactomannan, beta-D-glucan, Pneumocystis PCR; brucella serology; JC virus PCR
-- Serum ACE; urine AFB and mycobacterial culture
-- Fundoscopy for choroidal tubercles exists as `EX.EYE.FUNDOSCOPY`; no change needed
+**Known limits.** Reports have no day, so marrow, film and imaging reports read the same whenever they are requested (the marrow report shows haemophagocytes even if a player asks on day 2). A repeat lavage requested between days 3 and 24 returns the day-3 negative result.
 
-## Open questions for Atul
+## Ground truth (curation/ground_truth.json)
 
-1. **Undated work-up.** Most of the work-up is undated in the text. Should I read Figure 5 (the timeline image) to date it, or will you set the days? Until then these results carry `day: null`, which the engine treats as valid all admission.
-2. **Platelet range** is printed "139-36". Is it 139–361? It is left out of `lab_profile` for now.
-3. **Units.** Values are kept in the article's US units (g/dL, 10³/µL, ng/mL). Should they be converted to the catalogue's SI units now or at the pilot review, as for the sibling cases?
-4. **Day 18 CTPA and Figure 4b "day 30".** Are these one scan or two? The draft keeps both (R04 day 18, R05 day 29).
-5. **Vignette.** It includes Haiti (a tuberculosis risk clue) and holds back night sweats and weight loss for the Chart. Is that the balance you want?
-6. **Final diagnosis.** Is it one diagnosis (`DX.MILIARY_TB`) with HLH as a secondary finding, or both ids as now? For ICD-10, keep D76.1 (the catalogue's code) or use D76.2 (infection-associated)?
-7. **Reverse causation.** The authors cannot exclude that tuberculosis reactivated under steroid and etoposide. The ground truth follows their view that it was present from the start. Agree?
-8. **Scoring the harmful step.** Should steroid without anti-tuberculosis cover be a must-not-do even though the real team did it after every test was negative?
-9. **L04** (sputum "MTB complex PCR") is linked to Xpert MTB/RIF. Keep it there, or wait for a generic PCR item?
+Final diagnosis `DX.MILIARY_TB` with `DX.HLH` (A19.9, D76.1). Rubric: 5 miliary TB with HLH evidence cited (sIL-2R, CXCL9, day-17 ferritin or Hb, marrow report); 4 miliary, pulmonary or drug-resistant TB, or HLH with a positive TB result cited; 3 disseminated NTM or histoplasmosis; 2 sarcoidosis, lymphoma or HLH without its trigger; 1 anything else. Seven must-dos (keep TB high; empirical treatment before or with steroid; sample more than one site; recognise haemophagocytosis; isolate and involve infectious diseases; HIV test; notify public health) and three must-not-dos (steroid without cover; etoposide or escalated immunosuppression without treating the trigger; commit to sarcoidosis), each with a condition over catalogue ids.
+
+## Catalogue needs (merged into catalogue/*.csv by the lead curator)
+
+19 new tests (all `price_source` "estimate"), 24 new components, 2 findings, 1 action, 2 diagnoses:
+
+- **Mycobacterial tests:** sputum mycobacterial culture; BAL panel (AFB smear, MTB PCR, culture); bone marrow panel (AFB stain, MTB PCR, culture); urine AFB and culture; mycobacterial blood culture.
+- **Sequencing:** plasma microbial cell-free DNA (Karius); pathogen NGS on fluid or tissue (MicroGenDX).
+- **Haemophagocytosis markers:** soluble IL-2 receptor (catalogue now U/mL, Tietz range; the case keeps ng/L in its lab profile); CXCL9 (the reporting laboratory's range as printed in the article).
+- **Fungal and other:** cryptococcal antigen, histoplasma antigen, galactomannan, beta-D-glucan, Pneumocystis PCR, brucella serology (now the standard agglutination test, `CMP.BRUCELLA_SAT`), JC virus PCR, EBV DNA PCR, serum ACE.
+- **Procedure:** transbronchial lung biopsy (`PROC.BIOPSY.LUNG`, with a normal report text).
+- **Findings:** `FND.MILIARY_NODULES`, `FND.HAEMOPHAGOCYTOSIS`. **Action:** `RX.IMMUNO.ETOPOSIDE`. **Diagnoses:** `DX.DISSEMINATED_HISTOPLASMOSIS` (B39.3), `DX.DISSEMINATED_NTM` (A31.8), ICD-11 codes left for the code check.
 
 ## Case Reviewer checklist
 
-- [ ] Every value in `series` and `single_results` matches Table 1 and the text
-- [ ] Day mapping is correct (day 0 = hospital day 1); undated items get days
-- [ ] The vignette and opening words reveal nothing diagnostic
-- [ ] R01–R08 are faithful raw findings with no interpretation
-- [ ] Figure captions leak nothing; figure flags set (use, mask or exclude)
-- [ ] Ground truth, rubric anchors, must-do and must-not-do agreed
-- [ ] Gap guidance agreed; values set for G11, G14, G15, G16, G21
+- [ ] Every value in `series` and `single_results` matches Table 1 and the text; SI conversions correct
+- [ ] Day mapping (day 0 = hospital day 1) and the curator's dates of the undated work-up agree with Figure 5
+- [ ] The vignette (with triage vitals) and opening words reveal nothing diagnostic
+- [ ] R01–R08 faithful; reports RP01–RP22 add nothing more diagnostic than real life
+- [ ] Figure flags and `has_annotations` checked on the images; Figure 5 kept out of play
+- [ ] The 36 judgement calls, first the marrow, urine and blood mycobacterial results (G14, G15) and the H-score inputs (G11)
+- [ ] Consult notes: helpful, never more diagnostic than a colleague with the same Chart
+- [ ] Ground truth, rubric, must-do and must-not-do agreed
+- [ ] Catalogue needs merged with the other batch-1 cases (sIL-2R and CXCL9 ranges, prices, ICD-11 codes)

@@ -1,0 +1,303 @@
+[
+ {
+  "id": "CN01",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to see a 55-year-old woman with ten days of fever, abdominal pain, diarrhoea and vomiting, now confused, after failing outpatient antibiotics. We reviewed the Chart so far. Fever with falling platelets, a haemolytic picture and acute kidney injury has a wide differential: bacterial sepsis including enteric fever, a tropical infection, and a thrombotic microangiopathy. The single most important question is where she has been in the past year; we will take a travel and exposure history ourselves. Happy to review again with the results.",
+  "recommendations": [
+   "Take a full travel history for the past 12 months, including prophylaxis, bites and fresh-water contact",
+   "If there has been any travel to a malaria-endemic area: thick and thin films and a rapid antigen test today, repeated 12-24 hourly to three sets if negative",
+   "Blood cultures before any change of antibiotics; stool culture and parasites",
+   "Lactate, glucose, renal and liver function and a coagulation screen"
+  ],
+  "origin": "affected",
+  "rationale": "Before travel is in the Chart: a competent infectious diseases colleague asks about travel and lists malaria testing conditionally, without naming a diagnosis.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN02",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 2,
+  "condition": {
+   "released_any": [
+    "H04"
+   ]
+  },
+  "note_text": "Asked to see a woman with fever, confusion, thrombocytopenia, haemolysis and acute kidney injury; the Chart now shows four weeks in Nigeria, returning two weeks ago, without antimalarial prophylaxis. Fever in a traveller back from West Africa is Plasmodium falciparum infection until proved otherwise, and her confusion and kidney injury would make it a medical emergency. This must be excluded today, before any treatment directed at a thrombotic microangiopathy. Happy to review again with the results.",
+  "recommendations": [
+   "Thick and thin films with a parasite count, and a rapid antigen test, now; repeat 12-24 hourly to three sets if negative",
+   "If parasites are seen, start artemisinin-based treatment without waiting for other results: intravenous artesunate while she is confused or vomiting",
+   "Check glucose, lactate, renal function and conscious level to grade severity",
+   "Blood cultures, as co-existing bacteraemia is possible"
+  ],
+  "origin": "affected",
+  "rationale": "Once travel is known, any competent colleague puts falciparum infection first; the note still waits for the film before advising treatment.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN03",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 3,
+  "condition": {
+   "finding_released": [
+    "FND.MALARIAL_PARASITES"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now shows Plasmodium falciparum on the film. She has impaired consciousness and acute kidney injury, which are criteria for severe infection, so we advise intravenous artesunate while she is confused or cannot keep tablets down, then a full course of an oral artemisinin combination; if she is fully alert and tolerating oral intake, a complete course of artemether-lumefantrine with fatty food is acceptable. The thrombocytopenia, haemolysis, schistocytes and low ADAMTS13 activity are explained by the infection; plasma exchange is not indicated. Happy to review again with the results.",
+  "recommendations": [
+   "Artemisinin-based treatment now: intravenous artesunate while confused or vomiting, then complete an oral artemisinin combination; or artemether-lumefantrine for a full course if alert and eating",
+   "Parasite count every 12-24 hours until negative; glucose, renal function and counts daily",
+   "Cautious intravenous fluids; avoid fluid overload",
+   "Transfuse red cells if haemoglobin falls below about 7 g/dL; platelets only for bleeding",
+   "Notify the case to public health; chloroquine is not appropriate for infection acquired in Nigeria",
+   "Check for delayed haemolysis 2-4 weeks after artesunate if it is given"
+  ],
+  "origin": "affected",
+  "rationale": "After parasites are seen: treatment advice matching CDC and WHO guidance. The article gave oral artemether-lumefantrine for four days and did not use artesunate; both are accepted in the rubric.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN04",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on falling platelets and haemoglobin with haemolysis, acute kidney injury and confusion. We reviewed the Chart so far. The picture raises the question of a thrombotic microangiopathy, and a PLASMIC-type assessment may score high; but fever for ten days is unusual in immune TTP and infection must be excluded first. Before any plasma exchange we would want a blood film reviewed carefully, a travel history, and an ADAMTS13 sample taken before any plasma product is given. Happy to review again with the results.",
+  "recommendations": [
+   "Blood film reviewed today for schistocytes and for parasites or other red cell inclusions",
+   "If there has been any recent travel, thick and thin malaria films now",
+   "Send ADAMTS13 activity and antibody before any plasma or plasma exchange",
+   "Reticulocytes, LDH, haptoglobin, DAT, coagulation screen and fibrinogen",
+   "Avoid platelet transfusion unless she bleeds"
+  ],
+  "origin": "affected",
+  "rationale": "A competent haematologist considers TTP but insists on the film, the travel history and a pre-treatment ADAMTS13; nothing more diagnostic than that.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN05",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 2,
+  "condition": {
+   "finding_released": [
+    "FND.MALARIAL_PARASITES"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now shows malarial parasites on the film. The haemolysis, thrombocytopenia and occasional schistocytes are explained by the parasitaemia. A positive ADAMTS13 antibody alone is not specific, and an activity well above 10% makes immune TTP very unlikely; activity is often mildly reduced in falciparum infection. We would not start plasma exchange, steroids or caplacizumab. Happy to review again with the results.",
+  "recommendations": [
+   "Treat the infection urgently, as advised by infectious diseases",
+   "No plasma exchange, steroids or caplacizumab",
+   "Red cell transfusion if haemoglobin falls below about 7 g/dL; platelets only for bleeding",
+   "Repeat counts, reticulocytes, LDH and a film as the parasitaemia clears; the platelets should recover within days",
+   "Review the lifelong microcytosis when she is well: iron studies are unreliable during acute infection"
+  ],
+  "origin": "affected",
+  "rationale": "After parasites are seen: the haematologist's view matches the article's discussion (ADAMTS13 activity 49.1%, above 10%).",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN06",
+  "specialty": "REF.GASTROENTEROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on ten days of abdominal pain, diarrhoea and vomiting. We reviewed the Chart so far. The abdomen is soft and non-tender, and there are no features of a surgical abdomen or of inflammatory colitis. Diarrhoea and vomiting are common in systemic febrile illnesses, and with fever, confusion, thrombocytopenia and haemolysis we think a systemic cause is more likely than a primary gut disorder. Happy to review again with the results.",
+  "recommendations": [
+   "Stool culture, Clostridioides difficile testing and stool microscopy if not already sent",
+   "Rehydrate and correct electrolytes",
+   "No endoscopy is indicated at present",
+   "Look for a systemic cause of fever, including a travel history"
+  ],
+  "origin": "affected",
+  "rationale": "On the gastrointestinal trap path; helpful without naming the cause.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN07",
+  "specialty": "REF.NEUROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to see a woman with fever and new confusion. We reviewed the Chart so far. She is drowsy and disoriented with a GCS around 14, but has no focal neurological signs and no neck stiffness. This looks like an encephalopathy of systemic illness rather than a primary brain disorder; causes to exclude include CNS infection, hypoglycaemia, sepsis and metabolic or drug causes, and a travel history is essential in any febrile encephalopathy. Happy to review again with the results.",
+  "recommendations": [
+   "Check capillary glucose now and regularly",
+   "Treat the systemic cause; urgent CT head only if the GCS falls or focal signs appear",
+   "Lumbar puncture if meningism develops or no systemic cause is found, once platelets and clotting allow",
+   "Neurological observations 4-hourly"
+  ],
+  "origin": "affected",
+  "rationale": "Encephalopathy path: a neurologist lists the usual causes and asks for a travel history, without naming a tropical infection.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN08",
+  "specialty": "REF.NEPHROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on acute kidney injury (creatinine about 150 umol/L) in a febrile, dehydrated woman with haemolysis and thrombocytopenia. We reviewed the Chart so far. The likeliest causes are volume depletion from vomiting and diarrhoea, with a contribution from the systemic infection and haemolysis; there is no evidence of obstruction. There is no indication for dialysis at present. Happy to review again with the results.",
+  "recommendations": [
+   "Intravenous fluids to restore volume, with a fluid balance chart",
+   "Urinalysis with microscopy and a renal ultrasound",
+   "Avoid nephrotoxins, including NSAIDs and contrast where possible",
+   "Daily renal function and potassium"
+  ],
+  "origin": "affected",
+  "rationale": "AKI alternative path; consistent with recovery by day 9.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN09",
+  "specialty": "REF.GENERAL_SURGERY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to review abdominal pain. We reviewed the Chart so far. The abdomen is soft and non-tender with no peritonism, and we see no surgical cause for her symptoms. Happy to review if the examination changes.",
+  "recommendations": [
+   "No surgical intervention indicated",
+   "Re-refer if she develops peritonism or signs of obstruction"
+  ],
+  "origin": "affected",
+  "rationale": "Abdominal pain invites a surgical opinion on the gastrointestinal trap path; the CT was negative.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN10",
+  "specialty": "REF.CARDIOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific cardiac concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN11",
+  "specialty": "REF.TOXICOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific toxicological concerns from our side; happy to advise if new information arises.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN12",
+  "specialty": "REF.RHEUMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific rheumatological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN13",
+  "specialty": "REF.ENDOCRINOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific endocrine concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN14",
+  "specialty": "REF.RESPIRATORY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific respiratory concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN15",
+  "specialty": "REF.PSYCHIATRY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific psychiatric concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN16",
+  "specialty": "REF.DERMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific skin concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN17",
+  "specialty": "REF.ONCOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific oncological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN18",
+  "specialty": "REF.OPHTHALMOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific eye concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN19",
+  "specialty": "REF.ENT",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific ear, nose or throat concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN20",
+  "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN21",
+  "specialty": "REF.DIETETICS",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific nutritional concerns from our side; happy to review if intake or weight changes.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN22",
+  "specialty": "REF.PHYSIOTHERAPY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific mobility concerns from our side; happy to review if function changes.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ }
+]

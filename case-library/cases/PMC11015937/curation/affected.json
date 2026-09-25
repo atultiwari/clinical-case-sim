@@ -1,0 +1,5091 @@
+[
+ {
+  "target": "CMP.RBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 4.11,
+   "unit": "x10^12/L",
+   "ref_range": "3.8-4.8"
+  },
+  "release_text": "Red cell count 4.11 x10^12/L (3.8-4.8).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Red cell count = Hb / MCH from Table 1 (e.g. 106 / 25.8); also agrees with Hct / MCV within 1%.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.RBC",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 3.33,
+   "unit": "x10^12/L",
+   "ref_range": "3.8-4.8",
+   "flag": "L"
+  },
+  "release_text": "Red cell count 3.33 x10^12/L (3.8-4.8), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Red cell count = Hb / MCH from Table 1 (e.g. 106 / 25.8); also agrees with Hct / MCV within 1%.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.RBC",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 2.75,
+   "unit": "x10^12/L",
+   "ref_range": "3.8-4.8",
+   "flag": "L"
+  },
+  "release_text": "Red cell count 2.75 x10^12/L (3.8-4.8), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Red cell count = Hb / MCH from Table 1 (e.g. 106 / 25.8); also agrees with Hct / MCV within 1%.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.RBC",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 2.42,
+   "unit": "x10^12/L",
+   "ref_range": "3.8-4.8",
+   "flag": "L"
+  },
+  "release_text": "Red cell count 2.42 x10^12/L (3.8-4.8), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Red cell count = Hb / MCH from Table 1 (e.g. 106 / 25.8); also agrees with Hct / MCV within 1%.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.RBC",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 3.55,
+   "unit": "x10^12/L",
+   "ref_range": "3.8-4.8",
+   "flag": "L"
+  },
+  "release_text": "Red cell count 3.55 x10^12/L (3.8-4.8), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Red cell count = Hb / MCH from Table 1 (e.g. 106 / 25.8); also agrees with Hct / MCV within 1%.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.RDW",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 15.2,
+   "unit": "%",
+   "ref_range": "11.6-14",
+   "flag": "H"
+  },
+  "release_text": "Red cell distribution width 15.2 % (11.6-14), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Raised from the start with a microcytic population (G07); rises with haemolysis, reticulocytosis from day 7 and the transfused normocytic cells.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.RDW",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 15.8,
+   "unit": "%",
+   "ref_range": "11.6-14",
+   "flag": "H"
+  },
+  "release_text": "Red cell distribution width 15.8 % (11.6-14), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Raised from the start with a microcytic population (G07); rises with haemolysis, reticulocytosis from day 7 and the transfused normocytic cells.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.RDW",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 16.4,
+   "unit": "%",
+   "ref_range": "11.6-14",
+   "flag": "H"
+  },
+  "release_text": "Red cell distribution width 16.4 % (11.6-14), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Raised from the start with a microcytic population (G07); rises with haemolysis, reticulocytosis from day 7 and the transfused normocytic cells.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.RDW",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 17.5,
+   "unit": "%",
+   "ref_range": "11.6-14",
+   "flag": "H"
+  },
+  "release_text": "Red cell distribution width 17.5 % (11.6-14), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Raised from the start with a microcytic population (G07); rises with haemolysis, reticulocytosis from day 7 and the transfused normocytic cells.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.RDW",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 19.1,
+   "unit": "%",
+   "ref_range": "11.6-14",
+   "flag": "H"
+  },
+  "release_text": "Red cell distribution width 19.1 % (11.6-14), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Raised from the start with a microcytic population (G07); rises with haemolysis, reticulocytosis from day 7 and the transfused normocytic cells.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.WBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 5.8,
+   "unit": "x10^9/L",
+   "ref_range": "4-10"
+  },
+  "release_text": "White cell count 5.8 x10^9/L (4-10).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Not reported. Falciparum infection usually gives a normal or low white count; no neutrophilia, since blood and stool cultures were negative. Recovers with treatment. The five parts sum to the total.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.NEUT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 4.52,
+   "unit": "x10^9/L",
+   "ref_range": "2-7"
+  },
+  "release_text": "Neutrophils 4.52 x10^9/L (2-7).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.LYMPH",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.78,
+   "unit": "x10^9/L",
+   "ref_range": "1-3",
+   "flag": "L"
+  },
+  "release_text": "Lymphocytes 0.78 x10^9/L (1-3), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.MONO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.42,
+   "unit": "x10^9/L",
+   "ref_range": "0.2-1"
+  },
+  "release_text": "Monocytes 0.42 x10^9/L (0.2-1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.EOS",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.02,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.5"
+  },
+  "release_text": "Eosinophils 0.02 x10^9/L (0.02-0.5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BASO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.02,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.1"
+  },
+  "release_text": "Basophils 0.02 x10^9/L (0.02-0.1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.WBC",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 4.6,
+   "unit": "x10^9/L",
+   "ref_range": "4-10"
+  },
+  "release_text": "White cell count 4.6 x10^9/L (4-10).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Falciparum infection usually gives a normal or low white count; no neutrophilia, since blood and stool cultures were negative. Recovers with treatment. The five parts sum to the total.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.NEUT",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 3.1,
+   "unit": "x10^9/L",
+   "ref_range": "2-7"
+  },
+  "release_text": "Neutrophils 3.10 x10^9/L (2-7).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.LYMPH",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 1.02,
+   "unit": "x10^9/L",
+   "ref_range": "1-3"
+  },
+  "release_text": "Lymphocytes 1.02 x10^9/L (1-3).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.MONO",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.42,
+   "unit": "x10^9/L",
+   "ref_range": "0.2-1"
+  },
+  "release_text": "Monocytes 0.42 x10^9/L (0.2-1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.EOS",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.03,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.5"
+  },
+  "release_text": "Eosinophils 0.03 x10^9/L (0.02-0.5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BASO",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.02,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.1"
+  },
+  "release_text": "Basophils 0.02 x10^9/L (0.02-0.1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.WBC",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 5.3,
+   "unit": "x10^9/L",
+   "ref_range": "4-10"
+  },
+  "release_text": "White cell count 5.3 x10^9/L (4-10).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Falciparum infection usually gives a normal or low white count; no neutrophilia, since blood and stool cultures were negative. Recovers with treatment. The five parts sum to the total.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.NEUT",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 3.3,
+   "unit": "x10^9/L",
+   "ref_range": "2-7"
+  },
+  "release_text": "Neutrophils 3.30 x10^9/L (2-7).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.LYMPH",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 1.45,
+   "unit": "x10^9/L",
+   "ref_range": "1-3"
+  },
+  "release_text": "Lymphocytes 1.45 x10^9/L (1-3).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.MONO",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.48,
+   "unit": "x10^9/L",
+   "ref_range": "0.2-1"
+  },
+  "release_text": "Monocytes 0.48 x10^9/L (0.2-1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.EOS",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.05,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.5"
+  },
+  "release_text": "Eosinophils 0.05 x10^9/L (0.02-0.5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BASO",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.02,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.1"
+  },
+  "release_text": "Basophils 0.02 x10^9/L (0.02-0.1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.WBC",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 6.4,
+   "unit": "x10^9/L",
+   "ref_range": "4-10"
+  },
+  "release_text": "White cell count 6.4 x10^9/L (4-10).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Falciparum infection usually gives a normal or low white count; no neutrophilia, since blood and stool cultures were negative. Recovers with treatment. The five parts sum to the total.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.NEUT",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 3.7,
+   "unit": "x10^9/L",
+   "ref_range": "2-7"
+  },
+  "release_text": "Neutrophils 3.70 x10^9/L (2-7).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.LYMPH",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 2.05,
+   "unit": "x10^9/L",
+   "ref_range": "1-3"
+  },
+  "release_text": "Lymphocytes 2.05 x10^9/L (1-3).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.MONO",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.52,
+   "unit": "x10^9/L",
+   "ref_range": "0.2-1"
+  },
+  "release_text": "Monocytes 0.52 x10^9/L (0.2-1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.EOS",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.11,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.5"
+  },
+  "release_text": "Eosinophils 0.11 x10^9/L (0.02-0.5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BASO",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.03,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.1"
+  },
+  "release_text": "Basophils 0.03 x10^9/L (0.02-0.1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.WBC",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 7.1,
+   "unit": "x10^9/L",
+   "ref_range": "4-10"
+  },
+  "release_text": "White cell count 7.1 x10^9/L (4-10).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Falciparum infection usually gives a normal or low white count; no neutrophilia, since blood and stool cultures were negative. Recovers with treatment. The five parts sum to the total.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.NEUT",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 4.1,
+   "unit": "x10^9/L",
+   "ref_range": "2-7"
+  },
+  "release_text": "Neutrophils 4.10 x10^9/L (2-7).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.LYMPH",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 2.3,
+   "unit": "x10^9/L",
+   "ref_range": "1-3"
+  },
+  "release_text": "Lymphocytes 2.30 x10^9/L (1-3).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.MONO",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.55,
+   "unit": "x10^9/L",
+   "ref_range": "0.2-1"
+  },
+  "release_text": "Monocytes 0.55 x10^9/L (0.2-1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.EOS",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.12,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.5"
+  },
+  "release_text": "Eosinophils 0.12 x10^9/L (0.02-0.5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BASO",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0.03,
+   "unit": "x10^9/L",
+   "ref_range": "0.02-0.1"
+  },
+  "release_text": "Basophils 0.03 x10^9/L (0.02-0.1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Lymphopenia is typical of acute falciparum infection and recovers after parasite clearance; eosinophils suppressed in the acute illness. Parts sum to the white count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.NRBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 0,
+   "unit": "/100 WBC",
+   "ref_range": "0"
+  },
+  "release_text": "Nucleated red cells 0 /100 WBC (0).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; no nucleated red cells expected at this degree of anaemia.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.RETIC_ABS",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 23,
+   "unit": "x10^9/L",
+   "ref_range": "50-100",
+   "flag": "L"
+  },
+  "release_text": "Reticulocytes (absolute) 23 x10^9/L (50-100), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Reticulocyte % (Table 1) x red cell count; agrees with the reticulocyte % rule.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.RETIC_ABS",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 20,
+   "unit": "x10^9/L",
+   "ref_range": "50-100",
+   "flag": "L"
+  },
+  "release_text": "Reticulocytes (absolute) 20 x10^9/L (50-100), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Reticulocyte % (Table 1) x red cell count; agrees with the reticulocyte % rule.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.RETIC_ABS",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 10,
+   "unit": "x10^9/L",
+   "ref_range": "50-100",
+   "flag": "L"
+  },
+  "release_text": "Reticulocytes (absolute) 10 x10^9/L (50-100), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Reticulocyte % (Table 1) x red cell count; agrees with the reticulocyte % rule.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.RETIC_ABS",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 62,
+   "unit": "x10^9/L",
+   "ref_range": "50-100"
+  },
+  "release_text": "Reticulocytes (absolute) 62 x10^9/L (50-100).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Reticulocyte % (Table 1) x red cell count; agrees with the reticulocyte % rule.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.RETIC_ABS",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 276,
+   "unit": "x10^9/L",
+   "ref_range": "50-100",
+   "flag": "H"
+  },
+  "release_text": "Reticulocytes (absolute) 276 x10^9/L (50-100), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Reticulocyte % (Table 1) x red cell count; agrees with the reticulocyte % rule.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.IRF",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 8.5,
+   "unit": "%",
+   "ref_range": "1.6-12.1"
+  },
+  "release_text": "Immature reticulocyte fraction 8.5 % (1.6-12.1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Marrow response suppressed in the acute infection (retic 0.37-0.59%), then a brisk recovery from day 7 (retic 2.58%, 7.78%) with many immature reticulocytes.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.IRF",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 9.0,
+   "unit": "%",
+   "ref_range": "1.6-12.1"
+  },
+  "release_text": "Immature reticulocyte fraction 9.0 % (1.6-12.1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Marrow response suppressed in the acute infection (retic 0.37-0.59%), then a brisk recovery from day 7 (retic 2.58%, 7.78%) with many immature reticulocytes.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.IRF",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 7.0,
+   "unit": "%",
+   "ref_range": "1.6-12.1"
+  },
+  "release_text": "Immature reticulocyte fraction 7.0 % (1.6-12.1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Marrow response suppressed in the acute infection (retic 0.37-0.59%), then a brisk recovery from day 7 (retic 2.58%, 7.78%) with many immature reticulocytes.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.IRF",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 22.4,
+   "unit": "%",
+   "ref_range": "1.6-12.1",
+   "flag": "H"
+  },
+  "release_text": "Immature reticulocyte fraction 22.4 % (1.6-12.1), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Marrow response suppressed in the acute infection (retic 0.37-0.59%), then a brisk recovery from day 7 (retic 2.58%, 7.78%) with many immature reticulocytes.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.IRF",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "value": 28.0,
+   "unit": "%",
+   "ref_range": "1.6-12.1",
+   "flag": "H"
+  },
+  "release_text": "Immature reticulocyte fraction 28.0 % (1.6-12.1), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Marrow response suppressed in the acute infection (retic 0.37-0.59%), then a brisk recovery from day 7 (retic 2.58%, 7.78%) with many immature reticulocytes.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.MALARIA_PARASITAEMIA",
+  "day_bucket": 0,
+  "tier": "reviewer",
+  "gap_id": "G03",
+  "value": {
+   "value": 2.8,
+   "unit": "%",
+   "ref_range": "0 (none seen)",
+   "flag": "H"
+  },
+  "release_text": "Malaria parasitaemia (parasitised red cells) 2.80 % (0 (none seen)), high.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": false,
+  "rationale": "REVIEWER: the day-0 parasite density is plotted only in Figure 2; read it off the figure. Proposed 2.8%: below the 5% threshold the treating team's choice of oral treatment implies, and consistent with a platelet count that never fell below 60. The smear report RP01 quotes the same value and must change with it.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.MALARIA_PARASITAEMIA",
+  "day_bucket": 1,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 1.6,
+   "unit": "%",
+   "ref_range": "0 (none seen)",
+   "flag": "H"
+  },
+  "release_text": "Malaria parasitaemia (parasitised red cells) 1.60 % (0 (none seen)), high.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Figure 2 shows a progressive fall on artemether-lumefantrine; the curator's reading of a typical clearance curve (about 50% fall in the first day, none seen by day 4). Replace with the figure's values at review.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.MALARIA_PARASITAEMIA",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.5,
+   "unit": "%",
+   "ref_range": "0 (none seen)",
+   "flag": "H"
+  },
+  "release_text": "Malaria parasitaemia (parasitised red cells) 0.50 % (0 (none seen)), high.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Figure 2 shows a progressive fall on artemether-lumefantrine; the curator's reading of a typical clearance curve (about 50% fall in the first day, none seen by day 4). Replace with the figure's values at review.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.MALARIA_PARASITAEMIA",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.05,
+   "unit": "%",
+   "ref_range": "0 (none seen)",
+   "flag": "H"
+  },
+  "release_text": "Malaria parasitaemia (parasitised red cells) 0.05 % (0 (none seen)), high.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Figure 2 shows a progressive fall on artemether-lumefantrine; the curator's reading of a typical clearance curve (about 50% fall in the first day, none seen by day 4). Replace with the figure's values at review.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.MALARIA_PARASITAEMIA",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 0.0,
+   "unit": "%",
+   "ref_range": "0 (none seen)"
+  },
+  "release_text": "Malaria parasitaemia (parasitised red cells) 0.00 % (0 (none seen)).",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Figure 2 shows a progressive fall on artemether-lumefantrine; the curator's reading of a typical clearance curve (about 50% fall in the first day, none seen by day 4). Replace with the figure's values at review.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.CREATININE",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 186,
+   "unit": "umol/L",
+   "ref_range": "49-90",
+   "flag": "H"
+  },
+  "release_text": "Creatinine 186 umol/L (49-90), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "The article reports acute kidney injury with falling counts; creatinine 150 umol/L on day 0. Proposed peak on day 2 as platelets and Hb fell, then recovery with rehydration and parasite clearance to normal by day 9.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CREATININE",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 159,
+   "unit": "umol/L",
+   "ref_range": "49-90",
+   "flag": "H"
+  },
+  "release_text": "Creatinine 159 umol/L (49-90), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The article reports acute kidney injury with falling counts; creatinine 150 umol/L on day 0. Proposed peak on day 2 as platelets and Hb fell, then recovery with rehydration and parasite clearance to normal by day 9.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CREATININE",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 106,
+   "unit": "umol/L",
+   "ref_range": "49-90",
+   "flag": "H"
+  },
+  "release_text": "Creatinine 106 umol/L (49-90), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The article reports acute kidney injury with falling counts; creatinine 150 umol/L on day 0. Proposed peak on day 2 as platelets and Hb fell, then recovery with rehydration and parasite clearance to normal by day 9.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CREATININE",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 80,
+   "unit": "umol/L",
+   "ref_range": "49-90"
+  },
+  "release_text": "Creatinine 80 umol/L (49-90).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The article reports acute kidney injury with falling counts; creatinine 150 umol/L on day 0. Proposed peak on day 2 as platelets and Hb fell, then recovery with rehydration and parasite clearance to normal by day 9.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 14.1,
+   "unit": "mmol/L",
+   "ref_range": "2.5-7.8",
+   "flag": "H"
+  },
+  "release_text": "Urea 14.1 mmol/L (2.5-7.8), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows creatinine (G05): prerenal element from vomiting and diarrhoea, recovering with fluids.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 11.0,
+   "unit": "mmol/L",
+   "ref_range": "2.5-7.8",
+   "flag": "H"
+  },
+  "release_text": "Urea 11.0 mmol/L (2.5-7.8), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows creatinine (G05): prerenal element from vomiting and diarrhoea, recovering with fluids.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 6.8,
+   "unit": "mmol/L",
+   "ref_range": "2.5-7.8"
+  },
+  "release_text": "Urea 6.8 mmol/L (2.5-7.8).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows creatinine (G05): prerenal element from vomiting and diarrhoea, recovering with fluids.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 5.2,
+   "unit": "mmol/L",
+   "ref_range": "2.5-7.8"
+  },
+  "release_text": "Urea 5.2 mmol/L (2.5-7.8).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows creatinine (G05): prerenal element from vomiting and diarrhoea, recovering with fluids.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 35,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 35 mL/min/1.73m2 (>90), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 55-year-old woman from the day's creatinine.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 27,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 27 mL/min/1.73m2 (>90), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 55-year-old woman from the day's creatinine.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 33,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 33 mL/min/1.73m2 (>90), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 55-year-old woman from the day's creatinine.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 53,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 53 mL/min/1.73m2 (>90), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 55-year-old woman from the day's creatinine.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 75,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 75 mL/min/1.73m2 (>90), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 55-year-old woman from the day's creatinine.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.NA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 132,
+   "unit": "mmol/L",
+   "ref_range": "135-145",
+   "flag": "L"
+  },
+  "release_text": "Sodium 132 mmol/L (135-145), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild hyponatraemia is common in falciparum infection and with vomiting and diarrhoea; corrects with fluids.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.K",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 3.3,
+   "unit": "mmol/L",
+   "ref_range": "3.5-5.1",
+   "flag": "L"
+  },
+  "release_text": "Potassium 3.3 mmol/L (3.5-5.1), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild hypokalaemia from diarrhoea and vomiting on day 0, corrected with replacement.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 99,
+   "unit": "mmol/L",
+   "ref_range": "98-107"
+  },
+  "release_text": "Chloride 99 mmol/L (98-107).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with the sodium and a mild metabolic acidosis.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BICARB",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 19,
+   "unit": "mmol/L",
+   "ref_range": "22-29",
+   "flag": "L"
+  },
+  "release_text": "Bicarbonate 19 mmol/L (22-29), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild metabolic acidosis on day 0 (lactate 2.3 mmol/L, AKI, diarrhoea), resolving.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.NA",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 134,
+   "unit": "mmol/L",
+   "ref_range": "135-145",
+   "flag": "L"
+  },
+  "release_text": "Sodium 134 mmol/L (135-145), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild hyponatraemia is common in falciparum infection and with vomiting and diarrhoea; corrects with fluids.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.K",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 3.6,
+   "unit": "mmol/L",
+   "ref_range": "3.5-5.1"
+  },
+  "release_text": "Potassium 3.6 mmol/L (3.5-5.1).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild hypokalaemia from diarrhoea and vomiting on day 0, corrected with replacement.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CL",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 102,
+   "unit": "mmol/L",
+   "ref_range": "98-107"
+  },
+  "release_text": "Chloride 102 mmol/L (98-107).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with the sodium and a mild metabolic acidosis.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BICARB",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 20,
+   "unit": "mmol/L",
+   "ref_range": "22-29",
+   "flag": "L"
+  },
+  "release_text": "Bicarbonate 20 mmol/L (22-29), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild metabolic acidosis on day 0 (lactate 2.3 mmol/L, AKI, diarrhoea), resolving.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.NA",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 136,
+   "unit": "mmol/L",
+   "ref_range": "135-145"
+  },
+  "release_text": "Sodium 136 mmol/L (135-145).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild hyponatraemia is common in falciparum infection and with vomiting and diarrhoea; corrects with fluids.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.K",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 3.9,
+   "unit": "mmol/L",
+   "ref_range": "3.5-5.1"
+  },
+  "release_text": "Potassium 3.9 mmol/L (3.5-5.1).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild hypokalaemia from diarrhoea and vomiting on day 0, corrected with replacement.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CL",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 104,
+   "unit": "mmol/L",
+   "ref_range": "98-107"
+  },
+  "release_text": "Chloride 104 mmol/L (98-107).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with the sodium and a mild metabolic acidosis.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BICARB",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 22,
+   "unit": "mmol/L",
+   "ref_range": "22-29"
+  },
+  "release_text": "Bicarbonate 22 mmol/L (22-29).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild metabolic acidosis on day 0 (lactate 2.3 mmol/L, AKI, diarrhoea), resolving.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.NA",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 138,
+   "unit": "mmol/L",
+   "ref_range": "135-145"
+  },
+  "release_text": "Sodium 138 mmol/L (135-145).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild hyponatraemia is common in falciparum infection and with vomiting and diarrhoea; corrects with fluids.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.K",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 4.1,
+   "unit": "mmol/L",
+   "ref_range": "3.5-5.1"
+  },
+  "release_text": "Potassium 4.1 mmol/L (3.5-5.1).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild hypokalaemia from diarrhoea and vomiting on day 0, corrected with replacement.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CL",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 105,
+   "unit": "mmol/L",
+   "ref_range": "98-107"
+  },
+  "release_text": "Chloride 105 mmol/L (98-107).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with the sodium and a mild metabolic acidosis.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BICARB",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 24,
+   "unit": "mmol/L",
+   "ref_range": "22-29"
+  },
+  "release_text": "Bicarbonate 24 mmol/L (22-29).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild metabolic acidosis on day 0 (lactate 2.3 mmol/L, AKI, diarrhoea), resolving.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.NA",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 139,
+   "unit": "mmol/L",
+   "ref_range": "135-145"
+  },
+  "release_text": "Sodium 139 mmol/L (135-145).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild hyponatraemia is common in falciparum infection and with vomiting and diarrhoea; corrects with fluids.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.K",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 4.2,
+   "unit": "mmol/L",
+   "ref_range": "3.5-5.1"
+  },
+  "release_text": "Potassium 4.2 mmol/L (3.5-5.1).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild hypokalaemia from diarrhoea and vomiting on day 0, corrected with replacement.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CL",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 104,
+   "unit": "mmol/L",
+   "ref_range": "98-107"
+  },
+  "release_text": "Chloride 104 mmol/L (98-107).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with the sodium and a mild metabolic acidosis.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BICARB",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 25,
+   "unit": "mmol/L",
+   "ref_range": "22-29"
+  },
+  "release_text": "Bicarbonate 25 mmol/L (22-29).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Mild metabolic acidosis on day 0 (lactate 2.3 mmol/L, AKI, diarrhoea), resolving.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.BILI_TOTAL",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 45,
+   "unit": "umol/L",
+   "ref_range": "3-21",
+   "flag": "H"
+  },
+  "release_text": "Bilirubin, total 45 umol/L (3-21), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Day 0 38 umol/L (article). Mostly unconjugated from haemolysis; peaks with the fall in Hb on day 2, then settles.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BILI_TOTAL",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 34,
+   "unit": "umol/L",
+   "ref_range": "3-21",
+   "flag": "H"
+  },
+  "release_text": "Bilirubin, total 34 umol/L (3-21), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Day 0 38 umol/L (article). Mostly unconjugated from haemolysis; peaks with the fall in Hb on day 2, then settles.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BILI_TOTAL",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 22,
+   "unit": "umol/L",
+   "ref_range": "3-21",
+   "flag": "H"
+  },
+  "release_text": "Bilirubin, total 22 umol/L (3-21), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Day 0 38 umol/L (article). Mostly unconjugated from haemolysis; peaks with the fall in Hb on day 2, then settles.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BILI_TOTAL",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 16,
+   "unit": "umol/L",
+   "ref_range": "3-21"
+  },
+  "release_text": "Bilirubin, total 16 umol/L (3-21).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Day 0 38 umol/L (article). Mostly unconjugated from haemolysis; peaks with the fall in Hb on day 2, then settles.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BILI_CONJ",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 8,
+   "unit": "umol/L",
+   "ref_range": "<5",
+   "flag": "H"
+  },
+  "release_text": "Bilirubin, conjugated (direct) 8 umol/L (<5), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Falciparum infection adds a mild hepatocellular or cholestatic component; most of the bilirubin is unconjugated.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BILI_CONJ",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 10,
+   "unit": "umol/L",
+   "ref_range": "<5",
+   "flag": "H"
+  },
+  "release_text": "Bilirubin, conjugated (direct) 10 umol/L (<5), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Falciparum infection adds a mild hepatocellular or cholestatic component; most of the bilirubin is unconjugated.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BILI_CONJ",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 7,
+   "unit": "umol/L",
+   "ref_range": "<5",
+   "flag": "H"
+  },
+  "release_text": "Bilirubin, conjugated (direct) 7 umol/L (<5), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Falciparum infection adds a mild hepatocellular or cholestatic component; most of the bilirubin is unconjugated.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BILI_CONJ",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 5,
+   "unit": "umol/L",
+   "ref_range": "<5"
+  },
+  "release_text": "Bilirubin, conjugated (direct) 5 umol/L (<5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Falciparum infection adds a mild hepatocellular or cholestatic component; most of the bilirubin is unconjugated.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.BILI_CONJ",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 4,
+   "unit": "umol/L",
+   "ref_range": "<5"
+  },
+  "release_text": "Bilirubin, conjugated (direct) 4 umol/L (<5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Falciparum infection adds a mild hepatocellular or cholestatic component; most of the bilirubin is unconjugated.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.AST",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 58,
+   "unit": "U/L",
+   "ref_range": "<32",
+   "flag": "H"
+  },
+  "release_text": "Aspartate aminotransferase 58 U/L (<32), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild AST rise from haemolysis and hepatic involvement in falciparum infection; AST above ALT fits the haemolysis.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.AST",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 64,
+   "unit": "U/L",
+   "ref_range": "<32",
+   "flag": "H"
+  },
+  "release_text": "Aspartate aminotransferase 64 U/L (<32), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild AST rise from haemolysis and hepatic involvement in falciparum infection; AST above ALT fits the haemolysis.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.AST",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 49,
+   "unit": "U/L",
+   "ref_range": "<32",
+   "flag": "H"
+  },
+  "release_text": "Aspartate aminotransferase 49 U/L (<32), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild AST rise from haemolysis and hepatic involvement in falciparum infection; AST above ALT fits the haemolysis.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.AST",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 38,
+   "unit": "U/L",
+   "ref_range": "<32",
+   "flag": "H"
+  },
+  "release_text": "Aspartate aminotransferase 38 U/L (<32), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild AST rise from haemolysis and hepatic involvement in falciparum infection; AST above ALT fits the haemolysis.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.AST",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 30,
+   "unit": "U/L",
+   "ref_range": "<32"
+  },
+  "release_text": "Aspartate aminotransferase 30 U/L (<32).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild AST rise from haemolysis and hepatic involvement in falciparum infection; AST above ALT fits the haemolysis.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ALT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 41,
+   "unit": "U/L",
+   "ref_range": "<33",
+   "flag": "H"
+  },
+  "release_text": "Alanine aminotransferase 41 U/L (<33), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild hepatocellular rise, typical of acute falciparum infection.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ALT",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 45,
+   "unit": "U/L",
+   "ref_range": "<33",
+   "flag": "H"
+  },
+  "release_text": "Alanine aminotransferase 45 U/L (<33), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild hepatocellular rise, typical of acute falciparum infection.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ALT",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 40,
+   "unit": "U/L",
+   "ref_range": "<33",
+   "flag": "H"
+  },
+  "release_text": "Alanine aminotransferase 40 U/L (<33), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild hepatocellular rise, typical of acute falciparum infection.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ALT",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 35,
+   "unit": "U/L",
+   "ref_range": "<33",
+   "flag": "H"
+  },
+  "release_text": "Alanine aminotransferase 35 U/L (<33), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild hepatocellular rise, typical of acute falciparum infection.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ALT",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 29,
+   "unit": "U/L",
+   "ref_range": "<33"
+  },
+  "release_text": "Alanine aminotransferase 29 U/L (<33).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild hepatocellular rise, typical of acute falciparum infection.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ALP",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 92,
+   "unit": "U/L",
+   "ref_range": "35-104"
+  },
+  "release_text": "Alkaline phosphatase 92 U/L (35-104).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; no biliary obstruction (CT negative).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALP",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 95,
+   "unit": "U/L",
+   "ref_range": "35-104"
+  },
+  "release_text": "Alkaline phosphatase 95 U/L (35-104).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; no biliary obstruction (CT negative).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALP",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 90,
+   "unit": "U/L",
+   "ref_range": "35-104"
+  },
+  "release_text": "Alkaline phosphatase 90 U/L (35-104).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; no biliary obstruction (CT negative).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALP",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 88,
+   "unit": "U/L",
+   "ref_range": "35-104"
+  },
+  "release_text": "Alkaline phosphatase 88 U/L (35-104).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; no biliary obstruction (CT negative).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALP",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 85,
+   "unit": "U/L",
+   "ref_range": "35-104"
+  },
+  "release_text": "Alkaline phosphatase 85 U/L (35-104).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; no biliary obstruction (CT negative).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.GGT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 38,
+   "unit": "U/L",
+   "ref_range": "5-36",
+   "flag": "H"
+  },
+  "release_text": "Gamma-glutamyl transferase 38 U/L (5-36), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Near the upper limit; acute illness.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.GGT",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 40,
+   "unit": "U/L",
+   "ref_range": "5-36",
+   "flag": "H"
+  },
+  "release_text": "Gamma-glutamyl transferase 40 U/L (5-36), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Near the upper limit; acute illness.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.GGT",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 39,
+   "unit": "U/L",
+   "ref_range": "5-36",
+   "flag": "H"
+  },
+  "release_text": "Gamma-glutamyl transferase 39 U/L (5-36), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Near the upper limit; acute illness.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.GGT",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 36,
+   "unit": "U/L",
+   "ref_range": "5-36"
+  },
+  "release_text": "Gamma-glutamyl transferase 36 U/L (5-36).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Near the upper limit; acute illness.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.GGT",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 34,
+   "unit": "U/L",
+   "ref_range": "5-36"
+  },
+  "release_text": "Gamma-glutamyl transferase 34 U/L (5-36).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Near the upper limit; acute illness.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ALBUMIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 31,
+   "unit": "g/L",
+   "ref_range": "35-52",
+   "flag": "L"
+  },
+  "release_text": "Albumin 31 g/L (35-52), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low in acute severe infection with poor intake; recovers.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALBUMIN",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 29,
+   "unit": "g/L",
+   "ref_range": "35-52",
+   "flag": "L"
+  },
+  "release_text": "Albumin 29 g/L (35-52), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low in acute severe infection with poor intake; recovers.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALBUMIN",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 30,
+   "unit": "g/L",
+   "ref_range": "35-52",
+   "flag": "L"
+  },
+  "release_text": "Albumin 30 g/L (35-52), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low in acute severe infection with poor intake; recovers.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALBUMIN",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 32,
+   "unit": "g/L",
+   "ref_range": "35-52",
+   "flag": "L"
+  },
+  "release_text": "Albumin 32 g/L (35-52), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low in acute severe infection with poor intake; recovers.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALBUMIN",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 34,
+   "unit": "g/L",
+   "ref_range": "35-52",
+   "flag": "L"
+  },
+  "release_text": "Albumin 34 g/L (35-52), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low in acute severe infection with poor intake; recovers.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.TOTAL_PROTEIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 66,
+   "unit": "g/L",
+   "ref_range": "64-83"
+  },
+  "release_text": "Total protein 66 g/L (64-83).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with the albumin; globulins normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.TOTAL_PROTEIN",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 63,
+   "unit": "g/L",
+   "ref_range": "64-83",
+   "flag": "L"
+  },
+  "release_text": "Total protein 63 g/L (64-83), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with the albumin; globulins normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.TOTAL_PROTEIN",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 64,
+   "unit": "g/L",
+   "ref_range": "64-83"
+  },
+  "release_text": "Total protein 64 g/L (64-83).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with the albumin; globulins normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.TOTAL_PROTEIN",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 66,
+   "unit": "g/L",
+   "ref_range": "64-83"
+  },
+  "release_text": "Total protein 66 g/L (64-83).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with the albumin; globulins normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.TOTAL_PROTEIN",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 68,
+   "unit": "g/L",
+   "ref_range": "64-83"
+  },
+  "release_text": "Total protein 68 g/L (64-83).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with the albumin; globulins normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.LACTATE",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.4,
+   "unit": "mmol/L",
+   "ref_range": "0.5-2.2"
+  },
+  "release_text": "Lactate 1.4 mmol/L (0.5-2.2).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Day 0 2.3 mmol/L (article); falls with rehydration and treatment.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 15.2,
+   "unit": "s",
+   "ref_range": "11-14",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 15.2 s (11-14), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Day 0 PT 16.4 s, INR 1.37 (article): mild prolongation from hepatic dysfunction in acute infection, correcting with treatment.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.INR",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 1.26,
+   "unit": "ratio",
+   "ref_range": "0.8-1.2",
+   "flag": "H"
+  },
+  "release_text": "International normalised ratio 1.26 ratio (0.8-1.2), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Follows the PT.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 13.6,
+   "unit": "s",
+   "ref_range": "11-14"
+  },
+  "release_text": "Prothrombin time 13.6 s (11-14).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Day 0 PT 16.4 s, INR 1.37 (article): mild prolongation from hepatic dysfunction in acute infection, correcting with treatment.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.INR",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 1.12,
+   "unit": "ratio",
+   "ref_range": "0.8-1.2"
+  },
+  "release_text": "International normalised ratio 1.12 ratio (0.8-1.2).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Follows the PT.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 12.4,
+   "unit": "s",
+   "ref_range": "11-14"
+  },
+  "release_text": "Prothrombin time 12.4 s (11-14).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Day 0 PT 16.4 s, INR 1.37 (article): mild prolongation from hepatic dysfunction in acute infection, correcting with treatment.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.INR",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 1.02,
+   "unit": "ratio",
+   "ref_range": "0.8-1.2"
+  },
+  "release_text": "International normalised ratio 1.02 ratio (0.8-1.2).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Follows the PT.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 33.8,
+   "unit": "s",
+   "ref_range": "26-36"
+  },
+  "release_text": "Activated partial thromboplastin time 33.8 s (26-36).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Normal: no consumptive coagulopathy (platelets recover, fibrinogen normal).",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.FIBRINOGEN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 3.9,
+   "unit": "g/L",
+   "ref_range": "1.5-4"
+  },
+  "release_text": "Fibrinogen 3.9 g/L (1.5-4).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Fibrinogen is an acute-phase protein and stays normal or high in falciparum infection without DIC; normal fibrinogen also fits the article's TTP work-up.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.D_DIMER",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 3.4,
+   "unit": "mg/L FEU",
+   "ref_range": "<0.50",
+   "flag": "H"
+  },
+  "release_text": "D-dimer 3.40 mg/L FEU (<0.50), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Raised: endothelial activation and microvascular sequestration in falciparum infection; not specific.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CRP",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 118,
+   "unit": "mg/L",
+   "ref_range": "<5",
+   "flag": "H"
+  },
+  "release_text": "C-reactive protein 118.0 mg/L (<5), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Markedly raised in acute falciparum infection; falls with parasite clearance.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CRP",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 96,
+   "unit": "mg/L",
+   "ref_range": "<5",
+   "flag": "H"
+  },
+  "release_text": "C-reactive protein 96.0 mg/L (<5), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Markedly raised in acute falciparum infection; falls with parasite clearance.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CRP",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 52,
+   "unit": "mg/L",
+   "ref_range": "<5",
+   "flag": "H"
+  },
+  "release_text": "C-reactive protein 52.0 mg/L (<5), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Markedly raised in acute falciparum infection; falls with parasite clearance.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CRP",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 18,
+   "unit": "mg/L",
+   "ref_range": "<5",
+   "flag": "H"
+  },
+  "release_text": "C-reactive protein 18.0 mg/L (<5), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Markedly raised in acute falciparum infection; falls with parasite clearance.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CRP",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 9,
+   "unit": "mg/L",
+   "ref_range": "<5",
+   "flag": "H"
+  },
+  "release_text": "C-reactive protein 9.0 mg/L (<5), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Markedly raised in acute falciparum infection; falls with parasite clearance.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.PCT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 3.85,
+   "unit": "ug/L",
+   "ref_range": "<0.05",
+   "flag": "H"
+  },
+  "release_text": "Procalcitonin 3.85 ug/L (<0.05), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Not reported. Procalcitonin is often above 2 ug/L in falciparum infection without bacterial sepsis; a realistic trap towards sepsis (blood cultures negative).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.ESR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 48,
+   "unit": "mm/h",
+   "ref_range": "<12",
+   "flag": "H"
+  },
+  "release_text": "Erythrocyte sedimentation rate 48 mm/h (<12), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Raised in acute infection with anaemia.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.GLUCOSE_RANDOM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 5.3,
+   "unit": "mmol/L",
+   "ref_range": "3.9-7.8"
+  },
+  "release_text": "Glucose, random plasma 5.3 mmol/L (3.9-7.8).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. No hypoglycaemia reported; normal glucose (no quinine given).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.GLUCOSE_CAPILLARY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 5.1,
+   "unit": "mmol/L",
+   "ref_range": "3.9-7.8"
+  },
+  "release_text": "Glucose, capillary (point of care) 5.1 mmol/L (3.9-7.8).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bedside value consistent with the laboratory glucose.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.PH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 7.33,
+   "unit": "pH",
+   "ref_range": "7.35-7.45",
+   "flag": "L"
+  },
+  "release_text": "pH 7.33 pH (7.35-7.45), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild metabolic acidosis on admission (bicarbonate 19, lactate 2.3), partly compensated.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PCO2",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 4.3,
+   "unit": "kPa",
+   "ref_range": "4.7-6",
+   "flag": "L"
+  },
+  "release_text": "Partial pressure of carbon dioxide (pCO2) 4.3 kPa (4.7-6), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Respiratory compensation for the mild metabolic acidosis (respiratory rate 22).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PO2",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 11.9,
+   "unit": "kPa",
+   "ref_range": "10.7-13.3"
+  },
+  "release_text": "Partial pressure of oxygen (pO2), on air 11.9 kPa (10.7-13.3).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal oxygenation; chest X-ray negative.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.BASE_EXCESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": -5.5,
+   "unit": "mmol/L",
+   "ref_range": "-2 to +2",
+   "flag": "L"
+  },
+  "release_text": "Base excess -5.5 mmol/L (-2 to +2), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with bicarbonate 19 mmol/L.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.SO2",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 97,
+   "unit": "%",
+   "ref_range": "95-99"
+  },
+  "release_text": "Oxygen saturation, arterial (measured) 97 % (95-99).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; chest X-ray negative.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.PLASMA_FREE_HB",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 95,
+   "unit": "mg/L",
+   "ref_range": "<40",
+   "flag": "H"
+  },
+  "release_text": "Plasma free haemoglobin 95 mg/L (<40), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Intravascular haemolysis (haptoglobin undetectable, LDH raised) raises plasma free haemoglobin moderately.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.TROP_I",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 9,
+   "unit": "ng/L",
+   "ref_range": "<16"
+  },
+  "release_text": "Troponin I, high-sensitivity 9 ng/L (<16).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No cardiac involvement reported; a normal troponin argues against TTP-type microvascular cardiac injury.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.TROP_T",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 12,
+   "unit": "ng/L",
+   "ref_range": "<14"
+  },
+  "release_text": "Troponin T, high-sensitivity 12 ng/L (<14).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "As for troponin I.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CK",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 180,
+   "unit": "U/L",
+   "ref_range": "26-192"
+  },
+  "release_text": "Creatine kinase 180 U/L (26-192).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Upper normal; no rhabdomyolysis to explain the AKI.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.AMMONIA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 38,
+   "unit": "umol/L",
+   "ref_range": "11-51"
+  },
+  "release_text": "Ammonia 38 umol/L (11-51).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; the confusion is not hepatic encephalopathy.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.LIPASE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 34,
+   "unit": "U/L",
+   "ref_range": "13-60"
+  },
+  "release_text": "Lipase 34 U/L (13-60).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; abdominal pain without pancreatitis (CT negative).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.AMYLASE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 62,
+   "unit": "U/L",
+   "ref_range": "28-100"
+  },
+  "release_text": "Amylase 62 U/L (28-100).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal, as for lipase.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CALPROTECTIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 38,
+   "unit": "ug/g",
+   "ref_range": "<50"
+  },
+  "release_text": "Faecal calprotectin 38 ug/g (<50).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal: no inflammatory colitis (stool leucocytes negative).",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.G6PD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 11.2,
+   "unit": "U/g Hb",
+   "ref_range": "8.8-13.4"
+  },
+  "release_text": "G6PD activity 11.2 U/g Hb (8.8-13.4).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal activity; no drug-induced oxidant haemolysis in this case. Measured during a haemolytic illness a normal result is reliable when normal.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.UPCR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 42,
+   "unit": "mg/mmol",
+   "ref_range": "<15",
+   "flag": "H"
+  },
+  "release_text": "Urine protein:creatinine ratio 42 mg/mmol (<15), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild proteinuria with AKI in falciparum infection; not nephrotic.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.IRON",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 5.2,
+   "unit": "umol/L",
+   "ref_range": "9-30.4",
+   "flag": "L"
+  },
+  "release_text": "Iron, serum 5.2 umol/L (9-30.4), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Serum iron falls in acute infection (hepcidin); does not by itself mean iron deficiency.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.TRANSFERRIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 1.75,
+   "unit": "g/L",
+   "ref_range": "2-3.6",
+   "flag": "L"
+  },
+  "release_text": "Transferrin 1.75 g/L (2-3.6), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low as a negative acute-phase protein.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.TIBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 44,
+   "unit": "umol/L",
+   "ref_range": "45-72",
+   "flag": "L"
+  },
+  "release_text": "Total iron-binding capacity 44 umol/L (45-72), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Transferrin x 25; low-normal in inflammation.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.TSAT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 12,
+   "unit": "%",
+   "ref_range": "15-50",
+   "flag": "L"
+  },
+  "release_text": "Transferrin saturation 12 % (15-50), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Iron / TIBC x 100 = 11.8%; the transferrin saturation rule holds.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.FERRITIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 620,
+   "unit": "ug/L",
+   "ref_range": "13-150",
+   "flag": "H"
+  },
+  "release_text": "Ferritin 620 ug/L (13-150), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Raised as an acute-phase protein and from haemolysis; excludes simple iron deficiency as the cause of the microcytosis.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.HBA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 97.0,
+   "unit": "%",
+   "ref_range": "95-98"
+  },
+  "release_text": "Haemoglobin A 97.0 % (95-98).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Normal HPLC: alpha-plus thalassaemia is silent on HPLC (G07). Sampled before transfusion.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.HBA2",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 2.4,
+   "unit": "%",
+   "ref_range": "2.2-3.5"
+  },
+  "release_text": "Haemoglobin A2 2.4 % (2.2-3.5).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Low-normal, as in alpha-plus thalassaemia; not raised (no beta-thalassaemia trait).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.HBF",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 0.6,
+   "unit": "%",
+   "ref_range": "<1.0"
+  },
+  "release_text": "Haemoglobin F 0.6 % (<1.0).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.HB_VARIANT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "None detected"
+  },
+  "release_text": "Haemoglobin HPLC: no abnormal haemoglobin variant detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No HbS or HbC: the sickling test is negative too.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.SICKLING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Sickling test negative; solubility test negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No sickle haemoglobin (HPLC shows none).",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.B12",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 312,
+   "unit": "pmol/L",
+   "ref_range": "145-569"
+  },
+  "release_text": "Vitamin B12 (cobalamin) 312 pmol/L (145-569).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; no megaloblastic element.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.FOLATE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 14.2,
+   "unit": "nmol/L",
+   "ref_range": ">8.8"
+  },
+  "release_text": "Folate, serum 14.2 nmol/L (>8.8).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.MALARIA_PF_AG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Positive"
+  },
+  "release_text": "Plasmodium falciparum HRP2 antigen detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Rapid antigen test on the admission sample; HRP2 is positive at this parasite density. The confirmatory smear was ordered in the article.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.MALARIA_PAN_AG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Positive"
+  },
+  "release_text": "Pan-malarial pLDH antigen detected.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "pLDH is positive with active falciparum parasitaemia.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ABO_GROUP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Group O"
+  },
+  "release_text": "Forward and reverse grouping concordant: group O.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Blood group not reported; group O is the commonest group in West African populations (brief: always record the blood group). She received two units of red cells.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.RHD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "RhD positive"
+  },
+  "release_text": "RhD positive.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; RhD negative is rare in West African populations.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ANTIBODY_SCREEN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "No irregular red cell antibodies detected by indirect antiglobulin technique.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No previous transfusions; three pregnancies but no antibodies expected.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CROSSMATCH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Compatible"
+  },
+  "release_text": "Two donor units compatible by indirect antiglobulin crossmatch.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "She was transfused two units without reported problems.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.DAT_IGG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Direct antiglobulin test negative with anti-IgG.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The article reports no DAT; the haemolysis is parasite-driven and microangiopathic, not autoimmune.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.DAT_C3D",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Direct antiglobulin test negative with anti-C3d.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "As for IgG; a weak C3d can occur in falciparum infection but the article gives no hint of it.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.HIV_AG_AB",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Non-reactive"
+  },
+  "release_text": "Non-reactive for HIV-1 p24 antigen and HIV-1/2 antibodies.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "HIV is a trigger to exclude in TMA; nothing in the article suggests it.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ANA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Antinuclear antibodies: no nuclear or cytoplasmic staining at the 1:80 screening dilution.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No autoimmune disease; relevant because false-positive ADAMTS13 antibodies are commoner in SLE (article discussion).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.UPT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Urine hCG not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Postmenopausal woman.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_COLOUR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Dark amber, clear"
+  },
+  "release_text": "Dark amber and clear.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Concentrated urine from dehydration, with urobilinogen from haemolysis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_PROTEIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "1+"
+  },
+  "release_text": "Protein 1+.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild proteinuria with AKI and fever.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_GLUCOSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal glucose.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_KETONES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "2+"
+  },
+  "release_text": "Ketones 2+.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Vomiting and poor intake for days.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_BLOOD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Trace"
+  },
+  "release_text": "Blood trace.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Small amount of free haemoglobin from intravascular haemolysis; no red cells on microscopy.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_BILIRUBIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Hyperbilirubinaemia is mainly unconjugated.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_UROBILINOGEN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Increased"
+  },
+  "release_text": "Urobilinogen increased.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Haemolysis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_LEUCOCYTES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No urinary infection.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_NITRITE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No urinary infection.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_CASTS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Occasional hyaline casts"
+  },
+  "release_text": "Occasional hyaline casts; no red cell or granular casts.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Prerenal and mild tubular injury; no glomerulonephritis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_MYOGLOBIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Myoglobin not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No rhabdomyolysis (CK normal).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.URINE_CULTURE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No significant growth"
+  },
+  "release_text": "No significant growth.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No urinary source of fever.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.STOOL_OVA_PARASITES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No ova, cysts or parasites seen"
+  },
+  "release_text": "No ova, cysts or trophozoites seen. No pus cells or red cells seen.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Stool leucocytes negative in the article (L11); Giardia antigen negative.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.WIDAL_TO",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "1:40"
+  },
+  "release_text": "S. Typhi O agglutinin titre 1:40 (not significant).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Blood culture negative; low titres are common in people from typhoid-endemic areas.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.WIDAL_TH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "1:80"
+  },
+  "release_text": "S. Typhi H agglutinin titre 1:80 (not significant).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "As for the O titre.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.TYPHOID_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "S. Typhi IgM negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Typhoid was in the team's differential; blood culture negative.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.DENGUE_NS1",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Dengue NS1 antigen not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No dengue.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.DENGUE_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Dengue IgM negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No dengue.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.LEPTO_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Leptospira IgM negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No leptospirosis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.HAV_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Anti-HAV IgM negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No acute hepatitis A.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.HEV_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Anti-HEV IgM negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No acute hepatitis E.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.HBSAG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Non-reactive"
+  },
+  "release_text": "HBsAg non-reactive.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No hepatitis B.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ANTI_HBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Non-reactive"
+  },
+  "release_text": "Anti-HBc (total) non-reactive.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No past hepatitis B assumed.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ANTI_HCV",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Non-reactive"
+  },
+  "release_text": "Anti-HCV non-reactive.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No hepatitis C.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CHIK_IGM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Chikungunya IgM negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No chikungunya.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CSF_APPEARANCE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Clear and colourless"
+  },
+  "release_text": "Clear and colourless.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Confusion is from the systemic infection; no meningitis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CSF_GRAM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No organisms seen"
+  },
+  "release_text": "No organisms seen.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No bacterial meningitis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CSF_CULTURE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No growth"
+  },
+  "release_text": "No growth after 48 hours.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No bacterial meningitis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.LP_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Uneventful"
+  },
+  "release_text": "Lumbar puncture at L3-L4 in the left lateral position, atraumatic. Clear, colourless CSF obtained and sent for analysis.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Platelets 125 on day 0 permit a lumbar puncture; normal procedure.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ECG_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Sinus tachycardia"
+  },
+  "release_text": "Sinus tachycardia at 112 per minute. Normal axis, PR and QRS intervals. QTc 438 ms. No ST-segment or T-wave abnormality.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Tachycardia from fever and dehydration; QTc normal before artemether-lumefantrine.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.QTC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 438,
+   "unit": "ms",
+   "ref_range": "350-460"
+  },
+  "release_text": "Corrected QT interval 438 ms (350-460).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal QTc; matters before artemether-lumefantrine.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_SG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.03,
+   "unit": "ratio",
+   "ref_range": "1.005-1.03"
+  },
+  "release_text": "Urine specific gravity 1.030 ratio (1.005-1.03).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Concentrated urine with dehydration.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_PH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 5.5,
+   "unit": "pH",
+   "ref_range": "5-8"
+  },
+  "release_text": "Urine pH 5.5 pH (5-8).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Acid urine with mild acidosis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_MICRO_RBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1,
+   "unit": "/HPF",
+   "ref_range": "0-2"
+  },
+  "release_text": "Urine microscopy, red cells 1 /HPF (0-2).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No haematuria: the dipstick trace blood is free haemoglobin.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_MICRO_WBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 2,
+   "unit": "/HPF",
+   "ref_range": "0-5"
+  },
+  "release_text": "Urine microscopy, pus cells 2 /HPF (0-5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No pyuria.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.LP_OPENING_PRESSURE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 18,
+   "unit": "cmH2O",
+   "ref_range": "10-25"
+  },
+  "release_text": "CSF opening pressure 18 cmH2O (10-25).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal opening pressure.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CSF_WBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 2,
+   "unit": "x10^6/L",
+   "ref_range": "<5"
+  },
+  "release_text": "CSF white cell count 2 x10^6/L (<5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal: no meningitis or encephalitis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CSF_RBC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0,
+   "unit": "x10^6/L",
+   "ref_range": "<5"
+  },
+  "release_text": "CSF red cell count 0 x10^6/L (<5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Atraumatic tap.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CSF_PROTEIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0.38,
+   "unit": "g/L",
+   "ref_range": "0.15-0.45"
+  },
+  "release_text": "CSF protein 0.38 g/L (0.15-0.45).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CSF_GLUCOSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 3.4,
+   "unit": "mmol/L",
+   "ref_range": "2.5-4.4"
+  },
+  "release_text": "CSF glucose 3.4 mmol/L (2.5-4.4).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; about two thirds of the plasma glucose (5.3).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALPHA_GLOBIN_REPORT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "-a3.7/-a3.7"
+  },
+  "release_text": "Gap-PCR for common alpha-globin deletions: homozygous for the -alpha3.7 deletion (-a3.7/-a3.7). No point mutations found on sequencing of HBA1 and HBA2.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "G07: explains the lifelong microcytosis (MCV 74-80 fL, MCH about 25 pg) with a normal HPLC and high ferritin. The -alpha3.7 deletion is carried by about a third of people of West African descent. The article does not report it: a judgement call.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.BHCG",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1,
+   "unit": "IU/L",
+   "ref_range": "<5"
+  },
+  "release_text": "Beta-human chorionic gonadotropin 1 IU/L (<5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Postmenopausal woman; hCG below the pregnancy threshold.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.CHOL_TOTAL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 3.2,
+   "unit": "mmol/L",
+   "ref_range": "<5.2"
+  },
+  "release_text": "Cholesterol, total 3.2 mmol/L (<5.2).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported. Total and HDL cholesterol fall and triglycerides rise in acute falciparum infection; set explicitly so the generator's independent normals cannot give an impossible non-HDL value.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.CHOL_HDL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0.7,
+   "unit": "mmol/L",
+   "ref_range": ">1.2",
+   "flag": "L"
+  },
+  "release_text": "HDL cholesterol 0.7 mmol/L (>1.2), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low HDL in the acute-phase response.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.TRIGLYCERIDE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 2.1,
+   "unit": "mmol/L",
+   "ref_range": "<1.7",
+   "flag": "H"
+  },
+  "release_text": "Triglycerides 2.1 mmol/L (<1.7), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Raised in acute falciparum infection.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.CHOL_LDL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.5,
+   "unit": "mmol/L",
+   "ref_range": "<3.0"
+  },
+  "release_text": "LDL cholesterol 1.5 mmol/L (<3.0).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Friedewald: 3.2 - 0.7 - 2.1/2.2 = 1.5 mmol/L.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.PC.PAIN_DETAILS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Crampy pain across the upper and middle abdomen that comes and goes, about 5/10 at worst; it does not spread elsewhere."
+  },
+  "release_text": "Crampy pain across the upper and middle abdomen that comes and goes, about 5/10 at worst; it does not spread elsewhere.",
+  "lay_text": "It's a crampy pain across the top and middle of my tummy. It comes and goes, maybe five out of ten at its worst. It doesn't go anywhere else.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The article gives abdominal pain with a soft, non-tender abdomen and a negative CT; diffuse crampy pain fits febrile gastrointestinal symptoms.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.PC.PROGRESSION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Getting worse over the ten days despite the antibiotics from the emergency department; her family say she has been muddled since yesterday."
+  },
+  "release_text": "Getting worse over the ten days despite the antibiotics from the emergency department; her family say she has been muddled since yesterday.",
+  "lay_text": "It's been getting worse, even with the antibiotics they gave me. My daughter says I've been muddled since yesterday.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Re-presentation after discharge (article) with new confusion on arrival; the timing of the confusion is the curator's.",
+  "confidence": 0.65
+ },
+ {
+  "target": "HX.PC.AGGRAVATING_RELIEVING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Paracetamol brings the fever down for a few hours; nothing else helps."
+  },
+  "release_text": "Paracetamol brings the fever down for a few hours; nothing else helps.",
+  "lay_text": "Paracetamol brings the fever down for a few hours. Nothing else helps.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Ordinary febrile illness.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.PC.IMPACT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "In bed for most of the past week and unable to work."
+  },
+  "release_text": "In bed for most of the past week and unable to work.",
+  "lay_text": "I've been in bed most of the week. I haven't been able to work.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Ten days of fever, vomiting and diarrhoea; ill-looking on arrival.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.PC.PATIENT_CONCERNS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Worried because the antibiotics have not helped and she keeps getting worse."
+  },
+  "release_text": "Worried because the antibiotics have not helped and she keeps getting worse.",
+  "lay_text": "I'm worried. The antibiotics haven't helped and I just keep getting worse.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Re-presentation after failed outpatient treatment.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GEN.FEVER_SWEATS_WEIGHT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Fevers every day for ten days, with sweats as they break; has lost a little weight because she cannot eat."
+  },
+  "release_text": "Fevers every day for ten days, with sweats as they break; has lost a little weight because she cannot eat.",
+  "lay_text": "I get a fever every day, and then I sweat when it breaks. I think I've lost a bit of weight because I can't eat.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Fever is in the article; sweats follow febrile paroxysms; weight loss from vomiting and anorexia.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.GEN.RIGORS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Shaking chills with the fevers on most days."
+  },
+  "release_text": "Shaking chills with the fevers on most days.",
+  "lay_text": "Yes, I shake with cold when the fever comes, most days.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Rigors are common with falciparum fevers and not specific to it (also in pyelonephritis, cholangitis, bacteraemia); the article does not mention them.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GEN.FATIGUE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Very weak and tired for the past week."
+  },
+  "release_text": "Very weak and tired for the past week.",
+  "lay_text": "I feel so weak and tired this past week.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Ill-looking, anaemic and febrile.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GEN.JAUNDICE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Has not noticed yellowing of the eyes or skin."
+  },
+  "release_text": "Has not noticed yellowing of the eyes or skin.",
+  "lay_text": "No, I haven't noticed my eyes or skin going yellow.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Bilirubin 38 umol/L: below the level at which patients usually notice icterus.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.GEN.BRUISING_BLEEDING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No bruising, nosebleeds or bleeding gums."
+  },
+  "release_text": "No bruising, nosebleeds or bleeding gums.",
+  "lay_text": "No, no bruises or bleeding.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Platelets 125 on day 0, lowest 66; no bleeding reported.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GEN.RECENT_INFECTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No other infection before this illness began ten days ago."
+  },
+  "release_text": "No other infection before this illness began ten days ago.",
+  "lay_text": "No, I was fine before this started ten days ago.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Answers the question about infections before the present illness.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GEN.THIRST",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Very thirsty with a dry mouth."
+  },
+  "release_text": "Very thirsty with a dry mouth.",
+  "lay_text": "I'm very thirsty, my mouth is dry.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Dehydrated with dry mucous membranes (article).",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GEN.SLEEP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Sleeping much of the day and drowsy."
+  },
+  "release_text": "Sleeping much of the day and drowsy.",
+  "lay_text": "I'm sleeping a lot. I feel drowsy all the time.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Febrile illness with confusion.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.CVS.BREATHLESSNESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No breathlessness at rest; has hardly been walking about."
+  },
+  "release_text": "No breathlessness at rest; has hardly been walking about.",
+  "lay_text": "No, I'm not short of breath. I haven't really been up and about.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Hb 106 g/L on day 0; chest X-ray negative.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.CVS.PALPITATIONS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Feels her heart racing when the fever is high."
+  },
+  "release_text": "Feels her heart racing when the fever is high.",
+  "lay_text": "My heart races when the fever is high.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Febrile tachycardia.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.CVS.SYNCOPE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Light-headed when she stands up; has not fainted."
+  },
+  "release_text": "Light-headed when she stands up; has not fainted.",
+  "lay_text": "I feel light-headed when I stand up, but I haven't fainted.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Dehydration with a postural drop (EX.BEDSIDE.POSTURAL_BP).",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.NEURO.DIZZINESS_BALANCE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Light-headed on standing; no spinning."
+  },
+  "release_text": "Light-headed on standing; no spinning.",
+  "lay_text": "I get light-headed when I stand, but the room doesn't spin.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Dehydration.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GI.NAUSEA_APPETITE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Nauseated and vomiting several times a day, keeping little down; no appetite; no blood in the vomit."
+  },
+  "release_text": "Nauseated and vomiting several times a day, keeping little down; no appetite; no blood in the vomit.",
+  "lay_text": "I feel sick and I've been vomiting a few times a day. I can't keep much down and I don't want to eat. There's no blood in it.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Nausea and vomiting are in the article; blood excluded (stool occult blood negative, no haematemesis reported).",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GI.ABDOMINAL_PAIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Crampy abdominal pain for ten days."
+  },
+  "release_text": "Crampy abdominal pain for ten days.",
+  "lay_text": "My tummy has been hurting for ten days, crampy.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Article; details under HX.PC.PAIN_DETAILS.",
+  "confidence": 0.85
+ },
+ {
+  "target": "HX.GI.BOWEL_HABIT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Loose, watery stools four or five times a day for ten days; no blood or mucus."
+  },
+  "release_text": "Loose, watery stools four or five times a day for ten days; no blood or mucus.",
+  "lay_text": "I've had loose, watery stools four or five times a day. No blood or slime.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Loose stools in the article; stool occult blood and leucocytes negative.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GI.BLEEDING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No blood in the stool or vomit; stools not black."
+  },
+  "release_text": "No blood in the stool or vomit; stools not black.",
+  "lay_text": "No, no blood, and my stools aren't black.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Stool occult blood negative.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GU.URINE_COLOUR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Urine dark, like strong tea, for the last few days."
+  },
+  "release_text": "Urine dark, like strong tea, for the last few days.",
+  "lay_text": "My urine's been dark, like strong tea, for a few days.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Concentrated urine with dehydration, urobilinogen and a little free haemoglobin (haptoglobin undetectable). Not the frank black urine of massive haemolysis.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GU.URINE_VOLUME",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Passing less urine than usual."
+  },
+  "release_text": "Passing less urine than usual.",
+  "lay_text": "I'm not passing much urine.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Dehydration and AKI (creatinine 150 umol/L).",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GYN.MENOPAUSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Periods stopped about four years ago; no bleeding since."
+  },
+  "release_text": "Periods stopped about four years ago; no bleeding since.",
+  "lay_text": "My periods stopped about four years ago. No bleeding since then.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "55-year-old woman (brief: patient-dependent normals).",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GYN.MENSES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Postmenopausal: no periods for about four years."
+  },
+  "release_text": "Postmenopausal: no periods for about four years.",
+  "lay_text": "I haven't had a period for about four years.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "As above.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GYN.PREGNANCY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not possible: postmenopausal."
+  },
+  "release_text": "Not possible: postmenopausal.",
+  "lay_text": "No, I'm past the change.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Postmenopausal.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.PMH.TRANSFUSION_PREGNANCY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Three pregnancies, all normal deliveries; never had a blood transfusion."
+  },
+  "release_text": "Three pregnancies, all normal deliveries; never had a blood transfusion.",
+  "lay_text": "I've had three children, all normal births. I've never had a blood transfusion.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Needed for the crossmatch; antibody screen negative.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.NEURO.HEADACHE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Dull headache all over when the fever is up; no sudden severe headache."
+  },
+  "release_text": "Dull headache all over when the fever is up; no sudden severe headache.",
+  "lay_text": "I get a dull headache all over when the fever's up. Nothing sudden or terrible.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Headache is common with febrile illness; no meningism (CSF normal if taken).",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.NEURO.SEIZURES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "No fits or blackouts."
+  },
+  "release_text": "No fits or blackouts.",
+  "lay_text": "No, no fits.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "None reported.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.NEURO.COGNITION_MOOD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Feels muddled and slow; her family say she has been confused since yesterday."
+  },
+  "release_text": "Feels muddled and slow; her family say she has been confused since yesterday.",
+  "lay_text": "I feel muddled and slow. My daughter says I've been confused since yesterday.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Confused on examination (article).",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.NEURO.WEAKNESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Weak all over; no weakness of one side."
+  },
+  "release_text": "Weak all over; no weakness of one side.",
+  "lay_text": "I'm weak all over, not on one side.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No focal neurology.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.NEURO.SPEECH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "No change in speech."
+  },
+  "release_text": "No change in speech.",
+  "lay_text": "No, my speech is fine.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No focal neurology (a TTP clue if present).",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.EYE.VISION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No change in vision."
+  },
+  "release_text": "No change in vision.",
+  "lay_text": "My eyesight's fine.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No focal neurology.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.MSK.MUSCLE_PAIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Aching muscles all over with the fevers."
+  },
+  "release_text": "Aching muscles all over with the fevers.",
+  "lay_text": "My muscles ache all over when I have the fever.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Myalgia accompanies febrile illness; CK normal.",
+  "confidence": 0.65
+ },
+ {
+  "target": "HX.SKIN.RASH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No rash."
+  },
+  "release_text": "No rash.",
+  "lay_text": "No rash.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "None reported; relevant to dengue, typhoid and rickettsial alternatives.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.PMH.MEDICAL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No significant past illnesses; no cancer."
+  },
+  "release_text": "No significant past illnesses; no cancer.",
+  "lay_text": "No, I've been healthy. I've never had cancer.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The PLASMIC score of 6 includes no active cancer and no transplant.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.PMH.CHRONIC_CONDITIONS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No long-term conditions."
+  },
+  "release_text": "No long-term conditions.",
+  "lay_text": "No, nothing long-term.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "As above.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.PMH.ADMISSIONS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No previous hospital admissions; seen in the emergency department a few days ago for this illness and sent home."
+  },
+  "release_text": "No previous hospital admissions; seen in the emergency department a few days ago for this illness and sent home.",
+  "lay_text": "I've never been admitted. I came to emergency a few days ago with this and they sent me home.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Article (earlier emergency visit).",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.PMH.VACCINATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Childhood vaccinations; had a yellow fever vaccine some years ago."
+  },
+  "release_text": "Childhood vaccinations; had a yellow fever vaccine some years ago.",
+  "lay_text": "I had my childhood jabs, and a yellow fever jab a few years back.",
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Entry to Nigeria requires yellow fever vaccination; she travelled there. The answer names the vaccine only.",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.MEDS.CURRENT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "text": "Ciprofloxacin tablets from the emergency department, and paracetamol for fever. No regular medicines."
+  },
+  "release_text": "Ciprofloxacin tablets from the emergency department, and paracetamol for fever. No regular medicines.",
+  "lay_text": "The antibiotic tablets from emergency, and paracetamol for the fever. Nothing else regularly.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "The article says 'oral antibiotics'; ciprofloxacin is the usual emergency-department choice for presumed infective diarrhoea in the United States. No antimalarials.",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.MEDS.RECENT_ANTIBIOTICS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "text": "Ciprofloxacin 500 mg twice daily, started four days ago after the emergency visit."
+  },
+  "release_text": "Ciprofloxacin 500 mg twice daily, started four days ago after the emergency visit.",
+  "lay_text": "Ciprofloxacin, twice a day. I started it four days ago after the emergency visit.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "As for HX.MEDS.CURRENT.",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.MEDS.RECENT_CHANGES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Only the antibiotic and paracetamol, both started for this illness."
+  },
+  "release_text": "Only the antibiotic and paracetamol, both started for this illness.",
+  "lay_text": "Just the antibiotic and the paracetamol for this.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No other new medicines; no quinine (a drug cause of TMA).",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.MEDS.OTC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Paracetamol for the fever, up to three times a day; no ibuprofen or other painkillers."
+  },
+  "release_text": "Paracetamol for the fever, up to three times a day; no ibuprofen or other painkillers.",
+  "lay_text": "Paracetamol for the fever, up to three times a day. No ibuprofen.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No NSAIDs to explain the AKI.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.FAMILY.BLOOD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Her mother and a sister have been told they have mild anaemia with small red cells; nobody has needed transfusions."
+  },
+  "release_text": "Her mother and a sister have been told they have mild anaemia with small red cells; nobody has needed transfusions.",
+  "lay_text": "My mother and one of my sisters were told they have a mild anaemia with small blood cells. None of us have needed transfusions.",
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "G07: fits the proposed inherited alpha-plus thalassaemia behind her microcytosis; the article is silent.",
+  "confidence": 0.45
+ },
+ {
+  "target": "HX.SOCIAL.ALCOHOL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Rarely drinks; none during this illness."
+  },
+  "release_text": "Rarely drinks; none during this illness.",
+  "lay_text": "Hardly ever, and none since I've been ill.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Liver tests only mildly abnormal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.SOCIAL.LIVING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Lives with her husband in Brooklyn; her grown-up children live nearby."
+  },
+  "release_text": "Lives with her husband in Brooklyn; her grown-up children live nearby.",
+  "lay_text": "I live with my husband in Brooklyn. My children live close by.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "The hospital is in Brooklyn; the household is the curator's.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.EXPOSURE.OCCUPATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Works as a home health aide."
+  },
+  "release_text": "Works as a home health aide.",
+  "lay_text": "I'm a home health aide.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "The article gives no occupation; the answer names the job only.",
+  "confidence": 0.5
+ },
+ {
+  "target": "HX.EXPOSURE.BITES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Many mosquito bites during her trip; no tick or animal bites."
+  },
+  "release_text": "Many mosquito bites during her trip; no tick or animal bites.",
+  "lay_text": "I got lots of mosquito bites on my trip. No ticks or animal bites.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "No prophylaxis and four weeks in Nigeria make mosquito bites near-certain; the article is silent. The answer mentions a trip, so a player who asks about bites learns of travel, as in real history-taking.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.EXPOSURE.FOOD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No unusual foods or undercooked meat; nobody who shared her meals has been ill."
+  },
+  "release_text": "No unusual foods or undercooked meat; nobody who shared her meals has been ill.",
+  "lay_text": "Nothing unusual, and no one who ate with me got sick.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Food-borne infection was in the team's differential; stool tests negative.",
+  "confidence": 0.65
+ },
+ {
+  "target": "HX.EXPOSURE.WATER",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Drinks tap water at home."
+  },
+  "release_text": "Drinks tap water at home.",
+  "lay_text": "Tap water at home.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Answers the question asked, without the trip.",
+  "confidence": 0.65
+ },
+ {
+  "target": "HX.RECORDS.DISCHARGE_SUMMARIES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G08",
+  "value": {
+   "text": "Emergency department note from four days ago: fever, abdominal pain and loose stools, assessed as acute gastroenteritis; no blood tests recorded; discharged on oral ciprofloxacin with advice to return if worse."
+  },
+  "release_text": "Emergency department note from four days ago: fever, abdominal pain and loose stools, assessed as acute gastroenteritis; no blood tests recorded; discharged on oral ciprofloxacin with advice to return if worse.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "G08: the article says only that she was discharged on oral antibiotics. The note is silent on travel, which is the lesson of the case (no sentence says so, to avoid a hint); that no blood tests were done is the curator's inference from the discharge.",
+  "confidence": 0.5
+ },
+ {
+  "target": "HX.RECORDS.PREVIOUS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Clinic blood count from two years ago: haemoglobin 121 g/L (12.1 g/dL), MCV 78 fL, platelets 245 x10^9/L; noted as mild microcytosis."
+  },
+  "release_text": "Clinic blood count from two years ago: haemoglobin 121 g/L (12.1 g/dL), MCV 78 fL, platelets 245 x10^9/L; noted as mild microcytosis.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "G07: shows the microcytosis predates this illness. Invented to support the alpha-thalassaemia proposal.",
+  "confidence": 0.45
+ },
+ {
+  "target": "HX.SOCIAL.FUNCTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Normally fully independent; in bed for most of the past week."
+  },
+  "release_text": "Normally fully independent; in bed for most of the past week.",
+  "lay_text": "Normally I do everything myself, but I've been in bed most of this week.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Acutely unwell; the neutral template would say independent without qualification.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.SOCIAL.EXERCISE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Usually active and on her feet at work; hardly out of bed this week."
+  },
+  "release_text": "Usually active and on her feet at work; hardly out of bed this week.",
+  "lay_text": "I'm usually on my feet all day at work. This week I've hardly got out of bed.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "As above.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.PSYCH.ANXIETY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Worried about how ill she feels; no long-standing anxiety."
+  },
+  "release_text": "Worried about how ill she feels; no long-standing anxiety.",
+  "lay_text": "I'm worried because I feel so ill, but I'm not usually an anxious person.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with HX.PC.PATIENT_CONCERNS.",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.GEN.VITALS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Temperature 38.7 °C; pulse 114/min, regular; blood pressure 104/62 mmHg; respiratory rate 22/min; SpO2 97% on room air."
+  },
+  "release_text": "Temperature 38.7 °C; pulse 114/min, regular; blood pressure 104/62 mmHg; respiratory rate 22/min; SpO2 97% on room air.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "G01: febrile (afebrile only after day 2); tachycardia and low-normal blood pressure from fever and dehydration; mild tachypnoea with the metabolic acidosis; SpO2 normal (chest X-ray negative). Not reported in the article.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.GEN.CONSCIOUSNESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "GCS 14/15 (E4 V4 M6): drowsy but rousable, disoriented to time and place; obeys commands."
+  },
+  "release_text": "GCS 14/15 (E4 V4 M6): drowsy but rousable, disoriented to time and place; obeys commands.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "G02: the article says 'confused'. GCS 14 is the likeliest reading; a GCS of 11 or less would define cerebral involvement, which the article does not describe.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.CVS.PULSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Pulse 114/min, regular, of low volume."
+  },
+  "release_text": "Pulse 114/min, regular, of low volume.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Tachycardia with dehydration (G01).",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.CVS.JVP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "JVP not visible when lying flat."
+  },
+  "release_text": "JVP not visible when lying flat.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Dehydrated (article).",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.BEDSIDE.POSTURAL_BP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Lying 104/62 mmHg, pulse 114/min; sitting up 90/56 mmHg, pulse 126/min, with light-headedness; standing not attempted."
+  },
+  "release_text": "Lying 104/62 mmHg, pulse 114/min; sitting up 90/56 mmHg, pulse 126/min, with light-headedness; standing not attempted.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Dehydrated and confused (article); a postural drop is expected (brief: patient-dependent normals).",
+  "confidence": 0.65
+ },
+ {
+  "target": "EX.BEDSIDE.CAPILLARY_GLUCOSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Capillary blood glucose 92 mg/dL (5.1 mmol/L)."
+  },
+  "release_text": "Capillary blood glucose 92 mg/dL (5.1 mmol/L).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No hypoglycaemia reported; matches CMP.GLUCOSE_CAPILLARY.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.GEN.HEIGHT_WEIGHT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Height 162 cm; weight 71 kg; BMI 27.1 kg/m2."
+  },
+  "release_text": "Height 162 cm; weight 71 kg; BMI 27.1 kg/m2.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; needed for antimalarial dosing (brief: patient-dependent normals).",
+  "confidence": 0.5
+ },
+ {
+  "target": "EX.GEN.JAUNDICE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No clinical jaundice."
+  },
+  "release_text": "No clinical jaundice.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Bilirubin 38 umol/L is at the threshold of visible icterus; the article does not mention jaundice. Alternative: 'faint scleral icterus'.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.ABD.LIVER_SPLEEN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Liver and spleen not palpable."
+  },
+  "release_text": "Liver and spleen not palpable.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The CT abdomen and pelvis was negative, so no splenomegaly; a palpable spleen is common in falciparum infection but is not invented here.",
+  "confidence": 0.65
+ },
+ {
+  "target": "EX.ABD.AUSCULTATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Bowel sounds active; no bruits."
+  },
+  "release_text": "Bowel sounds active; no bruits.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Diarrhoea.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.ABD.RECTAL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Loose brown stool on the glove; no blood or melaena."
+  },
+  "release_text": "Loose brown stool on the glove; no blood or melaena.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Loose stools; stool occult blood negative.",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.ORAL.CAVITY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Dry oral mucosa and tongue; no ulcers; dentition healthy."
+  },
+  "release_text": "Dry oral mucosa and tongue; no ulcers; dentition healthy.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Dry mucous membranes (article); the neutral template would say moist.",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.SKIN.PURPURA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No petechiae, purpura or bruising."
+  },
+  "release_text": "No petechiae, purpura or bruising.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Platelets 125 x10^9/L on arrival; no bleeding reported.",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.SKIN.INSPECTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Skin warm and dry; no rash or other lesions."
+  },
+  "release_text": "Skin warm and dry; no rash or other lesions.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "None reported.",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.NEURO.MENINGISM",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "No neck stiffness; Kernig sign negative."
+  },
+  "release_text": "No neck stiffness; Kernig sign negative.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No meningitis.",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.NEURO.CRANIAL_NERVES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Pupils equal and reactive to light; no facial asymmetry or gaze palsy; full assessment limited by confusion."
+  },
+  "release_text": "Pupils equal and reactive to light; no facial asymmetry or gaze palsy; full assessment limited by confusion.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No focal signs.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.NEURO.MOTOR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Moves all four limbs; tone normal; power grossly 5/5, effort limited by drowsiness; no focal weakness."
+  },
+  "release_text": "Moves all four limbs; tone normal; power grossly 5/5, effort limited by drowsiness; no focal weakness.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No focal signs (a TTP clue if present).",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.NEURO.REFLEXES_SENSATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Reflexes present and symmetrical; plantars flexor; sensation grossly intact, formal testing limited by confusion."
+  },
+  "release_text": "Reflexes present and symmetrical; plantars flexor; sensation grossly intact, formal testing limited by confusion.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No focal signs.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.NEURO.SPEECH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Speech slow but fluent; no dysphasia."
+  },
+  "release_text": "Speech slow but fluent; no dysphasia.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Confused, not dysphasic.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.NEURO.GAIT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Not assessed: too unsteady and drowsy to walk safely."
+  },
+  "release_text": "Not assessed: too unsteady and drowsy to walk safely.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Confused and postural hypotension.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.EYE.FUNDOSCOPY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Optic discs normal; no haemorrhages or exudates; no papilloedema."
+  },
+  "release_text": "Optic discs normal; no haemorrhages or exudates; no papilloedema.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; nothing invented.",
+  "confidence": 0.65
+ },
+ {
+  "target": "EX.GYN.PELVIC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not performed: no gynaecological symptoms; postmenopausal."
+  },
+  "release_text": "Not performed: no gynaecological symptoms; postmenopausal.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Brief: patient-dependent normals; no indication in this presentation.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.SOCIAL.RESIDENCE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "text": "Born and brought up in Nigeria; has lived in Brooklyn for more than twenty years."
+  },
+  "release_text": "Born and brought up in Nigeria; has lived in Brooklyn for more than twenty years.",
+  "lay_text": "I was born and grew up in Nigeria. I've lived in Brooklyn for more than twenty years.",
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "The article does not state her origin. A four-week stay in Nigeria without prophylaxis is the typical pattern of a traveller visiting friends and relatives, and the proposed alpha-plus thalassaemia (G07) implies West African ancestry; the new catalogue template ('born locally') would contradict both. It hints at travel only to a player who asks where she is from; the must-do still needs the travel question. Alternative: leave origin unstated ('Has lived in Brooklyn for many years').",
+  "confidence": 0.5
+ }
+]

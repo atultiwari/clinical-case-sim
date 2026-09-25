@@ -12,3 +12,6 @@ R.ALBUMIN_NOT_ABOVE_TOTAL_PROTEIN,not_above,CMP.ALBUMIN,CMP.TOTAL_PROTEIN,1,2,Al
 R.CA_ION_NOT_ABOVE_CA,not_above,CMP.CA_ION,CMP.CA,1,2,Ionised calcium (mmol/L) cannot exceed total calcium (mmol/L)
 R.HDL_NOT_ABOVE_CHOL,not_above,CMP.CHOL_HDL,CMP.CHOL_TOTAL,1,2,HDL cholesterol (mmol/L) cannot exceed total cholesterol (mmol/L)
 R.NON_HDL,difference,CMP.CHOL_NON_HDL,CMP.CHOL_TOTAL|CMP.CHOL_HDL,1,5,Non-HDL cholesterol (mmol/L) = total cholesterol (mmol/L) - HDL cholesterol (mmol/L)
+R.GLOBULIN,difference,CMP.GLOBULIN,CMP.TOTAL_PROTEIN|CMP.ALBUMIN,1,10,Globulin (g/L) = total protein (g/L) - albumin (g/L)
+R.AG_RATIO,ratio,CMP.AG_RATIO,CMP.ALBUMIN|CMP.GLOBULIN,1,10,Albumin/globulin ratio = albumin (g/L) / globulin (g/L)
+R.BILI_UNCONJ,difference,CMP.BILI_UNCONJ,CMP.BILI_TOTAL|CMP.BILI_CONJ,1,10,Unconjugated bilirubin (umol/L) = total bilirubin (umol/L) - conjugated bilirubin (umol/L)

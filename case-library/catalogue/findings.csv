@@ -59,3 +59,17 @@ FND.GLOMERULAR_CRESCENTS,Glomerular crescents,histology,crescents|crescentic glo
 FND.VILLOUS_ATROPHY,Duodenal villous atrophy,histology,villous atrophy|flattened villi|crypt hyperplasia with villous blunting,service.pathology,PROC.ENDO.OGD
 FND.ACID_FAST_BACILLI,Acid-fast bacilli,microbiology,AFB positive|AFB seen|ZN stain positive|acid fast bacilli,service.microbiology,LAB.MICRO.AFB_SMEAR
 FND.GPC_CLUSTERS,Gram-positive cocci in clusters,microbiology,GPC in clusters|gram positive cocci clusters|staphylococcal-looking organisms,service.microbiology,LAB.MICRO.BLOOD_CULTURE
+FND.GASTRIC_FUNDIC_ATROPHY,Atrophy of the gastric body and fundic mucosa,histology,oxyntic atrophy|fundic gland atrophy|loss of parietal cells|corpus atrophy,service.pathology,PROC.BIOPSY.GASTRIC|PROC.ENDO.OGD
+FND.INTESTINAL_METAPLASIA,Gastric intestinal metaplasia,histology,intestinal metaplasia|goblet cell metaplasia|GIM,service.pathology,PROC.BIOPSY.GASTRIC
+FND.MILIARY_NODULES,Diffuse miliary nodules,imaging,miliary pattern|innumerable tiny nodules|millet-seed nodules|diffuse micronodules,service.radiology,IMG.CT.CHEST|IMG.NM.PET_CT|IMG.XR.CHEST
+FND.HAEMOPHAGOCYTOSIS,Haemophagocytosis,bone marrow,hemophagocytosis|haemophagocytic macrophages|macrophages engulfing blood cells|haemophagocytic histiocytes|phagocytosed blood cells in macrophages,service.pathology,PROC.BM.ASPIRATE
+FND.NUCLEATED_RED_CELLS,Nucleated red cells,blood film,NRBCs|normoblasts in the blood|circulating erythroblasts|nucleated RBCs,service.pathology,LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW
+FND.CIRCULATING_MEGALOBLASTS,Megaloblastic nucleated red cells in the blood,blood film,circulating megaloblasts|megaloblasts on the film|megaloblastic erythroblasts in blood|peripheral megaloblasts,service.pathology,LAB.HAEM.FILM_REVIEW
+FND.GIANT_METAMYELOCYTES,Giant metamyelocytes,bone marrow,giant myeloid cells|giant band forms|giant neutrophil precursors|giant stab cells,service.pathology,PROC.BM.ASPIRATE
+FND.LD_BODIES,Leishman-Donovan bodies (intracellular amastigotes),bone marrow,LD bodies|amastigotes in macrophages|intracellular amastigotes|Leishmania amastigotes,service.pathology,PROC.BIOPSY.LIVER|PROC.BM.ASPIRATE|PROC.SPLEEN.ASPIRATE
+FND.HAEMOGLOBIN_CASTS,Haemoglobin casts in renal tubules,renal histology,hemoglobin casts|haem pigment casts|pigmented tubular casts,service.pathology,PROC.BIOPSY.KIDNEY
+FND.TUBULAR_HAEMOSIDERIN,Haemosiderin in tubular epithelium,renal histology,tubular hemosiderin|Prussian blue positive tubular granules|renal tubular siderosis,service.pathology,PROC.BIOPSY.KIDNEY
+FND.TUBULAR_NECROSIS,Tubular epithelial necrosis,renal histology,acute tubular injury|tubular epithelial sloughing|tubular cell necrosis,service.pathology,PROC.BIOPSY.KIDNEY
+FND.INTRARENAL_VENOUS_THROMBI,Thrombi in intrarenal veins,renal histology,intrarenal vein thrombosis|renal venous microthrombi|thrombosed intrarenal veins,service.pathology,PROC.BIOPSY.KIDNEY
+FND.INCREASED_BLASTS,Increased marrow blasts,bone marrow,excess blasts|raised blast percentage|marrow blasts increased|blast excess,service.pathology,LAB.BM.FLOW|PROC.BM.ASPIRATE|PROC.BM.TREPHINE
+FND.EOSINOPHILIA,Eosinophilia,blood film,increased eosinophils|eosinophil excess|relative eosinophilia|eosinophils increased on film,service.pathology,LAB.BM.FLOW|LAB.HAEM.FILM|LAB.HAEM.FILM_REVIEW|LAB.HAEM.PB_FLOW|PROC.BM.ASPIRATE

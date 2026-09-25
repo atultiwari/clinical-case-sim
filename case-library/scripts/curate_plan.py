@@ -149,12 +149,12 @@ def _quote(text: str) -> str:
     return "'" + text.replace("'", "''") + "'"
 
 
-def literal(value: Any, kind: str = "") -> str:
-    """A SQL literal for value: text, jsonb or text[]."""
+def literal(value: Any, kind: str = "", *, ascii_json: bool = False) -> str:
+    """A SQL literal for value: text, jsonb or text[]. ascii_json escapes JSON to pure ASCII."""
     if value is None:
         return "null"
     if kind == "jsonb":
-        return _quote(json.dumps(value, ensure_ascii=False)) + "::jsonb"
+        return _quote(json.dumps(value, ensure_ascii=ascii_json)) + "::jsonb"
     if kind == "textarray":
         return "array[" + ", ".join(_quote(str(v)) for v in value) + "]::text[]"
     return _quote(str(value))
@@ -166,8 +166,12 @@ def render(
     *,
     placeholders_for_missing: bool = False,
     elide_over: int | None = None,
+    ascii_json: bool = False,
 ) -> str:
-    """Fill every {{name}}, {{name:jsonb}} and {{name:textarray}} with a quoted literal."""
+    """Fill every {{name}}, {{name:jsonb}} and {{name:textarray}} with a quoted literal.
+
+    ascii_json writes JSON with \\u escapes, so a copied or pasted file cannot corrupt it.
+    """
 
     def fill(match: re.Match[str]) -> str:
         name, kind = match.group(1), match.group(2) or ""
@@ -182,7 +186,7 @@ def render(
             size = len(json.dumps(value, ensure_ascii=False).encode("utf-8"))
             if size > elide_over:
                 return literal(f"<{name}: {size:,} bytes of JSON>") + "::jsonb"
-        return literal(value, kind)
+        return literal(value, kind, ascii_json=ascii_json)
 
     return PLACEHOLDER.sub(fill, sql)
 

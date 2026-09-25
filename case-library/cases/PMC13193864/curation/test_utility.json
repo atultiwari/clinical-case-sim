@@ -1,0 +1,482 @@
+[
+ {
+  "test_item_id": "LAB.HAEM.CBC",
+  "utility": "essential",
+  "rationale": "Anaemia and the falling platelet count."
+ },
+ {
+  "test_item_id": "LAB.CHEM.RENAL",
+  "utility": "essential",
+  "rationale": "Dialysis-dependent AKI and hyperkalaemia."
+ },
+ {
+  "test_item_id": "LAB.HAEM.RETIC",
+  "utility": "essential",
+  "rationale": "The low reticulocyte count is a key discriminator."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LDH",
+  "utility": "essential",
+  "rationale": "Haemolysis marker and the trend to follow."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM",
+  "utility": "essential",
+  "rationale": "No schistocytes: argues against TMA."
+ },
+ {
+  "test_item_id": "LAB.URINE.URINALYSIS",
+  "utility": "essential",
+  "rationale": "Blood 2+ with few red cells: haemoglobinuria."
+ },
+ {
+  "test_item_id": "LAB.TBS.DAT",
+  "utility": "essential",
+  "rationale": "Positive: the trap, and it must be interpreted."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ADAMTS13",
+  "utility": "essential",
+  "rationale": "53.2%: excludes TTP."
+ },
+ {
+  "test_item_id": "PROC.BIOPSY.KIDNEY",
+  "utility": "essential",
+  "rationale": "Haemoglobin cast nephropathy redirected the work-up."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PNH_FLOW",
+  "utility": "essential",
+  "rationale": "The diagnostic test (high-sensitivity, FLAER-based)."
+ },
+ {
+  "test_item_id": "LAB.CHEM.ELECTROLYTES",
+  "utility": "essential",
+  "rationale": "Potassium and acidosis before dialysis."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LFT",
+  "utility": "supportive",
+  "rationale": "Routine admission panel; bilirubin and AST in haemolysis."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HAPTOGLOBIN",
+  "utility": "supportive",
+  "rationale": "Undetectable in intravascular haemolysis."
+ },
+ {
+  "test_item_id": "LAB.URINE.HAEMOSIDERIN",
+  "utility": "supportive",
+  "rationale": "Positive: chronic intravascular haemolysis."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PLASMA_HB",
+  "utility": "supportive",
+  "rationale": "Raised in intravascular haemolysis."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "utility": "supportive",
+  "rationale": "Confirms no fragments or spherocytes."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CK",
+  "utility": "supportive",
+  "rationale": "33 U/L: excludes rhabdomyolysis."
+ },
+ {
+  "test_item_id": "IMG.US.KIDNEYS",
+  "utility": "supportive",
+  "rationale": "Enlarged kidneys; excludes obstruction."
+ },
+ {
+  "test_item_id": "IMG.US.DOPPLER_RENAL",
+  "utility": "supportive",
+  "rationale": "Excludes renal vein thrombosis."
+ },
+ {
+  "test_item_id": "IMG.US.DOPPLER_LEGS",
+  "utility": "supportive",
+  "rationale": "Finds the iliac vein thrombosis."
+ },
+ {
+  "test_item_id": "LAB.HAEM.D_DIMER",
+  "utility": "supportive",
+  "rationale": "8.82 mg/L: points to thrombosis."
+ },
+ {
+  "test_item_id": "LAB.HAEM.COAG_SCREEN",
+  "utility": "supportive",
+  "rationale": "Needed before biopsy and anticoagulation; excludes DIC."
+ },
+ {
+  "test_item_id": "LAB.TBS.BLOOD_GROUP",
+  "utility": "supportive",
+  "rationale": "Needed for transfusion."
+ },
+ {
+  "test_item_id": "LAB.TBS.ANTIBODY_SCREEN",
+  "utility": "supportive",
+  "rationale": "Needed for transfusion."
+ },
+ {
+  "test_item_id": "LAB.TBS.CROSSMATCH",
+  "utility": "supportive",
+  "rationale": "Four units transfused."
+ },
+ {
+  "test_item_id": "LAB.CHEM.ABG",
+  "utility": "supportive",
+  "rationale": "Acidosis before dialysis."
+ },
+ {
+  "test_item_id": "LAB.CHEM.BONE_PROFILE",
+  "utility": "supportive",
+  "rationale": "Hypocalcaemia and hyperphosphataemia of AKI."
+ },
+ {
+  "test_item_id": "LAB.URINE.PCR",
+  "utility": "supportive",
+  "rationale": "Quantifies proteinuria."
+ },
+ {
+  "test_item_id": "LAB.URINE.ACR",
+  "utility": "supportive",
+  "rationale": "Quantifies albuminuria."
+ },
+ {
+  "test_item_id": "PROC.CARD.ECG",
+  "utility": "supportive",
+  "rationale": "Potassium 5.81 mmol/L."
+ },
+ {
+  "test_item_id": "LAB.MOL.PIGA",
+  "utility": "supportive",
+  "rationale": "Supports the diagnosis; not needed to make it."
+ },
+ {
+  "test_item_id": "LAB.BM.FLOW",
+  "utility": "supportive",
+  "rationale": "Showed CD16 and CD14 loss; prompted the high-sensitivity test."
+ },
+ {
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "utility": "supportive",
+  "rationale": "Low reticulocytes and platelets justify a marrow."
+ },
+ {
+  "test_item_id": "LAB.TBS.ELUATE",
+  "utility": "supportive",
+  "rationale": "Non-reactive: helps set aside AIHA."
+ },
+ {
+  "test_item_id": "LAB.IMM.COMPLEMENT",
+  "utility": "supportive",
+  "rationale": "Normal C3; lupus and complement-mediated HUS less likely."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANA",
+  "utility": "supportive",
+  "rationale": "Part of the AKI screen."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANCA",
+  "utility": "supportive",
+  "rationale": "Part of the AKI screen."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANTI_DSDNA",
+  "utility": "supportive",
+  "rationale": "Part of the AKI screen."
+ },
+ {
+  "test_item_id": "LAB.CHEM.URATE",
+  "utility": "supportive",
+  "rationale": "Raised in AKI."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FERRITIN",
+  "utility": "supportive",
+  "rationale": "Raised; iron status before any iron therapy."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CRP",
+  "utility": "supportive",
+  "rationale": "Only slightly raised: no active infection."
+ },
+ {
+  "test_item_id": "LAB.CHEM.PROCALCITONIN",
+  "utility": "supportive",
+  "rationale": "Normal: no sepsis."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PNH_CD55_CD59",
+  "utility": "low_yield",
+  "rationale": "Conventional CD55/CD59 is falsely normal here; the high-sensitivity test is the right one."
+ },
+ {
+  "test_item_id": "LAB.TBS.COLD_AGGLUTININ",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.TBS.DL_TEST",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.IMM.IMMUNOGLOBULINS",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.IMM.SPEP",
+  "utility": "low_yield",
+  "rationale": "No paraprotein."
+ },
+ {
+  "test_item_id": "LAB.IMM.IFE",
+  "utility": "low_yield",
+  "rationale": "No paraprotein."
+ },
+ {
+  "test_item_id": "LAB.IMM.FLC",
+  "utility": "low_yield",
+  "rationale": "Polyclonal, raised by AKI."
+ },
+ {
+  "test_item_id": "LAB.IMM.URINE_BJP",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.IMM.B2M",
+  "utility": "low_yield",
+  "rationale": "Raised by AKI only."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANTI_GBM",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.URINE.MYOGLOBIN",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.MICRO.BLOOD_CULTURE",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.MICRO.URINE_CULTURE",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.MICRO.STOOL_CULTURE",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.HAEM.HIT_ANTIBODY",
+  "utility": "low_yield",
+  "rationale": "Negative; reasonable with falling platelets on heparin."
+ },
+ {
+  "test_item_id": "LAB.HAEM.THROMBOPHILIA",
+  "utility": "low_yield",
+  "rationale": "Normal; the cause of the thrombosis is acquired."
+ },
+ {
+  "test_item_id": "LAB.HAEM.LUPUS_ANTICOAGULANT",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "PROC.BM.TREPHINE",
+  "utility": "low_yield",
+  "rationale": "Mildly hypocellular; no infiltrate."
+ },
+ {
+  "test_item_id": "LAB.BM.IRON_STAIN",
+  "utility": "low_yield",
+  "rationale": "Storage iron present."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.B12",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FOLATE",
+  "utility": "low_yield",
+  "rationale": "Low-normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.IRON_STUDIES",
+  "utility": "low_yield",
+  "rationale": "Unhelpful with ferritin raised by inflammation."
+ },
+ {
+  "test_item_id": "LAB.CHEM.EPO",
+  "utility": "low_yield",
+  "rationale": "Inappropriately low for the anaemia; renal."
+ },
+ {
+  "test_item_id": "LAB.HAEM.G6PD",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.IONISED_CALCIUM",
+  "utility": "low_yield",
+  "rationale": "Low, as expected in AKI."
+ },
+ {
+  "test_item_id": "IMG.US.ABDOMEN",
+  "utility": "low_yield",
+  "rationale": "Only the kidneys are abnormal."
+ },
+ {
+  "test_item_id": "IMG.XR.CHEST",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.NT_PROBNP",
+  "utility": "low_yield",
+  "rationale": "Raised by AKI; not cardiac."
+ },
+ {
+  "test_item_id": "LAB.CHEM.TROPONIN_T",
+  "utility": "low_yield",
+  "rationale": "Mildly raised by AKI."
+ },
+ {
+  "test_item_id": "LAB.CHEM.TROPONIN_I",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "PROC.CARD.ECHO",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LACTATE",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.AMYLASE",
+  "utility": "low_yield",
+  "rationale": "Raised by AKI only."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LIPASE",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.OSMOLALITY",
+  "utility": "low_yield",
+  "rationale": "Raised by urea only."
+ },
+ {
+  "test_item_id": "LAB.URINE.SODIUM",
+  "utility": "low_yield",
+  "rationale": "Tubular pattern; adds little once dialysis is needed."
+ },
+ {
+  "test_item_id": "LAB.URINE.OSMOLALITY",
+  "utility": "low_yield",
+  "rationale": "Isosthenuric."
+ },
+ {
+  "test_item_id": "LAB.ENDO.PTH",
+  "utility": "low_yield",
+  "rationale": "Secondary to AKI."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HBA1C",
+  "utility": "low_yield",
+  "rationale": "Falsely low with haemolysis and transfusion."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ESR",
+  "utility": "low_yield",
+  "rationale": "Non-specific."
+ },
+ {
+  "test_item_id": "LAB.CHEM.BNP",
+  "utility": "low_yield",
+  "rationale": "Raised by AKI."
+ },
+ {
+  "test_item_id": "LAB.URINE.PROTEIN_24H",
+  "utility": "low_yield",
+  "rationale": "The uPCR already quantifies it; oliguria makes collection hard."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LIPIDS",
+  "utility": "low_yield",
+  "rationale": "Unrelated."
+ },
+ {
+  "test_item_id": "IMG.CT.KUB",
+  "utility": "low_yield",
+  "rationale": "Ultrasound has already excluded obstruction."
+ },
+ {
+  "test_item_id": "LAB.CHEM.MAGNESIUM",
+  "utility": "low_yield",
+  "rationale": "Routine in AKI."
+ },
+ {
+  "test_item_id": "LAB.TOX.CHOLINESTERASE",
+  "utility": "low_yield",
+  "rationale": "Red cell acetylcholinesterase is an old, insensitive marker; only slightly low."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+  "utility": "unnecessary",
+  "rationale": "No dysplasia."
+ },
+ {
+  "test_item_id": "LAB.MOL.MYELOID_NGS",
+  "utility": "unnecessary",
+  "rationale": "No dysplasia; PIGA is not on the panel."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_RDT",
+  "utility": "unnecessary",
+  "rationale": "No travel or exposure."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MALARIA_SMEAR",
+  "utility": "unnecessary",
+  "rationale": "No travel or exposure."
+ },
+ {
+  "test_item_id": "LAB.SERO.LEPTOSPIRA",
+  "utility": "unnecessary",
+  "rationale": "No exposure."
+ },
+ {
+  "test_item_id": "LAB.SERO.DENGUE",
+  "utility": "unnecessary",
+  "rationale": "No exposure."
+ },
+ {
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "utility": "risky",
+  "rationale": "Contrast is contraindicated in dialysis-dependent AKI and a non-contrast study adds little."
+ }
+]

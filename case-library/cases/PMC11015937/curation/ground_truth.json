@@ -1,0 +1,323 @@
+{
+ "final_diagnosis": {
+  "text": "Plasmodium falciparum malaria in a traveller returned from Nigeria without prophylaxis, with microangiopathic haemolysis, thrombocytopenia, acute kidney injury and confusion mimicking thrombotic thrombocytopenic purpura",
+  "icd10": [
+   "B50.8"
+  ],
+  "accepted_synonyms": [
+   "falciparum malaria",
+   "Plasmodium falciparum malaria",
+   "P. falciparum malaria",
+   "Pf malaria",
+   "severe falciparum malaria",
+   "malignant tertian malaria",
+   "falciparum malaria with thrombotic microangiopathy"
+  ]
+ },
+ "final_dx": {
+  "id": "DX.FALCIPARUM_MALARIA",
+  "ids": [
+   "DX.SEVERE_MALARIA"
+  ],
+  "text": "Plasmodium falciparum malaria in a traveller returned from Nigeria without prophylaxis, with microangiopathic haemolysis, thrombocytopenia, acute kidney injury and confusion mimicking thrombotic thrombocytopenic purpura",
+  "icd10": [
+   "B50.8"
+  ],
+  "accepted_synonyms": [
+   "falciparum malaria",
+   "Plasmodium falciparum malaria",
+   "P. falciparum malaria",
+   "Pf malaria",
+   "severe falciparum malaria",
+   "malignant tertian malaria",
+   "falciparum malaria with thrombotic microangiopathy"
+  ]
+ },
+ "secondary_findings": [
+  "Confusion and acute kidney injury meet CDC and WHO-style criteria for severe infection (impaired consciousness, renal impairment); the treating team used oral artemether-lumefantrine",
+  "Raised ADAMTS13 antibody (22 U/mL) with only mildly reduced ADAMTS13 activity (49.1%): not immune TTP",
+  "Lifelong microcytosis, proposed as homozygous alpha-plus thalassaemia (curator's judgement call, not in the article)"
+ ],
+ "accepted_differential": [
+  "Thrombotic thrombocytopenic purpura",
+  "Other thrombotic microangiopathy (HUS, DIC)",
+  "Bacterial sepsis or enteric fever",
+  "Infective gastroenteritis (including Giardia and C. difficile)",
+  "Dengue, leptospirosis or viral hepatitis",
+  "Encephalitis or meningitis"
+ ],
+ "red_herrings": [
+  "PLASMIC score 6",
+  "ADAMTS13 antibody 22 U/mL",
+  "ADAMTS13 activity 49.1% (mildly reduced)",
+  "occasional schistocytes",
+  "diarrhoea and abdominal pain",
+  "raised procalcitonin",
+  "microcytosis",
+  "earlier discharge with antibiotics"
+ ],
+ "key_discriminators": [
+  "travel to Nigeria without prophylaxis (H04, H05)",
+  "P. falciparum on thick and thin films",
+  "ADAMTS13 activity above 10%",
+  "platelets recovering with antimalarial treatment alone",
+  "parasitaemia falling on treatment"
+ ],
+ "treatment_given": "Artemether-lumefantrine for four days; two units of packed red cells; supportive care. No plasma exchange.",
+ "outcome": "Afebrile after day 2; symptoms resolved by day 5; platelets normalised and she was discharged. At one month she was well, with haemoglobin 11.6 g/dL and haematocrit 36.7% (follow-up values kept out of play).",
+ "teaching_points": [
+  "Ask every febrile patient about travel: the first emergency visit missed it",
+  "Fever in a traveller back from sub-Saharan Africa is falciparum malaria until thick and thin films say otherwise, and the films should be repeated if negative",
+  "Falciparum malaria causes a thrombotic microangiopathy with schistocytes, undetectable haptoglobin, AKI and confusion that can score high on PLASMIC",
+  "An ADAMTS13 antibody alone is not diagnostic; immune TTP needs activity below 10%",
+  "Impaired consciousness or renal impairment make falciparum infection severe: intravenous artesunate is preferred",
+  "Travellers visiting friends and relatives are the group least likely to take prophylaxis"
+ ],
+ "must_do": [
+  {
+   "text": "Take a travel history, including antimalarial prophylaxis",
+   "if": {
+    "asked_any": [
+     "HX.SOCIAL.TRAVEL",
+     "HX.SOCIAL.TRAVEL_PROPHYLAXIS"
+    ]
+   }
+  },
+  {
+   "text": "Send thick and thin blood films (or a rapid antigen test) for malaria urgently",
+   "if": {
+    "ordered_any": [
+     "LAB.HAEM.MALARIA_SMEAR",
+     "LAB.HAEM.MALARIA_RDT"
+    ]
+   }
+  },
+  {
+   "text": "Grade severity: conscious level, blood glucose and parasite count",
+   "if": {
+    "all": [
+     {
+      "ordered_any": [
+       "LAB.CHEM.GLUCOSE_RANDOM",
+       "LAB.CHEM.CAPILLARY_GLUCOSE"
+      ]
+     },
+     {
+      "ordered_any": [
+       "LAB.HAEM.MALARIA_PARASITAEMIA",
+       "LAB.HAEM.MALARIA_SMEAR"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Start artemisinin-based treatment promptly (intravenous artesunate while confused or vomiting, or a full course of artemether-lumefantrine)",
+   "if": {
+    "plan_has_any": [
+     "RX.ANTIMALARIAL.ARTESUNATE",
+     "RX.ANTIMALARIAL.ARTEMETHER_LUMEFANTRINE"
+    ]
+   }
+  },
+  {
+   "text": "Rehydrate with intravenous fluids and monitor renal function",
+   "if": {
+    "plan_has_any": [
+     "RX.FLUIDS.IV"
+    ]
+   }
+  },
+  {
+   "text": "Monitor parasite counts and blood counts until the parasitaemia clears",
+   "if": {
+    "any": [
+     {
+      "plan_has": [
+       "ACT.REPEAT_BLOODS"
+      ]
+     },
+     {
+      "ordered_any": [
+       "LAB.HAEM.MALARIA_PARASITAEMIA"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Transfuse red cells when the haemoglobin falls to about 6-7 g/dL",
+   "if": {
+    "plan_has": [
+     "RX.TRANSFUSION.RED_CELLS"
+    ]
+   }
+  },
+  {
+   "text": "Notify public health",
+   "if": {
+    "plan_has": [
+     "ACT.NOTIFY_PUBLIC_HEALTH"
+    ]
+   }
+  }
+ ],
+ "must_not_do": [
+  {
+   "text": "Start plasma exchange for presumed TTP",
+   "if": {
+    "plan_has_any": [
+     "RX.IMMUNO.PLASMA_EXCHANGE"
+    ]
+   }
+  },
+  {
+   "text": "Give high-dose steroids, rituximab or caplacizumab for presumed TTP",
+   "if": {
+    "plan_has_any": [
+     "RX.STEROID.HIGH_DOSE",
+     "RX.IMMUNO.RITUXIMAB",
+     "RX.IMMUNO.CAPLACIZUMAB"
+    ]
+   }
+  },
+  {
+   "text": "Send her home again, or treat as gastroenteritis with antibiotics alone, without testing for malaria",
+   "if": {
+    "all": [
+     {
+      "plan_has_any": [
+       "ACT.DISCHARGE_FOLLOW_UP",
+       "RX.ANTIBIOTIC.*"
+      ]
+     },
+     {
+      "not": {
+       "ordered_any": [
+        "LAB.HAEM.MALARIA_SMEAR",
+        "LAB.HAEM.MALARIA_RDT",
+        "LAB.HAEM.FILM"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Treat falciparum infection acquired in Nigeria with chloroquine",
+   "if": {
+    "plan_has": [
+     "RX.ANTIMALARIAL.CHLOROQUINE"
+    ]
+   }
+  },
+  {
+   "text": "Transfuse platelets without bleeding",
+   "if": {
+    "plan_has": [
+     "RX.TRANSFUSION.PLATELETS"
+    ]
+   }
+  }
+ ],
+ "diagnosis_rubric_anchors": {
+  "5": "Falciparum malaria (severe or not), with the travel exposure identified",
+  "4": "Falciparum malaria, travel exposure not cited",
+  "3": "Malaria without the right species, or malarial haemolysis",
+  "2": "TTP, another thrombotic microangiopathy, DIC, sepsis, enteric fever or infective gastroenteritis as the final diagnosis",
+  "1": "Unrelated diagnosis, or one that would lead to harm"
+ },
+ "rubric": {
+  "rubric": [
+   {
+    "score": 5,
+    "text": "Falciparum malaria (severe or not), with the travel exposure identified",
+    "if": {
+     "all": [
+      {
+       "dx_in": [
+        "DX.FALCIPARUM_MALARIA",
+        "DX.SEVERE_MALARIA"
+       ]
+      },
+      {
+       "evidence_has": [
+        "H04"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "score": 4,
+    "text": "Falciparum malaria, travel exposure not cited",
+    "if": {
+     "dx_in": [
+      "DX.FALCIPARUM_MALARIA",
+      "DX.SEVERE_MALARIA"
+     ]
+    }
+   },
+   {
+    "score": 3,
+    "text": "Malaria without the right species, or malarial haemolysis",
+    "if": {
+     "dx_in": [
+      "DX.MALARIA_HAEMOLYSIS",
+      "DX.MIXED_MALARIA",
+      "DX.VIVAX_MALARIA",
+      "DX.KNOWLESI_MALARIA"
+     ]
+    }
+   },
+   {
+    "score": 2,
+    "text": "TTP, another thrombotic microangiopathy, DIC, sepsis, enteric fever or infective gastroenteritis as the final diagnosis",
+    "if": {
+     "dx_in": [
+      "DX.TTP",
+      "DX.MAHA_OTHER",
+      "DX.HUS",
+      "DX.ATYPICAL_HUS",
+      "DX.DIC",
+      "DX.SEPSIS",
+      "DX.TYPHOID_FEVER",
+      "DX.INFECTIOUS_DIARRHOEA"
+     ]
+    }
+   },
+   {
+    "score": 1,
+    "text": "Unrelated diagnosis, or one that would lead to harm",
+    "if": {
+     "not": {
+      "dx_in": [
+       "DX.FALCIPARUM_MALARIA",
+       "DX.SEVERE_MALARIA",
+       "DX.MALARIA_HAEMOLYSIS",
+       "DX.MIXED_MALARIA",
+       "DX.VIVAX_MALARIA",
+       "DX.KNOWLESI_MALARIA",
+       "DX.TTP",
+       "DX.MAHA_OTHER",
+       "DX.HUS",
+       "DX.ATYPICAL_HUS",
+       "DX.DIC",
+       "DX.SEPSIS",
+       "DX.TYPHOID_FEVER",
+       "DX.INFECTIOUS_DIARRHOEA"
+      ]
+     }
+    }
+   }
+  ],
+  "default_score": 1
+ },
+ "efficient_path": [
+  "Travel history (H04, H05)",
+  "Thick and thin films and rapid antigen test",
+  "Severity: GCS, glucose, lactate, renal function, parasite count",
+  "Artemisinin-based treatment; fluids; transfusion when Hb falls",
+  "Notify public health"
+ ]
+}

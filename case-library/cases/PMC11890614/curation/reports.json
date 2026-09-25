@@ -1,0 +1,434 @@
+[
+ {
+  "id": "RP01",
+  "test_item_id": "IMG.XR.CHEST",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.MILIARY_NODULES"
+  ],
+  "report_text": "Frontal chest radiograph. Innumerable small (1-3 mm) well-defined nodules distributed evenly through both lungs from apex to base. No consolidation, cavitation or pleural effusion. Hila and mediastinum not enlarged. Heart size normal.",
+  "impression": "Diffuse bilateral miliary nodular pattern. Differential: disseminated granulomatous infection (mycobacterial or fungal), sarcoidosis, metastatic disease. CT chest recommended.",
+  "suggested_reflex": [
+   "IMG.CT.CHEST"
+  ],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "R01 (article: innumerable bilateral miliary nodules). The article's own impression named a specific infection; the report gives the differential a radiologist would list instead (leak rule). Negatives added (no cavity, effusion or hilar enlargement) as the article reports none. Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP02",
+  "test_item_id": "IMG.CT.CHEST",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.MILIARY_NODULES",
+   "FND.SPLENOMEGALY"
+  ],
+  "report_text": "CT chest with contrast. Innumerable 1-3 mm nodules in a random distribution throughout both lungs, involving the subpleural lung and fissures, filling the entirety of both lungs. No cavitation, consolidation, tree-in-bud change or pleural effusion. No significant hilar or mediastinal lymph node enlargement. Visualised upper abdomen: the spleen is enlarged.",
+  "impression": "Diffuse random (miliary) micronodules in both lungs, most in keeping with haematogenous dissemination: disseminated infection (mycobacterial or fungal) first; miliary sarcoidosis and metastases less likely without perilymphatic distribution or nodes. Splenomegaly.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R02"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "R02 and Figure 4a (article). The random distribution and the absence of hilar nodes are the curator's additions: the discussion contrasts this case with sarcoidosis's typical bilateral hilar adenopathy and perilymphatic nodules. Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP03",
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.SPLENOMEGALY"
+  ],
+  "report_text": "CT abdomen and pelvis with contrast. Moderate splenomegaly (craniocaudal length 16 cm) with homogeneous enhancement and no focal lesion. Liver normal in size and attenuation. No abdominal or pelvic lymph node enlargement. Adrenal glands, kidneys and bowel normal. No ascites.",
+  "impression": "Moderate splenomegaly without focal lesions or lymphadenopathy.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R03"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "R03 (article: moderate splenomegaly; other findings not reported, so normal). Spleen length is the curator's figure for 'moderate'. Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP04",
+  "test_item_id": "IMG.CT.CTPA",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.CONSOLIDATION",
+   "FND.PLEURAL_EFFUSION"
+  ],
+  "report_text": "CT pulmonary angiogram. No filling defect in the pulmonary arteries. New widespread bilateral airspace opacities with ground-glass change and dependent consolidation, superimposed on the known diffuse micronodules; progressive since the admission CT. Small bilateral pleural effusions. Endotracheal tube in a satisfactory position.",
+  "impression": "No pulmonary embolism. New diffuse bilateral airspace disease, progressive since admission: acute lung injury, infection or haemorrhage are the main considerations.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R04"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "R04 (article, day 18). Small effusions and the tube position are added; ARDS was the team's concern (article). Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP05",
+  "test_item_id": "PROC.RESP.BRONCHOSCOPY",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Flexible bronchoscopy under sedation. Vocal cords normal. Trachea and bronchi to subsegmental level normal apart from mild mucosal erythema; no endobronchial lesion; scanty clear secretions. Bronchoalveolar lavage from the right middle lobe (150 mL instilled, 60 mL returned, sent for microbiology). Transbronchial biopsies from the right lower lobe; no significant bleeding.",
+  "impression": "Normal airways. Lavage and transbronchial biopsies taken.",
+  "suggested_reflex": [
+   "LAB.MICRO.BAL_MYCOBACTERIA",
+   "PROC.BIOPSY.LUNG"
+  ],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G20: airway findings not reported; normal or mildly inflamed, no endobronchial lesion. Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP06",
+  "test_item_id": "PROC.BIOPSY.LUNG",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.NON_CASEATING_GRANULOMA"
+  ],
+  "report_text": "Transbronchial lung biopsy (four fragments). Lung parenchyma containing several well-formed epithelioid granulomas with Langhans-type multinucleate giant cells and a rim of lymphocytes. No caseous necrosis. Ziehl-Neelsen stain: no acid-fast bacilli seen. Grocott stain: no fungi seen. No vasculitis, dysplasia or malignancy.",
+  "impression": "Non-necrotising granulomatous inflammation. Special stains negative for organisms.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R06"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "R06 and Figure 2 (article: non-necrotising granulomas, AFB stain negative). The Grocott stain is added (the fungal work-up was negative). Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP07",
+  "test_item_id": "PROC.BM.TREPHINE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.MARROW_GRANULOMAS",
+   "FND.NON_CASEATING_GRANULOMA"
+  ],
+  "report_text": "Bone marrow trephine, 18 mm. Cellularity about 30%, reduced for age. Multiple small foci of non-caseating epithelioid granulomas with occasional giant cells. Trilineage haematopoiesis present with reduced granulopoiesis. No lymphoma or metastatic infiltrate. Ziehl-Neelsen stain: no acid-fast bacilli seen. Reticulin not increased.",
+  "impression": "Non-caseating granulomatous inflammation in the marrow; no lymphoma.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R07"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "R07 and Figure 3a (article). Cellularity, stains and the absence of lymphoma are added (G15; the abstract says there was no evidence of malignancy). Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP08",
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.HAEMOPHAGOCYTOSIS"
+  ],
+  "report_text": "Bone marrow aspirate. Particulate but hypocellular. Occasional macrophages containing ingested red cells, platelets and neutrophil precursors. Myeloid to erythroid ratio 1.5:1; granulopoiesis reduced and left-shifted. Megakaryocytes present. No blasts; no abnormal lymphoid cells; plasma cells 3%.",
+  "impression": "Occasional haemophagocytic macrophages in a hypocellular marrow. No blasts or lymphoma cells.",
+  "suggested_reflex": [
+   "LAB.BM.MYCOBACTERIA",
+   "LAB.BM.FLOW"
+  ],
+  "based_on": [
+   "R08"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "R08 and Figure 3b (article: occasional haemophagocytic cells). The remaining description is the curator's, consistent with the day-13 to day-17 pancytopenia. Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP09",
+  "test_item_id": "LAB.BM.FLOW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Bone marrow flow cytometry. Lymphocytes 12% of events, polyclonal B cells (kappa:lambda 1.4) and T cells without aberrant antigen loss; CD4:CD8 ratio 1.1. Blasts 0.8%. No abnormal population.",
+  "impression": "No evidence of a lymphoproliferative disorder or increased blasts.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No malignancy (abstract).",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP10",
+  "test_item_id": "LAB.HAEM.PB_FLOW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Peripheral blood flow cytometry. Lymphopenia; B, T and NK cells present in normal proportions; polyclonal B cells; no aberrant T-cell phenotype.",
+  "impression": "No evidence of a circulating lymphoproliferative disorder.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No malignancy (abstract).",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP11",
+  "test_item_id": "PROC.BIOPSY.LIVER",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.NON_CASEATING_GRANULOMA"
+  ],
+  "report_text": "Percutaneous liver biopsy, two cores. Several small non-necrotising epithelioid granulomas in portal tracts and lobules, with mild lobular inflammation and Kupffer cell hyperplasia. No caseous necrosis. Ziehl-Neelsen stain: no acid-fast bacilli seen. No steatosis, fibrosis or malignancy.",
+  "impression": "Granulomatous hepatitis, non-necrotising; special stains negative.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G16 (not done in the article; the curator's decision). Granulomas like those in the lung and marrow explain the raised ALP; stains negative, as in every early sample.",
+  "confidence": 0.55
+ },
+ {
+  "id": "RP12",
+  "test_item_id": "LAB.HAEM.FILM",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Red cells normocytic and normochromic with mild anisocytosis and rouleaux. White cells reduced in number with lymphopenia; neutrophils morphologically normal. Platelets adequate. No blasts, parasites or red cell fragments.",
+  "impression": "Normocytic anaemia with rouleaux and lymphopenia, in keeping with chronic inflammation.",
+  "suggested_reflex": [
+   "LAB.HAEM.FILM_REVIEW"
+  ],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G08: 'mild normocytic anaemia' (article). Describes the admission film. Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP13",
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Reviewed by a haematopathologist. Normocytic normochromic red cells with rouleaux; no spherocytes, fragments or inclusions. Lymphopenia; the lymphocytes are small and mature, without atypical or abnormal forms. Neutrophils without dysplasia. Platelets normal in number and appearance. No circulating haemophagocytes.",
+  "impression": "Anaemia of chronic inflammation pattern; no features of a primary haematological disorder.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Admission film reviewed. Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "confidence": 0.65
+ },
+ {
+  "id": "RP14",
+  "test_item_id": "LAB.HAEM.MALARIA_SMEAR",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Thick and thin films examined. No malaria parasites seen.",
+  "impression": "Negative for malaria parasites.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "He left Haiti about four years ago; malaria does not explain months of fever.",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP15",
+  "test_item_id": "IMG.US.ABDOMEN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.SPLENOMEGALY"
+  ],
+  "report_text": "Ultrasound abdomen. Spleen enlarged at 15.5 cm with homogeneous echotexture and no focal lesion. Liver normal in size and echotexture. Gallbladder, bile ducts, pancreas and kidneys normal. No ascites. No enlarged lymph nodes seen.",
+  "impression": "Splenomegaly without focal lesion.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Matches the admission CT (R03).",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP16",
+  "test_item_id": "IMG.NM.PET_CT",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.MILIARY_NODULES",
+   "FND.SPLENOMEGALY"
+  ],
+  "report_text": "FDG PET-CT. Diffuse increased uptake through innumerable small nodules in both lungs. Diffusely increased uptake in an enlarged spleen and throughout the bone marrow. No FDG-avid lymph node mass, no focal bone lesion and no other focal abnormality.",
+  "impression": "Diffuse FDG-avid pulmonary micronodules with avid splenomegaly and marrow: an active systemic inflammatory or infectious process is likely; no nodal mass to suggest lymphoma.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Not done in the article. Granulomatous infection is FDG-avid and cannot be told from sarcoidosis or lymphoma by uptake alone; no nodal mass, since the CT showed none.",
+  "confidence": 0.55
+ },
+ {
+  "id": "RP17",
+  "test_item_id": "IMG.MRI.BRAIN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "MRI brain with gadolinium. No focal parenchymal lesion, ring-enhancing lesion or abnormal meningeal enhancement. Ventricles normal in size. No hydrocephalus.",
+  "impression": "Normal MRI brain.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G17: no neurological involvement is reported and none is invented (skill rule 2).",
+  "confidence": 0.6
+ },
+ {
+  "id": "RP18",
+  "test_item_id": "PROC.CARD.ECG",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Sinus tachycardia 112/min. Normal axis. PR 150 ms, QRS 88 ms, QTc 432 ms. No ST-segment or T-wave abnormality.",
+  "impression": "Sinus tachycardia; otherwise normal ECG.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Skill rule 9: rate from the febrile admission pulse (115/min, article).",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP19",
+  "test_item_id": "PROC.CARD.ECHO",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Transthoracic echocardiogram. Normal left ventricular size and systolic function, LVEF 62%, no regional wall motion abnormality. Normal right ventricle. Valves structurally normal; no vegetations. No pericardial effusion. Estimated pulmonary artery systolic pressure 30 mmHg.",
+  "impression": "Normal echocardiogram; no vegetations or pericardial effusion.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "No cardiac involvement reported; excludes endocarditis and pericardial disease for the fever work-up.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP20",
+  "test_item_id": "PROC.NEURO.LP",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Lumbar puncture at L3-L4 in the left lateral position, atraumatic. Opening pressure 15 cmH2O. Clear, colourless CSF; samples sent for cell count, protein, glucose, Gram stain and culture.",
+  "impression": "Uncomplicated lumbar puncture with normal opening pressure.",
+  "suggested_reflex": [
+   "LAB.CSF.ANALYSIS",
+   "LAB.CSF.CULTURE"
+  ],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "G17: normal CSF (curator's decision).",
+  "confidence": 0.6
+ },
+ {
+  "id": "RP21",
+  "test_item_id": "IMG.US.DOPPLER_LEGS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Venous Doppler ultrasound of both legs. Common femoral, femoral and popliteal veins fully compressible with normal flow; calf veins patent.",
+  "impression": "No deep vein thrombosis.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "The CT angiogram excluded an embolus (article).",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP22",
+  "test_item_id": "LAB.IMM.SPEP",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Serum protein electrophoresis. Albumin reduced. Alpha-1 and alpha-2 fractions increased. Diffuse polyclonal increase in the gamma region. No monoclonal band.",
+  "impression": "Acute-phase pattern with polyclonal hypergammaglobulinaemia; no paraprotein.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Matches albumin 29 g/L, total protein 76 g/L and IgG 22 g/L.",
+  "confidence": 0.7
+ }
+]

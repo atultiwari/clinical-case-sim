@@ -105,3 +105,13 @@ def test_a_folder_without_a_gold_file_is_refused(
 ) -> None:
     assert plan.main([str(tmp_path)]) == 1
     assert "gold case file" in capsys.readouterr().err
+
+
+def test_render_can_escape_json_to_ascii() -> None:
+    sql = "select {{doc:jsonb}}"
+    doc = {"text": "37 \u00b0C, \u03b1\u03b1/\u03b1\u03b1"}
+
+    assert "°" in plan.render(sql, {"doc": doc})
+    rendered = plan.render(sql, {"doc": doc}, ascii_json=True)
+    assert rendered.isascii()
+    assert "\\u00b0" in rendered

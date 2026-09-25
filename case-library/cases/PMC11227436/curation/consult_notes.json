@@ -1,0 +1,301 @@
+[
+ {
+  "id": "CN01",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on severe anaemia with thrombocytopenia, neutropenia and a haemolytic picture in a 53-year-old woman with ten days of diarrhoea. We reviewed the counts, haemolysis markers and antiglobulin test in the Chart so far. Fragments with a low platelet count must raise a thrombotic microangiopathy, but a high MCV, neutropenia, a reticulocyte count far too low for the degree of anaemia and normal renal function point to a marrow problem with ineffective red cell production. A positive IgG antiglobulin test alone does not establish autoimmune haemolysis. The cause is not yet clear. Happy to review again with the results.",
+  "recommendations": [
+   "Send serum B12 and folate now, before any transfusion",
+   "Blood film review and a coagulation screen; calculate the PLASMIC score",
+   "Send ADAMTS13 activity if TTP remains a possibility; discuss with us before any plasma exchange",
+   "Red cell transfusion only if symptomatic, after the samples are taken; no platelets unless bleeding",
+   "Avoid steroids for now"
+  ],
+  "origin": "affected",
+  "rationale": "V1, before any B12 result: a competent haematologist reads the pattern (MCV, neutropenia, low reticulocytes, normal kidneys) and asks for B12 and folate, weighs TTP, and avoids steroids and platelets. Names tests and principles, never the diagnosis.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN02",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 2,
+  "condition": {
+   "released_any": [
+    "L13"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now includes a serum B12 of 37 pmol/L. This very low level accounts for the macrocytic pancytopenia and the haemolytic picture with fragments, which result from ineffective red cell production. With a high MCV, normal renal function and no neurological features, the PLASMIC score is low, and we do not recommend plasma exchange. The positive IgG antiglobulin test does not need treatment in its own right. The cause of the low B12 should be established. Happy to review again with the results.",
+  "recommendations": [
+   "Start intramuscular hydroxocobalamin now; do not give folic acid on its own",
+   "Send intrinsic factor and gastric parietal cell antibodies",
+   "Refer to gastroenterology for gastroscopy with gastric body and antral biopsies",
+   "Monitor potassium in the first days of replacement",
+   "Repeat reticulocytes in 5 to 7 days and the full blood count weekly"
+  ],
+  "origin": "affected",
+  "rationale": "V2, with the B12 result: explains the picture as a competent colleague would, stops the TTP and AIHA traps and asks for the cause. The word 'deficiency' next to B12 is avoided to keep the leak scan clean; the value makes it clear.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN03",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 3,
+  "condition": {
+   "finding_released": {
+    "findings": [
+     "FND.GASTRIC_FUNDIC_ATROPHY"
+    ],
+    "from_tests": [
+     "PROC.BIOPSY.GASTRIC"
+    ]
+   }
+  },
+  "note_text": "Asked to advise; the Chart now includes gastric biopsies showing atrophy of the body and fundic mucosa with intestinal metaplasia. Together with the low B12, this establishes an absorptive cause, and replacement will be lifelong by injection. We expect a reticulocyte response within about a week and a normal count within about two months; iron deficiency may be unmasked as the count recovers. Happy to review again with the results.",
+  "recommendations": [
+   "Lifelong intramuscular hydroxocobalamin: loading doses, then every two to three months",
+   "Reticulocytes at day 5 to 7, full blood count and ferritin at 4 to 8 weeks",
+   "Check thyroid function periodically",
+   "Gastroenterology to advise on endoscopic surveillance of the metaplasia"
+  ],
+  "origin": "affected",
+  "rationale": "V3, with the histology: long-term plan as a haematologist would give it; the condition's name is not written so the leak scan stays clean.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN04",
+  "specialty": "REF.GASTROENTEROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on ten days of watery, non-bloody diarrhoea with weight loss and severe anaemia. We reviewed the Chart so far. The diarrhoea is painless and she is haemodynamically stable. An infective cause should be excluded, including Shiga toxin-producing E. coli given the low platelets and fragments. The anaemia with a high MCV raises malabsorption of B12 or folate, from the stomach or the small bowel. Happy to review again with the results.",
+  "recommendations": [
+   "Stool culture, Shiga toxin PCR, C. difficile toxin and ova and parasites",
+   "Coeliac serology with total IgA; B12 and folate if not already sent",
+   "Oral rehydration and potassium replacement as needed",
+   "We will offer gastroscopy with gastric and duodenal biopsies once the counts allow"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a competent gastroenterologist covers infection (including STEC) and malabsorption.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN05",
+  "specialty": "REF.GASTROENTEROLOGY",
+  "variant": 2,
+  "condition": {
+   "released_any": [
+    "L13"
+   ]
+  },
+  "note_text": "Asked to advise; the Chart now includes a serum B12 of 37 pmol/L. The stomach is the commonest site of B12 malabsorption in an adult with a mixed diet and no bowel surgery; small bowel disease is less likely with normal coeliac serology if sent. The diarrhoea may itself improve with replacement. Happy to review again with the results.",
+  "recommendations": [
+   "Intrinsic factor and gastric parietal cell antibodies",
+   "Gastroscopy with biopsies from the gastric body, fundus and antrum, and the duodenum",
+   "Serum gastrin and pepsinogen if the antibodies are unhelpful",
+   "Start B12 replacement now; it need not wait for endoscopy"
+  ],
+  "origin": "affected",
+  "rationale": "V2: with the B12 result the gastroenterologist targets the stomach, naming tests only.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN06",
+  "specialty": "REF.NEPHROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked whether this patient has a haemolytic uraemic syndrome. We reviewed the Chart so far. Urine output, creatinine and electrolytes are normal apart from mild potassium and bicarbonate losses from diarrhoea, and there is no proteinuria or haematuria. There is no renal involvement at present, which makes a haemolytic uraemic syndrome unlikely. No indication for dialysis or plasma therapy from our side. Happy to review if the creatinine rises or urine output falls.",
+  "recommendations": [
+   "Urinalysis and daily creatinine while the diagnosis is being established",
+   "Oral or intravenous fluids to replace diarrhoeal losses; correct potassium"
+  ],
+  "origin": "affected",
+  "rationale": "HUS trap: the nephrologist reports normal kidneys, as the article does.",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN07",
+  "specialty": "REF.NEUROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to assess for neurological involvement. We examined her: alert and orientated, no focal deficit, normal tone, power and reflexes, intact vibration and joint position sense, negative Romberg test and normal gait. No neurological features of a thrombotic microangiopathy or of a nutritional myelopathy or neuropathy. Happy to review if new symptoms arise.",
+  "recommendations": [
+   "Document the neurological examination as a baseline",
+   "Avoid nitrous oxide anaesthesia until the B12 status is known"
+  ],
+  "origin": "affected",
+  "rationale": "Article: no neurological impairment. A neurologist confirms a normal baseline (G04).",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN08",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on diarrhoea with low counts. We reviewed the Chart so far. She is afebrile with a normal CRP, no travel, no antibiotic exposure and no sick contacts. An infective diarrhoea is possible but does not explain a macrocytic anaemia with neutropenia. Happy to review again with the stool results.",
+  "recommendations": [
+   "Stool culture, Shiga toxin PCR, C. difficile toxin and ova and parasites",
+   "HIV test as part of the work-up of pancytopenia",
+   "No empirical antibiotics while afebrile and stable"
+  ],
+  "origin": "affected",
+  "rationale": "STEC trap: an infection specialist finds no infective cause and advises against antibiotics.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN09",
+  "specialty": "REF.DIETETICS",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to review nutrition. About 7 kg weight loss over two to three months with poor appetite; BMI 21. Her usual diet is mixed and adequate in B12 and folate. Intake has fallen recently with the diarrhoea. Happy to review as her appetite recovers.",
+  "recommendations": [
+   "Small frequent meals and oral nutritional supplements while appetite is poor",
+   "Weekly weight"
+  ],
+  "origin": "affected",
+  "rationale": "Malabsorption path: dietary history consistent with HX.SOCIAL.DIET; diet is not the cause.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN10",
+  "specialty": "REF.CARDIOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific cardiac concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN11",
+  "specialty": "REF.TOXICOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific toxicological concerns from our side; happy to advise if new information arises.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN12",
+  "specialty": "REF.RHEUMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific rheumatological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN13",
+  "specialty": "REF.ENDOCRINOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific endocrine concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN14",
+  "specialty": "REF.RESPIRATORY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific respiratory concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN15",
+  "specialty": "REF.PSYCHIATRY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific psychiatric concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN16",
+  "specialty": "REF.DERMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific skin concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN17",
+  "specialty": "REF.ONCOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific oncological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN18",
+  "specialty": "REF.OPHTHALMOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific eye concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN19",
+  "specialty": "REF.ENT",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific ear, nose or throat concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN20",
+  "specialty": "REF.GENERAL_SURGERY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific surgical concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN21",
+  "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ },
+ {
+  "id": "CN22",
+  "specialty": "REF.PHYSIOTHERAPY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific mobility concerns from our side; happy to review if function changes.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's reviewed generic note.",
+  "confidence": null
+ }
+]

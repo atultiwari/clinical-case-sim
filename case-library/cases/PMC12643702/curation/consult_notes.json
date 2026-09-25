@@ -1,0 +1,341 @@
+[
+ {
+  "id": "CN01",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on bleeding from the gums and nose with visible haematuria. We reviewed the Chart so far. Bleeding from several mucosal sites at once points to a general haemostatic problem rather than a local one. If the platelet count is normal and the PT and APTT are both prolonged, this is a coagulation-factor problem: deficiency or antagonism of the vitamin K-dependent factors, liver disease, consumption or an inhibitor are the main possibilities, and normal fibrinogen and D-dimer would make consumption unlikely. If the clotting times are markedly prolonged, treat without waiting for the factor assays. Happy to review again with the results.",
+  "recommendations": [
+   "Give intravenous vitamin K now",
+   "Mixing study",
+   "Factor assays: II, V, VII, IX and X (with VIII if the APTT is out of proportion)",
+   "Fibrinogen, D-dimer and a blood film if not already done",
+   "Ask about anticoagulant medicines in the household and about rat poison",
+   "Group and save; hold off invasive procedures until the clotting improves"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a competent haematologist with PT/APTT 112 s and normal platelets. Lists the possibilities in order without naming the cause.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN02",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 2,
+  "condition": {
+   "all": [
+    {
+     "released_any": [
+      "L08",
+      "L09",
+      "L10",
+      "L11"
+     ]
+    },
+    {
+     "released_any": [
+      "L12"
+     ]
+    }
+   ]
+  },
+  "note_text": "Asked to review the factor assays. Factors II, VII, IX and X are all very low while factor V is normal, with normal fibrinogen and D-dimer. That pattern is typical of vitamin K deficiency or a vitamin K antagonist, not of liver disease (factor V would also be low) or consumption. Diet alone rarely drives factors this low, and he takes no warfarin, so an undisclosed anticoagulant, including a long-acting one, must be excluded. Happy to review again with the results.",
+  "recommendations": [
+   "Continue intravenous vitamin K daily and follow the INR",
+   "Send an anticoagulant rodenticide panel and a warfarin level",
+   "Repeat the history of possible exposures, including food, travel and the household",
+   "Prothrombin complex concentrate only for life-threatening bleeding"
+  ],
+  "origin": "affected",
+  "rationale": "V2: the factor pattern (II, VII, IX, X low; V normal) points to vitamin K deficiency or antagonism; recommending a rodenticide panel names a test, not the diagnosis, as the article's team did.",
+  "confidence": 0.75
+ },
+ {
+  "id": "CN03",
+  "specialty": "REF.HAEMATOLOGY",
+  "variant": 3,
+  "condition": {
+   "released_any": [
+    "L13"
+   ]
+  },
+  "note_text": "Asked to advise on management now that the anticoagulant rodenticide panel is positive. Long-acting agents of this kind persist in the body for months, which explains the partial and unstable response to 10 mg doses of vitamin K. The coagulopathy will recur if vitamin K is stopped early. Happy to review again with the results.",
+  "recommendations": [
+   "Oral vitamin K 100 mg daily on discharge, for months",
+   "INR at least weekly at first, then according to stability",
+   "Continue until the INR stays normal off treatment; consider repeating the level",
+   "Safety-net advice about bleeding; haematology clinic follow-up"
+  ],
+  "origin": "affected",
+  "rationale": "V3: after the positive panel; the article's regimen (100 mg oral daily, INR follow-up for months).",
+  "confidence": 0.8
+ },
+ {
+  "id": "CN04",
+  "specialty": "REF.TOXICOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on an unexplained coagulopathy with bleeding. We reviewed the Chart so far. When the PT and APTT are both prolonged in a patient who says he takes no anticoagulant, an unrecognised exposure to a coumarin-type anticoagulant should be considered, whether from medicines in the household, rodenticides at home or work, contaminated products, or the food chain. Many exposed patients are unaware of it. Happy to review again with the results.",
+  "recommendations": [
+   "Warfarin level and an anticoagulant rodenticide panel",
+   "Detailed exposure history: household medicines, pest control, products used, foods",
+   "High-dose vitamin K; expect a slow response if a long-acting agent is involved"
+  ],
+  "origin": "affected",
+  "rationale": "V1: a toxicologist asked about an unexplained coagulopathy would list the exposure routes, including the food chain, without knowing the answer.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN05",
+  "specialty": "REF.TOXICOLOGY",
+  "variant": 2,
+  "condition": {
+   "released_any": [
+    "L13"
+   ]
+  },
+  "note_text": "Asked to advise after a positive anticoagulant rodenticide panel. The patient reports no use of rodenticide at home or at work. These agents concentrate in rodents and in the animals that eat them, so a history of unusual meats, including food bought abroad, is worth taking carefully; intentional ingestion by the patient or by another person should also be considered sensitively. Happy to review again with the results.",
+  "recommendations": [
+   "Take a detailed food history, including meat bought at markets abroad",
+   "Consider a sensitive assessment for intentional exposure if no source is found",
+   "Oral vitamin K 50-100 mg daily, guided by the INR, for months",
+   "Report to the regional poisons centre"
+  ],
+  "origin": "affected",
+  "rationale": "V2: the article's reasoning after the positive screen (no household source; intentional poisoning considered; food chain).",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN06",
+  "specialty": "REF.GASTROENTEROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about bleeding in a man with chronic hepatitis B on tenofovir. We reviewed the Chart. The endoscopy before admission showed no upper gastrointestinal source; the blood was coming from the mouth. Suppressed hepatitis B without signs of chronic liver disease would not usually prolong the clotting times this much; liver disease would lower factor V and fibrinogen as well. Happy to review again with the results.",
+  "recommendations": [
+   "Liver tests, albumin and factor V",
+   "Liver ultrasound and elastography as part of routine hepatitis B care",
+   "Continue tenofovir",
+   "No repeat endoscopy or liver biopsy while the clotting is uncorrected"
+  ],
+  "origin": "affected",
+  "rationale": "V1: the gastroenterologist separates the hepatitis B from the coagulopathy and warns against invasive tests.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN07",
+  "specialty": "REF.DENTISTRY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to review gum bleeding. We saw him before admission and prescribed tranexamic acid, without improvement. The gums ooze from the margins without a local dental cause to explain it, and he is also bleeding from the nose and into the urine. This points to a general bleeding problem rather than a dental one. Happy to review again with the results.",
+  "recommendations": [
+   "Investigate a systemic bleeding disorder",
+   "Soft toothbrush and chlorhexidine mouthwash; local pressure for oozing",
+   "Defer dental extractions and scaling until the clotting is corrected"
+  ],
+  "origin": "affected",
+  "rationale": "V1: consistent with H05 and E01; a dentist sees bleeding from several sites as systemic.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN08",
+  "specialty": "REF.ENT",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to review the nosebleeds. Anterior rhinoscopy shows dried blood and oozing at the left nostril without a single bleeding vessel. Recurrent nosebleeds together with gum and urinary bleeding suggest a general bleeding disorder. Happy to review again with the results.",
+  "recommendations": [
+   "Correct the clotting defect",
+   "Local pressure; nasal packing only if bleeding persists",
+   "Avoid cautery until the clotting improves"
+  ],
+  "origin": "affected",
+  "rationale": "V1: ENT view of epistaxis within a systemic bleeding picture.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN09",
+  "specialty": "REF.NEPHROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to review visible haematuria in a man who is also bleeding from the gums and nose. We reviewed the Chart. Bleeding from several sites suggests the haematuria is part of a general bleeding problem. If renal function is normal and the urine shows red cells of uniform appearance without casts, a glomerular cause is unlikely. Happy to review again with the results.",
+  "recommendations": [
+   "Correct the coagulopathy and repeat the urinalysis",
+   "Renal tract ultrasound; urology review if haematuria persists once clotting is normal",
+   "No renal biopsy"
+  ],
+  "origin": "affected",
+  "rationale": "V1: haematuria in the context of the coagulopathy (G09).",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN10",
+  "specialty": "REF.PSYCHIATRY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to assess whether the bleeding could be self-inflicted. We spoke with him. He is worried about the bleeding, his mood is reactive and appropriate, and he denies any thoughts of self-harm, now or in the past. There is no history of mental illness or substance misuse, and nothing suggests he is fabricating symptoms. We found no evidence of deliberate self-poisoning. Happy to review again with the results.",
+  "recommendations": [
+   "No psychiatric follow-up needed on current evidence",
+   "Continue to look for an accidental source of exposure",
+   "Ask sensitively about the safety of the household"
+  ],
+  "origin": "affected",
+  "rationale": "V1: psychiatry finds no mental illness or intent (the article considered and set aside intentional poisoning).",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN11",
+  "specialty": "REF.RHEUMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about lupus, given his sister's diagnosis. He has no rash, mouth ulcers or joint symptoms. A family history alone does not explain mucosal bleeding of this kind; lupus usually bleeds through a low platelet count, so check that first. Happy to review again with the results.",
+  "recommendations": [
+   "ANA and complement if not already done",
+   "Lupus anticoagulant testing is hard to interpret while the clotting factors are low"
+  ],
+  "origin": "affected",
+  "rationale": "V1: no features of lupus (P9).",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN12",
+  "specialty": "REF.ENDOCRINOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to advise on diabetes control. He admits often missing his metformin. After recent blood loss an HbA1c will underestimate his average glucose, so interpret it with capillary glucose readings. Happy to review again with the results.",
+  "recommendations": [
+   "Plasma glucose, HbA1c and capillary glucose monitoring during admission",
+   "Support adherence to metformin",
+   "Add a second agent if control remains poor",
+   "Diabetes clinic follow-up"
+  ],
+  "origin": "affected",
+  "rationale": "V1: diabetes only; nothing on the coagulopathy.",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN13",
+  "specialty": "REF.INFECTIOUS_DISEASES",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked about infection after a month in China. He has been back two months and is afebrile. Without fever, and if the platelet count and renal function are normal, a viral haemorrhagic fever, dengue or leptospirosis is unlikely. Happy to review again with the results.",
+  "recommendations": [
+   "Dengue and leptospira serology only if fever develops",
+   "Continue tenofovir"
+  ],
+  "origin": "affected",
+  "rationale": "V1: travel infection unlikely (P12).",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN14",
+  "specialty": "REF.DIETETICS",
+  "variant": 1,
+  "condition": null,
+  "note_text": "Asked to review the diet. He eats mostly leftover meats and very few vegetables or fruit. That may lower his vitamin K intake, but diet alone rarely causes bleeding of this degree in an adult who is otherwise absorbing normally. Happy to review again with the results.",
+  "recommendations": [
+   "Increase green vegetables and fruit",
+   "Diabetes-appropriate dietary advice",
+   "Review again after discharge"
+  ],
+  "origin": "affected",
+  "rationale": "V1: dietary deficiency is not enough to explain the factor levels (P7).",
+  "confidence": 0.7
+ },
+ {
+  "id": "CN15",
+  "specialty": "REF.CARDIOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific cardiac concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN16",
+  "specialty": "REF.NEUROLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific neurological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN17",
+  "specialty": "REF.RESPIRATORY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific respiratory concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN18",
+  "specialty": "REF.DERMATOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific skin concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN19",
+  "specialty": "REF.ONCOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific oncological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN20",
+  "specialty": "REF.OPHTHALMOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific eye concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN21",
+  "specialty": "REF.GENERAL_SURGERY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific surgical concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN22",
+  "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific obstetric or gynaecological concerns from our side; happy to review if new problems arise.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ },
+ {
+  "id": "CN23",
+  "specialty": "REF.PHYSIOTHERAPY",
+  "variant": 1,
+  "condition": null,
+  "note_text": "No specific mobility concerns from our side; happy to review if function changes.",
+  "recommendations": [],
+  "origin": "rule",
+  "rationale": "Off the case's paths: the catalogue's generic note for this specialty.",
+  "confidence": null
+ }
+]

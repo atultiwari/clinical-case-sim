@@ -1,0 +1,382 @@
+[
+ {
+  "test_item_id": "LAB.HAEM.CBC",
+  "utility": "essential",
+  "rationale": "Macrocytic pancytopenia is the starting point."
+ },
+ {
+  "test_item_id": "LAB.HAEM.RETIC",
+  "utility": "essential",
+  "rationale": "A low count with haemolysis shows ineffective erythropoiesis."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM",
+  "utility": "essential",
+  "rationale": "Fragments, oval macrocytes and hypersegmented neutrophils."
+ },
+ {
+  "test_item_id": "LAB.CHEM.B12",
+  "utility": "essential",
+  "rationale": "Diagnostic: 37 pmol/L."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FOLATE",
+  "utility": "essential",
+  "rationale": "Must be measured with B12 before replacement or transfusion."
+ },
+ {
+  "test_item_id": "LAB.IMM.IF_GPC_ANTIBODIES",
+  "utility": "essential",
+  "rationale": "Establishes the cause (parietal cell antibodies positive)."
+ },
+ {
+  "test_item_id": "PROC.BIOPSY.GASTRIC",
+  "utility": "essential",
+  "rationale": "Confirms body-predominant atrophy with intestinal metaplasia."
+ },
+ {
+  "test_item_id": "PROC.ENDO.OGD",
+  "utility": "essential",
+  "rationale": "Needed for the gastric biopsies; baseline for surveillance."
+ },
+ {
+  "test_item_id": "LAB.CHEM.RENAL",
+  "utility": "essential",
+  "rationale": "Normal kidneys argue against HUS and TTP (PLASMIC creatinine)."
+ },
+ {
+  "test_item_id": "LAB.HAEM.COAG_SCREEN",
+  "utility": "essential",
+  "rationale": "INR for the PLASMIC score; excludes DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "utility": "supportive",
+  "rationale": "Adds a haematopathologist's comment towards B12 and folate."
+ },
+ {
+  "test_item_id": "LAB.HAEM.SCHISTOCYTE_COUNT",
+  "utility": "supportive",
+  "rationale": "Quantifies the fragments (2.3%)."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LDH",
+  "utility": "supportive",
+  "rationale": "Confirms haemolysis and ineffective erythropoiesis."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HAPTOGLOBIN",
+  "utility": "supportive",
+  "rationale": "Confirms haemolysis."
+ },
+ {
+  "test_item_id": "LAB.CHEM.LFT",
+  "utility": "supportive",
+  "rationale": "Unconjugated pattern; normal liver enzymes."
+ },
+ {
+  "test_item_id": "LAB.CHEM.BILI_FRACTIONS",
+  "utility": "supportive",
+  "rationale": "Shows the unconjugated hyperbilirubinaemia."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PT_PERCENT",
+  "utility": "supportive",
+  "rationale": "The laboratory's form of the prothrombin time."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PT_INR",
+  "utility": "supportive",
+  "rationale": "INR for the PLASMIC score."
+ },
+ {
+  "test_item_id": "LAB.TBS.DAT",
+  "utility": "supportive",
+  "rationale": "Positive IgG; must be interpreted, not treated."
+ },
+ {
+  "test_item_id": "LAB.TBS.BLOOD_GROUP",
+  "utility": "supportive",
+  "rationale": "Needed if transfusion becomes necessary."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ADAMTS13",
+  "utility": "supportive",
+  "rationale": "Excludes TTP if still in doubt; not needed to start B12."
+ },
+ {
+  "test_item_id": "LAB.CHEM.IRON_STUDIES",
+  "utility": "supportive",
+  "rationale": "Excludes coexisting iron deficiency; baseline before recovery."
+ },
+ {
+  "test_item_id": "LAB.CHEM.FERRITIN",
+  "utility": "supportive",
+  "rationale": "Iron stores replete now; iron deficiency may appear on recovery."
+ },
+ {
+  "test_item_id": "LAB.ENDO.TFT",
+  "utility": "supportive",
+  "rationale": "Associated autoimmune thyroid disease."
+ },
+ {
+  "test_item_id": "LAB.ENDO.ANTI_TPO",
+  "utility": "low_yield",
+  "rationale": "Associated autoimmunity; does not change management now."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HOLOTC",
+  "utility": "low_yield",
+  "rationale": "Confirms what serum B12 already shows."
+ },
+ {
+  "test_item_id": "LAB.CHEM.MMA",
+  "utility": "low_yield",
+  "rationale": "Useful only when B12 is borderline; here it is unequivocally low."
+ },
+ {
+  "test_item_id": "LAB.CHEM.HOMOCYSTEINE",
+  "utility": "low_yield",
+  "rationale": "Raised in B12 and folate lack alike."
+ },
+ {
+  "test_item_id": "LAB.CHEM.GASTRIN",
+  "utility": "low_yield",
+  "rationale": "Supports body atrophy if antibodies are negative."
+ },
+ {
+  "test_item_id": "LAB.CHEM.PEPSINOGEN",
+  "utility": "low_yield",
+  "rationale": "Supports body atrophy; histology is definitive."
+ },
+ {
+  "test_item_id": "PROC.BM.ASPIRATE",
+  "utility": "low_yield",
+  "rationale": "Megaloblastic; not needed once B12 is known to be very low."
+ },
+ {
+  "test_item_id": "PROC.BM.TREPHINE",
+  "utility": "low_yield",
+  "rationale": "Hypercellular and megaloblastic; invasive for little extra."
+ },
+ {
+  "test_item_id": "LAB.BM.IRON_STAIN",
+  "utility": "low_yield",
+  "rationale": "Iron replete; no ring sideroblasts."
+ },
+ {
+  "test_item_id": "LAB.BM.FLOW",
+  "utility": "unnecessary",
+  "rationale": "No clonal process suspected once B12 is known."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+  "utility": "low_yield",
+  "rationale": "Normal; only if the marrow suggested myelodysplasia."
+ },
+ {
+  "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+  "utility": "unnecessary",
+  "rationale": "Normal; no indication."
+ },
+ {
+  "test_item_id": "LAB.SERO.HIV",
+  "utility": "supportive",
+  "rationale": "Part of the work-up of pancytopenia."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_B",
+  "utility": "low_yield",
+  "rationale": "Negative; relevant before transfusion or immunosuppression only."
+ },
+ {
+  "test_item_id": "LAB.SERO.HEPATITIS_C",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.SERO.PARVOVIRUS_B19",
+  "utility": "low_yield",
+  "rationale": "Past infection only; the reticulocytopenia has another cause."
+ },
+ {
+  "test_item_id": "LAB.CHEM.COPPER_CAERULOPLASMIN",
+  "utility": "low_yield",
+  "rationale": "Normal; copper deficiency is a rare mimic."
+ },
+ {
+  "test_item_id": "LAB.HAEM.ESR",
+  "utility": "unnecessary",
+  "rationale": "Raised by the anaemia; uninformative."
+ },
+ {
+  "test_item_id": "LAB.CHEM.EPO",
+  "utility": "unnecessary",
+  "rationale": "Appropriately high; adds nothing."
+ },
+ {
+  "test_item_id": "LAB.CHEM.STFR",
+  "utility": "unnecessary",
+  "rationale": "Adds nothing."
+ },
+ {
+  "test_item_id": "LAB.CHEM.URATE",
+  "utility": "unnecessary",
+  "rationale": "Mildly raised; uninformative."
+ },
+ {
+  "test_item_id": "LAB.URINE.URINALYSIS",
+  "utility": "supportive",
+  "rationale": "No proteinuria or haematuria (against HUS); urobilinogen raised."
+ },
+ {
+  "test_item_id": "LAB.URINE.DIPSTICK",
+  "utility": "supportive",
+  "rationale": "Quick bedside check for blood and protein."
+ },
+ {
+  "test_item_id": "LAB.HAEM.D_DIMER",
+  "utility": "low_yield",
+  "rationale": "Normal; no DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FIBRINOGEN",
+  "utility": "supportive",
+  "rationale": "Normal; no DIC."
+ },
+ {
+  "test_item_id": "LAB.HAEM.APTT",
+  "utility": "supportive",
+  "rationale": "Normal; localises the defect to the extrinsic pathway."
+ },
+ {
+  "test_item_id": "LAB.HAEM.MIXING_STUDY",
+  "utility": "low_yield",
+  "rationale": "Corrects: factor deficiency."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FACTOR_V",
+  "utility": "low_yield",
+  "rationale": "Normal: not liver failure."
+ },
+ {
+  "test_item_id": "LAB.HAEM.FACTOR_VII",
+  "utility": "low_yield",
+  "rationale": "Low: vitamin K pattern."
+ },
+ {
+  "test_item_id": "LAB.CHEM.TROPONIN_I",
+  "utility": "low_yield",
+  "rationale": "Normal; only if TTP is suspected."
+ },
+ {
+  "test_item_id": "LAB.CHEM.TROPONIN_T",
+  "utility": "low_yield",
+  "rationale": "Normal; only if TTP is suspected."
+ },
+ {
+  "test_item_id": "PROC.CARD.ECG",
+  "utility": "supportive",
+  "rationale": "Sinus tachycardia; baseline with potassium 3.4 mmol/L."
+ },
+ {
+  "test_item_id": "LAB.HAEM.PLASMA_HB",
+  "utility": "low_yield",
+  "rationale": "Mildly raised; does not discriminate."
+ },
+ {
+  "test_item_id": "LAB.URINE.HAEMOSIDERIN",
+  "utility": "unnecessary",
+  "rationale": "Negative; not a chronic intravascular haemolysis."
+ },
+ {
+  "test_item_id": "LAB.MICRO.STOOL_CULTURE",
+  "utility": "supportive",
+  "rationale": "Diarrhoea with low platelets: exclude an enteric pathogen."
+ },
+ {
+  "test_item_id": "LAB.MICRO.STEC_PCR",
+  "utility": "supportive",
+  "rationale": "Excludes STEC-HUS."
+ },
+ {
+  "test_item_id": "LAB.MICRO.CDIFF",
+  "utility": "low_yield",
+  "rationale": "No antibiotic exposure; negative."
+ },
+ {
+  "test_item_id": "LAB.GI.STOOL_MICROSCOPY",
+  "utility": "low_yield",
+  "rationale": "Negative."
+ },
+ {
+  "test_item_id": "LAB.CHEM.ELECTROLYTES",
+  "utility": "supportive",
+  "rationale": "Potassium and bicarbonate losses from diarrhoea."
+ },
+ {
+  "test_item_id": "LAB.CHEM.CRP",
+  "utility": "supportive",
+  "rationale": "Normal: no infection."
+ },
+ {
+  "test_item_id": "LAB.TBS.ELUATE",
+  "utility": "low_yield",
+  "rationale": "Weak panreactive IgG; does not change management."
+ },
+ {
+  "test_item_id": "LAB.TBS.ANTIBODY_SCREEN",
+  "utility": "supportive",
+  "rationale": "Needed before any transfusion."
+ },
+ {
+  "test_item_id": "LAB.TBS.COLD_AGGLUTININ",
+  "utility": "unnecessary",
+  "rationale": "C3d negative; no cold agglutinin disease."
+ },
+ {
+  "test_item_id": "LAB.IMM.ANA",
+  "utility": "low_yield",
+  "rationale": "Negative; Evans or lupus trap only."
+ },
+ {
+  "test_item_id": "IMG.US.ABDOMEN",
+  "utility": "low_yield",
+  "rationale": "Normal; no splenomegaly or liver disease."
+ },
+ {
+  "test_item_id": "LAB.IMM.COELIAC_TTG",
+  "utility": "supportive",
+  "rationale": "Excludes coeliac disease as the cause of malabsorption."
+ },
+ {
+  "test_item_id": "LAB.GI.CALPROTECTIN",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.GI.FAECAL_ELASTASE",
+  "utility": "low_yield",
+  "rationale": "Normal."
+ },
+ {
+  "test_item_id": "LAB.CHEM.BONE_PROFILE",
+  "utility": "low_yield",
+  "rationale": "Calcium low only with albumin."
+ },
+ {
+  "test_item_id": "LAB.CHEM.MAGNESIUM",
+  "utility": "supportive",
+  "rationale": "Low-normal after diarrhoea; worth checking with the potassium."
+ },
+ {
+  "test_item_id": "LAB.CHEM.VITAMIN_D",
+  "utility": "low_yield",
+  "rationale": "Mildly low; not relevant to the presentation."
+ },
+ {
+  "test_item_id": "PROC.ENDO.COLONOSCOPY",
+  "utility": "unnecessary",
+  "rationale": "Normal; the diarrhoea resolves with B12."
+ }
+]

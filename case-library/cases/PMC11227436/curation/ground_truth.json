@@ -1,0 +1,296 @@
+{
+ "final_dx": {
+  "id": "DX.PERNICIOUS_ANAEMIA",
+  "text": "Pernicious anaemia (autoimmune atrophic gastritis) with severe vitamin B12 deficiency, presenting as pancytopenia with haemolysis and schistocytes that mimicked a thrombotic microangiopathy (pseudo-TMA)",
+  "icd10": [
+   "D51.0"
+  ],
+  "accepted_synonyms": [
+   "pernicious anaemia",
+   "pernicious anemia",
+   "Biermer's disease",
+   "Biermer disease",
+   "Addisonian anaemia",
+   "Addison-Biermer anaemia",
+   "autoimmune atrophic gastritis with vitamin B12 deficiency"
+  ],
+  "leak_terms": [
+   "vitamin B12 deficiency",
+   "B12 deficiency",
+   "cobalamin deficiency",
+   "pseudo-TMA",
+   "pseudo-thrombotic microangiopathy",
+   "pseudomicroangiopathy",
+   "megaloblastic anaemia",
+   "megaloblastic anemia",
+   "autoimmune gastritis",
+   "atrophic gastritis"
+  ]
+ },
+ "final_diagnosis": {
+  "text": "Pernicious anaemia (autoimmune atrophic gastritis) with severe vitamin B12 deficiency, presenting as pancytopenia with haemolysis and schistocytes that mimicked a thrombotic microangiopathy (pseudo-TMA)",
+  "icd10": [
+   "D51.0"
+  ],
+  "accepted_synonyms": [
+   "pernicious anaemia",
+   "pernicious anemia",
+   "Biermer's disease",
+   "Biermer disease",
+   "Addisonian anaemia",
+   "Addison-Biermer anaemia",
+   "autoimmune atrophic gastritis with vitamin B12 deficiency"
+  ]
+ },
+ "secondary_findings": [
+  "IgG-positive direct antiglobulin test, which the authors discuss as possibly dysimmune; no treatment for autoimmune haemolysis was needed",
+  "Prothrombin activity 44%, not explained in the article; modelled as vitamin K deficiency from poor intake and diarrhoea",
+  "Watery diarrhoea that resolved with B12 replacement alone"
+ ],
+ "accepted_differential": [
+  "Thrombotic thrombocytopenic purpura",
+  "Haemolytic uraemic syndrome, including STEC-HUS given the diarrhoea",
+  "Other microangiopathic haemolytic anaemia",
+  "Warm autoimmune haemolytic anaemia or Evans syndrome (IgG-positive DAT)",
+  "Folate deficiency",
+  "Myelodysplastic neoplasm",
+  "Other causes of pancytopenia: marrow infiltration, aplastic anaemia, HIV",
+  "Malabsorption (coeliac disease) with nutritional deficiency"
+ ],
+ "red_herrings": [
+  "schistocytes 2.3%",
+  "thrombocytopenia with haemolysis",
+  "IgG-positive direct antiglobulin test",
+  "LDH 1,466 U/L",
+  "diarrhoea (suggests STEC-HUS)",
+  "prothrombin activity 44%"
+ ],
+ "key_discriminators": [
+  "MCV 113 fL",
+  "inappropriately low reticulocytes (92 x10^9/L) despite haemolysis and Hb 51 g/L",
+  "neutropenia as well (pancytopenia)",
+  "normal renal function and no neurological impairment",
+  "PLASMIC score 4 (low risk of severe ADAMTS13 deficiency)",
+  "vitamin B12 37 pmol/L (50 pg/mL)",
+  "megaloblastic erythropoiesis in the marrow",
+  "anti-parietal cell antibodies",
+  "fundic atrophy with intestinal metaplasia on gastric biopsy"
+ ],
+ "treatment_given": "Vitamin B12 replacement (route, dose and schedule not reported). No plasma exchange.",
+ "outcome": "Rapid improvement: diarrhoea resolved by day 4 and a reticulocyte response by day 7 of replacement, without other treatment. Follow-up values not reported.",
+ "teaching_points": [
+  "Severe B12 deficiency can mimic a thrombotic microangiopathy: schistocytes, thrombocytopenia, very high LDH and low haptoglobin.",
+  "A low reticulocyte count with haemolysis means ineffective erythropoiesis, not peripheral destruction alone; with a high MCV and neutropenia it points to the marrow.",
+  "The PLASMIC score (platelets, haemolysis, no cancer or transplant, MCV, INR, creatinine) helps decide against plasma exchange; a high MCV lowers the score.",
+  "Take B12 and folate samples before transfusion, and never give folic acid alone to a patient who may be B12 deficient.",
+  "A positive IgG DAT is not proof of autoimmune haemolysis; weigh it against the whole picture before steroids."
+ ],
+ "must_do": [
+  {
+   "text": "Measure vitamin B12 and folate in macrocytic pancytopenia, ideally before any transfusion",
+   "if": {
+    "ordered_all": [
+     "LAB.CHEM.B12",
+     "LAB.CHEM.FOLATE"
+    ]
+   }
+  },
+  {
+   "text": "Weigh the risk of TTP before any plasma exchange: blood film with fragments, coagulation and renal function (PLASMIC score); ADAMTS13 if TTP remains possible",
+   "if": {
+    "all": [
+     {
+      "ordered_any": [
+       "LAB.HAEM.FILM",
+       "LAB.HAEM.FILM_REVIEW",
+       "LAB.HAEM.SCHISTOCYTE_COUNT"
+      ]
+     },
+     {
+      "ordered_any": [
+       "LAB.HAEM.COAG_SCREEN",
+       "LAB.HAEM.PT_INR",
+       "LAB.HAEM.PT_PERCENT"
+      ]
+     },
+     {
+      "ordered_any": [
+       "LAB.CHEM.RENAL"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Measure the reticulocyte count and recognise that a low count with haemolysis points to ineffective erythropoiesis",
+   "if": {
+    "ordered_any": [
+     "LAB.HAEM.RETIC"
+    ]
+   }
+  },
+  {
+   "text": "Replace vitamin B12 parenterally",
+   "if": {
+    "plan_has": [
+     "RX.VITAMIN.B12"
+    ]
+   }
+  },
+  {
+   "text": "Find the cause: intrinsic factor and parietal cell antibodies, and gastroscopy with gastric biopsies",
+   "if": {
+    "all": [
+     {
+      "ordered_any": [
+       "LAB.IMM.IF_GPC_ANTIBODIES"
+      ]
+     },
+     {
+      "ordered_any": [
+       "PROC.ENDO.OGD",
+       "PROC.BIOPSY.GASTRIC"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Plan to confirm the response: reticulocytes within about a week, then the blood count",
+   "if": {
+    "plan_has": [
+     "ACT.REPEAT_BLOODS"
+    ]
+   }
+  }
+ ],
+ "must_not_do": [
+  {
+   "text": "Start plasma exchange for presumed TTP without weighing B12 deficiency and the PLASMIC score",
+   "if": {
+    "plan_has_any": [
+     "RX.IMMUNO.PLASMA_EXCHANGE"
+    ]
+   }
+  },
+  {
+   "text": "Treat as autoimmune haemolytic anaemia with steroids or rituximab on the IgG DAT alone",
+   "if": {
+    "plan_has_any": [
+     "RX.STEROID.HIGH_DOSE",
+     "RX.STEROID.PREDNISOLONE",
+     "RX.STEROID.DEXAMETHASONE",
+     "RX.IMMUNO.RITUXIMAB"
+    ]
+   }
+  },
+  {
+   "text": "Give folic acid without B12 replacement",
+   "if": {
+    "all": [
+     {
+      "plan_has_any": [
+       "RX.VITAMIN.FOLATE",
+       "RX.HAEM.FOLATE_HAEMOLYSIS"
+      ]
+     },
+     {
+      "not": {
+       "plan_has": [
+        "RX.VITAMIN.B12"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Transfuse platelets when there is no bleeding and a thrombotic microangiopathy is still possible",
+   "if": {
+    "plan_has_any": [
+     "RX.TRANSFUSION.PLATELETS"
+    ]
+   }
+  }
+ ],
+ "diagnosis_rubric_anchors": {
+  "5": "Pernicious anaemia (autoimmune gastritis) causing severe B12 deficiency with a pseudo-microangiopathic picture",
+  "4": "Vitamin B12 deficiency anaemia, cause not established",
+  "3": "Megaloblastic anaemia without naming B12, or folate deficiency",
+  "2": "TTP, HUS, another microangiopathy, warm AIHA or myelodysplasia as the final diagnosis",
+  "1": "Unrelated diagnosis, or one that would lead to harm"
+ },
+ "rubric": {
+  "rubric": [
+   {
+    "score": 5,
+    "text": "Pernicious anaemia (autoimmune gastritis) causing severe B12 deficiency with a pseudo-microangiopathic picture",
+    "if": {
+     "dx_in": [
+      "DX.PERNICIOUS_ANAEMIA"
+     ]
+    }
+   },
+   {
+    "score": 4,
+    "text": "Vitamin B12 deficiency anaemia, cause not established",
+    "if": {
+     "dx_in": [
+      "DX.B12_DEFICIENCY_ANAEMIA"
+     ]
+    }
+   },
+   {
+    "score": 3,
+    "text": "Megaloblastic anaemia without naming B12, or folate deficiency",
+    "if": {
+     "dx_in": [
+      "DX.MEGALOBLASTIC_ANAEMIA",
+      "DX.FOLATE_DEFICIENCY_ANAEMIA",
+      "DX.MIXED_NUTRITIONAL_ANAEMIA"
+     ]
+    }
+   },
+   {
+    "score": 2,
+    "text": "TTP, HUS, another microangiopathy, warm AIHA or myelodysplasia as the final diagnosis",
+    "if": {
+     "dx_in": [
+      "DX.TTP",
+      "DX.HUS",
+      "DX.ATYPICAL_HUS",
+      "DX.MAHA_OTHER",
+      "DX.WARM_AIHA",
+      "DX.MDS",
+      "DX.APLASTIC_ANAEMIA",
+      "DX.PANCYTOPENIA"
+     ]
+    }
+   },
+   {
+    "score": 1,
+    "text": "Unrelated diagnosis, or one that would lead to harm",
+    "if": {
+     "not": {
+      "dx_in": [
+       "DX.PERNICIOUS_ANAEMIA",
+       "DX.B12_DEFICIENCY_ANAEMIA",
+       "DX.MEGALOBLASTIC_ANAEMIA",
+       "DX.FOLATE_DEFICIENCY_ANAEMIA",
+       "DX.MIXED_NUTRITIONAL_ANAEMIA",
+       "DX.TTP",
+       "DX.HUS",
+       "DX.ATYPICAL_HUS",
+       "DX.MAHA_OTHER",
+       "DX.WARM_AIHA",
+       "DX.MDS",
+       "DX.APLASTIC_ANAEMIA",
+       "DX.PANCYTOPENIA"
+      ]
+     }
+    }
+   }
+  ],
+  "default_score": 1
+ }
+}

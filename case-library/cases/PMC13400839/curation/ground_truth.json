@@ -1,0 +1,314 @@
+{
+ "final_diagnosis": {
+  "text": "Severe folate deficiency after sleeve gastrectomy with malnutrition, causing pancytopenia with megaloblastic trilineage dysplasia and a transient increase in marrow blasts that mimicked a high-risk myelodysplastic neoplasm (MDS-IB2) or MDS/AML",
+  "icd10": [
+   "D52.8"
+  ],
+  "accepted_synonyms": [
+   "folate deficiency",
+   "folic acid deficiency",
+   "folate deficiency anaemia",
+   "folate deficiency anemia",
+   "megaloblastic anaemia due to folate deficiency",
+   "nutritional folate deficiency"
+  ]
+ },
+ "secondary_findings": [
+  "Pneumocystis jirovecii pneumonia diagnosed on day 3, needing intubation for hypoxic respiratory failure",
+  "Low-level DNMT3A variant (VAF 1.2%), most likely clonal haematopoiesis of indeterminate potential; KMT2A variant of uncertain significance (VAF 49.6%)",
+  "Normocytic indices despite the deficiency: recent transfusion, hypothyroidism, protein malnutrition and acute illness",
+  "Relative eosinophilia (about 50% of leucocytes, absolute count normal) and occasional marrow haemophagocytosis, both reactive",
+  "Hyperferritinaemia (1531 ng/mL) with increased marrow storage iron"
+ ],
+ "accepted_differential": [
+  "Myelodysplastic neoplasm with increased blasts (MDS-IB2) or MDS/AML",
+  "Acute myeloid leukaemia, including acute erythroid leukaemia",
+  "Aplastic anaemia or hypoplastic myelodysplastic neoplasm",
+  "Vitamin B12 deficiency",
+  "Copper deficiency after bariatric surgery",
+  "Myeloid neoplasm with eosinophilia and a tyrosine kinase gene fusion",
+  "Haemophagocytic lymphohistiocytosis",
+  "Marrow suppression from sepsis or drugs",
+  "HIV-associated marrow dysplasia"
+ ],
+ "red_herrings": [
+  "12% blasts on the aspirate and 18% by flow",
+  "trilineage dysplasia",
+  "DNMT3A variant at 1.2% VAF",
+  "KMT2A variant of uncertain significance at 49.6% VAF",
+  "eosinophils about 50% of leucocytes",
+  "occasional haemophagocytosis",
+  "ferritin 1531 ng/mL",
+  "normal MCV",
+  "the referral label of aplastic anaemia",
+  "hypocellular marrow"
+ ],
+ "key_discriminators": [
+  "serum folate 2.6 ng/mL with vitamin B12 above 1500 pg/mL",
+  "megaloblastic erythroid change",
+  "blasts without immunophenotypic aberrancy",
+  "normal karyotype, FISH panels and SNP microarray",
+  "sleeve gastrectomy with malnutrition",
+  "recovery of counts and marrow with folate"
+ ],
+ "treatment_given": "Folate supplementation (dose not reported) with supportive care: red cell transfusion and antimicrobials for neutropenia. Pneumocystis pneumonia on day 3 needed intubation.",
+ "outcome": "Cytopenias normalised over 18 days of folate. A repeat marrow at that time was 60% cellular with myeloid-predominant haematopoiesis, mild dysmegakaryopoiesis and 1% blasts. The findings were judged an unusual reactive process due to folate deficiency.",
+ "must_do": [
+  {
+   "text": "Measure serum folate and vitamin B12 before attributing the marrow to a myeloid neoplasm",
+   "if": {
+    "ordered_all": [
+     "LAB.CHEM.FOLATE",
+     "LAB.CHEM.B12"
+    ]
+   }
+  },
+  {
+   "text": "Take a surgical, dietary and supplement history (sleeve gastrectomy, intake, stopped multivitamin)",
+   "if": {
+    "asked_any": [
+     "HX.PMH.SURGICAL",
+     "HX.SOCIAL.DIET",
+     "HX.MEDS.SUPPLEMENTS"
+    ]
+   }
+  },
+  {
+   "text": "Replace folic acid, having checked vitamin B12",
+   "if": {
+    "all": [
+     {
+      "plan_has": [
+       "RX.VITAMIN.FOLATE"
+      ]
+     },
+     {
+      "ordered_any": [
+       "LAB.CHEM.B12"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Await cytogenetic and molecular results before any disease-directed treatment",
+   "if": {
+    "ordered_any": [
+     "LAB.CYTOGEN.KARYOTYPE",
+     "LAB.CYTOGEN.SNP_ARRAY",
+     "LAB.CYTOGEN.FISH_AML",
+     "LAB.CYTOGEN.FISH_MDS",
+     "LAB.MOL.MYELOID_NGS"
+    ]
+   }
+  },
+  {
+   "text": "Give supportive care for profound neutropenia and thrombocytopenia: continue empirical broad-spectrum antimicrobials and transfuse platelets",
+   "if": {
+    "all": [
+     {
+      "plan_has_any": [
+       "RX.ANTIBIOTIC.EMPIRICAL_BROAD",
+       "RX.ANTIBIOTIC.CEPHALOSPORIN",
+       "RX.ANTIBIOTIC.CARBAPENEM"
+      ]
+     },
+     {
+      "plan_has": [
+       "RX.TRANSFUSION.PLATELETS"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "text": "Confirm the response with repeat counts and a repeat marrow after replacement",
+   "if": {
+    "plan_has_any": [
+     "ACT.REPEAT_BONE_MARROW",
+     "ACT.REPEAT_BLOODS"
+    ]
+   }
+  },
+  {
+   "text": "Involve dietetics for nutritional rehabilitation and lifelong bariatric supplements",
+   "if": {
+    "any": [
+     {
+      "referred_any": [
+       "REF.DIETETICS"
+      ]
+     },
+     {
+      "plan_has_any": [
+       "REF.DIETETICS",
+       "ACT.DIETARY_ADVICE"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "must_not_do": [
+  {
+   "text": "Start hypomethylating therapy or AML induction chemotherapy",
+   "if": {
+    "plan_has_any": [
+     "RX.CHEMO.*"
+    ]
+   }
+  },
+  {
+   "text": "Label the marrow a myelodysplastic neoplasm or AML without serum folate and vitamin B12",
+   "if": {
+    "all": [
+     {
+      "dx_in": [
+       "DX.MDS_EXCESS_BLASTS",
+       "DX.MDS",
+       "DX.AML"
+      ]
+     },
+     {
+      "not": {
+       "ordered_all": [
+        "LAB.CHEM.FOLATE",
+        "LAB.CHEM.B12"
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "text": "Treat as aplastic anaemia with antithymocyte globulin and ciclosporin",
+   "if": {
+    "plan_has_any": [
+     "RX.IMMUNO.ATG_CICLOSPORIN"
+    ]
+   }
+  },
+  {
+   "text": "Give folic acid alone without checking vitamin B12",
+   "if": {
+    "all": [
+     {
+      "plan_has": [
+       "RX.VITAMIN.FOLATE"
+      ]
+     },
+     {
+      "not": {
+       "ordered_any": [
+        "LAB.CHEM.B12"
+       ]
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "diagnosis_rubric_anchors": {
+  "5": "Folate deficiency, with the sleeve gastrectomy or poor intake identified as the cause",
+  "4": "Folate deficiency, cause not identified",
+  "3": "Megaloblastic or nutritional anaemia without naming folate, or vitamin B12 deficiency",
+  "2": "Myelodysplastic neoplasm, AML or aplastic anaemia as the final diagnosis",
+  "1": "Unrelated diagnosis, or one that would lead to harm"
+ },
+ "teaching_points": [
+  "Severe folate or B12 deficiency can produce trilineage dysplasia and a transient rise in blasts that looks like a high-grade myelodysplastic neoplasm or AML.",
+  "Check haematinics (B12, folate, copper) before labelling a myeloid neoplasm, particularly after bariatric surgery or with malnutrition.",
+  "Blasts without an aberrant immunophenotype and a normal karyotype, FISH and SNP array argue against a clonal disorder; a low-VAF DNMT3A variant can be clonal haematopoiesis.",
+  "Folate stores last only months; after a sleeve gastrectomy, poor intake and stopped supplements deplete them quickly, while B12 injections can keep the B12 level normal.",
+  "Macrocytosis can be absent after transfusion or with coexisting conditions.",
+  "Recovery of the counts and marrow after replacement confirms the diagnosis."
+ ],
+ "final_dx": {
+  "id": "DX.FOLATE_DEFICIENCY_ANAEMIA",
+  "text": "Severe folate deficiency after sleeve gastrectomy with malnutrition, causing pancytopenia with megaloblastic trilineage dysplasia and a transient increase in marrow blasts that mimicked a high-risk myelodysplastic neoplasm (MDS-IB2) or MDS/AML",
+  "icd10": [
+   "D52.8"
+  ],
+  "accepted_synonyms": [
+   "folate deficiency",
+   "folic acid deficiency",
+   "folate deficiency anaemia",
+   "folate deficiency anemia",
+   "megaloblastic anaemia due to folate deficiency",
+   "nutritional folate deficiency"
+  ]
+ },
+ "rubric": {
+  "rubric": [
+   {
+    "score": 5,
+    "text": "Folate deficiency, with the sleeve gastrectomy or poor intake identified as the cause",
+    "if": {
+     "all": [
+      {
+       "dx_in": [
+        "DX.FOLATE_DEFICIENCY_ANAEMIA"
+       ]
+      },
+      {
+       "evidence_has": [
+        "H03"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "score": 4,
+    "text": "Folate deficiency, cause not identified",
+    "if": {
+     "dx_in": [
+      "DX.FOLATE_DEFICIENCY_ANAEMIA"
+     ]
+    }
+   },
+   {
+    "score": 3,
+    "text": "Megaloblastic or nutritional anaemia without naming folate, or vitamin B12 deficiency",
+    "if": {
+     "dx_in": [
+      "DX.MEGALOBLASTIC_ANAEMIA",
+      "DX.MIXED_NUTRITIONAL_ANAEMIA",
+      "DX.B12_DEFICIENCY_ANAEMIA"
+     ]
+    }
+   },
+   {
+    "score": 2,
+    "text": "Myelodysplastic neoplasm, AML or aplastic anaemia as the final diagnosis",
+    "if": {
+     "dx_in": [
+      "DX.MDS_EXCESS_BLASTS",
+      "DX.MDS",
+      "DX.AML",
+      "DX.APLASTIC_ANAEMIA"
+     ]
+    }
+   },
+   {
+    "score": 1,
+    "text": "Unrelated diagnosis, or one that would lead to harm",
+    "if": {
+     "not": {
+      "dx_in": [
+       "DX.FOLATE_DEFICIENCY_ANAEMIA",
+       "DX.MEGALOBLASTIC_ANAEMIA",
+       "DX.MIXED_NUTRITIONAL_ANAEMIA",
+       "DX.B12_DEFICIENCY_ANAEMIA",
+       "DX.MDS_EXCESS_BLASTS",
+       "DX.MDS",
+       "DX.AML",
+       "DX.APLASTIC_ANAEMIA"
+      ]
+     }
+    }
+   }
+  ],
+  "default_score": 1
+ }
+}

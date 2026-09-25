@@ -1,0 +1,3012 @@
+[
+ {
+  "target": "HX.GEN.RIGORS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Shivering and chills come with the high fevers, especially over the past ten days."
+  },
+  "release_text": "Shivering and chills come with the high fevers, especially over the past ten days.",
+  "lay_text": "When the fever shoots up I shiver and can't get warm, especially these last ten days.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "High spiking fever to 40 °C (H03, H04); rigors accompany spiking fevers. Not a discriminating feature.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.GEN.SLEEP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Sleep broken on nights with fever."
+  },
+  "release_text": "Sleep broken on nights with fever.",
+  "lay_text": "I don't sleep well on the nights the fever comes.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Nightly spiking fevers disturb sleep; night sweats are not reported, so none are added.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.GEN.BRUISING_BLEEDING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Bruises easily over the past few weeks; no nosebleeds, gum bleeding or heavy periods."
+  },
+  "release_text": "Bruises easily over the past few weeks; no nosebleeds, gum bleeding or heavy periods.",
+  "lay_text": "I've been bruising easily the last few weeks. No nosebleeds, and my gums don't bleed.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Platelets 29 x10^9/L on day 0 (63-73 earlier). Easy bruising is the likeliest symptom at this count; the article reports no bleeding, so no mucosal bleeding is added.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GEN.LUMPS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No lumps or swellings noticed."
+  },
+  "release_text": "No lumps or swellings noticed.",
+  "lay_text": "No, I haven't noticed any lumps.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No lymphadenopathy is reported; the lymphoma path needs an explicit answer.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GEN.ITCH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No itching."
+  },
+  "release_text": "No itching.",
+  "lay_text": "No, I'm not itchy.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; normal bilirubin and ALP make cholestatic itch unlikely.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GEN.JAUNDICE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No yellowing of the eyes or skin noticed."
+  },
+  "release_text": "No yellowing of the eyes or skin noticed.",
+  "lay_text": "No, never yellow.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Liver enzymes normal and haemolysis at most mild; no jaundice reported.",
+  "confidence": 0.85
+ },
+ {
+  "target": "HX.GI.NAUSEA_APPETITE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Poor appetite for months; feels full after small meals; no vomiting."
+  },
+  "release_text": "Poor appetite for months; feels full after small meals; no vomiting.",
+  "lay_text": "I don't feel like eating, and I get full after a few mouthfuls. I haven't been sick.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Chronic fever, weight loss and a 25 cm spleen compressing the stomach (early satiety).",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GI.ABDOMINAL_SWELLING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "A heavy, dragging fullness in the left side of her abdomen, which has grown over the months."
+  },
+  "release_text": "A heavy, dragging fullness in the left side of her abdomen, which has grown over the months.",
+  "lay_text": "My tummy feels heavy and full on the left side, like something is dragging, and it has got bigger.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Spleen 25 cm on ultrasound and 25.85 cm on CT (R03); massive splenomegaly is felt as left-sided fullness or dragging.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GI.ABDOMINAL_PAIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No pain as such; only the dragging discomfort on the left side."
+  },
+  "release_text": "No pain as such; only the dragging discomfort on the left side.",
+  "lay_text": "It doesn't really hurt, it's more of a heavy, dragging feeling on the left.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Massive splenomegaly without infarction; no pain reported.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.GI.BLEEDING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No black stools and no vomiting of blood."
+  },
+  "release_text": "No black stools and no vomiting of blood.",
+  "lay_text": "No, nothing like that.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No bleeding reported; relevant to the portal hypertension path.",
+  "confidence": 0.85
+ },
+ {
+  "target": "HX.CVS.BREATHLESSNESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Breathless climbing stairs or walking quickly; not breathless at rest."
+  },
+  "release_text": "Breathless climbing stairs or walking quickly; not breathless at rest.",
+  "lay_text": "I get out of breath on the stairs or if I walk fast. Sitting still I'm fine.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Hb 59 g/L on day 0; exertional breathlessness is expected. Four years of untreated asthma adds nothing at rest.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.CVS.PALPITATIONS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Aware of a fast heartbeat with the fevers and on exertion."
+  },
+  "release_text": "Aware of a fast heartbeat with the fevers and on exertion.",
+  "lay_text": "My heart races when I have a fever or when I walk.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Fever and severe anaemia; sinus tachycardia on the vital signs.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.CVS.ANKLE_SWELLING",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Mild swelling of both ankles by the evening over the past few weeks."
+  },
+  "release_text": "Mild swelling of both ankles by the evening over the past few weeks.",
+  "lay_text": "My ankles puff up a bit by the evening, the last few weeks.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Albumin 20 g/L on day 0; mild dependent oedema is likely.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.CVS.SYNCOPE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Light-headed if she stands up quickly; no blackouts."
+  },
+  "release_text": "Light-headed if she stands up quickly; no blackouts.",
+  "lay_text": "I feel dizzy if I stand up too fast, but I've never passed out.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Fever, anaemia and a possible relative adrenal insufficiency after stopping prednisone; matches the postural drop on examination.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.CVS.CHEST_PAIN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No chest pain."
+  },
+  "release_text": "No chest pain.",
+  "lay_text": "No chest pain.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No serositis reported; the lupus path needs an explicit answer.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.RESP.WHEEZE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Occasional wheeze with colds, as for the past four years; no inhaler and no recent attacks."
+  },
+  "release_text": "Occasional wheeze with colds, as for the past four years; no inhaler and no recent attacks.",
+  "lay_text": "Sometimes I wheeze when I have a cold, like the last four years. I don't use an inhaler.",
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Untreated asthma for four years (H06); no exacerbation reported.",
+  "confidence": 0.65
+ },
+ {
+  "target": "HX.RESP.COUGH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No cough."
+  },
+  "release_text": "No cough.",
+  "lay_text": "No cough.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No respiratory symptoms reported; the tuberculosis path needs an explicit answer.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.MSK.STIFFNESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Some stiffness of the joints in the mornings earlier in the illness, lasting under half an hour; none now."
+  },
+  "release_text": "Some stiffness of the joints in the mornings earlier in the illness, lasting under half an hour; none now.",
+  "lay_text": "Earlier on my joints were a bit stiff in the mornings, for maybe twenty minutes. Not now.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Joint swelling was part of the illness (H05); inflammatory stiffness is plausible but short and not current, fitting a reactive arthralgia rather than an active synovitis.",
+  "confidence": 0.5
+ },
+ {
+  "target": "HX.SKIN.RASH",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No rash."
+  },
+  "release_text": "No rash.",
+  "lay_text": "No rashes.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No rash reported; the diagnosis of lupus was made on serology and cytopenias.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.SKIN.PHOTOSENSITIVITY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No rash or reaction to sunlight."
+  },
+  "release_text": "No rash or reaction to sunlight.",
+  "lay_text": "No, the sun doesn't bother my skin.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No photosensitivity reported.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.SKIN.HAIR_NAILS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Her hair has thinned a little during the illness."
+  },
+  "release_text": "Her hair has thinned a little during the illness.",
+  "lay_text": "My hair has got a bit thinner since I've been ill.",
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Diffuse hair thinning is common after months of fever and weight loss (telogen effluvium); not reported, and it adds weight to the lupus trap, so flagged.",
+  "confidence": 0.5
+ },
+ {
+  "target": "HX.ENT.MOUTH_ULCERS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No mouth ulcers."
+  },
+  "release_text": "No mouth ulcers.",
+  "lay_text": "No mouth ulcers.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.EYE.RED_DRY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No dry, red or painful eyes."
+  },
+  "release_text": "No dry, red or painful eyes.",
+  "lay_text": "My eyes are fine.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.GU.FROTHY_URINE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No frothy urine."
+  },
+  "release_text": "No frothy urine.",
+  "lay_text": "No, it isn't frothy.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Renal function normal; no proteinuria.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.GU.URINE_COLOUR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Urine a normal colour; never dark."
+  },
+  "release_text": "Urine a normal colour; never dark.",
+  "lay_text": "Normal colour. It's never been dark.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No haemoglobinuria; haemolysis at most mild.",
+  "confidence": 0.8
+ },
+ {
+  "target": "HX.FAMILY.AUTOIMMUNE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No thyroid or autoimmune disease known in the family."
+  },
+  "release_text": "No thyroid or autoimmune disease known in the family.",
+  "lay_text": "Not that I know of.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.GYN.MENSES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Periods have become scanty and irregular over the past six months; no heavy bleeding."
+  },
+  "release_text": "Periods have become scanty and irregular over the past six months; no heavy bleeding.",
+  "lay_text": "My periods have got light and irregular these last six months. They're never heavy.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Chronic febrile illness with weight loss commonly causes oligomenorrhoea; heavy bleeding is not reported despite platelets of 29 x10^9/L.",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.GYN.OBSTETRIC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "One pregnancy with a normal delivery; no miscarriages."
+  },
+  "release_text": "One pregnancy with a normal delivery; no miscarriages.",
+  "lay_text": "I have one child, a normal delivery. No miscarriages.",
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Not reported. A married woman of 36; no miscarriages (relevant to the antiphospholipid question on the lupus path).",
+  "confidence": 0.4
+ },
+ {
+  "target": "HX.PMH.TRANSFUSION_PREGNANCY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Received red cell transfusions during the previous hospital admission; one pregnancy with a normal delivery."
+  },
+  "release_text": "Received red cell transfusions during the previous hospital admission; one pregnancy with a normal delivery.",
+  "lay_text": "They gave me blood in the other hospital. I've had one baby, a normal delivery.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Hb 63 g/L at the rheumatology admission makes transfusion likely; the article does not say. Pregnancy as in HX.GYN.OBSTETRIC. The antibody screen stays negative.",
+  "confidence": 0.5
+ },
+ {
+  "target": "HX.MEDS.OTC",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Paracetamol for the fevers."
+  },
+  "release_text": "Paracetamol for the fevers.",
+  "lay_text": "Just paracetamol when the fever is bad.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Common self-treatment of fever; not reported.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.EXPOSURE.BITES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No bites she can remember apart from ordinary mosquito bites."
+  },
+  "release_text": "No bites she can remember apart from ordinary mosquito bites.",
+  "lay_text": "Just normal mosquito bites, nothing special.",
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Sandfly bites are usually unnoticed; the article records no bite history. Answers the question asked without adding places (rule 8).",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.EXPOSURE.FOOD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Eats ordinary home-cooked food; no raw milk or undercooked meat."
+  },
+  "release_text": "Eats ordinary home-cooked food; no raw milk or undercooked meat.",
+  "lay_text": "Just normal home food. I don't drink raw milk.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; answers the brucellosis and typhoid lines of enquiry.",
+  "confidence": 0.65
+ },
+ {
+  "target": "HX.EXPOSURE.SEXUAL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Married, with one partner; no concerns about sexually transmitted infection."
+  },
+  "release_text": "Married, with one partner; no concerns about sexually transmitted infection.",
+  "lay_text": "I'm married. No worries there.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; HIV is negative twice.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.EXPOSURE.NEEDLES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Many blood tests and infusions in hospital; no tattoos or injections outside hospital."
+  },
+  "release_text": "Many blood tests and infusions in hospital; no tattoos or injections outside hospital.",
+  "lay_text": "Lots of needles in hospital, but no tattoos or injections anywhere else.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Months of hospital care; no other parenteral exposure reported.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.SOCIAL.ALCOHOL",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Does not drink alcohol."
+  },
+  "release_text": "Does not drink alcohol.",
+  "lay_text": "I don't drink.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; relevant to the chronic liver disease path.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.SOCIAL.FUNCTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Independent in self-care, but too tired to work or do housework for months."
+  },
+  "release_text": "Independent in self-care, but too tired to work or do housework for months.",
+  "lay_text": "I can look after myself, but I've been too tired to work or do the housework for months.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Nine months of fever, fatigue and anaemia.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.SOCIAL.FINANCES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Money is tight: she has not worked for months and has paid for several hospital stays."
+  },
+  "release_text": "Money is tight: she has not worked for months and has paid for several hospital stays.",
+  "lay_text": "Money is a worry. I haven't worked for months, and the hospitals have cost a lot.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "A migrant worker unable to work through a nine-month illness with three hospital admissions.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.PC.IMPACT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Unable to work for months; spends much of the day resting."
+  },
+  "release_text": "Unable to work for months; spends much of the day resting.",
+  "lay_text": "I haven't been able to work for months. I spend most of the day lying down.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Profound fatigue (H03) and Hb 59 g/L.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.PC.PATIENT_CONCERNS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Worried that months of treatment have not helped and that she keeps getting worse; wants to know what is really wrong."
+  },
+  "release_text": "Worried that months of treatment have not helped and that she keeps getting worse; wants to know what is really wrong.",
+  "lay_text": "All that treatment and I'm still getting worse. I just want to know what's really wrong with me.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Refractory illness under a diagnosis that has not explained it.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.PSYCH.LOW_MOOD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Feels low and fed up with the long illness; still enjoys time with her husband."
+  },
+  "release_text": "Feels low and fed up with the long illness; still enjoys time with her husband.",
+  "lay_text": "I'm fed up and a bit down, being ill so long. I still enjoy being with my husband.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "An understandable reaction to a nine-month illness; no depressive disorder reported.",
+  "confidence": 0.55
+ },
+ {
+  "target": "HX.PSYCH.ANXIETY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Worried about her health and the cost of treatment."
+  },
+  "release_text": "Worried about her health and the cost of treatment.",
+  "lay_text": "I worry about my health, and about the money.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Consistent with the patient's concerns and finances.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.GEN.RECENT_INFECTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Nine months of fever as described; no separate recent infection such as a cough, urinary or skin infection."
+  },
+  "release_text": "Nine months of fever as described; no separate recent infection such as a cough, urinary or skin infection.",
+  "lay_text": "Only this fever that won't go away. No coughs or water infections or anything like that.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "The general question must not deny the presenting fever; no focal infection is reported.",
+  "confidence": 0.7
+ },
+ {
+  "target": "HX.NEURO.COGNITION_MOOD",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Concentration poor when she has a fever; mood low about the long illness; memory normal."
+  },
+  "release_text": "Concentration poor when she has a fever; mood low about the long illness; memory normal.",
+  "lay_text": "I can't concentrate when the fever's up, and I've been feeling down. My memory is fine.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Matches the low mood row; the catalogue's neutral answer would deny it.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.NEURO.DIZZINESS_BALANCE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Light-headed on standing quickly; no vertigo or unsteadiness."
+  },
+  "release_text": "Light-headed on standing quickly; no vertigo or unsteadiness.",
+  "lay_text": "Only a bit dizzy when I stand up fast. The room doesn't spin.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Matches the postural drop and HX.CVS.SYNCOPE.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.PSYCH.STRESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "The long illness, time off work and hospital costs have been a strain."
+  },
+  "release_text": "The long illness, time off work and hospital costs have been a strain.",
+  "lay_text": "Being ill so long has been hard: no work, and all the hospital bills.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Nine months of illness in a migrant worker; see finances.",
+  "confidence": 0.6
+ },
+ {
+  "target": "HX.SOCIAL.EXERCISE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Much less active than usual for months because of fatigue and breathlessness."
+  },
+  "release_text": "Much less active than usual for months because of fatigue and breathlessness.",
+  "lay_text": "I can hardly do anything these days; I get tired and puffed.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Profound fatigue and Hb 59 g/L.",
+  "confidence": 0.75
+ },
+ {
+  "target": "HX.SOCIAL.DIET",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Ordinary mixed home-cooked diet, but eating much less for months."
+  },
+  "release_text": "Ordinary mixed home-cooked diet, but eating much less for months.",
+  "lay_text": "Normal home cooking, a mixed diet, but I eat much less than before.",
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Poor appetite and early satiety (see HX.GI.NAUSEA_APPETITE).",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.VASC.CALVES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Calves soft and non-tender; mild symmetrical ankle oedema only."
+  },
+  "release_text": "Calves soft and non-tender; mild symmetrical ankle oedema only.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Matches the ankle oedema (albumin 20 g/L); no deep vein thrombosis suspected.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.BEDSIDE.CAPILLARY_GLUCOSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Capillary blood glucose 99 mg/dL (5.5 mmol/L)."
+  },
+  "release_text": "Capillary blood glucose 99 mg/dL (5.5 mmol/L).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Matches the point-of-care component value; no diabetes, off prednisone.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.GEN.VITALS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Temperature 39.4 °C; pulse 116/min, regular; blood pressure 102/62 mmHg; respiratory rate 22/min; SpO2 96% on room air."
+  },
+  "release_text": "Temperature 39.4 °C; pulse 116/min, regular; blood pressure 102/62 mmHg; respiratory rate 22/min; SpO2 96% on room air.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "G01: admitted with recurrent high spiking fever (up to 40 °C in the article); tachycardia from fever and Hb 59 g/L; low-normal blood pressure; no respiratory disease. The pulse, ECG and postural rows use matching values.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.CVS.PULSE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Pulse 116/min, regular, of good volume; no radio-femoral delay."
+  },
+  "release_text": "Pulse 116/min, regular, of good volume; no radio-femoral delay.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Matches the vital signs (G01).",
+  "confidence": 0.65
+ },
+ {
+  "target": "EX.BEDSIDE.POSTURAL_BP",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "text": "Lying 102/62 mmHg, pulse 116/min; standing (3 minutes) 94/58 mmHg, pulse 128/min; light-headed on standing."
+  },
+  "release_text": "Lying 102/62 mmHg, pulse 116/min; standing (3 minutes) 94/58 mmHg, pulse 128/min; light-headed on standing.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Fever, anaemia and possible relative adrenal insufficiency ten days after stopping prednisone 20 mg; a small postural drop is likely.",
+  "confidence": 0.5
+ },
+ {
+  "target": "EX.GEN.APPEARANCE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "text": "Thin and pale, flushed with fever; looks unwell but is not in distress."
+  },
+  "release_text": "Thin and pale, flushed with fever; looks unwell but is not in distress.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Weight loss, Hb 59 g/L and fever 39.4 °C.",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.GEN.PALLOR",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "text": "Marked pallor of the conjunctivae, palms and nail beds."
+  },
+  "release_text": "Marked pallor of the conjunctivae, palms and nail beds.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Hb 59 g/L on day 0.",
+  "confidence": 0.9
+ },
+ {
+  "target": "EX.GEN.JAUNDICE",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No scleral icterus."
+  },
+  "release_text": "No scleral icterus.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Bilirubin normal (resolved row); no jaundice reported.",
+  "confidence": 0.85
+ },
+ {
+  "target": "EX.GEN.LYMPH_NODES",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "text": "No significant lymphadenopathy; a few small, soft, mobile inguinal nodes under 1 cm."
+  },
+  "release_text": "No significant lymphadenopathy; a few small, soft, mobile inguinal nodes under 1 cm.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No lymphadenopathy is reported and CT mentions none; small inguinal nodes are normal.",
+  "confidence": 0.65
+ },
+ {
+  "target": "EX.GEN.OEDEMA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "text": "Mild pitting oedema of both ankles; no sacral oedema."
+  },
+  "release_text": "Mild pitting oedema of both ankles; no sacral oedema.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Albumin 20 g/L.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.GEN.HYDRATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Mucous membranes slightly dry; capillary refill 2 seconds."
+  },
+  "release_text": "Mucous membranes slightly dry; capillary refill 2 seconds.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Febrile with poor intake.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.GEN.HANDS_NAILS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Pale nail beds; no clubbing, leukonychia or palmar erythema."
+  },
+  "release_text": "Pale nail beds; no clubbing, leukonychia or palmar erythema.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Severe anaemia; no stigmata of chronic liver disease (relevant to the portal hypertension path).",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.GEN.HEIGHT_WEIGHT",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "text": "Height 158 cm; weight 45 kg; BMI 18.0 kg/m2. She says she weighed about 53 kg a year ago."
+  },
+  "release_text": "Height 158 cm; weight 45 kg; BMI 18.0 kg/m2. She says she weighed about 53 kg a year ago.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Significant weight loss (H03) of unstated amount; about 15% over nine months is typical of chronic infection. Height typical for a woman from northern China.",
+  "confidence": 0.45
+ },
+ {
+  "target": "EX.GEN.BONE_TENDERNESS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No sternal or other bony tenderness."
+  },
+  "release_text": "No sternal or other bony tenderness.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No marrow-infiltrating malignancy.",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.CVS.AUSCULTATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Heart sounds normal; soft ejection systolic flow murmur at the left sternal edge; no rub."
+  },
+  "release_text": "Heart sounds normal; soft ejection systolic flow murmur at the left sternal edge; no rub.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Hyperdynamic circulation from Hb 59 g/L and fever; no pericarditis reported.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.RESP.AUSCULTATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Vesicular breath sounds throughout; no wheeze or crackles."
+  },
+  "release_text": "Vesicular breath sounds throughout; no wheeze or crackles.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Asthma quiescent; no respiratory findings reported.",
+  "confidence": 0.75
+ },
+ {
+  "target": "EX.ABD.INSPECTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Fullness of the left abdomen from a visibly enlarged spleen that moves with respiration; no dilated veins or scars."
+  },
+  "release_text": "Fullness of the left abdomen from a visibly enlarged spleen that moves with respiration; no dilated veins or scars.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Spleen 25.85 cm on CT in a thin woman.",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.ABD.PALPATION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Soft and non-tender; a large, firm mass fills the left abdomen and is continuous with the spleen (see liver and spleen)."
+  },
+  "release_text": "Soft and non-tender; a large, firm mass fills the left abdomen and is continuous with the spleen (see liver and spleen).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Massive splenomegaly (R03).",
+  "confidence": 0.8
+ },
+ {
+  "target": "EX.ABD.LIVER_SPLEEN",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Spleen palpable about 15 cm below the left costal margin, crossing the umbilicus towards the right iliac fossa; firm, smooth and non-tender, with a palpable notch. Liver palpable 4 cm below the right costal margin, firm, smooth and non-tender."
+  },
+  "release_text": "Spleen palpable about 15 cm below the left costal margin, crossing the umbilicus towards the right iliac fossa; firm, smooth and non-tender, with a palpable notch. Liver palpable 4 cm below the right costal margin, firm, smooth and non-tender.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "G02: spleen 25.85 cm in coronal length on CT and 25 cm on ultrasound; the liver is enlarged on both scans (size not reported).",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.ABD.PERCUSSION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": "G02",
+  "value": {
+   "text": "Dull over the enlarged spleen; no shifting dullness."
+  },
+  "release_text": "Dull over the enlarged spleen; no shifting dullness.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No ascites reported on CT despite albumin 20 g/L.",
+  "confidence": 0.65
+ },
+ {
+  "target": "EX.MSK.JOINTS",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No joint swelling, synovitis or effusion today; full range of movement in all joints."
+  },
+  "release_text": "No joint swelling, synovitis or effusion today; full range of movement in all joints.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Joint swelling earlier in the illness (H05); after months of steroids no active synovitis is likeliest, and none is reported at this admission.",
+  "confidence": 0.55
+ },
+ {
+  "target": "EX.SKIN.INSPECTION",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Pale skin; no rash, nodules or ulcers."
+  },
+  "release_text": "Pale skin; no rash, nodules or ulcers.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "No rash reported (see HX.SKIN.RASH).",
+  "confidence": 0.7
+ },
+ {
+  "target": "EX.SKIN.PURPURA",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "A few scattered bruises on the forearms and shins; no petechiae; no mucosal bleeding."
+  },
+  "release_text": "A few scattered bruises on the forearms and shins; no petechiae; no mucosal bleeding.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Platelets 29 x10^9/L; matches the bruising history.",
+  "confidence": 0.6
+ },
+ {
+  "target": "EX.ORAL.CAVITY",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Pale oral mucosa; no ulcers or thrush; dentition healthy."
+  },
+  "release_text": "Pale oral mucosa; no ulcers or thrush; dentition healthy.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Severe anaemia; no mouth ulcers reported. Thrush is possible after steroids but not reported, so not added.",
+  "confidence": 0.65
+ },
+ {
+  "target": "EX.BEDSIDE.PEAK_FLOW",
+  "day_bucket": null,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Peak expiratory flow 360 L/min (predicted about 430 L/min for her age, sex and height; 84%)."
+  },
+  "release_text": "Peak expiratory flow 360 L/min (predicted about 430 L/min for her age, sex and height; 84%).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Four years of untreated asthma without an exacerbation; mildly reduced flow is likeliest.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.RBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 2.24,
+   "unit": "x10^12/L",
+   "ref_range": "3.80-5.10",
+   "flag": "L"
+  },
+  "release_text": "Red cell count 2.24 x10^12/L (3.80-5.10), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G05: normocytic anaemia; with the article's Hct 0.188 L/L this gives MCV 83.9 fL and MCH 26.3 pg (calculated), typical of anaemia of inflammation with hypersplenism.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.RDW",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 16.8,
+   "unit": "%",
+   "ref_range": "11.6-14.0",
+   "flag": "H"
+  },
+  "release_text": "Red cell distribution width 16.8 % (11.6-14.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mixed anaemia with transfusions at the other hospital; raised RDW is usual.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.MONO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 0.07,
+   "unit": "x10^9/L",
+   "ref_range": "0.10-0.60",
+   "flag": "L"
+  },
+  "release_text": "Monocytes 0.07 x10^9/L (0.10-0.60), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G05: the article gives neutrophils, lymphocytes and eosinophils only (0.79 of 0.87 x10^9/L); monocytes and basophils take the remainder so the differential sums to the white count.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.BASO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 0.01,
+   "unit": "x10^9/L",
+   "ref_range": "0.00-0.06"
+  },
+  "release_text": "Basophils 0.01 x10^9/L (0.00-0.06).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Remainder of the differential (see monocytes).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.NRBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0,
+   "unit": "/100 WBC",
+   "ref_range": "0"
+  },
+  "release_text": "Nucleated red cells 0 /100 WBC (0).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No nucleated red cells expected; the marrow is not infiltrated by a malignancy.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.RETIC_ABS",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 40,
+   "unit": "x10^9/L",
+   "ref_range": "50-100",
+   "flag": "L"
+  },
+  "release_text": "Reticulocytes (absolute) 40 x10^9/L (50-100), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "G05: an inadequate reticulocyte response for Hb 59 g/L, from marrow parasitisation, inflammation and splenic pooling; reticulocyte percentage 1.79% follows from the red cell count.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.IRF",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G05",
+  "value": {
+   "value": 11.0,
+   "unit": "%",
+   "ref_range": "1.6-12.1"
+  },
+  "release_text": "Immature reticulocyte fraction 11.0 % (1.6-12.1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Upper-normal immature fraction; no brisk regeneration.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.HAPTOGLOBIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 0.45,
+   "unit": "g/L",
+   "ref_range": "0.30-2.00"
+  },
+  "release_text": "Haptoglobin 0.45 g/L (0.30-2.00).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "G06: at most mild haemolysis; inflammation keeps haptoglobin from falling far.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.BILI_TOTAL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "value": 12,
+   "unit": "umol/L",
+   "ref_range": "3-21"
+  },
+  "release_text": "Bilirubin, total 12 umol/L (3-21).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G06: no jaundice; liver enzymes normal; mild haemolysis at most.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.BILI_CONJ",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 4,
+   "unit": "umol/L",
+   "ref_range": "<5"
+  },
+  "release_text": "Bilirubin, conjugated (direct) 4 umol/L (<5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; below total bilirubin.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ALP",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 96,
+   "unit": "U/L",
+   "ref_range": "35-100"
+  },
+  "release_text": "Alkaline phosphatase 96 U/L (35-100).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal. The article reports normal liver function early in the illness; a normal ALP with anti-M2 antibodies argues against primary biliary cholangitis.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.GGT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 38,
+   "unit": "U/L",
+   "ref_range": "7-45"
+  },
+  "release_text": "Gamma-glutamyl transferase 38 U/L (7-45).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; hepatomegaly without cholestasis.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.TOTAL_PROTEIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 83,
+   "unit": "g/L",
+   "ref_range": "65-85"
+  },
+  "release_text": "Total protein 83 g/L (65-85).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Albumin 20 g/L plus globulins of about 63 g/L (IgG 41.7 g/L with raised IgA and IgM): a reversed albumin to globulin ratio, typical of this degree of polyclonal gammopathy.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.IGA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 3.4,
+   "unit": "g/L",
+   "ref_range": "0.70-4.00"
+  },
+  "release_text": "Immunoglobulin A 3.40 g/L (0.70-4.00).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Polyclonal B-cell activation raises all classes, IgG most.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.IGM",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 2.6,
+   "unit": "g/L",
+   "ref_range": "0.40-2.30",
+   "flag": "H"
+  },
+  "release_text": "Immunoglobulin M 2.60 g/L (0.40-2.30), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Polyclonal activation; mildly raised.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 3.4,
+   "unit": "mmol/L",
+   "ref_range": "2.5-7.8"
+  },
+  "release_text": "Urea 3.4 mmol/L (2.5-7.8).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal creatinine; poor intake.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 84,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 84 mL/min/1.73m2 (>90), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 from creatinine 80 umol/L, female, age 36.",
+  "confidence": 0.9
+ },
+ {
+  "target": "CMP.NA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 133,
+   "unit": "mmol/L",
+   "ref_range": "135-145",
+   "flag": "L"
+  },
+  "release_text": "Sodium 133 mmol/L (135-145), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild hyponatraemia is common in prolonged febrile illness.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.K",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 3.6,
+   "unit": "mmol/L",
+   "ref_range": "3.5-5.1"
+  },
+  "release_text": "Potassium 3.6 mmol/L (3.5-5.1).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 100,
+   "unit": "mmol/L",
+   "ref_range": "98-107"
+  },
+  "release_text": "Chloride 100 mmol/L (98-107).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; anion gap 10 mmol/L (calculated).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.BICARB",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 23,
+   "unit": "mmol/L",
+   "ref_range": "22-29"
+  },
+  "release_text": "Bicarbonate 23 mmol/L (22-29).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.PT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 14.6,
+   "unit": "s",
+   "ref_range": "11.0-14.0",
+   "flag": "H"
+  },
+  "release_text": "Prothrombin time 14.6 s (11.0-14.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild prolongation from poor intake and liver involvement; relevant to the risk of invasive procedures.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.INR",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.22,
+   "unit": "ratio",
+   "ref_range": "0.80-1.20",
+   "flag": "H"
+  },
+  "release_text": "International normalised ratio 1.22 ratio (0.80-1.20), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Matches the PT.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.APTT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 37.8,
+   "unit": "s",
+   "ref_range": "26.0-36.0",
+   "flag": "H"
+  },
+  "release_text": "Activated partial thromboplastin time 37.8 s (26.0-36.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild prolongation; lupus anticoagulant not detected.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.FIBRINOGEN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 2.2,
+   "unit": "g/L",
+   "ref_range": "1.5-4.0"
+  },
+  "release_text": "Fibrinogen 2.2 g/L (1.5-4.0).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "G07: normal, not in the HLH range (<1.5 g/L); the article gives no value.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.PCT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 0.35,
+   "unit": "ug/L",
+   "ref_range": "<0.05",
+   "flag": "H"
+  },
+  "release_text": "Procalcitonin 0.35 ug/L (<0.05), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mildly raised with systemic inflammation, without bacterial sepsis.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.CHOL_TOTAL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 2.9,
+   "unit": "mmol/L",
+   "ref_range": "<5.2",
+   "flag": "L"
+  },
+  "release_text": "Cholesterol, total 2.9 mmol/L (<5.2), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low total and HDL cholesterol are typical of chronic systemic inflammation.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.TRIGLYCERIDE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 2.4,
+   "unit": "mmol/L",
+   "ref_range": "<1.7",
+   "flag": "H"
+  },
+  "release_text": "Triglycerides 2.4 mmol/L (<1.7), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "G07: raised triglycerides are common in active disease of this kind but stay below the HLH-2004 threshold (3.0 mmol/L fasting).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.CHOL_HDL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 0.5,
+   "unit": "mmol/L",
+   "ref_range": ">1.2",
+   "flag": "L"
+  },
+  "release_text": "HDL cholesterol 0.5 mmol/L (>1.2), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low in chronic inflammation.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CHOL_LDL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 1.3,
+   "unit": "mmol/L",
+   "ref_range": "<3.0",
+   "flag": "L"
+  },
+  "release_text": "LDL cholesterol 1.3 mmol/L (<3.0), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Friedewald: 2.9 - 0.5 - 2.4/2.2 = 1.3 mmol/L.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.SIL2R",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G07",
+  "value": {
+   "value": 1850,
+   "unit": "U/mL",
+   "ref_range": "223-710",
+   "flag": "H"
+  },
+  "release_text": "Soluble interleukin-2 receptor 1850 U/mL (223-710), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "G07: T-cell activation raises soluble CD25, but below the HLH-2004 threshold (2,400 U/mL). The article gives no value.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.RF",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 18,
+   "unit": "IU/mL",
+   "ref_range": "0-20"
+  },
+  "release_text": "Rheumatoid factor 18 IU/mL (0-20).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Polyclonal activation often gives a low-positive rheumatoid factor; kept within the laboratory's range, like the other hospital's 12 IU/mL.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.DRVVT_RATIO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.08,
+   "unit": "ratio",
+   "ref_range": "0.80-1.20"
+  },
+  "release_text": "DRVVT normalised ratio 1.08 ratio (0.80-1.20).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Lupus anticoagulant not detected at the other hospital.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.ACL_IGG",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 8,
+   "unit": "GPL U/mL",
+   "ref_range": "<20"
+  },
+  "release_text": "Anticardiolipin IgG 8 GPL U/mL (<20).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Negative; no thrombosis or pregnancy loss.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ACL_IGM",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 15,
+   "unit": "MPL U/mL",
+   "ref_range": "<20"
+  },
+  "release_text": "Anticardiolipin IgM 15 MPL U/mL (<20).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Polyclonal IgM can give low anticardiolipin IgM; kept below the cut-off.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.B2GP1_IGG",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 4,
+   "unit": "U/mL",
+   "ref_range": "<20"
+  },
+  "release_text": "Anti-beta-2-glycoprotein I IgG 4 U/mL (<20).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Negative.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.UPCR",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 12,
+   "unit": "mg/mmol",
+   "ref_range": "<15"
+  },
+  "release_text": "Urine protein:creatinine ratio 12 mg/mmol (<15).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No significant proteinuria; renal function normal. Argues against lupus nephritis.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.U_SG",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.015,
+   "unit": "ratio",
+   "ref_range": "1.005-1.030"
+  },
+  "release_text": "Urine specific gravity 1.015 ratio (1.005-1.030).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_PH",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 6.0,
+   "unit": "pH",
+   "ref_range": "5.0-8.0"
+  },
+  "release_text": "Urine pH 6.0 pH (5.0-8.0).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_MICRO_RBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1,
+   "unit": "/HPF",
+   "ref_range": "0-2"
+  },
+  "release_text": "Urine microscopy, red cells 1 /HPF (0-2).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No haematuria; no active nephritis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_MICRO_WBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 2,
+   "unit": "/HPF",
+   "ref_range": "0-5"
+  },
+  "release_text": "Urine microscopy, pus cells 2 /HPF (0-5).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No pyuria.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.LVEF",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 66,
+   "unit": "%",
+   "ref_range": "55-70"
+  },
+  "release_text": "Left ventricular ejection fraction 66 % (55-70).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Hyperdynamic circulation from severe anaemia and fever.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.QTC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 440,
+   "unit": "ms",
+   "ref_range": "350-460"
+  },
+  "release_text": "Corrected QT interval 440 ms (350-460).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; potassium 3.6 mmol/L.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.FLC_KAPPA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 68.0,
+   "unit": "mg/L",
+   "ref_range": "3.3-19.4",
+   "flag": "H"
+  },
+  "release_text": "Free kappa light chains 68.0 mg/L (3.3-19.4), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Polyclonal B-cell activation raises both light chains in proportion.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.FLC_LAMBDA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 72.0,
+   "unit": "mg/L",
+   "ref_range": "5.7-26.3",
+   "flag": "H"
+  },
+  "release_text": "Free lambda light chains 72.0 mg/L (5.7-26.3), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "As kappa; ratio 0.94 (calculated), normal.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.B2M",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 4.6,
+   "unit": "mg/L",
+   "ref_range": "0.8-2.2",
+   "flag": "H"
+  },
+  "release_text": "Beta-2 microglobulin 4.6 mg/L (0.8-2.2), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Immune activation raises beta-2 microglobulin; renal function normal.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.CORTISOL_8AM",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 160,
+   "unit": "nmol/L",
+   "ref_range": "166-507",
+   "flag": "L"
+  },
+  "release_text": "Cortisol, 8 am 160 nmol/L (166-507), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Months of glucocorticoids stopped abruptly ten days ago (prednisone 20 mg daily): a suppressed axis is likely. Not reported.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.GLUCOSE_RANDOM",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 5.9,
+   "unit": "mmol/L",
+   "ref_range": "3.9-7.8"
+  },
+  "release_text": "Glucose, random plasma 5.9 mmol/L (3.9-7.8).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal after stopping prednisone.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.FEV1_PCT_PRED",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 84,
+   "unit": "%",
+   "ref_range": ">80"
+  },
+  "release_text": "FEV1 (% predicted) 84 % (>80).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mild, untreated asthma between attacks.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.FVC_PCT_PRED",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 88,
+   "unit": "%",
+   "ref_range": ">80"
+  },
+  "release_text": "FVC (% predicted) 88 % (>80).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.FEV1_FVC_RATIO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 76,
+   "unit": "%",
+   "ref_range": ">70"
+  },
+  "release_text": "FEV1/FVC ratio 76 % (>70).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mildly reduced airflow is possible; within normal.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.B12",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 410,
+   "unit": "pmol/L",
+   "ref_range": "145-569"
+  },
+  "release_text": "Vitamin B12 (cobalamin) 410 pmol/L (145-569).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; no deficiency reported.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.FOLATE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 10.2,
+   "unit": "nmol/L",
+   "ref_range": ">8.8"
+  },
+  "release_text": "Folate, serum 10.2 nmol/L (>8.8).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low-normal after months of poor intake.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.IRON",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 5.0,
+   "unit": "umol/L",
+   "ref_range": "9.0-30.4",
+   "flag": "L"
+  },
+  "release_text": "Iron, serum 5.0 umol/L (9.0-30.4), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low serum iron of inflammation; ferritin 1,007 ug/L.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.TRANSFERRIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.45,
+   "unit": "g/L",
+   "ref_range": "2.00-3.60",
+   "flag": "L"
+  },
+  "release_text": "Transferrin 1.45 g/L (2.00-3.60), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low in inflammation and malnutrition (albumin 20 g/L).",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.TIBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 36,
+   "unit": "umol/L",
+   "ref_range": "45-72",
+   "flag": "L"
+  },
+  "release_text": "Total iron-binding capacity 36 umol/L (45-72), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Transferrin 1.45 g/L x 25; saturation 14% (calculated).",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.CA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.98,
+   "unit": "mmol/L",
+   "ref_range": "2.15-2.55",
+   "flag": "L"
+  },
+  "release_text": "Calcium, total 1.98 mmol/L (2.15-2.55), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Total calcium low because albumin is 20 g/L; adjusted calcium normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CA_ADJ",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 2.38,
+   "unit": "mmol/L",
+   "ref_range": "2.15-2.55"
+  },
+  "release_text": "Calcium, albumin-adjusted 2.38 mmol/L (2.15-2.55).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "1.98 + 0.02 x (40 - 20) = 2.38 mmol/L.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.PHOSPHATE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1.02,
+   "unit": "mmol/L",
+   "ref_range": "0.81-1.45"
+  },
+  "release_text": "Phosphate 1.02 mmol/L (0.81-1.45).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CD4_ABS",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 115,
+   "unit": "x10^6/L",
+   "ref_range": "500-1500",
+   "flag": "L"
+  },
+  "release_text": "CD4 T cells (absolute) 115 x10^6/L (500-1500), low.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Lymphocytes 0.32 x10^9/L after months of immunosuppression and with this infection; CD4 cells about a third of them. HIV negative.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.CD4_PCT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 36,
+   "unit": "%",
+   "ref_range": "30-60"
+  },
+  "release_text": "CD4 T cells (percentage of lymphocytes) 36 % (30-60).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "About a third of lymphocytes; the absolute count is low because lymphocytes are.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.GLUCOSE_CAPILLARY",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 5.5,
+   "unit": "mmol/L",
+   "ref_range": "3.9-7.8"
+  },
+  "release_text": "Glucose, capillary (point of care) 5.5 mmol/L (3.9-7.8).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal; matches the bedside glucose.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.F2",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 72,
+   "unit": "IU/dL",
+   "ref_range": "50-150"
+  },
+  "release_text": "Factor II activity 72 IU/dL (50-150).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Mildly reduced synthesis and intake, matching PT 14.6 s.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.F5",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 68,
+   "unit": "IU/dL",
+   "ref_range": "50-150"
+  },
+  "release_text": "Factor V activity 68 IU/dL (50-150).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "As factor II.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.F7",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 58,
+   "unit": "IU/dL",
+   "ref_range": "50-150"
+  },
+  "release_text": "Factor VII activity 58 IU/dL (50-150).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Factor VII falls first; explains the mildly prolonged PT.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.F10",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 70,
+   "unit": "IU/dL",
+   "ref_range": "50-150"
+  },
+  "release_text": "Factor X activity 70 IU/dL (50-150).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "As factor II.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 210,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 210.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Appropriately raised for Hb 59 g/L; the anaemia is not from erythropoietin lack.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ABO_GROUP",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G10",
+  "value": {
+   "text": "Group O"
+  },
+  "release_text": "Forward and reverse grouping concordant: group O.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Not reported. Group O is the commonest group in Han Chinese adults; chosen from population frequency.",
+  "confidence": 0.35
+ },
+ {
+  "target": "CMP.RHD",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G10",
+  "value": {
+   "text": "RhD positive"
+  },
+  "release_text": "RhD positive.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Over 99% of Han Chinese are RhD positive.",
+  "confidence": 0.95
+ },
+ {
+  "target": "CMP.ANTIBODY_SCREEN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "No irregular red cell antibodies detected by indirect antiglobulin technique.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "The positive DAT reflects immunoglobulin coating of her own cells; no alloantibody despite earlier transfusions.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.DAT_C3D",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G06",
+  "value": {
+   "text": "Weakly positive"
+  },
+  "release_text": "Direct antiglobulin test weakly positive with anti-C3d.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "G06: the article gives a positive DAT without its specificity. With low C3 from immune complexes, weak C3d coating is likely alongside IgG.",
+  "confidence": 0.45
+ },
+ {
+  "target": "CMP.LUPUS_ANTICOAGULANT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Lupus anticoagulant not detected by dRVVT and silica clotting time.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not detected at the other hospital; unchanged.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ANTI_RO60",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Anti-Ro60 (SS-A): not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; negative.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.ANTI_RO52",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Weakly positive"
+  },
+  "release_text": "Anti-Ro52 (TRIM21): weakly positive.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": true,
+  "rationale": "Polyclonal B-cell activation produces low-level autoantibodies; anti-Ro52 is the commonest non-specific one. Adds to the lupus trap, so flagged.",
+  "confidence": 0.4
+ },
+ {
+  "target": "CMP.ANTI_LA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Anti-La (SS-B): not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; negative.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.ANTI_U1RNP",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Anti-U1 RNP: not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; negative.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.ANTI_SCL70",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Anti-Scl-70 (topoisomerase I): not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; negative.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ANTI_CENP_B",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Anti-centromere protein B: not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; negative.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ANTI_JO1",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Anti-Jo-1: not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported; negative.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.ANTI_PMSCL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Weakly positive"
+  },
+  "release_text": "Anti-PM/Scl-100: weakly positive.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Positive at the other hospital (S32); low-level antibodies persist while the infection is active.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.AMA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Positive (anti-M2 on immunoblot)"
+  },
+  "release_text": "Anti-mitochondrial antibodies positive; anti-M2 positive on immunoblot.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Positive twice before (S23); non-specific autoantibody from polyclonal activation, persisting.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ASMA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "No smooth muscle staining on rodent kidney, liver and stomach sections.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.ANTI_LKM1",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "Anti-LKM1: not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not reported.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_COLOUR",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Pale yellow, clear"
+  },
+  "release_text": "Urine pale yellow and clear.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.U_PROTEIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Urine protein: negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No proteinuria (UPCR 12 mg/mmol).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.U_GLUCOSE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Urine glucose: negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal glucose.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.U_KETONES",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Trace"
+  },
+  "release_text": "Urine ketones: trace.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Poor intake with fever.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.U_BLOOD",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Urine blood: negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No haematuria or haemoglobinuria.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_BILIRUBIN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Urine bilirubin: negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Bilirubin normal.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.U_UROBILINOGEN",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Normal"
+  },
+  "release_text": "Urine urobilinogen: normal.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "At most mild haemolysis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.U_LEUCOCYTES",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Urine leucocyte esterase: negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No urinary infection.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.U_NITRITE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Urine nitrite: negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No urinary infection.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.U_CASTS",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "None seen"
+  },
+  "release_text": "No casts seen. No crystals seen.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No active nephritis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.URINE_CULTURE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No significant growth"
+  },
+  "release_text": "Urine culture: no significant growth.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No urinary infection.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.BLOOD_CULTURE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No growth after 5 days"
+  },
+  "release_text": "Blood culture: no growth after 5 days.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No bacteraemia; fever from the parasitic infection.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ECG_REPORT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Sinus tachycardia, otherwise normal"
+  },
+  "release_text": "Sinus tachycardia at 114 per minute. Normal axis, PR and QRS intervals. No ST-segment or T-wave abnormality.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Fever and severe anaemia; matches the pulse of 116/min.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.ECHO_REPORT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Hyperdynamic, structurally normal heart"
+  },
+  "release_text": "Transthoracic echocardiogram. Normal left ventricular size with hyperdynamic systolic function (ejection fraction 66%). Normal valves with no vegetation. No pericardial effusion. Estimated pulmonary artery systolic pressure normal.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Severe anaemia and fever; no pericardial effusion or vegetation (relevant to the lupus and endocarditis lines).",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.RK39",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G04",
+  "value": {
+   "text": "Positive"
+  },
+  "release_text": "rK39 rapid antibody test: positive (test and control bands visible).",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "G04: rK39 is positive in most people with active disease of this kind; its sensitivity is lower in the immunosuppressed but antibody is still expected after nine months of infection. Not done in the article.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.BRUCELLA_SAT",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Less than 1:80"
+  },
+  "release_text": "Brucella agglutinin titre less than 1:80.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Negative; the article's diagnosis is confirmed otherwise.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.IGRA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Negative. Interferon-gamma response to TB antigens below the assay cut-off; mitogen control adequate.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No tuberculosis; lymphopenia could make it indeterminate, but the mitogen control is taken as adequate.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.AFB_SMEAR",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "No AFB seen"
+  },
+  "release_text": "No acid-fast bacilli seen.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No tuberculosis.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.XPERT_MTB_RIF",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "MTB not detected"
+  },
+  "release_text": "MTB not detected. Rifampicin resistance not applicable.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No tuberculosis.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.MALARIA_PF_AG",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Plasmodium falciparum HRP2 antigen not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No malaria.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.MALARIA_PAN_AG",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Pan-malarial pLDH antigen not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No malaria.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.TYPHOID_IGM",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "S. Typhi IgM negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No enteric fever.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.WIDAL_TO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "1:40"
+  },
+  "release_text": "S. Typhi O agglutinin titre 1:40.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low titre only, not significant; polyclonal activation can give low titres.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.WIDAL_TH",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Less than 1:160"
+  },
+  "release_text": "S. Typhi H agglutinin titre less than 1:160.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Not significant.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.ANTI_HBC",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Non-reactive"
+  },
+  "release_text": "Anti-HBc (total) non-reactive.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "HBsAg non-reactive twice; no reason to assume past infection.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.CMV_IGM",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "CMV IgM negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CMV DNA not detected (S29).",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.CMV_IGG",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Positive"
+  },
+  "release_text": "CMV IgG positive, consistent with past infection.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Most adults in China are CMV seropositive.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.EBV_VCA_IGM",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "EBV VCA IgM negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Low-level EBV DNA under immunosuppression is reactivation, not primary infection.",
+  "confidence": 0.65
+ },
+ {
+  "target": "CMP.EBV_VCA_IGG",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Positive"
+  },
+  "release_text": "EBV VCA IgG positive, consistent with past infection.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Past infection, near universal in adults.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.EBV_EBNA_IGG",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Positive"
+  },
+  "release_text": "EBNA-1 IgG positive, consistent with past infection.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Past infection.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.PARVO_IGM",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Negative"
+  },
+  "release_text": "Parvovirus B19 IgM negative.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No acute parvovirus infection; the anaemia is not a red cell aplasia.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.PARVO_IGG",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Positive"
+  },
+  "release_text": "Parvovirus B19 IgG positive, consistent with past infection.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Past infection is common in adults.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.URINE_BJP",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "No free kappa or lambda light chains detected on urine immunofixation.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Normal at the local hospital; polyclonal gammopathy only.",
+  "confidence": 0.75
+ },
+ {
+  "target": "CMP.BCR_ABL",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "BCR-ABL1 fusion transcripts (p190 and p210) not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No myeloproliferative neoplasm.",
+  "confidence": 0.85
+ },
+ {
+  "target": "CMP.JAK2_V617F",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "text": "Not detected"
+  },
+  "release_text": "JAK2 V617F mutation not detected.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "No myeloproliferative neoplasm.",
+  "confidence": 0.85
+ }
+]

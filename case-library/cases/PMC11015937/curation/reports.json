@@ -1,0 +1,173 @@
+[
+ {
+  "id": "RP01",
+  "test_item_id": "LAB.HAEM.MALARIA_SMEAR",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.MALARIAL_PARASITES",
+   "FND.SCHISTOCYTES"
+  ],
+  "report_text": "Thick and thin films examined under oil immersion. Thick film: asexual parasites present. Thin film: small ring forms (early trophozoites) of Plasmodium falciparum, some red cells carrying two or more rings; infected red cells are not enlarged; no gametocytes or mature schizonts seen. Parasitaemia 2.8% of red cells. Occasional schistocytes. Platelets reduced.",
+  "impression": "Plasmodium falciparum seen; parasitaemia 2.8%. Occasional schistocytes.",
+  "suggested_reflex": [
+   "LAB.HAEM.MALARIA_PARASITAEMIA"
+  ],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected",
+   "reviewer"
+  ],
+  "rationale": "Species and occasional schistocytes are from the article (R01). Ring morphology is what an early falciparum film shows. The 2.8% parasitaemia is the reviewer row for day 0 (G03, Figure 2) and must match it.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP02",
+  "test_item_id": "LAB.HAEM.FILM",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [
+   "FND.MICROCYTOSIS",
+   "FND.HYPOCHROMIA",
+   "FND.SCHISTOCYTES",
+   "FND.MALARIAL_PARASITES"
+  ],
+  "report_text": "Red cells: microcytic and hypochromic with mild anisopoikilocytosis; occasional schistocytes. Intra-erythrocytic ring forms seen in some red cells. White cells: no significant morphological abnormality. Platelets: reduced on the film, no clumps. Comment: parasites seen; thick and thin films for species and parasite count recommended urgently.",
+  "impression": "Microcytic hypochromic red cells, occasional schistocytes and intra-erythrocytic ring forms.",
+  "suggested_reflex": [
+   "LAB.HAEM.MALARIA_SMEAR",
+   "LAB.HAEM.MALARIA_PARASITAEMIA"
+  ],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "A routine film in a laboratory would show the same parasites and schistocytes the article's smear showed (R01); a competent scientist flags parasites and asks for dedicated films rather than naming the species on a screening film. Microcytosis and hypochromia follow MCV 77.6 fL and MCH 25.8 pg.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP03",
+  "test_item_id": "LAB.HAEM.FILM_REVIEW",
+  "variant": "only",
+  "status": "final",
+  "status_line": "Final report, reviewed by a haematopathologist.",
+  "findings": [
+   "FND.MICROCYTOSIS",
+   "FND.HYPOCHROMIA",
+   "FND.SCHISTOCYTES",
+   "FND.MALARIAL_PARASITES"
+  ],
+  "report_text": "Film reviewed by a haematopathologist. Microcytic hypochromic red cells with target cells absent and mild anisopoikilocytosis. Schistocytes are occasional only (well under 1% of red cells). Ring-form parasites in red cells of normal size, some cells with two rings and some rings at the cell margin, typical of Plasmodium falciparum; no gametocytes. Neutrophils show no toxic change; platelets reduced. Comment: the schistocytes are too few to support a primary thrombotic microangiopathy on their own; the parasitaemia explains the haemolysis and thrombocytopenia. Urgent parasite count and treatment advised.",
+  "impression": "Plasmodium falciparum ring forms with occasional schistocytes on a microcytic hypochromic background.",
+  "suggested_reflex": [
+   "LAB.HAEM.MALARIA_PARASITAEMIA"
+  ],
+  "based_on": [
+   "R01"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "Species and occasional schistocytes are from the article; the reviewer's comment is what a haematopathologist would add once parasites are seen, and it is available only after a film review is ordered.",
+  "confidence": 0.7
+ },
+ {
+  "id": "RP04",
+  "test_item_id": "IMG.XR.CHEST",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "PA erect chest radiograph. Heart size and mediastinal contours normal. Lungs clear; no consolidation, pleural effusion or pulmonary oedema.",
+  "impression": "Normal chest radiograph.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R03"
+  ],
+  "origins": [
+   "article"
+  ],
+  "rationale": "The article reports the chest X-ray as negative.",
+  "confidence": 0.9
+ },
+ {
+  "id": "RP05",
+  "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Contrast-enhanced CT of the abdomen and pelvis, portal venous phase. Liver, spleen (11 cm), pancreas, adrenal glands and kidneys normal. No bowel wall thickening, collection or free fluid. No lymphadenopathy. Bladder and pelvic organs unremarkable.",
+  "impression": "No acute abdominal or pelvic abnormality.",
+  "suggested_reflex": [],
+  "based_on": [
+   "R04"
+  ],
+  "origins": [
+   "article",
+   "affected"
+  ],
+  "rationale": "The article reports the CT as negative; a normal spleen size is stated explicitly because splenomegaly would be a clue it does not report.",
+  "confidence": 0.8
+ },
+ {
+  "id": "RP06",
+  "test_item_id": "IMG.US.ABDOMEN",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Liver normal in size and echotexture with no focal lesion. Gallbladder thin-walled without calculi; common bile duct not dilated. Spleen 11 cm, normal echotexture. Pancreas and kidneys normal. No free fluid.",
+  "impression": "Normal abdominal ultrasound.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Not done in the article; consistent with the negative CT.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP07",
+  "test_item_id": "IMG.US.KIDNEYS",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Right kidney 10.8 cm and left kidney 11.1 cm, with preserved corticomedullary differentiation. No hydronephrosis or calculi. Bladder poorly filled, otherwise unremarkable.",
+  "impression": "Normal kidneys; no obstruction.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "AKI from dehydration and the infection, not obstruction; consistent with the negative CT.",
+  "confidence": 0.75
+ },
+ {
+  "id": "RP08",
+  "test_item_id": "IMG.CT.HEAD",
+  "variant": "only",
+  "status": "final",
+  "status_line": null,
+  "findings": [],
+  "report_text": "Non-contrast CT of the head. Grey-white matter differentiation preserved. No intracranial haemorrhage, infarct, mass effect or oedema. Ventricles and sulci normal for age.",
+  "impression": "Normal CT head.",
+  "suggested_reflex": [],
+  "based_on": [],
+  "origins": [
+   "affected"
+  ],
+  "rationale": "Not done in the article; confusion without focal signs, which resolved with treatment.",
+  "confidence": 0.75
+ }
+]

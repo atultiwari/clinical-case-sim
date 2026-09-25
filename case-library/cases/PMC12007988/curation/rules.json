@@ -1,0 +1,59 @@
+[
+ {
+  "target": "HX.GYN.MENSES",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: a menstrual history does not apply to this patient (a man)."
+ },
+ {
+  "target": "HX.GYN.PREGNANCY",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: the possibility of pregnancy does not apply to this patient (a man)."
+ },
+ {
+  "target": "HX.GYN.OBSTETRIC",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: an obstetric history does not apply to this patient (a man)."
+ },
+ {
+  "target": "HX.GYN.CONTRACEPTION",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: a contraceptive history does not apply to this patient (a man)."
+ },
+ {
+  "target": "HX.GYN.MENOPAUSE",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: a menopausal history does not apply to this patient (a man)."
+ },
+ {
+  "target": "HX.GYN.VAGINAL_DISCHARGE",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: a history of vaginal discharge or bleeding does not apply to this patient (a man)."
+ },
+ {
+  "target": "EX.GYN.PELVIC",
+  "day_bucket": null,
+  "value": {
+   "text": "Not applicable"
+  },
+  "release_text": "Not applicable: a pelvic examination does not apply to this patient (a man)."
+ },
+ {"target": "REF.DENTISTRY", "day_bucket": null, "value": {"text": "No specific dental or oral concerns from our side; happy to review if new problems arise."}, "release_text": "Dentistry: no specific dental or oral concerns from our side; happy to review if new problems arise."}
+]

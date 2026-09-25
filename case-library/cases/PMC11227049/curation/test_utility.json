@@ -1,0 +1,332 @@
+[
+  {
+    "test_item_id": "IMG.CT.ABDOMEN_PELVIS",
+    "utility": "unnecessary",
+    "rationale": "Normal; radiation and contrast for little yield with a soft abdomen and normal ultrasound."
+  },
+  {
+    "test_item_id": "IMG.US.ABDOMEN",
+    "utility": "supportive",
+    "rationale": "Normal, as in the article; reasonable for post-prandial pain and raised liver enzymes."
+  },
+  {
+    "test_item_id": "IMG.XR.ABDOMEN",
+    "utility": "low_yield",
+    "rationale": "Normal; no obstruction or radio-opaque material, since she stopped the capsules before admission."
+  },
+  {
+    "test_item_id": "LAB.BM.FLOW",
+    "utility": "unnecessary",
+    "rationale": "Normal; no blast population expected."
+  },
+  {
+    "test_item_id": "LAB.BM.IRON_STAIN",
+    "utility": "low_yield",
+    "rationale": "Shows ring sideroblasts, which can mislead towards myelodysplasia; comes with a marrow that is not needed first."
+  },
+  {
+    "test_item_id": "LAB.CHEM.AMYLASE",
+    "utility": "low_yield",
+    "rationale": "Normal; lipase is enough."
+  },
+  {
+    "test_item_id": "LAB.CHEM.B12",
+    "utility": "supportive",
+    "rationale": "Low-normal; reasonable given the tongue changes and past metformin."
+  },
+  {
+    "test_item_id": "LAB.CHEM.COPPER_CAERULOPLASMIN",
+    "utility": "supportive",
+    "rationale": "Excludes copper deficiency, a reversible cause of ring sideroblasts."
+  },
+  {
+    "test_item_id": "LAB.CHEM.FERRITIN",
+    "utility": "supportive",
+    "rationale": "Replete stores; rules out iron deficiency."
+  },
+  {
+    "test_item_id": "LAB.CHEM.FOLATE",
+    "utility": "supportive",
+    "rationale": "Normal."
+  },
+  {
+    "test_item_id": "LAB.CHEM.GLUCOSE_FASTING",
+    "utility": "supportive",
+    "rationale": "Raised; confirms poor control."
+  },
+  {
+    "test_item_id": "LAB.CHEM.GLUCOSE_PP",
+    "utility": "supportive",
+    "rationale": "Raised."
+  },
+  {
+    "test_item_id": "LAB.CHEM.GLUCOSE_RANDOM",
+    "utility": "supportive",
+    "rationale": "Moderate hyperglycaemia."
+  },
+  {
+    "test_item_id": "LAB.CHEM.HAPTOGLOBIN",
+    "utility": "supportive",
+    "rationale": "Low-normal; shows the haemolysis is mild."
+  },
+  {
+    "test_item_id": "LAB.CHEM.HBA1C",
+    "utility": "supportive",
+    "rationale": "9%: poor control after stopping metformin; may read low with a young red cell population."
+  },
+  {
+    "test_item_id": "LAB.CHEM.HOLOTC",
+    "utility": "low_yield",
+    "rationale": "Normal; adds little to a low-normal B12 with a non-macrocytic anaemia."
+  },
+  {
+    "test_item_id": "LAB.CHEM.IRON_STUDIES",
+    "utility": "supportive",
+    "rationale": "Raised iron and saturation argue against iron deficiency and against giving iron."
+  },
+  {
+    "test_item_id": "LAB.CHEM.LDH",
+    "utility": "supportive",
+    "rationale": "Moderately raised; fits ineffective erythropoiesis with mild haemolysis."
+  },
+  {
+    "test_item_id": "LAB.CHEM.LFT",
+    "utility": "supportive",
+    "rationale": "Routine admission panel; shows the unexplained transaminase rise."
+  },
+  {
+    "test_item_id": "LAB.CHEM.LIPASE",
+    "utility": "supportive",
+    "rationale": "Normal; excludes pancreatitis as a cause of the pain."
+  },
+  {
+    "test_item_id": "LAB.CHEM.RENAL",
+    "utility": "supportive",
+    "rationale": "Routine admission panel; normal."
+  },
+  {
+    "test_item_id": "LAB.CHEM.SERUM_PROTEINS",
+    "utility": "low_yield",
+    "rationale": "Normal; repeats the protein results of the liver panel."
+  },
+  {
+    "test_item_id": "LAB.CHEM.VITAMIN_B6",
+    "utility": "low_yield",
+    "rationale": "Normal; B6 deficiency is rare without isoniazid or alcohol."
+  },
+  {
+    "test_item_id": "LAB.CHEM.ZINC",
+    "utility": "low_yield",
+    "rationale": "Normal; excludes zinc excess as a cause of ring sideroblasts, as the authors did."
+  },
+  {
+    "test_item_id": "LAB.CYTOGEN.FISH_MDS",
+    "utility": "unnecessary",
+    "rationale": "Normal; adds nothing to a normal karyotype."
+  },
+  {
+    "test_item_id": "LAB.CYTOGEN.KARYOTYPE",
+    "utility": "low_yield",
+    "rationale": "Normal; reasonable only if a marrow is done and myelodysplasia is still considered."
+  },
+  {
+    "test_item_id": "LAB.ENDO.ANTI_TPO",
+    "utility": "unnecessary",
+    "rationale": "Raised but does not change management of treated hypothyroidism."
+  },
+  {
+    "test_item_id": "LAB.ENDO.TFT",
+    "utility": "supportive",
+    "rationale": "Normal on thyroxine; hypothyroidism does not explain the anaemia."
+  },
+  {
+    "test_item_id": "LAB.ENDO.THYROID_TOTAL",
+    "utility": "low_yield",
+    "rationale": "Normal; repeats the free hormone results."
+  },
+  {
+    "test_item_id": "LAB.GI.FIT",
+    "utility": "supportive",
+    "rationale": "Negative; with no bleeding history and replete iron, blood loss is excluded."
+  },
+  {
+    "test_item_id": "LAB.GI.H_PYLORI_STOOL_AG",
+    "utility": "low_yield",
+    "rationale": "Negative."
+  },
+  {
+    "test_item_id": "LAB.HAEM.ALAD_ACTIVITY",
+    "utility": "low_yield",
+    "rationale": "Markedly low; supports lead but is a specialist test."
+  },
+  {
+    "test_item_id": "LAB.HAEM.CBC",
+    "utility": "essential",
+    "rationale": "Routine admission panel; shows the anaemia with a raised RDW."
+  },
+  {
+    "test_item_id": "LAB.HAEM.FILM",
+    "utility": "essential",
+    "rationale": "Shows coarse basophilic stippling, normoblasts and polychromasia: the pivotal clue."
+  },
+  {
+    "test_item_id": "LAB.HAEM.FILM_REVIEW",
+    "utility": "supportive",
+    "rationale": "Confirms the stippling and suggests a blood lead; useful if the screening film is doubted."
+  },
+  {
+    "test_item_id": "LAB.HAEM.G6PD",
+    "utility": "low_yield",
+    "rationale": "Normal; no oxidant trigger or bite cells."
+  },
+  {
+    "test_item_id": "LAB.HAEM.HB_HPLC",
+    "utility": "supportive",
+    "rationale": "Normal; excludes thalassaemia trait, the other common cause of stippling."
+  },
+  {
+    "test_item_id": "LAB.HAEM.P5N_ACTIVITY",
+    "utility": "low_yield",
+    "rationale": "Low because lead inhibits the enzyme; can mislead towards the inherited deficiency."
+  },
+  {
+    "test_item_id": "LAB.HAEM.PT_INR",
+    "utility": "supportive",
+    "rationale": "Normal; synthetic function preserved."
+  },
+  {
+    "test_item_id": "LAB.HAEM.RETIC",
+    "utility": "essential",
+    "rationale": "The reticulocytosis (7.94%) shows the marrow is responding and steers away from simple deficiency."
+  },
+  {
+    "test_item_id": "LAB.IMM.IF_GPC_ANTIBODIES",
+    "utility": "unnecessary",
+    "rationale": "Negative; B12 is not deficient."
+  },
+  {
+    "test_item_id": "LAB.IMM.LIVER_AUTOANTIBODIES",
+    "utility": "low_yield",
+    "rationale": "Negative; the enzyme pattern does not suggest autoimmune liver disease."
+  },
+  {
+    "test_item_id": "LAB.MOL.MYELOID_NGS",
+    "utility": "unnecessary",
+    "rationale": "Normal; expensive and slow; not needed once lead is found."
+  },
+  {
+    "test_item_id": "LAB.SERO.HEPATITIS_A_IGM",
+    "utility": "low_yield",
+    "rationale": "Negative; no fever or jaundice."
+  },
+  {
+    "test_item_id": "LAB.SERO.HEPATITIS_B",
+    "utility": "supportive",
+    "rationale": "Negative; reasonable with raised transaminases."
+  },
+  {
+    "test_item_id": "LAB.SERO.HEPATITIS_C",
+    "utility": "supportive",
+    "rationale": "Negative; reasonable with raised transaminases."
+  },
+  {
+    "test_item_id": "LAB.SERO.HEPATITIS_E_IGM",
+    "utility": "low_yield",
+    "rationale": "Negative; no fever or jaundice."
+  },
+  {
+    "test_item_id": "LAB.TBS.BLOOD_GROUP",
+    "utility": "supportive",
+    "rationale": "Needed only if a transfusion is planned; she is stable."
+  },
+  {
+    "test_item_id": "LAB.TBS.DAT",
+    "utility": "supportive",
+    "rationale": "Negative; excludes immune haemolysis."
+  },
+  {
+    "test_item_id": "LAB.TOX.BLOOD_CADMIUM",
+    "utility": "unnecessary",
+    "rationale": "Within the reference limit; no source."
+  },
+  {
+    "test_item_id": "LAB.TOX.BLOOD_LEAD",
+    "utility": "essential",
+    "rationale": "Confirms the diagnosis (121.2 ug/dL) and guides chelation."
+  },
+  {
+    "test_item_id": "LAB.TOX.BLOOD_MERCURY",
+    "utility": "low_yield",
+    "rationale": "Within the reference limit; reasonable once an Ayurvedic remedy is disclosed."
+  },
+  {
+    "test_item_id": "LAB.TOX.FAECAL_PORPHYRINS",
+    "utility": "unnecessary",
+    "rationale": "Normal; needed only if variegate porphyria is suspected."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_ALA",
+    "utility": "supportive",
+    "rationale": "Raised with a normal porphobilinogen: the pattern of lead, not of acute porphyria."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_ARSENIC",
+    "utility": "low_yield",
+    "rationale": "Within the reference limit; reasonable once an Ayurvedic remedy is disclosed."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_LEAD",
+    "utility": "supportive",
+    "rationale": "Raised; supports the diagnosis and later monitoring, but adds little to the blood lead."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_MERCURY",
+    "utility": "low_yield",
+    "rationale": "Within the reference limit."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_PBG",
+    "utility": "supportive",
+    "rationale": "Not in the acute range; excludes an acute porphyria attack."
+  },
+  {
+    "test_item_id": "LAB.TOX.URINE_PORPHYRINS",
+    "utility": "low_yield",
+    "rationale": "Coproporphyrin raised; supports lead but does not distinguish it on its own."
+  },
+  {
+    "test_item_id": "LAB.TOX.ZPP",
+    "utility": "supportive",
+    "rationale": "Raised; reflects weeks of exposure and supports the diagnosis."
+  },
+  {
+    "test_item_id": "LAB.URINE.HAEMOSIDERIN",
+    "utility": "low_yield",
+    "rationale": "Negative; no chronic intravascular haemolysis."
+  },
+  {
+    "test_item_id": "LAB.URINE.URINALYSIS",
+    "utility": "supportive",
+    "rationale": "Cheap; no haemoglobinuria, increased urobilinogen."
+  },
+  {
+    "test_item_id": "PROC.BM.ASPIRATE",
+    "utility": "low_yield",
+    "rationale": "Shows erythroid hyperplasia; the authors did it given her age, but film and history lead to the answer first."
+  },
+  {
+    "test_item_id": "PROC.BM.TREPHINE",
+    "utility": "unnecessary",
+    "rationale": "Adds nothing once the aspirate and iron stain are available; invasive."
+  },
+  {
+    "test_item_id": "PROC.ENDO.COLONOSCOPY",
+    "utility": "unnecessary",
+    "rationale": "Normal; no bleeding and iron replete; invasive."
+  },
+  {
+    "test_item_id": "PROC.ENDO.OGD",
+    "utility": "low_yield",
+    "rationale": "Non-specific findings; invasive, for little yield."
+  }
+]

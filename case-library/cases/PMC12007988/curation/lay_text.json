@@ -1,0 +1,42 @@
+[
+ {
+  "fact": "H02",
+  "lay_text": "I've been tired all the time for about a month."
+ },
+ {
+  "fact": "H03",
+  "lay_text": "I've gone off my food over the same month."
+ },
+ {
+  "fact": "H04",
+  "lay_text": "I've been losing weight this month."
+ },
+ {
+  "fact": "H05",
+  "lay_text": "My doctor sent me in because of how I've been feeling."
+ },
+ {
+  "fact": "H06",
+  "lay_text": "No, I've never had anything serious. I've been healthy."
+ },
+ {
+  "fact": "H07",
+  "lay_text": "I don't take any medicines at all."
+ },
+ {
+  "fact": "H08",
+  "lay_text": "No, I've never had an operation on my stomach or bowels."
+ },
+ {
+  "fact": "H09",
+  "lay_text": "I'm not vegetarian or vegan, but to be honest I only have meat or fish about once a month."
+ },
+ {
+  "fact": "H10",
+  "lay_text": "I get really out of breath now whenever I do anything, even walking a short way."
+ },
+ {
+  "fact": "H11",
+  "lay_text": "I'm feeling better now, not as tired or breathless."
+ }
+]

@@ -1,0 +1,354 @@
+{
+  "final_dx": {
+    "id": "DX.LEAD_POISONING",
+    "ids": [
+      "DX.LEAD_POISONING"
+    ],
+    "text": "Lead poisoning from an Ayurvedic herbal diabetes capsule bought online, presenting with abdominal pain, anorexia and fatigue, and anaemia with coarse basophilic stippling and ring sideroblasts",
+    "icd10": [
+      "T56.0",
+      "D64.2"
+    ],
+    "accepted_synonyms": [
+      "lead poisoning",
+      "lead toxicity",
+      "plumbism",
+      "saturnism",
+      "lead intoxication",
+      "heavy-metal (lead) poisoning"
+    ],
+    "secondary_findings": [
+      "Acquired sideroblastic anaemia from lead (ring sideroblasts), with a reticulocytosis",
+      "Raised transaminases and alkaline phosphatase, not explained in the article",
+      "Poorly controlled type 2 diabetes (HbA1c 9%) after stopping metformin",
+      "Hypothyroidism, controlled on thyroxine"
+    ],
+    "leak_terms": [
+      "ayurvedic lead poisoning",
+      "bhasma toxicity",
+      "herbal remedy metal poisoning",
+      "traditional remedy toxicity"
+    ]
+  },
+  "secondary_findings": [
+    "Acquired sideroblastic anaemia from lead (ring sideroblasts), with a reticulocytosis",
+    "Raised transaminases and alkaline phosphatase, not explained in the article",
+    "Poorly controlled type 2 diabetes (HbA1c 9%) after stopping metformin",
+    "Hypothyroidism, controlled on thyroxine"
+  ],
+  "accepted_differential": [
+    "Myelodysplastic syndrome with ring sideroblasts",
+    "Other acquired sideroblastic anaemia (alcohol, drugs such as isoniazid, copper deficiency or zinc excess)",
+    "Haemolytic anaemia (reticulocytosis, mildly raised unconjugated bilirubin)",
+    "Thalassaemia trait (basophilic stippling, low-normal MCH)",
+    "Arsenic or mercury toxicity from a traditional remedy",
+    "Acute porphyria (abdominal pain)",
+    "Drug- or herb-induced liver injury",
+    "Nutritional deficiency anaemia (B12 or folate; tongue desquamation)"
+  ],
+  "red_herrings": [
+    "desquamation of the tongue and oral mucosa",
+    "raised transaminases and alkaline phosphatase",
+    "HbA1c 9%",
+    "hypothyroidism",
+    "high serum iron and transferrin saturation",
+    "reticulocytosis suggesting haemolysis",
+    "ring sideroblasts raising myelodysplastic syndrome",
+    "metformin stopped two months earlier"
+  ],
+  "key_discriminators": [
+    "coarse basophilic stippling on the film",
+    "ring sideroblasts in the marrow",
+    "herbal diabetes capsules bought online",
+    "blood lead 121.2 ug/dL",
+    "random urine lead 400.2 ug/L",
+    "capsule lead 40657.71 ppm"
+  ],
+  "treatment_given": "The herbal medicine was stopped. Chelation with dimercaprol (BAL), then oral d-penicillamine for six weeks. The capsules were sent to the state drug analyst (lead 40657.71 ppm against a permissible 10 ppm).",
+  "outcome": "Symptomatic improvement; haemoglobin 10.1 g/dL at discharge. After six weeks of d-penicillamine, blood and urine lead had fallen to normal and the film showed only a mild normocytic normochromic anaemia.",
+  "must_do": [
+    {
+      "text": "Ask specifically about herbal, Ayurvedic or other traditional medicines and remedies bought online, especially for her diabetes",
+      "if": {
+        "asked_any": [
+          "HX.MEDS.SUPPLEMENTS",
+          "HX.MEDS.SUPPLEMENT_DETAILS"
+        ]
+      }
+    },
+    {
+      "text": "Have the peripheral blood film examined carefully for basophilic stippling",
+      "if": {
+        "finding_released": {
+          "findings": [
+            "FND.COARSE_BASOPHILIC_STIPPLING"
+          ],
+          "from_tests": [
+            "LAB.HAEM.FILM",
+            "LAB.HAEM.FILM_REVIEW"
+          ]
+        }
+      }
+    },
+    {
+      "text": "Measure venous blood lead",
+      "if": {
+        "ordered_any": [
+          "LAB.TOX.BLOOD_LEAD"
+        ]
+      }
+    },
+    {
+      "text": "Stop the exposure (the capsules) before or alongside chelation",
+      "if": {
+        "all": [
+          {
+            "plan_has": [
+              "ACT.STOP_SUSPECTED_SOURCE"
+            ]
+          },
+          {
+            "plan_before": [
+              "ACT.STOP_SUSPECTED_SOURCE",
+              "RX.CHELATION.*"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "text": "Chelate (symptomatic adult, blood lead about 121 ug/dL) with any appropriate chelator (dimercaprol, calcium disodium EDTA, d-penicillamine or succimer), with specialist advice",
+      "if": {
+        "all": [
+          {
+            "plan_has_any": [
+              "RX.CHELATION.DIMERCAPROL",
+              "RX.CHELATION.EDTA_IV",
+              "RX.CHELATION.PENICILLAMINE",
+              "RX.CHELATION.SUCCIMER_ORAL"
+            ]
+          },
+          {
+            "any": [
+              {
+                "referred_any": [
+                  "REF.TOXICOLOGY",
+                  "REF.HAEMATOLOGY"
+                ]
+              },
+              {
+                "plan_has_any": [
+                  "REF.TOXICOLOGY",
+                  "REF.HAEMATOLOGY"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "text": "Send the product for analysis and report it to the drug regulator or public health",
+      "if": {
+        "all": [
+          {
+            "plan_has": [
+              "ACT.TEST_PRODUCT"
+            ]
+          },
+          {
+            "plan_has_any": [
+              "ACT.NOTIFY_PUBLIC_HEALTH",
+              "ACT.REPORT_ADVERSE_EVENT"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "text": "Restart effective treatment for her diabetes",
+      "if": {
+        "plan_has_any": [
+          "RX.ENDO.ORAL_HYPOGLYCAEMIC",
+          "RX.ENDO.INSULIN"
+        ]
+      }
+    },
+    {
+      "text": "Plan a repeat blood lead after chelation, because levels rebound",
+      "if": {
+        "plan_has": [
+          "ACT.REPEAT_BLOOD_LEAD"
+        ]
+      }
+    }
+  ],
+  "must_not_do": [
+    {
+      "text": "Label myelodysplastic syndrome with ring sideroblasts before excluding reversible causes such as lead, alcohol, drugs and copper deficiency",
+      "if": {
+        "all": [
+          {
+            "dx_in": [
+              "DX.MDS_RING_SIDEROBLASTS"
+            ]
+          },
+          {
+            "not": {
+              "ordered_all": [
+                "LAB.TOX.BLOOD_LEAD",
+                "LAB.CHEM.COPPER_CAERULOPLASMIN"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": "Chelate while the exposure continues",
+      "if": {
+        "all": [
+          {
+            "plan_has_any": [
+              "RX.CHELATION.*"
+            ]
+          },
+          {
+            "not": {
+              "plan_has": [
+                "ACT.STOP_SUSPECTED_SOURCE"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "text": "Give iron therapy (serum iron and ferritin are not low)",
+      "if": {
+        "plan_has_any": [
+          "RX.IRON.ORAL",
+          "RX.IRON.IV"
+        ]
+      }
+    },
+    {
+      "text": "Attribute the anaemia to diabetes or hypothyroidism without investigating it",
+      "if": {
+        "all": [
+          {
+            "dx_in": [
+              "DX.ANAEMIA_OF_HYPOTHYROIDISM"
+            ]
+          },
+          {
+            "not": {
+              "ordered_any": [
+                "LAB.HAEM.FILM",
+                "LAB.HAEM.FILM_REVIEW",
+                "LAB.HAEM.RETIC"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diagnosis_rubric_anchors": {
+    "5": "Lead poisoning, with the herbal diabetes capsules identified as the source",
+    "4": "Lead poisoning, source not identified",
+    "3": "Heavy-metal poisoning (including from a traditional remedy) without naming lead, poisoning by another metal, or toxic sideroblastic anaemia without naming lead",
+    "2": "Myelodysplastic syndrome with ring sideroblasts, haemolytic anaemia, thalassaemia trait, nutritional anaemia, acute porphyria or drug-induced liver injury as the final diagnosis",
+    "1": "Unrelated diagnosis, or one that would lead to harm"
+  },
+  "rubric": {
+    "rubric": [
+      {
+        "score": 5,
+        "text": "Lead poisoning, with the herbal diabetes capsules identified as the source",
+        "if": {
+          "all": [
+            {
+              "dx_in": [
+                "DX.LEAD_POISONING"
+              ]
+            },
+            {
+              "evidence_has": [
+                "H15"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "score": 4,
+        "text": "Lead poisoning, source not identified",
+        "if": {
+          "dx_in": [
+            "DX.LEAD_POISONING"
+          ]
+        }
+      },
+      {
+        "score": 3,
+        "text": "Heavy-metal poisoning (including from a traditional remedy) without naming lead, poisoning by another metal, or toxic sideroblastic anaemia without naming lead",
+        "if": {
+          "dx_in": [
+            "DX.HEAVY_METAL_POISONING",
+            "DX.AYURVEDIC_METAL_TOXICITY",
+            "DX.SIDEROBLASTIC_ANAEMIA_TOXIC",
+            "DX.ARSENIC_POISONING",
+            "DX.MERCURY_POISONING"
+          ]
+        }
+      },
+      {
+        "score": 2,
+        "text": "Myelodysplastic syndrome with ring sideroblasts, haemolytic anaemia, thalassaemia trait, nutritional anaemia, acute porphyria or drug-induced liver injury as the final diagnosis",
+        "if": {
+          "dx_in": [
+            "DX.MDS_RING_SIDEROBLASTS",
+            "DX.DRUG_INDUCED_NONIMMUNE_HAEMOLYSIS",
+            "DX.BETA_THALASSAEMIA_TRAIT",
+            "DX.B12_DEFICIENCY_ANAEMIA",
+            "DX.FOLATE_DEFICIENCY_ANAEMIA",
+            "DX.MIXED_NUTRITIONAL_ANAEMIA",
+            "DX.ACUTE_INTERMITTENT_PORPHYRIA",
+            "DX.DRUG_INDUCED_LIVER_INJURY"
+          ]
+        }
+      },
+      {
+        "score": 1,
+        "text": "Unrelated diagnosis, or one that would lead to harm",
+        "if": {
+          "not": {
+            "dx_in": [
+              "DX.LEAD_POISONING",
+              "DX.HEAVY_METAL_POISONING",
+              "DX.AYURVEDIC_METAL_TOXICITY",
+              "DX.SIDEROBLASTIC_ANAEMIA_TOXIC",
+              "DX.ARSENIC_POISONING",
+              "DX.MERCURY_POISONING",
+              "DX.MDS_RING_SIDEROBLASTS",
+              "DX.DRUG_INDUCED_NONIMMUNE_HAEMOLYSIS",
+              "DX.BETA_THALASSAEMIA_TRAIT",
+              "DX.B12_DEFICIENCY_ANAEMIA",
+              "DX.FOLATE_DEFICIENCY_ANAEMIA",
+              "DX.MIXED_NUTRITIONAL_ANAEMIA",
+              "DX.ACUTE_INTERMITTENT_PORPHYRIA",
+              "DX.DRUG_INDUCED_LIVER_INJURY"
+            ]
+          }
+        }
+      }
+    ],
+    "default_score": 1
+  },
+  "teaching_points": [
+    "Herbal and Ayurvedic remedies, including products sold online, can contain toxic amounts of lead",
+    "Patients may not volunteer remedies they have stopped or do not regard as medicines; ask specifically",
+    "Coarse basophilic stippling with ring sideroblasts points to lead before a marrow diagnosis of myelodysplasia"
+  ]
+}
