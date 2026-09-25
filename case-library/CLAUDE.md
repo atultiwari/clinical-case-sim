@@ -50,7 +50,7 @@ This is an educational and research tool. Nothing it produces is clinical advice
 
 ## Stack
 
-- Supabase Cloud project `case-vault` (Free plan, Mumbai), schema `casevault`.
+- Supabase Cloud project `case-vault` (Free plan), schema `casevault`. The region does not matter: the cases are already published and hold no patient identifiers, and this project is for development and testing only. Production will run on Atul's own server.
 - Scripts: Python 3.12 with uv, openpyxl, psycopg 3.
 - Case Studio: Next.js (App Router), TypeScript, Tailwind, shadcn/ui; server-side reads through a read-only role. It never uses the project's Supabase Auth: local use needs no login; a deployed Studio sits behind a separate login and an allow-list with Atul's account only.
 - Figures: the private Supabase Storage bucket `case-media`.

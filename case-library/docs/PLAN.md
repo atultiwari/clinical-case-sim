@@ -24,9 +24,9 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
   - Depends on: U0.1.
 
 - [ ] **L0.2 [human] Case Vault project and MCP**
-  - Build: create the Supabase project `case-vault` on the Free plan in the Mumbai region (`ap-south-1`). Atul creates it in the dashboard, or approves Claude creating it through the account-level connector. Add `case-library/.mcp.json` with the project-scoped URL (SPEC §4.1). Keep manual approval for `execute_sql` and `apply_migration`. If Claude Code can see the account-level Supabase connector, add `nidana/.claude/settings.json` and `sambhasha/.claude/settings.json` that deny its tools.
+  - Build: create the Supabase project `case-vault` on the Free plan, in any region (see CLAUDE.md, Stack). Atul creates it in the dashboard, or approves Claude creating it through the account-level connector. Add `case-library/.mcp.json` with the project-scoped URL (SPEC §4.1). Keep manual approval for `execute_sql` and `apply_migration`. If Claude Code can see the account-level Supabase connector, add `nidana/.claude/settings.json` and `sambhasha/.claude/settings.json` that deny its tools.
   - Accept: in Claude Code started in `case-library/`, the Supabase MCP lists tables for this project only and shows no account tools. Sessions started in `nidana/` or `sambhasha/` have no Supabase tools at all (the account-level connector is denied in their `.claude/settings.json`).
-  - Note: the Free plan allows two active projects; VRL-App-Demo is currently the other one.
+  - Note (2026-09-25): Atul created `case-vault` (ref `vxiymbaxsiavxuyxzhnt`, Tokyo) and deleted VRL-App-Demo, so the Free plan's two-project limit is not a concern.
   - Depends on: L0.1.
 
 - [ ] **L0.3 Schema 0.3**
