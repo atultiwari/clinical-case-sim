@@ -4,6 +4,16 @@ Every change to the shared contract (S-004) gets an entry here, newest first. Ea
 
 Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
+## 2026-09-25: a day without a result returns the latest earlier result (bundle schema 0.3, planned)
+
+- When a player or seat orders a test on a day for which the case holds no value for a component, the engine returns the most recent earlier value of that component, marked with the day it was taken ("result from day 0"). A value with no day is valid throughout the admission. Only the days before a component's first value need their own value (Case Library SPEC §10.2).
+- The Case Vault's coverage check and normal generator follow the same rule (migration `20260925220000_casevault_carry_forward.sql`, Case Library L0.9). Bundle rows are unchanged: a bundle simply holds fewer rows per component.
+
+Acknowledgements:
+
+- [ ] Nidana: the game server answers an order on a day without a value with the latest earlier value and shows its day.
+- [ ] Sambhasha: the Gatekeeper does the same when it releases results to the Chart.
+
 ## 2026-09-25: catalogue v1 (in review, Case Library L0.5)
 
 - `case-library/catalogue/normal_templates.csv` gains a `review_status` column (`pending` or `approved`); the Case Vault loader takes it from the CSV, and the normal generator uses approved templates only.
