@@ -7,7 +7,7 @@ Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 ## 2026-09-25: a day without a result returns the latest earlier result (bundle schema 0.3, planned)
 
 - When a player or seat orders a test on a day for which the case holds no value for a component, the engine returns the most recent earlier value of that component, marked with the day it was taken ("result from day 0"). A value with no day is valid throughout the admission. Only the days before a component's first value need their own value (Case Library SPEC §10.2).
-- The Case Vault's coverage check and normal generator follow the same rule (migration `20260925220000_casevault_carry_forward.sql`, Case Library L0.9). Bundle rows are unchanged: a bundle simply holds fewer rows per component.
+- The Case Vault's coverage check and normal generator follow the same rule (migration `20260925140203_casevault_carry_forward.sql`, Case Library L0.9). Bundle rows are unchanged: a bundle simply holds fewer rows per component.
 
 Acknowledgements:
 
