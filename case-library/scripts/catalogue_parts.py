@@ -25,8 +25,9 @@ def _units(doc: Doc) -> Iterator[Doc]:
     """The smallest loadable pieces, in dependency order."""
     for component in doc["components"]:
         yield {"components": [component]}
-    for rule in doc["value_rules"]:
-        yield {"value_rules": [rule]}
+    if doc["value_rules"]:
+        # One unit: the loader replaces all value rules whenever a part carries any.
+        yield {"value_rules": list(doc["value_rules"])}
     tests = {t["item_id"]: t for t in doc["tests"]}
     templates = {t["item_id"]: t for t in doc["normal_templates"]}
     diagnoses = {d["item_id"]: d for d in doc["diagnoses"]}
