@@ -1,0 +1,82 @@
+# Case Library workflow (case-library/docs/PLAN.md, task L0.1): lint, type-check and tests.
+# Runs only when the Case Library's files or this workflow change.
+name: case-library
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "case-library/**"
+      - ".github/workflows/case-library.yml"
+  push:
+    branches: [main]
+    paths:
+      - "case-library/**"
+      - ".github/workflows/case-library.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: case-library-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: case-library
+
+jobs:
+  lint:
+    name: Lint and type-check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          working-directory: case-library
+
+      - name: Install
+        run: uv sync --locked
+
+      - name: Ruff check
+        run: uv run ruff check --output-format=github .
+
+      - name: Ruff format
+        run: uv run ruff format --check .
+
+      - name: Mypy
+        run: uv run mypy
+
+  test:
+    name: Tests (with the local database)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          working-directory: case-library
+
+      - uses: supabase/setup-cli@45a513f8c64c0bc8e0e3dfe572b5c95be85f6359 # v3.0.1
+        with:
+          version: 2.117.0
+
+      - name: Install
+        run: uv sync --locked
+
+      # Only Postgres is needed for migration and integration tests; it starts faster
+      # than the whole stack and applies every migration in supabase/migrations/.
+      - name: Start the local database
+        run: supabase db start
+
+      - name: Tests
+        env:
+          CASE_LIBRARY_REQUIRE_DB: "1"
+        run: uv run pytest
+
+      - name: Stop the local database
+        if: always()
+        run: supabase stop --no-backup

@@ -52,5 +52,24 @@ repos:
         args: [--fix=lf]
 
   # --- Case Library hooks (added by L0.1) ---
+  # Versions match the exact pins in case-library/pyproject.toml; ruff and mypy read their
+  # settings from there. Tests run in the Case Library workflow, not here.
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.9
+    hooks:
+      - id: ruff-check
+        name: "Case Library: ruff check"
+        files: ^case-library/.*\.py$
+      - id: ruff-format
+        name: "Case Library: ruff format"
+        files: ^case-library/.*\.py$
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v2.3.1
+    hooks:
+      - id: mypy
+        name: "Case Library: mypy"
+        files: ^case-library/(scripts|tests)/.*\.py$
+        args: [--config-file=case-library/pyproject.toml]
+        additional_dependencies: ["psycopg[binary]==3.3.6", "pytest==9.1.1"]
   # --- Nidana hooks (added by N1.1) ---
   # --- Sambhasha hooks (added by P0.1) ---
