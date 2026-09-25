@@ -26,7 +26,7 @@ Case Library · a record of the decisions and actions Atul delegated ("take deci
 | --- | --- | --- |
 | Migration `casevault_studio_writer` | MCP `apply_migration` | 12 policies; security advisors clean |
 | Catalogue v1, in full | Four pastes into the dashboard SQL editor in Atul's Chrome (too large for the connector). Five rows with ° or α were mangled by the clipboard and were reloaded through the MCP; four rows with authoring notes were corrected through the MCP | All seven catalogue tables match the local build's fingerprints |
-| The pilot, steps 4–8 | Two dashboard pastes, each one transaction | 191 facts, 3 raw material, 4 media, 20 gaps, 12 paths; ledger 109 affected, 993 normal, 6 reviewer, 1 rule; the JATS snapshot's SHA-256 matches |
+| The pilot, steps 4–11 | Two dashboard pastes by Claude, the third by Atul, then checks and hand-over through the MCP | 191 facts, 3 raw material, 4 media, 20 gaps, 12 paths; ledger 109 affected, 993 normal, 6 reviewer, 1 rule; the JATS snapshot's SHA-256 matches |
 
 **Not done: a refusal.** The permission system refused the third dashboard paste, the pilot's reports, consult notes, the patient's words, test utility and ground truth, as a security-weakening action (writes outside the MCP's guard). Claude stopped all further writes through the dashboard, including the figure upload. The pilot is in `draft`, so no player can see it.
 
@@ -34,16 +34,13 @@ Case Library · a record of the decisions and actions Atul delegated ("take deci
 
 ## What still needs Atul, step by step
 
-### 1. Finish the pilot in the Case Vault (about 5 minutes)
+### 1. Finish the pilot in the Case Vault: done
 
-1. Supabase → project **case-vault** → **SQL Editor** → **New query**.
-2. Open `case-library/build/pilot/C_author.sql` (on this Mac; git-ignored) in a text editor, copy all of it and paste it into the editor. Run it. If the dashboard warns about Row Level Security, choose **Run without RLS**: the warning misreads the words "into atomic" inside a quoted licence note, and nothing creates a table.
-3. Tell Claude. Claude then runs the checks (step 10) and the hand-over to `in_review` (step 11) through the MCP, which are small.
+Atul ran `build/pilot/C_author.sql` in the SQL editor (25 Sep, 21:26). Claude then ran the checks (all clean) and the hand-over: `PMC12949993@v1` is `in_review`.
 
-### 2. Upload the pilot's three figures
+### 2. Upload the pilot's three figures: done
 
-1. Supabase → case-vault → **Storage** → bucket **case-media**.
-2. Create a folder `PMC12949993` and upload `F1.jpg`, `F2.jpg` and `F3.jpg` from `case-library/data/figures/PMC12949993/`, keeping the names exactly.
+F1–F3 are in `case-media/PMC12949993/`; their sizes match the local files and all four media rows resolve.
 
 ### 3. Create the Studio's database logins (to see the cases in the Case Studio)
 
