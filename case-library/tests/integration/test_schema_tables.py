@@ -91,3 +91,13 @@ def test_case_version_id_matches_case_and_version(db: psycopg.Connection) -> Non
             "insert into casevault.case_version (id, case_id, version)"
             " values ('NID-9002@v2', 'NID-9002', 1)"
         )
+
+
+def test_case_media_bucket_is_private(db: psycopg.Connection) -> None:
+    storage = db.execute("select to_regclass('storage.buckets') is not null").fetchone()
+    if storage != (True,):
+        pytest.skip("Storage is not installed in this database (CI starts the database only)")
+
+    row = db.execute("select public from storage.buckets where id = 'case-media'").fetchone()
+
+    assert row == (False,)
