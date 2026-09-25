@@ -61,6 +61,7 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
 - [ ] **L0.7 Case Studio v1 (read-only)**
   - Build: `studio/`, a Next.js app (package `@case-library/studio`) with the screens in SPEC §8, reading the Case Vault server-side through a read-only database role; licence badges on cases and figures; no Supabase Auth; a separate login and an allow-list if deployed.
   - Accept: the Studio lists the fixture case and the pilot once imported, shows every tab, and cannot write (the role has no write rights); an anonymous Nidana tester's session cannot open it. Runs locally with `pnpm --filter @case-library/studio dev`.
+  - Note (2026-09-25): built on branch `case-library/L0.7-case-studio` (from main). `casevault_reader` (migration `20260925132542`, applied to the Case Vault; the security advisor is now clean) reads every table and runs only the read functions; tests show it cannot write and that Nidana's `anon` and `authenticated` roles see nothing. The Studio (`studio/`, `@case-library/studio`) has every SPEC §8 screen; each query runs in a read-only transaction as `casevault_reader`. Checked locally on the fixture case; the pilot appears once L0.8 imports it. Waiting on Atul: create the `studio_reader` login role in the Supabase SQL editor (command in `studio/README.md`) and put its URL in `studio/.env.local`, never in Git or a chat.
   - Depends on: L0.3.
 
 - [ ] **L0.8 Pilot import**
@@ -87,9 +88,10 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
 
 ## Phase 1: the first ten cases
 
-- [ ] **L1.1 Case sourcing**
+- [x] **L1.1 Case sourcing** (done 2026-09-25, ahead of LM0 at Atul's request: `cases/SHORTLIST-batch1.md`)
   - Build: Claude proposes about 15 open-access haematology case reports, scored with the pilot's selection criteria (`cases/PMC12949993/PILOT_CASE.md`), with their licence flags, plus two or three common presentations (for example iron deficiency from menorrhagia, B12 deficiency in a vegetarian, thalassaemia trait against iron deficiency) as report-based or de novo cases.
   - Accept: a shortlist with licence, flags, reasons and a score for each.
+  - Note (2026-09-25): 25 E-utilities queries, 923 records screened, 39 full texts cached in `data/articles/`. About 15 CC-licensed candidates scored against the pilot's ten criteria (top: PMC12364935, visceral leishmaniasis misdiagnosed as SLE, 9/10), three common presentations (a von Willebrand report for menorrhagia; de novo NID-0001, B12 deficiency in a vegetarian, and NID-0002, thalassaemia trait at antenatal booking), and the catalogue areas the top five would add. Licences were read from each article's JATS `<license>` element because PMC's OA service returned 404; they are re-verified at L1.2. Scores may shift after the pilot review.
   - Depends on: LM0.
 
 - [ ] **L1.2 [human] Choose batch 1**
@@ -111,6 +113,9 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
   - Build: review decisions and per-figure production decisions in the Studio, written by Atul through the Studio's server into `review_decision`, as an alternative to the Excel pack.
   - Accept: a decision made in the Studio appears in `review_decision` and in the next export; Claude's writes still go only through the MCP.
   - Depends on: L0.7; Atul's preference.
+  - Note (2026-09-25): Atul chose to build it, deployable to his VPS, with an in-app login (username and password for an allow-list in `STUDIO_USERS`, signed session cookie, rate limiting) instead of a login at the proxy; never Supabase Auth. Writes go through the role `casevault_studio_writer` (migration `20260925143811`), which can only insert Studio batches and review decisions and set the four figure-decision columns of `media`. Before use on the cloud Case Vault: apply that migration through the MCP, and Atul creates the `studio_writer` login role himself (`studio/README.md`).
+  - Note (2026-09-25): the writer's row-level security now also checks case status: a review decision needs a target row that exists, in a case version listed in its batch, whose status is `draft` or `in_review`; a figure decision is refused once the version is retired (still allowed when frozen, SPEC §9).
+  - Note (2026-09-25): migration `20260925143811_casevault_studio_writer` applied to the Case Vault through the MCP; security advisors clean. The `studio_writer` login role is still Atul's to create.
 
 - [ ] **L1.6 Extension runs (recurring)**
   - Build: process missing requests from Nidana and out-of-catalogue requests from Sambhasha: add catalogue items, resolve them for every published case, review the `affected` rows, activate the items, record the catalogue version in the changelog and export new bundle revisions.
