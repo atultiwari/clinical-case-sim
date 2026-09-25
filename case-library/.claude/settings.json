@@ -1,0 +1,7 @@
+{
+  "enabledMcpjsonServers": ["supabase"],
+  "permissions": {
+    "ask": ["mcp__supabase__execute_sql", "mcp__supabase__apply_migration"],
+    "deny": ["mcp__claude_ai_Supabase", "mcp__bbfedc9b-cd23-4ebf-9705-6fa0acc5a3fc"]
+  }
+}
