@@ -457,7 +457,7 @@
    ],
    "source_locator": "Table 1",
    "catalogue_ref": "CMP.PLT",
-   "note": "Printed as 10^3/uL (numerically the same). Figure 1 shows the daily trend; only the tabulated days are transcribed."
+   "note": "Printed as 10^3/uL (numerically the same). Days missing from the table are in series S10, read from Figure 1."
   },
   {
    "id": "S06",
@@ -566,6 +566,75 @@
    "source_locator": "Case presentation (day 0) and Table 1 (days 2-9)",
    "catalogue_ref": "CMP.HAPTOGLOBIN",
    "note": "Printed <10 mg/dL (range 17-317 mg/dL); converted to g/L. Table 1 marks admission 'NA', but the text reports haptoglobin <10 mg/dL at presentation, so day 0 is taken from the text."
+  },
+  {
+   "id": "S09",
+   "item": "Malaria parasitaemia (parasitised red cells)",
+   "code": null,
+   "unit": "%",
+   "ref_range": "0 (none seen)",
+   "points": [
+    {
+     "day": 2,
+     "value": 5.0,
+     "flag": "H"
+    },
+    {
+     "day": 3,
+     "value": 1.6,
+     "flag": "H"
+    },
+    {
+     "day": 4,
+     "value": 0.6,
+     "flag": "H"
+    },
+    {
+     "day": 5,
+     "value": 0.0
+    },
+    {
+     "day": 6,
+     "value": 0.0
+    }
+   ],
+   "source_locator": "Figure 2",
+   "catalogue_ref": "CMP.MALARIA_PARASITAEMIA",
+   "note": "read from the figure image (26 Sep 2026). The chart starts at 'Day 2 - anti malaria medicine started' (5%) and shows 1.6% on day 3, 0.6% on day 4 and 0 on days 5 and 6; values read to about +/-0.1%. Days 0 and 1 are not plotted."
+  },
+  {
+   "id": "S10",
+   "item": "Platelets (days not in Table 1)",
+   "code": null,
+   "unit": "x10^9/L",
+   "ref_range": "130-400",
+   "points": [
+    {
+     "day": 1,
+     "value": 67,
+     "flag": "L"
+    },
+    {
+     "day": 3,
+     "value": 80,
+     "flag": "L"
+    },
+    {
+     "day": 5,
+     "value": 157
+    },
+    {
+     "day": 6,
+     "value": 235
+    },
+    {
+     "day": 8,
+     "value": 375
+    }
+   ],
+   "source_locator": "Figure 1",
+   "catalogue_ref": "CMP.PLT",
+   "note": "read from the figure image (26 Sep 2026), to about +/-5 x10^9/L; y-axis 'Platelets count (In Thousands)', x-axis days 0-8. Only days missing from Table 1 are added; on the shared days the figure agrees with the table (125, 66, 288) except day 4 (figure about 93, table 102), where Table 1 is kept."
   }
  ],
  "single_results": [
@@ -756,11 +825,10 @@
    "release": "service.pathology",
    "day": null,
    "findings": "Percentage of red cells infected fell progressively on antimalarial treatment.",
-   "media": [
-    "M02"
-   ],
+   "media": [],
    "source_locator": "Figure 2",
-   "test_item_id": "LAB.HAEM.MALARIA_PARASITAEMIA"
+   "test_item_id": "LAB.HAEM.MALARIA_PARASITAEMIA",
+   "note": "Figure 2 (M02) is debrief only and is not attached; its values are series S09."
   },
   {
    "id": "R03",
@@ -877,7 +945,7 @@
    "platelets recovering with antimalarial treatment alone",
    "parasitaemia falling on treatment"
   ],
-  "treatment_given": "Artemether-lumefantrine for four days; two units of packed red cells; supportive care. No plasma exchange.",
+  "treatment_given": "Artemether-lumefantrine for four days, started on day 2 (Figure 2); two units of packed red cells; supportive care. No plasma exchange.",
   "outcome": "Afebrile after day 2; symptoms resolved by day 5; platelets normalised and she was discharged. At one month she was well, with haemoglobin 11.6 g/dL and haematocrit 36.7% (follow-up values kept out of play).",
   "teaching_points": [
    "Ask every febrile patient about travel: the first emergency visit missed it",
@@ -1151,7 +1219,7 @@
   {
    "id": "G03",
    "item": "Parasite density",
-   "guidance": "Only in Figure 2. The day-0 value is a reviewer row, to be read off the figure; later days follow the plotted fall.",
+   "guidance": "Figure 2 gives days 2-6 (series S09: 5, 1.6, 0.6, 0, 0%). Days 0 and 1 are not plotted; set at 5% (affected, judgement call) to match the smear report.",
    "review_required": true
   },
   {

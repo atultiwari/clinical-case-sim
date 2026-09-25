@@ -9,8 +9,8 @@
    "FND.MALARIAL_PARASITES",
    "FND.SCHISTOCYTES"
   ],
-  "report_text": "Thick and thin films examined under oil immersion. Thick film: asexual parasites present. Thin film: small ring forms (early trophozoites) of Plasmodium falciparum, some red cells carrying two or more rings; infected red cells are not enlarged; no gametocytes or mature schizonts seen. Parasitaemia 2.8% of red cells. Occasional schistocytes. Platelets reduced.",
-  "impression": "Plasmodium falciparum seen; parasitaemia 2.8%. Occasional schistocytes.",
+  "report_text": "Thick and thin films examined under oil immersion. Thick film: asexual parasites present. Thin film: small ring forms (early trophozoites) of Plasmodium falciparum, some red cells carrying two or more rings; infected red cells are not enlarged; no gametocytes or mature schizonts seen. Parasitaemia 5% of red cells. Occasional schistocytes. Platelets reduced.",
+  "impression": "Plasmodium falciparum seen; parasitaemia 5%. Occasional schistocytes.",
   "suggested_reflex": [
    "LAB.HAEM.MALARIA_PARASITAEMIA"
   ],
@@ -19,10 +19,9 @@
   ],
   "origins": [
    "article",
-   "affected",
-   "reviewer"
+   "affected"
   ],
-  "rationale": "Species and occasional schistocytes are from the article (R01). Ring morphology is what an early falciparum film shows. The 2.8% parasitaemia is the reviewer row for day 0 (G03, Figure 2) and must match it.",
+  "rationale": "Species and occasional schistocytes are from the article (R01). Ring morphology is what an early falciparum film shows. The 5% parasitaemia is Figure 2's first value (day 2, when treatment started; series S09), also used for days 0 and 1.",
   "confidence": 0.75
  },
  {

@@ -97,7 +97,7 @@ def catalogue_document(case_dirs: Sequence[Path]) -> dict[str, Any]:
     return document
 
 
-def _replay_one(db: psycopg.Connection, case_dir: Path) -> Replay:
+def replay_one(db: psycopg.Connection, case_dir: Path) -> Replay:
     gold = _load_json(next(case_dir.glob("gold-case-file*.json")))
     cv = f"{gold['case_id']}@v{gold.get('version', 1)}"
     base = {"cv": cv, "generator": GENERATOR, "skill_version": "v0.1"}
@@ -133,7 +133,7 @@ def replay(db: psycopg.Connection, case_dirs: Sequence[Path]) -> list[Replay]:
         )
         for case_dir in case_dirs:
             with db.transaction():
-                results.append(_replay_one(db, case_dir))
+                results.append(replay_one(db, case_dir))
     return results
 
 

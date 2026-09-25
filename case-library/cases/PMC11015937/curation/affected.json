@@ -883,95 +883,6 @@
   "confidence": 0.6
  },
  {
-  "target": "CMP.MALARIA_PARASITAEMIA",
-  "day_bucket": 0,
-  "tier": "reviewer",
-  "gap_id": "G03",
-  "value": {
-   "value": 2.8,
-   "unit": "%",
-   "ref_range": "0 (none seen)",
-   "flag": "H"
-  },
-  "release_text": "Malaria parasitaemia (parasitised red cells) 2.80 % (0 (none seen)), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": false,
-  "rationale": "REVIEWER: the day-0 parasite density is plotted only in Figure 2; read it off the figure. Proposed 2.8%: below the 5% threshold the treating team's choice of oral treatment implies, and consistent with a platelet count that never fell below 60. The smear report RP01 quotes the same value and must change with it.",
-  "confidence": 0.4
- },
- {
-  "target": "CMP.MALARIA_PARASITAEMIA",
-  "day_bucket": 1,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 1.6,
-   "unit": "%",
-   "ref_range": "0 (none seen)",
-   "flag": "H"
-  },
-  "release_text": "Malaria parasitaemia (parasitised red cells) 1.60 % (0 (none seen)), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 shows a progressive fall on artemether-lumefantrine; the curator's reading of a typical clearance curve (about 50% fall in the first day, none seen by day 4). Replace with the figure's values at review.",
-  "confidence": 0.45
- },
- {
-  "target": "CMP.MALARIA_PARASITAEMIA",
-  "day_bucket": 2,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 0.5,
-   "unit": "%",
-   "ref_range": "0 (none seen)",
-   "flag": "H"
-  },
-  "release_text": "Malaria parasitaemia (parasitised red cells) 0.50 % (0 (none seen)), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 shows a progressive fall on artemether-lumefantrine; the curator's reading of a typical clearance curve (about 50% fall in the first day, none seen by day 4). Replace with the figure's values at review.",
-  "confidence": 0.45
- },
- {
-  "target": "CMP.MALARIA_PARASITAEMIA",
-  "day_bucket": 3,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 0.05,
-   "unit": "%",
-   "ref_range": "0 (none seen)",
-   "flag": "H"
-  },
-  "release_text": "Malaria parasitaemia (parasitised red cells) 0.05 % (0 (none seen)), high.",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 shows a progressive fall on artemether-lumefantrine; the curator's reading of a typical clearance curve (about 50% fall in the first day, none seen by day 4). Replace with the figure's values at review.",
-  "confidence": 0.45
- },
- {
-  "target": "CMP.MALARIA_PARASITAEMIA",
-  "day_bucket": 4,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 0.0,
-   "unit": "%",
-   "ref_range": "0 (none seen)"
-  },
-  "release_text": "Malaria parasitaemia (parasitised red cells) 0.00 % (0 (none seen)).",
-  "lay_text": null,
-  "priority": "high",
-  "judgement_call": true,
-  "rationale": "Figure 2 shows a progressive fall on artemether-lumefantrine; the curator's reading of a typical clearance curve (about 50% fall in the first day, none seen by day 4). Replace with the figure's values at review.",
-  "confidence": 0.45
- },
- {
   "target": "CMP.CREATININE",
   "day_bucket": 2,
   "tier": "affected",
@@ -5086,6 +4997,42 @@
   "priority": "high",
   "judgement_call": true,
   "rationale": "The article does not state her origin. A four-week stay in Nigeria without prophylaxis is the typical pattern of a traveller visiting friends and relatives, and the proposed alpha-plus thalassaemia (G07) implies West African ancestry; the new catalogue template ('born locally') would contradict both. It hints at travel only to a player who asks where she is from; the must-do still needs the travel question. Alternative: leave origin unstated ('Has lived in Brooklyn for many years').",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.MALARIA_PARASITAEMIA",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 5.0,
+   "unit": "%",
+   "ref_range": "0 (none seen)",
+   "flag": "H"
+  },
+  "release_text": "Malaria parasitaemia (parasitised red cells) 5.00 % (0 (none seen)), high.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Figure 2 starts on day 2 (treatment started) at 5%; days 0 and 1 are not plotted. Untreated parasitaemia could have been a little lower before day 2, but it is set at the first measured value so that it matches the smear report RP01 (5%). Alternative: 3-4% on day 0 rising to 5% by day 2.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.MALARIA_PARASITAEMIA",
+  "day_bucket": 1,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 5.0,
+   "unit": "%",
+   "ref_range": "0 (none seen)",
+   "flag": "H"
+  },
+  "release_text": "Malaria parasitaemia (parasitised red cells) 5.00 % (0 (none seen)), high.",
+  "lay_text": null,
+  "priority": "high",
+  "judgement_call": true,
+  "rationale": "Figure 2 starts on day 2 (treatment started) at 5%; days 0 and 1 are not plotted. Untreated parasitaemia could have been a little lower before day 2, but it is set at the first measured value so that it matches the smear report RP01 (5%). Alternative: 3-4% on day 0 rising to 5% by day 2.",
   "confidence": 0.5
  }
 ]

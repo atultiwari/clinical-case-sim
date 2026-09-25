@@ -116,7 +116,7 @@
   "lay_text": "No bruises or bleeding.",
   "priority": "low",
   "judgement_call": false,
-  "rationale": "Platelets 233 x10^9/L on admission; the fall to 45 came in hospital.",
+  "rationale": "Platelets 233 x10^9/L on admission; the fall (nadir 45 on day 12, Figure 1) came in hospital.",
   "confidence": 0.85
  },
  {
@@ -2183,7 +2183,7 @@
   "lay_text": null,
   "priority": "medium",
   "judgement_call": true,
-  "rationale": "Not reported. The platelets fell during dialysis with heparin exposure, a fair HIT question; the authors attribute the fall to marrow involvement, and thrombosis is explained by the truth.",
+  "rationale": "Not reported. The platelets fell after dialysis with heparin and again after LMWH from day 11 (Figure 1: 111 on day 8, 45 on day 12), a fair HIT question; the authors attribute the fall to marrow involvement, and thrombosis is explained by the truth.",
   "confidence": 0.6
  },
  {
@@ -2402,24 +2402,6 @@
   "tier": "affected",
   "gap_id": "G03",
   "value": {
-   "value": 92,
-   "unit": "g/L",
-   "ref_range": "115-150",
-   "flag": "L"
-  },
-  "release_text": "Haemoglobin 92 g/L (115-150), low.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: four units of washed red cells after admission, then continuing haemolysis; values only in Figure 1.",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.HB",
-  "day_bucket": 4,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
    "value": 88,
    "unit": "g/L",
    "ref_range": "115-150",
@@ -2428,45 +2410,9 @@
   "release_text": "Haemoglobin 88 g/L (115-150), low.",
   "lay_text": null,
   "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: four units of washed red cells after admission, then continuing haemolysis; values only in Figure 1.",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.HB",
-  "day_bucket": 7,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 84,
-   "unit": "g/L",
-   "ref_range": "115-150",
-   "flag": "L"
-  },
-  "release_text": "Haemoglobin 84 g/L (115-150), low.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: four units of washed red cells after admission, then continuing haemolysis; values only in Figure 1.",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.HB",
-  "day_bucket": 12,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 81,
-   "unit": "g/L",
-   "ref_range": "115-150",
-   "flag": "L"
-  },
-  "release_text": "Haemoglobin 81 g/L (115-150), low.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: four units of washed red cells after admission, then continuing haemolysis; values only in Figure 1.",
-  "confidence": 0.5
+  "judgement_call": false,
+  "rationale": "G03: interpolated between Figure 1's 62 g/L (day 1) and 101 g/L (day 4), during the transfusion of four units.",
+  "confidence": 0.7
  },
  {
   "target": "CMP.HB",
@@ -2474,17 +2420,17 @@
   "tier": "affected",
   "gap_id": "G03",
   "value": {
-   "value": 79,
+   "value": 82,
    "unit": "g/L",
    "ref_range": "115-150",
    "flag": "L"
   },
-  "release_text": "Haemoglobin 79 g/L (115-150), low.",
+  "release_text": "Haemoglobin 82 g/L (115-150), low.",
   "lay_text": null,
   "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: four units of washed red cells after admission, then continuing haemolysis; values only in Figure 1.",
-  "confidence": 0.5
+  "judgement_call": false,
+  "rationale": "G03: interpolated between Figure 1's 80 g/L (day 14) and 84 g/L (29 March, day 17).",
+  "confidence": 0.7
  },
  {
   "target": "CMP.PLT",
@@ -2492,69 +2438,16 @@
   "tier": "affected",
   "gap_id": "G03",
   "value": {
-   "value": 181,
+   "value": 162,
    "unit": "x10^9/L",
    "ref_range": "125-350"
   },
-  "release_text": "Platelet count 181 x10^9/L (125-350).",
+  "release_text": "Platelet count 162 x10^9/L (125-350).",
   "lay_text": null,
   "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: the text says the count fell progressively from 12 to 19 March (233 to a nadir of 45, S01); partial recovery afterwards is the curator's reading.",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.PLT",
-  "day_bucket": 4,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 132,
-   "unit": "x10^9/L",
-   "ref_range": "125-350"
-  },
-  "release_text": "Platelet count 132 x10^9/L (125-350).",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: the text says the count fell progressively from 12 to 19 March (233 to a nadir of 45, S01); partial recovery afterwards is the curator's reading.",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.PLT",
-  "day_bucket": 6,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 78,
-   "unit": "x10^9/L",
-   "ref_range": "125-350",
-   "flag": "L"
-  },
-  "release_text": "Platelet count 78 x10^9/L (125-350), low.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: the text says the count fell progressively from 12 to 19 March (233 to a nadir of 45, S01); partial recovery afterwards is the curator's reading.",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.PLT",
-  "day_bucket": 12,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 71,
-   "unit": "x10^9/L",
-   "ref_range": "125-350",
-   "flag": "L"
-  },
-  "release_text": "Platelet count 71 x10^9/L (125-350), low.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: the text says the count fell progressively from 12 to 19 March (233 to a nadir of 45, S01); partial recovery afterwards is the curator's reading.",
-  "confidence": 0.5
+  "judgement_call": false,
+  "rationale": "G03: interpolated between Figure 1's 183 (day 1) and 141 x10^9/L (day 4).",
+  "confidence": 0.7
  },
  {
   "target": "CMP.PLT",
@@ -2562,57 +2455,21 @@
   "tier": "affected",
   "gap_id": "G03",
   "value": {
-   "value": 96,
+   "value": 47,
    "unit": "x10^9/L",
    "ref_range": "125-350",
    "flag": "L"
   },
-  "release_text": "Platelet count 96 x10^9/L (125-350), low.",
+  "release_text": "Platelet count 47 x10^9/L (125-350), low.",
   "lay_text": null,
   "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: the text says the count fell progressively from 12 to 19 March (233 to a nadir of 45, S01); partial recovery afterwards is the curator's reading.",
-  "confidence": 0.5
+  "judgement_call": false,
+  "rationale": "G03: interpolated between Figure 1's 45 (day 14) and 49 x10^9/L (29 March, day 17).",
+  "confidence": 0.7
  },
  {
   "target": "CMP.LDH",
   "day_bucket": 7,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 560,
-   "unit": "U/L",
-   "ref_range": "120-250",
-   "flag": "H"
-  },
-  "release_text": "Lactate dehydrogenase 560 U/L (120-250), high.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: ongoing haemolysis, a little lower after transfusion; values only in Figure 1.",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.LDH",
-  "day_bucket": 12,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 470,
-   "unit": "U/L",
-   "ref_range": "120-250",
-   "flag": "H"
-  },
-  "release_text": "Lactate dehydrogenase 470 U/L (120-250), high.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: ongoing haemolysis, a little lower after transfusion; values only in Figure 1.",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.LDH",
-  "day_bucket": 16,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
@@ -2624,81 +2481,81 @@
   "release_text": "Lactate dehydrogenase 430 U/L (120-250), high.",
   "lay_text": null,
   "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: ongoing haemolysis, a little lower after transfusion; values only in Figure 1.",
-  "confidence": 0.5
+  "judgement_call": false,
+  "rationale": "G03: Figure 1's LDH line falls steadily from 685 (day 0) to 306 U/L (day 11) with no labelled point between; value read along the line.",
+  "confidence": 0.7
  },
  {
-  "target": "CMP.CREATININE",
-  "day_bucket": 2,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 1150,
-   "unit": "umol/L",
-   "ref_range": "41-81",
-   "flag": "H"
-  },
-  "release_text": "Creatinine 1150 umol/L (41-81), high.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: haemodialysis from day 0; urine output 2,300 mL/day and dialysis stopped by day 4; progressive recovery (Figure 1).",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.CREATININE",
-  "day_bucket": 4,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 830,
-   "unit": "umol/L",
-   "ref_range": "41-81",
-   "flag": "H"
-  },
-  "release_text": "Creatinine 830 umol/L (41-81), high.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: haemodialysis from day 0; urine output 2,300 mL/day and dialysis stopped by day 4; progressive recovery (Figure 1).",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.CREATININE",
-  "day_bucket": 7,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 540,
-   "unit": "umol/L",
-   "ref_range": "41-81",
-   "flag": "H"
-  },
-  "release_text": "Creatinine 540 umol/L (41-81), high.",
-  "lay_text": null,
-  "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: haemodialysis from day 0; urine output 2,300 mL/day and dialysis stopped by day 4; progressive recovery (Figure 1).",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.CREATININE",
+  "target": "CMP.LDH",
   "day_bucket": 12,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 285,
+   "unit": "U/L",
+   "ref_range": "120-250",
+   "flag": "H"
+  },
+  "release_text": "Lactate dehydrogenase 285 U/L (120-250), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "G03: interpolated between Figure 1's 306 (day 11) and 267 U/L (day 13).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.LDH",
+  "day_bucket": 16,
   "tier": "affected",
   "gap_id": "G03",
   "value": {
    "value": 330,
+   "unit": "U/L",
+   "ref_range": "120-250",
+   "flag": "H"
+  },
+  "release_text": "Lactate dehydrogenase 330 U/L (120-250), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "G03: interpolated between Figure 1's 287 (day 14) and 366 U/L (29 March, day 17).",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CREATININE",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 900,
    "unit": "umol/L",
    "ref_range": "41-81",
    "flag": "H"
   },
-  "release_text": "Creatinine 330 umol/L (41-81), high.",
+  "release_text": "Creatinine 900 umol/L (41-81), high.",
   "lay_text": null,
   "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: haemodialysis from day 0; urine output 2,300 mL/day and dialysis stopped by day 4; progressive recovery (Figure 1).",
-  "confidence": 0.5
+  "judgement_call": false,
+  "rationale": "G03: between Figure 1's 1,306 (day 1) and 485 umol/L (day 4), during daily dialysis.",
+  "confidence": 0.7
+ },
+ {
+  "target": "CMP.CREATININE",
+  "day_bucket": 12,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 180,
+   "unit": "umol/L",
+   "ref_range": "41-81",
+   "flag": "H"
+  },
+  "release_text": "Creatinine 180 umol/L (41-81), high.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "G03: interpolated between Figure 1's 192 (day 11) and 167 umol/L (day 13).",
+  "confidence": 0.7
  },
  {
   "target": "CMP.CREATININE",
@@ -2706,107 +2563,17 @@
   "tier": "affected",
   "gap_id": "G03",
   "value": {
-   "value": 245,
+   "value": 126,
    "unit": "umol/L",
    "ref_range": "41-81",
    "flag": "H"
   },
-  "release_text": "Creatinine 245 umol/L (41-81), high.",
+  "release_text": "Creatinine 126 umol/L (41-81), high.",
   "lay_text": null,
   "priority": "medium",
-  "judgement_call": true,
-  "rationale": "G03: haemodialysis from day 0; urine output 2,300 mL/day and dialysis stopped by day 4; progressive recovery (Figure 1).",
-  "confidence": 0.5
- },
- {
-  "target": "CMP.UREA",
-  "day_bucket": 2,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 31.6,
-   "unit": "mmol/L",
-   "ref_range": "3.1-8.8",
-   "flag": "H"
-  },
-  "release_text": "Urea 31.6 mmol/L (3.1-8.8), high.",
-  "lay_text": null,
-  "priority": "low",
   "judgement_call": false,
-  "rationale": "G03: falls with dialysis and recovery, in step with creatinine.",
-  "confidence": 0.6
- },
- {
-  "target": "CMP.UREA",
-  "day_bucket": 4,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 26.0,
-   "unit": "mmol/L",
-   "ref_range": "3.1-8.8",
-   "flag": "H"
-  },
-  "release_text": "Urea 26.0 mmol/L (3.1-8.8), high.",
-  "lay_text": null,
-  "priority": "low",
-  "judgement_call": false,
-  "rationale": "G03: falls with dialysis and recovery, in step with creatinine.",
-  "confidence": 0.6
- },
- {
-  "target": "CMP.UREA",
-  "day_bucket": 7,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 19.8,
-   "unit": "mmol/L",
-   "ref_range": "3.1-8.8",
-   "flag": "H"
-  },
-  "release_text": "Urea 19.8 mmol/L (3.1-8.8), high.",
-  "lay_text": null,
-  "priority": "low",
-  "judgement_call": false,
-  "rationale": "G03: falls with dialysis and recovery, in step with creatinine.",
-  "confidence": 0.6
- },
- {
-  "target": "CMP.UREA",
-  "day_bucket": 12,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 14.1,
-   "unit": "mmol/L",
-   "ref_range": "3.1-8.8",
-   "flag": "H"
-  },
-  "release_text": "Urea 14.1 mmol/L (3.1-8.8), high.",
-  "lay_text": null,
-  "priority": "low",
-  "judgement_call": false,
-  "rationale": "G03: falls with dialysis and recovery, in step with creatinine.",
-  "confidence": 0.6
- },
- {
-  "target": "CMP.UREA",
-  "day_bucket": 16,
-  "tier": "affected",
-  "gap_id": "G03",
-  "value": {
-   "value": 11.2,
-   "unit": "mmol/L",
-   "ref_range": "3.1-8.8",
-   "flag": "H"
-  },
-  "release_text": "Urea 11.2 mmol/L (3.1-8.8), high.",
-  "lay_text": null,
-  "priority": "low",
-  "judgement_call": false,
-  "rationale": "G03: falls with dialysis and recovery, in step with creatinine.",
-  "confidence": 0.6
+  "rationale": "G03: interpolated between Figure 1's 136 (day 14) and 121 umol/L (29 March, day 17).",
+  "confidence": 0.7
  },
  {
   "target": "CMP.K",
@@ -3202,114 +2969,6 @@
   "confidence": 0.6
  },
  {
-  "target": "CMP.EGFR",
-  "day_bucket": 0,
-  "tier": "affected",
-  "gap_id": null,
-  "value": {
-   "value": 1,
-   "unit": "mL/min/1.73m2",
-   "ref_range": ">90",
-   "flag": "L"
-  },
-  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 1 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
-  "lay_text": null,
-  "priority": "low",
-  "judgement_call": false,
-  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 2065 umol/L; not valid while the creatinine is changing in AKI.",
-  "confidence": 0.8
- },
- {
-  "target": "CMP.EGFR",
-  "day_bucket": 2,
-  "tier": "affected",
-  "gap_id": null,
-  "value": {
-   "value": 3,
-   "unit": "mL/min/1.73m2",
-   "ref_range": ">90",
-   "flag": "L"
-  },
-  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 3 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
-  "lay_text": null,
-  "priority": "low",
-  "judgement_call": false,
-  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 1150 umol/L; not valid while the creatinine is changing in AKI.",
-  "confidence": 0.8
- },
- {
-  "target": "CMP.EGFR",
-  "day_bucket": 4,
-  "tier": "affected",
-  "gap_id": null,
-  "value": {
-   "value": 4,
-   "unit": "mL/min/1.73m2",
-   "ref_range": ">90",
-   "flag": "L"
-  },
-  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 4 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
-  "lay_text": null,
-  "priority": "low",
-  "judgement_call": false,
-  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 830 umol/L; not valid while the creatinine is changing in AKI.",
-  "confidence": 0.8
- },
- {
-  "target": "CMP.EGFR",
-  "day_bucket": 7,
-  "tier": "affected",
-  "gap_id": null,
-  "value": {
-   "value": 7,
-   "unit": "mL/min/1.73m2",
-   "ref_range": ">90",
-   "flag": "L"
-  },
-  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 7 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
-  "lay_text": null,
-  "priority": "low",
-  "judgement_call": false,
-  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 540 umol/L; not valid while the creatinine is changing in AKI.",
-  "confidence": 0.8
- },
- {
-  "target": "CMP.EGFR",
-  "day_bucket": 12,
-  "tier": "affected",
-  "gap_id": null,
-  "value": {
-   "value": 13,
-   "unit": "mL/min/1.73m2",
-   "ref_range": ">90",
-   "flag": "L"
-  },
-  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 13 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
-  "lay_text": null,
-  "priority": "low",
-  "judgement_call": false,
-  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 330 umol/L; not valid while the creatinine is changing in AKI.",
-  "confidence": 0.8
- },
- {
-  "target": "CMP.EGFR",
-  "day_bucket": 16,
-  "tier": "affected",
-  "gap_id": null,
-  "value": {
-   "value": 19,
-   "unit": "mL/min/1.73m2",
-   "ref_range": ">90",
-   "flag": "L"
-  },
-  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 19 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
-  "lay_text": null,
-  "priority": "low",
-  "judgement_call": false,
-  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 245 umol/L; not valid while the creatinine is changing in AKI.",
-  "confidence": 0.8
- },
- {
   "target": "CMP.OSMO_SERUM",
   "day_bucket": 0,
   "tier": "affected",
@@ -3554,5 +3213,416 @@
   "judgement_call": false,
   "rationale": "Friedewald: 4.6 - 1.1 - 2.0 / 2.2 = 2.6 mmol/L.",
   "confidence": 0.7
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 1,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 1 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 2065 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 1,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 3,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 3 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 1306 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 4,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 4 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 900 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 8,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 8 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 485 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 6,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 10,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 10 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 426 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 17,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 17 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 272 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 8,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 22,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 22 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 217 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 25,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 25 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 192 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 12,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 27,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 27 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 180 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 13,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 30,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 30 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 167 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 14,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 38,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 38 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 136 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.EGFR",
+  "day_bucket": 16,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 42,
+   "unit": "mL/min/1.73m2",
+   "ref_range": ">90",
+   "flag": "L"
+  },
+  "release_text": "Estimated glomerular filtration rate (CKD-EPI) 42 mL/min/1.73m2 (>90), low. Not valid in acute kidney injury.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "CKD-EPI 2021 for a 60-year-old woman with creatinine 126 umol/L; not valid while the creatinine is changing in AKI.",
+  "confidence": 0.8
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 1,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 44.0,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8",
+   "flag": "H"
+  },
+  "release_text": "Urea 44.0 mmol/L (3.1-8.8), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G03: not in Figure 1; falls with dialysis and recovery in proportion to the figure's creatinine (day 0 urea 65.9 mmol/L).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 32.0,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8",
+   "flag": "H"
+  },
+  "release_text": "Urea 32.0 mmol/L (3.1-8.8), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G03: not in Figure 1; falls with dialysis and recovery in proportion to the figure's creatinine (day 0 urea 65.9 mmol/L).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 16.5,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8",
+   "flag": "H"
+  },
+  "release_text": "Urea 16.5 mmol/L (3.1-8.8), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G03: not in Figure 1; falls with dialysis and recovery in proportion to the figure's creatinine (day 0 urea 65.9 mmol/L).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 6,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 14.8,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8",
+   "flag": "H"
+  },
+  "release_text": "Urea 14.8 mmol/L (3.1-8.8), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G03: not in Figure 1; falls with dialysis and recovery in proportion to the figure's creatinine (day 0 urea 65.9 mmol/L).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 11.6,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8",
+   "flag": "H"
+  },
+  "release_text": "Urea 11.6 mmol/L (3.1-8.8), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G03: not in Figure 1; falls with dialysis and recovery in proportion to the figure's creatinine (day 0 urea 65.9 mmol/L).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 8,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 10.2,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8",
+   "flag": "H"
+  },
+  "release_text": "Urea 10.2 mmol/L (3.1-8.8), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G03: not in Figure 1; falls with dialysis and recovery in proportion to the figure's creatinine (day 0 urea 65.9 mmol/L).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 9.4,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8",
+   "flag": "H"
+  },
+  "release_text": "Urea 9.4 mmol/L (3.1-8.8), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G03: not in Figure 1; falls with dialysis and recovery in proportion to the figure's creatinine (day 0 urea 65.9 mmol/L).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 12,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 9.0,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8",
+   "flag": "H"
+  },
+  "release_text": "Urea 9.0 mmol/L (3.1-8.8), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G03: not in Figure 1; falls with dialysis and recovery in proportion to the figure's creatinine (day 0 urea 65.9 mmol/L).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 13,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 8.6,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8"
+  },
+  "release_text": "Urea 8.6 mmol/L (3.1-8.8).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G03: not in Figure 1; falls with dialysis and recovery in proportion to the figure's creatinine (day 0 urea 65.9 mmol/L).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 14,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 8.1,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8"
+  },
+  "release_text": "Urea 8.1 mmol/L (3.1-8.8).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G03: not in Figure 1; falls with dialysis and recovery in proportion to the figure's creatinine (day 0 urea 65.9 mmol/L).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.UREA",
+  "day_bucket": 16,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 7.8,
+   "unit": "mmol/L",
+   "ref_range": "3.1-8.8"
+  },
+  "release_text": "Urea 7.8 mmol/L (3.1-8.8).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "G03: not in Figure 1; falls with dialysis and recovery in proportion to the figure's creatinine (day 0 urea 65.9 mmol/L).",
+  "confidence": 0.55
  }
 ]

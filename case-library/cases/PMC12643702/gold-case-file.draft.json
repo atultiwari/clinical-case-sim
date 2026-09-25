@@ -1,5 +1,5 @@
 {
- "_status_note": "DRAFT gold case file (task L1.3). The Case Reviewer must verify every fact against the article before it is frozen as PMC12643702@v1. Units are SI with the printed value in each fact's note. The INR series between admission and discharge is in Figure 2 and is held as affected rows, not article facts.",
+ "_status_note": "DRAFT gold case file (task L1.3). The Case Reviewer must verify every fact against the article before it is frozen as PMC12643702@v1. Units are SI with the printed value in each fact's note. The in-hospital INR series (S02) was read from Figure 2's data labels.",
  "schema_version": "0.2",
  "case_id": "PMC12643702",
  "version": 1,
@@ -449,13 +449,75 @@
      "flag": "H"
     },
     {
-     "day": 15,
+     "day": 11,
      "value": 2.04,
      "flag": "H"
     }
    ],
-   "note": "Day 0: 'incalculably high INR' with PT 112 s. Day 15 is the discharge value (the discharge day is the curator's reading: 4 doses over 48 h, then 13 more daily doses). The in-hospital values between are in Figure 2, which the curator could not read; they are affected rows in curation/affected.json.",
+   "note": "Day 0: 'incalculably high INR' with PT 112 s (text; not plotted in Figure 2). Day 11: the discharge value, 2.04 in the text and the last point of Figure 2 ('Day 11 at 5:00').",
    "source_locator": "Case study; Figure 2",
+   "catalogue_ref": "CMP.INR"
+  },
+  {
+   "id": "S02",
+   "item": "International normalised ratio (in-hospital, Figure 2)",
+   "code": null,
+   "unit": "ratio",
+   "ref_range": "0.8-1.2",
+   "points": [
+    {
+     "day": 1,
+     "value": 8.57,
+     "flag": "H"
+    },
+    {
+     "day": 2,
+     "value": 3.37,
+     "flag": "H"
+    },
+    {
+     "day": 3,
+     "value": 6.31,
+     "flag": "H"
+    },
+    {
+     "day": 4,
+     "value": 3.28,
+     "flag": "H"
+    },
+    {
+     "day": 5,
+     "value": 7.11,
+     "flag": "H"
+    },
+    {
+     "day": 6,
+     "value": 2.51,
+     "flag": "H"
+    },
+    {
+     "day": 7,
+     "value": 2.37,
+     "flag": "H"
+    },
+    {
+     "day": 8,
+     "value": 2.27,
+     "flag": "H"
+    },
+    {
+     "day": 9,
+     "value": 2.03,
+     "flag": "H"
+    },
+    {
+     "day": 10,
+     "value": 1.91,
+     "flag": "H"
+    }
+   ],
+   "note": "Read from the figure image (data labels). Figure 2 plots 18 INR results against 'Day N at time'; figure Day N is taken as case day N (admission, day 0, carries the unplotted incalculable INR). One point per day: the day's last reading. All readings: Day 1 at 12:00 p.m. 7.00; Day 1 at 7:00 p.m. 8.57; Day 2 2:00 a.m. 3.37; Day 3 at 4:00 a.m. 6.31; Day 4 at 1:00 p.m. 5.36; Day 4 at 7:00 p.m. 3.28; Day 5 1:00 a.m. 2.37; Day 5 2:00 a.m. 7.11; Day 6 at 3:00 a.m. 7.23; Day 6 at 7:00 p.m. 2.51; Day 7 at 3:30 a.m. 4.34; Day 7 at 10:30 3.96; Day 7 at 8:30 p.m. 2.37; Day 8 at 1:30 a.m. 1.90; Day 8 at 3:00 p.m. 2.27; Day 9 at 2:00 a.m. 2.03; Day 10 at 5:30 a.m. 1.91; Day 11 at 5:00 2.04.",
+   "source_locator": "Figure 2",
    "catalogue_ref": "CMP.INR"
   }
  ],
@@ -630,9 +692,9 @@
   {
    "id": "M01",
    "figure": "Figure 1",
-   "specimen": "Chart of treatment times",
+   "specimen": "Chart of result times",
    "stain": null,
-   "redacted_caption": "Times and days of vitamin K doses during the admission.",
+   "redacted_caption": "Times at which results were reported, by sequence number.",
    "licence": "CC BY 4.0",
    "production_ok": true,
    "public_release_ok": true,
@@ -657,14 +719,14 @@
  "gaps": [
   {
    "id": "G01",
-   "item": "In-hospital INR, PT and APTT (days 1-14)",
-   "guidance": "In Figure 2 only. INR falls after the third dose, rises before the fourth, then drifts down unevenly to 2.04 at discharge; APTT normal by discharge.",
+   "item": "In-hospital PT and APTT (days 1-11)",
+   "guidance": "Not reported. PT follows Figure 2's INR; APTT falls unevenly from 112 s and is normal by discharge.",
    "review_required": true
   },
   {
    "id": "G02",
    "item": "Discharge day",
-   "guidance": "Four IV doses over 48 h, then 13 more doses; read as daily, discharge on day 15.",
+   "guidance": "Day 11: Figure 2's last point ('Day 11 at 5:00') is the discharge INR of 2.04.",
    "review_required": true
   },
   {
