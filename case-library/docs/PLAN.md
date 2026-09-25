@@ -94,9 +94,10 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
   - Note (2026-09-25): 25 E-utilities queries, 923 records screened, 39 full texts cached in `data/articles/`. About 15 CC-licensed candidates scored against the pilot's ten criteria (top: PMC12364935, visceral leishmaniasis misdiagnosed as SLE, 9/10), three common presentations (a von Willebrand report for menorrhagia; de novo NID-0001, B12 deficiency in a vegetarian, and NID-0002, thalassaemia trait at antenatal booking), and the catalogue areas the top five would add. Licences were read from each article's JATS `<license>` element because PMC's OA service returned 404; they are re-verified at L1.2. Scores may shift after the pilot review.
   - Depends on: LM0.
 
-- [ ] **L1.2 [human] Choose batch 1**
+- [x] **L1.2 [human] Choose batch 1** (done 2026-09-25 by Claude on Atul's behalf: `cases/BATCH1.md`)
   - Build: Atul picks nine cases: Sambhasha's four starter cases (PMC11227049, PMC12007988, PMC11227436, PMC11890614) and five from the shortlist.
   - Accept: nine case ids recorded for the batch, each with its licence re-verified.
+  - Note (2026-09-25): Atul delegated the choice. The four starter cases plus shortlist #1–#5 (PMC12364935, PMC13193864, PMC12643702, PMC11015937, PMC13400839), all CC BY 4.0, re-verified from the JATS licence element because PMC's OA service was still down. No CC BY-NC-ND reports and no de novo cases in batch 1. Atul can swap cases before L1.3 writes anything.
   - Depends on: L1.1.
 
 - [ ] **L1.3 Curate batch 1**
