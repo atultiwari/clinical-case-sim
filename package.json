@@ -1,0 +1,13 @@
+{
+  "name": "clinical-case-sim",
+  "private": true,
+  "description": "Clinical-Case-Sim monorepo root: pnpm workspace for the TypeScript parts (Nidana and the Case Studio).",
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "pre-commit run --all-files",
+    "test:guard": "bash scripts/tests/changelog_guard_test.sh"
+  }
+}

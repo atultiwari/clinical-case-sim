@@ -17,7 +17,18 @@ flowchart LR
 
 ## Status (25 Sep 2026)
 
-Design agreed; build not started. The first Claude Code session sets up Git and the private GitHub repository (task U0.0 in `docs/PLAN.md`; the prompt is in `docs/SESSION_PROMPTS.md`), then the monorepo scaffold (U0.1). The Case Library's Phase 0 follows.
+Design agreed. The private GitHub repository (U0.0) and the monorepo scaffold (U0.1) are set up; the Case Library's Phase 0 (L0.1) comes next.
+
+## Setting up a clone
+
+You need Node 22 or later with pnpm, [pre-commit](https://pre-commit.com) and [gitleaks](https://github.com/gitleaks/gitleaks). On a Mac: `uv tool install pre-commit` and `brew install gitleaks`. Then, in the clone:
+
+```bash
+pnpm install
+pre-commit install
+```
+
+The hooks block a change to `case-library/schemas/` or `case-library/catalogue/` without a `docs/CHANGELOG.md` entry, as well as secrets, files over 20 MB and merge-conflict markers. The `contract` workflow repeats these checks on every pull request.
 
 ## Documents
 

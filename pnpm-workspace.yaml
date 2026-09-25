@@ -1,0 +1,6 @@
+# pnpm workspaces for the TypeScript parts (docs/REPOSITORY.md, umbrella task U0.1).
+# Each part adds its packages in its own first build task (CLAUDE.md rule 2).
+packages:
+  - "nidana/apps/*"
+  - "nidana/packages/*"
+  - "case-library/studio"

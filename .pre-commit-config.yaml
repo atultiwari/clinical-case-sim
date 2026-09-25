@@ -1,0 +1,56 @@
+# Root pre-commit hooks (docs/REPOSITORY.md, umbrella task U0.1).
+# Set up once per clone: pre-commit install
+# Each part adds its own hooks in its first build task, below its own heading (CLAUDE.md rule 2).
+# The secret scan calls a locally installed gitleaks (brew install gitleaks).
+default_install_hook_types: [pre-commit]
+default_stages: [pre-commit, manual]
+
+repos:
+  # --- Umbrella: shared-contract guard ---
+  - repo: local
+    hooks:
+      - id: changelog-guard
+        name: Shared-contract change needs docs/CHANGELOG.md
+        entry: scripts/changelog_guard.sh --staged
+        language: script
+        pass_filenames: false
+        always_run: true
+      - id: changelog-guard-tests
+        name: Changelog guard tests
+        entry: bash scripts/tests/changelog_guard_test.sh
+        language: system
+        pass_filenames: false
+        files: ^scripts/(changelog_guard\.sh|tests/changelog_guard_test\.sh)$
+
+  # --- Umbrella: secret scanner ---
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks-system
+        # Upstream omits this for the system variant; gitleaks reads the index itself.
+        pass_filenames: false
+
+  # --- Umbrella: basic file checks ---
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=20480, --enforce-all]
+      - id: check-merge-conflict
+        args: [--assume-in-merge]
+      - id: check-case-conflict
+      - id: detect-private-key
+      - id: check-json
+      - id: check-yaml
+      - id: check-toml
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: mixed-line-ending
+        args: [--fix=lf]
+
+  # --- Case Library hooks (added by L0.1) ---
+  # --- Nidana hooks (added by N1.1) ---
+  # --- Sambhasha hooks (added by P0.1) ---
