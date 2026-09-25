@@ -1,0 +1,136 @@
+# Sambhasha: implementation plan
+
+How to use this file: work top to bottom. Pick the first unchecked task whose dependencies are done, restate its acceptance criteria, write the tests first, then build. When it passes, tick the box and add a one-line note (date, what changed). Tasks marked **[human]** need Dr Atul Tiwari. Prepare everything he needs, tell him, and move to the next task you can do.
+
+Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`../../case-library/cases/PMC12949993/`](../../case-library/cases/PMC12949993/). Case curation now happens in the Case Library ([`../../case-library/docs/PLAN.md`](../../case-library/docs/PLAN.md), D-021); its milestone LM0 delivers the pilot bundle.
+
+## Milestones
+
+| Milestone | Done when |
+| --- | --- |
+| M0 | The pilot bundle `PMC12949993@v1.r1` from the Case Library (LM0) imports cleanly and passes the import-time leak scan |
+| M1 | The pilot runs end to end with the fake model (deterministic) and with live models; every invariant test passes |
+| M2 | The Phase 2 study protocol is pre-registered and the first scored batch has run in Inspect AI |
+| M3 | Superseded: the teaching game is Nidana (D-027) |
+| M4 | The paper is submitted, citing the DOI of the research release (umbrella task U1.1) |
+
+---
+
+## Phase 0: foundations and case import
+
+- [ ] **P0.1 Repository scaffold**
+  - Build: inside the Clinical-Case-Sim monorepo (umbrella task U0.1), a uv project in `sambhasha/` with the package `sambhasha` in `src/`; ruff, mypy and pytest configured; its hooks in the root `.pre-commit-config.yaml`; `.env.example` with `OPENROUTER_API_KEY`, `OLLAMA_BASE_URL` and `SUPABASE_DB_URL`; `.env` and `data/` git-ignored (the root `.gitignore` already covers them); a short `README.md`; the part's GitHub Actions workflow running lint, type-check and unit tests, limited to `sambhasha/`.
+  - Accept: `uv run pytest`, `uv run ruff check .` and `uv run mypy src` all pass on a fresh clone.
+  - Depends on: U0.1.
+
+- [ ] **P0.2 Domain models and JSON schemas**
+  - Build: Pydantic models in `src/sambhasha/domain/` for the case bundle (schema 0.3, generated from `../case-library/schemas/case-bundle.v0.3.schema.json`; Case Library SPEC §10), actions (§6), events, orders, seat views and scores. Until the pilot bundle exists, copy the pilot draft (`../case-library/cases/PMC12949993/gold-case-file.draft.json`, schema 0.2) to `tests/fixtures/pilot/` as a stand-in. Closes the Sambhasha item of the 25 Sep 2026 entry in `../docs/CHANGELOG.md` together with P0.6.
+  - Accept: the pilot bundle validates once LM0 is reached (the draft validates against the 0.2 models until then); series expand to 125 atomic facts; ids are unique; invalid files (a missing licence, an unknown `release` value or origin) are rejected with clear messages.
+  - Depends on: P0.1.
+
+- [ ] **P0.3 Database and repositories**
+  - Build: `supabase init`, then migrations for the SPEC §12 tables; an immutability trigger for frozen cases; an insert-only `event` table. A repository interface with in-memory and Postgres implementations.
+  - Accept: `supabase db reset` applies cleanly. The same contract test suite passes against both implementations. Updating a frozen case's fact fails. Updating or deleting an event fails.
+  - Depends on: P0.2.
+
+- **P0.4 PMC fetcher and licence gate — moved to the Case Library** (D-021; Case Library SPEC §4.4, steps 1–3). Nothing to do here.
+
+- [ ] **P0.5 Leak scanner and redaction**
+  - Build: `curation/leakscan.py` scans text against the diagnosis, its synonyms and case-specific pathognomonic phrases; the importer runs it on every bundle as a second line of defence behind the Case Library's own scan. `curation/redact.py` strips titles, keywords, captions and discussion from seat-facing text.
+  - Accept: seeded leaks are caught. For the pilot these include "lead poisoning", "plumbism", "saturnism" and "lead toxicity" in a vignette, a caption and a synthetic narrative. Test names such as "blood lead" are not flagged.
+  - Depends on: P0.2.
+
+- [ ] **P0.6 Bundle importer**
+  - Build: `sambhasha case import <bundle.json>` validates a Case Library bundle (schema 0.3), checks the SHA-256 of the file's bytes against its `.sha256` file, writes the case tables (facts, ledger rows, reports, consult notes, media, gaps, ground truth) and runs the leak scanner on all seat-facing text. It records the bundle revision; it never writes to the Case Vault.
+  - Accept: importing `PMC12949993@v1.r1` creates 164 imported fact and raw-material rows (10 history, 125 series points, 26 single results, 3 raw material) plus the derived rows, the approved ledger rows, 4 media rows and 20 gap rows, with no leaks; a bundle with a wrong hash or an unsupported schema version is refused.
+  - Depends on: P0.3, P0.5; Case Library LM0.
+
+- **P0.7 Case Curator — moved to the Case Library.** Claude curates through the Supabase MCP under the `case-curate` skill (D-021).
+- **P0.8 Review and freeze — moved to the Case Library** (Case Library SPEC §7).
+- **P0.9 [human] Verify the pilot case — moved to the Case Library** (task L0.10). When the pilot bundle is exported (LM0), import it with P0.6: Milestone M0.
+- **P0.10 Curate the starter set — moved to the Case Library** (tasks L1.1–L1.4, batch 1).
+
+---
+
+## Phase 1: prototype engine (text only)
+
+- [ ] **P1.1 LLM gateway**
+  - Build: `sambhasha.llm` implements SPEC §11. One `openai`-SDK client with OpenRouter and Ollama profiles from `configs/models.yaml`. Structured output with validation and up to two retries. Record-and-replay cache in `data/llm-cache/`. An `llm_call` event per call with tokens and cost. A scripted `FakeLLM`.
+  - Accept: unit tests cover schema retry, cache hits (a second identical request makes no network call) and cost logging. No test touches the network.
+  - Depends on: P0.2.
+
+- [ ] **P1.2 Coding and synonyms**
+  - Build: `gatekeeper/coding.py` maps request text to catalogue ids using the synonyms in the Case Library's catalogue export (D-022); LOINC codes come from the catalogue.
+  - Accept: "CBC", "hemogram" and "complete blood count" resolve to one catalogue id; "blood lead", "lead level" and "Pb level" resolve to one catalogue id; unmatched text is logged for the Case Library's missing-request export.
+  - Depends on: P0.2.
+
+- [ ] **P1.3 Gatekeeper**
+  - Build: `configs/permissions.yaml` with the permission matrix and manoeuvre catalogue. The resolver implements SPEC §7: it returns stored text only, handles direct and interpretive routing, day semantics and `release_condition`, and refuses with a reason. The matcher model picks only from candidate catalogue ids (D-022).
+  - Accept (pilot):
+    - A generic toxin question returns H09 only; a supplement question returns H10.
+    - Ordering a blood lead returns 77.8 µg/dL.
+    - A film order sends R01 to `service.pathology` and nothing raw to the Chart.
+    - A Consultant who orders a test is refused.
+    - "What is the diagnosis?" is refused and logged.
+    - Every released text equals stored text.
+  - Depends on: P0.6, P1.1, P1.2.
+
+- [ ] **P1.4 Synthetic Findings Service (fallback)**
+  - Build: the generator (prompt `prompts/synthetic.md`) for requests outside the catalogue only (D-023), conditioned on the ground truth, the patient's state and the gap guidance. It has consistency and leak checks and a cache keyed by (case, code, day bucket), respects `auto_generate: false`, and writes every request it answers to a missing-request export (CSV) for the Case Library.
+  - Accept: a request for a catalogue item is answered from the bundle and never reaches the service; a repeated out-of-catalogue request returns the same ledger row; a result contradicting a stored fact is rejected and regenerated; G14 is never auto-generated; no output contains "not available"; the export lists every generated request.
+  - Depends on: P1.1, P1.3.
+
+- [ ] **P1.5 Clock, costs and Chart**
+  - Build: `configs/turnaround.yaml` and `configs/prices_inr.yaml`, generated from the Case Library's catalogue export (D-022); a simulated clock in minutes; the Chart projection; the `SeatView` builder.
+  - Accept: a result becomes visible only after its turnaround; costs add up per order; a Consultant sees the Chart only after referral; a service view holds only its order and raw material.
+  - Depends on: P0.3.
+
+- [ ] **P1.6 Seats and role cards**
+  - Build: the `Seat` protocol; `LLMSeat` and a CLI `HumanSeat`. Role cards in `prompts/` for the Attending Physician, the Challenger, Consultants (one template with specialty variables) and the Pathology and Radiology Services. Each card states the seat's scope and allowed actions.
+  - Accept: each seat produces a valid action from a fixture view with `FakeLLM`; a `HumanSeat` receives a view identical to an `LLMSeat`'s.
+  - Depends on: P1.1, P1.5.
+
+- [ ] **P1.7 Scheduler**
+  - Build: the SPEC §10.2 state machine; consultant sessions of up to K actions ending in a ConsultNote; the Challenger before commit (and every N turns if configured); turn, referral and budget limits with a forced commit; `configs/pilot.yaml`.
+  - Accept: a scripted `FakeLLM` run of the pilot's efficient path produces the expected sequence of event types; the limits force a commit; the same config gives an identical event hash on rerun.
+  - Depends on: P1.3, P1.4, P1.5, P1.6.
+
+- [ ] **P1.8 Evaluator**
+  - Build: the matcher's mapping of the Commit and of each service report to catalogue ids (D-022); the diagnosis rubric using the case's anchors and their conditions (Case Library SPEC §10.4); plan scoring from must-do and must-not-do; process metrics; synthetic dependence; the fallback flag (D-023); `sambhasha evaluate`.
+  - Accept (pilot fixtures):
+    - A commit naming lead poisoning and the supplement scores 5.
+    - "Warm AIHA" scores 2.
+    - A plan with steroid escalation registers a must-not-do violation.
+    - Synthetic dependence is computed from `Commit.evidence`.
+    - The film-review must-do is met when the Pathology Service's film report mentions coarse stippling (mapped to `FND.COARSE_BASOPHILIC_STIPPLING`).
+  - Depends on: P1.7.
+
+- [ ] **P1.9 CLI and transcript viewer**
+  - Build: `sambhasha run --config configs/pilot.yaml [--fake]`; `sambhasha transcript <run_id>` in the terminal with an `--html` export; a budget cap for live runs set in the config.
+  - Accept: a fake run and its transcript work offline; a live run refuses to start without a budget cap.
+  - Depends on: P1.7, P1.8.
+
+- [ ] **P1.10 Invariant test suite**
+  - Build: `tests/invariants/` covering SPEC §2, including a property-based test (hypothesis) of random action sequences on the pilot.
+  - Accept: tests exist and pass for I1–I8. Examples: no view contains an unreleased fact id; no view contains ground-truth text; reruns are identical; released text is always stored text; frozen cases and events are immutable.
+  - Depends on: P1.7.
+
+- [ ] **P1.11 [human] Live pilot runs**
+  - Build: run the pilot with two model profiles (for example two different families for the doctor seats), three repeats each. Prepare transcripts, scores and a short findings note for Atul.
+  - Accept: six completed runs; Atul has read at least two transcripts; any leaks or rule breaks found are fixed and re-tested. Milestone M1.
+  - Depends on: M0, P1.9, P1.10.
+
+---
+
+## Phase 2: study (outline, detail later)
+
+- Inspect AI task wrapping the engine: cases as the dataset, seats as model roles, cost limits, epochs, caching, publishable logs.
+- Grow to 50–100 cases from the Case Library, published after the models' cutoffs, with `public_release_ok` for the study set (D-025) and a held-out set kept private (S-005); memorisation probe; perturbation of non-essential details.
+- Human raters and agreement statistics; arms A–E (SPEC §15); pre-registration; TRIPOD-LLM reporting.
+- Image mode for the Diagnostic Services; tracing with Arize Phoenix or Langfuse.
+
+## Phase 3: extras (outline)
+
+- The teaching game is Nidana (D-027); Sambhasha's matcher and Evaluator calibration protocol may be reused by Nidana's voice mode.
+- Theatre mode through Discord webhooks; later, an optional MCP server for outside agents (a Hermes agent may play as a contestant).
+- The research release: umbrella task U1.1 exports the public repository at submission (`../../docs/REPOSITORY.md`).

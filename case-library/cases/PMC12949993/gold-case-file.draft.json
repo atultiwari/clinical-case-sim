@@ -1,0 +1,206 @@
+{
+  "_status_note": "DRAFT gold case file for the pilot. The Case Reviewer (Dr Atul Tiwari) must verify every fact against the article before it is frozen as PMC12949993@v1. Values were transcribed from the article's tables. LOINC codes are suggestions; verify them in task P1.2. Items under 'gaps' are NOT article facts: the Synthetic Findings Service generates them at run time, guided by the notes, and a human reviews them.",
+  "schema_version": "0.2",
+  "case_id": "PMC12949993",
+  "version": 1,
+  "status": "draft",
+
+  "source": {
+    "title": "Lead Toxicity Masquerading as Autoimmune Haemolytic Anaemia: A Diagnostic Pitfall in Unexplained Anaemia",
+    "authors": ["John Ee Chew", "Nathan Klose"],
+    "affiliations": [
+      "Gastroenterology and Hepatology, University of Queensland, Queensland, Australia",
+      "Haematology, Greenslopes Private Hospital, Queensland, Australia"
+    ],
+    "journal": "Cureus",
+    "volume": "18",
+    "issue": "1",
+    "article_number": "e102622",
+    "published": "2026-01-30",
+    "doi": "10.7759/cureus.102622",
+    "pmcid": "PMC12949993",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12949993/",
+    "licence": "CC BY 4.0",
+    "licence_verified": "2026-09-25 on the PMC article page; figures carry no separate credit line",
+    "attribution": "Adapted from Chew JE, Klose N. Lead Toxicity Masquerading as Autoimmune Haemolytic Anaemia: A Diagnostic Pitfall in Unexplained Anaemia. Cureus 18(1): e102622 (2026). doi:10.7759/cureus.102622. Licensed CC BY 4.0. Changes: restructured into atomic facts; diagnosis redacted from seat-facing text; simulated findings added where marked."
+  },
+
+  "clock": {
+    "day_0": "2022-07-13",
+    "day_0_label": "Admission",
+    "semantics": "Integer day relative to admission. day = null means the fact is valid at any point in the admission (the article gives no date)."
+  },
+
+  "vignette": "A 49-year-old woman with inclusion body myositis, on long-term intravenous immunoglobulin, presents with a three-week history of worsening abdominal pain and progressive lethargy.",
+
+  "facts": [
+    {"id": "H01", "category": "history", "item": "Age and sex", "release_text": "49-year-old woman.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation"},
+    {"id": "H02", "category": "history", "item": "Past medical history", "release_text": "Inclusion body myositis.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation"},
+    {"id": "H03", "category": "history", "item": "Current medication: immunoglobulin", "release_text": "Long-term intravenous immunoglobulin (IVIG) for inclusion body myositis. Dose and schedule not recorded.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation"},
+    {"id": "H04", "category": "history", "item": "Current medication: mycophenolate", "release_text": "Mycophenolate mofetil, recently started. Dose not recorded.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation"},
+    {"id": "H05", "category": "history", "item": "Presenting complaint", "release_text": "Worsening abdominal pain for three weeks.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation"},
+    {"id": "H06", "category": "history", "item": "Associated symptom", "release_text": "Progressive lethargy over the same three weeks.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "vignette", "source_locator": "Case presentation"},
+    {"id": "H07", "category": "history", "item": "Recent infection", "release_text": "No recent infection.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation"},
+    {"id": "H08", "category": "history", "item": "Gastrointestinal bleeding", "release_text": "No gastrointestinal bleeding.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "source_locator": "Case presentation"},
+    {"id": "H09", "category": "history", "item": "Toxin exposure (general question)", "release_text": "No known toxin exposure.", "day": 0, "kind": "raw", "reveals_dx": false, "release": "chart", "release_condition": {"answers": "generic questions about toxins, chemicals or exposures"}, "source_locator": "Case presentation"},
+    {"id": "H10", "category": "history", "item": "Supplement use (hidden until asked specifically)", "release_text": "She has recently been taking an unlabelled herbal supplement given to her by a friend.", "day": 0, "kind": "raw", "reveals_dx": false, "pivotal": true, "release": "chart", "release_condition": {"requires_topics": ["dietary or herbal supplements", "traditional, Ayurvedic or imported medicines", "over-the-counter or alternative remedies"], "note": "A generic toxin question returns H09 only. In the article the supplement was disclosed only on a revisited, targeted exposure history."}, "source_locator": "Case presentation"}
+  ],
+
+  "series": [
+    {"id": "S01", "item": "Haemoglobin", "code": {"system": "LOINC", "code": "718-7"}, "unit": "g/L", "ref_range": "115-165", "points": [{"day": -100, "value": 127}, {"day": 0, "value": 72, "flag": "L"}, {"day": 1, "value": 72, "flag": "L"}, {"day": 2, "value": 77, "flag": "L"}, {"day": 3, "value": 72, "flag": "L"}, {"day": 4, "value": 64, "flag": "L"}, {"day": 5, "value": 75, "flag": "L"}, {"day": 6, "value": 66, "flag": "L"}], "source_locator": "Tables 1 and 4"},
+    {"id": "S02", "item": "Haematocrit", "code": {"system": "LOINC", "code": "4544-3"}, "unit": "L/L", "ref_range": "0.35-0.47", "points": [{"day": -100, "value": 0.38}, {"day": 0, "value": 0.22, "flag": "L"}, {"day": 1, "value": 0.21, "flag": "L"}, {"day": 2, "value": 0.23, "flag": "L"}, {"day": 3, "value": 0.22, "flag": "L"}, {"day": 4, "value": 0.20, "flag": "L"}, {"day": 5, "value": 0.23, "flag": "L"}, {"day": 6, "value": 0.20, "flag": "L"}], "source_locator": "Tables 1 and 4"},
+    {"id": "S03", "item": "Red cell count", "code": {"system": "LOINC", "code": "789-8"}, "unit": "x10^12/L", "ref_range": "3.9-5.6", "points": [{"day": -100, "value": 4.1}, {"day": 0, "value": 2.4, "flag": "L"}, {"day": 1, "value": 2.3, "flag": "L"}, {"day": 2, "value": 2.5, "flag": "L"}, {"day": 3, "value": 2.4, "flag": "L"}, {"day": 4, "value": 2.1, "flag": "L"}, {"day": 5, "value": 2.5, "flag": "L"}, {"day": 6, "value": 2.1, "flag": "L"}], "source_locator": "Tables 1 and 4"},
+    {"id": "S04", "item": "Reticulocytes (absolute)", "code": null, "unit": "x10^9/L", "ref_range": "25-120", "points": [{"day": 0, "value": 190, "flag": "H"}, {"day": 1, "value": 193, "flag": "H"}, {"day": 2, "value": 234, "flag": "H"}, {"day": 4, "value": 202, "flag": "H"}, {"day": 6, "value": 286, "flag": "H"}], "note": "Not measured on days 3 and 5; a request on those days returns the latest earlier value.", "source_locator": "Tables 1 and 4"},
+    {"id": "S05", "item": "Mean cell volume", "code": {"system": "LOINC", "code": "787-2"}, "unit": "fL", "ref_range": "80-100", "points": [{"day": -100, "value": 93}, {"day": 0, "value": 93}, {"day": 1, "value": 91}, {"day": 2, "value": 93}, {"day": 3, "value": 92}, {"day": 4, "value": 94}, {"day": 5, "value": 94}, {"day": 6, "value": 93}], "source_locator": "Tables 1 and 4"},
+    {"id": "S06", "item": "White cell count", "code": {"system": "LOINC", "code": "6690-2"}, "unit": "x10^9/L", "ref_range": "3.5-12.0", "points": [{"day": -100, "value": 4.5}, {"day": 0, "value": 4.9}, {"day": 1, "value": 5.0}, {"day": 2, "value": 5.2}, {"day": 3, "value": 6.2}, {"day": 4, "value": 5.2}, {"day": 5, "value": 5.6}, {"day": 6, "value": 7.1}], "source_locator": "Tables 1 and 4"},
+    {"id": "S07", "item": "Neutrophils", "code": null, "unit": "x10^9/L", "ref_range": "1.5-8.0", "points": [{"day": 1, "value": 3.06}, {"day": 2, "value": 2.86}, {"day": 3, "value": 3.71}, {"day": 4, "value": 2.68}, {"day": 5, "value": 3.44}, {"day": 6, "value": 4.59}], "source_locator": "Table 4"},
+    {"id": "S08", "item": "Lymphocytes", "code": null, "unit": "x10^9/L", "ref_range": "1.0-4.0", "points": [{"day": 1, "value": 1.39}, {"day": 2, "value": 1.79}, {"day": 3, "value": 1.87}, {"day": 4, "value": 1.97}, {"day": 5, "value": 1.71}, {"day": 6, "value": 1.74}], "source_locator": "Table 4"},
+    {"id": "S09", "item": "Monocytes", "code": null, "unit": "x10^9/L", "ref_range": "0.0-0.9", "points": [{"day": 1, "value": 0.50}, {"day": 2, "value": 0.40}, {"day": 3, "value": 0.48}, {"day": 4, "value": 0.43}, {"day": 5, "value": 0.38}, {"day": 6, "value": 0.67}], "source_locator": "Table 4"},
+    {"id": "S10", "item": "Eosinophils", "code": null, "unit": "x10^9/L", "ref_range": "0.0-0.6", "points": [{"day": 1, "value": 0.05}, {"day": 2, "value": 0.10}, {"day": 3, "value": 0.13}, {"day": 4, "value": 0.09}, {"day": 5, "value": 0.10}, {"day": 6, "value": 0.13}], "source_locator": "Table 4"},
+    {"id": "S11", "item": "Basophils", "code": null, "unit": "x10^9/L", "ref_range": "0.0-0.15", "points": [{"day": 1, "value": 0.00}, {"day": 2, "value": 0.00}, {"day": 3, "value": 0.01}, {"day": 4, "value": 0.01}, {"day": 5, "value": 0.01}, {"day": 6, "value": 0.01}], "source_locator": "Table 4"},
+    {"id": "S12", "item": "Nucleated red cells", "code": null, "unit": "x10^9/L", "ref_range": "0", "points": [{"day": 1, "value": 1.0, "flag": "H"}], "source_locator": "Table 4"},
+    {"id": "S13", "item": "Platelets", "code": {"system": "LOINC", "code": "777-3"}, "unit": "x10^9/L", "ref_range": "150-400", "points": [{"day": -100, "value": 183}, {"day": 0, "value": 214}, {"day": 1, "value": 200}, {"day": 2, "value": 246}, {"day": 3, "value": 217}, {"day": 4, "value": 201}, {"day": 5, "value": 205}], "source_locator": "Tables 1 and 4"},
+    {"id": "S14", "item": "Total bilirubin", "code": {"system": "LOINC", "code": "14631-6"}, "unit": "umol/L", "ref_range": "<16", "points": [{"day": 0, "value": 29, "flag": "H"}, {"day": 1, "value": 27, "flag": "H"}, {"day": 2, "value": 32, "flag": "H"}, {"day": 3, "value": 25, "flag": "H"}, {"day": 4, "value": 19, "flag": "H"}, {"day": 5, "value": 17, "flag": "H"}, {"day": 6, "value": 12}], "source_locator": "Tables 2 and 4"},
+    {"id": "S15", "item": "Alkaline phosphatase", "code": {"system": "LOINC", "code": "6768-6"}, "unit": "U/L", "ref_range": "20-105", "points": [{"day": 0, "value": 42}, {"day": 1, "value": 39}, {"day": 2, "value": 44}, {"day": 3, "value": 41}, {"day": 4, "value": 34}, {"day": 5, "value": 41}, {"day": 6, "value": 36}], "source_locator": "Tables 2 and 4"},
+    {"id": "S16", "item": "AST", "code": {"system": "LOINC", "code": "1920-8"}, "unit": "U/L", "ref_range": "10-35", "points": [{"day": 0, "value": 56, "flag": "H"}, {"day": 1, "value": 45, "flag": "H"}, {"day": 2, "value": 46, "flag": "H"}, {"day": 3, "value": 47, "flag": "H"}, {"day": 4, "value": 41, "flag": "H"}, {"day": 5, "value": 52, "flag": "H"}, {"day": 6, "value": 48, "flag": "H"}], "source_locator": "Tables 2 and 4"},
+    {"id": "S17", "item": "ALT", "code": {"system": "LOINC", "code": "1742-6"}, "unit": "U/L", "ref_range": "5-30", "points": [{"day": 0, "value": 68, "flag": "H"}, {"day": 1, "value": 58, "flag": "H"}, {"day": 2, "value": 55, "flag": "H"}, {"day": 3, "value": 54, "flag": "H"}, {"day": 4, "value": 47, "flag": "H"}, {"day": 5, "value": 60, "flag": "H"}, {"day": 6, "value": 55, "flag": "H"}], "source_locator": "Tables 2 and 4"},
+    {"id": "S18", "item": "Gamma GT", "code": {"system": "LOINC", "code": "2324-2"}, "unit": "U/L", "ref_range": "5-35", "points": [{"day": 0, "value": 13}, {"day": 1, "value": 13}, {"day": 2, "value": 15}, {"day": 3, "value": 16}, {"day": 4, "value": 13}, {"day": 5, "value": 15}, {"day": 6, "value": 15}], "source_locator": "Tables 2 and 4"},
+    {"id": "S19", "item": "Lactate dehydrogenase", "code": {"system": "LOINC", "code": "2532-0"}, "unit": "U/L", "ref_range": "120-250", "points": [{"day": 0, "value": 339, "flag": "H"}, {"day": 1, "value": 273, "flag": "H"}, {"day": 2, "value": 337, "flag": "H"}, {"day": 3, "value": 302, "flag": "H"}, {"day": 4, "value": 243}, {"day": 5, "value": 284, "flag": "H"}, {"day": 6, "value": 258, "flag": "H"}], "source_locator": "Tables 2 and 4"}
+  ],
+
+  "single_results": [
+    {"id": "L01", "item": "Serum iron", "code": {"system": "LOINC", "code": "14798-3"}, "value": 24, "unit": "umol/L", "ref_range": "5-30", "day": 0, "source_locator": "Table 2"},
+    {"id": "L02", "item": "Transferrin", "code": {"system": "LOINC", "code": "3034-6"}, "value": 1.8, "unit": "g/L", "ref_range": "1.9-3.1", "flag": "L", "day": 0, "source_locator": "Table 2"},
+    {"id": "L03", "item": "Total iron-binding capacity", "code": {"system": "LOINC", "code": "14800-7"}, "value": 45, "unit": "umol/L", "ref_range": "47-77", "flag": "L", "day": 0, "source_locator": "Table 2"},
+    {"id": "L04", "item": "Transferrin saturation", "code": {"system": "LOINC", "code": "2502-3"}, "value": 53, "unit": "%", "ref_range": "20-45", "flag": "H", "day": 0, "source_locator": "Table 2"},
+    {"id": "L05", "item": "Ferritin", "code": {"system": "LOINC", "code": "2276-4"}, "value": 165, "unit": "ug/L", "ref_range": "30-300", "day": 0, "source_locator": "Table 2"},
+    {"id": "L06", "item": "C-reactive protein", "code": {"system": "LOINC", "code": "1988-5"}, "value": "<0.4", "unit": "mg/L", "ref_range": "<5", "day": 0, "source_locator": "Table 2"},
+    {"id": "L07", "item": "Vitamin B12", "code": {"system": "LOINC", "code": "14685-2"}, "value": 375, "unit": "pmol/L", "ref_range": ">150", "day": 0, "source_locator": "Table 2"},
+    {"id": "L08", "item": "Active B12 (holotranscobalamin)", "code": null, "value": ">128", "unit": "pmol/L", "ref_range": ">35", "day": 0, "source_locator": "Table 2"},
+    {"id": "L09", "item": "Serum folate", "code": {"system": "LOINC", "code": "14732-1"}, "value": 39, "unit": "nmol/L", "ref_range": ">7.0", "day": 0, "source_locator": "Table 2"},
+    {"id": "L10", "item": "Total cholesterol", "code": null, "value": 4.5, "unit": "mmol/L", "ref_range": "<5.6", "day": 0, "source_locator": "Table 2"},
+    {"id": "L11", "item": "Creatine kinase", "code": {"system": "LOINC", "code": "2157-6"}, "value": 481, "unit": "U/L", "ref_range": "30-150", "flag": "H", "day": 0, "source_locator": "Table 2"},
+    {"id": "L12", "item": "Magnesium", "code": null, "value": 0.82, "unit": "mmol/L", "ref_range": "0.70-1.10", "day": 0, "source_locator": "Table 2"},
+    {"id": "L13", "item": "Haemolysis index (sample)", "code": null, "value": 4, "unit": "", "ref_range": "<40", "day": 0, "source_locator": "Table 2"},
+    {"id": "L14", "item": "Haptoglobin", "code": {"system": "LOINC", "code": "4542-7"}, "value": 0.20, "unit": "g/L", "ref_range": "0.16-2.00", "day": 0, "source_locator": "Table 2"},
+    {"id": "L15", "item": "Direct antiglobulin test", "code": null, "value": "Positive: anti-IgG 1+ (scale 1-4), anti-C3d non-reactive", "unit": "", "ref_range": "Negative", "day": 0, "source_locator": "Table 2"},
+    {"id": "L16", "item": "Red cell antibody screen", "code": null, "value": "Negative", "unit": "", "ref_range": "Negative", "day": 0, "source_locator": "Table 2"},
+    {"id": "L17", "item": "Blood group", "code": null, "value": "A Rh(D) positive", "unit": "", "ref_range": "", "day": 0, "source_locator": "Table 2"},
+    {"id": "L18", "item": "Serum protein electrophoresis", "code": null, "value": "Albumin 40 g/L (33-46); alpha-1 2 g/L (2-4); alpha-2 4 g/L (4-9); beta-1 3 g/L (2-6); beta-2 1.5 g/L, low (2-6); gamma 15 g/L (6-15); total protein 67 g/L (64-81)", "unit": "", "ref_range": "", "day": 0, "source_locator": "Table 2"},
+    {"id": "L19", "item": "Serum immunofixation", "code": null, "value": "No monoclonal immunoglobulin detected", "unit": "", "ref_range": "", "day": 0, "source_locator": "Table 2"},
+    {"id": "L20", "item": "Immunoglobulins", "code": null, "value": "IgG 14.90 g/L (5.76-15.36); IgA 1.12 g/L, low (1.24-4.16); IgM 1.79 g/L (0.48-3.1)", "unit": "", "ref_range": "", "day": 0, "source_locator": "Table 2"},
+    {"id": "L21", "item": "Serum free light chains", "code": null, "value": "Kappa 30 mg/L, high (7-22); lambda 37 mg/L, high (8-27); kappa/lambda ratio 0.81 (0.31-1.56)", "unit": "", "ref_range": "", "day": 0, "source_locator": "Table 2"},
+    {"id": "L22", "item": "Urinary haemosiderin", "code": null, "value": "Not detected", "unit": "", "ref_range": "Not detected", "day": 0, "source_locator": "Table 3"},
+    {"id": "L23", "item": "Cold agglutinin titre (4 C, patient cells)", "code": null, "value": "32; no significant agglutination at higher temperatures", "unit": "titre", "ref_range": "0-32", "day": 0, "source_locator": "Table 3 and text"},
+    {"id": "L24", "item": "Mycoplasma pneumoniae serology", "code": null, "value": "IgG negative; IgM negative", "unit": "", "ref_range": "", "day": 0, "source_locator": "Table 3"},
+    {"id": "L25", "item": "Epstein-Barr virus serology", "code": null, "value": "VCA IgM negative; EBNA IgG positive", "unit": "", "ref_range": "", "day": 0, "source_locator": "Table 3"},
+    {"id": "L26", "item": "Blood lead (venous)", "code": {"system": "LOINC", "code": "5671-3"}, "value": "77.8 ug/dL (3.76 umol/L)", "unit": "", "ref_range": "0-5 ug/dL (0-0.24 umol/L)", "flag": "H", "day": null, "reveals_dx": false, "pivotal": true, "source_locator": "Table 5"}
+  ],
+
+  "raw_material": [
+    {"id": "R01", "test": "Peripheral blood film", "release": "service.pathology", "day": 0, "findings": "Marked red-cell agglutination. Coarse basophilic stippling in a proportion of red cells. Pappenheimer bodies present.", "media": ["M01", "M04"], "note": "The source's first report described agglutination only; stippling was found on re-review. The case file records what the film shows.", "source_locator": "Text, Figures 1 and 3"},
+    {"id": "R02", "test": "Bone marrow aspirate (May-Grunwald-Giemsa)", "release": "service.pathology", "day": null, "findings": "Dyserythropoietic features. Coarse basophilic stippling in erythroid cells. Atypical plasma cells present.", "media": ["M02"], "source_locator": "Text, Figure 2A"},
+    {"id": "R03", "test": "Bone marrow iron stain (Perls / Prussian blue)", "release": "service.pathology", "day": null, "findings": "Ring sideroblasts present.", "media": ["M03"], "source_locator": "Text, Figure 2B"}
+  ],
+
+  "media": [
+    {"id": "M01", "figure": "Figure 1", "specimen": "Peripheral blood film", "stain": "Romanowsky", "redacted_caption": "Peripheral blood film at presentation.", "licence": "CC BY 4.0 (article licence)"},
+    {"id": "M02", "figure": "Figure 2A", "specimen": "Bone marrow aspirate", "stain": "May-Grunwald-Giemsa", "redacted_caption": "Bone marrow aspirate, May-Grunwald-Giemsa stain.", "licence": "CC BY 4.0 (article licence)"},
+    {"id": "M03", "figure": "Figure 2B", "specimen": "Bone marrow aspirate", "stain": "Prussian blue (iron)", "redacted_caption": "Bone marrow aspirate, Prussian blue stain.", "licence": "CC BY 4.0 (article licence)"},
+    {"id": "M04", "figure": "Figure 3", "specimen": "Peripheral blood film", "stain": "Romanowsky", "redacted_caption": "Peripheral blood film, second field.", "licence": "CC BY 4.0 (article licence)"}
+  ],
+
+  "ground_truth": {
+    "final_diagnosis": {
+      "text": "Lead poisoning from an unlabelled herbal supplement, presenting with abdominal pain and anaemia with coarse basophilic stippling and ring sideroblasts",
+      "icd10": ["T56.0", "D64.2"],
+      "accepted_synonyms": ["lead toxicity", "lead poisoning", "plumbism", "saturnism", "lead intoxication", "heavy-metal (lead) poisoning"]
+    },
+    "secondary_findings": [
+      "Weakly positive IgG-only DAT, most likely passive antibody from IVIG rather than warm autoimmune haemolytic anaemia",
+      "Agglutination on the film and a cold agglutinin titre of 32 with low thermal amplitude: not clinically significant",
+      "Raised CK explained by inclusion body myositis"
+    ],
+    "accepted_differential": [
+      "Warm autoimmune haemolytic anaemia",
+      "IVIG-associated haemolysis or passive DAT positivity",
+      "Drug-induced anaemia (mycophenolate)",
+      "Myelodysplastic neoplasm with ring sideroblasts",
+      "Other acquired sideroblastic anaemia (copper deficiency, alcohol, isoniazid)",
+      "Arsenic or mercury toxicity",
+      "Acute porphyria",
+      "Thalassaemia trait (basophilic stippling)"
+    ],
+    "red_herrings": ["IgG 1+ DAT", "film agglutination", "cold agglutinin titre 32", "atypical plasma cells", "raised polyclonal free light chains", "mild transaminase rise", "raised CK"],
+    "key_discriminators": ["coarse basophilic stippling", "Pappenheimer bodies", "ring sideroblasts", "normal MCV with reticulocytosis", "supplement history", "blood lead 77.8 ug/dL"],
+    "treatment_given": "Oral succimer (DMSA) after clinical toxicology consultation. Public health investigation confirmed the supplement as the source of lead, with mercury and arsenic also reported.",
+    "outcome": "Progressive haematological recovery and symptomatic improvement. Follow-up values not reported.",
+    "must_do": [
+      "Ask specifically about supplements, herbal, traditional or imported medicines and over-the-counter products",
+      "Have the peripheral blood film reviewed for basophilic stippling",
+      "Measure venous blood lead",
+      "Stop the exposure before or alongside chelation",
+      "Chelate with oral succimer (symptomatic, blood lead about 78 ug/dL), with clinical toxicology input",
+      "Notify public health, arrange testing of the product and ask who else took it",
+      "Plan a repeat blood lead after chelation, because levels rebound"
+    ],
+    "must_not_do": [
+      "Escalate immunosuppression for presumed warm AIHA on a weak IgG-only DAT in a patient on IVIG without re-evaluating",
+      "Label myelodysplasia with ring sideroblasts before excluding reversible causes such as lead, copper deficiency, alcohol and drugs",
+      "Chelate while the exposure continues",
+      "Start empirical iron therapy (iron studies are replete; transferrin saturation 53%)"
+    ],
+    "diagnosis_rubric_anchors": {
+      "5": "Lead poisoning, with the herbal supplement identified as the source",
+      "4": "Lead poisoning, source not identified",
+      "3": "Heavy-metal poisoning without naming lead, or toxic sideroblastic anaemia without naming lead",
+      "2": "Warm AIHA, IVIG-related haemolysis, MDS with ring sideroblasts or drug-induced anaemia as the final diagnosis",
+      "1": "Unrelated diagnosis, or one that would lead to harm"
+    }
+  },
+
+  "gaps": [
+    {"id": "G01", "item": "Vital signs", "guidance": "Afebrile; heart rate mildly raised from anaemia; blood pressure normal or mildly raised; SpO2 normal.", "review_required": true},
+    {"id": "G02", "item": "General examination", "guidance": "Pallor; mild scleral icterus possible (bilirubin 29 umol/L); no lymphadenopathy; no hepatosplenomegaly.", "review_required": true},
+    {"id": "G03", "item": "Abdominal examination", "guidance": "Soft abdomen with diffuse mild tenderness; no guarding or rebound; bowel sounds present.", "review_required": true},
+    {"id": "G04", "item": "Gingival margin (lead line)", "guidance": "No lead line seen. Do not invent a pathognomonic sign the article does not report.", "review_required": true},
+    {"id": "G05", "item": "Neurological examination", "guidance": "Weakness in a pattern consistent with known inclusion body myositis (finger flexors, quadriceps); no wrist or foot drop; sensation intact.", "review_required": true},
+    {"id": "G06", "item": "IVIG regimen and date of last infusion", "guidance": "Long-term maintenance IVIG; last infusion within the previous four weeks.", "review_required": true},
+    {"id": "G07", "item": "Mycophenolate dose and start date", "guidance": "Standard dose, started some weeks before admission.", "review_required": true},
+    {"id": "G08", "item": "Occupational and social history", "guidance": "No occupational or hobby lead exposure; no recent renovation of old paint. Supplement duration: weeks to a few months.", "review_required": true},
+    {"id": "G09", "item": "Renal function, electrolytes and urate", "guidance": "Creatinine, urea, sodium and potassium normal; urate normal or mildly raised.", "review_required": false},
+    {"id": "G10", "item": "Urinalysis", "guidance": "No haemoglobinuria; no proteinuria.", "review_required": false},
+    {"id": "G11", "item": "Zinc protoporphyrin / free erythrocyte protoporphyrin", "guidance": "Raised.", "review_required": true},
+    {"id": "G12", "item": "Urine delta-aminolevulinic acid and porphobilinogen", "guidance": "ALA raised; porphobilinogen normal or only mildly raised, not in the acute porphyria range.", "review_required": true},
+    {"id": "G13", "item": "Serum copper and caeruloplasmin", "guidance": "Normal.", "review_required": false},
+    {"id": "G14", "item": "Blood mercury and arsenic", "guidance": "Not reported for the patient, although the supplement contained both. Do not auto-generate: the Case Reviewer sets these values.", "review_required": true, "auto_generate": false},
+    {"id": "G15", "item": "Bone marrow cellularity, iron stores, percentage of ring sideroblasts, karyotype", "guidance": "Erythroid activity consistent with the reticulocytosis; iron stores present; ring sideroblasts present (percentage set by the Case Reviewer); normal karyotype.", "review_required": true},
+    {"id": "G16", "item": "Additional film features", "guidance": "Polychromasia consistent with reticulocytosis; no schistocytes; no spherocytes reported.", "review_required": true},
+    {"id": "G17", "item": "Abdominal imaging (X-ray, ultrasound, CT)", "guidance": "No acute abdominal pathology; no radio-opaque material.", "review_required": true},
+    {"id": "G18", "item": "Upper GI endoscopy (if requested)", "guidance": "Normal or non-specific findings.", "review_required": true},
+    {"id": "G19", "item": "Nerve conduction / EMG (if requested)", "guidance": "No motor neuropathy; myopathic pattern consistent with inclusion body myositis.", "review_required": true},
+    {"id": "G20", "item": "Haemoglobin HPLC (if requested)", "guidance": "Normal; no thalassaemia trait.", "review_required": false}
+  ],
+
+  "pilot_config": {
+    "seats": {
+      "attending": "Attending Physician (internal medicine)",
+      "challenger": "Challenger (enabled)",
+      "consultants": ["consultant.gastroenterology", "consultant.haematology", "consultant.neurology", "consultant.toxicology"],
+      "services": ["service.pathology", "service.radiology"],
+      "evaluator": "Evaluator"
+    },
+    "direct_results": "Numeric laboratory results, serology, DAT, electrophoresis and immunofixation are posted by the Gatekeeper directly to the Chart.",
+    "interpretive_results": "Blood film, bone marrow aspirate, iron stain and imaging go to a Diagnostic Service as raw material; the service writes the report.",
+    "limits": {"max_attending_turns": 30, "max_referrals": 4, "budget_inr": "set after the price table is compiled (placeholder 25000)"},
+    "efficient_path_for_sanity_checks": [
+      "History including medications (H03, H04) and relevant negatives",
+      "CBC, reticulocytes, haemolysis screen, DAT and blood film ordered",
+      "Pathology Service reports agglutination and coarse basophilic stippling and suggests a blood lead",
+      "Targeted supplement question releases H10",
+      "Venous blood lead (L26) resulted",
+      "Clinical toxicology consult",
+      "Commit: lead poisoning from the herbal supplement, with a plan covering the must-do items"
+    ]
+  }
+}

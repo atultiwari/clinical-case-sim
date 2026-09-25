@@ -1,0 +1,56 @@
+# Clinical-Case-Sim root .gitignore (umbrella task U0.0).
+# Parts add their own entries in their scaffold tasks (CLAUDE.md rule 2).
+
+# macOS and editors
+.DS_Store
+.idea/
+*.swp
+*~
+
+# Secrets are never committed (CLAUDE.md rule 9). Each part keeps a .env.example.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p8
+*.p12
+*.jks
+*.keystore
+*.pfx
+*.mobileprovision
+
+# Claude Code personal files
+**/.claude/settings.local.json
+CLAUDE.local.md
+
+# Dependencies, caches and build output
+node_modules/
+.pnpm-store/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.next/
+.expo/
+dist/
+build/
+coverage/
+.coverage
+htmlcov/
+*.tsbuildinfo
+.turbo/
+**/supabase/.temp/
+**/supabase/.branches/
+*.apk
+*.aab
+*.ipa
+*.log
+
+# Local data, raw downloads, run data and review packs
+/case-library/data/
+/case-library/review/
+/sambhasha/data/
