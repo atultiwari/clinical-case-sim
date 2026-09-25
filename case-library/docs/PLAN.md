@@ -17,7 +17,8 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
 
 ## Phase 0: the Case Vault and the pilot
 
-- [ ] **L0.1 Case Library scaffold**
+- [x] **L0.1 Case Library scaffold**
+  - Done 2026-09-25: uv project (ruff, mypy, pytest-cov), `scripts/config.py`, `.env.example`, local Supabase on ports 553xx (543xx was taken by another project), pre-commit hooks and the `case-library` workflow; 26 tests pass.
   - Build: inside the monorepo (umbrella task U0.1), a uv project in `case-library/` with ruff, mypy and pytest; the Supabase CLI for a local database (`supabase start`) used by migration and integration tests; `.env.example` with `CASE_VAULT_DB_URL_READONLY`, `NCBI_API_KEY` and `NCBI_EMAIL`; `review/` and `data/` git-ignored (the root `.gitignore` already covers them); the Case Library's hooks in the root `.pre-commit-config.yaml` and its GitHub Actions workflow (lint, type-check, tests), limited to `case-library/`.
   - Accept: `uv run pytest`, run in `case-library/`, passes on a fresh clone; `supabase start` brings up the local database.
   - Depends on: U0.1.
