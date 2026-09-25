@@ -2,7 +2,7 @@
 --
 --   compute_derived   derived facts from value_rule formulas over article values
 --   resolve_normals   deterministic `normal` ledger rows for everything still open
---   check_consistency formula, physiology and contradiction findings (empty = pass)
+--   check_consistency formula, physiology, range and contradiction findings (empty = pass)
 --   coverage_gaps     every (item, component, day) that does not resolve
 --   coverage_report   the same, summarised per catalogue kind
 --   leak_scan         player-visible text that names the diagnosis (empty = pass)
@@ -248,6 +248,8 @@ $$;
 
 -- Synthetic values that a formula produces are calculated from the day's other
 -- values (article or synthetic), so the generator never breaks its own formulas.
+-- A value calculated from any affected or reviewer input is itself affected,
+-- with the formula as its rationale; otherwise it is normal.
 create function casevault.resolve_normal_derived(
   p_cv text, p_generator text, p_skill_version text)
 returns int
@@ -262,7 +264,8 @@ as $$
   kv as (select * from casevault.known_values(p_cv) where value_num is not null),
   per_day as (
     select r.id, r.kind, r.target, r.factor, r.formula, d.day,
-           array_agg(k.value_num order by array_position(r.inputs, k.target)) as vals
+           array_agg(k.value_num order by array_position(r.inputs, k.target)) as vals,
+           bool_or(k.origin in ('affected', 'reviewer')) as from_affected
     from casevault.value_rule r
     cross join lateral (select casevault.case_days(p_cv) as day) d
     join kv k on k.target = any (r.inputs) and (k.day = d.day or k.day is null)
@@ -280,13 +283,17 @@ as $$
   ),
   ins as (
     insert into casevault.synthetic_ledger
-      (case_version_id, target, day_bucket, tier, value, priority, checks, generator, skill_version)
-    select p_cv, p.target, p.day, 'normal',
+      (case_version_id, target, day_bucket, tier, value, priority, rationale, confidence, checks,
+       generator, skill_version)
+    select p_cv, p.target, p.day, case when p.from_affected then 'affected' else 'normal' end,
            jsonb_strip_nulls(jsonb_build_object(
              'value', round(casevault.apply_rule(p.kind, p.factor, p.vals), coalesce(c.decimals, 1)),
              'unit', coalesce(rr.unit, c.unit_si),
              'ref_range', rr.low || '-' || rr.high)),
-           'low', jsonb_build_object('formula', p.formula), p_generator, p_skill_version
+           case when p.from_affected then 'medium' else 'low' end,
+           case when p.from_affected then 'Calculated: ' || p.formula end,
+           case when p.from_affected then 1 end,
+           jsonb_build_object('formula', p.formula), p_generator, p_skill_version
     from per_day p
     cross join cv
     left join casevault.component c on c.id = p.target
@@ -353,6 +360,16 @@ as $$
   from paired
   where kind = 'sum_equals'
     and abs((select sum(v) from unnest(vals) v) - actual) > abs(actual) * tolerance_pct / 100
+  union all
+  select 'range', null, l.target, l.day_bucket,
+         format('normal value %s is outside %s-%s; it belongs on a path as affected',
+                casevault.json_num(l.value -> 'value'), rr.low, rr.high)
+  from casevault.synthetic_ledger l
+  join casevault.case_version v on v.id = l.case_version_id
+  join casevault."case" c on c.id = v.case_id
+  cross join lateral casevault.reference_range(c.lab_profile, l.target) rr
+  where l.case_version_id = p_cv and l.tier = 'normal' and casevault.is_live(l.review_status)
+    and casevault.json_num(l.value -> 'value') not between rr.low and rr.high
   union all
   select 'contradiction', null, l.target, l.day_bucket,
          format('synthetic row %s overlaps article fact %s', l.id, f.id)

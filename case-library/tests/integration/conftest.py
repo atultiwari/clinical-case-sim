@@ -43,7 +43,19 @@ def seed_mini_case(db: psycopg.Connection, *, with_path: bool = True) -> str:
         db.execute(
             "insert into casevault.path_analysis (case_version_id, path_id, kind, name, items)"
             " values (%s, 'P1', 'efficient', 'Find the lead',"
-            " '{HX.SUPPLEMENTS,LAB.BLOOD_LEAD,LAB.FILM,REF.TOXICOLOGY}')",
+            " '{HX.SUPPLEMENTS,LAB.CBC,LAB.BLOOD_LEAD,LAB.FILM,REF.TOXICOLOGY}')",
             (cv,),
         )
     return cv
+
+
+def add_affected_cbc(db: psycopg.Connection, cv: str) -> None:
+    """Claude's affected blood count for the days the article leaves open (Hb d1, RBC d1-2)."""
+    db.execute(
+        "insert into casevault.synthetic_ledger (case_version_id, target, day_bucket, tier, value,"
+        " rationale, confidence, generator, skill_version) values"
+        " (%(cv)s, 'CMP.HB', 1, 'affected', '{\"value\": 75}', 'Trend', 0.7, %(g)s, 'v0'),"
+        " (%(cv)s, 'CMP.RBC', 1, 'affected', '{\"value\": 2.5}', 'Tracks Hb', 0.7, %(g)s, 'v0'),"
+        " (%(cv)s, 'CMP.RBC', 2, 'affected', '{\"value\": 2.7}', 'Tracks Hb', 0.7, %(g)s, 'v0')",
+        {"cv": cv, "g": MINI_GENERATOR},
+    )

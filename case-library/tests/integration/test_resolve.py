@@ -5,7 +5,7 @@ from typing import Any
 import psycopg
 import pytest
 
-from tests.integration.conftest import MINI_GENERATOR, seed_mini_case
+from tests.integration.conftest import MINI_GENERATOR, add_affected_cbc, seed_mini_case
 
 pytestmark = pytest.mark.integration
 
@@ -27,7 +27,7 @@ def _normals(db: psycopg.Connection, cv: str) -> int:
 def _ledger(db: psycopg.Connection, cv: str) -> list[tuple[Any, ...]]:
     return db.execute(
         "select target, day_bucket, value from casevault.synthetic_ledger"
-        " where case_version_id = %s order by target, day_bucket nulls first",
+        " where case_version_id = %s and tier = 'normal' order by target, day_bucket nulls first",
         (cv,),
     ).fetchall()
 
@@ -71,9 +71,9 @@ def test_normals_fill_open_components_and_templates(db: psycopg.Connection) -> N
     _normals(db, cv)
     filled = {(t, d) for t, d, _ in _ledger(db, cv)}
 
-    # Days 0-2. Article: Hb d0 and d2, RBC d0; derived: MCH d0.
+    # Days 0-2. The blood count is on the path, so it is left for affected rows.
     assert filled == {
-        ("CMP.HB", 1), ("CMP.RBC", 1), ("CMP.RBC", 2), ("CMP.MCH", 1), ("CMP.MCH", 2),
+        ("CMP.NA", 0), ("CMP.NA", 1), ("CMP.NA", 2), ("CMP.K", 0), ("CMP.K", 1), ("CMP.K", 2),
         ("CMP.UA_COLOUR", None), ("HX.OCCUPATION", None),
     }  # fmt: skip
 
@@ -84,7 +84,25 @@ def test_items_on_the_path_are_left_for_claude(db: psycopg.Connection) -> None:
 
     targets = {t for t, _, _ in _ledger(db, cv)}
 
-    assert not targets & {"CMP.PB", "HX.SUPPLEMENTS", "LAB.FILM", "REF.TOXICOLOGY"}
+    assert not targets & {"CMP.HB", "CMP.RBC", "CMP.PB", "HX.SUPPLEMENTS", "LAB.FILM"}
+
+
+def test_formula_targets_are_calculated_from_affected_values(db: psycopg.Connection) -> None:
+    cv = seed_mini_case(db)
+    _derive(db, cv)
+    add_affected_cbc(db, cv)
+
+    _normals(db, cv)
+    rows = db.execute(
+        "select day_bucket, tier, value ->> 'value', rationale, confidence"
+        " from casevault.synthetic_ledger where case_version_id = %s and target = 'CMP.MCH'"
+        " order by day_bucket",
+        (cv,),
+    ).fetchall()
+
+    # MCH = Hb / RBC: 75 / 2.5 on day 1, 80 (article) / 2.7 on day 2.
+    assert [(r[0], r[1], r[2]) for r in rows] == [(1, "affected", "30.0"), (2, "affected", "29.6")]
+    assert all(r[3].startswith("Calculated: MCH") and r[4] == 1 for r in rows)
 
 
 def test_normal_values_sit_inside_the_patients_range(db: psycopg.Connection) -> None:
@@ -93,11 +111,11 @@ def test_normal_values_sit_inside_the_patients_range(db: psycopg.Connection) -> 
 
     values = {(t, d): v for t, d, v in _ledger(db, cv)}
 
-    hb = values[("CMP.HB", 1)]
-    assert 115 <= hb["value"] <= 165  # the female range, not the male one
-    assert hb["unit"] == "g/L"
-    assert hb["ref_range"] == "115-165"
-    assert 3.8 <= values[("CMP.RBC", 1)]["value"] <= 4.8
+    sodium = values[("CMP.NA", 1)]
+    assert 136 <= sodium["value"] <= 145  # the female range, not the male one
+    assert sodium["unit"] == "mmol/L"
+    assert sodium["ref_range"] == "136-145"
+    assert 3.5 <= values[("CMP.K", 1)]["value"] <= 5.1
     assert values[("CMP.UA_COLOUR", None)] == {"text": "Straw"}
 
 
@@ -115,15 +133,15 @@ def test_case_laboratory_overrides_the_catalogue_range(db: psycopg.Connection) -
     cv = seed_mini_case(db)
     db.execute(
         'update casevault."case" set lab_profile = lab_profile'
-        ' || \'{"components": {"CMP.HB": {"low": 12, "high": 16, "unit": "g/dL"}}}\''
+        ' || \'{"components": {"CMP.NA": {"low": 140, "high": 142, "unit": "mEq/L"}}}\''
         " where id = 'PMC0000001'"
     )
     _normals(db, cv)
 
-    hb = {(t, d): v for t, d, v in _ledger(db, cv)}[("CMP.HB", 1)]
+    sodium = {(t, d): v for t, d, v in _ledger(db, cv)}[("CMP.NA", 1)]
 
-    assert 12 <= hb["value"] <= 16
-    assert hb["unit"] == "g/dL"
+    assert 140 <= sodium["value"] <= 142
+    assert sodium["unit"] == "mEq/L"
 
 
 def test_normals_run_once(db: psycopg.Connection) -> None:
@@ -141,12 +159,16 @@ def test_coverage_lists_what_is_still_open(db: psycopg.Connection) -> None:
     _derive(db, cv)
     _normals(db, cv)
 
-    assert _missing(db, cv) == {"referral": ["REF.TOXICOLOGY"], "test": ["LAB.FILM"]}
+    assert _missing(db, cv) == {
+        "referral": ["REF.TOXICOLOGY"],
+        "test": ["LAB.CBC", "LAB.FILM"],
+    }
 
 
 def test_coverage_is_complete_once_everything_resolves(db: psycopg.Connection) -> None:
     cv = seed_mini_case(db)
     _derive(db, cv)
+    add_affected_cbc(db, cv)
     _normals(db, cv)
     db.execute(
         "insert into casevault.report (case_version_id, id, test_item_id, variant, status,"
@@ -194,9 +216,22 @@ def _checks(db: psycopg.Connection, cv: str) -> list[tuple[str, str]]:
 def test_clean_case_has_no_findings(db: psycopg.Connection) -> None:
     cv = seed_mini_case(db)
     _derive(db, cv)
+    add_affected_cbc(db, cv)
     _normals(db, cv)
 
     assert _checks(db, cv) == []
+
+
+def test_range_check_flags_an_abnormal_normal_row(db: psycopg.Connection) -> None:
+    cv = seed_mini_case(db)
+    db.execute(
+        "insert into casevault.synthetic_ledger (case_version_id, target, day_bucket, tier, value,"
+        " generator, skill_version)"
+        " values (%s, 'CMP.K', 1, 'normal', '{\"value\": 7.0}', 'g', 's')",
+        (cv,),
+    )
+
+    assert _checks(db, cv) == [("range", "CMP.K")]
 
 
 def test_formula_check_flags_an_inconsistent_article_value(db: psycopg.Connection) -> None:

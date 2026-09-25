@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clinical-case-sim.local/schemas/case-bundle.v0.3.schema.json",
+  "title": "Case bundle, schema 0.3",
+  "description": "A frozen case version with its approved results for one catalogue version (Case Library SPEC §10.5). Part of the shared contract: a MINOR version adds optional fields only. Engines load bundles on a server; a bundle never reaches a player's device.",
+  "type": "object",
+  "required": [
+    "bundle_id", "schema_version", "catalogue_version", "case", "source", "clock", "vignette",
+    "opening_statement_lay", "facts", "ledger", "reports", "consult_notes", "raw_material",
+    "media", "gaps", "ground_truth", "test_utility", "path_analysis"
+  ],
+  "properties": {
+    "bundle_id": { "type": "string", "pattern": "^(PMC[0-9]+|NID-[0-9]{4,})@v[0-9]+\\.r[0-9]+$" },
+    "schema_version": { "const": "0.3" },
+    "catalogue_version": { "type": "integer", "minimum": 0 },
+    "case": {
+      "type": "object",
+      "properties": {
+        "slug": { "type": "string", "pattern": "^c-[a-z0-9]{5}$" },
+        "display_title": { "type": "string" },
+        "display_tags": { "type": "array", "items": { "type": "string" } },
+        "specialty": { "type": "string" },
+        "difficulty": { "type": "string" },
+        "est_minutes": { "type": "integer", "minimum": 1 },
+        "lab_profile": { "type": "object" }
+      }
+    },
+    "source": {
+      "description": "null for a de novo case.",
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "required": ["licence", "production_ok", "public_release_ok"],
+          "properties": {
+            "citation": { "type": "string" },
+            "doi": { "type": "string" },
+            "pmcid": { "type": "string", "pattern": "^PMC[0-9]+$" },
+            "url": { "type": "string" },
+            "licence": { "type": "string" },
+            "attribution": { "type": "string" },
+            "production_ok": { "type": "boolean" },
+            "public_release_ok": { "type": "boolean" }
+          }
+        }
+      ]
+    },
+    "clock": {
+      "type": "object",
+      "properties": {
+        "day_0": { "type": "string", "format": "date" },
+        "day_0_label": { "type": "string" }
+      }
+    },
+    "vignette": { "type": ["string", "null"] },
+    "opening_statement_lay": { "type": ["string", "null"] },
+    "facts": { "type": "array", "items": { "$ref": "#/$defs/fact" } },
+    "ledger": { "type": "array", "items": { "$ref": "#/$defs/ledger_row" } },
+    "reports": { "type": "array", "items": { "$ref": "#/$defs/report" } },
+    "consult_notes": { "type": "array", "items": { "$ref": "#/$defs/consult_note" } },
+    "raw_material": { "type": "array", "items": { "$ref": "#/$defs/raw_material" } },
+    "media": { "type": "array", "items": { "$ref": "#/$defs/media" } },
+    "gaps": { "type": "array", "items": { "$ref": "#/$defs/gap" } },
+    "ground_truth": { "$ref": "#/$defs/ground_truth" },
+    "test_utility": { "type": "array", "items": { "$ref": "#/$defs/test_utility" } },
+    "path_analysis": { "type": "array", "items": { "$ref": "#/$defs/path" } }
+  },
+  "$defs": {
+    "day": { "type": ["integer", "null"], "description": "Days from day 0; null means valid throughout the admission." },
+    "release": { "type": "string", "pattern": "^(vignette|chart|never|service\\.[a-z_]+)$" },
+    "fact": {
+      "type": "object",
+      "required": ["id", "category", "item", "origin", "release", "day"],
+      "properties": {
+        "id": { "type": "string" },
+        "category": { "type": "string" },
+        "item": { "type": "string" },
+        "catalogue_ref": { "type": ["string", "null"] },
+        "released_by": { "type": "array", "items": { "type": "string" } },
+        "code_system": { "type": ["string", "null"] },
+        "code": { "type": ["string", "null"] },
+        "value": { "type": ["string", "null"] },
+        "value_num": { "type": ["number", "null"] },
+        "unit": { "type": ["string", "null"] },
+        "ref_range": { "type": ["string", "null"] },
+        "flag": { "type": ["string", "null"] },
+        "day": { "$ref": "#/$defs/day" },
+        "kind": { "enum": ["raw", "interpretation"] },
+        "origin": { "enum": ["article", "derived"] },
+        "formula": { "type": ["string", "null"] },
+        "reveals_dx": { "type": "boolean" },
+        "pivotal": { "type": "boolean" },
+        "release": { "$ref": "#/$defs/release" },
+        "release_condition": { "type": ["object", "null"] },
+        "release_text": { "type": ["string", "null"] },
+        "lay_text": { "type": ["string", "null"] },
+        "source_locator": { "type": ["string", "null"] }
+      }
+    },
+    "ledger_row": {
+      "type": "object",
+      "required": ["id", "target", "day_bucket", "tier", "value"],
+      "properties": {
+        "id": { "type": "string" },
+        "target": { "type": "string" },
+        "day_bucket": { "$ref": "#/$defs/day" },
+        "tier": { "enum": ["affected", "normal", "rule", "reviewer"] },
+        "gap_id": { "type": ["string", "null"] },
+        "value": { "type": "object" },
+        "release_text": { "type": ["string", "null"] },
+        "lay_text": { "type": ["string", "null"] }
+      }
+    },
+    "report": {
+      "type": "object",
+      "required": ["id", "variant", "status", "findings"],
+      "properties": {
+        "id": { "type": "string" },
+        "test_item_id": { "type": ["string", "null"] },
+        "variant": { "enum": ["original", "expert", "only"] },
+        "status": { "enum": ["provisional", "final"] },
+        "status_line": { "type": ["string", "null"] },
+        "findings": { "type": "array", "items": { "type": "string", "pattern": "^FND\\." } },
+        "report_text": { "type": ["string", "null"] },
+        "impression": { "type": ["string", "null"] },
+        "suggested_reflex": { "type": "array", "items": { "type": "string" } },
+        "based_on": { "type": "array", "items": { "type": "string" } },
+        "origins": {
+          "type": "array",
+          "items": { "enum": ["article", "affected", "normal", "rule", "reviewer"] }
+        }
+      },
+      "if": { "properties": { "variant": { "const": "original" } } },
+      "then": {
+        "required": ["status_line"],
+        "properties": { "status": { "const": "provisional" }, "status_line": { "type": "string" } }
+      }
+    },
+    "consult_note": {
+      "type": "object",
+      "required": ["id", "specialty", "variant", "note_text", "origin"],
+      "properties": {
+        "id": { "type": "string" },
+        "specialty": { "type": "string" },
+        "variant": { "type": "integer", "minimum": 1 },
+        "condition": { "$ref": "#/$defs/condition_or_null" },
+        "note_text": { "type": "string" },
+        "recommendations": { "type": "array", "items": { "type": "string" } },
+        "origin": { "enum": ["affected", "rule"] }
+      }
+    },
+    "raw_material": {
+      "type": "object",
+      "required": ["id", "test", "release", "findings"],
+      "properties": {
+        "id": { "type": "string" },
+        "test": { "type": "string" },
+        "test_item_id": { "type": ["string", "null"] },
+        "release": { "$ref": "#/$defs/release" },
+        "day": { "$ref": "#/$defs/day" },
+        "findings": { "type": "string" },
+        "media": { "type": "array", "items": { "type": "string" } },
+        "note": { "type": ["string", "null"] },
+        "source_locator": { "type": ["string", "null"] }
+      }
+    },
+    "media": {
+      "type": "object",
+      "required": ["id", "licence", "production_ok", "public_release_ok", "has_annotations", "production_decision"],
+      "properties": {
+        "id": { "type": "string" },
+        "figure": { "type": ["string", "null"] },
+        "specimen": { "type": ["string", "null"] },
+        "stain": { "type": ["string", "null"] },
+        "file_path": { "type": ["string", "null"] },
+        "redacted_caption": { "type": ["string", "null"] },
+        "licence": { "type": "string" },
+        "production_ok": { "type": "boolean" },
+        "public_release_ok": { "type": "boolean" },
+        "has_annotations": { "type": "boolean" },
+        "production_decision": { "enum": ["pending", "use", "mask", "exclude"] },
+        "masked_path": { "type": ["string", "null"] },
+        "raw_fact_id": { "type": ["string", "null"] }
+      }
+    },
+    "gap": {
+      "type": "object",
+      "required": ["id", "item"],
+      "properties": {
+        "id": { "type": "string" },
+        "item": { "type": "string" },
+        "guidance": { "type": ["string", "null"] },
+        "review_required": { "type": "boolean" },
+        "auto_generate": { "type": "boolean" }
+      }
+    },
+    "ground_truth": {
+      "type": "object",
+      "required": ["final_dx"],
+      "properties": {
+        "final_dx": { "type": "object" },
+        "accepted_differential": {},
+        "red_herrings": {},
+        "key_discriminators": {},
+        "rubric": {},
+        "must_do": { "$ref": "#/$defs/scored_items" },
+        "must_not_do": { "$ref": "#/$defs/scored_items" },
+        "efficient_path": {},
+        "teaching_points": {},
+        "treatment_given": { "type": ["string", "null"] },
+        "outcome": { "type": ["string", "null"] }
+      }
+    },
+    "scored_items": {
+      "description": "Schema 0.3 items are {text, if}; plain strings remain valid for schema 0.2 imports.",
+      "type": ["array", "null"],
+      "items": {
+        "oneOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "required": ["text"],
+            "properties": { "text": { "type": "string" }, "if": { "$ref": "#/$defs/condition" } }
+          }
+        ]
+      }
+    },
+    "condition_or_null": { "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/condition" }] },
+    "condition": {
+      "description": "SPEC §10.4. Ids ending in .* match every item with that prefix.",
+      "type": "object",
+      "minProperties": 1,
+      "maxProperties": 2,
+      "properties": {
+        "dx_in": { "$ref": "#/$defs/ids" },
+        "evidence_has": { "$ref": "#/$defs/ids" },
+        "released_all": { "$ref": "#/$defs/ids" },
+        "released_any": { "$ref": "#/$defs/ids" },
+        "finding_released": { "$ref": "#/$defs/ids" },
+        "from_tests": { "$ref": "#/$defs/ids" },
+        "asked_any": { "$ref": "#/$defs/ids" },
+        "ordered_any": { "$ref": "#/$defs/ids" },
+        "ordered_all": { "$ref": "#/$defs/ids" },
+        "referred_any": { "$ref": "#/$defs/ids" },
+        "plan_has": { "$ref": "#/$defs/ids" },
+        "plan_has_any": { "$ref": "#/$defs/ids" },
+        "plan_before": {
+          "type": "array", "prefixItems": [{ "type": "string" }, { "type": "string" }],
+          "minItems": 2, "maxItems": 2
+        },
+        "not": { "$ref": "#/$defs/condition" },
+        "all": { "type": "array", "items": { "$ref": "#/$defs/condition" }, "minItems": 1 },
+        "any": { "type": "array", "items": { "$ref": "#/$defs/condition" }, "minItems": 1 }
+      },
+      "additionalProperties": false,
+      "dependentRequired": { "from_tests": ["finding_released"] }
+    },
+    "ids": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "test_utility": {
+      "type": "object",
+      "required": ["test_item_id", "utility"],
+      "properties": {
+        "test_item_id": { "type": "string" },
+        "utility": { "enum": ["essential", "supportive", "low_yield", "unnecessary", "risky"] },
+        "rationale": { "type": ["string", "null"] }
+      }
+    },
+    "path": {
+      "type": "object",
+      "required": ["path_id", "kind", "name", "items"],
+      "properties": {
+        "path_id": { "type": "string" },
+        "kind": { "enum": ["efficient", "trap", "alternative"] },
+        "name": { "type": "string" },
+        "rationale": { "type": ["string", "null"] },
+        "items": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}
