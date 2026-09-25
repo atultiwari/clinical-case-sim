@@ -2,6 +2,10 @@
 -- from the document (catalogue/normal_templates.csv, PLAN L0.5), so templates
 -- Atul approves in a catalogue review load as approved. A document without the
 -- status keeps the earlier rule: a changed text goes back to review.
+--
+-- A document with "partial": true (one of several calls that together load a
+-- catalogue too large for one MCP call) deactivates nothing; the last call, or a
+-- complete document, deactivates items of its kinds that it leaves out.
 
 create or replace function casevault.load_catalogue(p_doc jsonb)
 returns jsonb
@@ -38,6 +42,7 @@ begin
   update casevault.catalogue_item c
   set active = false
   where c.active
+    and not coalesce((p_doc ->> 'partial')::boolean, false)
     and c.kind in (select distinct i ->> 'kind' from jsonb_array_elements(coalesce(p_doc -> 'items', '[]')) i)
     and c.id not in (select i ->> 'id' from jsonb_array_elements(coalesce(p_doc -> 'items', '[]')) i);
   get diagnostics v_deactivated = row_count;

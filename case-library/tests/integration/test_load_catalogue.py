@@ -138,6 +138,21 @@ def test_an_item_left_out_is_deactivated_not_deleted(db: psycopg.Connection) -> 
     )
 
 
+def test_a_partial_document_deactivates_nothing(db: psycopg.Connection) -> None:
+    _load(db, _doc())
+    doc = _doc(version=1)
+    doc["items"] = [i for i in doc["items"] if i["id"] != "HX.EXPOSURE.OCCUPATION"]
+    counts = _load(db, {**doc, "partial": True})
+    assert counts["deactivated"] == 0
+    assert (
+        _scalar(
+            db,
+            "select active from casevault.catalogue_item where id = 'HX.EXPOSURE.OCCUPATION'",
+        )
+        is True
+    )
+
+
 def test_a_new_item_records_the_version_it_joined_in(db: psycopg.Connection) -> None:
     _load(db, _doc())
     doc = _doc(version=2)
@@ -181,6 +196,31 @@ def test_a_document_without_a_version_is_refused(db: psycopg.Connection) -> None
     del doc["version"]
     with pytest.raises(psycopg.errors.RaiseException, match="version"):
         _load(db, doc)
+
+
+def test_loading_the_parts_equals_loading_the_whole(db: psycopg.Connection) -> None:
+    from scripts.catalogue_parts import split_document
+
+    document = cat.build_document(cat.read_catalogue(REAL), version=0)
+    tables = (
+        "catalogue_item",
+        "test_def",
+        "component",
+        "test_component",
+        "normal_template",
+        "diagnosis_def",
+        "value_rule",
+    )
+
+    def snapshot() -> dict[str, int]:
+        return {t: _scalar(db, f"select count(*) from casevault.{t}") for t in tables}  # noqa: S608
+
+    with db.transaction(force_rollback=True):
+        _load(db, document)
+        whole = snapshot()
+    for part in split_document(document, max_bytes=60_000):
+        _load(db, part)
+    assert snapshot() == whole
 
 
 def test_the_real_catalogue_loads(db: psycopg.Connection) -> None:
