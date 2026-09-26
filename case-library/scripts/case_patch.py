@@ -16,6 +16,11 @@ exactly what the Case Vault needs. The patch is one transaction:
   longer has is marked `rejected`, with the reviewer and note given here;
 - the step 10 checks run at the end and undo everything if anything is open.
 
+After the case has been reviewed (`--after-review`), approved ledger values
+cannot be withdrawn, only replaced, so a corrected case that drops a (target,
+day) is refused; and every content row the patch changes goes back to
+`pending`, so the next review pack shows it.
+
 It connects only to the local database; Atul runs the patch (scripts/vault_load.py).
 """
 
@@ -65,6 +70,15 @@ VOLATILE = frozenset(
         "source_id",
     }
 )
+# Content tables whose rows carry a review, and the columns that record it.
+REVIEWED_CONTENT = frozenset({"fact", "report", "consult_note"})
+REVIEW_COLUMNS = ("review_status", "reviewed_by", "reviewed_at", "review_note")
+REOPENED: dict[str, Any] = {
+    "review_status": "pending",
+    "reviewed_by": None,
+    "reviewed_at": None,
+    "review_note": None,
+}
 LEDGER_CONTENT = (
     "tier", "gap_id", "value", "release_text", "lay_text", "priority", "judgement_call",
     "rationale", "confidence", "checks",
@@ -80,6 +94,10 @@ LIVE_ROW = (
 
 Rows = dict[tuple[Any, ...], dict[str, Any]]
 Snapshot = dict[str, Rows]
+
+
+class PatchError(ValueError):
+    """The corrected case cannot be reached by a patch the Case Vault accepts."""
 
 
 @dataclass
@@ -174,8 +192,11 @@ def _patch_header_rows(patch: Patch, old: Snapshot, new: Snapshot) -> None:
             patch.add(f"{table} updated", _update(name, n, columns, where))
 
 
-def _patch_content(patch: Patch, old: Snapshot, new: Snapshot, cv_sql: str) -> None:
+def _patch_content(
+    patch: Patch, old: Snapshot, new: Snapshot, cv_sql: str, after_review: bool = False
+) -> None:
     for table, key in CONTENT.items():
+        reopen = after_review and table in REVIEWED_CONTENT
         o, n = old[table], new[table]
 
         def where(row: dict[str, Any], key: tuple[str, ...] = key) -> str:
@@ -192,7 +213,11 @@ def _patch_content(patch: Patch, old: Snapshot, new: Snapshot, cv_sql: str) -> N
             )
         for k in n.keys() & o.keys():
             columns = _changed(o[k], n[k], {"case_version_id", *key})
-            if columns:
+            if columns and reopen:
+                reopened = {**n[k], **REOPENED}
+                columns = [*columns, *(c for c in REVIEW_COLUMNS if c not in columns)]
+                patch.add(f"{table} reopened", _update(table, reopened, columns, where(n[k])))
+            elif columns:
                 patch.add(f"{table} updated", _update(table, n[k], columns, where(n[k])))
 
 
@@ -230,12 +255,21 @@ def _patch_ledger(
         )
 
 
-def patch_sql(old: Snapshot, new: Snapshot, cv: str, reviewer: str, note: str) -> Patch:
+def patch_sql(
+    old: Snapshot, new: Snapshot, cv: str, reviewer: str, note: str, after_review: bool = False
+) -> Patch:
     """The statements that turn the `old` state into the `new` one, ending in the checks."""
+    if after_review:
+        dropped = sorted(old["ledger"].keys() - new["ledger"].keys(), key=str)
+        if dropped:
+            raise PatchError(
+                f"{cv}: {len(dropped)} reviewed ledger value(s) would be withdrawn; after review"
+                f" a value can only be replaced, so give each a corrected value: {dropped[:10]}"
+            )
     cv_sql = plan.literal(cv)
     patch = Patch()
     _patch_header_rows(patch, old, new)
-    _patch_content(patch, old, new, cv_sql)
+    _patch_content(patch, old, new, cv_sql, after_review)
     _patch_ledger(patch, old["ledger"], new["ledger"], cv_sql, reviewer, note)
     patch.statements.append(GUARD.format(cv=cv_sql))
     return patch
@@ -245,7 +279,9 @@ def render_patch(patch: Patch) -> str:
     return "begin;\n" + "\n".join(patch.statements) + "\ncommit;\n"
 
 
-def build_patch(case_dir: Path, since: str, reviewer: str, note: str) -> Patch:
+def build_patch(
+    case_dir: Path, since: str, reviewer: str, note: str, after_review: bool = False
+) -> Patch:
     """Replay the case at `since` and now, locally, and return the difference as a patch."""
     gold = json.loads(next(case_dir.glob("gold-case-file*.json")).read_text(encoding="utf-8"))
     cv, case_id = f"{gold['case_id']}@v{gold.get('version', 1)}", gold["case_id"]
@@ -263,7 +299,7 @@ def build_patch(case_dir: Path, since: str, reviewer: str, note: str) -> Patch:
         with db.transaction(force_rollback=True):
             replay_one(db, case_dir)
             new = snapshot(db, cv, case_id)
-    return patch_sql(old, new, cv, reviewer, note)
+    return patch_sql(old, new, cv, reviewer, note, after_review)
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -273,10 +309,19 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--reviewer", default="atul")
     parser.add_argument("--note", required=True, help="review note on every rejected ledger row")
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument(
+        "--after-review",
+        action="store_true",
+        help="the case has been reviewed: refuse withdrawn values, reopen changed rows",
+    )
     args = parser.parse_args(argv)
     args.out.mkdir(parents=True, exist_ok=True)
     for case_dir in args.cases:
-        patch = build_patch(case_dir, args.since, args.reviewer, args.note)
+        try:
+            patch = build_patch(case_dir, args.since, args.reviewer, args.note, args.after_review)
+        except PatchError as error:
+            print(f"Not built: {error}", file=sys.stderr)
+            return 1
         sql = render_patch(patch)
         path = args.out / f"{case_dir.name}.sql"
         path.write_text(sql, encoding="utf-8")

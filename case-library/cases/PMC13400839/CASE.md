@@ -52,7 +52,7 @@ Day 0 is the transfer. The article gives no calendar dates (`clock.day_0` is nul
 | --- | --- | --- |
 | H01 | 56-year-old woman | vignette |
 | H02 | Hypothyroidism after total thyroidectomy; referring team records malnutrition | `HX.PMH.MEDICAL`, `HX.PMH.CHRONIC_CONDITIONS` |
-| H03 | **Total thyroidectomy and a sleeve gastrectomy** (pivotal) | `HX.PMH.SURGICAL` only |
+| H03 | **Total thyroidectomy and a sleeve gastrectomy** (pivotal) | `HX.PMH.SURGICAL`, `HX.PMH.MEDICAL` (no longer hidden; see the corrections below) |
 | H04 | Transfer letter: severe pancytopenia, concern for aplastic anaemia | vignette, `HX.RECORDS.REFERRAL_LETTER` |
 | H05 | One unit of red cells; cefepime, metronidazole, fluconazole for presumed colitis and mucositis | `HX.PC.TREATMENT_SO_FAR`, `HX.MEDS.RECENT_ANTIBIOTICS` |
 | H06 | Examination recorded as unremarkable | `EX.GEN.APPEARANCE` |
@@ -66,7 +66,7 @@ Day 0 is the transfer. The article gives no calendar dates (`clock.day_0` is nul
 
 | Item | Released when |
 | --- | --- |
-| H03 sleeve gastrectomy | Only the surgical history. Also reachable through `HX.PMH.ADMISSIONS` ("my stomach operation"), the port-site scars on `EX.ABD.INSPECTION`, early satiety on `HX.GI.NAUSEA_APPETITE`, and imaging or endoscopy |
+| H03 sleeve gastrectomy | No longer hidden (corrections, 2026-09-26): the past medical or surgical history. Also reachable through `HX.PMH.ADMISSIONS` ("my stomach operation"), the port-site scars on `EX.ABD.INSPECTION`, early satiety on `HX.GI.NAUSEA_APPETITE`, and imaging or endoscopy |
 | Diet (`HX.SOCIAL.DIET`, affected) | Only the diet question: small soft meals, almost no fruit or green vegetables |
 | Stopped multivitamin (`HX.MEDS.SUPPLEMENTS`, `_DETAILS`, affected) | Only the supplements questions |
 | Monthly B12 injections (`HX.MEDS.CURRENT`, affected) | The medicines question; explains B12 >1500 pg/mL |
@@ -103,7 +103,7 @@ Every item on a path resolves from an article fact, an `affected` row or an auth
 
 ## Ground truth and scoring (summary)
 
-- **Rubric:** 5 = `DX.FOLATE_DEFICIENCY_ANAEMIA` with H03 cited as evidence; 4 = `DX.FOLATE_DEFICIENCY_ANAEMIA`; 3 = `DX.MEGALOBLASTIC_ANAEMIA`, `DX.MIXED_NUTRITIONAL_ANAEMIA` or `DX.B12_DEFICIENCY_ANAEMIA`; 2 = `DX.MDS_EXCESS_BLASTS`, `DX.MDS`, `DX.AML` or `DX.APLASTIC_ANAEMIA`; 1 otherwise.
+- **Rubric:** 5 = `DX.FOLATE_DEFICIENCY_ANAEMIA` with H03, RP17, RP19, CN03, CN04, CN05, CN07, CN08 or CN11 cited as evidence; 4 = `DX.FOLATE_DEFICIENCY_ANAEMIA`; 3 = `DX.MEGALOBLASTIC_ANAEMIA`, `DX.MIXED_NUTRITIONAL_ANAEMIA` or `DX.B12_DEFICIENCY_ANAEMIA`; 2 = `DX.MDS_EXCESS_BLASTS`, `DX.MDS`, `DX.AML` or `DX.APLASTIC_ANAEMIA`; 1 otherwise.
 - **Must-do (7):** folate and B12 ordered; surgical, diet or supplement history asked; `RX.VITAMIN.FOLATE` with B12 ordered; cytogenetics or NGS ordered; empirical antibiotics plus platelet transfusion planned; `ACT.REPEAT_BONE_MARROW` or `ACT.REPEAT_BLOODS`; dietetics referral or dietary advice.
 - **Must-not-do (4):** `RX.CHEMO.*`; an MDS or AML diagnosis without folate and B12 ordered; `RX.IMMUNO.ATG_CICLOSPORIN`; folate without B12 ordered.
 
@@ -165,3 +165,17 @@ Existing items reused instead of the shortlist's suggestions: `HX.PMH.SURGICAL` 
 The images were downloaded from PMC and looked at one by one.
 
 - M09 (Figure 3, flow cytometry): `has_annotations` set to true (gate names and axes). It shows "Blasts 1: 25.77%", which supports the myeloid-neoplasm trap, not the diagnosis.
+
+## Corrections after the second review (2026-09-26)
+
+Batch 1 was approved in bulk; a second expert review found the problems below. Each change is for Atul to check before the patch is applied. Ids are unchanged; no ledger row or day is dropped.
+
+1. **The sleeve gastrectomy is no longer hidden (finding 1, MEDIUM).** Decision 7 hid H03 behind the surgical history, yet the case releases the operation through many other routes: the consult notes on any request (dietetics CN04, gastroenterology CN07, general surgery CN08, endocrinology CN11), CT abdomen RP17, OGD RP19, the staple line and clips on imaging, and the patient's own words for admissions, diet and supplements ("my stomach operation"). That is realistic: a patient names the operation and imaging shows it, and consultants who see her would learn of it. Gating the consults on H03 would have been artificial and would still leave the patient's words and imaging, so the coherent fix is to stop treating the surgery as hidden. The teaching point moves from finding the operation to connecting it with the marrow; must-do 2 (surgical, diet or supplement history) still scores the history taking.
+   - `gold-case-file.draft.json`, fact H03: `item` "Previous operations (hidden until the surgical history is taken)" -> "Previous operations"; `release_condition` (`requires_topics` and its note) removed; `released_by` [`HX.PMH.SURGICAL`] -> [`HX.PMH.SURGICAL`, `HX.PMH.MEDICAL`], because the article lists the sleeve in the past history and a patient asked for her medical history would mention it. Release still `chart`; `pivotal` kept.
+   - Adding the admissions, diet and supplement questions to `released_by` was tried and rejected: those items already have `affected` ledger rows for all days, and the consistency check reports a fact released by the same item and day as a contradiction. Their answers keep naming the operation.
+   - `curation/ground_truth.json`, rubric score 5: `evidence_has` [H03] -> `any` of `evidence_has` H03, RP17 (CT abdomen), RP19 (OGD), CN03 (haematology after the folate), CN04 and CN05 (dietetics), CN07 (gastroenterology), CN08 (general surgery), CN11 (endocrinology): every stable id through which the operation is actually learned, in the `any` form PMC11890614 already uses. The anchor text is unchanged.
+   - `curation/paths.json`, P1 rationale: "the sleeve gastrectomy only on the surgical history" -> "on the past medical or surgical history (and in the patient's words on admissions, diet and supplements, and on abdominal imaging or endoscopy)".
+   - Not resolved: the admissions, diet and supplement answers and the imaging rows that mention the sleeve (plain abdomen, CT urinary tract, whole-body CT, PET-CT) are ledger rows, which have no stable id to cite. A player who learned of the operation only there can still cite H03 after the medical or surgical history, which a competent work-up takes.
+2. **Prothrombin activity follows the INR (finding 2, HIGH, batch-wide).** The normal generator gave `CMP.PT_ACTIVITY` 97% on day 0 while the affected INR is 1.3 (all days) with factor VII 46%. New `affected` row in `curation/affected.json`: `CMP.PT_ACTIVITY`, day 0 (the only day with a value), 97% (normal) -> 66% (70-120, flag L), gap G11, by the Case Library's common curve: activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair of 44% at INR 1.75). Not a judgement call; confidence 0.7.
+
+Replay after the corrections: `0 open problem(s)`; ledger affected 212, normal 394, rule 2.

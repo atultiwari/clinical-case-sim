@@ -295,8 +295,17 @@
        ]
       },
       {
-       "evidence_has": [
-        "H09"
+       "any": [
+        {
+         "evidence_has": [
+          "H09"
+         ]
+        },
+        {
+         "evidence_has": [
+          "CN04"
+         ]
+        }
        ]
       }
      ]

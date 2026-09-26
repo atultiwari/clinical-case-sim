@@ -2800,7 +2800,7 @@
   "lay_text": null,
   "priority": "high",
   "judgement_call": true,
-  "rationale": "G12: not sent in the article. In this case ADAMTS13 activity is normal or only mildly reduced, well above the 10% of immune TTP. Reported after about three days (catalogue turnaround), as the article notes.",
+  "rationale": "G12: the authors considered ADAMTS13 activity but did not send it, because the marrow already pointed to B12 deficiency, so the article gives no value. Curator's value 64% (normal): in B12-deficiency pseudo-TMA the activity is normal or only mildly reduced, well above the <10% of immune TTP. Reported after the catalogue's three-day turnaround, in keeping with the article's remark that the result takes several business days.",
   "confidence": 0.6
  },
  {

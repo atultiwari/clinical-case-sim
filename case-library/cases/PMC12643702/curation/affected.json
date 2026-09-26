@@ -1023,6 +1023,222 @@
   "confidence": 0.5
  },
  {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 7,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 7% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Day 0 has only PT 112 s (INR too high to calculate): INR estimated as PT/normal PT = 112/12.3 = 9.11 (ISI ~1). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 1,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 7,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 7% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The day's INR in Figure 2 is 8.57. Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 20,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 20% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The day's INR in Figure 2 is 3.37. Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 10,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 10% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The day's INR in Figure 2 is 6.31. Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 21,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 21% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The day's INR in Figure 2 is 3.28. Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 9,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 9% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The day's INR in Figure 2 is 7.11. Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 6,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 28,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 28% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The day's INR in Figure 2 is 2.51. Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 30,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 30% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The day's INR in Figure 2 is 2.37. Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 8,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 32,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 32% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The day's INR in Figure 2 is 2.27. Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 36,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 36% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The day's INR in Figure 2 is 2.03. Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 10,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 39,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 39% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The day's INR in Figure 2 is 1.91. Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G01",
+  "value": {
+   "value": 36,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 36% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "The day's INR is 2.04 (discharge, text and Figure 2). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 and floored at 1 (0.59 calibrated to an article pair, 44% at INR 1.75). Consistent with factors II, VII, IX and X.",
+  "confidence": 0.6
+ },
+ {
   "target": "CMP.APTT",
   "day_bucket": 1,
   "tier": "affected",
@@ -2298,6 +2514,222 @@
   "judgement_call": false,
   "rationale": "Active regeneration after bleeding.",
   "confidence": 0.55
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 88.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 88.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (Hb 72 g/L (article)). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 1,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 90.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 90.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (between the Hb values of days 0 (72), 3 (70), 7 (78) and 11 (85) g/L). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 94.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 94.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (between the Hb values of days 0 (72), 3 (70), 7 (78) and 11 (85) g/L). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 98.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 98.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (Hb 70 g/L). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 92.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 92.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (between the Hb values of days 0 (72), 3 (70), 7 (78) and 11 (85) g/L). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 85.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 85.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (between the Hb values of days 0 (72), 3 (70), 7 (78) and 11 (85) g/L). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 6,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 77.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 77.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (between the Hb values of days 0 (72), 3 (70), 7 (78) and 11 (85) g/L). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 70.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 70.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (Hb 78 g/L). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 8,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 64.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 64.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (between the Hb values of days 0 (72), 3 (70), 7 (78) and 11 (85) g/L). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 58.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 58.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (between the Hb values of days 0 (72), 3 (70), 7 (78) and 11 (85) g/L). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 10,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 53.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 53.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (between the Hb values of days 0 (72), 3 (70), 7 (78) and 11 (85) g/L). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
+ },
+ {
+  "target": "CMP.EPO",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G03",
+  "value": {
+   "value": 48.0,
+   "unit": "IU/L",
+   "ref_range": "4.3-29.0",
+   "flag": "H"
+  },
+  "release_text": "Erythropoietin 48.0 IU/L (4.3-29.0), high.",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": true,
+  "rationale": "Appropriate marrow drive for anaemia from two weeks of bleeding with normal kidneys (creatinine 84): moderately raised, rising while Hb falls to 70 g/L on day 3 and easing as it recovers without transfusion (Hb 85 g/L). The article gives no EPO; a normal value would not fit Hb 72 g/L. Diabetes could blunt the rise somewhat.",
+  "confidence": 0.5
  },
  {
   "target": "CMP.IRON",

@@ -212,7 +212,7 @@
  {
   "test_item_id": "LAB.HAEM.PNH_CD55_CD59",
   "utility": "low_yield",
-  "rationale": "Conventional CD55/CD59 is falsely normal here; the high-sensitivity test is the right one."
+  "rationale": "Conventional CD55/CD59 is falsely normal here (method and gating); the high-sensitivity FLAER test is the right one."
  },
  {
   "test_item_id": "LAB.TBS.COLD_AGGLUTININ",

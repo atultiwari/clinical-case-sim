@@ -65,7 +65,7 @@
     "FND.HAEMOGLOBIN_CASTS"
    ]
   },
-  "note_text": "Asked to advise; the Chart now includes a kidney biopsy with haemoglobin casts, tubular haemosiderin and intrarenal venous thrombi. Chronic intravascular haemolysis with venous thrombosis and a poor marrow response is the key combination here, and the positive DAT is better explained by complement fragments on the red cells than by an autoantibody. A normal conventional CD55/CD59 result does not exclude a small abnormal cell population, especially after transfusion. Happy to review again with the results.",
+  "note_text": "Asked to advise; the Chart now includes a kidney biopsy with haemoglobin casts, tubular haemosiderin and intrarenal venous thrombi. Chronic intravascular haemolysis with venous thrombosis and a poor marrow response is the key combination here, and the positive DAT is better explained by complement fragments on the red cells than by an autoantibody. A normal conventional CD55/CD59 result would not be reassuring: that method and its gating can miss an abnormal cell population, and transfusion dilutes abnormal red cells. Happy to review again with the results.",
   "recommendations": [
    "High-sensitivity PNH flow cytometry with FLAER on peripheral blood (granulocytes and red cells)",
    "Leg vein ultrasound; anticoagulate once the biopsy site is stable",
@@ -74,7 +74,7 @@
    "Stop steroids if the DAT remains the only reason for them"
   ],
   "origin": "affected",
-  "rationale": "V2: with pigment nephropathy and venous thrombosis a competent haematologist asks for the high-sensitivity test and warns about the false-negative conventional result. 'GPI-deficient clone' is avoided as a leak term; 'PNH flow cytometry' is the test's name.",
+  "rationale": "V2: with pigment nephropathy and venous thrombosis a competent haematologist asks for the high-sensitivity test and warns that the conventional assay can be falsely normal (method and gating; transfusion affects red cells only). 'GPI-deficient clone' is avoided as a leak term; 'PNH flow cytometry' is the test's name.",
   "confidence": 0.7
  },
  {

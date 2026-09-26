@@ -27,7 +27,9 @@ def default_out(batch: str) -> Path:
     return REVIEW_DIR / f"{batch}.xlsx"
 
 
-def run_build(batch: str, case_version_ids: Sequence[str], out: Path | None) -> int:
+def run_build(
+    batch: str, case_version_ids: Sequence[str], out: Path | None, pending_only: bool = False
+) -> int:
     import psycopg
 
     from scripts.config import ConfigError, load_settings, require_db_url
@@ -43,7 +45,7 @@ def run_build(batch: str, case_version_ids: Sequence[str], out: Path | None) -> 
         url = require_db_url(load_settings())
         with psycopg.connect(url) as conn:
             conn.read_only = True
-            data = fetch_pack_data(conn, case_version_ids, batch=batch)
+            data = fetch_pack_data(conn, case_version_ids, batch, pending_only)
     except (ConfigError, ReviewPackError) as exc:
         print(f"Not built: {exc}", file=sys.stderr)
         return 1
@@ -62,6 +64,11 @@ def _parser() -> argparse.ArgumentParser:
     build.add_argument("batch", help="batch name, for example pilot")
     build.add_argument("--cases", nargs="+", required=True, metavar="CASE_VERSION_ID")
     build.add_argument("--out", type=Path, help="output file (default review/<batch>.xlsx)")
+    build.add_argument(
+        "--pending-only",
+        action="store_true",
+        help="only rows still awaiting review, e.g. after corrections to reviewed cases",
+    )
     read = sub.add_parser("read", help="check a returned pack and write its decisions JSON")
     read.add_argument("workbook", type=Path)
     return parser
@@ -73,7 +80,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         from scripts.review_pack_read import run_read
 
         return run_read(args.workbook)
-    return run_build(args.batch, args.cases, args.out)
+    return run_build(args.batch, args.cases, args.out, args.pending_only)
 
 
 if __name__ == "__main__":

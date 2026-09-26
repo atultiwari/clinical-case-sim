@@ -67,7 +67,7 @@ All values are in the catalogue's SI units; each converted fact keeps the printe
 | H16 Product details (Ayurvedic diabetes capsule, bought online, 1.5 months) | `HX.MEDS.SUPPLEMENT_DETAILS` |
 | L35 Lead content of the capsules | `ACT.TEST_PRODUCT` (the product is sent for analysis) |
 
-The general medication question returns metformin (stopped) and thyroxine only. The generic toxin question (D6) and the over-the-counter question (D7) do not release H15. The endocrinology and toxicology consultants, like a competent colleague, advise asking what she has used for her diabetes since stopping metformin.
+The general medication question returns metformin (stopped) and thyroxine only. The generic toxin question (D6) and the over-the-counter question (D7) do not release H15. The haematology, toxicology and endocrinology consultants, like a competent colleague, advise a full medicine history including herbal, traditional and over-the-counter remedies, without knowing what she took (corrected after the second review, C1).
 
 ## Raw material and reports
 
@@ -130,6 +130,20 @@ Atul delegated these on 25 Sep 2026. Each one is the curator's; each stays open 
 | D16 | `DX.AYURVEDIC_METAL_TOXICITY` in `final_dx.ids` | Removed: its name is generic ("heavy metal toxicity from traditional medicine"), so it scores 3 in the rubric, not 4 or 5. Its synonyms that name lead ("Ayurvedic lead poisoning" and others) are `leak_terms` instead, so the leak scan still covers them. |
 | D17 | Must-do "restart effective diabetes treatment" | Condition over insulin or the new action `RX.ENDO.ORAL_HYPOGLYCAEMIC` (catalogue needs). |
 | D18 | Other judgement calls | 33 affected rows are judgement calls (see the checklist). The tongue and mouth feel sore (fits E13); B12 low-normal after years of metformin; anti-TPO raised (autoimmune hypothyroidism likeliest); ESR mildly raised; urobilinogen increased; P5N low; urinary coproporphyrin raised; soluble transferrin receptor raised; haptoglobin low-normal; well water. |
+
+## Corrections after the second review (2026-09-26)
+
+A second expert review of the bulk-approved batch found one MEDIUM problem in this case. Each change below stays open for Atul before the patch is applied.
+
+| # | Where | Change | Reason |
+| --- | --- | --- | --- |
+| C1 | `curation/consult_notes.json` CN01 (haematology, any time) | Recommendation "…herbal, Ayurvedic and other traditional remedies and anything bought online" -> "Take a full medicine history, including herbal, traditional and over-the-counter remedies and supplements, current or recently stopped" | "Bought online" came from the curator's knowledge of H15, the score-5 evidence; a consultant would not know it. The generic history is what a haematologist asks for an unexplained anaemia. |
+| C2 | CN02 (haematology, after stippling) | "…including Ayurvedic products and anything bought online" -> the same generic wording as C1 | Same leak as C1, found by the check of other player-visible text. After stippling a remedy history stays clinically sound, next to the blood lead. |
+| C3 | CN04 (toxicology, any time) | "…remedies and supplements, including products bought online or taken for her diabetes" -> "a full medicine history, including herbal, traditional and over-the-counter remedies and supplements, current or recently stopped" | "Online" and "for her diabetes" together pointed at H15. Occupation, hobbies, home and water supply and the advice to keep any product stay. |
+| C4 | CN07 (endocrinology, any time) | "Ask what she has been using for her diabetes since stopping metformin, including any herbal or Ayurvedic products" -> "Take a full medicine history, including herbal, traditional and over-the-counter remedies, and ask why she stopped metformin" | Asking what replaced metformin led straight to the hidden capsules. Asking why she stopped is a routine endocrine question; the adherence answer (H13, D6) does not mention the capsules. |
+| C5 | Rationales of CN01, CN02, CN04, CN07; "Hidden and conditional facts" above | Updated to match | Keep the record consistent. |
+
+Checked and left unchanged: CN05 (toxicology after the blood lead; naming traditional remedies as a common source in India is fair once the level is known), CN06 (gastroenterology asks to review herbal products for the liver tests, generic), RP02 and RP04 (ask for a history of medicines and remedies, generic), and the patient's answers released without H15 (medicines, adherence, over-the-counter, toxins, others exposed): none mentions online purchases or remedies for her diabetes. "Online" and "internet" now appear only in H15 and H16 and in rationales, which players never see.
 
 ## Catalogue needs (`catalogue_needs.json`)
 

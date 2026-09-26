@@ -1876,9 +1876,9 @@
   "release_text": "Red cells expressing CD55 99.99 % (>40.00).",
   "lay_text": null,
   "priority": "high",
-  "judgement_call": false,
-  "rationale": "The conventional assay on day 12 was normal (Table 2); the authors put this down mainly to method (CD55/CD59, simple gating, few events), so it would have been normal on admission too.",
-  "confidence": 0.7
+  "judgement_call": true,
+  "rationale": "Judgement call. The conventional assay on day 12 read 99.99% in all four populations (Table 2, L40-L43), four days before the high-sensitivity test found a granulocyte clone of 98.46% (L51). A clone that size cannot give normal neutrophil CD55/CD59 biologically, so the normal conventional result is a method artefact, as the authors conclude (simple CD55/CD59 gating without FLAER, few events). The same laboratory and method would give the same false normal on admission, so day 0 repeats Table 2 beside the day-0 high-sensitivity clone (granulocytes 98.4%). Transfusion is not the explanation: it dilutes only the red cell clone and cannot normalise neutrophils. Alternative: an abnormal day-0 conventional result, which would contradict the article's own day-12 result from the same method.",
+  "confidence": 0.6
  },
  {
   "target": "CMP.CD59_RBC",
@@ -1893,9 +1893,9 @@
   "release_text": "Red cells expressing CD59 99.99 % (>90.00).",
   "lay_text": null,
   "priority": "high",
-  "judgement_call": false,
-  "rationale": "See CD55 on red cells.",
-  "confidence": 0.7
+  "judgement_call": true,
+  "rationale": "See CD55 on red cells: a method artefact of the conventional assay, identical to Table 2 (L41).",
+  "confidence": 0.6
  },
  {
   "target": "CMP.CD55_NEUT",
@@ -1910,9 +1910,9 @@
   "release_text": "Neutrophils expressing CD55 99.99 % (>90.00).",
   "lay_text": null,
   "priority": "high",
-  "judgement_call": false,
-  "rationale": "See CD55 on red cells; the authors attribute the normal neutrophil result to method.",
-  "confidence": 0.7
+  "judgement_call": true,
+  "rationale": "See CD55 on red cells: a method artefact of the conventional assay, identical to Table 2 (L42); biologically impossible beside the 98.4% granulocyte clone, which is the teaching point.",
+  "confidence": 0.6
  },
  {
   "target": "CMP.CD59_NEUT",
@@ -1927,9 +1927,9 @@
   "release_text": "Neutrophils expressing CD59 99.99 % (>90.00).",
   "lay_text": null,
   "priority": "high",
-  "judgement_call": false,
-  "rationale": "See CD55 on neutrophils.",
-  "confidence": 0.7
+  "judgement_call": true,
+  "rationale": "See CD55 on red cells: a method artefact of the conventional assay, identical to Table 2 (L43).",
+  "confidence": 0.6
  },
  {
   "target": "CMP.U_COLOUR",

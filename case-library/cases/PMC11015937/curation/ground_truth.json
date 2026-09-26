@@ -34,7 +34,7 @@
   ]
  },
  "secondary_findings": [
-  "Confusion and acute kidney injury meet CDC and WHO-style criteria for severe infection (impaired consciousness, renal impairment); the treating team used oral artemether-lumefantrine",
+  "Confusion, vomiting, acute kidney injury and a parasitaemia of about 5% meet CDC and WHO criteria for severe infection (impaired consciousness, renal impairment, hyperparasitaemia by the CDC threshold); the treating team used oral artemether-lumefantrine, but the benchmark expects intravenous artesunate",
   "Raised ADAMTS13 antibody (22 U/mL) with only mildly reduced ADAMTS13 activity (49.1%): not immune TTP",
   "Lifelong microcytosis, proposed as homozygous alpha-plus thalassaemia (curator's judgement call, not in the article)"
  ],
@@ -112,11 +112,10 @@
    }
   },
   {
-   "text": "Start artemisinin-based treatment promptly (intravenous artesunate while confused or vomiting, or a full course of artemether-lumefantrine)",
+   "text": "Start intravenous artesunate promptly: impaired consciousness, vomiting, acute kidney injury and a parasitaemia of about 5% make this severe falciparum infection, so oral treatment alone is not enough",
    "if": {
-    "plan_has_any": [
-     "RX.ANTIMALARIAL.ARTESUNATE",
-     "RX.ANTIMALARIAL.ARTEMETHER_LUMEFANTRINE"
+    "plan_has": [
+     "RX.ANTIMALARIAL.ARTESUNATE"
     ]
    }
   },
@@ -158,6 +157,29 @@
    "if": {
     "plan_has": [
      "ACT.NOTIFY_PUBLIC_HEALTH"
+    ]
+   }
+  },
+  {
+   "text": "Once she is alert and keeping tablets down after parenteral artesunate, complete a full oral course of artemether-lumefantrine",
+   "if": {
+    "all": [
+     {
+      "plan_has": [
+       "RX.ANTIMALARIAL.ARTESUNATE"
+      ]
+     },
+     {
+      "plan_has": [
+       "RX.ANTIMALARIAL.ARTEMETHER_LUMEFANTRINE"
+      ]
+     },
+     {
+      "plan_before": [
+       "RX.ANTIMALARIAL.ARTESUNATE",
+       "RX.ANTIMALARIAL.ARTEMETHER_LUMEFANTRINE"
+      ]
+     }
     ]
    }
   }
@@ -317,7 +339,7 @@
   "Travel history (H04, H05)",
   "Thick and thin films and rapid antigen test",
   "Severity: GCS, glucose, lactate, renal function, parasite count",
-  "Artemisinin-based treatment; fluids; transfusion when Hb falls",
+  "Intravenous artesunate, then a full oral course of artemether-lumefantrine; fluids; transfusion when Hb falls",
   "Notify public health"
  ]
 }

@@ -1,6 +1,6 @@
 {
  "final_diagnosis": {
-  "text": "Paroxysmal nocturnal haemoglobinuria presenting as dialysis-dependent acute kidney injury from haemoglobin cast nephropathy, with a positive DAT (IgG and C3d), intrarenal and right iliac venous thrombosis, and a falsely normal conventional CD55/CD59 flow cytometry after transfusion",
+  "text": "Paroxysmal nocturnal haemoglobinuria presenting as dialysis-dependent acute kidney injury from haemoglobin cast nephropathy, with a positive DAT (IgG and C3d), intrarenal and right iliac venous thrombosis, and a falsely normal conventional CD55/CD59 flow cytometry from a method or gating problem (transfusion also dilutes the red cell clone)",
   "icd10": [
    "D59.5",
    "N17.0"
@@ -91,7 +91,7 @@
    }
   },
   {
-   "text": "Send high-sensitivity FLAER-based flow cytometry, and do not accept a normal conventional CD55/CD59 result after transfusion",
+   "text": "Send high-sensitivity FLAER-based flow cytometry on granulocytes, and do not accept a normal conventional CD55/CD59 result, which can be falsely normal from its method or gating (transfusion also dilutes the red cell clone)",
    "if": {
     "ordered_any": [
      "LAB.HAEM.PNH_FLOW"
@@ -234,13 +234,13 @@
   "Dark urine with dipstick blood but few red cells on microscopy means haemoglobinuria or myoglobinuria; the CK separates them.",
   "Haemolysis with a low reticulocyte count points to marrow involvement, not isolated autoimmune haemolysis.",
   "A positive DAT (including C3d) can occur in complement-mediated haemolysis; it does not establish AIHA on its own.",
-  "Conventional CD55/CD59 flow cytometry can be falsely normal after transfusion and with limited gating; high-sensitivity FLAER-based testing on granulocytes is the standard.",
+  "Conventional CD55/CD59 flow cytometry can be falsely normal from its method or gating, even with a large clone; transfusion also dilutes the red cell clone, but cannot normalise neutrophils. High-sensitivity FLAER-based testing on granulocytes is the standard.",
   "Kidney biopsy with haemoglobin casts and tubular haemosiderin identifies haem-pigment injury and can redirect the work-up.",
   "Vaccinate against meningococcus (or give antibiotic cover) before complement C5 inhibition."
  ],
  "final_dx": {
   "id": "DX.PNH",
-  "text": "Paroxysmal nocturnal haemoglobinuria presenting as dialysis-dependent acute kidney injury from haemoglobin cast nephropathy, with a positive DAT (IgG and C3d), intrarenal and right iliac venous thrombosis, and a falsely normal conventional CD55/CD59 flow cytometry after transfusion",
+  "text": "Paroxysmal nocturnal haemoglobinuria presenting as dialysis-dependent acute kidney injury from haemoglobin cast nephropathy, with a positive DAT (IgG and C3d), intrarenal and right iliac venous thrombosis, and a falsely normal conventional CD55/CD59 flow cytometry from a method or gating problem (transfusion also dilutes the red cell clone)",
   "icd10": [
    "D59.5",
    "N17.0"

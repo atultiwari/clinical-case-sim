@@ -143,23 +143,17 @@
   {
    "id": "H03",
    "category": "history",
-   "item": "Previous operations (hidden until the surgical history is taken)",
+   "item": "Previous operations",
    "release_text": "Total thyroidectomy some years ago, and a sleeve gastrectomy.",
    "day": 0,
    "kind": "raw",
    "reveals_dx": false,
    "pivotal": true,
    "release": "chart",
-   "release_condition": {
-    "requires_topics": [
-     "previous operations or surgery",
-     "bariatric or weight-loss surgery"
-    ],
-    "note": "The article lists the gastric sleeve in the past history. The transfer letter (H04) and the medical history (H02) do not name it, so a player must take the surgical history (or find the port-site scars or ask about admissions)."
-   },
    "source_locator": "Case presentation",
    "released_by": [
-    "HX.PMH.SURGICAL"
+    "HX.PMH.SURGICAL",
+    "HX.PMH.MEDICAL"
    ]
   },
   {

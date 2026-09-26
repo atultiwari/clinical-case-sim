@@ -127,3 +127,10 @@ Existing ids used: `DX.KALA_AZAR`, `RX.ANTIFUNGAL.AMPHOTERICIN` (also accepted f
 - [ ] Confirm the must-do and must-not-do lists, especially splenic aspiration as a must-not-do and HIV testing as a must-do.
 - [ ] Approve or merge the new catalogue items (above), including the `HX.SOCIAL.RESIDENCE` template.
 - [ ] After the figures are downloaded, confirm `has_annotations` and that no figure shows the diagnosis in text (Figure 3 may carry a "Leishmania" label).
+
+## Corrections after the second review (2026-09-26)
+
+1. **Prothrombin activity (Quick %, `CMP.PT_ACTIVITY`, day 0)** was left to the normal generator, which gave 89% beside the affected INR 1.22 (PT 14.6 s). It is now an `affected` row (`curation/affected.json`): 73% (70-120), no flag, from the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Day 0 is the only day with a value, before and after. Not a judgement call.
+2. **Other coagulation values checked against INR 1.22:** PT 14.6 s, APTT 37.8 s, fibrinogen 2.2 g/L, thrombin time 16.7 s, factors II 72, V 68, VII 58 and X 70 IU/dL, a correcting mixing study and normal protein C, protein S and antithrombin are consistent; no change. One value outside the INR question is left for the reviewer: the generator's FDP 2.8 mg/L (normal) is lower than the article's D-dimer 3.94 mg/L FEU, although D-dimer is one of the fibrin degradation products; an `affected` FDP (raised, for example about 9 mg/L) would fit better.
+
+Replay after the change: 0 open problems; ledger affected 201, normal 368, rule 2.

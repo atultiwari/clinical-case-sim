@@ -44,17 +44,17 @@
     "FND.MALARIAL_PARASITES"
    ]
   },
-  "note_text": "Asked to advise; the Chart now shows Plasmodium falciparum on the film. She has impaired consciousness and acute kidney injury, which are criteria for severe infection, so we advise intravenous artesunate while she is confused or cannot keep tablets down, then a full course of an oral artemisinin combination; if she is fully alert and tolerating oral intake, a complete course of artemether-lumefantrine with fatty food is acceptable. The thrombocytopenia, haemolysis, schistocytes and low ADAMTS13 activity are explained by the infection; plasma exchange is not indicated. Happy to review again with the results.",
+  "note_text": "Asked to advise; the Chart now shows Plasmodium falciparum on the film. She has impaired consciousness and acute kidney injury, which are criteria for severe infection, so we advise intravenous artesunate now, for at least 24 hours and until she is alert and keeping tablets down, then a full three-day oral course of artemether-lumefantrine with fatty food. Oral treatment alone is not appropriate while she is confused and vomiting. The thrombocytopenia, haemolysis, schistocytes and low ADAMTS13 activity are explained by the infection; plasma exchange is not indicated. Happy to review again with the results.",
   "recommendations": [
-   "Artemisinin-based treatment now: intravenous artesunate while confused or vomiting, then complete an oral artemisinin combination; or artemether-lumefantrine for a full course if alert and eating",
+   "Intravenous artesunate now (severe infection: impaired consciousness, vomiting, acute kidney injury); once alert and eating, complete a full oral course of artemether-lumefantrine",
    "Parasite count every 12-24 hours until negative; glucose, renal function and counts daily",
    "Cautious intravenous fluids; avoid fluid overload",
    "Transfuse red cells if haemoglobin falls below about 7 g/dL; platelets only for bleeding",
    "Notify the case to public health; chloroquine is not appropriate for infection acquired in Nigeria",
-   "Check for delayed haemolysis 2-4 weeks after artesunate if it is given"
+   "Check for delayed haemolysis 2-4 weeks after artesunate"
   ],
   "origin": "affected",
-  "rationale": "After parasites are seen: treatment advice matching CDC and WHO guidance. The article gave oral artemether-lumefantrine for four days and did not use artesunate; both are accepted in the rubric.",
+  "rationale": "After parasites are seen: treatment advice matching CDC and WHO guidance. The article gave oral artemether-lumefantrine for four days and did not use artesunate; after the second review (2026-09-26) the must-do requires intravenous artesunate for the severe phase, with artemether-lumefantrine as the follow-on oral course, and the note advises the same.",
   "confidence": 0.75
  },
  {

@@ -101,7 +101,7 @@
   "path_id": "P3",
   "kind": "trap",
   "name": "Normal conventional CD55/CD59 flow cytometry",
-  "rationale": "The conventional assay on day 12 was normal after four units of washed red cells. The case must show: red cell acetylcholinesterase only slightly low; the conventional result is normal whenever it is ordered; the high-sensitivity result is clearly positive in granulocytes; accepting the conventional result as excluding the diagnosis is a must-not-do.",
+  "rationale": "The conventional assay on day 12 was normal in red cells and neutrophils, four days before a 98.46% granulocyte clone on the high-sensitivity test; the authors attribute it to the method (simple gating, few events). The four units of washed red cells dilute only the red cell clone. The case must show: red cell acetylcholinesterase only slightly low; the conventional result is normal whenever it is ordered; the high-sensitivity result is clearly positive in granulocytes; accepting the conventional result as excluding the diagnosis is a must-not-do.",
   "items": [
    "HX.PMH.TRANSFUSION_PREGNANCY",
    "EX.GEN.VITALS",

@@ -251,8 +251,52 @@
        ]
       },
       {
-       "evidence_has": [
-        "H03"
+       "any": [
+        {
+         "evidence_has": [
+          "H03"
+         ]
+        },
+        {
+         "evidence_has": [
+          "RP17"
+         ]
+        },
+        {
+         "evidence_has": [
+          "RP19"
+         ]
+        },
+        {
+         "evidence_has": [
+          "CN03"
+         ]
+        },
+        {
+         "evidence_has": [
+          "CN04"
+         ]
+        },
+        {
+         "evidence_has": [
+          "CN05"
+         ]
+        },
+        {
+         "evidence_has": [
+          "CN07"
+         ]
+        },
+        {
+         "evidence_has": [
+          "CN08"
+         ]
+        },
+        {
+         "evidence_has": [
+          "CN11"
+         ]
+        }
        ]
       }
      ]
