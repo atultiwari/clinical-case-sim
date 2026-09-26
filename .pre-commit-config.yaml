@@ -74,8 +74,18 @@ repos:
         name: "Case Library: mypy"
         files: ^case-library/(scripts|tests)/.*\.py$
         args: [--config-file=case-library/pyproject.toml]
-        additional_dependencies: ["psycopg[binary]==3.3.6", "pytest==9.1.1", "types-openpyxl==3.1.5.20260827"]
+        additional_dependencies: ["jsonschema==4.26.0", "psycopg[binary]==3.3.6", "pytest==9.1.1", "types-jsonschema==4.26.0.20260518", "types-openpyxl==3.1.5.20260827"]
   # --- Nidana hooks (added by N1.1) ---
+  # Prettier formats Nidana's code and JSON (Markdown is written by hand). ESLint, type-checks
+  # and tests run in the Nidana workflow. The version matches nidana/packages/*/package.json.
+  - repo: local
+    hooks:
+      - id: nidana-prettier
+        name: "Nidana: prettier"
+        entry: prettier --write --ignore-unknown
+        language: node
+        additional_dependencies: ["prettier@3.9.9"]
+        files: ^nidana/.*\.(ts|tsx|js|mjs|cjs|json)$
   # --- Sambhasha hooks (added by P0.1) ---
   # Versions match the exact pins in sambhasha/pyproject.toml; ruff and mypy read their
   # settings from there. Tests run in the Sambhasha workflow, not here.

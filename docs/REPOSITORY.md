@@ -1,6 +1,6 @@
 # Repository strategy
 
-Decision (S-005, agreed 25 Sep 2026): **one private monorepo now, and a separate public research repository generated from it when Sambhasha is submitted for publication.** Day-to-day Git work (branches, commits, pushes and merges) follows the Git and GitHub section of [`../CLAUDE.md`](../CLAUDE.md).
+Decision (S-010, agreed 26 Sep 2026, superseding S-005): **one public monorepo holding development-only cases, and a separate public research repository generated from it when Sambhasha is submitted for publication.** Production and study cases are a new set, kept outside this repository. Day-to-day Git work (branches, commits, pushes and merges) follows the Git and GitHub section of [`../CLAUDE.md`](../CLAUDE.md).
 
 ## Why one monorepo
 
@@ -8,14 +8,21 @@ Decision (S-005, agreed 25 Sep 2026): **one private monorepo now, and a separate
 - **Less machinery for one builder.** Two repositories need a third for what they share (the bundle schema, catalogues, the curation skill and the exported bundles), published as versioned releases that each project pins. That suits teams; for one person building through Claude Code it is mostly bookkeeping.
 - **The protection you asked for still holds.** Separate folders, the umbrella rules in `CLAUDE.md`, the changelog with acknowledgements, and a CI guard give the "no change without acknowledgement" guarantee inside one repository.
 
-## Why not publish Sambhasha's repository early
+## Why the monorepo is public, and what that means for cases
 
-Public case bundles and answers can be scraped into future models' training data. That would contaminate the benchmark, which depends on models not having seen the cases. Keep everything private until submission, and keep a held-out set of cases private even after.
+S-005 kept the monorepo private, because public case bundles and answers can be scraped into future models' training data, which would contaminate a benchmark that depends on models not having seen the cases. On 26 Sep 2026 GitHub Actions stopped running on the private repository (billing), and Atul made it public (S-010), accepting that trade-off for the cases already committed.
+
+So:
+
+- The committed cases (the pilot and batch 1) are **development-only**: they exist to build and test the apps. They never go into Nidana's store release, and they never count as held-out or primary-result cases in a Sambhasha study.
+- **Production and study cases are a new set**, curated once the apps work. Before curating any, choose where they live (a separate private repository, or private storage read by the Case Vault) and record it here. They are never committed to this repository.
+- A Sambhasha held-out set stays private even after publication.
+- Every commit is public: secrets, `.env` files, player or tester data and review packs stay out of Git (`CLAUDE.md`), and the secret scanner runs in pre-commit and CI.
 
 ## Layout
 
 ```text
-Clinical-Case-Sim/            one private Git repository (GitHub: clinical-case-sim)
+Clinical-Case-Sim/            one public Git repository (GitHub: clinical-case-sim)
 ├── CLAUDE.md  README.md  docs/
 ├── case-library/            Case Vault schema, catalogues, curation skill, Case Studio, exports
 ├── nidana/                  Expo player app, game server, engine
@@ -27,7 +34,7 @@ Clinical-Case-Sim/            one private Git repository (GitHub: clinical-case-
 - CI guards:
   - a change under `case-library/schemas/` or `case-library/catalogue/` fails unless `docs/CHANGELOG.md` changes too: in the same commit for the pre-commit hook, and in the same pull request for CI;
   - the contract workflow validates the current exports against the bundle schema and runs both engines' conformance playthroughs.
-- GitHub Free cannot make checks required on a private repository, so the changelog guard also runs as a pre-commit hook, which blocks the commit on your machine. CI is the second signal.
+- The changelog guard also runs as a pre-commit hook, which blocks the commit on your machine. CI is the second signal. Now that the repository is public, GitHub Free can make checks required through branch protection; turning that on is a repository-settings change for Atul.
 
 ## The research release, at submission
 
@@ -48,7 +55,7 @@ Steps:
 3. Push it to a new public repository, `sambhasha`, and create a GitHub release with the paper version (Zenodo archives releases, not bare tags).
 4. Let Zenodo archive the release and mint a DOI, and cite that DOI in the paper. If the repository must stay private until acceptance, reserve a DOI with a manual Zenodo upload instead and publish it on acceptance.
 
-Updates flow one way, from the monorepo to the public repository, by re-running the export. Development history stays private, because it contains answer-bearing fixtures and held-out cases; if reviewers ask for it, give them temporary private access.
+Updates flow one way, from the monorepo to the public repository, by re-running the export. The monorepo's development history is public (S-010); it holds only development-only cases, never held-out or study cases.
 
 ## If collaborators join
 

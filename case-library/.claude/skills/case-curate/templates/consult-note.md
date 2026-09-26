@@ -5,7 +5,7 @@ One note per specialty variant (SPEC §6.8). A consultant is helpful but never m
 - **id:** CN<nn>
 - **specialty:** `REF.<SPECIALTY>`
 - **variant:** 1 | 2 | 3
-- **condition:** what the Chart must already hold, e.g. `{"released_any": ["L26"]}` or `{"finding_released": ["FND.<finding>"]}`; empty for variant 1
+- **condition:** what the Chart must already hold, e.g. `{"released_any": ["L26"]}` or `{"finding_released": ["FND.<finding>"]}` (to count only some tests' reports: `{"finding_released": {"findings": ["FND.<finding>"], "from_tests": ["LAB.<test>"]}}`; the export writes it as the list with `from_tests` beside it); empty for variant 1
 - **origin:** `affected` (on the case's paths) or `rule` (the catalogue's generic note)
 
 Note text, in this order:

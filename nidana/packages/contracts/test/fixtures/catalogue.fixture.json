@@ -1,0 +1,105 @@
+{
+  "version": 2,
+  "items": [
+    {
+      "id": "DX.IRON_DEFICIENCY_ANAEMIA",
+      "kind": "diagnosis",
+      "name": "Iron deficiency anaemia",
+      "category": "haematology",
+      "synonyms": ["IDA", "iron deficiency anemia"],
+      "specialty_scope": ["attending"]
+    },
+    {
+      "id": "HX.GEN.FATIGUE",
+      "kind": "history",
+      "name": "Tiredness and fatigue",
+      "category": "systems review",
+      "synonyms": ["tired", "lethargy"],
+      "specialty_scope": ["attending", "consultant.*"]
+    },
+    {
+      "id": "LAB.HAEM.CBC",
+      "kind": "test",
+      "name": "Full blood count",
+      "category": "haematology",
+      "synonyms": ["FBC", "CBC"],
+      "specialty_scope": ["attending"]
+    }
+  ],
+  "tests": [
+    {
+      "item_id": "LAB.HAEM.CBC",
+      "route": "service.pathology",
+      "specimen": "blood (EDTA)",
+      "price_inr": 300,
+      "price_source": "CGHS 2025, Tier I NABH (OM 03.10.2025)",
+      "tat_minutes": 240,
+      "invasive": false,
+      "loinc": null,
+      "components": ["CMP.HB", "CMP.MCH"]
+    }
+  ],
+  "components": [
+    {
+      "id": "CMP.HB",
+      "name": "Haemoglobin",
+      "loinc": null,
+      "unit_si": "g/L",
+      "unit_conv": "g/dL",
+      "conv_factor": 0.1,
+      "decimals": 0,
+      "ref_ranges": [
+        {
+          "sex": "F",
+          "age_min": 18,
+          "low": 115,
+          "high": 165,
+          "source": "Dacie and Lewis Practical Haematology, 12th ed. (2017)"
+        }
+      ],
+      "normal_text": null
+    },
+    {
+      "id": "CMP.MALARIA_AG",
+      "name": "Malaria antigen",
+      "loinc": null,
+      "unit_si": null,
+      "unit_conv": null,
+      "conv_factor": null,
+      "decimals": null,
+      "ref_ranges": [
+        {
+          "sex": "any",
+          "text": "Negative",
+          "source": "Tietz Textbook of Laboratory Medicine, 7th ed. (2022)"
+        }
+      ],
+      "normal_text": "Negative"
+    }
+  ],
+  "normal_templates": [
+    {
+      "item_id": "HX.GEN.FATIGUE",
+      "template": "No unusual tiredness.",
+      "review_status": "approved"
+    }
+  ],
+  "diagnoses": [
+    {
+      "item_id": "DX.IRON_DEFICIENCY_ANAEMIA",
+      "icd11": "3A00",
+      "icd10": "D50.9"
+    }
+  ],
+  "value_rules": [
+    {
+      "id": "R.MCH",
+      "kind": "ratio",
+      "target": "CMP.MCH",
+      "inputs": ["CMP.HB", "CMP.RBC"],
+      "factor": 1,
+      "tolerance_pct": 2,
+      "formula": "MCH (pg) = haemoglobin (g/L) / red cell count (x10^12/L)"
+    }
+  ]
+}

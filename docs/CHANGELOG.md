@@ -4,6 +4,48 @@ Every change to the shared contract (S-004) gets an entry here, newest first. Ea
 
 Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
+## 2026-09-26: notice: the Case Vault exports one layout for conditions; six bundles re-exported (no contract change)
+
+- Follows the schema correction below (both fixes kept, Atul's decision). Migration `20260926173522_casevault_condition_shape` makes `export_bundle` write every `finding_released` condition as the list of finding ids with `from_tests` beside it, so bundles leave the Case Vault in one layout. Frozen rows and `bundle_rows` are unchanged, so every `frozen_hash` still reproduces.
+- New revisions, catalogue version 2, recorded and published for development on Atul's instruction:
+  - `PMC11227049@v1.r2` (replaces `r1`: one must-do)
+  - `PMC11227436@v1.r2` (replaces `r1`: one consult note condition)
+  - `PMC12007988@v1.r2` (replaces `r1`: one must-do)
+  - `PMC12364935@v1.r2` (replaces `r1`: one must-do and three consult note conditions)
+  - `PMC13193864@v1.r2` (replaces `r1`: one rubric anchor, which the schema leaves unchecked)
+  - `PMC12949993@v1.r3` (replaces `r2`: the film-review must-do)
+- Each new revision equals the one it replaces with only those conditions rewritten; the clinical content and the review records are unchanged. The other four cases re-export byte for byte. The old revisions stay valid (the schema accepts both layouts) and stay in `exports/` and `casevault.bundle`; engines should load the newest revision of each case.
+- The Case Library's tests now check the newest bundle of every case against the whole schema, rubric anchors included.
+- The shared contract is unchanged: no bundle, schema or catalogue version moves.
+
+Acknowledgements:
+
+- [ ] Nidana: load the newest published revision of each case (`r2`, and `r3` for the pilot); tick with a note.
+- [ ] Sambhasha: import the newest revision of each case; tick with a note.
+
+## 2026-09-26: bundle schema 0.3 correction: `finding_released` also takes an object (Case Library L1.7)
+
+- The condition `finding_released` now takes either a list of finding ids or an object `{"findings": [...], "from_tests": [...]}` (`from_tests` optional, no other keys). The curated cases have always used both forms, but the schema allowed only the list, so six exported bundles did not validate against their own schema: `PMC11227049@v1.r1`, `PMC11227436@v1.r1`, `PMC12007988@v1.r1`, `PMC12364935@v1.r1`, and the pilot `PMC12949993@v1.r1` and `.r2`. Nidana's contracts (N1.1) found this.
+- A `from_tests` key beside `finding_released` in the same condition stays valid and means the same as the object's `from_tests`; no bundle uses it. Case Library SPEC §10.4 now shows both forms, and the case-curate consult note template shows the object form.
+- The schema only widens, so no version moves: the schema stays `0.3` and no bundle, export or `.sha256` changes. Atul approved the fix without new bundle revisions. All eleven exports validate against the corrected schema (checked with Python `jsonschema`, with the format checker on).
+
+Acknowledgements:
+
+- [x] Nidana: regenerated `@nidana/contracts`; all 11 exported bundles validate (N1.1, 2026-09-26). The engine's condition evaluator (N1.3) will handle both forms and the sibling `from_tests` key.
+- [ ] Sambhasha: make the condition evaluator accept both forms of `finding_released`, and the sibling `from_tests` key.
+
+## 2026-09-26: notice: the repository is public, and every committed case is development-only (no contract change)
+
+- The umbrella repository is public from 26 Sep 2026 (S-010, superseding S-005; `CLAUDE.md` rule 7). All ten committed cases and their eleven bundles, including their answers, are now public.
+- Atul's decision: these cases are for building and testing the apps only. They never go into Nidana's store release, and never count as held-out or primary-result cases in a Sambhasha study. This supersedes the eligibility granted to the four Sambhasha starter cases in the item-by-item review notice below; their review still stands as a record.
+- Production and study cases will be a new set, curated once the apps work and kept outside this repository.
+- The shared contract is unchanged: no bundle, schema or catalogue version moves.
+
+Acknowledgements:
+
+- [x] Nidana: no action for development play; before the store release (Phase 4), load only cases from the new production set. Ticked 2026-09-26, U0.2.
+- [ ] Sambhasha: mark every current bundle as not eligible for a study's primary results (the four starter cases included), and plan the study on the new case set.
+
 ## 2026-09-26: notice: Sambhasha's four starter cases are now reviewed item by item (no contract change)
 
 - Atul reviewed four cases item by item in the Case Studio and confirmed every item as it stands, with no edits or rejections: `PMC11227049@v1`, `PMC11227436@v1`, `PMC11890614@v1` and `PMC12007988@v1`. The Case Vault records this as review batch `chat-2026-09-26-atul-itemwise-sambhasha-starters` (7,154 `approve` decisions by `atul`: every fact, live ledger row, report and consult note, and each ground truth).
@@ -13,7 +55,7 @@ Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
 Acknowledgements:
 
-- [ ] Nidana: no action needed (development play has no primary results); tick with a note.
+- [x] Nidana: no action needed (development play has no primary results). Ticked 2026-09-26, N1.1.
 - [ ] Sambhasha: clear the not-eligible flag for these four bundles only, keep it on the other six, and check that the primary analysis now admits exactly these four.
 
 ## 2026-09-26: notice: the ten published bundles were approved in bulk (no contract change)
@@ -25,7 +67,7 @@ Acknowledgements:
 
 Acknowledgements:
 
-- [ ] Nidana: no action needed (development play has no primary results); tick with a note.
+- [x] Nidana: no action needed (development play has no primary results). Ticked 2026-09-26, N1.1.
 - [ ] Sambhasha: mark these ten bundles as not eligible for a study's primary results (for example a flag in the case registry that the primary analysis honours), and keep the flag until an entry here announces an item-by-item review of the case.
 
 ## 2026-09-25: catalogue v2 (Case Library L1.3, batch 1)
@@ -38,7 +80,7 @@ Acknowledgements:
 
 Acknowledgements:
 
-- [ ] Nidana: pin catalogue v2 (or keep v1 with a reason) and import `PMC12949993@v1.r2` when it is published.
+- [x] Nidana: pinned catalogue v2 in N1.1 (2026-09-26; `nidana/CLAUDE.md` and `@nidana/contracts`). `PMC12949993@v1.r2` is the pilot bundle Nidana uses; `.r1` is on catalogue v1 and the server will refuse it (N1.4).
 - [ ] Sambhasha: regenerate `configs/prices_inr.yaml` and `configs/turnaround.yaml` from the catalogue v2 export.
 
 ## 2026-09-25: a day without a result returns the latest earlier result (bundle schema 0.3, planned)
@@ -48,7 +90,7 @@ Acknowledgements:
 
 Acknowledgements:
 
-- [ ] Nidana: the game server answers an order on a day without a value with the latest earlier value and shows its day.
+- [ ] Nidana: the game server answers an order on a day without a value with the latest earlier value and shows its day. Open: scheduled in engine task N1.2 (added to its acceptance criteria on 2026-09-26); tick when N1.2 passes.
 - [ ] Sambhasha: the Gatekeeper does the same when it releases results to the Chart.
 
 ## 2026-09-25: catalogue v1 (Case Library L0.5)
@@ -65,7 +107,7 @@ Acknowledgements:
 
 Acknowledgements:
 
-- [ ] Nidana: pin catalogue v1 once it is recorded here.
+- [x] Nidana: superseded; Nidana pins catalogue v2 (see the catalogue v2 entry). Ticked 2026-09-26, N1.1.
 - [ ] Sambhasha: generate `configs/prices_inr.yaml` and `configs/turnaround.yaml` from the catalogue v1 export.
 
 ## 2026-09-25: bundle schema 0.3 and catalogue v0 (planned)

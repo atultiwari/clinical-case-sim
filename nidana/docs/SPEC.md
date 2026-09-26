@@ -94,7 +94,7 @@ flowchart LR
 
 ## 4. Cases from the Case Library
 
-- **What Nidana loads:** exported bundles (schema 0.3) and the catalogue export (v1). The pinned versions are in `nidana/CLAUDE.md`; upgrades follow the changelog protocol (S-004). The server refuses a bundle whose schema or catalogue version it does not support, and checks each bundle's SHA-256 against its `.sha256` file.
+- **What Nidana loads:** exported bundles (schema 0.3) and the catalogue export (v2). The pinned versions are in `nidana/CLAUDE.md`; upgrades follow the changelog protocol (S-004). The server refuses a bundle whose schema or catalogue version it does not support, and checks each bundle's SHA-256 against its `.sha256` file.
 - **Where from:** in development the game server reads published bundles from the Case Vault project through a read-only database role. At the store release it reads them from its own production database, filled by the Case Library's publish job (L2.1).
 - **What Nidana uses:** facts and ledger rows (results), reports with their provisional or final status, consult notes with their conditions, media with their flags, and the source's attribution. The ground truth, rules, test utility and path analysis stay on the server for scoring and the debrief.
 - **What Nidana sends back:** missing requests (searches with no match; later, requests the voice router cannot map), logged in `play.missing_request` without any player identity. The Case Library picks them up; Nidana never writes to the Case Vault (I7).

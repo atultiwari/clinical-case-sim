@@ -15,9 +15,9 @@ flowchart LR
   S -.->|"out-of-catalogue requests"| L
 ```
 
-## Status (25 Sep 2026)
+## Status (26 Sep 2026)
 
-Design agreed. The private GitHub repository (U0.0) and the monorepo scaffold (U0.1) are set up; the Case Library's Phase 0 (L0.1) comes next.
+The GitHub repository is public (S-010), and the cases in it are for development only. Production and study cases will be a new set, kept outside this repository.
 
 ## Setting up a clone
 
