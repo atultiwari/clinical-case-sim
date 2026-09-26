@@ -1,0 +1,46 @@
+{
+  "description": "The pilot's benchmark path at Standard difficulty (case-library/cases/PMC12949993/ANALYSIS.md §10), engine part: releases, clock and spend. Scoring expectations are added by N1.3.",
+  "bundle": "PMC12949993@v1.r2",
+  "difficulty": "standard",
+  "actions": [
+    { "kind": "ask", "item": "HX.PC.PAIN_DETAILS" },
+    { "kind": "ask", "item": "HX.MEDS.CURRENT" },
+    { "kind": "ask", "item": "HX.GI.BLEEDING" },
+    { "kind": "examine", "item": "EX.GEN.VITALS" },
+    { "kind": "examine", "item": "EX.GEN.PALLOR" },
+    { "kind": "examine", "item": "EX.ABD.PALPATION" },
+    { "kind": "order", "item": "LAB.HAEM.CBC" },
+    { "kind": "order", "item": "LAB.HAEM.RETIC" },
+    { "kind": "order", "item": "LAB.CHEM.LFT" },
+    { "kind": "order", "item": "LAB.CHEM.LDH" },
+    { "kind": "order", "item": "LAB.CHEM.HAPTOGLOBIN" },
+    { "kind": "order", "item": "LAB.TBS.DAT" },
+    { "kind": "order", "item": "LAB.HAEM.FILM" },
+    { "kind": "order", "item": "LAB.CHEM.RENAL" },
+    { "kind": "wait" },
+    { "kind": "ask", "item": "HX.MEDS.SUPPLEMENTS" },
+    { "kind": "ask", "item": "HX.EXPOSURE.OTHERS_EXPOSED" },
+    { "kind": "order", "item": "LAB.HAEM.FILM_REVIEW" },
+    { "kind": "order", "item": "LAB.TOX.BLOOD_LEAD" },
+    { "kind": "refer", "item": "REF.TOXICOLOGY" },
+    { "kind": "wait", "minutes": 1440 }
+  ],
+  "expect": {
+    "clock": 1735,
+    "spend": 4520,
+    "released": [
+      "H03",
+      "H04",
+      "H08",
+      "H10",
+      "RP01",
+      "RP02",
+      "CN04",
+      "L26",
+      "S01.d0"
+    ],
+    "not_released": ["H09", "CN05", "RP03"],
+    "values": { "CMP.HB": "72" },
+    "pending": []
+  }
+}

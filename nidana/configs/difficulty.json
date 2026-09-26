@@ -1,0 +1,25 @@
+{
+  "clock": {
+    "ask_minutes": 5,
+    "examine_minutes": 10,
+    "referral_minutes": 240,
+    "max_stay_minutes": 10080
+  },
+  "difficulties": {
+    "guided": {
+      "first_report": "final",
+      "budget_factor": 3,
+      "referrals_allowed": 4
+    },
+    "standard": {
+      "first_report": "provisional",
+      "budget_factor": 1.5,
+      "referrals_allowed": 3
+    },
+    "expert": {
+      "first_report": "provisional",
+      "budget_factor": 1.2,
+      "referrals_allowed": 2
+    }
+  }
+}
