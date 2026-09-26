@@ -1,0 +1,65 @@
+# Model profiles per role (SPEC §11; D-020). Model ids live only in this file.
+# Tests never read these ids for a network call: they use the scripted FakeLLM.
+#
+# The ids below are placeholders until Atul chooses the pilot's models (PLAN P1.11).
+# Policy (D-010, D-024): the Synthetic Findings Service and the Evaluator use a different
+# model family from the doctor seats. A study that seats Claude models reports it.
+
+providers:
+  openrouter:
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY
+    reports_cost: true        # OpenRouter returns the cost of each call
+  ollama:
+    base_url_env: OLLAMA_BASE_URL
+    default_base_url: http://localhost:11434/v1
+    api_key: ollama           # Ollama ignores the key, but the SDK needs one
+    reports_cost: false       # local models cost nothing
+
+profiles:
+  doctor-default:
+    provider: openrouter
+    model: anthropic/claude-sonnet-4.5
+    family: anthropic
+    temperature: 0
+    seed: 20260926
+    max_tokens: 2000
+  matcher-default:
+    provider: openrouter
+    model: anthropic/claude-haiku-4.5
+    family: anthropic
+    temperature: 0
+    seed: 20260926
+    max_tokens: 400
+  synthetic-default:
+    provider: openrouter
+    model: google/gemini-2.5-pro
+    family: google
+    temperature: 0
+    seed: 20260926
+    max_tokens: 1500
+  evaluator-default:
+    provider: openrouter
+    model: google/gemini-2.5-pro
+    family: google
+    temperature: 0
+    seed: 20260926
+    max_tokens: 2000
+  local-small:
+    provider: ollama
+    model: qwen3:8b
+    family: qwen
+    temperature: 0
+    seed: 20260926
+    max_tokens: 2000
+    structured_output: json_object   # older Ollama builds lack json_schema
+
+roles:
+  attending: doctor-default
+  challenger: doctor-default
+  consultant: doctor-default
+  service: doctor-default
+  matcher: matcher-default
+  synthetic: synthetic-default
+  curator: matcher-default
+  evaluator: evaluator-default

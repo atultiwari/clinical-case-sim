@@ -59,7 +59,14 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
 
 ## Phase 1: prototype engine (text only)
 
-- [ ] **P1.1 LLM gateway**
+- [x] **P1.1 LLM gateway**
+  - Done 26 Sep 2026: `sambhasha.llm`, with the pieces below. 72 tests, none touching the network.
+    - `configs/models.yaml`: providers (OpenRouter, Ollama) and a profile per role. The API keys are read from the environment only when an endpoint is needed. The model ids are placeholders until the pilot's models are chosen (P1.11); synthetic and evaluator are another family from the doctor seats (D-010), and a test checks it.
+    - `backend.py`: the one `openai`-SDK client; OpenRouter's cost comes back per call, and Ollama costs nothing.
+    - `gateway.py`: structured output as a JSON schema (or in the prompt, for providers without schema support). An invalid reply is retried up to twice, with the error. Every attempt is reported as an `LlmCallRecord`, which `call_event` turns into an `llm_call` event.
+    - `cache.py`: record and replay in `data/llm-cache/`, keyed by the request's SHA-256; a replay costs nothing, and `replay_only` refuses any call.
+    - `fake.py`: the scripted `FakeLLM`.
+    - An invariant test keeps the `openai` import inside `llm/`. PyYAML added with Atul's approval.
   - Build: `sambhasha.llm` implements SPEC §11. One `openai`-SDK client with OpenRouter and Ollama profiles from `configs/models.yaml`. Structured output with validation and up to two retries. Record-and-replay cache in `data/llm-cache/`. An `llm_call` event per call with tokens and cost. A scripted `FakeLLM`.
   - Accept: unit tests cover schema retry, cache hits (a second identical request makes no network call) and cost logging. No test touches the network.
   - Depends on: P0.2.
