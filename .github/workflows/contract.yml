@@ -58,6 +58,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Sambhasha's mypy hook runs through uv (sambhasha/pyproject.toml pins mypy there).
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          working-directory: sambhasha
+
       - name: Install gitleaks
         run: |
           archive="gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"

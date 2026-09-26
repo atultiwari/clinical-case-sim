@@ -18,7 +18,8 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
 
 ## Phase 0: foundations and case import
 
-- [ ] **P0.1 Repository scaffold**
+- [x] **P0.1 Repository scaffold**
+  - Done 26 Sep 2026: uv project (`uv_build`, Python 3.12) with `pydantic` and `typer`, a `sambhasha version` command, strict mypy with the pydantic plugin, pytest with an 80% coverage floor and integration tests deselected by default; Sambhasha hooks in the root pre-commit config; `.github/workflows/sambhasha.yml`. On a fresh clone `uv sync --locked`, `uv run pytest`, `uv run ruff check .`, `uv run mypy` and `pre-commit run --all-files` pass.
   - Build: inside the Clinical-Case-Sim monorepo (umbrella task U0.1), a uv project in `sambhasha/` with the package `sambhasha` in `src/`; ruff, mypy and pytest configured; its hooks in the root `.pre-commit-config.yaml`; `.env.example` with `OPENROUTER_API_KEY`, `OLLAMA_BASE_URL` and `SUPABASE_DB_URL`; `.env` and `data/` git-ignored (the root `.gitignore` already covers them); a short `README.md`; the part's GitHub Actions workflow running lint, type-check and unit tests, limited to `sambhasha/`.
   - Accept: `uv run pytest`, `uv run ruff check .` and `uv run mypy src` all pass on a fresh clone.
   - Depends on: U0.1.
@@ -41,8 +42,8 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Depends on: P0.2.
 
 - [ ] **P0.6 Bundle importer**
-  - Build: `sambhasha case import <bundle.json>` validates a Case Library bundle (schema 0.3), checks the SHA-256 of the file's bytes against its `.sha256` file, writes the case tables (facts, ledger rows, reports, consult notes, media, gaps, ground truth) and runs the leak scanner on all seat-facing text. It records the bundle revision; it never writes to the Case Vault.
-  - Accept: importing `PMC12949993@v1.r1` creates 164 imported fact and raw-material rows (10 history, 125 series points, 26 single results, 3 raw material) plus the derived rows, the approved ledger rows, 4 media rows and 20 gap rows, with no leaks; a bundle with a wrong hash or an unsupported schema version is refused.
+  - Build: `sambhasha case import <bundle.json>` validates a Case Library bundle (schema 0.3), checks the SHA-256 of the file's bytes against its `.sha256` file, writes the case tables (facts, ledger rows, reports, consult notes, media, gaps, ground truth) and runs the leak scanner on all seat-facing text. It records the bundle revision; it never writes to the Case Vault. The case registry carries a `primary_eligible` flag that the primary analysis honours: false for every bundle a changelog notice lists as approved in bulk, true only once a notice announces an item-by-item review. As of 26 Sep 2026 that makes `PMC11227049`, `PMC11227436`, `PMC11890614` and `PMC12007988` (all `@v1.r1`) eligible and the pilot and the other five batch 1 bundles not. Closes the Sambhasha items of the two 26 Sep 2026 notices in `../docs/CHANGELOG.md`.
+  - Accept: the four starter bundles import as eligible and the other six as not eligible, and the primary analysis admits exactly the four. Importing `PMC12949993@v1.r1` creates 164 imported fact and raw-material rows (10 history, 125 series points, 26 single results, 3 raw material) plus the derived rows, the approved ledger rows, 4 media rows and 20 gap rows, with no leaks; a bundle with a wrong hash or an unsupported schema version is refused.
   - Depends on: P0.3, P0.5; Case Library LM0.
 
 - **P0.7 Case Curator — moved to the Case Library.** Claude curates through the Supabase MCP under the `case-curate` skill (D-021).
@@ -81,7 +82,7 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Depends on: P1.1, P1.3.
 
 - [ ] **P1.5 Clock, costs and Chart**
-  - Build: `configs/turnaround.yaml` and `configs/prices_inr.yaml`, generated from the Case Library's catalogue export (D-022); a simulated clock in minutes; the Chart projection; the `SeatView` builder.
+  - Build: `configs/turnaround.yaml` and `configs/prices_inr.yaml`, generated from the Case Library's catalogue export (D-022; closes the Sambhasha item of the catalogue v1 entry in `../docs/CHANGELOG.md`, using the catalogue version pinned in `CLAUDE.md` at the time, now v2 exists); a simulated clock in minutes; the Chart projection; the `SeatView` builder.
   - Accept: a result becomes visible only after its turnaround; costs add up per order; a Consultant sees the Chart only after referral; a service view holds only its order and raw material.
   - Depends on: P0.3.
 
