@@ -28,7 +28,8 @@ Rough effort: Phase 1 three to four weeks (two apps: player and server), Phase 2
   - Accept: the fixture validates; an invalid bundle (missing licence, unknown origin) is rejected with a clear message; once LM0 is reached, the pilot bundle validates too.
   - Depends on: umbrella U0.1; Case Library L0.3 (the schema).
 
-- [ ] **N1.2 Engine core**
+- [x] **N1.2 Engine core**
+  - Done 2026-09-26: `@nidana/engine` with `prepareCase`, `applyAction` and `replay` (a pure fold), the condition vocabulary (Case Library SPEC §10.4, both forms of `finding_released`), difficulty settings in `configs/difficulty.json`, the pinned catalogue snapshot and the pilot's benchmark playthrough in `conformance/`. Every acceptance item below passes, including carry-forward; every current bundle answers every Attending item; property tests with fast-check. SPEC §5.4 updated: orders take no time, budget-exceeding orders are refused, and the SPEC's 24-hour carry-back rule is replaced by the Case Library's carry-forward.
   - Build: `packages/engine` with `replay(bundle, actions)`: clock, day buckets and carry rules, release by `released_by`, orders with turnaround and INR cost, report variants and status by difficulty, referrals with consult note conditions, limits and forced commit.
   - Accept (pilot conformance playthroughs, once LM0 is reached):
     - Current medicines releases H03 and H04 and not H10; a toxin question releases H09 only; the remedies question releases H10.

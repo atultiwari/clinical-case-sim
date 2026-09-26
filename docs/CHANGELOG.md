@@ -70,7 +70,7 @@ Acknowledgements:
 
 Acknowledgements:
 
-- [ ] Nidana: the game server answers an order on a day without a value with the latest earlier value and shows its day. Open: scheduled in engine task N1.2 (added to its acceptance criteria on 2026-09-26); tick when N1.2 passes.
+- [x] Nidana: the engine answers an order on a day without a value with the latest earlier value and marks its day (`requestedDay` and `day` on each release; N1.2, 2026-09-26). The player app shows the day (N1.5).
 - [ ] Sambhasha: the Gatekeeper does the same when it releases results to the Chart.
 
 ## 2026-09-25: catalogue v1 (Case Library L0.5)
