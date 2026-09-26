@@ -24,7 +24,13 @@ uv run mypy
 uv run sambhasha --help
 ```
 
-Integration tests (`uv run pytest -m integration`) need the local database from `supabase start`; they arrive with task P0.3.
+Tests marked `integration` need Sambhasha's own local database (ports 563xx, so it runs beside the Case Vault's 553xx):
+
+```bash
+supabase db start                                   # Postgres only, with every migration
+uv run pytest -m "integration or not integration"  # every test, the database ones included
+supabase db reset                                   # start again from the migrations
+```
 
 ## Documents
 

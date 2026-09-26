@@ -30,7 +30,8 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Accept: the pilot bundle validates once LM0 is reached (the draft validates against the 0.2 models until then); series expand to 125 atomic facts; ids are unique; invalid files (a missing licence, an unknown `release` value or origin) are rejected with clear messages.
   - Depends on: P0.1.
 
-- [ ] **P0.3 Database and repositories**
+- [x] **P0.3 Database and repositories**
+  - Done 26 Sep 2026: Sambhasha's own local Supabase project (ports 563xx) with migration `20260926180000_sambhasha_schema.sql`: the case registry, the bundle row tables (typed key columns plus each row as imported), eligibility kept apart, the synthetic ledger, runs, the Event Log, orders and scores. A trigger refuses any change to a sealed bundle's rows, and another any update, delete or truncate of an event. `storage/repo.py` defines the interface; the in-memory and Postgres repositories pass the same 25-test contract suite (the pilot bundle round-trips unchanged). `supabase db reset` applies cleanly; CI gains a job that runs every test against the local database.
   - Build: `supabase init`, then migrations for the SPEC §12 tables; an immutability trigger for frozen cases; an insert-only `event` table. A repository interface with in-memory and Postgres implementations.
   - Accept: `supabase db reset` applies cleanly. The same contract test suite passes against both implementations. Updating a frozen case's fact fails. Updating or deleting an event fails.
   - Depends on: P0.2.
@@ -75,6 +76,7 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
     - A Consultant who orders a test is refused.
     - "What is the diagnosis?" is refused and logged.
     - Every released text equals stored text.
+    - A result ordered on a day with no value returns the latest earlier value, marked with its day (changelog, 25 Sep 2026: carry-forward).
   - Depends on: P0.6, P1.1, P1.2.
 
 - [ ] **P1.4 Synthetic Findings Service (fallback)**
