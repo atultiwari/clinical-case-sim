@@ -4,6 +4,10 @@ import { z } from "zod";
 
 const ItemId = z.string().min(1);
 
+const distinct = (ids: readonly string[]): boolean =>
+  new Set(ids).size === ids.length;
+const Distinct = { message: "each item may appear only once" };
+
 export const MAX_EVIDENCE = 5;
 
 export const Action = z.discriminatedUnion("kind", [
@@ -25,8 +29,8 @@ export const Action = z.discriminatedUnion("kind", [
   z.strictObject({
     kind: z.literal("commit"),
     dx: ItemId,
-    evidence: z.array(ItemId).max(MAX_EVIDENCE),
-    plan: z.array(ItemId).max(30),
+    evidence: z.array(ItemId).max(MAX_EVIDENCE).refine(distinct, Distinct),
+    plan: z.array(ItemId).max(30).refine(distinct, Distinct),
     /** Free-text reasoning; stored, not scored before the voice mode. */
     note: z.string().max(2000).optional(),
   }),

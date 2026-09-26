@@ -64,6 +64,7 @@ export function groundTruthOf(prepared: PreparedCase): GroundTruth {
     finalDx: finalDx.data.id,
     defaultAnchor: rubric.data.default_score,
     anchors: [...rubric.data.rubric]
+      // Array.prototype.sort is stable, so anchors with the same score keep the bundle's order.
       .sort((a, b) => b.score - a.score)
       .map((a) => ({ score: a.score, text: a.text, condition: a.if })),
     mustDo: rules(truth.must_do),

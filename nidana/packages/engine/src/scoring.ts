@@ -141,7 +141,11 @@ function efficiency(inputs: Inputs): Score["efficiency"] {
       ? cost_points
       : (cost_points * prepared.efficientPathCost) / state.spend;
   const tests = Math.max(0, test_points - testPenalty(inputs));
-  const reference = referenceMinutes(prepared, settings);
+  // Kept below the maximum stay, so the time marks always distinguish a quick commit from a slow one.
+  const reference = Math.min(
+    referenceMinutes(prepared, settings),
+    state.limits.maxStayMinutes - 1,
+  );
   const maxStay = state.limits.maxStayMinutes;
   const late =
     commit.at <= reference
@@ -176,7 +180,7 @@ function referralMarks({ prepared, scoring, state, commit }: Inputs): number {
       .filter((n) => n.origin === "affected")
       .map((n) => n.specialty),
   );
-  const unjustified = state.referred.filter(
+  const unjustified = [...new Set(state.referred)].filter(
     (ref) => !onPaths.has(ref) && !casework.has(ref),
   ).length;
   const efficient =

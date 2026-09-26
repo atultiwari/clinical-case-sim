@@ -148,6 +148,67 @@ describe("commit and debrief edges", () => {
     expect(result.ok ? undefined : result.error.code).toBe("unknown_item");
   });
 
+  it("refuses repeated items in the evidence or the plan", () => {
+    const state = replay(pilot(), settings, "standard", [
+      { kind: "ask", item: "HX.MEDS.SUPPLEMENTS" },
+    ]);
+    const twice = (evidence: string[], plan: string[]) =>
+      applyAction(pilot(), settings, state, {
+        kind: "commit",
+        dx: "DX.LEAD_POISONING",
+        evidence,
+        plan,
+      });
+    const repeatedEvidence = twice(["H10", "H10"], []);
+    expect(
+      repeatedEvidence.ok ? undefined : repeatedEvidence.error.message,
+    ).toMatch(/only once/);
+    const repeatedPlan = twice(
+      [],
+      ["ACT.REPEAT_BLOOD_LEAD", "ACT.REPEAT_BLOOD_LEAD"],
+    );
+    expect(repeatedPlan.ok ? undefined : repeatedPlan.error.code).toBe(
+      "invalid_action",
+    );
+  });
+
+  it("keeps the time marks meaningful when the reference time reaches the maximum stay", () => {
+    const short = {
+      ...settings,
+      clock: { ...settings.clock, max_stay_minutes: 600 },
+    };
+    const quick = scoreEncounter(
+      pilot(),
+      short,
+      scoring,
+      replay(pilot(), short, "standard", [commit("DX.LEAD_POISONING")]),
+    );
+    const slow = scoreEncounter(
+      pilot(),
+      short,
+      scoring,
+      replay(pilot(), short, "standard", [
+        { kind: "wait", minutes: 600 },
+        commit("DX.LEAD_POISONING"),
+      ]),
+    );
+    expect(quick.efficiency.time).toBe(scoring.efficiency.time_points);
+    expect(slow.efficiency.time).toBeLessThan(quick.efficiency.time);
+  });
+
+  it("counts a repeated referral once", () => {
+    const once = scoreWith(pilot(), [
+      { kind: "refer", item: "REF.DENTISTRY" },
+      commit("DX.LEAD_POISONING"),
+    ]);
+    const twice = scoreWith(pilot(), [
+      { kind: "refer", item: "REF.DENTISTRY" },
+      { kind: "refer", item: "REF.DENTISTRY" },
+      commit("DX.LEAD_POISONING"),
+    ]);
+    expect(twice.reasoning.referrals).toBe(once.reasoning.referrals);
+  });
+
   it("has no attribution for a de novo case", () => {
     const prepared = {
       ...pilot(),
