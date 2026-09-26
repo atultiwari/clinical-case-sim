@@ -71,7 +71,12 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Accept: unit tests cover schema retry, cache hits (a second identical request makes no network call) and cost logging. No test touches the network.
   - Depends on: P0.2.
 
-- [ ] **P1.2 Coding and synonyms**
+- [x] **P1.2 Coding and synonyms**
+  - Done 26 Sep 2026: `catalogue.py` reads all eight catalogue files. `gatekeeper/coding.py` codes text in three steps: an exact name or synonym, or the same words in any order; otherwise ranked candidates for the matcher model (P1.3); otherwise unmatched, which is logged as a missing request.
+    - Normalisation is applied to requests and names alike: case, accents, punctuation, word order, plurals, British and American spelling, filler words, a leading article and "Pb"; "%" reads as "percent". A test checks it adds no ambiguity the catalogue lacks.
+    - Results: "CBC", "hemogram" and "complete blood count" give `LAB.HAEM.CBC`; "blood lead", "lead level" and "Pb level" give `LAB.TOX.BLOOD_LEAD`. Over 99% of catalogue names code to their own item, and genuine catalogue overlaps ("PT", "FDP") go to the matcher.
+    - Missing requests export as CSV in the Case Vault's `missing_request` columns. LOINC codes come with each item (empty in catalogue v2).
+    - No local `synonyms.csv` (SPEC §17 layout): the catalogue stays the one vocabulary (D-022), and new synonyms reach it through the missing-request export.
   - Build: `gatekeeper/coding.py` maps request text to catalogue ids using the synonyms in the Case Library's catalogue export (D-022); LOINC codes come from the catalogue.
   - Accept: "CBC", "hemogram" and "complete blood count" resolve to one catalogue id; "blood lead", "lead level" and "Pb level" resolve to one catalogue id; unmatched text is logged for the Case Library's missing-request export.
   - Depends on: P0.2.
