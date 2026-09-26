@@ -239,12 +239,13 @@ XP, streaks and badges; per-case leaderboards on score and cost; a weekly case.
 | `GET /api/encounters/:id/view` | Returns the PlayerView |
 | `POST /api/encounters/:id/commit` | Commits, scores and closes the encounter |
 | `GET /api/encounters/:id/debrief` | Returns the debrief, only after commit |
+| `GET /api/cases` | Lists the published case cards (newest revision of each case; slug, neutral title, tags) |
 | `GET /api/catalogue` | Returns the catalogue export (names and synonyms) for search |
 | `POST /api/missing` | Logs an unmatched search |
 
 ### 6.3 PlayerView
 
-Holds the case card, released items with their simulated times and report status, pending orders with due times, spend, clock, limits and the player's own differential. Never holds the ground truth, rubric, test utility, origins, unreleased ids, the mapping from slug to PMCID, or the bundle.
+Holds the case card, released items with their simulated times and report status, pending orders with due times, spend, clock, limits and the player's own differential. Never holds the ground truth, rubric, test utility, origins, unreleased ids, the mapping from slug to PMCID, or the bundle. It never holds bundle row ids either, because they reveal origins (`D.` marks a derived value, a UUID a ledger row): each Chart entry gets a per-encounter reference (`c0`, `c1`, …), which the player cites as evidence at commit and the server maps back. The bundle id names the article, so it appears only in the debrief. Figures are served in a later task through an endpoint that hides their storage path, which names the article too.
 
 ### 6.4 Tests
 

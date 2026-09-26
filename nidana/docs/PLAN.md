@@ -51,7 +51,8 @@ Rough effort: Phase 1 three to four weeks (two apps: player and server), Phase 2
     - Committing to MDS with ring sideroblasts without a blood lead or copper scores 2 with a violation.
   - Depends on: N1.2.
 
-- [ ] **N1.4 Game server**
+- [x] **N1.4 Game server**
+  - Done 2026-09-26: `apps/server` (Next.js 16, route handlers only) with the SPEC §6.2 endpoints plus `GET /api/cases`; the PlayerView with per-encounter chart references; bundle checks (SHA-256, re-derived from the Case Vault's jsonb with RFC 8785; schema and catalogue pins; newest published revision per case); Supabase Auth tokens checked with `jose`; per-player rate limits; the `{ success, data, error }` envelope. Proposed migration `supabase/proposed/20260926190000_play_schema.sql` (the `play` tables, role `nidana_server`, RLS, an insert-only action log), tested on the local Case Vault inside a rolled-back transaction: the server role reads published bundles only, and `anon` and `authenticated` cannot read `casevault` or `play`. Leak tests scan every encounter response on the benchmark path, in Guided mode and on random action sequences. Open: a Case Library session applies the migration to the development project and Atul creates the login role; figures need their endpoint (with N1.5).
   - Build: `apps/server`, Next.js route handlers from SPEC §6.2; a proposed migration in `supabase/proposed/` for the `play` tables (SPEC §8.2), which a Case Library session applies to the development project; a least-privilege database role that reads published bundles and writes `play`; bundle version and hash checks; auth checks and rate limits.
   - Accept: the leak tests in SPEC §6.4 pass on every encounter endpoint; a client using the public key cannot read `casevault` or `play` tables; a bundle with an unsupported schema or catalogue version, or a wrong hash, is refused.
   - Depends on: N1.3.

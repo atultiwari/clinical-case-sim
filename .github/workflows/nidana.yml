@@ -61,3 +61,8 @@ jobs:
       # No network access and no paid API calls in tests (nidana/CLAUDE.md).
       - name: Tests
         run: pnpm --filter "./**" --fail-if-no-match run test
+
+      - name: Build the game server
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+        run: pnpm --filter @nidana/server build
