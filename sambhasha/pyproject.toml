@@ -1,0 +1,61 @@
+[project]
+name = "sambhasha"
+version = "0.1.0"
+description = "Sambhasha: a research simulator in which doctor seats work up hidden published cases (Clinical-Case-Sim). Educational and research use only."
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "pydantic>=2.11,<3",
+    "typer>=0.16,<1",
+]
+
+[project.scripts]
+sambhasha = "sambhasha.cli:app"
+
+[dependency-groups]
+# ruff and mypy are pinned exactly: the root .pre-commit-config.yaml runs the same versions.
+dev = [
+    "hypothesis>=6.130,<7",
+    "mypy==2.3.1",
+    "pytest>=9.1,<10",
+    "pytest-cov>=7.1,<8",
+    "ruff==0.16.9",
+]
+
+[build-system]
+requires = ["uv_build>=0.9,<0.10"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+    "--strict-markers",
+    "-m", "not integration",
+    "--cov=sambhasha",
+    "--cov-report=term-missing",
+    "--cov-fail-under=80",
+]
+markers = [
+    "integration: needs the local database from `supabase start`; run with `pytest -m integration`",
+]
+
+[tool.coverage.run]
+branch = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+# The docs hold illustrative code blocks, not source.
+extend-exclude = ["docs"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP", "SIM", "RUF", "S", "PT", "C4", "N"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src", "tests"]
+plugins = ["pydantic.mypy"]

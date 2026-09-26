@@ -77,3 +77,23 @@ repos:
         additional_dependencies: ["psycopg[binary]==3.3.6", "pytest==9.1.1", "types-openpyxl==3.1.5.20260827"]
   # --- Nidana hooks (added by N1.1) ---
   # --- Sambhasha hooks (added by P0.1) ---
+  # Versions match the exact pins in sambhasha/pyproject.toml; ruff and mypy read their
+  # settings from there. Tests run in the Sambhasha workflow, not here.
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.9
+    hooks:
+      - id: ruff-check
+        name: "Sambhasha: ruff check"
+        files: ^sambhasha/(src|tests)/.*\.py$
+      - id: ruff-format
+        name: "Sambhasha: ruff format"
+        files: ^sambhasha/(src|tests)/.*\.py$
+  - repo: local
+    hooks:
+      - id: sambhasha-mypy
+        name: "Sambhasha: mypy"
+        # mypy needs the installed package and pydantic's plugin, so it runs from the uv environment.
+        entry: bash -c 'cd sambhasha && uv run --locked mypy'
+        language: system
+        files: ^sambhasha/(src|tests)/.*\.py$
+        pass_filenames: false
