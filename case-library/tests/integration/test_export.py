@@ -1,6 +1,7 @@
 """Bundle export end to end on the fixture case (SPEC §7.5, §10.5; PLAN L0.3)."""
 
 import json
+from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
@@ -16,7 +17,9 @@ pytestmark = pytest.mark.integration
 SCHEMA = Path(__file__).resolve().parents[2] / "schemas" / "case-bundle.v0.3.schema.json"
 
 
-def _prepare(db: psycopg.Connection) -> str:
+def _prepare(
+    db: psycopg.Connection, before_freeze: Callable[[psycopg.Connection, str], None] | None = None
+) -> str:
     """Curate the fixture to completion: resolve, author, review and freeze."""
     cv = seed_mini_case(db)
     db.execute("select casevault.compute_derived(%s, %s, 'v0.0')", (cv, MINI_GENERATOR))
@@ -44,6 +47,8 @@ def _prepare(db: psycopg.Connection) -> str:
             ).format(psycopg.sql.Identifier(table)),
             (status, cv),
         )
+    if before_freeze is not None:
+        before_freeze(db, cv)
     db.execute(
         "update casevault.case_version set status = 'frozen', frozen_at = now() where id = %s",
         (cv,),

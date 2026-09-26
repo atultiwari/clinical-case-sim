@@ -5,7 +5,7 @@ One note per specialty variant (SPEC §6.8). A consultant is helpful but never m
 - **id:** CN<nn>
 - **specialty:** `REF.<SPECIALTY>`
 - **variant:** 1 | 2 | 3
-- **condition:** what the Chart must already hold, e.g. `{"released_any": ["L26"]}` or `{"finding_released": ["FND.<finding>"]}`; empty for variant 1
+- **condition:** what the Chart must already hold, e.g. `{"released_any": ["L26"]}` or `{"finding_released": ["FND.<finding>"]}`, with any tests it must come from beside it: `{"finding_released": ["FND.<finding>"], "from_tests": ["LAB.<test>"]}` (never an object inside `finding_released`; the bundle schema refuses it); empty for variant 1
 - **origin:** `affected` (on the case's paths) or `rule` (the catalogue's generic note)
 
 Note text, in this order:
