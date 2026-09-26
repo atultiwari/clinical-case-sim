@@ -256,3 +256,14 @@ def test_every_problem_is_listed_not_only_the_first() -> None:
 
 def test_parse_bundle_returns_a_case_bundle() -> None:
     assert isinstance(parse_bundle(to_bytes(minimal_bundle())), CaseBundle)
+
+
+def test_an_older_revision_with_the_object_layout_still_parses() -> None:
+    bundle = parse_bundle((EXPORTS / "PMC12949993@v1.r2.json").read_bytes())
+
+    must_do = bundle.ground_truth.must_do
+    assert must_do is not None
+    film_review = next(item.if_ for item in must_do if item.if_ and item.if_.finding_ids())
+    assert film_review is not None
+    assert film_review.finding_ids() == ("FND.COARSE_BASOPHILIC_STIPPLING",)
+    assert film_review.finding_tests() is not None
