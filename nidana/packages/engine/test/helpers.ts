@@ -49,13 +49,30 @@ export function exportedBundleNames(): string[] {
     .sort();
 }
 
+/** The newest published revision of each case, the one Nidana loads (changelog, 2026-09-26). */
+export function newestBundleNames(): string[] {
+  const newest = new Map<string, { name: string; revision: number }>();
+  for (const name of exportedBundleNames()) {
+    const match = /^(.+)\.r(\d+)$/.exec(name);
+    if (match === null) continue;
+    const [, version = "", revision = "0"] = match;
+    const current = newest.get(version);
+    if (current === undefined || Number(revision) > current.revision) {
+      newest.set(version, { name, revision: Number(revision) });
+    }
+  }
+  return [...newest.values()].map((entry) => entry.name).sort();
+}
+
 export function readConformance(path: string): unknown {
   return JSON.parse(readFileSync(`${NIDANA}conformance/${path}`, "utf8"));
 }
 
 let pilotCache: PreparedCase | undefined;
-/** The pilot, PMC12949993@v1.r2, on the pinned catalogue. */
+export const PILOT = "PMC12949993@v1.r3";
+
+/** The pilot's newest revision, on the pinned catalogue. */
 export function pilot(): PreparedCase {
-  pilotCache ??= prepareCase(loadBundle("PMC12949993@v1.r2"), catalogue);
+  pilotCache ??= prepareCase(loadBundle(PILOT), catalogue);
   return pilotCache;
 }

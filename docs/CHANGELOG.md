@@ -20,7 +20,7 @@ Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
 Acknowledgements:
 
-- [ ] Nidana: load the newest published revision of each case (`r2`, and `r3` for the pilot); tick with a note.
+- [x] Nidana: the engine's tests and the pilot's conformance playthrough load the newest revision of each case (`PMC12949993@v1.r3` for the pilot), and all pass; the game server will load the newest published revision (N1.4). Ticked 2026-09-26, N1.2.
 - [x] Sambhasha: P0.2's bundle tests read the newest revision of each case, and all pass. Ticked 2026-09-26, P0.2.
 
 ## 2026-09-26: bundle schema 0.3 correction: `finding_released` also takes an object (Case Library L1.7)

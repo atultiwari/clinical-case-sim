@@ -7,9 +7,10 @@ import {
   type DifficultySettings,
 } from "../src/index.ts";
 import {
+  PILOT,
   catalogue,
-  exportedBundleNames,
   loadBundle,
+  newestBundleNames,
   settings,
 } from "./helpers.ts";
 
@@ -34,12 +35,13 @@ const unlimited: DifficultySettings = {
 };
 
 describe("every exported bundle on the pinned catalogue", () => {
-  const names = exportedBundleNames().filter(
-    (name) => loadBundle(name).catalogue_version === 2,
-  );
+  const names = newestBundleNames();
 
-  it("includes the ten current bundles", () => {
-    expect(names).toHaveLength(10);
+  it("are the newest revision of every case, the pilot's included", () => {
+    expect(names).toContain(PILOT);
+    expect(
+      names.every((name) => loadBundle(name).catalogue_version === 2),
+    ).toBe(true);
   });
 
   it.each(names)("%s answers every item the Attending can use", (name) => {
@@ -77,7 +79,7 @@ describe("prepareCase", () => {
   });
 
   it("refuses a bundle with no efficient path", () => {
-    const bundle = { ...loadBundle("PMC12949993@v1.r2"), path_analysis: [] };
+    const bundle = { ...loadBundle(PILOT), path_analysis: [] };
     expect(() => prepareCase(bundle, catalogue)).toThrow(/no efficient path/);
   });
 });

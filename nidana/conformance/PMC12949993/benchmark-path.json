@@ -1,6 +1,6 @@
 {
   "description": "The pilot's benchmark path at Standard difficulty (case-library/cases/PMC12949993/ANALYSIS.md §10), engine part: releases, clock and spend. Scoring expectations are added by N1.3.",
-  "bundle": "PMC12949993@v1.r2",
+  "bundle": "PMC12949993@v1.r3",
   "difficulty": "standard",
   "actions": [
     { "kind": "ask", "item": "HX.PC.PAIN_DETAILS" },
