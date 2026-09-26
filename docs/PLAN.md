@@ -16,6 +16,11 @@ Each part has its own PLAN. This file holds the umbrella tasks and the order in 
   - Accept: on a fresh clone, `pnpm install` and `pre-commit run --all-files` succeed; a commit that changes a file under `case-library/schemas/` or `case-library/catalogue/` without changing `docs/CHANGELOG.md` is blocked by the hook, and a pull request with such a change fails the contract workflow.
   - Depends on: U0.0. Do this before any part's first build task.
 
+- [x] **U0.2 Public repository** (done 26 Sep 2026, on Atul's instruction)
+  - Build: gitleaks scan of the whole history and a check of the committed cases' licences (all CC BY 4.0); `gh repo edit --visibility public`; rule 7 of `CLAUDE.md`, the Git section, S-010 (superseding S-005) and `docs/REPOSITORY.md` updated; a changelog notice that the committed cases are development-only.
+  - Accept: `gh repo view` reports visibility `PUBLIC`; CI runs; no secret in the history.
+  - Depends on: U0.0.
+
 - [ ] **U1.1 Research release export**
   - Build: `scripts/export_research_release.py` with the allow-list in `docs/REPOSITORY.md`; checks for secrets, player data and licences; a dry-run report.
   - Accept: a dry run lists exactly the allowed files; an ND case or a held-out case in the input is refused.

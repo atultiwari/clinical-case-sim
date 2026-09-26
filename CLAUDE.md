@@ -24,13 +24,13 @@ Owner: Dr Atul Tiwari. Claude Code loads this file in every session started insi
 4. **Acknowledge before anything else.** At the start of a session in `nidana/` or `sambhasha/`, read `docs/CHANGELOG.md`. If an entry has an open item for this part, deal with it first (update, pin, or record why not) and tick it with a note.
 5. **Pins.** Each part records, in its own CLAUDE.md, the bundle schema version and the catalogue version it supports. Upgrading is an explicit task in that part's PLAN.
 6. **Database writes.** Only Case Library sessions can use Supabase: the account-level connector, limited to the Case Vault by `case-library/.claude/settings.json` and its hook; the account-level Supabase connector is denied in `nidana/.claude/settings.json` and `sambhasha/.claude/settings.json` (set up in Case Library task L0.2). Nidana and Sambhasha never write to the Case Vault. The development Supabase project keeps one migration history, in `case-library/supabase/migrations/`: Nidana proposes changes to its `play` schema as migration files, and a Case Library session applies them.
-7. **Answers stay private.** Case bundles, case analyses and conformance files contain diagnoses. They never go anywhere public (an issue, a gist, a public repository, the prompt of a model under test) except through the research release in `docs/REPOSITORY.md`.
+7. **This repository is public; production and held-out cases never enter it** (S-010). Everything committed here is public, including the diagnoses in the current cases' bundles, analyses and conformance files. So those cases are for building and testing only: they never go into Nidana's store release, and never count as held-out or primary-result cases in a Sambhasha study. Cases for production and for a study are curated as a new set and kept outside this repository, somewhere private chosen before curation starts. They reach the public only through the research release (`docs/REPOSITORY.md`). Case answers never go into the prompt of a model under test, whichever set they come from.
 8. **Names:** Clinical-Case-Sim, Case Library, Case Vault, Nidana, Sambhasha, exactly as written. British spelling in user-facing text.
 9. **Secrets** are never committed. Each part keeps a `.env.example`.
 
 ## Git and GitHub
 
-The umbrella is one private Git repository, `clinical-case-sim` on GitHub (S-005, `docs/REPOSITORY.md`). Keep GitHub in step with this folder:
+The umbrella is one public Git repository, `clinical-case-sim` on GitHub (S-010, `docs/REPOSITORY.md`). Keep GitHub in step with this folder:
 
 - **Start of a session:** run `git status`. If there are changes that no session made (Atul may edit files himself), show them to Atul and ask before committing or discarding them. Then run `git fetch` and `git pull --rebase` on the branch you are on (`main`, or a task branch you are continuing).
 - **One branch per PLAN task,** started from an up-to-date `main` and named `<part>/<task-id>-<short-name>`, for example `case-library/L0.3-schema` or `umbrella/U0.1-monorepo-scaffold`. Only U0.0's commits go straight to `main`.
@@ -38,8 +38,8 @@ The umbrella is one private Git repository, `clinical-case-sim` on GitHub (S-005
 - **Push** after every commit, and always before a session ends. If a push fails, tell Atul; never end a session with unpushed work without saying so.
 - **Merge** when the task's acceptance criteria pass and its box is ticked: open a pull request with `gh pr create`, wait for the checks once CI exists (U0.1), then run `gh pr merge --squash --delete-branch`, switch to `main` and pull. For a **[human]** task, merge after Atul has done his part.
 - **One session at a time** in this repository, because Git has one checked-out branch per working folder. A second session running at the same time needs its own git worktree.
-- **Not in Git:** secrets and `.env` files, review packs, raw downloads and run data (`data/`), and case figures (they live in the `case-media` bucket). Keep every file under 50 MB.
-- **Ask Atul first** before force-pushing, rewriting history that has been pushed, running `git reset --hard`, `git clean` or `git checkout -- .`, dropping a stash, deleting a branch whose pull request has not been merged, changing the repository's visibility or settings, or adding a remote. Nothing from this repository goes anywhere public except through the research release (rule 7).
+- **Not in Git:** secrets and `.env` files, review packs, raw downloads and run data (`data/`), case figures (they live in the `case-media` bucket), player or tester data, and any production or held-out case (rule 7). Keep every file under 50 MB. Before each commit, remember it is public.
+- **Ask Atul first** before force-pushing, rewriting history that has been pushed, running `git reset --hard`, `git clean` or `git checkout -- .`, dropping a stash, deleting a branch whose pull request has not been merged, changing the repository's visibility or settings, or adding a remote.
 - If a pull, rebase or merge hits a conflict, stop and explain it to Atul in plain words before resolving it.
 
 ## Where to start a session
