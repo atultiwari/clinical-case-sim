@@ -14,6 +14,57 @@ export interface Envelope<T> {
   readonly error: { readonly code: string; readonly message: string } | null;
 }
 
+/**
+ * CORS for the web build of the player app, which is served from another origin. Only origins
+ * listed in NIDANA_ALLOWED_ORIGINS (comma-separated) are allowed; native apps do not need it.
+ */
+export function allowedOrigins(
+  env: Record<string, string | undefined> = process.env,
+): ReadonlySet<string> {
+  return new Set(
+    (env.NIDANA_ALLOWED_ORIGINS ?? "")
+      .split(",")
+      .map((o) => o.trim())
+      .filter(Boolean),
+  );
+}
+
+function corsHeaders(
+  request: Request,
+  allowed: ReadonlySet<string>,
+): Record<string, string> {
+  const origin = request.headers.get("origin");
+  if (origin === null || !allowed.has(origin)) return { Vary: "Origin" };
+  return {
+    "Access-Control-Allow-Origin": origin,
+    "Access-Control-Allow-Headers": "authorization, content-type",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Max-Age": "600",
+    Vary: "Origin",
+  };
+}
+
+/** Answers the browser's preflight request for every endpoint. */
+export function preflight(
+  request: Request,
+  allowed: ReadonlySet<string> = allowedOrigins(),
+): Response {
+  return new Response(null, {
+    status: 204,
+    headers: corsHeaders(request, allowed),
+  });
+}
+
+export function withCors(
+  request: Request,
+  response: Response,
+  allowed: ReadonlySet<string> = allowedOrigins(),
+): Response {
+  for (const [key, value] of Object.entries(corsHeaders(request, allowed)))
+    response.headers.set(key, value);
+  return response;
+}
+
 export function respond<T>(outcome: Outcome<T>): Response {
   return outcome.ok
     ? Response.json({
@@ -69,6 +120,15 @@ type Limit = keyof ServerContext["limits"];
 
 /** Signs the request in, applies the rate limit, runs the handler and turns thrown errors into a 500. */
 export async function withPlayer(
+  request: Request,
+  limit: Limit,
+  handler: (context: ServerContext, playerId: string) => Promise<Response>,
+  getContext: () => Promise<ServerContext>,
+): Promise<Response> {
+  return withCors(request, await signedIn(request, limit, handler, getContext));
+}
+
+async function signedIn(
   request: Request,
   limit: Limit,
   handler: (context: ServerContext, playerId: string) => Promise<Response>,

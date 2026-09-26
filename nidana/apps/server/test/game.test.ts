@@ -333,8 +333,40 @@ describe("commit and debrief", () => {
       plan: PLAN,
     });
     const debrief = unwrap(await getDebrief(game, PLAYER, view.encounterId));
-    expect(debrief.bundleId).toBe(PILOT);
-    expect(debrief.attribution?.licence).toBe("CC BY 4.0");
+    expect(debrief.source?.licence).toBe("CC BY 4.0");
+    expect(debrief.finalDiagnosis.id).toBe("DX.LEAD_POISONING");
+    // Origins are keyed by the Chart references the app already holds.
+    const chart = unwrap(await getView(game, PLAYER, view.encounterId)).chart;
+    expect(Object.keys(debrief.origins).sort()).toEqual(
+      chart
+        .filter((e) => e.kind !== "no_record")
+        .map((e) => e.ref)
+        .sort(),
+    );
+    const supplement =
+      chart.find((e) => e.item === "HX.MEDS.SUPPLEMENTS")?.ref ?? "";
+    expect(debrief.origins[supplement]).toBe("article");
+    expect(Object.values(debrief.origins)).toContain("normal");
+    expect(debrief.reports).toEqual([
+      expect.objectContaining({
+        test: "LAB.HAEM.FILM",
+        provisional: expect.objectContaining({ status: "provisional" }),
+        final: expect.objectContaining({ status: "final" }),
+        finalSeen: true,
+      }),
+    ]);
+    expect(
+      debrief.paths.efficient.some(
+        (p) => p.id === "LAB.TOX.BLOOD_LEAD" && p.done,
+      ),
+    ).toBe(true);
+    expect(
+      debrief.paths.efficient.every(
+        (p) => !p.id.startsWith("CMP.") && p.name !== p.id,
+      ),
+    ).toBe(true);
+    // The debrief names the article's source only through its citation; it never needs the bundle id.
+    expect(JSON.stringify(debrief)).not.toContain(PILOT);
   });
 
   it("reports a failed store commit as a conflict", async () => {

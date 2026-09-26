@@ -1,8 +1,13 @@
 import { getContext } from "@/lib/context";
 import { commit } from "@/lib/game";
-import { readJsonBody, respond, withPlayer } from "@/lib/http";
+import { preflight, readJsonBody, respond, withPlayer } from "@/lib/http";
 
 export const dynamic = "force-dynamic";
+
+/** CORS preflight for the web build of the player app. */
+export function OPTIONS(request: Request): Response {
+  return preflight(request);
+}
 
 /** POST /api/encounters/:id/commit { dx, evidence, plan, note? }: commits, scores and closes. */
 export async function POST(

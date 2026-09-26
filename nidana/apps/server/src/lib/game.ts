@@ -6,7 +6,6 @@ import {
   buildDebrief,
   replay,
   scoreEncounter,
-  type Debrief,
   type DifficultySettings,
   type EncounterState,
   type PreparedCase,
@@ -14,7 +13,9 @@ import {
   type ScoringSettings,
 } from "@nidana/engine";
 import { z } from "zod";
+import type { DebriefView } from "@nidana/contracts";
 import { BundleRefusedError } from "./bundles";
+import { buildDebriefView } from "./debrief-view";
 import type { BundleRegistry, CaseCard } from "./registry";
 import type { EncounterRecord, EncounterStore } from "./store";
 import { buildPlayerView, sourceOfRef, type PlayerView } from "./view";
@@ -251,13 +252,19 @@ export async function getDebrief(
   deps: GameDeps,
   playerId: string,
   encounterId: string,
-): Promise<Outcome<Debrief>> {
+): Promise<Outcome<DebriefView>> {
   const loaded = await loadEncounter(deps, playerId, encounterId);
   if (!loaded.ok) return loaded;
   const { prepared, state } = loaded.data;
   if (state.commit === null)
     return fail(409, "not_committed", "The debrief opens after the commit");
-  return ok(buildDebrief(prepared, deps.settings, deps.scoring, state));
+  return ok(
+    buildDebriefView(
+      prepared,
+      state,
+      buildDebrief(prepared, deps.settings, deps.scoring, state),
+    ),
+  );
 }
 
 const MissingRequestBody = z.strictObject({

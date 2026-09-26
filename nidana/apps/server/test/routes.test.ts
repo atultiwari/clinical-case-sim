@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, it, vi } from "vitest";
-import type { Debrief } from "@nidana/engine";
+import type { DebriefView } from "@nidana/contracts";
 import type { SearchItem } from "@/lib/catalogue";
 import type { CommitResult } from "@/lib/game";
 import type { Envelope } from "@/lib/http";
@@ -146,7 +146,7 @@ describe("the API over HTTP", () => {
       ),
     );
     expect(committed.body.data).toMatchObject({ diagnosisAnchor: 5 });
-    const opened = await json<Debrief>(
+    const opened = await json<DebriefView>(
       await debrief.GET(req("GET"), params(id)),
     );
     expect(opened.body.data?.finalDiagnosis.id).toBe("DX.LEAD_POISONING");

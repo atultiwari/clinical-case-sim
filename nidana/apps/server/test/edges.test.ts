@@ -165,3 +165,30 @@ describe("createRateLimiter", () => {
     expect(limiter.take("k0")).toBe(true);
   });
 });
+
+describe("CORS", () => {
+  it("allows only listed origins, on replies and preflights", async () => {
+    const { allowedOrigins, preflight, withCors } = await import("@/lib/http");
+    const allowed = allowedOrigins({
+      NIDANA_ALLOWED_ORIGINS: "http://localhost:8081, https://play.example.org",
+    });
+    const from = (origin: string) =>
+      new Request("http://x/api", { headers: { origin } });
+    const ok = preflight(from("http://localhost:8081"), allowed);
+    expect(ok.status).toBe(204);
+    expect(ok.headers.get("access-control-allow-origin")).toBe(
+      "http://localhost:8081",
+    );
+    expect(ok.headers.get("access-control-allow-headers")).toContain(
+      "authorization",
+    );
+    const other = withCors(
+      from("https://evil.example"),
+      new Response("x"),
+      allowed,
+    );
+    expect(other.headers.get("access-control-allow-origin")).toBeNull();
+    expect(other.headers.get("vary")).toBe("Origin");
+    expect(allowedOrigins({}).size).toBe(0);
+  });
+});
