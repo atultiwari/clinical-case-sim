@@ -236,7 +236,7 @@
         "evidence_has": { "$ref": "#/$defs/ids" },
         "released_all": { "$ref": "#/$defs/ids" },
         "released_any": { "$ref": "#/$defs/ids" },
-        "finding_released": { "$ref": "#/$defs/ids" },
+        "finding_released": { "$ref": "#/$defs/finding_released" },
         "from_tests": { "$ref": "#/$defs/ids" },
         "asked_any": { "$ref": "#/$defs/ids" },
         "ordered_any": { "$ref": "#/$defs/ids" },
@@ -256,6 +256,18 @@
       "dependentRequired": { "from_tests": ["finding_released"] }
     },
     "ids": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "finding_released": {
+      "description": "Finding ids, as a list, or as {findings, from_tests} to count only findings released by the given tests. A sibling from_tests key in the condition still means the same as the object's from_tests.",
+      "oneOf": [
+        { "$ref": "#/$defs/ids" },
+        {
+          "type": "object",
+          "required": ["findings"],
+          "properties": { "findings": { "$ref": "#/$defs/ids" }, "from_tests": { "$ref": "#/$defs/ids" } },
+          "additionalProperties": false
+        }
+      ]
+    },
     "test_utility": {
       "type": "object",
       "required": ["test_item_id", "utility"],
