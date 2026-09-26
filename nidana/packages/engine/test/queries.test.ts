@@ -43,6 +43,26 @@ describe("valueOf", () => {
   });
 });
 
+describe("resultsForTest", () => {
+  it("says so when a test has nothing to return", async () => {
+    const { resultsForTest } = await import("../src/index.ts");
+    const prepared = pilot();
+    const tests = new Map(prepared.tests);
+    const cbc = tests.get("LAB.HAEM.CBC");
+    if (cbc !== undefined)
+      tests.set("LAB.HAEM.CBC", { ...cbc, components: [] });
+    const drafts = resultsForTest(
+      { ...prepared, tests },
+      "LAB.HAEM.CBC",
+      0,
+      settings.difficulties.standard,
+    );
+    expect(drafts.map((d) => d.source)).toEqual([
+      { table: "none", id: "LAB.HAEM.CBC" },
+    ]);
+  });
+});
+
 describe("conditionContext", () => {
   it("records findings with both the ordered test and the report's own test", () => {
     const state = replay(pilot(), settings, "guided", [

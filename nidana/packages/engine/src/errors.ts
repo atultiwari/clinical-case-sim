@@ -6,6 +6,7 @@ export type EngineErrorCode =
   | "unknown_item"
   | "wrong_kind"
   | "not_available_to_seat"
+  | "not_orderable"
   | "over_budget"
   | "referral_limit"
   | "must_commit";

@@ -37,7 +37,7 @@ export function valueOf(
     const value = prepared.facts.get(release.source.id)?.value;
     return value == null ? undefined : { value, release };
   }
-  const row = prepared.bundle.ledger.find((l) => l.id === release.source.id);
+  const row = prepared.ledgerById.get(release.source.id);
   const stored = row?.value.value ?? row?.value.text;
   return stored === undefined || stored === null
     ? undefined

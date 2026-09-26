@@ -200,14 +200,20 @@ function applyOrder(
   item: string,
 ): ActionResult {
   const test = prepared.tests.get(item);
-  const price = test?.price_inr ?? 0;
+  if (test === undefined) {
+    return refuse({
+      code: "not_orderable",
+      message: `"${item}" has no price or turnaround in the catalogue`,
+    });
+  }
+  const price = test.price_inr ?? 0;
   if (state.spend + price > state.limits.budget) {
     return refuse({
       code: "over_budget",
       message: `"${item}" costs ₹${price}; ₹${state.limits.budget - state.spend} of the budget is left`,
     });
   }
-  const dueAt = state.clock + (test?.tat_minutes ?? 0);
+  const dueAt = state.clock + (test.tat_minutes ?? 0);
   const drafts = resultsForTest(
     prepared,
     item,

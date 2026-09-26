@@ -48,6 +48,18 @@ describe("action validation", () => {
     );
   });
 
+  it("refuses a test the catalogue lists without a price or turnaround", () => {
+    const prepared = pilot();
+    const tests = new Map(prepared.tests);
+    tests.delete("LAB.HAEM.CBC");
+    const broken = { ...prepared, tests };
+    const result = applyAction(broken, settings, start(), {
+      kind: "order",
+      item: "LAB.HAEM.CBC",
+    });
+    expect(result.ok ? undefined : result.error.code).toBe("not_orderable");
+  });
+
   it("refuses a malformed action with a clear message", () => {
     const result = applyAction(pilot(), settings, start(), {
       kind: "shout",

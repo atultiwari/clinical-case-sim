@@ -164,9 +164,11 @@ export function resultsForTest(
     }));
   }
   const components = prepared.tests.get(test)?.components ?? [];
-  return components.map((component) =>
-    componentValue(prepared, test, component, day),
-  );
+  return components.length > 0
+    ? components.map((component) =>
+        componentValue(prepared, test, component, day),
+      )
+    : [nothing(test, test, day)];
 }
 
 /** A referral: the highest consult note variant whose condition holds now, else the ledger's generic note. */

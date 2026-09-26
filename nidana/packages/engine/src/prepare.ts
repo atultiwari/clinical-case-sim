@@ -25,6 +25,7 @@ export interface PreparedCase {
   readonly factsByItem: ReadonlyMap<string, readonly Fact[]>;
   /** Result facts a player can see, by component id. */
   readonly factsByComponent: ReadonlyMap<string, readonly Fact[]>;
+  readonly ledgerById: ReadonlyMap<string, LedgerRow>;
   readonly ledgerByTarget: ReadonlyMap<string, readonly LedgerRow[]>;
   readonly reportsByTest: ReadonlyMap<string, readonly Report[]>;
   /** For each provisional (`original`) report, the final (`expert`) report on the same raw material. */
@@ -107,6 +108,7 @@ export function prepareCase(
       visible.filter((f) => f.catalogue_ref?.startsWith("CMP.") ?? false),
       (f) => [f.catalogue_ref ?? ""],
     ),
+    ledgerById: new Map(bundle.ledger.map((row) => [row.id, row])),
     ledgerByTarget: groupBy(bundle.ledger, (row) => [row.target]),
     reportsByTest: groupBy(bundle.reports, (r) =>
       r.test_item_id ? [r.test_item_id] : [],
