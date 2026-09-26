@@ -11,7 +11,9 @@ This is an educational tool. Nothing it produces is clinical advice.
 ## Pinned shared-contract versions
 
 - Case bundle schema: **0.3**
-- Catalogue: **v1** (after Case Library task L0.5)
+- Catalogue: **v2** (Case Library L1.3; pinned in N1.1 on 2026-09-26, because every published bundle except the pilot's first revision is on v2)
+
+The pins are also constants in `packages/contracts/src/versions.ts`.
 
 Upgrade only through a PLAN task, after the changelog entry in `../docs/CHANGELOG.md`.
 
@@ -55,8 +57,9 @@ British spelling in user-facing text ("haematology", "anaemia").
 - Game server: Next.js (App Router) route handlers only; the only public server.
 - Engine: `packages/engine`, pure TypeScript functions, imported only by the server.
 - Data: development uses the `play` schema in the Case Vault's Supabase project, through a least-privilege role; the store release uses self-hosted Supabase on the VPS.
-- Tests: Vitest, fast-check, Playwright (web build), Maestro (Android and iOS).
-- Quality: ESLint, Prettier, pre-commit, GitHub Actions.
+- Validation: Zod (contracts generated from the bundle schema).
+- Tests: Vitest with `@vitest/coverage-v8`, fast-check, Playwright (web build), Maestro (Android and iOS).
+- Quality: ESLint with `@eslint/js` and `typescript-eslint`, Prettier, pre-commit, GitHub Actions; `@types/node` for TypeScript (approved by Atul, 2026-09-26).
 
 ## Commands (created in N1.1–N1.5; until then they don't exist)
 

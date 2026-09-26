@@ -12,7 +12,7 @@ Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
 Acknowledgements:
 
-- [ ] Nidana: regenerate `@nidana/contracts` (`pnpm --filter @nidana/contracts generate`); the N1.1 tests on every exported bundle then pass. The engine's condition evaluator (N1.3) handles both forms.
+- [x] Nidana: regenerated `@nidana/contracts`; all 11 exported bundles validate (N1.1, 2026-09-26). The engine's condition evaluator (N1.3) will handle both forms and the sibling `from_tests` key.
 - [ ] Sambhasha: make the condition evaluator accept both forms of `finding_released`, and the sibling `from_tests` key.
 ## 2026-09-26: notice: the repository is public, and every committed case is development-only (no contract change)
 
@@ -35,7 +35,7 @@ Acknowledgements:
 
 Acknowledgements:
 
-- [ ] Nidana: no action needed (development play has no primary results); tick with a note.
+- [x] Nidana: no action needed (development play has no primary results). Ticked 2026-09-26, N1.1.
 - [ ] Sambhasha: clear the not-eligible flag for these four bundles only, keep it on the other six, and check that the primary analysis now admits exactly these four.
 
 ## 2026-09-26: notice: the ten published bundles were approved in bulk (no contract change)
@@ -47,7 +47,7 @@ Acknowledgements:
 
 Acknowledgements:
 
-- [ ] Nidana: no action needed (development play has no primary results); tick with a note.
+- [x] Nidana: no action needed (development play has no primary results). Ticked 2026-09-26, N1.1.
 - [ ] Sambhasha: mark these ten bundles as not eligible for a study's primary results (for example a flag in the case registry that the primary analysis honours), and keep the flag until an entry here announces an item-by-item review of the case.
 
 ## 2026-09-25: catalogue v2 (Case Library L1.3, batch 1)
@@ -60,7 +60,7 @@ Acknowledgements:
 
 Acknowledgements:
 
-- [ ] Nidana: pin catalogue v2 (or keep v1 with a reason) and import `PMC12949993@v1.r2` when it is published.
+- [x] Nidana: pinned catalogue v2 in N1.1 (2026-09-26; `nidana/CLAUDE.md` and `@nidana/contracts`). `PMC12949993@v1.r2` is the pilot bundle Nidana uses; `.r1` is on catalogue v1 and the server will refuse it (N1.4).
 - [ ] Sambhasha: regenerate `configs/prices_inr.yaml` and `configs/turnaround.yaml` from the catalogue v2 export.
 
 ## 2026-09-25: a day without a result returns the latest earlier result (bundle schema 0.3, planned)
@@ -70,7 +70,7 @@ Acknowledgements:
 
 Acknowledgements:
 
-- [ ] Nidana: the game server answers an order on a day without a value with the latest earlier value and shows its day.
+- [ ] Nidana: the game server answers an order on a day without a value with the latest earlier value and shows its day. Open: scheduled in engine task N1.2 (added to its acceptance criteria on 2026-09-26); tick when N1.2 passes.
 - [ ] Sambhasha: the Gatekeeper does the same when it releases results to the Chart.
 
 ## 2026-09-25: catalogue v1 (Case Library L0.5)
@@ -87,7 +87,7 @@ Acknowledgements:
 
 Acknowledgements:
 
-- [ ] Nidana: pin catalogue v1 once it is recorded here.
+- [x] Nidana: superseded; Nidana pins catalogue v2 (see the catalogue v2 entry). Ticked 2026-09-26, N1.1.
 - [ ] Sambhasha: generate `configs/prices_inr.yaml` and `configs/turnaround.yaml` from the catalogue v1 export.
 
 ## 2026-09-25: bundle schema 0.3 and catalogue v0 (planned)
