@@ -1,5 +1,6 @@
 """P0.2: case bundle models for schema 0.3 (Case Library SPEC §10)."""
 
+import re
 from pathlib import Path
 from typing import Any
 
@@ -10,7 +11,23 @@ from tests.unit.domain.bundle_factory import minimal_bundle, to_bytes
 
 EXPORTS = Path(__file__).resolve().parents[4] / "case-library" / "exports"
 PUBLISHED = sorted(EXPORTS.glob("*.json"))
-PILOT = EXPORTS / "PMC12949993@v1.r1.json"
+_BUNDLE_NAME = re.compile(r"(?P<case>.+)@v(?P<version>[0-9]+)\.r(?P<revision>[0-9]+)\.json")
+
+
+def _latest_revisions(paths: list[Path]) -> list[Path]:
+    """The newest bundle of each case. Older revisions stay published but runs use the newest."""
+    latest: dict[str, tuple[tuple[int, int], Path]] = {}
+    for path in paths:
+        match = _BUNDLE_NAME.fullmatch(path.name)
+        assert match, f"unexpected file name in exports: {path.name}"
+        rank = (int(match["version"]), int(match["revision"]))
+        if match["case"] not in latest or rank > latest[match["case"]][0]:
+            latest[match["case"]] = (rank, path)
+    return sorted(path for _, path in latest.values())
+
+
+LATEST = _latest_revisions(PUBLISHED)
+PILOT = next(p for p in LATEST if p.name.startswith("PMC12949993@"))
 
 
 def _rejection(bundle: dict[str, Any]) -> str:
@@ -23,11 +40,17 @@ def _rejection(bundle: dict[str, Any]) -> str:
 
 
 def test_the_case_library_has_published_bundles() -> None:
-    assert len(PUBLISHED) >= 10
+    assert len(LATEST) >= 10
 
 
-@pytest.mark.parametrize("path", PUBLISHED, ids=lambda p: p.name)
-def test_every_published_bundle_validates(path: Path) -> None:
+def test_only_the_newest_revision_of_each_case_is_checked() -> None:
+    names = [p.name for p in _latest_revisions([Path("X1@v1.r1.json"), Path("X1@v1.r2.json")])]
+
+    assert names == ["X1@v1.r2.json"]
+
+
+@pytest.mark.parametrize("path", LATEST, ids=lambda p: p.name)
+def test_the_newest_bundle_of_every_case_validates(path: Path) -> None:
     bundle = parse_bundle(path.read_bytes())
 
     assert bundle.schema_version == "0.3"
@@ -37,7 +60,7 @@ def test_every_published_bundle_validates(path: Path) -> None:
 def test_the_pilot_bundle_has_its_facts() -> None:
     pilot = parse_bundle(PILOT.read_bytes())
 
-    assert pilot.bundle_id == "PMC12949993@v1.r1"
+    assert pilot.bundle_id.startswith("PMC12949993@v1.")
     assert len(pilot.facts) == 191
     assert sum(f.category == "history" for f in pilot.facts) == 10
     assert len(pilot.raw_material) == 3

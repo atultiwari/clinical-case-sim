@@ -25,6 +25,7 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Depends on: U0.1.
 
 - [ ] **P0.2 Domain models and JSON schemas**
+  - In progress 26 Sep 2026: the models are built and 150 tests pass (`src/sambhasha/domain/`); the pilot bundle exists, so the 0.2 stand-in was not needed. Blocked on the Case Library: seven published bundles write `finding_released` as an object `{findings, from_tests}`, which schema 0.3 does not allow. Atul chose to have the Case Library re-export them as new revisions in the schema's form; the tests check the newest revision of each case and pass once those land.
   - Build: Pydantic models in `src/sambhasha/domain/` for the case bundle (schema 0.3, generated from `../case-library/schemas/case-bundle.v0.3.schema.json`; Case Library SPEC §10), actions (§6), events, orders, seat views and scores. Until the pilot bundle exists, copy the pilot draft (`../case-library/cases/PMC12949993/gold-case-file.draft.json`, schema 0.2) to `tests/fixtures/pilot/` as a stand-in. Closes the Sambhasha item of the 25 Sep 2026 entry in `../docs/CHANGELOG.md` together with P0.6.
   - Accept: the pilot bundle validates once LM0 is reached (the draft validates against the 0.2 models until then); series expand to 125 atomic facts; ids are unique; invalid files (a missing licence, an unknown `release` value or origin) are rejected with clear messages.
   - Depends on: P0.1.
