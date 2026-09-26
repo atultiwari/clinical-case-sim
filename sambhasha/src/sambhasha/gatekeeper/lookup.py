@@ -123,24 +123,46 @@ class CaseIndex:
         self._raw = MappingProxyType({k: tuple(v) for k, v in raw.items()})
 
     def answer(self, item_id: str, day: int, question: str) -> tuple[Line, ...]:
-        """History and examination: the facts released by the item, else its ledger reply."""
-        facts = [
-            f
-            for f in self._facts_by_item.get(item_id, ())
-            if _dated(f.day, day) and _conditions_met(f, question)
-        ]
+        """History, examination or a whole-test reply: the item's facts, else its ledger reply.
+
+        A fact that reveals the diagnosis is never an answer to a question: it comes only as
+        a component of its own confirmatory test (SPEC §7, rule 4). If the item has a fact
+        held back by its release condition, nothing else answers for it either: falling back
+        to a ledger reply would show that something was held back.
+        """
+        dated = [f for f in self._facts_by_item.get(item_id, ()) if _dated(f.day, day)]
+        held_back = any(f.reveals_dx or not _conditions_met(f, question) for f in dated)
+        facts = [f for f in dated if not f.reveals_dx and _conditions_met(f, question)]
         if facts:
             return tuple(Line(source_id=f.id, text=fact_text(f)) for f in facts)
+        if held_back:
+            return ()
         row = _latest(self._ledger.get(item_id, ()), _ledger_day, day)
         return () if row is None else (self._ledger_line(row, item_id, day),)
 
-    def component(self, component_id: str, day: int) -> Line | None:
-        """One result component on a day: the article's value, else the ledger's."""
-        fact = _latest(self._facts_by_component.get(component_id, ()), _fact_day, day)
+    def component(self, component_id: str, day: int, indication: str) -> Line | None:
+        """One result component on a day: the article's value, else the ledger's.
+
+        A value with a release condition needs its topic named in the order's indication.
+        """
+        facts = self._facts_by_component.get(component_id, ())
+        eligible = [f for f in facts if _conditions_met(f, indication)]
+        if len(eligible) < len(facts):
+            facts = tuple(eligible)
+            if not facts:
+                return None
+        fact = _latest(facts, _fact_day, day)
         if fact is not None:
             return Line(source_id=fact.id, text=fact_text(fact), from_day=_earlier(fact.day, day))
         row = _latest(self._ledger.get(component_id, ()), _ledger_day, day)
         return None if row is None else self._ledger_line(row, component_id, day)
+
+    def held_back(self, component_id: str, indication: str) -> bool:
+        """Whether a value for the component exists but its release condition is unmet."""
+        return any(
+            not _conditions_met(f, indication)
+            for f in self._facts_by_component.get(component_id, ())
+        )
 
     def raw_material(self, test_id: str, day: int) -> RawMaterial | None:
         return _latest(self._raw.get(test_id, ()), _raw_day, day)

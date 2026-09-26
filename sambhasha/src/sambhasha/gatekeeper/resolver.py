@@ -185,15 +185,17 @@ class Gatekeeper:
         reports = tuple(c for c in item.components if service and c.endswith("_REPORT"))
         direct = tuple(c for c in item.components if c not in reports)
         # A reply for the whole test (a rule such as "Not applicable") comes first.
-        whole_test = self._index.answer(item.id, day, "")
+        whole_test = self._index.answer(item.id, day, indication)
         if whole_test:
             return Released(item_id=item.id, lines=whole_test)
-        lines = tuple(line for c in direct if (line := self._index.component(c, day)))
+        lines = tuple(line for c in direct if (line := self._index.component(c, day, indication)))
         released = Released(item_id=item.id, lines=lines) if lines else None
         if service and reports:
             return self._service_request(item, service, reports, day, indication, released)
         if released:
             return released
+        if any(self._index.held_back(c, indication) for c in item.components):
+            return Refused(reason=self._permissions.refusals.not_understood)
         self._coder.record_missing(item.id, kinds=("test",), bundle_id=self._bundle_id)
         return OutsideCatalogue(query=item.id, kind="test")
 
@@ -220,7 +222,7 @@ class Gatekeeper:
                 released=released,
             )
         # No article material: the reviewed report text from the ledger is what the service reads.
-        lines = tuple(line for c in reports if (line := self._index.component(c, day)))
+        lines = tuple(line for c in reports if (line := self._index.component(c, day, indication)))
         return ServiceRequest(
             item_id=item.id,
             service=service,

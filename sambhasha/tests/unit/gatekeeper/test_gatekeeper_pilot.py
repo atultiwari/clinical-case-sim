@@ -7,7 +7,13 @@ import pytest
 
 from sambhasha.catalogue import Catalogue, CatalogueItem
 from sambhasha.domain.actions import AskHistory, BedsideTest, Examine, OrderTest
-from sambhasha.domain.case_file import Fact, LedgerRow, parse_bundle
+from sambhasha.domain.case_file import (
+    CaseBundle,
+    Fact,
+    LedgerRow,
+    ReleaseCondition,
+    parse_bundle,
+)
 from sambhasha.gatekeeper.coding import Coder, MissingRequestLog
 from sambhasha.gatekeeper.policy import load_permissions
 from sambhasha.gatekeeper.resolver import (
@@ -381,3 +387,90 @@ def test_facts_for_services_or_never_released_do_not_reach_the_chart(
     outcome = gatekeeper.resolve(_ask("attending", AskHistory(question=SUPPLEMENT_QUESTION)))
 
     assert supplement.release_text not in getattr(outcome, "text", "")
+
+
+# --- review findings (P1.3): hidden facts stay hidden on every path ---
+
+
+def _with(facts: tuple[Fact, ...] = (), ledger: tuple[LedgerRow, ...] = ()) -> CaseBundle:
+    return PILOT.model_copy(
+        update={"facts": (*PILOT.facts, *facts), "ledger": (*PILOT.ledger, *ledger)}
+    )
+
+
+def _keeper(bundle: CaseBundle, missing: MissingRequestLog) -> Gatekeeper:
+    return Gatekeeper(
+        bundle,
+        CATALOGUE,
+        coder=Coder(CATALOGUE, missing=missing),
+        matcher=StubMatcher({}),
+        permissions=load_permissions(),
+    )
+
+
+def test_an_unmet_condition_never_falls_back_to_a_ledger_reply(
+    missing: MissingRequestLog,
+) -> None:
+    template = next(r for r in PILOT.ledger if r.target.startswith("HX."))
+    ledger_reply = template.model_copy(
+        update={"id": "LX1", "target": "HX.MEDS.SUPPLEMENTS", "release_text": "Leaked reply."}
+    )
+    gatekeeper = _keeper(_with(ledger=(ledger_reply,)), missing)
+
+    outcome = gatekeeper.release_history("HX.MEDS.SUPPLEMENTS", question="Any toxins?", day=0)
+
+    assert isinstance(outcome, Refused)
+
+
+def test_a_result_with_a_release_condition_needs_its_topic_in_the_indication(
+    missing: MissingRequestLog,
+) -> None:
+    lead = FACTS["L26"]
+    gated = lead.model_copy(
+        update={"release_condition": ReleaseCondition(requires_topics=("stippling",))}
+    )
+    bundle = PILOT.model_copy(
+        update={"facts": tuple(gated if f.id == "L26" else f for f in PILOT.facts)}
+    )
+    gatekeeper = _keeper(bundle, missing)
+
+    without = gatekeeper.resolve(
+        _ask("attending", OrderTest(item="blood lead", indication="anaemia"))
+    )
+    with_topic = gatekeeper.resolve(
+        _ask("attending", OrderTest(item="blood lead", indication="coarse stippling on film"))
+    )
+
+    assert isinstance(without, Refused)
+    assert without.reason == load_permissions().refusals.not_understood
+    assert isinstance(with_topic, Released)
+    assert "L26" in with_topic.fact_ids
+
+
+def test_a_diagnosis_revealing_fact_is_never_released_by_a_question(
+    missing: MissingRequestLog,
+) -> None:
+    revealing = FACTS["H10"].model_copy(update={"reveals_dx": True})
+    bundle = PILOT.model_copy(
+        update={"facts": tuple(revealing if f.id == "H10" else f for f in PILOT.facts)}
+    )
+    gatekeeper = _keeper(bundle, missing)
+
+    outcome = gatekeeper.release_history("HX.MEDS.SUPPLEMENTS", question=SUPPLEMENT_QUESTION, day=0)
+
+    assert "H10" not in getattr(outcome, "fact_ids", ())
+
+
+def test_a_diagnosis_revealing_result_comes_with_its_own_test(
+    missing: MissingRequestLog,
+) -> None:
+    revealing = FACTS["L26"].model_copy(update={"reveals_dx": True})
+    bundle = PILOT.model_copy(
+        update={"facts": tuple(revealing if f.id == "L26" else f for f in PILOT.facts)}
+    )
+    gatekeeper = _keeper(bundle, missing)
+
+    outcome = gatekeeper.resolve(_ask("attending", OrderTest(item="blood lead", indication="x")))
+
+    assert isinstance(outcome, Released)
+    assert outcome.fact_ids == ("L26",)
