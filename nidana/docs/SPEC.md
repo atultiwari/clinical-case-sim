@@ -142,10 +142,11 @@ flowchart TD
 
 ### 5.4 Clock, cost and limits
 
-- A simulated clock in minutes from arrival on day 0. A history question takes 5 minutes, an examination 10 and a referral 4 hours; tests take their turnaround time from the catalogue.
-- Results appear when due. **Wait** moves the clock to the next due result.
-- The day bucket is the simulated day. A test ordered on day *d* returns the latest article value at or before *d*. When a series starts after *d* (the pilot's neutrophil count starts on day 1), the nearest later value within 24 hours is carried back as a `derived` value, scaled to that day's total where one exists (a white cell differential is scaled to that day's white count); beyond 24 hours a ledger row is needed.
-- Limits: a budget in INR and a maximum simulated stay (default 7 days). Reaching either forces a commit.
+- A simulated clock in minutes from arrival on day 0. A history question takes 5 minutes and an examination 10. Placing an order or a referral takes no time: a test's result arrives after its catalogue turnaround, and a consult note 4 hours after the referral. Settings in `configs/difficulty.json`.
+- Results appear when due. **Wait** moves the clock to the next due result; with nothing pending, to the start of the next day; or forward by a chosen number of minutes.
+- The day bucket is the simulated day. A test ordered on day *d* returns, for each component, the value on the latest day at or before *d*, marked with the day it was taken ("result from day 0"); a value with no day holds throughout the admission. The Case Library's coverage check guarantees a value on day 0 for every component, so nothing is carried back (changelog, 2026-09-25; Case Library SPEC §10.2).
+- A referral returns the highest consult note variant whose condition the Chart meets at the moment of referral.
+- Limits: a budget in INR (the efficient path's test prices times the difficulty's factor) and a maximum simulated stay (default 7 days). An order the remaining budget cannot pay for is refused; reaching the maximum stay forces a commit.
 - Until the voice mode, treatments are chosen at commit. Nothing is given mid-encounter and no treatment response is simulated.
 
 ### 5.5 History and hidden facts
@@ -462,7 +463,7 @@ nidana/
 ├── packages/
 │   ├── contracts/       generated from ../case-library/schemas/
 │   └── engine/          replay, release rules, clock, scoring
-├── configs/             scoring.yaml  difficulty.yaml
+├── configs/             scoring.yaml  difficulty.json
 ├── supabase/proposed/   play-schema migrations for the Case Library to apply (development)
 ├── conformance/         scripted playthroughs with expected outcomes (contain answers)
 └── docs/                SPEC.md  PLAN.md  DECISIONS.md  archive/

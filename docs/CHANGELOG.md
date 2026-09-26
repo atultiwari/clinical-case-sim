@@ -20,7 +20,7 @@ Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
 Acknowledgements:
 
-- [ ] Nidana: load the newest published revision of each case (`r2`, and `r3` for the pilot); tick with a note.
+- [x] Nidana: the engine's tests and the pilot's conformance playthrough load the newest revision of each case (`PMC12949993@v1.r3` for the pilot), and all pass; the game server will load the newest published revision (N1.4). Ticked 2026-09-26, N1.2.
 - [x] Sambhasha: P0.2's bundle tests read the newest revision of each case, and all pass. Ticked 2026-09-26, P0.2.
 
 ## 2026-09-26: bundle schema 0.3 correction: `finding_released` also takes an object (Case Library L1.7)
@@ -90,7 +90,7 @@ Acknowledgements:
 
 Acknowledgements:
 
-- [ ] Nidana: the game server answers an order on a day without a value with the latest earlier value and shows its day. Open: scheduled in engine task N1.2 (added to its acceptance criteria on 2026-09-26); tick when N1.2 passes.
+- [x] Nidana: the engine answers an order on a day without a value with the latest earlier value and marks its day (`requestedDay` and `day` on each release; N1.2, 2026-09-26). The player app shows the day (N1.5).
 - [ ] Sambhasha: the Gatekeeper does the same when it releases results to the Chart.
 
 ## 2026-09-25: catalogue v1 (Case Library L0.5)
