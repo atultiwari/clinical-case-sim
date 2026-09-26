@@ -6,7 +6,8 @@ reads back equal to the one imported. The database guards sealed bundles and the
 itself; this module never updates or deletes either.
 """
 
-from collections.abc import Callable, Iterable, Sequence
+from collections.abc import Callable, Iterable, Iterator, Sequence
+from contextlib import contextmanager
 from datetime import datetime
 from typing import Any, Final, LiteralString
 from uuid import UUID
@@ -403,3 +404,10 @@ class PostgresRepository:
             raise duplicate_error(duplicate) from error
         except psycopg.errors.ForeignKeyViolation as error:
             raise NotFoundError(missing) from error
+
+
+@contextmanager
+def open_postgres(url: str) -> Iterator[PostgresRepository]:
+    """A repository on its own autocommit connection, closed afterwards."""
+    with psycopg.connect(url, autocommit=True) as connection:
+        yield PostgresRepository(connection)

@@ -8,7 +8,7 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
 
 | Milestone | Done when |
 | --- | --- |
-| M0 | The pilot bundle `PMC12949993@v1.r1` from the Case Library (LM0) imports cleanly and passes the import-time leak scan |
+| M0 | The pilot bundle `PMC12949993@v1.r1` from the Case Library (LM0) imports cleanly and passes the import-time leak scan (reached 26 Sep 2026, P0.6) |
 | M1 | The pilot runs end to end with the fake model (deterministic) and with live models; every invariant test passes |
 | M2 | The Phase 2 study protocol is pre-registered and the first scored batch has run in Inspect AI |
 | M3 | Superseded: the teaching game is Nidana (D-027) |
@@ -44,7 +44,8 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Accept: seeded leaks are caught. For the pilot these include "lead poisoning", "plumbism", "saturnism" and "lead toxicity" in a vignette, a caption and a synthetic narrative. Test names such as "blood lead" are not flagged.
   - Depends on: P0.2.
 
-- [ ] **P0.6 Bundle importer**
+- [x] **P0.6 Bundle importer**
+  - Done 26 Sep 2026, milestone M0: `sambhasha case import` and `sambhasha case list` (`curation/importer.py`). The importer checks the `.sha256` file and the file's bytes, validates schema 0.3, refuses a file not named for its bundle, leak-scans (P0.5) and stores the bundle sealed, marked not eligible (S-010). `PMC12949993@v1.r1` imports with 191 facts (10 history, 125 series points, 35 single results, 21 derived; the PLAN's 26 single results came from the 0.2 draft, and the Case Library curated 35), 1,109 ledger rows, 16 reports, 22 consult notes, 3 raw material, 4 media and 20 gaps, with no leaks; the newest bundle of every case imports, and the primary analysis admits none. A wrong hash, a changed byte, a missing or foreign `.sha256`, schema 0.2, a leak and a second import are refused. Run by hand into the local database: imported, re-import refused, a fact update refused by the database.
   - Build: `sambhasha case import <bundle.json>` validates a Case Library bundle (schema 0.3), checks the SHA-256 of the file's bytes against its `.sha256` file, writes the case tables (facts, ledger rows, reports, consult notes, media, gaps, ground truth) and runs the leak scanner on all seat-facing text. It records the bundle revision; it never writes to the Case Vault. The case registry carries a `primary_eligible` flag that the primary analysis honours. Every case committed to this repository is development-only (S-010), so every bundle it imports today, the four starter cases included, is not eligible; only cases from the future private study set can be. Closes the Sambhasha items of the three 26 Sep 2026 eligibility notices in `../docs/CHANGELOG.md`.
   - Accept: every current bundle imports as not eligible, and the primary analysis admits none of them. Importing `PMC12949993@v1.r1` creates 164 imported fact and raw-material rows (10 history, 125 series points, 26 single results, 3 raw material) plus the derived rows, the approved ledger rows, 4 media rows and 20 gap rows, with no leaks; a bundle with a wrong hash or an unsupported schema version is refused.
   - Depends on: P0.3, P0.5; Case Library LM0.

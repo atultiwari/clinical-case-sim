@@ -12,8 +12,8 @@ This is an educational research tool. Nothing it produces is clinical advice.
 
 ## Pinned shared-contract versions
 
-- Case bundle schema: **0.2** in the current design; moving to **0.3** is an open item in `../docs/CHANGELOG.md` (tasks P0.2 and P0.6).
-- Catalogue: **v1** (after Case Library task L0.5).
+- Case bundle schema: **0.3** (P0.2 models, P0.6 importer). Bundles of any other version are refused.
+- Catalogue: **v2** (the published bundles' catalogue; the leak scanner reads `../case-library/catalogue/`).
 
 ## Read before any work
 

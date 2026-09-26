@@ -44,7 +44,7 @@ Acknowledgements:
 Acknowledgements:
 
 - [x] Nidana: no action for development play; before the store release (Phase 4), load only cases from the new production set. Ticked 2026-09-26, U0.2.
-- [ ] Sambhasha: mark every current bundle as not eligible for a study's primary results (the four starter cases included), and plan the study on the new case set.
+- [x] Sambhasha: the importer (P0.6) marks every bundle it imports not eligible, with the reason S-010, and the primary analysis admits only eligible bundles (none today); the study will use the new private case set (PLAN Phase 2). Ticked 2026-09-26, P0.6.
 
 ## 2026-09-26: notice: Sambhasha's four starter cases are now reviewed item by item (no contract change)
 
@@ -56,7 +56,7 @@ Acknowledgements:
 Acknowledgements:
 
 - [x] Nidana: no action needed (development play has no primary results). Ticked 2026-09-26, N1.1.
-- [ ] Sambhasha: clear the not-eligible flag for these four bundles only, keep it on the other six, and check that the primary analysis now admits exactly these four.
+- [x] Sambhasha: superseded by the S-010 notice above before Sambhasha had a registry: all four stay not eligible. Ticked 2026-09-26, P0.6.
 
 ## 2026-09-26: notice: the ten published bundles were approved in bulk (no contract change)
 
@@ -68,7 +68,7 @@ Acknowledgements:
 Acknowledgements:
 
 - [x] Nidana: no action needed (development play has no primary results). Ticked 2026-09-26, N1.1.
-- [ ] Sambhasha: mark these ten bundles as not eligible for a study's primary results (for example a flag in the case registry that the primary analysis honours), and keep the flag until an entry here announces an item-by-item review of the case.
+- [x] Sambhasha: the case registry has the flag and the primary analysis honours it; every imported bundle is not eligible (now for S-010). Ticked 2026-09-26, P0.6.
 
 ## 2026-09-25: catalogue v2 (Case Library L1.3, batch 1)
 
@@ -123,4 +123,4 @@ Acknowledgements:
 Acknowledgements:
 
 - [x] Nidana: designed against schema 0.3 (`nidana/docs/SPEC.md`).
-- [ ] Sambhasha: move the domain models and the importer from schema 0.2 to 0.3 (Sambhasha PLAN P0.2 and P0.6); map Gatekeeper requests, and before scoring the Commit and each service report, to catalogue ids (D-022, P1.2 and P1.8).
+- [ ] Sambhasha: move the domain models and the importer from schema 0.2 to 0.3 (Sambhasha PLAN P0.2 and P0.6); map Gatekeeper requests, and before scoring the Commit and each service report, to catalogue ids (D-022, P1.2 and P1.8). Progress 2026-09-26: models (P0.2) and importer (P0.6) are on schema 0.3; the catalogue mapping (P1.2, P1.8) remains.

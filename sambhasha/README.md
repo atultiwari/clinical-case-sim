@@ -32,6 +32,16 @@ uv run pytest -m "integration or not integration"  # every test, the database on
 supabase db reset                                   # start again from the migrations
 ```
 
+## Import cases
+
+```bash
+supabase db start
+uv run sambhasha case import ../case-library/exports/PMC12949993@v1.r3.json
+uv run sambhasha case list
+```
+
+The importer checks the file's SHA-256, validates the bundle (schema 0.3), leak-scans every seat-facing text and stores it sealed. Every case in this public repository is development-only (S-010), so each is marked not eligible for a study's primary results. The tests need an empty run database: run `supabase db reset` after importing by hand.
+
 ## Documents
 
 - [docs/SPEC.md](docs/SPEC.md): the design
