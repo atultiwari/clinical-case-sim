@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { ACTION_ITEM_KIND, Action, SEAT, type ItemAction } from "./actions.ts";
+import { checkCommit, commitOf, type Commit } from "./commit.ts";
 import { EngineError, type ActionError } from "./errors.ts";
 import type { PreparedCase } from "./prepare.ts";
 import { conditionContext } from "./queries.ts";
@@ -62,6 +63,8 @@ export interface EncounterState {
   readonly limits: Limits;
   /** Set when a limit is reached; only a commit is accepted after it. */
   readonly mustCommit: "max_stay" | null;
+  /** Set by the commit, which closes the encounter. */
+  readonly commit: Commit | null;
 }
 
 export type ActionResult =
@@ -107,6 +110,7 @@ export function initialState(
       referralsAllowed: level.referrals_allowed,
     },
     mustCommit: null,
+    commit: null,
   };
 }
 
@@ -333,6 +337,12 @@ function dispatch(
       return { ok: true, state: applyWait(state, action.minutes) };
     case "differential":
       return applyDifferential(prepared, state, action.items);
+    case "commit": {
+      const error = checkCommit(prepared, state, action);
+      return error === null
+        ? { ok: true, state: { ...state, commit: commitOf(state, action) } }
+        : refuse(error);
+    }
   }
 }
 
@@ -350,7 +360,13 @@ export function applyAction(
       message: z.prettifyError(parsed.error),
     });
   const action = parsed.data;
-  if (state.mustCommit !== null) {
+  if (state.commit !== null) {
+    return refuse({
+      code: "committed",
+      message: "The encounter has been committed and is closed",
+    });
+  }
+  if (state.mustCommit !== null && action.kind !== "commit") {
     return refuse({
       code: "must_commit",
       message: "A limit has been reached; the encounter can only be committed",

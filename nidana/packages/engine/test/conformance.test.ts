@@ -6,15 +6,23 @@ import {
   prepareCase,
   releasedIds,
   replay,
+  scoreEncounter,
   valueOf,
 } from "../src/index.ts";
-import { catalogue, loadBundle, readConformance, settings } from "./helpers.ts";
+import {
+  catalogue,
+  loadBundle,
+  readConformance,
+  scoring,
+  settings,
+} from "./helpers.ts";
 
 const Playthrough = z.object({
   description: z.string(),
   bundle: z.string(),
   difficulty: Difficulty,
   actions: z.array(Action),
+  commit: Action,
   expect: z.object({
     clock: z.number(),
     spend: z.number(),
@@ -22,6 +30,12 @@ const Playthrough = z.object({
     not_released: z.array(z.string()),
     values: z.record(z.string(), z.string()),
     pending: z.array(z.string()),
+    score: z.object({
+      diagnosis_anchor: z.number(),
+      must_do_met: z.number(),
+      must_do_total: z.number(),
+      must_not_do_violated: z.number(),
+    }),
   }),
 });
 
@@ -52,5 +66,21 @@ describe.each(["PMC12949993/benchmark-path.json"])("conformance %s", (file) => {
     for (const [component, value] of Object.entries(expected.values)) {
       expect(valueOf(prepared, state, component)?.value).toBe(value);
     }
+  });
+
+  it("scores the commit as expected", () => {
+    const committed = replay(prepared, settings, playthrough.difficulty, [
+      ...playthrough.actions,
+      playthrough.commit,
+    ]);
+    const score = scoreEncounter(prepared, settings, scoring, committed);
+    expect(score.diagnosis.anchor).toBe(expected.score.diagnosis_anchor);
+    expect(score.mustDo.filter((m) => m.met).length).toBe(
+      expected.score.must_do_met,
+    );
+    expect(score.mustDo).toHaveLength(expected.score.must_do_total);
+    expect(score.safety.violations).toHaveLength(
+      expected.score.must_not_do_violated,
+    );
   });
 });

@@ -1,0 +1,22 @@
+{
+  "version": "scoring-2026-09-26",
+  "diagnosis": {
+    "points_by_anchor": { "5": 40, "4": 30, "3": 18, "2": 6, "1": 0 }
+  },
+  "management": { "points": 30 },
+  "efficiency": {
+    "cost_points": 10,
+    "test_points": 5,
+    "unnecessary_test_penalty": 1,
+    "risky_test_penalty": 2,
+    "routine_tests": ["LAB.HAEM.CBC", "LAB.CHEM.RENAL", "LAB.CHEM.LFT"],
+    "time_points": 5
+  },
+  "reasoning": {
+    "differential_points": 4,
+    "discriminator_points": 3,
+    "referral_points": 3,
+    "referral_penalty": 1
+  },
+  "safety": { "penalty_per_violation": 15, "cap_total": 50 }
+}

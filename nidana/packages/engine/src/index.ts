@@ -6,3 +6,8 @@ export * from "./prepare.ts";
 export * from "./queries.ts";
 export * from "./resolve.ts";
 export * from "./settings.ts";
+export * from "./commit.ts";
+export * from "./debrief.ts";
+export * from "./ground-truth.ts";
+export * from "./scoring.ts";
+export * from "./scoring-settings.ts";
