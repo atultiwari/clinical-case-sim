@@ -4,6 +4,18 @@ Every change to the shared contract (S-004) gets an entry here, newest first. Ea
 
 Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
+## 2026-09-26: notice: Sambhasha's four starter cases are now reviewed item by item (no contract change)
+
+- Atul reviewed four cases item by item in the Case Studio and confirmed every item as it stands, with no edits or rejections: `PMC11227049@v1`, `PMC11227436@v1`, `PMC11890614@v1` and `PMC12007988@v1`. The Case Vault records this as review batch `chat-2026-09-26-atul-itemwise-sambhasha-starters` (7,154 `approve` decisions by `atul`: every fact, live ledger row, report and consult note, and each ground truth).
+- The frozen content did not change, so the published bundles `PMC11227049@v1.r1`, `PMC11227436@v1.r1`, `PMC11890614@v1.r1` and `PMC12007988@v1.r1` stand as they are, with the same SHA-256.
+- These four bundles, and only these four, are now eligible for a Sambhasha study's primary results (invariant 1). This lifts the caveat of the bulk-approval notice below for these four only. The other five batch 1 bundles (`PMC11015937`, `PMC12364935`, `PMC12643702`, `PMC13193864`, `PMC13400839`) and the pilot (`PMC12949993@v1.r1` and `.r2`) are still bulk approvals and stay ineligible.
+- The shared contract is unchanged: no bundle, schema or catalogue version moves.
+
+Acknowledgements:
+
+- [ ] Nidana: no action needed (development play has no primary results); tick with a note.
+- [ ] Sambhasha: clear the not-eligible flag for these four bundles only, keep it on the other six, and check that the primary analysis now admits exactly these four.
+
 ## 2026-09-26: notice: the ten published bundles were approved in bulk (no contract change)
 
 - Every bundle the Case Vault has published so far was approved by Atul as a whole, not reviewed item by item: `PMC12949993@v1.r1` and `.r2` (the pilot), and the nine batch 1 bundles `PMC11015937@v1.r1`, `PMC11227049@v1.r1`, `PMC11227436@v1.r1`, `PMC11890614@v1.r1`, `PMC12007988@v1.r1`, `PMC12364935@v1.r1`, `PMC12643702@v1.r1`, `PMC13193864@v1.r1`, `PMC13400839@v1.r1`. Sambhasha's four starter cases are among the nine.
