@@ -34,7 +34,11 @@ describe("parseBundle", () => {
 
   it("rejects a source without a licence, naming the field", () => {
     const bundle = fixture("bundle");
-    const { licence: _licence, ...source } = bundle.source as Json;
+    const source = Object.fromEntries(
+      Object.entries(bundle.source as Json).filter(
+        ([key]) => key !== "licence",
+      ),
+    );
     const message = errorOf({ ...bundle, source });
     expect(message).toContain("Invalid case bundle");
     expect(message).toContain("source.licence");
@@ -152,6 +156,32 @@ describe("parseBundle", () => {
       const message = errorOf(withMustDo({ from_tests: ["LAB.HAEM.FILM"] }));
       expect(message).toContain("ground_truth.must_do[0].if.finding_released");
       expect(message).toContain('required when "from_tests" is present');
+    });
+
+    it("reports a keyword count problem even when a keyword is also malformed", () => {
+      const result = parseBundle(
+        withMustDo({ dx_in: "DX.A", asked_any: ["HX.A"], plan_has: ["RX.A"] }),
+      );
+      const problems =
+        result.error?.issues.map((issue) => issue.message).join("\n") ?? "";
+      expect(problems).toContain("expected array");
+      expect(problems).toContain("found 3");
+    });
+
+    it("reports a missing status line even when another report field is malformed", () => {
+      const bundle = fixture("bundle");
+      const reports = list(bundle, "reports").map((report, i) =>
+        i === 0
+          ? { ...report, status_line: null, findings: ["NOT.A.FINDING"] }
+          : report,
+      );
+      const paths = parseBundle({ ...bundle, reports }).error?.issues.map(
+        (issue) => issue.path,
+      );
+      expect(paths).toEqual([
+        "reports[0].findings[0]",
+        "reports[0].status_line",
+      ]);
     });
 
     it("rejects an empty id list and a plan_before that is not a pair", () => {

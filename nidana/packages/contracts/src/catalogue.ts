@@ -63,7 +63,7 @@ export const TestRoute = z.enum([
 ]);
 export type TestRoute = z.infer<typeof TestRoute>;
 
-export const CatalogueTest = z.object({
+export const CatalogueTest = z.looseObject({
   item_id: TestId,
   route: TestRoute,
   specimen: z.string().nullable(),
@@ -76,7 +76,7 @@ export const CatalogueTest = z.object({
 });
 export type CatalogueTest = z.infer<typeof CatalogueTest>;
 
-export const ReferenceRange = z.object({
+export const ReferenceRange = z.looseObject({
   sex: z.enum(["F", "M", "any"]),
   age_min: z.number().optional(),
   age_max: z.number().optional(),
@@ -88,7 +88,7 @@ export const ReferenceRange = z.object({
 });
 export type ReferenceRange = z.infer<typeof ReferenceRange>;
 
-export const CatalogueComponent = z.object({
+export const CatalogueComponent = z.looseObject({
   id: ComponentId,
   name: z.string().min(1),
   loinc: z.string().nullable(),
@@ -101,14 +101,14 @@ export const CatalogueComponent = z.object({
 });
 export type CatalogueComponent = z.infer<typeof CatalogueComponent>;
 
-export const NormalTemplate = z.object({
+export const NormalTemplate = z.looseObject({
   item_id: z.string(),
   template: z.string(),
   review_status: z.enum(["pending", "approved"]),
 });
 export type NormalTemplate = z.infer<typeof NormalTemplate>;
 
-export const DiagnosisCodes = z.object({
+export const DiagnosisCodes = z.looseObject({
   item_id: z
     .string()
     .regex(ID_PATTERNS.diagnosis, "expected a diagnosis id (DX.*)"),
@@ -117,7 +117,7 @@ export const DiagnosisCodes = z.object({
 });
 export type DiagnosisCodes = z.infer<typeof DiagnosisCodes>;
 
-export const ValueRule = z.object({
+export const ValueRule = z.looseObject({
   id: z.string(),
   kind: z.enum(["ratio", "difference", "not_above", "sum_equals"]),
   target: ComponentId,
@@ -128,7 +128,7 @@ export const ValueRule = z.object({
 });
 export type ValueRule = z.infer<typeof ValueRule>;
 
-export const CatalogueExport = z.object({
+export const CatalogueExport = z.looseObject({
   version: z.number().int().min(0),
   items: z.array(CatalogueItem),
   tests: z.array(CatalogueTest),

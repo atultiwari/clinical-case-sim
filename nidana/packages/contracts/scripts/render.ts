@@ -15,8 +15,7 @@ export const OUTPUT_PATH = fileURLToPath(
 );
 
 const HEADER = `// Generated from case-library/schemas/case-bundle.v0.3.schema.json by
-// \`pnpm --filter @nidana/contracts generate\`. Do not edit by hand; a test checks it is current.
-/* eslint-disable */`;
+// \`pnpm --filter @nidana/contracts generate\`. Do not edit by hand; a test checks it is current.`;
 
 /** The generated module for the pinned schema, formatted as it is committed. */
 export async function renderBundleModule(): Promise<string> {

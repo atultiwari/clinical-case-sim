@@ -464,7 +464,11 @@ function emitObject(schema: Schema, ctx: Context, pointer: string): string {
       : `${strict ? "z.strictObject" : "z.looseObject"}(${emitShape(schema, ctx, pointer)})`;
   const checks = objectChecks(schema, ctx, pointer);
   if (checks.length === 0) return base;
-  return `${base}.superRefine((value, ctx) => { ${checks.join("\n")} })`;
+  // JSON Schema reports every violation, so these checks also run when a property has already
+  // failed (Zod skips refinements after such issues by default). They use only key presence and
+  // safeParse, which are safe on a partly invalid object.
+  const always = `{ when: ({ value }) => typeof value === "object" && value !== null && !Array.isArray(value) }`;
+  return `${base}.superRefine((value, ctx) => { ${checks.join("\n")} }, ${always})`;
 }
 
 function emitTyped(

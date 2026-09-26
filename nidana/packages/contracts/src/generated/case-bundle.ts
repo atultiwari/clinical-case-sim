@@ -1,6 +1,5 @@
 // Generated from case-library/schemas/case-bundle.v0.3.schema.json by
 // `pnpm --filter @nidana/contracts generate`. Do not edit by hand; a test checks it is current.
-/* eslint-disable */
 import { z } from "zod";
 
 /** Days from day 0; null means valid throughout the admission. */
@@ -78,18 +77,24 @@ export const Report = z
       .array(z.enum(["article", "affected", "normal", "rule", "reviewer"]))
       .optional(),
   })
-  .superRefine((value, ctx) => {
-    if (ReportIf1.safeParse(value).success) {
-      const result = ReportThen2.safeParse(value);
-      for (const issue of result.error?.issues ?? []) {
-        ctx.addIssue({
-          code: "custom",
-          path: issue.path,
-          message: `${issue.message} (when variant is "original")`,
-        });
+  .superRefine(
+    (value, ctx) => {
+      if (ReportIf1.safeParse(value).success) {
+        const result = ReportThen2.safeParse(value);
+        for (const issue of result.error?.issues ?? []) {
+          ctx.addIssue({
+            code: "custom",
+            path: issue.path,
+            message: `${issue.message} (when variant is "original")`,
+          });
+        }
       }
-    }
-  });
+    },
+    {
+      when: ({ value }) =>
+        typeof value === "object" && value !== null && !Array.isArray(value),
+    },
+  );
 export type Report = z.infer<typeof Report>;
 
 export const ConsultNote = z.looseObject({
@@ -233,22 +238,28 @@ export const Condition = z
       return z.array(Condition).min(1).optional();
     },
   })
-  .superRefine((value, ctx) => {
-    const count = Object.keys(value).length;
-    if (count < 1 || count > 2) {
-      ctx.addIssue({
-        code: "custom",
-        message: `expected 1 to 2 properties, found ${count}`,
-      });
-    }
-    if ("from_tests" in value && !("finding_released" in value)) {
-      ctx.addIssue({
-        code: "custom",
-        path: ["finding_released"],
-        message: 'required when "from_tests" is present',
-      });
-    }
-  });
+  .superRefine(
+    (value, ctx) => {
+      const count = Object.keys(value).length;
+      if (count < 1 || count > 2) {
+        ctx.addIssue({
+          code: "custom",
+          message: `expected 1 to 2 properties, found ${count}`,
+        });
+      }
+      if ("from_tests" in value && !("finding_released" in value)) {
+        ctx.addIssue({
+          code: "custom",
+          path: ["finding_released"],
+          message: 'required when "from_tests" is present',
+        });
+      }
+    },
+    {
+      when: ({ value }) =>
+        typeof value === "object" && value !== null && !Array.isArray(value),
+    },
+  );
 export type Condition = z.infer<typeof Condition>;
 
 export const ConditionOrNull = Condition.nullable();
