@@ -4,6 +4,25 @@ Every change to the shared contract (S-004) gets an entry here, newest first. Ea
 
 Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
+## 2026-09-26: notice: six bundles re-exported with their conditions in the schema's shape (no contract change)
+
+- Six cases held the scoring condition `finding_released` as an object, `{"finding_released": {"findings": [...], "from_tests": [...]}}`, which schema 0.3 does not allow: the schema and Case Library SPEC §10.4 give a list of finding ids, with `from_tests` as a key beside it. Sambhasha's strict bundle models (its task P0.2) refused them. Nothing had checked exports against the whole schema.
+- The versions are frozen, so their rows are unchanged. Migration `20260926173522_casevault_condition_shape` rewrites every condition as `export_bundle` assembles a bundle; `bundle_rows` is untouched, so every `frozen_hash` still reproduces. New revisions, catalogue version 2, recorded and published for development on Atul's instruction to make the fix work:
+  - `PMC11227049@v1.r2` (replaces `r1`: one must-do)
+  - `PMC11227436@v1.r2` (replaces `r1`: one consult note condition)
+  - `PMC12007988@v1.r2` (replaces `r1`: one must-do)
+  - `PMC12364935@v1.r2` (replaces `r1`: one must-do and three consult note conditions)
+  - `PMC13193864@v1.r2` (replaces `r1`: one rubric anchor)
+  - `PMC12949993@v1.r3` (replaces `r2`: the film-review must-do)
+- Each new revision equals the one it replaces with only those conditions rewritten; the clinical content and the review records are unchanged. The other four cases re-export byte for byte. The old revisions stay in `exports/` and in `casevault.bundle`; use the newest revision of each case.
+- The Case Library's tests now check the newest bundle of every case against the whole schema, rubric anchors included (the schema leaves `ground_truth.rubric` open). The curation skill and the pilot's `ANALYSIS.md` show the schema's form.
+- The shared contract is unchanged: no bundle, schema or catalogue version moves.
+
+Acknowledgements:
+
+- [ ] Nidana: load the newest published revision of each case (`r2`, and `r3` for the pilot); tick with a note.
+- [ ] Sambhasha: P0.2's bundle tests check the newest revision of each case and should pass with these; tick with a note.
+
 ## 2026-09-26: notice: the repository is public, and every committed case is development-only (no contract change)
 
 - The umbrella repository is public from 26 Sep 2026 (S-010, superseding S-005; `CLAUDE.md` rule 7). All ten committed cases and their eleven bundles, including their answers, are now public.
