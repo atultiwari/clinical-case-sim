@@ -1,0 +1,56 @@
+# Sambhasha workflow (sambhasha/docs/PLAN.md, task P0.1): lint, type-check and unit tests.
+# Runs only when Sambhasha's files or this workflow change. No test calls a network model.
+name: sambhasha
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "sambhasha/**"
+      - ".github/workflows/sambhasha.yml"
+  push:
+    branches: [main]
+    paths:
+      - "sambhasha/**"
+      - ".github/workflows/sambhasha.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sambhasha-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: sambhasha
+
+jobs:
+  check:
+    name: Lint, type-check and unit tests
+    # Atul's Mac as a self-hosted runner: free for a private repository, and GitHub-hosted
+    # minutes are used up. The job waits in the queue while the Mac is off.
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          working-directory: sambhasha
+
+      - name: Install
+        run: uv sync --locked
+
+      - name: Ruff check
+        run: uv run ruff check --output-format=github .
+
+      - name: Ruff format
+        run: uv run ruff format --check .
+
+      - name: Mypy
+        run: uv run mypy
+
+      # Integration tests (marked `integration`) need local Supabase and join this workflow in P0.3.
+      - name: Tests
+        run: uv run pytest
