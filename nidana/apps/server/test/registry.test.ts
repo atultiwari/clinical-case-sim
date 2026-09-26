@@ -135,6 +135,29 @@ describe("the bundle registry", () => {
     });
   });
 
+  it("picks up a newly published revision after the refresh interval", async () => {
+    let time = 0;
+    let published = ["PMC12949993@v1.r2"];
+    const growing: BundleSource = {
+      listPublished: async () => published,
+      read: (id) => files.read(id),
+    };
+    const refreshing = createBundleRegistry(growing, catalogue, {
+      refreshMs: 1000,
+      now: () => time,
+    });
+    const newest = async () =>
+      [...(await refreshing.newestBySlug()).values()].map(
+        (p) => p.bundle.bundle_id,
+      );
+    expect(await newest()).toEqual(["PMC12949993@v1.r2"]);
+    published = ["PMC12949993@v1.r2", PILOT];
+    time = 999;
+    expect(await newest()).toEqual(["PMC12949993@v1.r2"]);
+    time = 1000;
+    expect(await newest()).toEqual([PILOT]);
+  });
+
   it("retries a bundle after a failed read", async () => {
     let calls = 0;
     const flaky: BundleSource = {

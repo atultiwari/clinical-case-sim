@@ -4,7 +4,10 @@ import { loadConfig } from "@/lib/config";
 describe("loadConfig", () => {
   it("defaults to files and memory, with monorepo paths", () => {
     const config = loadConfig(
-      { SUPABASE_JWT_SECRET: "x".repeat(32) },
+      {
+        SUPABASE_JWT_SECRET: "x".repeat(32),
+        SUPABASE_URL: "http://127.0.0.1:55321",
+      },
       "/repo/nidana/apps/server",
     );
     expect(config).toMatchObject({
@@ -34,6 +37,7 @@ describe("loadConfig", () => {
       /NIDANA_STORE/,
     ],
     [{}, /SUPABASE_URL/],
+    [{ SUPABASE_JWT_SECRET: "x".repeat(32) }, /SUPABASE_URL/],
     [
       { NIDANA_BUNDLE_SOURCE: "s3", SUPABASE_URL: "https://a.supabase.co" },
       /NIDANA_BUNDLE_SOURCE/,

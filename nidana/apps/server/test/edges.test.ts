@@ -143,6 +143,19 @@ describe("withPlayer", () => {
   });
 });
 
+describe("readJsonBody", () => {
+  it("refuses an oversized body by its declared length without reading it", async () => {
+    const { readJsonBody } = await import("@/lib/http");
+    const request = new Request("http://x/api", {
+      method: "POST",
+      headers: { "content-length": "999999" },
+      body: "{}",
+    });
+    const result = await readJsonBody(request);
+    expect(result.ok ? 0 : result.response.status).toBe(413);
+  });
+});
+
 describe("createRateLimiter", () => {
   it("forgets old windows when many keys pile up", () => {
     let now = 0;

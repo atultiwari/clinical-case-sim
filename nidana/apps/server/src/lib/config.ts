@@ -33,11 +33,12 @@ const Env = z
         message: "play data must be stored in the database in production",
       });
     }
-    if (!env.SUPABASE_JWT_SECRET && !env.SUPABASE_URL) {
+    if (!env.SUPABASE_URL) {
       ctx.addIssue({
         code: "custom",
         path: ["SUPABASE_URL"],
-        message: "set SUPABASE_URL or SUPABASE_JWT_SECRET to check sign-ins",
+        message:
+          "required: sign-in tokens are checked against this project (their issuer)",
       });
     }
   });
@@ -50,8 +51,8 @@ export interface ServerConfig {
   readonly configDir: string;
   readonly databaseUrl: string | null;
   readonly jwtSecret: string | null;
-  readonly jwksUrl: string | null;
-  readonly issuer: string | null;
+  readonly jwksUrl: string;
+  readonly issuer: string;
 }
 
 /** Paths default to the monorepo layout, relative to apps/server (where Next runs). */
@@ -66,7 +67,7 @@ export function loadConfig(
     );
   const e = parsed.data;
   const nidana = resolve(cwd, "../..");
-  const auth = e.SUPABASE_URL?.replace(/\/$/, "");
+  const auth = (e.SUPABASE_URL ?? "").replace(/\/$/, "");
   return {
     bundleSource: e.NIDANA_BUNDLE_SOURCE,
     store: e.NIDANA_STORE,
@@ -82,7 +83,7 @@ export function loadConfig(
     configDir: resolve(cwd, e.NIDANA_CONFIG_DIR ?? resolve(nidana, "configs")),
     databaseUrl: e.DATABASE_URL ?? null,
     jwtSecret: e.SUPABASE_JWT_SECRET ?? null,
-    jwksUrl: auth ? `${auth}/auth/v1/.well-known/jwks.json` : null,
-    issuer: auth ? `${auth}/auth/v1` : null,
+    jwksUrl: `${auth}/auth/v1/.well-known/jwks.json`,
+    issuer: `${auth}/auth/v1`,
   };
 }

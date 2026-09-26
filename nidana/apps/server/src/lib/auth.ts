@@ -18,7 +18,8 @@ export interface VerifierOptions {
   readonly jwtSecret?: string;
   /** The project's JWKS endpoint, for asymmetric signing keys. */
   readonly jwksUrl?: string;
-  readonly issuer?: string;
+  /** Required: a token from any other issuer is refused (fail closed). */
+  readonly issuer: string;
 }
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -39,7 +40,7 @@ export function createVerifier(options: VerifierOptions): Verifier {
       try {
         const verifyOptions = {
           audience: "authenticated",
-          ...(options.issuer ? { issuer: options.issuer } : {}),
+          issuer: options.issuer,
         };
         const { payload } = await (key instanceof Uint8Array
           ? jwtVerify(token, key, verifyOptions)

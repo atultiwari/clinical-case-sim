@@ -58,12 +58,24 @@ interface Index {
   readonly refused: readonly Refused[];
 }
 
+export interface RegistryOptions {
+  /** How long the list of published cases is kept before it is read again (default five minutes). */
+  readonly refreshMs?: number;
+  readonly now?: () => number;
+}
+
 export function createBundleRegistry(
   source: BundleSource,
   catalogue: CatalogueExport,
+  options: RegistryOptions = {},
 ): BundleRegistry {
+  const refreshMs = options.refreshMs ?? 5 * 60_000;
+  const now = options.now ?? Date.now;
+  // Published bundles never change, so prepared ones are kept; only the list of what is
+  // published is read again, so a new revision reaches players without a restart.
   const cache = new Map<string, Promise<PreparedCase>>();
   let index: Promise<Index> | null = null;
+  let builtAt = 0;
 
   const load = (id: string): Promise<PreparedCase> => {
     const cached = cache.get(id);
@@ -99,6 +111,8 @@ export function createBundleRegistry(
   };
 
   const getIndex = (): Promise<Index> => {
+    if (index !== null && now() - builtAt >= refreshMs) index = null;
+    if (index === null) builtAt = now();
     index ??= buildIndex().catch((error: unknown) => {
       index = null;
       throw error;

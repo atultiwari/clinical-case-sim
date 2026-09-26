@@ -13,6 +13,7 @@ import { pilot } from "./helpers";
 const PLAYER = "33333333-3333-4333-8333-333333333333";
 
 vi.stubEnv("SUPABASE_JWT_SECRET", SECRET);
+vi.stubEnv("SUPABASE_URL", "http://127.0.0.1:55321");
 vi.stubEnv("NIDANA_CONFIG_DIR", `${NIDANA_DIR}configs`);
 vi.stubEnv(
   "NIDANA_CATALOGUE_PATH",
@@ -27,6 +28,7 @@ beforeAll(async () => {
     .setProtectedHeader({ alg: "HS256" })
     .setSubject(PLAYER)
     .setAudience("authenticated")
+    .setIssuer("http://127.0.0.1:55321/auth/v1")
     .setExpirationTime("1h")
     .sign(new TextEncoder().encode(SECRET))}`;
 });

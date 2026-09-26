@@ -65,8 +65,8 @@ async function build(): Promise<ServerContext> {
     },
     verifier: createVerifier({
       ...(config.jwtSecret ? { jwtSecret: config.jwtSecret } : {}),
-      ...(config.jwksUrl ? { jwksUrl: config.jwksUrl } : {}),
-      ...(config.issuer ? { issuer: config.issuer } : {}),
+      jwksUrl: config.jwksUrl,
+      issuer: config.issuer,
     }),
     limits: {
       actions: createRateLimiter(120, 60_000),

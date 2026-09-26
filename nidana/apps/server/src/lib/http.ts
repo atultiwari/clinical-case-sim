@@ -34,11 +34,16 @@ export function respond<T>(outcome: Outcome<T>): Response {
 const failure = (status: number, code: string, message: string): Response =>
   respond({ ok: false, error: { status, code, message } });
 
+/** Bytes (as characters) a request body may hold. */
+const MAX_BODY = 20_000;
+
 export async function readJsonBody(
   request: Request,
 ): Promise<{ ok: true; body: unknown } | { ok: false; response: Response }> {
-  const text = await request.text();
-  if (text.length > 20_000)
+  // Refuse by the declared size first, so an oversized body is never read into memory.
+  const declared = Number(request.headers.get("content-length") ?? 0);
+  const text = declared > MAX_BODY ? "" : await request.text();
+  if (declared > MAX_BODY || text.length > MAX_BODY)
     return {
       ok: false,
       response: failure(413, "too_large", "The request is too large"),
@@ -84,7 +89,12 @@ export async function withPlayer(
     }
     return await handler(context, player.playerId);
   } catch (error: unknown) {
-    console.error("Game server error", error);
+    // Name and message only: a wrapped database error could carry parameter values.
+    const detail =
+      error instanceof Error
+        ? `${error.name}: ${error.message}`
+        : "unknown error";
+    console.error("Game server error", detail);
     return failure(500, "server_error", "Something went wrong on the server");
   }
 }

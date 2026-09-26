@@ -72,17 +72,20 @@ import { SignJWT } from "jose";
 
 /** A fresh signing key per test run, so no key is ever written in the repository. */
 export const SECRET = randomBytes(32).toString("hex");
+export const ISSUER = "http://127.0.0.1:55321/auth/v1";
 
 export async function tokenFor(
   sub: string,
   secret = SECRET,
   audience = "authenticated",
   expires = "1h",
+  issuer = ISSUER,
 ): Promise<string> {
   return new SignJWT({ role: "authenticated" })
     .setProtectedHeader({ alg: "HS256" })
     .setSubject(sub)
     .setAudience(audience)
+    .setIssuer(issuer)
     .setIssuedAt()
     .setExpirationTime(expires)
     .sign(new TextEncoder().encode(secret));

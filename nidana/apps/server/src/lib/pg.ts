@@ -86,6 +86,13 @@ function atomically<T>(
 
 class Rollback extends Error {}
 
+function finiteNumber(value: string, id: string): number {
+  const number = Number(value);
+  if (!Number.isFinite(number))
+    throw new Error(`play.score for ${id} holds a total that is not a number`);
+  return number;
+}
+
 export function pgStore(sql: Sql): EncounterStore {
   return {
     async ensurePlayer(playerId) {
@@ -142,7 +149,7 @@ export function pgStore(sql: Sql): EncounterStore {
         ? null
         : {
             dxScore: row.dx_score,
-            total: Number(row.total),
+            total: finiteNumber(row.total, id),
             breakdown: row.breakdown,
             scoringVersion: row.scoring_version,
             engineVersion: row.engine_version,
