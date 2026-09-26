@@ -142,9 +142,15 @@ def _texts(columns: Sequence[str], record: Sequence[Any]) -> dict[str, str]:
     return {column: as_text(value) for column, value in zip(columns, record, strict=True)}
 
 
-def _cases(conn: psycopg.Connection[Any], cvs: list[str]) -> tuple[CaseSummary, ...]:
+def _params(cvs: list[str], pending_only: bool) -> dict[str, Any]:
+    return {"cvs": cvs, "pending_only": pending_only}
+
+
+def _cases(
+    conn: psycopg.Connection[Any], cvs: list[str], pending_only: bool = False
+) -> tuple[CaseSummary, ...]:
     counts: dict[str, dict[str, int]] = {cv: {} for cv in cvs}
-    for cv, origin, count in _select(conn, sql.ORIGIN_COUNTS, {"cvs": cvs}):
+    for cv, origin, count in _select(conn, sql.ORIGIN_COUNTS, _params(cvs, pending_only)):
         counts[cv][origin] = counts[cv].get(origin, 0) + count
     found = {r[0]: r for r in _select(conn, sql.CASES, {"cvs": cvs})}
     missing = [cv for cv in cvs if cv not in found]
@@ -167,9 +173,9 @@ def _cases(conn: psycopg.Connection[Any], cvs: list[str]) -> tuple[CaseSummary, 
     return tuple(summaries)
 
 
-def _ledger(conn: psycopg.Connection[Any], cvs: list[str]) -> Rows:
+def _ledger(conn: psycopg.Connection[Any], cvs: list[str], pending_only: bool = False) -> Rows:
     rows = []
-    for record in _select(conn, sql.LEDGER, {"cvs": cvs}):
+    for record in _select(conn, sql.LEDGER, _params(cvs, pending_only)):
         row = _texts(sql.LEDGER_COLUMNS, record[:-4])
         value, low, high, unit = record[-4:]
         rows.append(
@@ -179,9 +185,13 @@ def _ledger(conn: psycopg.Connection[Any], cvs: list[str]) -> Rows:
 
 
 def _plain(
-    conn: psycopg.Connection[Any], query: str, columns: Sequence[str], cvs: list[str]
+    conn: psycopg.Connection[Any],
+    query: str,
+    columns: Sequence[str],
+    cvs: list[str],
+    pending_only: bool = False,
 ) -> Rows:
-    return tuple(_texts(columns, r) for r in _select(conn, query, {"cvs": cvs}))
+    return tuple(_texts(columns, r) for r in _select(conn, query, _params(cvs, pending_only)))
 
 
 def _ground_truth(conn: psycopg.Connection[Any], cvs: list[str]) -> Rows:
@@ -208,18 +218,25 @@ def _leaks(conn: psycopg.Connection[Any], cvs: list[str]) -> Rows:
 
 
 def fetch_pack_data(
-    conn: psycopg.Connection[Any], case_version_ids: Sequence[str], batch: str = ""
+    conn: psycopg.Connection[Any],
+    case_version_ids: Sequence[str],
+    batch: str = "",
+    pending_only: bool = False,
 ) -> PackData:
-    """Everything the pack shows for these case versions, read with SELECTs only."""
+    """Everything the pack shows for these case versions, read with SELECTs only.
+
+    With `pending_only`, only the rows still awaiting review (the ground truth in full).
+    """
     cvs = list(dict.fromkeys(case_version_ids))
+    p = pending_only
     return PackData(
         batch=batch,
-        cases=_cases(conn, cvs),
-        ledger=_ledger(conn, cvs),
-        normal_list=_plain(conn, sql.NORMAL_LIST, sql.NORMAL_LIST_COLUMNS, cvs),
-        article_facts=_plain(conn, sql.ARTICLE_FACTS, sql.ARTICLE_FACT_COLUMNS, cvs),
-        patient_words=_plain(conn, sql.PATIENT_WORDS, sql.PATIENT_WORDS_COLUMNS, cvs),
-        reports_consults=_plain(conn, sql.REPORTS_CONSULTS, sql.REPORT_COLUMNS, cvs),
+        cases=_cases(conn, cvs, p),
+        ledger=_ledger(conn, cvs, p),
+        normal_list=_plain(conn, sql.NORMAL_LIST, sql.NORMAL_LIST_COLUMNS, cvs, p),
+        article_facts=_plain(conn, sql.ARTICLE_FACTS, sql.ARTICLE_FACT_COLUMNS, cvs, p),
+        patient_words=_plain(conn, sql.PATIENT_WORDS, sql.PATIENT_WORDS_COLUMNS, cvs, p),
+        reports_consults=_plain(conn, sql.REPORTS_CONSULTS, sql.REPORT_COLUMNS, cvs, p),
         ground_truth=_ground_truth(conn, cvs),
         leaks=_leaks(conn, cvs),
     )

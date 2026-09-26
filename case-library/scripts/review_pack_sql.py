@@ -1,11 +1,23 @@
 """The read-only queries behind the case review pack (SPEC §7.2).
 
 Each query takes %(cvs)s, the list of case version ids (LEAKS takes %(cv)s, one id),
-and returns its columns in the order of the matching *_COLUMNS tuple. A ledger row
-is live while its review status is pending, approved or edited.
+and %(pending_only)s, true for a pack of the rows still awaiting review (after
+corrections to reviewed cases); it returns its columns in the order of the matching
+*_COLUMNS tuple. A ledger row is live while its review status is pending, approved
+or edited. The ground truth has no review status and is always shown in full.
 """
 
-LIVE = "review_status in ('pending', 'approved', 'edited')"
+
+def _live(alias: str = "") -> str:
+    return (
+        f"{alias}review_status in ('pending', 'approved', 'edited')"
+        f" and (not %(pending_only)s or {alias}review_status = 'pending')"
+    )
+
+
+LIVE = _live()
+LIVE_L = _live("l.")
+PENDING = "(not %(pending_only)s or review_status = 'pending')"
 
 CASES = """
 select v.id, v.status, s.pmcid, s.licence, s.production_ok, s.public_release_ok
@@ -48,7 +60,7 @@ left join casevault.catalogue_item i on i.id = l.target
 left join casevault.component cmp on cmp.id = l.target
 left join lateral casevault.reference_range(coalesce(c.lab_profile, '{{}}'), l.target) rr
   on true
-where l.case_version_id = any(%(cvs)s) and l.tier in ('affected', 'reviewer') and l.{LIVE}
+where l.case_version_id = any(%(cvs)s) and l.tier in ('affected', 'reviewer') and {LIVE_L}
 order by l.case_version_id, l.target, l.day_bucket nulls first
 """  # noqa: S608 - LIVE is a constant
 
@@ -60,7 +72,7 @@ select 'synthetic_ledger:' || l.case_version_id || '/' || l.target, l.case_versi
 from casevault.synthetic_ledger l
 left join casevault.catalogue_item i on i.id = l.target
 left join casevault.component cmp on cmp.id = l.target
-where l.case_version_id = any(%(cvs)s) and l.tier in ('normal', 'rule') and l.{LIVE}
+where l.case_version_id = any(%(cvs)s) and l.tier in ('normal', 'rule') and {LIVE_L}
 group by l.case_version_id, l.target, i.name, cmp.name
 order by l.case_version_id, 4, l.target
 """  # noqa: S608 - LIVE is a constant
@@ -80,26 +92,27 @@ ARTICLE_FACT_COLUMNS = (
     "release_text",
     "source_locator",
 )
-ARTICLE_FACTS = """
+ARTICLE_FACTS = f"""
 select 'fact:' || case_version_id || '/' || id, case_version_id, id, category, item,
        catalogue_ref, day, coalesce(value, value_num::text), unit, ref_range, flag,
        release_text, source_locator
 from casevault.fact
-where case_version_id = any(%(cvs)s) and origin = 'article'
+where case_version_id = any(%(cvs)s) and origin = 'article' and {PENDING}
 order by case_version_id, id
-"""
+"""  # noqa: S608 - PENDING is a constant
 
 PATIENT_WORDS_COLUMNS = ("key", "case", "item", "release_text", "lay_text")
 PATIENT_WORDS = f"""
 select 'fact:' || case_version_id || '/' || id, case_version_id, item, release_text, lay_text
 from casevault.fact
 where case_version_id = any(%(cvs)s) and (category = 'history' or lay_text is not null)
+  and {PENDING}
 union all
 select 'synthetic_ledger:' || l.id, l.case_version_id, coalesce(i.name, l.target),
        l.release_text, l.lay_text
 from casevault.synthetic_ledger l
 left join casevault.catalogue_item i on i.id = l.target
-where l.case_version_id = any(%(cvs)s) and l.lay_text is not null and l.{LIVE}
+where l.case_version_id = any(%(cvs)s) and l.lay_text is not null and {LIVE_L}
 order by 2, 1
 """  # noqa: S608 - LIVE is a constant
 

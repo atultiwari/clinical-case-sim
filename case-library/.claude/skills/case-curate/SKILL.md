@@ -59,12 +59,15 @@ About 12–15 approvals per case.
 
 9. Patient-dependent normals (catalogue v1, Q1 and Q2): the templates for menstrual history, pelvic examination, pulse, ECG rate, postural blood pressure, height and weight, peak flow and capillary glucose are neutral. Where the case's own sex, age or vital signs make a neutral text wrong, write the item as an `affected` row from the case's values. Always record the patient's blood group (ABO and RhD) as an `affected` row; the generator's default only fills a gap.
 
+10. Values that follow from others (second review of batch 1): the normal generator treats every component alone, so when a case has an abnormal input, write the dependent components as `affected` rows on every day they have a value. Prothrombin activity (Quick %) follows the INR in effect that day: activity % = round(100 × 0.59 / (INR − 1 + 0.59)), capped at 100 (calibrated to the article pair 44% at INR 1.75 in PMC11227436). A vitamin K deficiency lowers factors II, VII, IX, X and proteins C and S together; a clone of GPI-deficient cells shows in the conventional CD55/CD59 result of the same cells; a bleeding anaemia raises EPO.
+
 Items on any path are always `affected` or checked explicitly, never left to the normal generator. The patient's words (`lay_text`) carry exactly the clinical fact: no added symptoms, no lost negatives.
 
 ## Reports and consult notes (SPEC §6.8)
 
 - Where the article describes a first report and a revised one, store both: `original` (**provisional**, with a status line saying it is not final and a review can be requested) and `expert` (**final**). Otherwise one `only` report, final. List the `FND.*` ids each report contains.
-- Consult notes for specialties on the paths, up to three variants keyed on what the Chart already holds (`condition`, e.g. `{"released_any": ["L26"]}`). A consultant is helpful but never more diagnostic than a competent colleague with the same information. Specialties off the paths get the catalogue's generic note as a `rule` row.
+- Consult notes for specialties on the paths, up to three variants keyed on what the Chart already holds (`condition`, e.g. `{"released_any": ["L26"]}`). A consultant is helpful but never more diagnostic than a competent colleague with the same information, and never knows what the Chart does not hold: a note released before a hidden history item asks for the history in general terms ("a full medicine history, including herbal, traditional and over-the-counter remedies"), never for the hidden answer ("anything bought online").
+- A hidden history item is hidden only if nothing else hands it over. If a consult note, report or answer released without it discloses the same thing, either gate that text on the item or let the rubric's evidence accept every source that discloses it. Specialties off the paths get the catalogue's generic note as a `rule` row.
 - Test utility for every test on a path: essential, supportive, low-yield, unnecessary or risky. Off-path tests default to unnecessary, except the routine admission panel (blood count, renal and liver function), which defaults to supportive.
 
 ## Review packs
@@ -72,6 +75,7 @@ Items on any path are always `affected` or checked explicitly, never left to the
 - **Build:** `uv run python -m scripts.review_pack build <batch> --cases <PMCID>@v1 ...` writes `review/<batch>.xlsx` from read-only queries (SPEC §7.2).
 - **Read:** `uv run python -m scripts.review_pack read review/<batch>.xlsx` refuses while any row is undecided, prints a summary per case and writes `<batch>.decisions.json`.
 - **Apply:** show Atul the summary; after his go-ahead, write the decisions through the MCP, one transaction per case: approvals update the review status; edits become superseding rows (`supersedes`, same origin, `review_status = edited`); rejections go into the next pack. Record every decision in `review_decision` (SPEC §7.3).
+- **Corrections after review** (the case is reviewed but not frozen): correct the curation files, then `uv run python -m scripts.case_patch cases/<PMCID> --since <ref loaded> --after-review --note "..." --out build/patches`. An approved ledger value cannot be withdrawn, only replaced, so the patch is refused if the corrected case drops a (target, day); every row the patch changes goes back to `pending` and into the next review pack.
 
 ## Batch and extension modes
 

@@ -123,3 +123,34 @@ def test_command_line_build_reports_unknown_cases(
     assert review_pack.main(["build", "b", "--cases", "NID-0000@v9", "--out", str(out)]) == 1
     assert "No such case version in the Case Vault: NID-0000@v9" in capsys.readouterr().err
     assert not out.exists()
+
+
+def test_a_pending_only_pack_shows_just_the_rows_awaiting_review(db: psycopg.Connection) -> None:
+    cv = _curate(db)
+    db.execute(
+        "update casevault.synthetic_ledger set review_status = 'approved', reviewed_by = 'atul',"
+        " reviewed_at = now() where case_version_id = %s and target <> 'CMP.PB'",
+        (cv,),
+    )
+    db.execute(
+        "update casevault.fact set review_status = 'verified', reviewed_by = 'atul',"
+        " reviewed_at = now() where case_version_id = %s and id <> 'H02'",
+        (cv,),
+    )
+    db.execute(
+        "update casevault.consult_note set review_status = 'approved', reviewed_by = 'atul',"
+        " reviewed_at = now() where case_version_id = %s",
+        (cv,),
+    )
+
+    full = fetch_pack_data(db, [cv])
+    data = fetch_pack_data(db, [cv], pending_only=True)
+
+    assert {r["target"] for r in data.ledger} == {"CMP.PB"}
+    assert data.normal_list == ()
+    fact_words = [r["key"] for r in data.patient_words if r["key"].startswith("fact:")]
+    assert all(key.endswith("/H02") for key in fact_words)
+    assert data.article_facts == tuple(r for r in full.article_facts if r["id"] == "H02")
+    assert [r["key"] for r in data.reports_consults] == [f"report:{cv}/RP01"]
+    assert data.ground_truth == full.ground_truth
+    assert len(full.ledger) > len(data.ledger)

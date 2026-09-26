@@ -8,7 +8,15 @@ from typing import Any
 import psycopg
 import pytest
 
-from scripts.case_patch import CONTENT, LEDGER_CONTENT, patch_sql, render_patch, same, snapshot
+from scripts.case_patch import (
+    CONTENT,
+    LEDGER_CONTENT,
+    PatchError,
+    patch_sql,
+    render_patch,
+    same,
+    snapshot,
+)
 from scripts.case_replay import catalogue_document, replay_one
 from scripts.case_sql import render_case_body
 
@@ -79,3 +87,101 @@ def test_the_patch_reproduces_the_corrected_case(db: psycopg.Connection, tmp_pat
     ).fetchall()
     assert rejected
     assert set(rejected) == {("atul", "test correction")}
+
+
+# --- Corrections after review ------------------------------------------------
+
+REVIEWED = ("fact", "report", "consult_note")
+
+
+def _approve_everything(db: psycopg.Connection) -> None:
+    """What a blanket approval leaves: every pending row reviewed by Atul."""
+    for table, status in (*((t, "approved") for t in REVIEWED[1:]), ("fact", "verified")):
+        db.execute(
+            f"update casevault.{table} set review_status = %s, reviewed_by = 'atul',"  # noqa: S608
+            " reviewed_at = now(), review_note = 'blanket' where case_version_id = %s"
+            " and review_status = 'pending'",
+            (status, CV),
+        )
+    db.execute(
+        "update casevault.synthetic_ledger set review_status = 'approved', reviewed_by = 'atul',"
+        " reviewed_at = now(), review_note = 'blanket' where case_version_id = %s"
+        " and review_status = 'pending'",
+        (CV,),
+    )
+
+
+def _reviewed_correction(tmp_path: Path) -> tuple[Path, str, str]:
+    """The pilot with one ledger value and one report text changed; nothing removed."""
+    case = tmp_path / "PMC12949993"
+    shutil.copytree(PILOT, case)
+    affected_file = case / "curation" / "affected.json"
+    affected: list[dict[str, Any]] = json.loads(affected_file.read_text(encoding="utf-8"))
+    affected[0]["release_text"] = (affected[0].get("release_text") or "") + " (corrected)"
+    affected_file.write_text(json.dumps(affected), encoding="utf-8")
+    reports_file = case / "curation" / "reports.json"
+    reports: list[dict[str, Any]] = json.loads(reports_file.read_text(encoding="utf-8"))
+    reports[0]["report_text"] = reports[0]["report_text"] + " Corrected after review."
+    reports_file.write_text(json.dumps(reports), encoding="utf-8")
+    return case, affected[0]["target"], reports[0]["id"]
+
+
+def _snapshots(db: psycopg.Connection, corrected: Path) -> tuple[Any, Any]:
+    db.execute("select casevault.load_catalogue(%s::jsonb)", (json.dumps(catalogue_document([])),))
+    with db.transaction(force_rollback=True):
+        replay_one(db, PILOT)
+        old = snapshot(db, CV, CASE_ID)
+    with db.transaction(force_rollback=True):
+        replay_one(db, corrected)
+        new = snapshot(db, CV, CASE_ID)
+    return old, new
+
+
+def test_a_correction_after_review_reopens_only_what_it_changes(
+    db: psycopg.Connection, tmp_path: Path
+) -> None:
+    corrected, target, report_id = _reviewed_correction(tmp_path)
+    old, new = _snapshots(db, corrected)
+    patch = patch_sql(old, new, CV, "atul", "second review", after_review=True)
+    db.execute(render_case_body(PILOT))
+    _approve_everything(db)
+
+    db.execute(_body(render_patch(patch)))
+
+    ledger: dict[str, int] = dict(
+        db.execute(
+            "select review_status, count(*) from casevault.synthetic_ledger"
+            " where case_version_id = %s group by 1",
+            (CV,),
+        ).fetchall()
+    )
+    assert ledger["superseded"] == patch.counts["ledger superseded"] >= 1
+    assert ledger["pending"] == patch.counts["ledger superseded"]
+    assert "rejected" not in ledger
+    live = db.execute(
+        "select review_status, supersedes is not null from casevault.synthetic_ledger"
+        " where case_version_id = %s and target = %s and casevault.is_live(review_status)",
+        (CV, target),
+    ).fetchall()
+    assert ("pending", True) in live
+    report = db.execute(
+        "select review_status, reviewed_by, reviewed_at, review_note from casevault.report"
+        " where case_version_id = %s and id = %s",
+        (CV, report_id),
+    ).fetchone()
+    assert report == ("pending", None, None, None)
+    untouched = db.execute(
+        "select count(*) from casevault.report where case_version_id = %s"
+        " and id <> %s and review_status <> 'approved'",
+        (CV, report_id),
+    ).fetchone()
+    assert untouched == (0,)
+
+
+def test_a_correction_after_review_cannot_withdraw_a_ledger_value(
+    db: psycopg.Connection, tmp_path: Path
+) -> None:
+    old, new = _snapshots(db, _corrected_copy(tmp_path))
+
+    with pytest.raises(PatchError, match="replace"):
+        patch_sql(old, new, CV, "atul", "second review", after_review=True)
