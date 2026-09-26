@@ -22,11 +22,11 @@ Rough effort: Phase 1 three to four weeks (two apps: player and server), Phase 2
 
 ## Phase 1: the game (Attending seat, deterministic)
 
-- [ ] **N1.1 Contracts**
+- [x] **N1.1 Contracts**
+  - Done 2026-09-26: `@nidana/contracts` generates Zod validators and types from schema 0.3, validates the catalogue export (v2 checked by hand) and reports every problem with its path; the fixture and all 11 exported bundles validate, the pilot's `r2` included, after Case Library L1.7 corrected the schema; Nidana's workflow and Prettier hook added; catalogue pinned at v2.
   - Build: `packages/contracts` with TypeScript types and Zod validators generated from `../case-library/schemas/case-bundle.v0.3.schema.json`; the catalogue export format; a hand-made fixture bundle for tests until the pilot bundle exists. Record the pinned versions (schema 0.3, catalogue v2; v1 before the catalogue v2 changelog entry) in `nidana/CLAUDE.md`. Add Nidana's hooks to the root `.pre-commit-config.yaml` and its GitHub Actions workflow (lint, type-check, tests), limited to `nidana/`.
   - Accept: the fixture validates; an invalid bundle (missing licence, unknown origin) is rejected with a clear message; once LM0 is reached, the pilot bundle validates too.
   - Depends on: umbrella U0.1; Case Library L0.3 (the schema).
-  - Status 2026-09-26: built on the branch `nidana/N1.1-contracts` (catalogue pinned at v2). The fixture, the invalid-bundle checks and the catalogue v2 export pass, and so do five of the eleven exported bundles. Six bundles, the pilot among them, fail: their `finding_released` conditions are written as `{findings, from_tests}`, and schema 0.3 does not allow that form. Atul chose to fix the schema in a Case Library session (no bundle changes). After that, regenerate (`pnpm --filter @nidana/contracts generate`), then tick this task.
 
 - [ ] **N1.2 Engine core**
   - Build: `packages/engine` with `replay(bundle, actions)`: clock, day buckets and carry rules, release by `released_by`, orders with turnaround and INR cost, report variants and status by difficulty, referrals with consult note conditions, limits and forced commit.

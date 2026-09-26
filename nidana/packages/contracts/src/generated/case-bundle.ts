@@ -204,7 +204,7 @@ export const Condition = z
       return Ids.optional();
     },
     get finding_released() {
-      return Ids.optional();
+      return FindingReleased.optional();
     },
     get from_tests() {
       return Ids.optional();
@@ -267,6 +267,20 @@ export type ConditionOrNull = z.infer<typeof ConditionOrNull>;
 
 export const Ids = z.array(z.string()).min(1);
 export type Ids = z.infer<typeof Ids>;
+
+/** Finding ids, as a list, or as {findings, from_tests} to count only findings released by the given tests. A sibling from_tests key in the condition still means the same as the object's from_tests. */
+export const FindingReleased = z.union([
+  Ids,
+  z.strictObject({
+    get findings() {
+      return Ids;
+    },
+    get from_tests() {
+      return Ids.optional();
+    },
+  }),
+]);
+export type FindingReleased = z.infer<typeof FindingReleased>;
 
 export const TestUtility = z.looseObject({
   test_item_id: z.string(),

@@ -12,7 +12,7 @@ Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
 Acknowledgements:
 
-- [ ] Nidana: regenerate `@nidana/contracts` (`pnpm --filter @nidana/contracts generate`); the N1.1 tests on every exported bundle then pass. The engine's condition evaluator (N1.3) handles both forms.
+- [x] Nidana: regenerated `@nidana/contracts`; all 11 exported bundles validate (N1.1, 2026-09-26). The engine's condition evaluator (N1.3) will handle both forms and the sibling `from_tests` key.
 - [ ] Sambhasha: make the condition evaluator accept both forms of `finding_released`, and the sibling `from_tests` key.
 ## 2026-09-26: notice: the repository is public, and every committed case is development-only (no contract change)
 
