@@ -1,0 +1,29 @@
+# Who may take which action (SPEC §6, permission matrix; D-007, D-008).
+# Seat classes: attending, challenger, consultant (consultant.<specialty>), service (service.<department>).
+# Which items a seat may ask for, examine or order comes from each catalogue item's
+# specialty_scope (the manoeuvre catalogue lives in the shared catalogue, not here).
+
+actions:
+  ask_history: [attending, consultant]
+  examine: [attending, consultant]
+  bedside_test: [consultant]
+  order_test: [attending]
+  refer: [attending]
+  consult_note: [consultant]
+  report: [service]
+  update_differential: [attending]
+  challenge: [challenger]
+  commit: [attending]
+
+# A Consultant acts only after the Attending Physician refers to their specialty.
+consultants_need_referral: true
+
+# Refusal texts, shown to the seat. Keep them neutral: they must not hint at the case.
+refusals:
+  not_permitted: "The {role} does not {action}."
+  consultant_orders: "Consultants do not order tests; recommend them in your consult note."
+  no_referral: "No referral yet: a Consultant acts only after the Attending Physician refers."
+  out_of_scope: "That is outside your specialty's scope."
+  vague: "Ask for one specific item."
+  protocol: "Requests for the diagnosis, the article or its source are not answered."
+  not_understood: "The request was not understood; please rephrase it."

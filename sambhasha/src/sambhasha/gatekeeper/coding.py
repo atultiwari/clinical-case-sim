@@ -31,7 +31,8 @@ from sambhasha.catalogue import Catalogue, CatalogueItem, Kind, kind_of
 from sambhasha.domain.base import DomainModel
 
 MAX_CANDIDATES: Final = 10
-MIN_OVERLAP: Final = 0.34  # share of words in common for a candidate (Jaccard)
+MIN_OVERLAP: Final = 0.34  # share of all words in common (Jaccard), for short requests
+MIN_COVERAGE: Final = 0.5  # share of a catalogue phrase's words the request contains
 
 _FILLER: Final = frozenset(
     [
@@ -182,6 +183,13 @@ class Coder:
         ranked = _rank(frozenset(normalised.split()), index)
         if ranked:
             return Coding(text=text, normalised=normalised, status="candidates", ids=ranked)
+        self.record_missing(text, kinds=kinds, bundle_id=bundle_id)
+        return Coding(text=text, normalised=normalised, status="unmatched", ids=())
+
+    def record_missing(
+        self, text: str, *, kinds: tuple[Kind, ...], bundle_id: str | None = None
+    ) -> None:
+        """Log a request the catalogue could not answer, for the Case Library."""
         self._missing.add(
             MissingRequest(
                 created_at=datetime.now(UTC),
@@ -190,7 +198,6 @@ class Coder:
                 query=text.strip(),
             )
         )
-        return Coding(text=text, normalised=normalised, status="unmatched", ids=())
 
     def _is_item(self, item_id: str, kinds: tuple[Kind, ...]) -> bool:
         try:
@@ -207,11 +214,16 @@ class Coder:
 
 
 def _rank(words: frozenset[str], index: _Index) -> tuple[str, ...]:
-    """Items sharing words with the request, best first (ties by id, for repeatable runs)."""
-    scores = {
-        item_id: best
-        for item_id, phrase_sets in index.phrases.items()
-        if (best := max(len(words & p) / len(words | p) for p in phrase_sets)) >= MIN_OVERLAP
-    }
-    ranked = sorted(scores, key=lambda item_id: (-scores[item_id], item_id))
+    """Items sharing words with the request, best first (ties by id, for repeatable runs).
+
+    Two scores: coverage (how much of an item's phrase the request contains, which suits a
+    whole-sentence question such as "Have you been exposed to any chemicals?") and overlap
+    (Jaccard, which suits a short request such as "full blood picture").
+    """
+    scores: dict[str, tuple[float, float]] = {}
+    for item_id, phrase_sets in index.phrases.items():
+        best = max((len(words & p) / len(p), len(words & p) / len(words | p)) for p in phrase_sets)
+        if best[0] >= MIN_COVERAGE or best[1] >= MIN_OVERLAP:
+            scores[item_id] = best
+    ranked = sorted(scores, key=lambda item_id: (-scores[item_id][0], -scores[item_id][1], item_id))
     return tuple(ranked[:MAX_CANDIDATES])
