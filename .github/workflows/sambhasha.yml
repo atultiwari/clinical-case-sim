@@ -49,6 +49,36 @@ jobs:
       - name: Mypy
         run: uv run mypy
 
-      # Integration tests (marked `integration`) need local Supabase and join this workflow in P0.3.
-      - name: Tests
+      - name: Unit tests
         run: uv run pytest
+
+  integration:
+    name: All tests, with the local database
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+        with:
+          working-directory: sambhasha
+
+      - uses: supabase/setup-cli@45a513f8c64c0bc8e0e3dfe572b5c95be85f6359 # v3.0.1
+        with:
+          version: 2.117.0
+
+      - name: Install
+        run: uv sync --locked
+
+      # Only Postgres is needed; starting it applies every migration in supabase/migrations/.
+      - name: Start the local database
+        run: supabase db start
+
+      - name: Tests
+        env:
+          SAMBHASHA_REQUIRE_DB: "1"
+        run: uv run pytest -m "integration or not integration"
+
+      - name: Stop the local database
+        if: always()
+        run: supabase stop --no-backup
