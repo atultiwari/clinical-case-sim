@@ -1,8 +1,8 @@
 {
-  "name": "@nidana/contracts",
+  "name": "@nidana/engine",
   "version": "0.1.0",
   "private": true,
-  "description": "Nidana's contracts: types and Zod validators for the case bundle (generated from the Case Library's schema) and the catalogue export.",
+  "description": "Nidana's engine: pure functions that replay a case bundle and a player's action log. Imported only by the game server.",
   "type": "module",
   "engines": {
     "node": ">=22"
@@ -11,7 +11,6 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "generate": "node scripts/generate.ts",
     "lint": "eslint . && prettier --check . --ignore-path ../../../.gitignore",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
@@ -19,6 +18,7 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@nidana/contracts": "workspace:*",
     "zod": "4.6.5"
   },
   "devDependencies": {
@@ -26,6 +26,7 @@
     "@types/node": "^22",
     "@vitest/coverage-v8": "5.0.2",
     "eslint": "9.39.5",
+    "fast-check": "4.10.2",
     "prettier": "3.9.9",
     "typescript": "5.9.3",
     "typescript-eslint": "8.70.1",
