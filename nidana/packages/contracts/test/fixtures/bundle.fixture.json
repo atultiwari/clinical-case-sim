@@ -1,0 +1,274 @@
+{
+  "bundle_id": "NID-0001@v1.r1",
+  "schema_version": "0.3",
+  "catalogue_version": 2,
+  "case": {
+    "slug": "c-fx001",
+    "display_title": "Tired for three months",
+    "display_tags": ["haematology", "fixture"],
+    "specialty": "haematology",
+    "difficulty": "easy",
+    "est_minutes": 15,
+    "lab_profile": {
+      "age_years": 28,
+      "sex": "F",
+      "components": { "CMP.HB": { "low": 120, "high": 150, "unit": "g/L" } }
+    }
+  },
+  "source": {
+    "citation": "Hand-made test fixture for Nidana's contracts; not a real patient.",
+    "licence": "CC0 1.0",
+    "attribution": "Nidana test fixture",
+    "production_ok": false,
+    "public_release_ok": false
+  },
+  "clock": { "day_0_label": "First clinic visit" },
+  "vignette": "A 28-year-old teacher comes to the clinic because she has felt tired for three months.",
+  "opening_statement_lay": "I just feel worn out all the time, doctor.",
+  "facts": [
+    {
+      "id": "H01",
+      "category": "history",
+      "item": "Fatigue",
+      "catalogue_ref": "HX.GEN.FATIGUE",
+      "released_by": ["HX.GEN.FATIGUE"],
+      "value": "Tired for three months, worse on climbing stairs",
+      "day": null,
+      "kind": "raw",
+      "origin": "article",
+      "reveals_dx": false,
+      "pivotal": false,
+      "release": "vignette",
+      "release_condition": null,
+      "release_text": "Tired for three months, worse on climbing stairs.",
+      "lay_text": "I get tired just climbing the stairs.",
+      "source_locator": null
+    },
+    {
+      "id": "H02",
+      "category": "history",
+      "item": "Menstrual history",
+      "catalogue_ref": "HX.GYN.MENSES",
+      "released_by": ["HX.GYN.MENSES"],
+      "value": "Heavy periods lasting eight days",
+      "day": null,
+      "kind": "raw",
+      "origin": "article",
+      "reveals_dx": false,
+      "pivotal": true,
+      "release": "chart",
+      "release_text": "Periods are heavy and last eight days.",
+      "lay_text": "My periods are very heavy.",
+      "source_locator": null
+    },
+    {
+      "id": "L01",
+      "category": "lab",
+      "item": "Haemoglobin",
+      "catalogue_ref": "CMP.HB",
+      "released_by": ["LAB.HAEM.CBC"],
+      "value": "82",
+      "value_num": 82,
+      "unit": "g/L",
+      "ref_range": "120-150",
+      "flag": "L",
+      "day": 0,
+      "kind": "raw",
+      "origin": "article",
+      "release": "chart"
+    },
+    {
+      "id": "D01",
+      "category": "lab",
+      "item": "Mean cell haemoglobin",
+      "catalogue_ref": "CMP.MCH",
+      "released_by": ["LAB.HAEM.CBC"],
+      "value": "21.0",
+      "value_num": 21,
+      "unit": "pg",
+      "day": 0,
+      "kind": "raw",
+      "origin": "derived",
+      "formula": "MCH (pg) = haemoglobin (g/L) / red cell count (x10^12/L)",
+      "release": "chart"
+    }
+  ],
+  "ledger": [
+    {
+      "id": "LG01",
+      "target": "CMP.PLT",
+      "day_bucket": 0,
+      "tier": "normal",
+      "gap_id": null,
+      "value": { "value": 310, "unit": "x10^9/L", "ref_range": "150-410" },
+      "release_text": null,
+      "lay_text": null
+    },
+    {
+      "id": "LG02",
+      "target": "EX.GEN.PALLOR",
+      "day_bucket": null,
+      "tier": "affected",
+      "gap_id": "G01",
+      "value": { "text": "Conjunctival pallor" },
+      "release_text": "Conjunctival pallor.",
+      "lay_text": null
+    }
+  ],
+  "reports": [
+    {
+      "id": "RP01",
+      "test_item_id": "LAB.HAEM.FILM",
+      "variant": "original",
+      "status": "provisional",
+      "status_line": "Provisional report: not yet reviewed by a haematopathologist. A review can be requested.",
+      "findings": ["FND.MICROCYTOSIS"],
+      "report_text": "Red cells are small and pale.",
+      "impression": "Microcytic hypochromic picture.",
+      "suggested_reflex": ["LAB.HAEM.FILM_REVIEW"],
+      "based_on": ["L01"],
+      "origins": ["affected"]
+    },
+    {
+      "id": "RP02",
+      "test_item_id": "LAB.HAEM.FILM_REVIEW",
+      "variant": "expert",
+      "status": "final",
+      "status_line": null,
+      "findings": ["FND.MICROCYTOSIS"],
+      "report_text": "Microcytic hypochromic red cells with pencil cells.",
+      "impression": "Picture in keeping with iron deficiency.",
+      "suggested_reflex": [],
+      "based_on": ["L01", "D01"],
+      "origins": ["affected", "reviewer"]
+    }
+  ],
+  "consult_notes": [
+    {
+      "id": "CN01",
+      "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+      "variant": 1,
+      "condition": { "asked_any": ["HX.GYN.MENSES"] },
+      "note_text": "Reviewed for heavy menstrual bleeding. Pelvic ultrasound advised.",
+      "recommendations": ["IMG.US.PELVIS"],
+      "origin": "affected"
+    },
+    {
+      "id": "CN02",
+      "specialty": "REF.OBSTETRICS_GYNAECOLOGY",
+      "variant": 2,
+      "condition": null,
+      "note_text": "Reviewed. Please share the menstrual history.",
+      "origin": "rule"
+    }
+  ],
+  "raw_material": [
+    {
+      "id": "R01",
+      "test": "Blood film",
+      "test_item_id": "LAB.HAEM.FILM",
+      "release": "service.pathology",
+      "day": 0,
+      "findings": "Microcytic hypochromic red cells, occasional pencil cells.",
+      "media": ["M01"],
+      "note": null,
+      "source_locator": null
+    }
+  ],
+  "media": [
+    {
+      "id": "M01",
+      "figure": "Figure 1",
+      "specimen": "Peripheral blood film",
+      "stain": "Romanowsky",
+      "file_path": "NID-0001/F1.jpg",
+      "redacted_caption": "Peripheral blood film at presentation.",
+      "licence": "CC0 1.0",
+      "production_ok": false,
+      "public_release_ok": false,
+      "has_annotations": false,
+      "production_decision": "pending",
+      "masked_path": null,
+      "raw_fact_id": "R01"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G01",
+      "item": "Examination for pallor",
+      "guidance": "Pallor in keeping with a haemoglobin of 82 g/L.",
+      "review_required": true,
+      "auto_generate": false
+    }
+  ],
+  "ground_truth": {
+    "final_dx": {
+      "id": "DX.IRON_DEFICIENCY_ANAEMIA_BLOOD_LOSS",
+      "name": "Iron deficiency anaemia"
+    },
+    "accepted_differential": ["DX.IRON_DEFICIENCY_ANAEMIA"],
+    "red_herrings": [],
+    "key_discriminators": ["Low ferritin"],
+    "rubric": {
+      "5": { "if": { "dx_in": ["DX.IRON_DEFICIENCY_ANAEMIA_BLOOD_LOSS"] } }
+    },
+    "must_do": [
+      {
+        "text": "Ask about menstrual blood loss",
+        "if": { "asked_any": ["HX.GYN.MENSES"] }
+      },
+      {
+        "text": "Confirm iron deficiency before treating",
+        "if": {
+          "all": [
+            { "ordered_any": ["LAB.CHEM.FERRITIN", "LAB.CHEM.IRON_STUDIES"] },
+            { "plan_before": ["LAB.CHEM.FERRITIN", "RX.IRON.ORAL"] }
+          ]
+        }
+      },
+      "Plain-text item kept for schema 0.2 imports"
+    ],
+    "must_not_do": [
+      {
+        "text": "Transfuse a stable patient",
+        "if": { "plan_has_any": ["RX.TRANSFUSION.*"] }
+      },
+      {
+        "text": "Miss the film finding",
+        "if": {
+          "finding_released": ["FND.MICROCYTOSIS"],
+          "from_tests": ["LAB.HAEM.FILM"]
+        }
+      },
+      {
+        "text": "Refer without a history",
+        "if": { "not": { "asked_any": ["HX.GYN.MENSES"] } }
+      }
+    ],
+    "efficient_path": ["HX.GYN.MENSES", "LAB.HAEM.CBC", "LAB.CHEM.FERRITIN"],
+    "teaching_points": ["Ask about blood loss in every microcytic anaemia."],
+    "treatment_given": "Oral iron",
+    "outcome": "Haemoglobin recovered"
+  },
+  "test_utility": [
+    {
+      "test_item_id": "LAB.HAEM.CBC",
+      "utility": "essential",
+      "rationale": null
+    },
+    {
+      "test_item_id": "LAB.HAEM.FILM",
+      "utility": "supportive",
+      "rationale": "Shows the picture"
+    }
+  ],
+  "path_analysis": [
+    {
+      "path_id": "P1",
+      "kind": "efficient",
+      "name": "History, count, ferritin",
+      "rationale": null,
+      "items": ["HX.GYN.MENSES", "LAB.HAEM.CBC", "LAB.CHEM.FERRITIN"]
+    }
+  ]
+}
