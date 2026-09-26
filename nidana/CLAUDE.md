@@ -57,8 +57,9 @@ British spelling in user-facing text ("haematology", "anaemia").
 - Game server: Next.js (App Router) route handlers only; the only public server.
 - Engine: `packages/engine`, pure TypeScript functions, imported only by the server.
 - Data: development uses the `play` schema in the Case Vault's Supabase project, through a least-privilege role; the store release uses self-hosted Supabase on the VPS.
-- Tests: Vitest, fast-check, Playwright (web build), Maestro (Android and iOS).
-- Quality: ESLint, Prettier, pre-commit, GitHub Actions.
+- Validation: Zod (contracts generated from the bundle schema).
+- Tests: Vitest with `@vitest/coverage-v8`, fast-check, Playwright (web build), Maestro (Android and iOS).
+- Quality: ESLint with `@eslint/js` and `typescript-eslint`, Prettier, pre-commit, GitHub Actions; `@types/node` for TypeScript (approved by Atul, 2026-09-26).
 
 ## Commands (created in N1.1–N1.5; until then they don't exist)
 
