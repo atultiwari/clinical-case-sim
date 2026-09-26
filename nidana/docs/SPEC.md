@@ -261,7 +261,7 @@ RLS on every table; a least-privilege database role for the game server; rate li
 
 ## 7. Scoring
 
-### 7.1 Components (defaults in `configs/scoring.yaml`)
+### 7.1 Components (defaults in `configs/scoring.json`)
 
 | Component | Default weight | Rule |
 | --- | --- | --- |
@@ -272,6 +272,19 @@ RLS on every table; a least-privilege database role for the game server; rate li
 | Safety | cap | Each must-not-do violation subtracts 15 and caps the total at 50 |
 
 Weights are versioned, and every score records its scoring version.
+
+How the engine applies them (N1.3):
+
+- **Diagnosis:** the highest rubric anchor whose condition holds; otherwise the rubric's `default_score`.
+- **Management:** must-dos met as a share of those with a condition. A plain-text must-do (schema 0.2) is shown but not scored.
+- **Cost:** full marks at or below the efficient path's test prices; above that, scaled by efficient cost ÷ spend.
+- **Tests:** each distinct test ordered costs a point if the bundle rates it `unnecessary` and two if `risky`. A test with no rating counts as supportive if it is on the routine list (blood count, renal and liver function), otherwise as unnecessary.
+- **Time:** full marks for committing within the reference time (the efficient path's questions and examinations plus its slowest test), falling linearly to zero at the maximum stay.
+- **Differential:** the true diagnosis is in the player's last differential before the commit.
+- **Key discriminators:** the bundle's `key_discriminators` are free text, so the engine uses what it can check: the case's pivotal facts released, and its essential tests ordered with a result, as a share.
+- **Referrals:** 3 points, less 1 for each referral on none of the case's paths (and with no case-specific consult note), and 1 for each referral on the efficient path that was neither made nor put in the plan.
+- **Commit:** evidence must be items already in the Chart; the plan holds action and referral items only.
+- **Safety:** 15 points off per must-not-do; with any violation the total is capped at 50; never below zero.
 
 ### 7.2 Rules
 

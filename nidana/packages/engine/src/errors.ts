@@ -9,7 +9,11 @@ export type EngineErrorCode =
   | "not_orderable"
   | "over_budget"
   | "referral_limit"
-  | "must_commit";
+  | "must_commit"
+  | "evidence_not_released"
+  | "committed"
+  | "not_committed"
+  | "invalid_ground_truth";
 
 /** A refusal the server can show or log. `code` is stable; `message` is for people. */
 export interface ActionError {

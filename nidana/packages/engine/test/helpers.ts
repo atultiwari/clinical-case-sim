@@ -7,6 +7,7 @@ import {
 } from "@nidana/contracts";
 import {
   parseDifficultySettings,
+  parseScoringSettings,
   prepareCase,
   type PreparedCase,
 } from "../src/index.ts";
@@ -34,6 +35,10 @@ export const catalogue = unwrap(
 
 export const settings = parseDifficultySettings(
   JSON.parse(readFileSync(`${NIDANA}configs/difficulty.json`, "utf8")),
+);
+
+export const scoring = parseScoringSettings(
+  JSON.parse(readFileSync(`${NIDANA}configs/scoring.json`, "utf8")),
 );
 
 export function loadBundle(name: string): CaseBundle {

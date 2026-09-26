@@ -40,7 +40,8 @@ Rough effort: Phase 1 three to four weeks (two apps: player and server), Phase 2
     - An order on a day with no value for a component returns the latest earlier value, marked with its day ("result from day 0"); a value with no day holds throughout (changelog entry of 2026-09-25, schema 0.3 carry-forward; Case Library SPEC §10.2).
   - Depends on: N1.1.
 
-- [ ] **N1.3 Scoring and debrief**
+- [x] **N1.3 Scoring and debrief**
+  - Done 2026-09-26: the commit action (diagnosis, up to five released items as evidence, a plan of actions and referrals); `scoreEncounter` with the components of SPEC §7 (rules written out there) and weights in `configs/scoring.json`; `buildDebrief` with the paths compared, origins revealed, provisional and final reports paired, figures, key discriminators, teaching points and attribution. All five acceptance items pass on `PMC12949993@v1.r3`; the benchmark path scores 94.9 (98.9 with a differential holding the diagnosis). The conformance playthrough now checks the score too. Note for the Case Library: the pilot's `teaching_points` and `efficient_path` are empty in its ground truth.
   - Build: the condition evaluator (Case Library SPEC §10.4), component scores, the safety cap, `configs/scoring.yaml`, and the debrief payload (paths compared, origins revealed, provisional and final reports side by side, teaching points, attribution).
   - Accept (pilot):
     - The benchmark path (`ANALYSIS.md` §10), citing the supplement (H10) as evidence, scores diagnosis 5 with every must-do met.
