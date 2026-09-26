@@ -21,7 +21,7 @@ Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 Acknowledgements:
 
 - [ ] Nidana: load the newest published revision of each case (`r2`, and `r3` for the pilot); tick with a note.
-- [ ] Sambhasha: import the newest revision of each case; tick with a note.
+- [x] Sambhasha: P0.2's bundle tests read the newest revision of each case, and all pass. Ticked 2026-09-26, P0.2.
 
 ## 2026-09-26: bundle schema 0.3 correction: `finding_released` also takes an object (Case Library L1.7)
 
@@ -32,7 +32,7 @@ Acknowledgements:
 Acknowledgements:
 
 - [x] Nidana: regenerated `@nidana/contracts`; all 11 exported bundles validate (N1.1, 2026-09-26). The engine's condition evaluator (N1.3) will handle both forms and the sibling `from_tests` key.
-- [ ] Sambhasha: make the condition evaluator accept both forms of `finding_released`, and the sibling `from_tests` key.
+- [x] Sambhasha: `Condition` accepts both forms and the sibling `from_tests` key; `finding_ids()` and `finding_tests()` give the Evaluator (P1.8) one answer for either. Every export parses, older revisions included. Ticked 2026-09-26, P0.2.
 
 ## 2026-09-26: notice: the repository is public, and every committed case is development-only (no contract change)
 
