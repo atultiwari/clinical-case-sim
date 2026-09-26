@@ -17,7 +17,7 @@ Each part has its own PLAN. This file holds the umbrella tasks and the order in 
   - Depends on: U0.0. Do this before any part's first build task.
 
 - [x] **U0.2 Public repository** (done 26 Sep 2026, on Atul's instruction)
-  - Build: gitleaks scan of the whole history and a check of the committed cases' licences (all CC BY 4.0); `gh repo edit --visibility public`; rule 7 of `CLAUDE.md`, the Git section, S-010 (superseding S-005) and `docs/REPOSITORY.md` updated; a changelog notice that the committed cases are development-only.
+  - Build: gitleaks scan of the whole history and a check of the committed cases' licences (all CC BY 4.0); `gh repo edit --visibility public`; rule 7 of `CLAUDE.md`, the Git section, S-010 (superseding S-005) and `docs/REPOSITORY.md` updated; a changelog notice that the committed cases are development-only; `uv` installed in the contract workflow's pre-commit job, which Sambhasha's mypy hook needs.
   - Accept: `gh repo view` reports visibility `PUBLIC`; CI runs; no secret in the history.
   - Depends on: U0.0.
 
