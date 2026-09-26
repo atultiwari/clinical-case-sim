@@ -14,6 +14,17 @@ Acknowledgements:
 
 - [ ] Nidana: regenerate `@nidana/contracts` (`pnpm --filter @nidana/contracts generate`); the N1.1 tests on every exported bundle then pass. The engine's condition evaluator (N1.3) handles both forms.
 - [ ] Sambhasha: make the condition evaluator accept both forms of `finding_released`, and the sibling `from_tests` key.
+## 2026-09-26: notice: the repository is public, and every committed case is development-only (no contract change)
+
+- The umbrella repository is public from 26 Sep 2026 (S-010, superseding S-005; `CLAUDE.md` rule 7). All ten committed cases and their eleven bundles, including their answers, are now public.
+- Atul's decision: these cases are for building and testing the apps only. They never go into Nidana's store release, and never count as held-out or primary-result cases in a Sambhasha study. This supersedes the eligibility granted to the four Sambhasha starter cases in the item-by-item review notice below; their review still stands as a record.
+- Production and study cases will be a new set, curated once the apps work and kept outside this repository.
+- The shared contract is unchanged: no bundle, schema or catalogue version moves.
+
+Acknowledgements:
+
+- [x] Nidana: no action for development play; before the store release (Phase 4), load only cases from the new production set. Ticked 2026-09-26, U0.2.
+- [ ] Sambhasha: mark every current bundle as not eligible for a study's primary results (the four starter cases included), and plan the study on the new case set.
 
 ## 2026-09-26: notice: Sambhasha's four starter cases are now reviewed item by item (no contract change)
 
