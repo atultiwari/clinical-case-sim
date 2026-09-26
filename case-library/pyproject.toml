@@ -12,10 +12,12 @@ dependencies = [
 [dependency-groups]
 # ruff and mypy are pinned exactly: the root .pre-commit-config.yaml runs the same versions.
 dev = [
+    "jsonschema>=4.25,<5",
     "mypy==2.3.1",
     "pytest>=9.1,<10",
     "pytest-cov>=7.1,<8",
     "ruff==0.16.9",
+    "types-jsonschema>=4.25",
     "types-openpyxl>=3.1.5.20260827",
 ]
 

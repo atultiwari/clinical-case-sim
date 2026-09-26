@@ -4,6 +4,25 @@ Every change to the shared contract (S-004) gets an entry here, newest first. Ea
 
 Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
+## 2026-09-26: notice: the Case Vault exports one layout for conditions; six bundles re-exported (no contract change)
+
+- Follows the schema correction below (both fixes kept, Atul's decision). Migration `20260926173522_casevault_condition_shape` makes `export_bundle` write every `finding_released` condition as the list of finding ids with `from_tests` beside it, so bundles leave the Case Vault in one layout. Frozen rows and `bundle_rows` are unchanged, so every `frozen_hash` still reproduces.
+- New revisions, catalogue version 2, recorded and published for development on Atul's instruction:
+  - `PMC11227049@v1.r2` (replaces `r1`: one must-do)
+  - `PMC11227436@v1.r2` (replaces `r1`: one consult note condition)
+  - `PMC12007988@v1.r2` (replaces `r1`: one must-do)
+  - `PMC12364935@v1.r2` (replaces `r1`: one must-do and three consult note conditions)
+  - `PMC13193864@v1.r2` (replaces `r1`: one rubric anchor, which the schema leaves unchecked)
+  - `PMC12949993@v1.r3` (replaces `r2`: the film-review must-do)
+- Each new revision equals the one it replaces with only those conditions rewritten; the clinical content and the review records are unchanged. The other four cases re-export byte for byte. The old revisions stay valid (the schema accepts both layouts) and stay in `exports/` and `casevault.bundle`; engines should load the newest revision of each case.
+- The Case Library's tests now check the newest bundle of every case against the whole schema, rubric anchors included.
+- The shared contract is unchanged: no bundle, schema or catalogue version moves.
+
+Acknowledgements:
+
+- [ ] Nidana: load the newest published revision of each case (`r2`, and `r3` for the pilot); tick with a note.
+- [ ] Sambhasha: import the newest revision of each case; tick with a note.
+
 ## 2026-09-26: bundle schema 0.3 correction: `finding_released` also takes an object (Case Library L1.7)
 
 - The condition `finding_released` now takes either a list of finding ids or an object `{"findings": [...], "from_tests": [...]}` (`from_tests` optional, no other keys). The curated cases have always used both forms, but the schema allowed only the list, so six exported bundles did not validate against their own schema: `PMC11227049@v1.r1`, `PMC11227436@v1.r1`, `PMC12007988@v1.r1`, `PMC12364935@v1.r1`, and the pilot `PMC12949993@v1.r1` and `.r2`. Nidana's contracts (N1.1) found this.
@@ -14,6 +33,7 @@ Acknowledgements:
 
 - [x] Nidana: regenerated `@nidana/contracts`; all 11 exported bundles validate (N1.1, 2026-09-26). The engine's condition evaluator (N1.3) will handle both forms and the sibling `from_tests` key.
 - [ ] Sambhasha: make the condition evaluator accept both forms of `finding_released`, and the sibling `from_tests` key.
+
 ## 2026-09-26: notice: the repository is public, and every committed case is development-only (no contract change)
 
 - The umbrella repository is public from 26 Sep 2026 (S-010, superseding S-005; `CLAUDE.md` rule 7). All ten committed cases and their eleven bundles, including their answers, are now public.

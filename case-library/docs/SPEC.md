@@ -550,7 +550,7 @@ Condition vocabulary:
 - `dx_in`: the committed diagnosis is one of these.
 - `evidence_has`: the player cited these released items as key evidence.
 - `released_all`, `released_any`: items released to the Chart. Released ids cover facts, ledger rows, reports and consult notes.
-- `finding_released`: a released report contains these finding ids. Write either a list, `{"finding_released": ["FND.X"]}`, or an object that can limit the tests the report must come from, `{"finding_released": {"findings": ["FND.X"], "from_tests": ["LAB.HAEM.FILM"]}}`. The object form is the one to use with `from_tests`; a `from_tests` key beside `finding_released` in the same condition means the same thing and stays valid (L1.7).
+- `finding_released`: a released report contains these finding ids. Write either a list, `{"finding_released": ["FND.X"]}`, or an object that can limit the tests the report must come from, `{"finding_released": {"findings": ["FND.X"], "from_tests": ["LAB.HAEM.FILM"]}}`. The object form is the one to use with `from_tests`; a `from_tests` key beside `finding_released` in the same condition means the same thing and stays valid (L1.7). Curation files and Case Vault rows may use either; `export_bundle` always writes the list with `from_tests` beside it, so bundles carry one layout (L1.8).
 - `asked_any`, `ordered_any`, `ordered_all`, `referred_any`: history questions asked, tests ordered and referrals made during the encounter.
 - `plan_has`, `plan_has_any`: items in the committed plan. A plan holds action items (`RX.*`, `ACT.*`) and referral items (`REF.*`).
 - `plan_before`: A is planned before or together with B.
