@@ -11,7 +11,9 @@ This is an educational tool. Nothing it produces is clinical advice.
 ## Pinned shared-contract versions
 
 - Case bundle schema: **0.3**
-- Catalogue: **v1** (after Case Library task L0.5)
+- Catalogue: **v2** (Case Library L1.3; pinned in N1.1 on 2026-09-26, because every published bundle except the pilot's first revision is on v2)
+
+The pins are also constants in `packages/contracts/src/versions.ts`.
 
 Upgrade only through a PLAN task, after the changelog entry in `../docs/CHANGELOG.md`.
 

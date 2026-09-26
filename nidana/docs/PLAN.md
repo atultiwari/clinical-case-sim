@@ -23,7 +23,7 @@ Rough effort: Phase 1 three to four weeks (two apps: player and server), Phase 2
 ## Phase 1: the game (Attending seat, deterministic)
 
 - [ ] **N1.1 Contracts**
-  - Build: `packages/contracts` with TypeScript types and Zod validators generated from `../case-library/schemas/case-bundle.v0.3.schema.json`; the catalogue export format; a hand-made fixture bundle for tests until the pilot bundle exists. Record the pinned versions (schema 0.3, catalogue v1) in `nidana/CLAUDE.md`. Add Nidana's hooks to the root `.pre-commit-config.yaml` and its GitHub Actions workflow (lint, type-check, tests), limited to `nidana/`.
+  - Build: `packages/contracts` with TypeScript types and Zod validators generated from `../case-library/schemas/case-bundle.v0.3.schema.json`; the catalogue export format; a hand-made fixture bundle for tests until the pilot bundle exists. Record the pinned versions (schema 0.3, catalogue v2; v1 before the catalogue v2 changelog entry) in `nidana/CLAUDE.md`. Add Nidana's hooks to the root `.pre-commit-config.yaml` and its GitHub Actions workflow (lint, type-check, tests), limited to `nidana/`.
   - Accept: the fixture validates; an invalid bundle (missing licence, unknown origin) is rejected with a clear message; once LM0 is reached, the pilot bundle validates too.
   - Depends on: umbrella U0.1; Case Library L0.3 (the schema).
 
@@ -35,6 +35,7 @@ Rough effort: Phase 1 three to four weeks (two apps: player and server), Phase 2
     - A blood lead appears only after its turnaround, at 77.8 µg/dL.
     - Standard mode gives the provisional film report with its status line; the film review gives the final report; Guided mode gives the final report first.
     - Costs add up; the same actions give an identical state.
+    - An order on a day with no value for a component returns the latest earlier value, marked with its day ("result from day 0"); a value with no day holds throughout (changelog entry of 2026-09-25, schema 0.3 carry-forward; Case Library SPEC §10.2).
   - Depends on: N1.1.
 
 - [ ] **N1.3 Scoring and debrief**
