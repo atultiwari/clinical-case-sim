@@ -91,7 +91,7 @@ Acknowledgements:
 Acknowledgements:
 
 - [x] Nidana: the engine answers an order on a day without a value with the latest earlier value and marks its day (`requestedDay` and `day` on each release; N1.2, 2026-09-26). The player app shows the day (N1.5).
-- [ ] Sambhasha: the Gatekeeper does the same when it releases results to the Chart.
+- [x] Sambhasha: the Gatekeeper (P1.3) returns the latest earlier value for a day without one and marks the line with its day ("result from day 6"); tested on the pilot. Ticked 2026-09-27, P1.3.
 
 ## 2026-09-25: catalogue v1 (Case Library L0.5)
 

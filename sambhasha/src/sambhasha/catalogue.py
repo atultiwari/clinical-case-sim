@@ -62,6 +62,9 @@ class CatalogueItem:
     name: str
     synonyms: tuple[str, ...]
     loinc: str | None = None
+    scope: tuple[str, ...] = ()  # who may use it: "attending", "consultant.*", ...
+    route: str | None = None  # tests: "direct" or the service that performs it
+    components: tuple[str, ...] = ()  # tests: their component ids, in order
 
 
 def read_rows(path: Path, required: tuple[str, ...]) -> list[dict[str, str]]:
@@ -110,4 +113,7 @@ def _read_items(directory: Path) -> Iterator[CatalogueItem]:
                 name=row["name"],
                 synonyms=split_synonyms(row.get("synonyms")),
                 loinc=row.get("loinc") or None,
+                scope=split_synonyms(row.get("specialty_scope")),
+                route=row.get("route") or None,
+                components=split_synonyms(row.get("components")),
             )

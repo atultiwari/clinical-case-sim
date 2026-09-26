@@ -81,7 +81,14 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Accept: "CBC", "hemogram" and "complete blood count" resolve to one catalogue id; "blood lead", "lead level" and "Pb level" resolve to one catalogue id; unmatched text is logged for the Case Library's missing-request export.
   - Depends on: P0.2.
 
-- [ ] **P1.3 Gatekeeper**
+- [x] **P1.3 Gatekeeper**
+  - Done 27 Sep 2026: `gatekeeper/resolver.py` (with `lookup.py`, `matcher.py`, `policy.py`, `configs/permissions.yaml`, `prompts/matcher.md` v1 and `prompts.py`).
+    - Permissions: the action matrix in `configs/permissions.yaml`, plus each catalogue item's `specialty_scope` as the manoeuvre catalogue.
+    - Refusals: a request for the diagnosis, the article or its source (a protocol violation), and vague requests.
+    - Coding (P1.2): candidates are ranked by how much of a catalogue phrase the question covers, so whole-sentence history questions reach the matcher, which must pick one of them.
+    - Release: stored text only, by day, with carry-forward marked. Release conditions are checked against the seat's own words or the order's indication. A held-back fact is never replaced by a ledger reply. A fact that reveals the diagnosis comes only with its own test (§7, rule 4).
+    - Routing: report components of `service.*` tests go to that service as raw material (the article's, else the ledger's report text), and a test-level rule ("Not applicable") answers the whole test.
+    - Pilot: H09 alone for a toxin question, H10 for a supplement question, blood lead 77.8 ug/dL (stored in ug), film to `service.pathology` with R01, a Consultant's order refused, diagnosis and source requests refused as violations, and every released line is stored text. A leak review found four gaps, not reachable with today's data; all fixed and tested.
   - Build: `configs/permissions.yaml` with the permission matrix and manoeuvre catalogue. The resolver implements SPEC §7: it returns stored text only, handles direct and interpretive routing, day semantics and `release_condition`, and refuses with a reason. The matcher model picks only from candidate catalogue ids (D-022).
   - Accept (pilot):
     - A generic toxin question returns H09 only; a supplement question returns H10.

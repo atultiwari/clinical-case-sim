@@ -41,12 +41,12 @@ def test_blood_lead_requests_resolve_to_one_id(coder: Coder, text: str) -> None:
 def test_unmatched_text_is_logged_for_the_case_library(
     coder: Coder, log: MissingRequestLog
 ) -> None:
-    coding = coder.code("zqx frobnication assay", kinds=("test",), bundle_id="PMC1@v1.r1")
+    coding = coder.code("zqx frobnication wibble", kinds=("test",), bundle_id="PMC1@v1.r1")
 
     assert (coding.status, coding.ids) == ("unmatched", ())
     (request,) = log.requests
     assert (request.query, request.kind, request.bundle_id, request.source) == (
-        "zqx frobnication assay",
+        "zqx frobnication wibble",
         "test",
         "PMC1@v1.r1",
         "sambhasha",
@@ -56,16 +56,16 @@ def test_unmatched_text_is_logged_for_the_case_library(
 def test_the_missing_requests_export_matches_the_case_vault_table(
     coder: Coder, log: MissingRequestLog, tmp_path: Path
 ) -> None:
-    coder.code("zqx frobnication assay", kinds=("test",), bundle_id="PMC1@v1.r1")
-    coder.code("wibble scan", kinds=("test",))
+    coder.code("zqx frobnication wibble", kinds=("test",), bundle_id="PMC1@v1.r1")
+    coder.code("flurb quux", kinds=("test",))
 
     path = log.write_csv(tmp_path / "missing.csv")
 
     rows = list(csv.DictReader(path.open(encoding="utf-8")))
     assert list(rows[0]) == ["created_at", "source", "bundle_id", "kind", "query"]
     assert [(r["query"], r["bundle_id"]) for r in rows] == [
-        ("zqx frobnication assay", "PMC1@v1.r1"),
-        ("wibble scan", ""),
+        ("zqx frobnication wibble", "PMC1@v1.r1"),
+        ("flurb quux", ""),
     ]
 
 
