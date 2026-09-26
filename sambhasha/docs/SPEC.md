@@ -577,6 +577,7 @@ What stays in Sambhasha: theatre mode, in which the engine mirrors each seat's m
 | Storage | Postgres through Supabase: local CLI for development, self-hosted on Coolify for production; psycopg 3 |
 | Models | `openai` SDK against OpenRouter (cloud) and Ollama (local) |
 | Templates | Jinja2 for role cards |
+| Configuration | PyYAML for `configs/*.yaml` (approved by Atul, 26 Sep 2026) |
 | Quality | ruff, mypy, pytest, pre-commit, GitHub Actions |
 | Experiments (Phase 2) | Inspect AI |
 | Tracing (Phase 2) | Arize Phoenix, or Langfuse if the VPS has about 16 GB of RAM |
