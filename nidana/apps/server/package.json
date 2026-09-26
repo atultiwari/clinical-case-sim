@@ -1,0 +1,42 @@
+{
+  "name": "@nidana/server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nidana's game server: Next.js route handlers that run the engine. The only public server; bundles never leave it.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "next dev --port 3100",
+    "build": "next build",
+    "start": "next start --port 3100",
+    "lint": "eslint . && prettier --check . --ignore-path ../../../.gitignore",
+    "format": "prettier --write . --ignore-path ../../../.gitignore",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@nidana/contracts": "workspace:*",
+    "@nidana/engine": "workspace:*",
+    "jose": "6.2.12",
+    "next": "16.3.6",
+    "postgres": "3.4.9",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@types/node": "^22",
+    "@types/react": "19.3.0",
+    "@vitest/coverage-v8": "5.0.2",
+    "eslint": "9.39.5",
+    "prettier": "3.9.9",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.1",
+    "vitest": "5.0.2",
+    "fast-check": "4.10.2"
+  }
+}

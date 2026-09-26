@@ -11,3 +11,4 @@ export * from "./debrief.ts";
 export * from "./ground-truth.ts";
 export * from "./scoring.ts";
 export * from "./scoring-settings.ts";
+export * from "./version.ts";
