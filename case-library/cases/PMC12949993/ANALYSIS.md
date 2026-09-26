@@ -293,7 +293,7 @@ The dossier's lists, expressed over catalogue ids (vocabulary in Case Library SP
 | Must do | Condition (draft) |
 | --- | --- |
 | Ask specifically about supplements, herbal, traditional or imported medicines and over-the-counter products | `asked_any: [HX.MEDS.SUPPLEMENTS, HX.MEDS.SUPPLEMENT_DETAILS]` |
-| Have the blood film reviewed for basophilic stippling | `finding_released: {findings: [FND.COARSE_BASOPHILIC_STIPPLING], from_tests: [LAB.HAEM.FILM, LAB.HAEM.FILM_REVIEW]}`. In Nidana this is RP02 (from the film review, or the first film in Guided mode); in Sambhasha, a Pathology Service film report that reports the stippling. See judgement call 3 |
+| Have the blood film reviewed for basophilic stippling | `finding_released: [FND.COARSE_BASOPHILIC_STIPPLING], from_tests: [LAB.HAEM.FILM, LAB.HAEM.FILM_REVIEW]` (the Case Vault stores this frozen condition in an older object form; the export rewrites it, PLAN L1.7). In Nidana this is RP02 (from the film review, or the first film in Guided mode); in Sambhasha, a Pathology Service film report that reports the stippling. See judgement call 3 |
 | Measure venous blood lead | `ordered_any: [LAB.TOX.BLOOD_LEAD]` |
 | Stop the exposure before or alongside chelation | `plan_has: [ACT.STOP_SUSPECTED_SOURCE]` and `plan_before: [ACT.STOP_SUSPECTED_SOURCE, RX.CHELATION.*]` |
 | Chelate with oral succimer, with clinical toxicology input | `plan_has: [RX.CHELATION.SUCCIMER_ORAL]` and (`referred_any: [REF.TOXICOLOGY]` or `plan_has: [REF.TOXICOLOGY]`) |
