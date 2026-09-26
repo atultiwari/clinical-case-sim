@@ -4,6 +4,18 @@ Every change to the shared contract (S-004) gets an entry here, newest first. Ea
 
 Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
+## 2026-09-26: notice: the ten published bundles were approved in bulk (no contract change)
+
+- Every bundle the Case Vault has published so far was approved by Atul as a whole, not reviewed item by item: `PMC12949993@v1.r1` and `.r2` (the pilot), and the nine batch 1 bundles `PMC11015937@v1.r1`, `PMC11227049@v1.r1`, `PMC11227436@v1.r1`, `PMC11890614@v1.r1`, `PMC12007988@v1.r1`, `PMC12364935@v1.r1`, `PMC12643702@v1.r1`, `PMC13193864@v1.r1`, `PMC13400839@v1.r1`. Sambhasha's four starter cases are among the nine.
+- The Case Vault records this on every row (review batches `chat-2026-09-25-atul-blanket`, `chat-2026-09-26-atul-blanket-batch1`, `chat-2026-09-26-atul-blanket-batch1-corrections` and `chat-2026-09-26-atul-blanket-pilot-r2`, each decision noted "not reviewed item by item"), but the bundles do not carry review notes, so this entry is how the other parts learn of it. Batch 1 also had an independent second review and corrections before its bundles were exported (Case Library PLAN L1.4).
+- Invariant 1 applies: nothing unreviewed counts in a study's primary results. Until the Case Library records an item-by-item review of a case and announces it here, these cases must not count in a Sambhasha study's primary results. They may be used for development, pilot runs and secondary or exploratory analyses, labelled as such.
+- The shared contract is unchanged: no bundle, schema or catalogue version moves.
+
+Acknowledgements:
+
+- [ ] Nidana: no action needed (development play has no primary results); tick with a note.
+- [ ] Sambhasha: mark these ten bundles as not eligible for a study's primary results (for example a flag in the case registry that the primary analysis honours), and keep the flag until an entry here announces an item-by-item review of the case.
+
 ## 2026-09-25: catalogue v2 (Case Library L1.3, batch 1)
 
 - Items the nine batch-1 cases need, proposed by each case's curator and merged by the lead curator (Claude), under Atul's instruction to decide on his behalf: 5 history questions, 1 examination, 51 tests, 16 actions, 1 referral (`REF.DENTISTRY`), 4 diagnoses, 14 findings, 63 components with 64 reference ranges, 3 value rules. Totals: history 146, exam 69, test 302, action 132, referral 20, diagnosis 496, finding 74, component 434. New prices are estimates; the 4 new diagnoses have unverified codes.
