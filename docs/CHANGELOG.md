@@ -4,6 +4,16 @@ Every change to the shared contract (S-004) gets an entry here, newest first. Ea
 
 Versions: bundle schema `MAJOR.MINOR`; catalogue `vN`.
 
+## 2026-09-26: bundle schema 0.3 correction: `finding_released` also takes an object (Case Library L1.7)
+
+- The condition `finding_released` now takes either a list of finding ids or an object `{"findings": [...], "from_tests": [...]}` (`from_tests` optional, no other keys). The curated cases have always used both forms, but the schema allowed only the list, so six exported bundles did not validate against their own schema: `PMC11227049@v1.r1`, `PMC11227436@v1.r1`, `PMC12007988@v1.r1`, `PMC12364935@v1.r1`, and the pilot `PMC12949993@v1.r1` and `.r2`. Nidana's contracts (N1.1) found this.
+- A `from_tests` key beside `finding_released` in the same condition stays valid and means the same as the object's `from_tests`; no bundle uses it. Case Library SPEC §10.4 now shows both forms, and the case-curate consult note template shows the object form.
+- The schema only widens, so no version moves: the schema stays `0.3` and no bundle, export or `.sha256` changes. Atul approved the fix without new bundle revisions. All eleven exports validate against the corrected schema (checked with Python `jsonschema`, with the format checker on).
+
+Acknowledgements:
+
+- [ ] Nidana: regenerate `@nidana/contracts` (`pnpm --filter @nidana/contracts generate`); the N1.1 tests on every exported bundle then pass. The engine's condition evaluator (N1.3) handles both forms.
+- [ ] Sambhasha: make the condition evaluator accept both forms of `finding_released`, and the sibling `from_tests` key.
 ## 2026-09-26: notice: the repository is public, and every committed case is development-only (no contract change)
 
 - The umbrella repository is public from 26 Sep 2026 (S-010, superseding S-005; `CLAUDE.md` rule 7). All ten committed cases and their eleven bundles, including their answers, are now public.

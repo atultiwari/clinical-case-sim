@@ -144,6 +144,11 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
   - Accept: every missing request is mapped, added or ignored with a reason; revisions `r2` and later exist where coverage grew.
   - Depends on: LM1.
 
+- [x] **L1.7 Schema fix: the object form of `finding_released`** (done 2026-09-26, on Atul's approval in a Nidana session)
+  - Build: Nidana's contracts (N1.1) found that six exported bundles fail schema 0.3: their conditions write `finding_released` as `{findings, from_tests}`, and the schema allowed only an id list. Widen the schema to accept both forms, keep the sibling `from_tests` key valid, update SPEC §10.4 and the consult note template; no bundle changes.
+  - Accept: all eleven exported bundles validate against the schema (checked with Python `jsonschema` and with Nidana's generated validators); every frozen bundle and `.sha256` is unchanged; a changelog entry.
+  - Depends on: L1.4.
+
 ---
 
 ## Phase 2: release support
