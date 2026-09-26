@@ -174,6 +174,7 @@ create table sambhasha.run (
   ended_at timestamptz,
   status text not null check (status in ('running', 'completed', 'aborted'))
 );
+create index run_bundle on sambhasha.run (bundle_id);
 
 create table sambhasha.event (
   id bigint generated always as identity primary key,
@@ -274,6 +275,33 @@ $$;
 
 create trigger guard_sealed_bundle before update or delete on sambhasha.case_bundle
   for each row execute function sambhasha.guard_sealed_bundle();
+
+-- Row triggers do not fire on TRUNCATE, so the case tables refuse it outright. To start
+-- again, reset the database from the migrations (`supabase db reset`).
+create function sambhasha.guard_truncate()
+returns trigger
+language plpgsql
+set search_path = ''
+as $$
+begin
+  raise exception 'sambhasha.%: truncate refused; imported bundles are never removed',
+    tg_table_name;
+end
+$$;
+
+do $$
+declare
+  t text;
+begin
+  foreach t in array array['case_bundle', 'fact', 'ledger_row', 'report', 'consult_note',
+                           'raw_material', 'media', 'gap', 'test_utility', 'path_analysis',
+                           'ground_truth'] loop
+    execute format(
+      'create trigger guard_truncate before truncate on sambhasha.%I '
+      'for each statement execute function sambhasha.guard_truncate()', t);
+  end loop;
+end
+$$;
 
 -- The Event Log is insert-only (invariant I6).
 create function sambhasha.guard_event_log()

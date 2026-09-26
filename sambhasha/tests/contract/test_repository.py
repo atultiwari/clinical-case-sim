@@ -319,3 +319,45 @@ def test_an_order_event_payload_round_trips(
     repo.append_event(event)
 
     assert repo.events(run.id) == (event,)
+
+
+def test_re_putting_an_order_replaces_every_field(
+    repo: Repository, pilot: CaseBundle, pilot_sha256: str
+) -> None:
+    run = _stored(repo, pilot, pilot_sha256)
+    order = _order(run.id)
+    repo.put_order(order)
+
+    changed = order.model_copy(
+        update={"code": "LAB.HAEM.FILM_REVIEW", "indication": "stippling?", "status": "resulted"}
+    )
+    repo.put_order(changed)
+
+    assert repo.orders(run.id) == (changed,)
+
+
+def test_orders_come_back_by_time_ordered(
+    repo: Repository, pilot: CaseBundle, pilot_sha256: str
+) -> None:
+    run = _stored(repo, pilot, pilot_sha256)
+    later = _order(run.id).model_copy(update={"ordered_at_min": 300, "due_at_min": 400})
+    earlier = _order(run.id).model_copy(update={"ordered_at_min": 10, "due_at_min": 20})
+
+    repo.put_order(later)
+    repo.put_order(earlier)
+
+    assert repo.orders(run.id) == (earlier, later)
+
+
+def test_an_order_cannot_move_to_another_run(
+    repo: Repository, pilot: CaseBundle, pilot_sha256: str
+) -> None:
+    run = _stored(repo, pilot, pilot_sha256)
+    other = _run(pilot.bundle_id)
+    repo.add_run(other)
+    order = _order(run.id)
+    repo.put_order(order)
+
+    with pytest.raises(DuplicateError):
+        repo.put_order(order.model_copy(update={"run_id": other.id}))
+    assert repo.orders(run.id) == (order,)

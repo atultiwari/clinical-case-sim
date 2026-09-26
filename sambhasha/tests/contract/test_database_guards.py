@@ -135,3 +135,28 @@ def test_the_pilot_rows_are_all_stored(
         "media": len(pilot.media),
         "gap": len(pilot.gaps),
     }
+
+
+@pytest.mark.parametrize(
+    "table",
+    [
+        "case_bundle",
+        "fact",
+        "ledger_row",
+        "report",
+        "consult_note",
+        "raw_material",
+        "media",
+        "gap",
+        "test_utility",
+        "path_analysis",
+        "ground_truth",
+        "event",
+    ],
+)
+def test_no_table_holding_sealed_data_can_be_truncated(
+    db: psycopg.Connection, stored: Run, table: str
+) -> None:
+    message = _refused(db, f"truncate sambhasha.{table} cascade")
+
+    assert "truncate" in message.lower()

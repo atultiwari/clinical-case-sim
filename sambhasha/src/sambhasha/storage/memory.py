@@ -97,10 +97,14 @@ class InMemoryRepository:
 
     def put_order(self, order: Order) -> None:
         self.get_run(order.run_id)
+        existing = self._orders.get(order.id)
+        if existing is not None and existing.run_id != order.run_id:
+            raise DuplicateError(f"order {order.id} belongs to another run")
         self._orders[order.id] = order
 
     def orders(self, run_id: UUID) -> tuple[Order, ...]:
-        return tuple(o for o in self._orders.values() if o.run_id == run_id)
+        mine = (o for o in self._orders.values() if o.run_id == run_id)
+        return tuple(sorted(mine, key=lambda o: (o.ordered_at_min, str(o.id))))
 
     def add_score(self, score: Score) -> None:
         self.get_run(score.run_id)

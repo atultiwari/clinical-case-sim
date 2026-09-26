@@ -63,6 +63,7 @@ class PostgresRepository:
         dumped = _dump(bundle)
         try:
             with self._conn.transaction():
+                self._lock_bundle_id(bundle.bundle_id)
                 self._conn.execute(
                     "insert into sambhasha.case_bundle (bundle_id, case_version_id, revision,"
                     " schema_version, catalogue_version, sha256, head)"
@@ -88,7 +89,18 @@ class PostgresRepository:
                     (bundle.bundle_id,),
                 )
         except psycopg.errors.UniqueViolation as error:
+            if error.diag.table_name != "case_bundle":
+                raise
             raise DuplicateError(f"bundle {bundle.bundle_id} is already imported") from error
+
+    def _lock_bundle_id(self, bundle_id: str) -> None:
+        """Serialise imports of one bundle id, then refuse it if it is already stored."""
+        self._conn.execute("select pg_advisory_xact_lock(hashtext(%s))", (bundle_id,))
+        exists = self._conn.execute(
+            "select 1 from sambhasha.case_bundle where bundle_id = %s", (bundle_id,)
+        ).fetchone()
+        if exists:
+            raise DuplicateError(f"bundle {bundle_id} is already imported")
 
     def _insert_rows(
         self,
@@ -230,6 +242,12 @@ class PostgresRepository:
 
     def append_event(self, event: Event) -> None:
         with self._conn.transaction():
+            # Lock the run so that concurrent appends to it take their turn.
+            self._one(
+                "select 1 from sambhasha.run where id = %s for update",
+                (event.run_id,),
+                f"no run {event.run_id}",
+            )
             row = self._conn.execute(
                 "select count(*) from sambhasha.event where run_id = %s", (event.run_id,)
             ).fetchone()
@@ -294,13 +312,17 @@ class PostgresRepository:
         )
 
     def put_order(self, order: Order) -> None:
-        self._write(
-            lambda: self._conn.execute(
+        def write() -> None:
+            written = self._conn.execute(
                 'insert into sambhasha."order" (id, run_id, ordered_by, item_text, code,'
                 " indication, route, status, cost_inr, ordered_at_min, due_at_min)"
                 " values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-                " on conflict (id) do update set status = excluded.status,"
-                " cost_inr = excluded.cost_inr, due_at_min = excluded.due_at_min",
+                " on conflict (id) do update set ordered_by = excluded.ordered_by,"
+                " item_text = excluded.item_text, code = excluded.code,"
+                " indication = excluded.indication, route = excluded.route,"
+                " status = excluded.status, cost_inr = excluded.cost_inr,"
+                " ordered_at_min = excluded.ordered_at_min, due_at_min = excluded.due_at_min"
+                ' where "order".run_id = excluded.run_id',
                 (
                     order.id,
                     order.run_id,
@@ -314,9 +336,12 @@ class PostgresRepository:
                     order.ordered_at_min,
                     order.due_at_min,
                 ),
-            ),
-            duplicate=f"order {order.id} already exists",
-            missing=f"no run {order.run_id}",
+            )
+            if written.rowcount == 0:
+                raise DuplicateError(f"order {order.id} belongs to another run")
+
+        self._write(
+            write, duplicate=f"order {order.id} already exists", missing=f"no run {order.run_id}"
         )
 
     def orders(self, run_id: UUID) -> tuple[Order, ...]:
