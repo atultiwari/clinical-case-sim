@@ -38,7 +38,8 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
 
 - **P0.4 PMC fetcher and licence gate — moved to the Case Library** (D-021; Case Library SPEC §4.4, steps 1–3). Nothing to do here.
 
-- [ ] **P0.5 Leak scanner and redaction**
+- [x] **P0.5 Leak scanner and redaction**
+  - Done 26 Sep 2026: `curation/leakscan.py` follows the Case Library's `leak_scan` rules. Terms are the ground truth's synonyms and leak terms plus the catalogue's names for the diagnosis. Allowed phrases are every catalogue test name and synonym and the case's own test names. Matching ignores case and spacing and respects word boundaries. `scan_bundle` covers every seat-facing text and skips the ground truth, `never` facts and confirmatory facts. `curation/redact.py` blanks leaked terms in text generated at run time; titles, keywords, captions and discussion are removed in the Case Library (D-021). The seeded pilot leaks are caught in a vignette, a caption and a narrative; "blood lead", "lead level" and "PNH flow cytometry" are not flagged; the newest bundle of every case scans clean. The importer (P0.6) calls `scan_bundle(bundle, Lexicon.from_bundle(bundle, CatalogueNames.load()))`.
   - Build: `curation/leakscan.py` scans text against the diagnosis, its synonyms and case-specific pathognomonic phrases; the importer runs it on every bundle as a second line of defence behind the Case Library's own scan. `curation/redact.py` strips titles, keywords, captions and discussion from seat-facing text.
   - Accept: seeded leaks are caught. For the pilot these include "lead poisoning", "plumbism", "saturnism" and "lead toxicity" in a vignette, a caption and a synthetic narrative. Test names such as "blood lead" are not flagged.
   - Depends on: P0.2.
