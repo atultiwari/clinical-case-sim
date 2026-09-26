@@ -28,9 +28,7 @@ defaults:
 jobs:
   check:
     name: Lint, type-check and unit tests
-    # Atul's Mac as a self-hosted runner: free for a private repository, and GitHub-hosted
-    # minutes are used up. The job waits in the queue while the Mac is off.
-    runs-on: [self-hosted, macOS, ARM64]
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
