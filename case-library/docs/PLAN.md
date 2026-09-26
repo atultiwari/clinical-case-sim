@@ -155,6 +155,12 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
   - Depends on: L1.4, L1.7.
   - Note (2026-09-26, done): migration applied to the Case Vault through the MCP (version `20260926173522`). The four unaffected cases re-exported byte-identical as `r1`. Exported through the read-only login, catalogue version 2: `PMC11227049`, `PMC11227436`, `PMC12007988`, `PMC12364935` and `PMC13193864` as `@v1.r2`, and the pilot as `@v1.r3`; each equals the revision it replaces with only the conditions rewritten. Recorded in `casevault.bundle` and published (`published_by` atul, on his instruction to make the fix work). The newest bundle of every case meets the whole schema. Announced in `../docs/CHANGELOG.md`.
 
+- [x] **L1.9 Nidana's play schema** (done 2026-09-27, on Atul's instruction from a Nidana session: "apply the migration on my behalf"; he confirmed the three grants outside `play`)
+  - Build: take Nidana's proposed migration (`nidana/supabase/proposed/20260926190000_play_schema.sql`, Nidana PLAN N1.4) into the Case Vault's history as `supabase/migrations/20260926190000_nidana_play_schema.sql`: the `play` tables, the insert-only action log, the `nidana_server` role (published bundles and `play` only), RLS with no access for `anon` or `authenticated`. Update the pinned policy list in `tests/integration/test_schema_tables.py` and add checks for the `play` schema.
+  - Accept: applied locally and to the development project; `anon` and `authenticated` are refused `casevault` and `play`; `nidana_server` reads published bundles only; the Case Library's tests pass.
+  - Depends on: Nidana N1.4 (the proposal and its tests).
+  - Note (2026-09-27): applied through the connector as `20260926183432_nidana_play_schema` (the local file renamed to match; the local stack's record repaired). Checked on the development project: `anon` and `authenticated` have no usage on `play` or `casevault`; `nidana_server` reads the bundle columns only (17 published bundles visible) and cannot update or delete `play.action`; RLS on all 5 `play` tables; the Case Vault's policies are the three earlier roles' plus `nidana_server`'s select. Next for Atul: create a login role that is a member of `nidana_server` (password outside Git and chat) and give its URL to the game server.
+
 ---
 
 ## Phase 2: release support

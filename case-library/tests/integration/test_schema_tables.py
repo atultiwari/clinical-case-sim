@@ -42,8 +42,9 @@ def test_rls_is_on_for_every_table(db: psycopg.Connection) -> None:
 
 
 def test_no_client_policies(db: psycopg.Connection) -> None:
-    # The only policies are the read-only role's select policies (L0.7) and the
-    # Case Studio writer's (L1.5); none for anon, authenticated or public.
+    # The only policies are the read-only role's select policies (L0.7), the
+    # Case Studio writer's (L1.5) and Nidana's game server's select on published
+    # bundles (L1.9); none for anon, authenticated or public.
     rows = db.execute(
         "select distinct roles::text, cmd from pg_policies where schemaname = 'casevault'"
         " order by 1, 2"
@@ -54,6 +55,7 @@ def test_no_client_policies(db: psycopg.Connection) -> None:
         ("{casevault_studio_writer}", "INSERT"),
         ("{casevault_studio_writer}", "SELECT"),
         ("{casevault_studio_writer}", "UPDATE"),
+        ("{nidana_server}", "SELECT"),
     ]
 
 
@@ -62,6 +64,28 @@ def test_client_roles_cannot_use_the_schema(db: psycopg.Connection, role: str) -
     row = db.execute("select has_schema_privilege(%s, 'casevault', 'usage')", (role,)).fetchone()
 
     assert row == (False,)
+
+
+@pytest.mark.parametrize("role", ["anon", "authenticated"])
+def test_client_roles_cannot_use_the_play_schema(db: psycopg.Connection, role: str) -> None:
+    # Nidana's play data (L1.9): only the game server's role reaches it.
+    row = db.execute("select has_schema_privilege(%s, 'play', 'usage')", (role,)).fetchone()
+
+    assert row == (False,)
+
+
+def test_nidana_server_reads_bundles_only(db: psycopg.Connection) -> None:
+    rows = db.execute(
+        "select table_name from information_schema.role_table_grants"
+        " where grantee = 'nidana_server' and table_schema = 'casevault' order by 1"
+    ).fetchall()
+    columns = db.execute(
+        "select column_name from information_schema.column_privileges"
+        " where grantee = 'nidana_server' and table_schema = 'casevault' order by 1"
+    ).fetchall()
+
+    assert rows == []
+    assert columns == [("body",), ("id",), ("published_at",), ("sha256",)]
 
 
 def test_original_report_must_be_provisional_with_a_status_line(db: psycopg.Connection) -> None:
