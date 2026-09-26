@@ -4297,6 +4297,457 @@
   "confidence": 0.6
  },
  {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the day's INR is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 1,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 2,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 3,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 4,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 5,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 6,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 7,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 8,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 9,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 10,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 11,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 12,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 80,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 80% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 0, is 1.15; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 13,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 75,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 75% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the day's INR is 1.20; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 14,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 75,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 75% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 13, is 1.20; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 15,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 75,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 75% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 13, is 1.20; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 16,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 75,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 75% (70-120).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 13, is 1.20; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 17,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 66,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 66% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the day's INR is 1.30; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 18,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 57,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 57% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the day's INR is 1.45; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 19,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 57,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 57% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 18, is 1.45; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 20,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 57,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 57% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 18, is 1.45; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 21,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 57,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 57% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 18, is 1.45; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 22,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 57,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 57% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 18, is 1.45; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 23,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 57,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 57% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 18, is 1.45; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 24,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 57,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 57% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the latest INR, from day 18, is 1.45; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 25,
+  "tier": "affected",
+  "gap_id": "G19",
+  "value": {
+   "value": 50,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": "Prothrombin activity (Quick) 50% (70-120), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (the day's INR is 1.60; curated row, G19). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair in another batch case, 44% at INR 1.75). Replaces the independent normal value flagged by the second review (2026-09-26).",
+  "confidence": 0.6
+ },
+ {
   "target": "CMP.FIBRINOGEN",
   "day_bucket": 25,
   "tier": "affected",

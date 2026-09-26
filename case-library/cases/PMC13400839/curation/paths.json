@@ -3,7 +3,7 @@
   "path_id": "P1",
   "kind": "efficient",
   "name": "Nutritional work-up of the pancytopenia",
-  "rationale": "Pancytopenia after a sleeve gastrectomy with malnutrition: haematinics with the first bloods, a targeted surgical, dietary and supplement history, then the marrow read in that light. The case must show: serum folate 2.6 ng/mL with B12 above 1500 pg/mL; the sleeve gastrectomy only on the surgical history; a diet low in folate and a stopped multivitamin only on specific questions; megaloblastic change in the marrow; normal cytogenetics",
+  "rationale": "Pancytopenia after a sleeve gastrectomy with malnutrition: haematinics with the first bloods, a targeted surgical, dietary and supplement history, then the marrow read in that light. The case must show: serum folate 2.6 ng/mL with B12 above 1500 pg/mL; the sleeve gastrectomy on the past medical or surgical history (and in the patient's words on admissions, diet and supplements, and on abdominal imaging or endoscopy); a diet low in folate and a stopped multivitamin only on specific questions; megaloblastic change in the marrow; normal cytogenetics",
   "items": [
    "HX.PMH.SURGICAL",
    "HX.SOCIAL.DIET",

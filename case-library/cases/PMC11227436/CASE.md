@@ -159,3 +159,15 @@ The rows pass the catalogue checker when appended to a copy of the CSVs. PMC1200
 The images were downloaded from PMC and looked at one by one.
 
 - M01 and M02: `has_annotations` set to true (panel letters drawn on the images).
+
+## Corrections after the second review (2026-09-26)
+
+Finding (MEDIUM): the vitamin K deficiency pattern chosen for G10 (factor VII 38, factor II 58, factor X 55, INR 1.75) left the other vitamin K-dependent proteins to the normal generator (factor IX 93, protein C 94, free protein S 85), which is inconsistent. All three are now `affected` rows on day 0, the only day that had a value, in `curation/affected.json` (gap G10, not judgement calls):
+
+| Target | Day | Old (normal) | New (affected) | Reason |
+| --- | --- | --- | --- | --- |
+| `CMP.F9` | 0 | 93 IU/dL | 64 IU/dL (50-150), unflagged | Vitamin K dependent; longer half-life, so it falls later and less than factor VII, near II and X |
+| `CMP.PROTEIN_C` | 0 | 94 IU/dL | 45 IU/dL (70-140), low | Vitamin K dependent with a short half-life like factor VII, so it falls early and about as far |
+| `CMP.PROTEIN_S_FREE` | 0 | 85 IU/dL | 52 IU/dL (55-125), low | Vitamin K dependent but long-lived with a large bound pool: a modest fall, less than protein C |
+
+Checked and left as they are: prothrombin activity 44% (article fact L06) against PT 20.8 s and INR 1.75 (a Quick activity near 45% corresponds to an INR of about 1.7-1.8, and INR < 1.5 would change the PLASMIC score of 4 the article reports); APTT 34.0 s, high-normal, fits mild falls in factors II, IX and X; factor V 92, fibrinogen, D-dimer, antithrombin (109), factors VIII and XI normal, as expected for a vitamin K pattern without liver failure or DIC. The replay reports 0 open problems.

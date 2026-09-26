@@ -2,13 +2,11 @@
  "final_diagnosis": {
   "id": "DX.MILIARY_TB",
   "ids": [
-   "DX.MILIARY_TB",
-   "DX.HLH"
+   "DX.MILIARY_TB"
   ],
   "text": "Miliary tuberculosis with repeatedly negative initial microbiological tests, mistaken for sarcoidosis on non-necrotising granulomas, treated with high-dose steroid and complicated by secondary haemophagocytic lymphohistiocytosis",
   "icd10": [
-   "A19.9",
-   "D76.1"
+   "A19.9"
   ],
   "accepted_synonyms": [
    "miliary tuberculosis",
@@ -18,20 +16,25 @@
    "tuberculosis",
    "tuberculosis-associated haemophagocytic lymphohistiocytosis",
    "tuberculosis-associated hemophagocytic lymphohistiocytosis",
-   "TB-associated HLH",
-   "secondary HLH"
+   "TB-associated HLH"
+  ],
+  "leak_terms": [
+   "haemophagocytic lymphohistiocytosis",
+   "hemophagocytic lymphohistiocytosis",
+   "HLH",
+   "secondary HLH",
+   "haemophagocytic syndrome",
+   "macrophage activation syndrome"
   ]
  },
  "final_dx": {
   "id": "DX.MILIARY_TB",
   "ids": [
-   "DX.MILIARY_TB",
-   "DX.HLH"
+   "DX.MILIARY_TB"
   ],
   "text": "Miliary tuberculosis with repeatedly negative initial microbiological tests, mistaken for sarcoidosis on non-necrotising granulomas, treated with high-dose steroid and complicated by secondary haemophagocytic lymphohistiocytosis",
   "icd10": [
-   "A19.9",
-   "D76.1"
+   "A19.9"
   ],
   "accepted_synonyms": [
    "miliary tuberculosis",
@@ -41,12 +44,19 @@
    "tuberculosis",
    "tuberculosis-associated haemophagocytic lymphohistiocytosis",
    "tuberculosis-associated hemophagocytic lymphohistiocytosis",
-   "TB-associated HLH",
-   "secondary HLH"
+   "TB-associated HLH"
+  ],
+  "leak_terms": [
+   "haemophagocytic lymphohistiocytosis",
+   "hemophagocytic lymphohistiocytosis",
+   "HLH",
+   "secondary HLH",
+   "haemophagocytic syndrome",
+   "macrophage activation syndrome"
   ]
  },
  "secondary_findings": [
-  "Secondary haemophagocytic lymphohistiocytosis (fever, cytopenias, ferritin 7821 ug/L, soluble IL-2 receptor 7593 ng/L, CXCL9 52 784 ng/L, marrow haemophagocytes; H-score 256)",
+  "Secondary haemophagocytic lymphohistiocytosis (DX.HLH, ICD-10 D76.1), triggered by the tuberculosis (fever, cytopenias, ferritin 7821 ug/L, soluble IL-2 receptor 7593 ng/L, CXCL9 52 784 ng/L, marrow haemophagocytes; H-score 256); scored through the rubric, not as a final-diagnosis id",
   "Moderate splenomegaly",
   "Acute hypoxic respiratory failure and shock from day 18 (acute respiratory distress syndrome suspected)"
  ],
@@ -125,6 +135,14 @@
          "RX.ANTITB.FIRST_LINE",
          "RX.STEROID.*"
         ]
+       },
+       {
+        "not": {
+         "plan_before": [
+          "RX.STEROID.*",
+          "RX.ANTITB.FIRST_LINE"
+         ]
+        }
        }
       ]
      }

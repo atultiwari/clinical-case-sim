@@ -2107,6 +2107,24 @@
   "confidence": 0.55
  },
  {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G11",
+  "value": {
+   "value": 66,
+   "unit": "%",
+   "ref_range": "70-120",
+   "flag": "L"
+  },
+  "release_text": null,
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Follows the INR in effect (INR 1.3, affected, all days; factor VII 46%) by the Case Library's common curve: activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair of 44% at INR 1.75). Replaces the generated normal of 97%, which contradicted the INR.",
+  "confidence": 0.7
+ },
+ {
   "target": "CMP.APTT",
   "day_bucket": null,
   "tier": "affected",

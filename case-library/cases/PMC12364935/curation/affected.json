@@ -1480,6 +1480,23 @@
   "confidence": 0.55
  },
  {
+  "target": "CMP.PT_ACTIVITY",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": null,
+  "value": {
+   "value": 73,
+   "unit": "%",
+   "ref_range": "70-120"
+  },
+  "release_text": "Prothrombin activity (Quick) 73% (70-120).",
+  "lay_text": null,
+  "priority": "low",
+  "judgement_call": false,
+  "rationale": "Follows the day's INR 1.22 (PT 14.6 s). Converted with the Case Library's common curve, activity % = round(100 x 0.59 / (INR - 1 + 0.59)), capped at 100 (0.59 calibrated to an article pair, 44% at INR 1.75): 100 x 0.59 / 0.81 = 72.8, so 73%, at the low end of the range. Replaces the generator's normal 89%, which did not fit the prolonged PT.",
+  "confidence": 0.55
+ },
+ {
   "target": "CMP.APTT",
   "day_bucket": 0,
   "tier": "affected",

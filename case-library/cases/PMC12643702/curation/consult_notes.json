@@ -93,15 +93,15 @@
     "L13"
    ]
   },
-  "note_text": "Asked to advise after a positive anticoagulant rodenticide panel. The patient reports no use of rodenticide at home or at work. These agents concentrate in rodents and in the animals that eat them, so a history of unusual meats, including food bought abroad, is worth taking carefully; intentional ingestion by the patient or by another person should also be considered sensitively. Happy to review again with the results.",
+  "note_text": "Asked to advise after a positive anticoagulant rodenticide panel. The patient reports no use of rodenticide at home or at work. Exposure can be indirect, through contaminated food or other products or through contact at work, so a careful exposure history covering unusual foods or products, including while abroad, is worth taking; intentional ingestion by the patient or by another person should also be considered sensitively. Happy to review again with the results.",
   "recommendations": [
-   "Take a detailed food history, including meat bought at markets abroad",
+   "Take a detailed exposure history: unusual foods or products, including while abroad, and contact at work",
    "Consider a sensitive assessment for intentional exposure if no source is found",
    "Oral vitamin K 50-100 mg daily, guided by the INR, for months",
    "Report to the regional poisons centre"
   ],
   "origin": "affected",
-  "rationale": "V2: the article's reasoning after the positive screen (no household source; intentional poisoning considered; food chain).",
+  "rationale": "V2: the article's reasoning after the positive screen (no household source; intentional poisoning considered; food chain). Worded after the second review as a consultant who does not know the source would put it: exposure routes, not market meat.",
   "confidence": 0.7
  },
  {

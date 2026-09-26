@@ -79,7 +79,7 @@
    "Review intake at follow-up alongside the blood results"
   ],
   "origin": "affected",
-  "rationale": "A dietitian takes a diet history, so this note gives the article's diet fact (H09) to a player who refers; a referral to dietetics is itself a diet question. Eggs and dairy are the curator's detail (the article names only meat and seafood). The note describes intake, not the diagnosis.",
+  "rationale": "A dietitian takes a diet history, so this note gives the article's diet fact (H09) to a player who refers; a referral to dietetics is itself a diet question (it already counts towards the diet must-do). Because the note carries H09, citing CN04 as evidence also earns rubric score 5 (second review, 2026-09-26). Eggs and dairy are the curator's detail (the article names only meat and seafood). The note describes intake, not the diagnosis.",
   "confidence": 0.65
  },
  {

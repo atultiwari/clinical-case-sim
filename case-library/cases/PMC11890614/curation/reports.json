@@ -241,8 +241,8 @@
   "status": "final",
   "status_line": null,
   "findings": [],
-  "report_text": "Red cells normocytic and normochromic with mild anisocytosis and rouleaux. White cells reduced in number with lymphopenia; neutrophils morphologically normal. Platelets adequate. No blasts, parasites or red cell fragments.",
-  "impression": "Normocytic anaemia with rouleaux and lymphopenia, in keeping with chronic inflammation.",
+  "report_text": "Red cells normocytic and normochromic with mild anisocytosis and rouleaux. Lymphocytes reduced; those seen are small and mature. Neutrophils, where present, morphologically normal. Platelets normal in appearance. White cell and platelet numbers as in the accompanying full blood count. No blasts, parasites or red cell fragments.",
+  "impression": "Normocytic anaemia with rouleaux and lymphopenia; morphology in keeping with chronic inflammation. Interpret the counts with the full blood count.",
   "suggested_reflex": [
    "LAB.HAEM.FILM_REVIEW"
   ],
@@ -250,7 +250,7 @@
   "origins": [
    "affected"
   ],
-  "rationale": "G08: 'mild normocytic anaemia' (article). Describes the admission film. Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "rationale": "G08: 'mild normocytic anaemia' (article). Reports carry no day in the Case Vault, so the film can be released on any day: it describes morphology that holds throughout the course (normocytic anaemia and lymphopenia on every day) and leaves the white cell and platelet numbers to the blood count, which falls from normal (WBC 4.5, platelets 227 on day 0) to pancytopenia (WBC 0.03, platelets 40 on day 17). Reworded after the second review (2026-09-26).",
   "confidence": 0.7
  },
  {
@@ -260,14 +260,14 @@
   "status": "final",
   "status_line": null,
   "findings": [],
-  "report_text": "Reviewed by a haematopathologist. Normocytic normochromic red cells with rouleaux; no spherocytes, fragments or inclusions. Lymphopenia; the lymphocytes are small and mature, without atypical or abnormal forms. Neutrophils without dysplasia. Platelets normal in number and appearance. No circulating haemophagocytes.",
+  "report_text": "Reviewed by a haematopathologist. Normocytic normochromic red cells with rouleaux; no spherocytes, fragments or inclusions. Lymphopenia; the lymphocytes are small and mature, without atypical or abnormal forms. Neutrophils, where present, without dysplasia. Platelets normal in appearance; their number as in the accompanying full blood count. No circulating haemophagocytes.",
   "impression": "Anaemia of chronic inflammation pattern; no features of a primary haematological disorder.",
   "suggested_reflex": [],
   "based_on": [],
   "origins": [
    "affected"
   ],
-  "rationale": "Admission film reviewed. Reports carry no day in the Case Vault; this one describes the study the article reports, and later requests return it too.",
+  "rationale": "Film review. Reports carry no day in the Case Vault, so the text describes only what holds on every day it can be released: red cell and lymphocyte morphology, no dysplasia or circulating haemophagocytes; white cell and platelet numbers are left to the blood count (platelets 227 on day 0, 40 on day 17). Reworded after the second review (2026-09-26).",
   "confidence": 0.65
  },
  {

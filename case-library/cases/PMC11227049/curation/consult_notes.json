@@ -8,11 +8,11 @@
     "recommendations": [
       "Ask for the blood film to be reviewed by a haematopathologist, looking specifically for red cell inclusions",
       "LDH, haptoglobin and a direct antiglobulin test; iron studies, B12 and folate if not already done",
-      "Take a full medicine history, including herbal, Ayurvedic and other traditional remedies and anything bought online",
+      "Take a full medicine history, including herbal, traditional and over-the-counter remedies and supplements, current or recently stopped",
       "No iron and no transfusion on current evidence while she is stable"
     ],
     "origin": "affected",
-    "rationale": "V1: a competent haematologist with the admission panel would look at the film, screen for haemolysis and take a full remedy history. Conditional wording because V1 has no condition on what the Chart holds.",
+    "rationale": "V1: a competent haematologist with the admission panel would look at the film, screen for haemolysis and take a full medicine history including remedies. Conditional wording because V1 has no condition on what the Chart holds. Second review (2026-09-26): the remedy question is worded generically; the consultant does not know about online purchases.",
     "confidence": 0.75
   },
   {
@@ -28,12 +28,12 @@
     "recommendations": [
       "Send a blood lead level",
       "Send haemoglobin studies (HPLC)",
-      "Take a full remedy and supplement history, including Ayurvedic products and anything bought online",
+      "Take a full medicine history, including herbal, traditional and over-the-counter remedies and supplements, current or recently stopped",
       "A bone marrow is not needed before these results",
       "Do not start iron"
     ],
     "origin": "affected",
-    "rationale": "V2: stippling calls for a blood lead, haemoglobin studies and a remedy history before a marrow. Names tests, never the diagnosis.",
+    "rationale": "V2: stippling calls for a blood lead, haemoglobin studies and a full medicine history before a marrow. Names tests, never the diagnosis. Second review (2026-09-26): the history is worded generically, without online purchases.",
     "confidence": 0.75
   },
   {
@@ -64,12 +64,12 @@
     "condition": null,
     "note_text": "Asked whether a toxic or environmental cause could explain abdominal pain after meals, poor appetite and anaemia in a woman with diabetes. We reviewed the Chart so far. Abdominal pain with an unexplained anaemia justifies a careful exposure history and targeted testing. No exposure is documented yet, so no specific toxic cause can be supported at present. Happy to review again with the results.",
     "recommendations": [
-      "Take a detailed exposure history: herbal, Ayurvedic, traditional and imported remedies and supplements, including products bought online or taken for her diabetes; occupation; hobbies; home and water supply",
+      "Take a detailed exposure history: a full medicine history, including herbal, traditional and over-the-counter remedies and supplements, current or recently stopped; occupation; hobbies; home and water supply",
       "Send a venous blood lead level",
       "Keep any product she has been taking, even if she has stopped it, in case it needs testing"
     ],
     "origin": "affected",
-    "rationale": "V1: asks for an exposure history and suggests a blood lead, which a toxicologist would do for pain with anaemia. Asking about products taken for her diabetes is what a competent toxicologist asks a diabetic patient in India; it names no diagnosis.",
+    "rationale": "V1: asks for an exposure history and suggests a blood lead, which a toxicologist would do for pain with anaemia. Second review (2026-09-26): the medicine history is worded as a consultant would ask it without knowing the answer (no online purchases, nothing tied to her diabetes); it names no diagnosis.",
     "confidence": 0.75
   },
   {
@@ -119,12 +119,12 @@
     "recommendations": [
       "Restart glucose-lowering treatment: metformin is suitable with her renal function",
       "Capillary glucose monitoring while an inpatient",
-      "Ask what she has been using for her diabetes since stopping metformin, including any herbal or Ayurvedic products",
+      "Take a full medicine history, including herbal, traditional and over-the-counter remedies, and ask why she stopped metformin",
       "Continue thyroxine at the current dose",
       "Check B12 periodically if metformin is restarted"
     ],
     "origin": "affected",
-    "rationale": "V1: a competent endocrinologist restarts treatment and asks what replaced metformin, a routine question in India where many patients switch to remedies. It names no diagnosis.",
+    "rationale": "V1: a competent endocrinologist restarts treatment, takes a full medicine history and asks why metformin was stopped. Second review (2026-09-26): no longer asks what she has used for her diabetes instead, which pointed straight at the hidden history. It names no diagnosis.",
     "confidence": 0.75
   },
   {

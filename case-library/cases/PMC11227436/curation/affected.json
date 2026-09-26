@@ -2800,6 +2800,59 @@
   "confidence": 0.55
  },
  {
+  "target": "CMP.F9",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G10",
+  "value": {
+   "value": 64,
+   "unit": "IU/dL",
+   "ref_range": "50-150"
+  },
+  "release_text": "Factor IX activity 64 IU/dL (50-150).",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "G10 (second review): factor IX is vitamin K dependent, so it cannot be normal beside factor VII 38, II 58 and X 55. Its longer half-life (about 24 h) means it falls later and less than factor VII: mildly reduced, still within range. Keeps the APTT high-normal (34.0 s).",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.PROTEIN_C",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G10",
+  "value": {
+   "value": 45,
+   "unit": "IU/dL",
+   "ref_range": "70-140",
+   "flag": "L"
+  },
+  "release_text": "Protein C activity 45 IU/dL (70-140), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "G10 (second review): protein C is vitamin K dependent with a short half-life (6-8 h), so it falls early and about as far as factor VII (38). Low here is the vitamin K pattern, not a thrombophilia.",
+  "confidence": 0.55
+ },
+ {
+  "target": "CMP.PROTEIN_S_FREE",
+  "day_bucket": 0,
+  "tier": "affected",
+  "gap_id": "G10",
+  "value": {
+   "value": 52,
+   "unit": "IU/dL",
+   "ref_range": "55-125",
+   "flag": "L"
+  },
+  "release_text": "Free protein S antigen 52 IU/dL (55-125), low.",
+  "lay_text": null,
+  "priority": "medium",
+  "judgement_call": false,
+  "rationale": "G10 (second review): protein S is vitamin K dependent but has a long half-life and a large bound pool, so free protein S falls modestly: just below range, less than protein C.",
+  "confidence": 0.5
+ },
+ {
   "target": "CMP.PH",
   "day_bucket": 0,
   "tier": "affected",
