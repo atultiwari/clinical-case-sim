@@ -13,7 +13,7 @@ from collections.abc import Callable, Sequence
 from dataclasses import dataclass
 from decimal import Decimal
 from functools import cache
-from typing import Final
+from typing import Any, Final
 from uuid import UUID
 
 from pydantic import BaseModel, ValidationError
@@ -79,13 +79,17 @@ class LLMGateway:
         schema: type[T],
         *,
         prompt_version: str,
+        response_schema: dict[str, Any] | None = None,
     ) -> StructuredResult[T]:
+        """Ask for one `schema` object. `response_schema`, if given, is what the model is shown
+        instead (a simpler shape); the reply is always checked against `schema` itself."""
         profile = self._config.profile_for(role)
-        conversation = _with_schema(tuple(messages), schema, profile)
+        shown = response_schema or schema.model_json_schema()
+        conversation = _with_schema(tuple(messages), shown, profile)
         calls: tuple[LlmCallRecord, ...] = ()
         error_text = ""
         for _attempt in range(MAX_RETRIES + 1):
-            request = _request(role, profile, conversation, schema)
+            request = _request(role, profile, conversation, schema.__name__, shown)
             response, cached = self._complete(role, request)
             try:
                 value = schema.model_validate_json(_json_text(response.content))
@@ -162,16 +166,16 @@ def cache_backends(
 
 
 def _request(
-    role: str, profile: Profile, messages: tuple[ChatMessage, ...], schema: type[BaseModel]
+    role: str,
+    profile: Profile,
+    messages: tuple[ChatMessage, ...],
+    name: str,
+    shown: dict[str, Any],
 ) -> LLMRequest:
     if profile.structured_output == "json_schema":
         response_format = {
             "type": "json_schema",
-            "json_schema": {
-                "name": schema.__name__,
-                "schema": schema.model_json_schema(),
-                "strict": False,
-            },
+            "json_schema": {"name": name, "schema": shown, "strict": False},
         }
     else:
         response_format = {"type": "json_object"}
@@ -187,7 +191,7 @@ def _request(
 
 
 def _with_schema(
-    messages: tuple[ChatMessage, ...], schema: type[BaseModel], profile: Profile
+    messages: tuple[ChatMessage, ...], shown: dict[str, Any], profile: Profile
 ) -> tuple[ChatMessage, ...]:
     """Without schema support, the provider sees the schema in the prompt instead."""
     if profile.structured_output == "json_schema":
@@ -197,7 +201,7 @@ def _with_schema(
         ChatMessage(
             role="system",
             content="Reply with one JSON object matching this JSON schema:\n"
-            + json.dumps(schema.model_json_schema(), sort_keys=True),
+            + json.dumps(shown, sort_keys=True),
         ),
     )
 

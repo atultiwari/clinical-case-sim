@@ -299,3 +299,53 @@ def test_a_service_view_lists_its_images() -> None:
     view = SERVICE_VIEW.model_copy(update={"media": ("M01", "M04")})
 
     assert "Images: M01, M04" in render_view(view)
+
+
+# --- found in live pilot run A1: a flat schema and worked examples ---
+
+
+def test_the_model_gets_a_flat_schema_listing_the_allowed_actions(config: ModelsConfig) -> None:
+    seat, fake = _seat(config, "attending", {"action": "wait"})
+
+    seat.act(_view("attending"))
+
+    schema = json.loads(fake.requests[0].response_format or "{}")["json_schema"]["schema"]
+    turn = schema["properties"]["turn"]
+    assert turn["type"] == "object"
+    assert sorted(turn["properties"]["action"]["enum"]) == sorted(ALLOWED_ACTIONS["attending"])
+    assert {"question", "item", "indication", "items", "final_diagnosis"} <= set(turn["properties"])
+    assert "oneOf" not in json.dumps(turn)
+    assert "discriminator" not in json.dumps(turn)
+
+
+def test_a_reply_is_still_checked_strictly_against_its_action(config: ModelsConfig) -> None:
+    mixed = {
+        "action": "order_test",
+        "items": [
+            {"diagnosis": "x", "probability": 0.5, "evidence_for": [], "evidence_against": []}
+        ],
+    }
+    seat, fake = _seat(config, "attending", mixed, mixed, {"action": "wait"})
+
+    assert seat.act(_view("attending")).model_dump()["action"] == "wait"
+    assert len(fake.requests) == 3
+
+
+@pytest.mark.parametrize("seat", ["attending", "challenger", "consultant.haematology"])
+def test_the_view_ends_with_an_example_for_every_allowed_action(seat: str) -> None:
+    from sambhasha.engine.seats import action_type_for
+
+    text = render_view(_view(seat))
+
+    examples = [line for line in text.splitlines() if line.startswith('{"action": ')]
+    assert sorted(json.loads(e)["action"] for e in examples) == sorted(
+        ALLOWED_ACTIONS[role_of(seat)]
+    )
+    for example in examples:  # every example is itself a valid action for the seat
+        action_type_for(role_of(seat)).validate_json(example)
+
+
+def test_the_service_view_shows_the_report_format() -> None:
+    text = render_view(SERVICE_VIEW)
+
+    assert '{"action": "report", "order_id": "O2"' in text

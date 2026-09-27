@@ -5,6 +5,7 @@ role card as the first message. A seat may only reply with the actions its role 
 `configs/permissions.yaml`; anything else is invalid and asked for again.
 """
 
+import json
 from collections.abc import Callable, Mapping
 from functools import cache
 from typing import Annotated, Any, Final, Protocol
@@ -97,8 +98,101 @@ def _turn_model(role: str) -> type[BaseModel]:
 
 
 @cache
-def _action_adapter(role: str) -> TypeAdapter[Any]:
+def action_type_for(role: str) -> TypeAdapter[Any]:
+    """Validates one action for the role, strictly against that action's own shape."""
     return TypeAdapter(_action_type(role))
+
+
+# One worked example per action, shown at the end of every view (to people and models alike).
+EXAMPLES: Final[Mapping[str, dict[str, Any]]] = {
+    "ask_history": {"action": "ask_history", "question": "Do you take any regular medicines?"},
+    "examine": {"action": "examine", "system": "abdomen", "manoeuvre": None},
+    "bedside_test": {"action": "bedside_test", "test": "urine dipstick"},
+    "order_test": {
+        "action": "order_test",
+        "item": "full blood count",
+        "indication": "anaemia under investigation",
+        "urgency": "routine",
+    },
+    "refer": {"action": "refer", "specialty": "haematology", "question": "Cause of the anaemia?"},
+    "consult_note": {
+        "action": "consult_note",
+        "findings": "What you found.",
+        "impression": "Your impression.",
+        "recommendations": ["A test or treatment to consider"],
+    },
+    "report": {
+        "action": "report",
+        "order_id": "O1",
+        "report_text": "What the material shows.",
+        "impression": "Your conclusion.",
+        "suggested_reflex_tests": [],
+    },
+    "update_differential": {
+        "action": "update_differential",
+        "items": [
+            {
+                "diagnosis": "A diagnosis",
+                "probability": 0.6,
+                "evidence_for": ["E3"],
+                "evidence_against": [],
+            }
+        ],
+    },
+    "challenge": {
+        "action": "challenge",
+        "critique": "What does not fit.",
+        "alternatives": ["Another diagnosis"],
+    },
+    "commit": {
+        "action": "commit",
+        "final_diagnosis": "Your final diagnosis",
+        "differential": [],
+        "treatment_plan": "Your plan.",
+        "evidence": ["E3"],
+    },
+    "wait": {"action": "wait", "reason": "Results pending"},
+}
+
+
+def _examples(role: str, order_id: str | None = None) -> str:
+    lines = []
+    for name in ALLOWED_ACTIONS[role]:
+        example = dict(EXAMPLES[name])
+        if order_id and "order_id" in example:
+            example["order_id"] = order_id
+        lines.append(json.dumps(example))
+    return "Reply with exactly one action as JSON, in one of these forms:\n" + "\n".join(lines)
+
+
+@cache
+def flat_turn_schema(role: str) -> dict[str, Any]:
+    """The schema the model is asked to follow: one flat object, {"turn": {...}}.
+
+    Structured-output engines handle a flat object far better than a union of alternatives
+    (a live Gemini run mixed the fields of two actions). Every field any allowed action uses
+    is listed; `action` names which. The reply is then checked strictly, action by action.
+    """
+    properties: dict[str, Any] = {}
+    definitions: dict[str, Any] = {}
+    for name in ALLOWED_ACTIONS[role]:
+        schema = ACTION_CLASSES[name].model_json_schema()
+        definitions.update(schema.get("$defs", {}))
+        for field_name, field_schema in schema["properties"].items():
+            if field_name != "action":
+                properties.setdefault(field_name, field_schema)
+    turn = {
+        "type": "object",
+        "properties": {
+            "action": {"type": "string", "enum": list(ALLOWED_ACTIONS[role])},
+            **properties,
+        },
+        "required": ["action"],
+    }
+    flat: dict[str, Any] = {"type": "object", "properties": {"turn": turn}, "required": ["turn"]}
+    if definitions:
+        flat["$defs"] = definitions
+    return flat
 
 
 def load_role_card(seat: str) -> Prompt:
@@ -127,7 +221,7 @@ def render_view(view: View) -> str:
         ]
         if view.media:
             parts.append("Images: " + ", ".join(view.media))
-        parts.append('Reply with one action as JSON, for example {"action": "report", ...}.')
+        parts.append(_examples(role_of(view.seat_id), order_id=view.order_id))
         return "\n\n".join(parts)
     limits = view.limits
     day, time = _day_and_time(limits.sim_minutes)
@@ -147,7 +241,7 @@ def render_view(view: View) -> str:
             header,
             "Chart:\n" + (chart or "Nothing on the Chart yet."),
             f"Your own entries: {own or 'none yet'}",
-            'Reply with one action as JSON, for example {"action": "ask_history", ...}.',
+            _examples(role_of(view.seat_id)),
         ]
     )
 
@@ -165,7 +259,11 @@ class LLMSeat:
             ChatMessage(role="user", content=render_view(view)),
         )
         result = self._gateway.structured(
-            self._role, messages, _turn_model(self._role), prompt_version=self._version
+            self._role,
+            messages,
+            _turn_model(self._role),
+            prompt_version=self._version,
+            response_schema=flat_turn_schema(self._role),
         )
         action: DomainModel = result.value.turn  # type: ignore[attr-defined]
         return action
@@ -192,7 +290,7 @@ class HumanSeat:
         for _attempt in range(HUMAN_ATTEMPTS):
             raw = self._read()
             try:
-                action: DomainModel = _action_adapter(self._role).validate_json(raw)
+                action: DomainModel = action_type_for(self._role).validate_json(raw)
             except ValidationError as error:
                 allowed = ", ".join(ALLOWED_ACTIONS[self._role])
                 self._write(f"That is not a valid action ({allowed}): {error.errors()[0]['msg']}")
