@@ -100,7 +100,14 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
     - A result ordered on a day with no value returns the latest earlier value, marked with its day (changelog, 25 Sep 2026: carry-forward).
   - Depends on: P0.6, P1.1, P1.2.
 
-- [ ] **P1.4 Synthetic Findings Service (fallback)**
+- [x] **P1.4 Synthetic Findings Service (fallback)**
+  - Done 27 Sep 2026: `synthetic/service.py`, `checks.py` and `route.py`, with `prompts/synthetic.md` v1.
+    - Routing: `respond` sends a request to the service only when the Gatekeeper finds it outside the catalogue, and flags the run (`used_fallback`, D-023).
+    - The model: the synthetic role (another family, D-010), given the ground truth, the patient's profile, the day, what is already released and any matched gap's guidance.
+    - Checks: leaks (P0.5 scanner), any form of "not available", and numbers that contradict a stored value. A failed check is regenerated with the reasons, up to twice; otherwise nothing is stored.
+    - Storage: rows go to `synthetic_ledger`, keyed by (bundle, normalised request, day for tests), pending review; migration `20260927090000` adds the request, kind, gap and result columns.
+    - Gaps marked `auto_generate: false` are held for the Case Reviewer (G14 matched by "hair mercury and arsenic").
+    - The missing-request export lists each distinct request once.
   - Build: the generator (prompt `prompts/synthetic.md`) for requests outside the catalogue only (D-023), conditioned on the ground truth, the patient's state and the gap guidance. It has consistency and leak checks and a cache keyed by (case, code, day bucket), respects `auto_generate: false`, and writes every request it answers to a missing-request export (CSV) for the Case Library.
   - Accept: a request for a catalogue item is answered from the bundle and never reaches the service; a repeated out-of-catalogue request returns the same ledger row; a result contradicting a stored fact is rejected and regenerated; G14 is never auto-generated; no output contains "not available"; the export lists every generated request.
   - Depends on: P1.1, P1.3.

@@ -11,6 +11,7 @@ from sambhasha.domain.events import Event
 from sambhasha.domain.orders import Order
 from sambhasha.domain.runs import Run, RunStatus
 from sambhasha.domain.scores import Score
+from sambhasha.domain.synthetic import SyntheticRow
 from sambhasha.storage.repo import (
     BundleRecord,
     DuplicateError,
@@ -28,6 +29,7 @@ class InMemoryRepository:
         self._events: dict[UUID, tuple[Event, ...]] = {}
         self._orders: dict[UUID, Order] = {}
         self._scores: dict[UUID, Score] = {}
+        self._synthetic: dict[tuple[str, str, int | None], SyntheticRow] = {}
 
     # --- cases ---
 
@@ -62,6 +64,22 @@ class InMemoryRepository:
         self._records[bundle_id] = record.model_copy(
             update={"primary_eligible": eligible, "eligibility_reason": reason}
         )
+
+    def get_synthetic(
+        self, bundle_id: str, code: str, day_bucket: int | None
+    ) -> SyntheticRow | None:
+        return self._synthetic.get((bundle_id, code, day_bucket))
+
+    def add_synthetic(self, row: SyntheticRow) -> None:
+        if row.bundle_id not in self._bundles:
+            raise NotFoundError(f"no bundle {row.bundle_id}")
+        key = (row.bundle_id, row.code, row.day_bucket)
+        if key in self._synthetic:
+            raise DuplicateError(f"a synthetic row for {key} already exists")
+        self._synthetic[key] = row
+
+    def synthetic_rows(self, bundle_id: str) -> tuple[SyntheticRow, ...]:
+        return tuple(r for (b, _, _), r in self._synthetic.items() if b == bundle_id)
 
     # --- runs ---
 
