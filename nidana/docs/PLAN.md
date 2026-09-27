@@ -57,7 +57,8 @@ Rough effort: Phase 1 three to four weeks (two apps: player and server), Phase 2
   - Accept: the leak tests in SPEC §6.4 pass on every encounter endpoint; a client using the public key cannot read `casevault` or `play` tables; a bundle with an unsupported schema or catalogue version, or a wrong hash, is refused.
   - Depends on: N1.3.
 
-- [ ] **N1.5 Player app**
+- [x] **N1.5 Player app**
+  - Done 2026-09-27: `apps/player` (Expo SDK 57, Expo Router, NativeWind 4): home, case card, workspace (Chart as a day-by-day timeline with result tables, trends and an SI/conventional toggle; Ask, Examine, Order with price and turnaround, Refer, Differential, Wait, Commit), commit and debrief; Provisional and Final badges with the status line; the disclaimer fixed on every screen; tabs on phones, side by side from 900 px; anonymous Supabase sign-in (Atul enabled it on the Case Vault project). Shared API types in `@nidana/contracts/api`; the server gained CORS and a debrief keyed by Chart references. Playwright plays the benchmark path on the web build (also in CI) and Maestro on an Android development build (emulator `nidana`, real sign-in); both reach diagnosis 5 with all 7 must-dos. Screenshots at phone, tablet and desktop sizes sent to Atul. Needed on the Mac: Java 17 (Homebrew) for Android builds and Maestro.
   - Build: `apps/player`, an Expo app with Expo Router and NativeWind: home, case card, workspace (Chart, Ask, Examine, Order, Refer, Differential, Wait, Commit), results with trends and a units toggle, commit (diagnosis, evidence, plan) and debrief screens; Provisional and Final badges; the disclaimer on every screen. Phone layout with tabs; side-by-side on tablets and the web.
   - Accept: a Playwright test completes the benchmark path on the web build; a Maestro test does the same on an Android development build; screenshots at phone, tablet and desktop sizes go to Atul.
   - Depends on: N1.4.

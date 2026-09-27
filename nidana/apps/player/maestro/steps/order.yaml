@@ -1,0 +1,12 @@
+# Picks a test or referral, checks the confirmation, and confirms. Env: QUERY, ID.
+appId: org.clinicalcasesim.nidana
+---
+- runFlow:
+    file: pick.yaml
+    env:
+      QUERY: ${QUERY}
+      ID: ${ID}
+- assertVisible:
+    id: "confirm-card"
+- tapOn:
+    id: "confirm"

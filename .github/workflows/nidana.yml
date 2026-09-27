@@ -38,7 +38,7 @@ jobs:
   check:
     name: Lint, type-check and tests
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
@@ -66,3 +66,18 @@ jobs:
         env:
           NEXT_TELEMETRY_DISABLED: "1"
         run: pnpm --filter @nidana/server build
+
+      # N1.5: the pilot's benchmark path through the web build of the player app.
+      - name: Install the Playwright browser
+        run: pnpm --filter @nidana/player exec playwright install --with-deps chromium
+
+      - name: End-to-end test on the web build
+        run: pnpm --filter @nidana/player e2e
+
+      - name: Keep the screenshots
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: player-screenshots
+          path: nidana/apps/player/test-results/
+          retention-days: 14

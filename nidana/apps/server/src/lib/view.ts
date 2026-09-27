@@ -1,4 +1,10 @@
 import type { Fact, LedgerRow } from "@nidana/contracts";
+import type {
+  ChartEntry,
+  EntryKind,
+  PlayerView,
+  ResultValue,
+} from "@nidana/contracts";
 import type { EncounterState, PreparedCase, Release } from "@nidana/engine";
 
 /**
@@ -8,83 +14,12 @@ import type { EncounterState, PreparedCase, Release } from "@nidana/engine";
  * references (`c0`, `c1`, …) that the player cites as evidence; the server maps them back.
  */
 
-export type EntryKind =
-  | "vignette"
-  | "history"
-  | "exam"
-  | "result"
-  | "report"
-  | "consult"
-  | "no_record";
-
-export interface ResultValue {
-  readonly value: string;
-  readonly unit: string | null;
-  readonly refRange: string | null;
-  readonly flag: string | null;
-  /** For the units toggle: conventional unit, SI × factor, and decimals (N-019). */
-  readonly conventional: {
-    readonly unit: string;
-    readonly factor: number;
-    readonly decimals: number | null;
-  } | null;
-}
-
-export interface ChartEntry {
-  readonly ref: string;
-  readonly at: number;
-  readonly kind: EntryKind;
-  readonly item: string | null;
-  readonly itemName: string | null;
-  /** The day the value was taken, when it differs from the day asked for ("result from day 0"). */
-  readonly takenDay: number | null;
-  readonly requestedDay: number | null;
-  readonly component: { readonly id: string; readonly name: string } | null;
-  readonly text: string | null;
-  readonly value: ResultValue | null;
-  readonly report: {
-    readonly status: "provisional" | "final";
-    readonly statusLine: string | null;
-    readonly text: string | null;
-    readonly impression: string | null;
-    readonly suggestedTests: readonly string[];
-  } | null;
-  readonly recommendations: readonly string[];
-}
-
-export interface PlayerView {
-  readonly encounterId: string;
-  readonly status: "active" | "committed";
-  readonly difficulty: EncounterState["difficulty"];
-  readonly case: {
-    readonly slug: string;
-    readonly title: string;
-    readonly tags: readonly string[];
-    readonly specialty: string | null;
-    readonly vignette: string | null;
-    readonly openingStatement: string | null;
-  };
-  readonly clock: number;
-  readonly day: number;
-  readonly spend: number;
-  readonly limits: {
-    readonly budget: number;
-    readonly budgetLeft: number;
-    readonly maxStayMinutes: number;
-    readonly referralsAllowed: number;
-    readonly referralsUsed: number;
-  };
-  readonly mustCommit: EncounterState["mustCommit"];
-  readonly chart: readonly ChartEntry[];
-  readonly pending: readonly {
-    readonly item: string;
-    readonly itemName: string | null;
-    readonly kind: "order" | "referral";
-    readonly orderedAt: number;
-    readonly dueAt: number;
-  }[];
-  readonly differential: EncounterState["differential"];
-}
+export type {
+  ChartEntry,
+  EntryKind,
+  PlayerView,
+  ResultValue,
+} from "@nidana/contracts";
 
 const REF = /^c(\d+)$/;
 
