@@ -51,7 +51,7 @@ from sambhasha.domain.views import Limits
 from sambhasha.engine.clock import SimClock
 from sambhasha.engine.config import RunConfig
 from sambhasha.engine.costs import budget_left, place_order, total_cost
-from sambhasha.engine.seats import Seat, load_role_card
+from sambhasha.engine.seats import Seat, SeatInputError, load_role_card
 from sambhasha.engine.tables import Tables
 from sambhasha.engine.views import build_seat_view, build_service_view
 from sambhasha.gatekeeper.policy import Permissions
@@ -62,13 +62,27 @@ from sambhasha.gatekeeper.resolver import (
     Released,
     ServiceRequest,
 )
-from sambhasha.llm.gateway import call_event
+from sambhasha.llm.backend import LLMCallError
+from sambhasha.llm.cache import CacheMiss
+from sambhasha.llm.fake import FakeScriptExhaustedError
+from sambhasha.llm.gateway import LLMBudgetExceededError, LLMOutputError, call_event
 from sambhasha.llm.types import LlmCallRecord
 from sambhasha.storage.repo import Repository
 from sambhasha.synthetic.route import respond
 from sambhasha.synthetic.service import Generated, SyntheticService
 
 FORCED_COMMIT_ATTEMPTS: Final = 2
+# What stops a run cleanly: a model that gives no valid reply, a failed call, the spending
+# cap, a replay-only cache without the reply, a person who gives no valid action, or a fake
+# script that has run out.
+_STOPS: Final = (
+    CacheMiss,
+    LLMOutputError,
+    LLMCallError,
+    LLMBudgetExceededError,
+    SeatInputError,
+    FakeScriptExhaustedError,
+)
 _CALL_SEATS: Final = {"matcher": "gatekeeper", "synthetic": "synthetic"}
 _ACTION_EVENTS: Final[dict[type, EventType]] = {
     OrderTest: "order",
@@ -103,6 +117,7 @@ class RunResult:
     forced_commit: bool
     used_fallback: bool
     event_hash: str
+    stopped_reason: str | None = None  # why the run stopped before a commit, if it did
 
 
 @dataclass
@@ -163,8 +178,20 @@ class Scheduler:
         )
         self._repo.add_run(run)
         state = _State(run_id=run_id)
-        self._intake(state)
-        commit, forced = self._attending_loop(state)
+        stopped: str | None = None
+        try:
+            self._intake(state)
+            commit, forced = self._attending_loop(state)
+        except _STOPS as error:
+            commit, forced, stopped = None, False, f"{type(error).__name__}: {error}"
+            self._post(
+                state,
+                "scheduler",
+                "refusal",
+                Refusal(reason=f"Run stopped: {stopped}"),
+                ("scheduler",),
+                "engine",
+            )
         finished = self._repo.finish_run(
             run_id, status="completed" if commit else "aborted", ended_at=datetime.now(UTC)
         )
@@ -175,6 +202,7 @@ class Scheduler:
             forced_commit=forced,
             used_fallback=state.used_fallback,
             event_hash=state.last_hash,
+            stopped_reason=stopped,
         )
 
     def _intake(self, state: _State) -> None:

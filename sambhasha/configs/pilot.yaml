@@ -15,3 +15,10 @@ challenger:
 # The seats this run offers (D-019). A referral to any other specialty is refused.
 consultants: [gastroenterology, haematology, neurology, clinical_toxicology]
 services: [pathology, radiology]
+
+# Live runs stop making model calls once they have spent this much (USD); cached replays are
+# free. A live run refuses to start without it. Set it before the first live run (P1.11).
+llm_budget_usd: null
+
+# The scripted replies `sambhasha run --fake` plays: the pilot's efficient path.
+fake_script: fake/pilot.yaml

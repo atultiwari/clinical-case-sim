@@ -2,7 +2,7 @@
 
 from pathlib import Path
 from typing import Annotated
-from uuid import UUID
+from uuid import UUID, uuid4
 
 import typer
 
@@ -11,15 +11,21 @@ from sambhasha.catalogue import Catalogue
 from sambhasha.config import database_url
 from sambhasha.curation.catalogue_names import CatalogueError, CatalogueNames
 from sambhasha.curation.importer import ImportRefusedError, import_bundle
+from sambhasha.engine.config import DEFAULT_RUN_CONFIG, RunConfigError, load_run_config
+from sambhasha.engine.fake_script import FakeScriptError, load_fake_script
+from sambhasha.engine.scheduler import CallRecorder
 from sambhasha.engine.tables import generate_tables, write_tables
 from sambhasha.evaluation.evaluator import Evaluator
 from sambhasha.evaluation.mapper import ScoringMapper
 from sambhasha.gatekeeper.coding import Coder, MissingRequestLog
 from sambhasha.llm.cache import CacheMiss, RecordReplayCache
 from sambhasha.llm.config import ConfigError, load_models_config
+from sambhasha.llm.fake import FakeLLM
 from sambhasha.llm.gateway import LLMGateway
+from sambhasha.runner import build_scheduler, fake_models_config
 from sambhasha.storage.postgres import open_postgres
 from sambhasha.storage.repo import DuplicateError, NotFoundError
+from sambhasha.transcript import render_html, render_text
 
 app = typer.Typer(
     help=(
@@ -146,3 +152,110 @@ def evaluate(
     )
     fallback = "yes" if score.used_fallback else "no"
     typer.echo(f"Synthetic dependence: {dependence}; fallback used: {fallback}")
+
+
+MISSING_DIR = Path(__file__).resolve().parents[2] / "data" / "missing"
+
+
+@app.command("run")
+def run_case(
+    config: Annotated[Path, typer.Option(help="The run configuration")] = DEFAULT_RUN_CONFIG,
+    fake: Annotated[
+        bool, typer.Option(help="Play the config's scripted replies: no network, no cost")
+    ] = False,
+) -> None:
+    """Run one case with the seats in the config (SPEC §10).
+
+    A live run refuses to start without llm_budget_usd in the config, and stops making model
+    calls once it has spent that much; cached replays are free.
+    """
+    try:
+        run_config = load_run_config(config)
+        recorder = CallRecorder()
+        if fake:
+            if run_config.fake_script is None:
+                raise RunConfigError(f"{config.name} has no fake_script for --fake")
+            script = FakeLLM(load_fake_script(run_config.fake_script))
+            gateway = LLMGateway(
+                fake_models_config(), backend_for=lambda e: script, on_call=recorder
+            )
+        else:
+            if run_config.llm_budget_usd is None:
+                raise RunConfigError(
+                    f"a live run needs llm_budget_usd in {config.name}; set a cap or use --fake"
+                )
+            gateway = LLMGateway(
+                load_models_config(),
+                cache=RecordReplayCache(),
+                on_call=recorder,
+                spend_cap_usd=run_config.llm_budget_usd,
+            )
+        missing = MissingRequestLog()
+        with open_repository(database_url()) as repo:
+            try:
+                bundle = repo.get_bundle(run_config.bundle)
+            except NotFoundError as error:
+                raise RunConfigError(
+                    f"{run_config.bundle} is not imported; run `sambhasha case import` first"
+                ) from error
+            scheduler = build_scheduler(
+                config=run_config,
+                bundle=bundle,
+                repo=repo,
+                gateway=gateway,
+                recorder=recorder,
+                missing=missing,
+            )
+            result = scheduler.run(uuid4())
+    except (RunConfigError, FakeScriptError, ConfigError) as error:
+        typer.echo(f"Refused: {error}", err=True)
+        raise typer.Exit(code=1) from error
+    run = result.run
+    typer.echo(f"Run {run.id} on {run.bundle_id}: {run.status}")
+    if result.commit is not None:
+        typer.echo(f"Committed: {result.commit.final_diagnosis}")
+    if result.stopped_reason:
+        typer.echo(f"Stopped: {result.stopped_reason}")
+    flags = [
+        name
+        for name, on in (
+            ("forced commit", result.forced_commit),
+            ("used the synthetic fallback", result.used_fallback),
+        )
+        if on
+    ]
+    typer.echo(
+        f"{len(result.events)} events; final hash {result.event_hash[:16]}"
+        + (f"; {', '.join(flags)}" if flags else "")
+    )
+    if not fake:
+        typer.echo(
+            f"Model calls cost USD {gateway.spent_usd} of the USD {run_config.llm_budget_usd} cap."
+        )
+    if missing.requests:
+        MISSING_DIR.mkdir(parents=True, exist_ok=True)
+        path = missing.write_csv(MISSING_DIR / f"{run.id}.csv")
+        typer.echo(f"Missing requests for the Case Library: {path}")
+    typer.echo(f"Next: sambhasha transcript {run.id}; sambhasha evaluate {run.id}")
+
+
+@app.command()
+def transcript(
+    run_id: Annotated[UUID, typer.Argument(help="The run to show")],
+    html_out: Annotated[
+        Path | None, typer.Option("--html", help="Write a self-contained HTML page here")
+    ] = None,
+) -> None:
+    """Show a run's whole Event Log (private: it holds the case's answers)."""
+    try:
+        with open_repository(database_url()) as repo:
+            run = repo.get_run(run_id)
+            events, orders = repo.events(run_id), repo.orders(run_id)
+    except NotFoundError as error:
+        typer.echo(f"Refused: {error}", err=True)
+        raise typer.Exit(code=1) from error
+    if html_out is None:
+        typer.echo(render_text(run, events, orders), nl=False)
+        return
+    html_out.write_text(render_html(run, events, orders), encoding="utf-8")
+    typer.echo(f"Wrote {html_out}")
