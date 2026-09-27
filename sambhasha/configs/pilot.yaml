@@ -17,8 +17,9 @@ consultants: [gastroenterology, haematology, neurology, clinical_toxicology]
 services: [pathology, radiology]
 
 # Live runs stop making model calls once they have spent this much (USD); cached replays are
-# free. A live run refuses to start without it. Set it before the first live run (P1.11).
-llm_budget_usd: null
+# free. A live run refuses to start without it. The pilot is on the free Gemini API, which
+# reports no cost, so this is nominal (D-028).
+llm_budget_usd: 1.00
 
 # The scripted replies `sambhasha run --fake` plays: the pilot's efficient path.
 fake_script: fake/pilot.yaml

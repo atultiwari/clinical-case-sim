@@ -80,8 +80,18 @@ def test_the_transcript_exports_html(repo: InMemoryRepository, tmp_path: Path) -
     assert "Do not publish it" in page
 
 
-def test_a_live_run_refuses_to_start_without_a_budget_cap(repo: InMemoryRepository) -> None:
-    result = runner.invoke(cli.app, ["run", "--config", str(DEFAULT_RUN_CONFIG)])
+def test_a_live_run_refuses_to_start_without_a_budget_cap(
+    repo: InMemoryRepository, tmp_path: Path
+) -> None:
+    uncapped = tmp_path / "run.yaml"
+    uncapped.write_text(
+        DEFAULT_RUN_CONFIG.read_text(encoding="utf-8").replace(
+            "llm_budget_usd: 1.00", "llm_budget_usd: null"
+        ),
+        encoding="utf-8",
+    )
+
+    result = runner.invoke(cli.app, ["run", "--config", str(uncapped)])
 
     assert result.exit_code == 1
     assert "needs llm_budget_usd" in result.output
@@ -133,14 +143,14 @@ def test_a_capped_live_run_is_wired_to_the_cap_and_the_cache(
     config = tmp_path / "run.yaml"
     config.write_text(
         DEFAULT_RUN_CONFIG.read_text(encoding="utf-8").replace(
-            "llm_budget_usd: null", "llm_budget_usd: 1.50"
+            "llm_budget_usd: 1.00", "llm_budget_usd: 1.50"
         ),
         encoding="utf-8",
     )
     monkeypatch.setattr(cli, "load_models_config", fake_models_config)
     # A replay-only cache with nothing in it: the first model call stops the run, offline.
     monkeypatch.setattr(
-        cli, "RecordReplayCache", lambda: RecordReplayCache(tmp_path, replay_only=True)
+        cli, "RecordReplayCache", lambda _dir: RecordReplayCache(tmp_path, replay_only=True)
     )
 
     result = runner.invoke(cli.app, ["run", "--config", str(config)])
@@ -158,7 +168,7 @@ def _capped(tmp_path: Path) -> Path:
     config = tmp_path / "run.yaml"
     config.write_text(
         DEFAULT_RUN_CONFIG.read_text(encoding="utf-8").replace(
-            "llm_budget_usd: null", "llm_budget_usd: 1.50"
+            "llm_budget_usd: 1.00", "llm_budget_usd: 1.50"
         ),
         encoding="utf-8",
     )
@@ -210,3 +220,17 @@ def test_the_wait_report_names_the_time_a_paid_tier_would_save(
     stats = json.loads((tmp_path / "runs" / f"{run_id}.waits.json").read_text())
     assert stats["waited_seconds"] == 145.0
     assert stats["by_model"] == {"gemini-3.8-flash": 125.0, "gemini-3.5-flash-lite": 20.0}
+
+
+def test_each_tagged_repeat_gets_its_own_cache() -> None:
+    from sambhasha.llm.cache import DEFAULT_CACHE_DIR
+
+    assert cli.cache_dir(None) == DEFAULT_CACHE_DIR
+    assert cli.cache_dir("pilot-a-1") == DEFAULT_CACHE_DIR / "pilot-a-1"
+
+
+def test_a_cache_tag_cannot_leave_the_cache_folder() -> None:
+    from sambhasha.engine.config import RunConfigError
+
+    with pytest.raises(RunConfigError, match="cache tag"):
+        cli.cache_dir("../elsewhere")

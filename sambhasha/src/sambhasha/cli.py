@@ -1,6 +1,7 @@
 """The `sambhasha` command line (SPEC §17). Later tasks add `run`, `transcript` and more."""
 
 import json
+import re
 from pathlib import Path
 from typing import Annotated
 from uuid import UUID, uuid4
@@ -19,7 +20,7 @@ from sambhasha.engine.tables import generate_tables, write_tables
 from sambhasha.evaluation.evaluator import Evaluator
 from sambhasha.evaluation.mapper import ScoringMapper
 from sambhasha.gatekeeper.coding import Coder, MissingRequestLog
-from sambhasha.llm.cache import CacheMiss, RecordReplayCache
+from sambhasha.llm.cache import DEFAULT_CACHE_DIR, CacheMiss, RecordReplayCache
 from sambhasha.llm.config import ROLES, ConfigError, load_models_config
 from sambhasha.llm.fake import FakeLLM
 from sambhasha.llm.gateway import LLMGateway
@@ -160,6 +161,15 @@ MISSING_DIR = Path(__file__).resolve().parents[2] / "data" / "missing"
 RUNS_DIR = Path(__file__).resolve().parents[2] / "data" / "runs"
 
 
+def cache_dir(tag: str | None) -> Path:
+    """The reply cache for a run: shared, or its own folder for a tagged repeat."""
+    if tag is None:
+        return DEFAULT_CACHE_DIR
+    if not re.fullmatch(r"[A-Za-z0-9._-]+", tag):
+        raise RunConfigError(f"a cache tag uses letters, digits, '.', '_' or '-' only: {tag!r}")
+    return DEFAULT_CACHE_DIR / tag
+
+
 @app.command("run")
 def run_case(
     config: Annotated[Path, typer.Option(help="The run configuration")] = DEFAULT_RUN_CONFIG,
@@ -168,6 +178,12 @@ def run_case(
     ] = False,
     doctor_profile: Annotated[
         str | None, typer.Option(help="Put every doctor seat on this models.yaml profile")
+    ] = None,
+    cache_tag: Annotated[
+        str | None,
+        typer.Option(
+            help="Keep this run's model replies in data/llm-cache/<tag>/ (one per repeat)"
+        ),
     ] = None,
 ) -> None:
     """Run one case with the seats in the config (SPEC §10).
@@ -197,7 +213,7 @@ def run_case(
                 models.endpoint_for(role)  # a missing key refuses the run before it starts
             gateway = LLMGateway(
                 models,
-                cache=RecordReplayCache(),
+                cache=RecordReplayCache(cache_dir(cache_tag)),
                 on_call=recorder,
                 spend_cap_usd=run_config.llm_budget_usd,
             )
