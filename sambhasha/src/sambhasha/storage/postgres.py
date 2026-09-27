@@ -22,6 +22,7 @@ from sambhasha.domain.events import Event
 from sambhasha.domain.orders import Order
 from sambhasha.domain.runs import Run, RunStatus
 from sambhasha.domain.scores import Score
+from sambhasha.domain.synthetic import SyntheticRow
 from sambhasha.storage.repo import (
     BundleRecord,
     DuplicateError,
@@ -193,6 +194,56 @@ class PostgresRepository:
             " decided_at = now()",
             (bundle_id, eligible, reason),
         )
+
+    def get_synthetic(
+        self, bundle_id: str, code: str, day_bucket: int | None
+    ) -> SyntheticRow | None:
+        row = self._conn.execute(
+            "select bundle_id, code, day_bucket, query, kind, result_text, rationale,"
+            " confidence, checks, generator_model, prompt_version, gap_id, review_status,"
+            " created_at from sambhasha.synthetic_ledger"
+            " where bundle_id = %s and code = %s and day_bucket is not distinct from %s",
+            (bundle_id, code, day_bucket),
+        ).fetchone()
+        return None if row is None else _synthetic(row)
+
+    def add_synthetic(self, row: SyntheticRow) -> None:
+        self._write(
+            lambda: self._conn.execute(
+                "insert into sambhasha.synthetic_ledger (bundle_id, code, day_bucket, query,"
+                " kind, result_text, rationale, confidence, checks, generator_model,"
+                " prompt_version, gap_id, review_status, created_at)"
+                " values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+                (
+                    row.bundle_id,
+                    row.code,
+                    row.day_bucket,
+                    row.query,
+                    row.kind,
+                    row.result_text,
+                    row.rationale,
+                    row.confidence,
+                    Jsonb(list(row.checks)),
+                    row.generator_model,
+                    row.prompt_version,
+                    row.gap_id,
+                    row.review_status,
+                    row.created_at,
+                ),
+            ),
+            duplicate=f"a synthetic row for {row.bundle_id} {row.code} {row.day_bucket} exists",
+            missing=f"no bundle {row.bundle_id}",
+        )
+
+    def synthetic_rows(self, bundle_id: str) -> tuple[SyntheticRow, ...]:
+        rows = self._conn.execute(
+            "select bundle_id, code, day_bucket, query, kind, result_text, rationale,"
+            " confidence, checks, generator_model, prompt_version, gap_id, review_status,"
+            " created_at from sambhasha.synthetic_ledger where bundle_id = %s"
+            " order by created_at, code",
+            (bundle_id,),
+        ).fetchall()
+        return tuple(_synthetic(r) for r in rows)
 
     # --- runs ---
 
@@ -404,6 +455,29 @@ class PostgresRepository:
             raise duplicate_error(duplicate) from error
         except psycopg.errors.ForeignKeyViolation as error:
             raise NotFoundError(missing) from error
+
+
+def _synthetic(row: Row) -> SyntheticRow:
+    fields = (
+        "bundle_id",
+        "code",
+        "day_bucket",
+        "query",
+        "kind",
+        "result_text",
+        "rationale",
+        "confidence",
+        "checks",
+        "generator_model",
+        "prompt_version",
+        "gap_id",
+        "review_status",
+        "created_at",
+    )
+    data = dict(zip(fields, row, strict=True))
+    return SyntheticRow.model_validate(
+        {**data, "confidence": float(data["confidence"]), "checks": tuple(data["checks"])}
+    )
 
 
 @contextmanager

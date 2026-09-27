@@ -15,6 +15,7 @@ from sambhasha.domain.events import Event
 from sambhasha.domain.orders import Order
 from sambhasha.domain.runs import Run, RunStatus
 from sambhasha.domain.scores import Score
+from sambhasha.domain.synthetic import SyntheticRow
 
 _BUNDLE_ID = re.compile(r"(?P<case_version>.+)\.r(?P<revision>[0-9]+)")
 
@@ -62,6 +63,11 @@ class CaseRepository(Protocol):
     def get_bundle(self, bundle_id: str) -> CaseBundle: ...
     def list_bundles(self) -> tuple[BundleRecord, ...]: ...
     def set_eligibility(self, bundle_id: str, *, eligible: bool, reason: str) -> None: ...
+    def get_synthetic(
+        self, bundle_id: str, code: str, day_bucket: int | None
+    ) -> SyntheticRow | None: ...
+    def add_synthetic(self, row: SyntheticRow) -> None: ...
+    def synthetic_rows(self, bundle_id: str) -> tuple[SyntheticRow, ...]: ...
 
 
 class RunRepository(Protocol):

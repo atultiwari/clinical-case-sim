@@ -12,6 +12,7 @@ from sambhasha.domain.events import Answer, Event
 from sambhasha.domain.orders import Order
 from sambhasha.domain.runs import Run
 from sambhasha.domain.scores import Score
+from sambhasha.domain.synthetic import SyntheticRow
 from sambhasha.storage.repo import DuplicateError, NotFoundError, Repository, SequenceError
 
 STARTED = datetime(2026, 9, 26, 12, 0, tzinfo=UTC)
@@ -361,3 +362,52 @@ def test_an_order_cannot_move_to_another_run(
     with pytest.raises(DuplicateError):
         repo.put_order(order.model_copy(update={"run_id": other.id}))
     assert repo.orders(run.id) == (order,)
+
+
+# --- the synthetic ledger (P1.4) ---
+
+
+def _synthetic(bundle_id: str, day: int | None = 2) -> SyntheticRow:
+    return SyntheticRow(
+        bundle_id=bundle_id,
+        code="REQ:serum thallium",
+        day_bucket=day,
+        query="serum thallium",
+        kind="test",
+        result_text="Serum thallium: below 2 ug/L.",
+        rationale="No exposure.",
+        confidence=0.8,
+        checks=("leak", "not_available", "consistency"),
+        generator_model="synth-model",
+        prompt_version="1",
+        created_at=STARTED,
+    )
+
+
+@pytest.mark.parametrize("day", [2, None])
+def test_a_synthetic_row_round_trips_by_its_key(
+    repo: Repository, pilot: CaseBundle, pilot_sha256: str, day: int | None
+) -> None:
+    repo.add_bundle(pilot, pilot_sha256)
+    row = _synthetic(pilot.bundle_id, day)
+
+    repo.add_synthetic(row)
+
+    assert repo.get_synthetic(pilot.bundle_id, row.code, day) == row
+    assert repo.get_synthetic(pilot.bundle_id, row.code, 99) is None
+    assert repo.synthetic_rows(pilot.bundle_id) == (row,)
+
+
+def test_a_synthetic_row_is_written_once_per_key(
+    repo: Repository, pilot: CaseBundle, pilot_sha256: str
+) -> None:
+    repo.add_bundle(pilot, pilot_sha256)
+    repo.add_synthetic(_synthetic(pilot.bundle_id, None))
+
+    with pytest.raises(DuplicateError):
+        repo.add_synthetic(_synthetic(pilot.bundle_id, None))
+
+
+def test_a_synthetic_row_needs_a_known_bundle(repo: Repository) -> None:
+    with pytest.raises(NotFoundError):
+        repo.add_synthetic(_synthetic("PMC1@v1.r1"))

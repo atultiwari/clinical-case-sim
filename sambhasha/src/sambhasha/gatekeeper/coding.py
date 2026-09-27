@@ -125,11 +125,17 @@ class MissingRequestLog:
         self._requests = (*self._requests, request)
 
     def write_csv(self, path: Path) -> Path:
+        """One row per distinct request (case, kinds, text), in the order first seen."""
         fields = ("created_at", "source", "bundle_id", "kind", "query")
+        seen: set[tuple[str | None, str, str]] = set()
         with path.open("w", encoding="utf-8", newline="") as handle:
             writer = csv.DictWriter(handle, fieldnames=fields)
             writer.writeheader()
             for request in self._requests:
+                key = (request.bundle_id, request.kind, normalise(request.query))
+                if key in seen:
+                    continue
+                seen.add(key)
                 row = request.model_dump(mode="json")
                 writer.writerow({f: row[f] if row[f] is not None else "" for f in fields})
         return path
