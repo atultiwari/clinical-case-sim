@@ -5,7 +5,8 @@ import type { SearchItem } from "@nidana/contracts/api";
 export type SearchKind =
   "history" | "exam" | "test" | "referral" | "action" | "diagnosis";
 
-const normalise = (text: string): string =>
+/** Lower case, no accents or punctuation, single spaces. */
+export const normalise = (text: string): string =>
   text
     .toLowerCase()
     .normalize("NFKD")

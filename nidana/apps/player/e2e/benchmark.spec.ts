@@ -105,6 +105,23 @@ test("the benchmark path, from the case list to the debrief", async ({
     );
     await page.getByTestId("confirm").click();
   }
+  // A search with no match (N1.7): the no-match message, a report with the query only, no cost.
+  await expect(page.getByTestId("pending").getByText(/ due /)).toHaveCount(8);
+  const spend = await page.getByTestId("spend").textContent();
+  const reported = page.waitForRequest(
+    (r) => r.url().endsWith("/api/missing") && r.method() === "POST",
+  );
+  await page.getByTestId("search").fill("unicorn serum assay");
+  await expect(page.getByTestId("no-match")).toBeVisible();
+  expect((await reported).postDataJSON()).toEqual({
+    encounterId,
+    kind: "test",
+    query: "unicorn serum assay",
+  });
+  await expect(page.getByTestId("spend")).toHaveText(spend ?? "");
+  await expect(page.getByTestId("clock")).toHaveText("Day 0, 00:45");
+  await page.getByTestId("search").fill("");
+
   await mode(page, "wait");
   await page.getByTestId("wait-next").click();
   await expect(page.getByTestId("clock")).toHaveText("Day 0, 04:45");

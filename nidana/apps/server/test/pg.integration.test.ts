@@ -178,6 +178,21 @@ describe.skipIf(url === undefined)(
         await refused(
           `update play.encounter set difficulty = 'expert' where id = '${id}'`,
         ).toThrow(/committed once/);
+        // N1.7: the missing request holds the bundle, kind and query, and no player column.
+        const columns = await tx<{ column_name: string }[]>`
+          select column_name from information_schema.columns
+          where table_schema = 'play' and table_name = 'missing_request'
+          order by ordinal_position`;
+        expect(columns.map((c) => c.column_name)).toEqual([
+          "id",
+          "created_at",
+          "bundle_id",
+          "kind",
+          "query",
+        ]);
+        expect(
+          await tx`select bundle_id, kind, query from play.missing_request where query = 'hair arsenic'`,
+        ).toEqual([{ bundle_id: PILOT, kind: "test", query: "hair arsenic" }]);
       });
     });
 
