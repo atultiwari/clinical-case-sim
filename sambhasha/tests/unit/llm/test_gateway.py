@@ -181,3 +181,46 @@ def test_a_call_becomes_an_llm_call_event() -> None:
         Decimal("0.0021"),
     )
     assert event.payload.model_dump()["request_hash"] == "a" * 64
+
+
+# --- the spending cap for live runs (P1.9) ---
+
+
+def test_calls_stop_once_the_spending_cap_is_reached(config: ModelsConfig) -> None:
+    from sambhasha.llm.gateway import LLMBudgetExceededError
+
+    fake = FakeLLM({"attending": [VALID] * 3}, cost_usd=Decimal("0.40"))
+    gateway = LLMGateway(config, backend_for=lambda e: fake, spend_cap_usd=Decimal("0.75"))
+
+    gateway.structured("attending", MESSAGES, Question, prompt_version="3")
+    gateway.structured(
+        "attending",
+        (*MESSAGES, ChatMessage(role="user", content="again")),
+        Question,
+        prompt_version="3",
+    )
+    with pytest.raises(LLMBudgetExceededError, match=r"0\.80"):
+        gateway.structured(
+            "attending",
+            (*MESSAGES, ChatMessage(role="user", content="more")),
+            Question,
+            prompt_version="3",
+        )
+
+    assert gateway.spent_usd == Decimal("0.80")
+    assert len(fake.requests) == 2  # the third call was never made
+
+
+def test_cached_replies_cost_nothing_against_the_cap(config: ModelsConfig, tmp_path: Path) -> None:
+    fake = FakeLLM({"attending": [VALID]}, cost_usd=Decimal("0.40"))
+    gateway = LLMGateway(
+        config,
+        backend_for=lambda e: fake,
+        cache=RecordReplayCache(tmp_path),
+        spend_cap_usd=Decimal("0.50"),
+    )
+
+    for _ in range(3):
+        gateway.structured("attending", MESSAGES, Question, prompt_version="3")
+
+    assert gateway.spent_usd == Decimal("0.40")

@@ -512,3 +512,26 @@ def test_an_attending_action_outside_its_role_is_refused(tmp_path: Path) -> None
 
     assert any("attending does not do that" in r for r in _reasons(result))
     assert result.commit is None
+
+
+def test_a_run_that_cannot_continue_is_stopped_and_recorded(tmp_path: Path) -> None:
+    script = {"attending": [turn(action="examine", system="bowel sounds")]}  # then runs out
+
+    result, _ = _run(script, tmp_path, NO_CHALLENGE)
+
+    assert result.run.status == "aborted"
+    assert result.stopped_reason is not None
+    assert "no reply 2" in result.stopped_reason
+    last = result.events[-1]
+    assert (last.seat, last.type, last.visibility) == ("scheduler", "refusal", ("scheduler",))
+
+
+def test_the_committed_fake_script_plays_the_efficient_path(tmp_path: Path) -> None:
+    from sambhasha.engine.fake_script import load_fake_script
+
+    result, _ = _run(load_fake_script("fake/pilot.yaml"), tmp_path)
+
+    assert result.run.status == "completed"
+    cited = next(e for e in result.events if e.event_id == "E4")
+    assert isinstance(cited.payload, Answer)
+    assert cited.payload.fact_ids == ("H10",)  # the script's evidence E4 is the supplement

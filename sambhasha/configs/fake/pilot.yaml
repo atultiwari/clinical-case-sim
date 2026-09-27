@@ -1,0 +1,47 @@
+# Scripted replies for `sambhasha run --config configs/pilot.yaml --fake` (PLAN P1.9).
+# The pilot's efficient path, played by the FakeLLM: no network, no cost. Each role's replies
+# are used in order. Seats reply {"turn": <action>}; the matcher replies {"item_id": ...} or
+# {"items": [...]}. Event ids (E4 below) follow the Event Log's numbering, model calls included.
+
+attending:
+  - turn: {action: ask_history, question: "Do you take any herbal or dietary supplements?"}
+  - turn: {action: order_test, item: peripheral blood film, indication: "anaemia; weak IgG-only DAT on IVIG"}
+  - turn: {action: order_test, item: blood lead, indication: "coarse stippling; herbal supplement"}
+  - turn: {action: refer, specialty: clinical toxicology, question: "Could this be lead poisoning from the supplement?"}
+  - turn: {action: wait, reason: blood lead pending}
+  - turn:
+      action: update_differential
+      items:
+        - {diagnosis: Lead poisoning, probability: 0.8, evidence_for: [E4], evidence_against: []}
+        - {diagnosis: Warm AIHA, probability: 0.1, evidence_for: [], evidence_against: [E4]}
+  - turn: &commit
+      action: commit
+      final_diagnosis: Lead poisoning from a herbal supplement
+      differential: []
+      treatment_plan: "Stop the supplement; oral succimer with toxicology; notify public health and screen contacts; repeat blood lead after chelation."
+      evidence: [E4]
+  - turn: *commit
+
+matcher:
+  - {item_id: HX.MEDS.SUPPLEMENTS}
+
+service:
+  - turn:
+      action: report
+      order_id: O1
+      report_text: Marked red-cell agglutination. Coarse basophilic stippling in a proportion of red cells.
+      impression: Stippling suggests a toxic cause such as lead; blood lead advised.
+      suggested_reflex_tests: [blood lead]
+
+consultant:
+  - turn:
+      action: consult_note
+      findings: History of an unlabelled herbal supplement.
+      impression: Probable lead toxicity from the supplement.
+      recommendations: [Stop the supplement, Chelation with oral succimer, Notify public health]
+
+challenger:
+  - turn:
+      action: challenge
+      critique: Exclude warm AIHA and myelodysplasia with ring sideroblasts before committing.
+      alternatives: [warm AIHA, MDS with ring sideroblasts]

@@ -156,7 +156,14 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
     - The film-review must-do is met when the Pathology Service's film report mentions coarse stippling (mapped to `FND.COARSE_BASOPHILIC_STIPPLING`).
   - Depends on: P1.7.
 
-- [ ] **P1.9 CLI and transcript viewer**
+- [x] **P1.9 CLI and transcript viewer**
+  - Done 27 Sep 2026: `sambhasha run --config configs/pilot.yaml [--fake]` and `sambhasha transcript <run_id> [--html PATH]`.
+    - Fake runs: `--fake` plays `configs/fake/pilot.yaml` (the pilot's efficient path) with every role named `fake/scripted`; no network, no key, no cost.
+    - Live runs refuse to start without `llm_budget_usd` in the config (`null` in `pilot.yaml` until P1.11), and the gateway makes no paid call beyond the cap; cached replays are free.
+    - A run stopped by a model failure, the cap, a replay-only cache miss or a finished fake script is `aborted`, with the reason in the Event Log.
+    - Missing requests go to `data/missing/<run_id>.csv` for the Case Library.
+    - The transcript shows every event with its source, audience and model calls; the HTML page is marked private.
+    - Run by hand on the local database: the pilot imported, the fake run completed (26 events) and the transcript read correctly.
   - Build: `sambhasha run --config configs/pilot.yaml [--fake]`; `sambhasha transcript <run_id>` in the terminal with an `--html` export; a budget cap for live runs set in the config.
   - Accept: a fake run and its transcript work offline; a live run refuses to start without a budget cap.
   - Depends on: P1.7, P1.8.

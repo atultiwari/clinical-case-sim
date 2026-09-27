@@ -36,6 +36,10 @@ class RunConfig(DomainModel):
     challenger: ChallengerConfig = ChallengerConfig()
     consultants: tuple[NonEmptyStr, ...]
     services: tuple[NonEmptyStr, ...]
+    # A live run refuses to start without a spending cap on model calls (P1.9).
+    llm_budget_usd: Annotated[Decimal, Field(gt=0)] | None = None
+    # Scripted replies for `sambhasha run --fake`, relative to configs/.
+    fake_script: str | None = None
 
     def config_hash(self) -> str:
         """SHA-256 of the configuration, recorded on the run."""

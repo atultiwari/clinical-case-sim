@@ -8,6 +8,7 @@ times, telling the model what was wrong. Every attempt, cached or not, is report
 """
 
 import json
+import logging
 from collections.abc import Callable, Sequence
 from dataclasses import dataclass
 from decimal import Decimal
@@ -24,6 +25,11 @@ from sambhasha.llm.config import Endpoint, ModelsConfig, Profile
 from sambhasha.llm.types import ChatMessage, LlmCallRecord, LLMRequest, LLMResponse
 
 MAX_RETRIES: Final = 2
+log = logging.getLogger(__name__)
+
+
+class LLMBudgetExceededError(RuntimeError):
+    """The spending cap is reached: no further paid call is made."""
 
 
 class LLMOutputError(RuntimeError):
@@ -52,8 +58,11 @@ class LLMGateway:
         backend_for: Callable[[Endpoint], ChatBackend] = _default_backend_for,
         cache: RecordReplayCache | None = None,
         on_call: Callable[[LlmCallRecord], None] = lambda record: None,
+        spend_cap_usd: Decimal | None = None,
     ) -> None:
         self._config = config
+        self._cap = spend_cap_usd
+        self._spent = Decimal(0)
         self._backend_for = cache_backends(backend_for)
         self._cache = cache
         self._on_call = on_call
@@ -94,12 +103,24 @@ class LLMGateway:
             calls,
         )
 
+    @property
+    def spent_usd(self) -> Decimal:
+        """What the calls made so far have cost (cached replays cost nothing)."""
+        return self._spent
+
     def _complete(self, role: str, request: LLMRequest) -> tuple[LLMResponse, bool]:
         if self._cache is not None:
             hit = self._cache.get(request)
             if hit is not None:
                 return hit, True
+        if self._cap is not None and self._spent >= self._cap:
+            raise LLMBudgetExceededError(
+                f"spending cap of USD {self._cap} reached (spent USD {self._spent})"
+            )
         response = self._backend_for(self._config.endpoint_for(role)).complete(request)
+        if response.cost_usd is None and self._cap is not None:
+            log.warning("%s did not report the cost of a call; it is not counted", request.model)
+        self._spent += response.cost_usd or Decimal(0)
         if self._cache is not None:
             self._cache.put(request, response)
         return response, False
