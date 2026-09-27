@@ -65,3 +65,19 @@ def test_list_says_when_nothing_is_imported(repo: InMemoryRepository) -> None:
     result = runner.invoke(cli.app, ["case", "list"])
 
     assert "No bundles imported yet." in result.output
+
+
+def test_tables_generate_rewrites_the_committed_tables(monkeypatch: pytest.MonkeyPatch) -> None:
+    written: list[str] = []
+
+    def fake_write(tables: object) -> tuple[Path, Path]:
+        written.append("both")
+        return Path("p.yaml"), Path("t.yaml")
+
+    monkeypatch.setattr(cli, "write_tables", fake_write)
+
+    result = runner.invoke(cli.app, ["tables", "generate"])
+
+    assert result.exit_code == 0, result.output
+    assert written == ["both"]
+    assert "Wrote p.yaml and t.yaml." in result.output

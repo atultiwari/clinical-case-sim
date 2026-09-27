@@ -112,7 +112,13 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Accept: a request for a catalogue item is answered from the bundle and never reaches the service; a repeated out-of-catalogue request returns the same ledger row; a result contradicting a stored fact is rejected and regenerated; G14 is never auto-generated; no output contains "not available"; the export lists every generated request.
   - Depends on: P1.1, P1.3.
 
-- [ ] **P1.5 Clock, costs and Chart**
+- [x] **P1.5 Clock, costs and Chart**
+  - Done 27 Sep 2026, with these parts:
+    - `sambhasha tables generate` writes `configs/prices_inr.yaml` and `configs/turnaround.yaml` from the catalogue (pinned v2, with the SHA-256 of `tests.csv`; a test fails if they drift). CGHS prices are kept apart from flagged estimates. History, examination, bedside tests and consultant sessions take the SPEC's times, and a request outside the catalogue gets the median test price, flagged.
+    - `engine/clock.py`: minutes from day 0, never backwards.
+    - `engine/costs.py`: orders due after their turnaround; totals exclude cancelled orders; the budget never shows below zero.
+    - `engine/chart.py`: the Chart as of the simulated time, readable text per event, no model calls and no sources.
+    - `engine/views.py`: a Consultant sees nothing before referral, and a service view holds only its order, the clinical details and the raw material.
   - Build: `configs/turnaround.yaml` and `configs/prices_inr.yaml`, generated from the Case Library's catalogue export (D-022; closes the Sambhasha item of the catalogue v1 entry in `../docs/CHANGELOG.md`, using the catalogue version pinned in `CLAUDE.md` at the time, now v2 exists); a simulated clock in minutes; the Chart projection; the `SeatView` builder.
   - Accept: a result becomes visible only after its turnaround; costs add up per order; a Consultant sees the Chart only after referral; a service view holds only its order and raw material.
   - Depends on: P0.3.

@@ -81,7 +81,7 @@ Acknowledgements:
 Acknowledgements:
 
 - [x] Nidana: pinned catalogue v2 in N1.1 (2026-09-26; `nidana/CLAUDE.md` and `@nidana/contracts`). `PMC12949993@v1.r2` is the pilot bundle Nidana uses; `.r1` is on catalogue v1 and the server will refuse it (N1.4).
-- [ ] Sambhasha: regenerate `configs/prices_inr.yaml` and `configs/turnaround.yaml` from the catalogue v2 export.
+- [x] Sambhasha: `sambhasha tables generate` writes both from the catalogue (pinned v2), and a test fails if they drift from `tests.csv`. Ticked 2026-09-27, P1.5.
 
 ## 2026-09-25: a day without a result returns the latest earlier result (bundle schema 0.3, planned)
 
@@ -108,7 +108,7 @@ Acknowledgements:
 Acknowledgements:
 
 - [x] Nidana: superseded; Nidana pins catalogue v2 (see the catalogue v2 entry). Ticked 2026-09-26, N1.1.
-- [ ] Sambhasha: generate `configs/prices_inr.yaml` and `configs/turnaround.yaml` from the catalogue v1 export.
+- [x] Sambhasha: superseded by catalogue v2; generated from v2 (P1.5). Ticked 2026-09-27.
 
 ## 2026-09-25: bundle schema 0.3 and catalogue v0 (planned)
 

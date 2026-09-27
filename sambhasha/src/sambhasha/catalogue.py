@@ -13,6 +13,7 @@ from pathlib import Path
 from types import MappingProxyType
 from typing import Final, Literal
 
+PINNED_CATALOGUE_VERSION: Final = 2  # CLAUDE.md, "Pinned shared-contract versions"
 DEFAULT_CATALOGUE_DIR: Final = Path(__file__).resolve().parents[3] / "case-library" / "catalogue"
 
 Kind = Literal["history", "exam", "test", "component", "action", "referral", "diagnosis", "finding"]
@@ -65,6 +66,9 @@ class CatalogueItem:
     scope: tuple[str, ...] = ()  # who may use it: "attending", "consultant.*", ...
     route: str | None = None  # tests: "direct" or the service that performs it
     components: tuple[str, ...] = ()  # tests: their component ids, in order
+    price_inr: int | None = None  # tests: CGHS rate or estimate
+    price_source: str | None = None
+    tat_minutes: int | None = None  # tests: turnaround time
 
 
 def read_rows(path: Path, required: tuple[str, ...]) -> list[dict[str, str]]:
@@ -116,4 +120,16 @@ def _read_items(directory: Path) -> Iterator[CatalogueItem]:
                 scope=split_synonyms(row.get("specialty_scope")),
                 route=row.get("route") or None,
                 components=split_synonyms(row.get("components")),
+                price_inr=_integer(row.get("price_inr")),
+                price_source=row.get("price_source") or None,
+                tat_minutes=_integer(row.get("tat_minutes")),
             )
+
+
+def _integer(field: str | None) -> int | None:
+    if not field:
+        return None
+    try:
+        return int(float(field))
+    except ValueError as error:
+        raise CatalogueError(f"not a number in the catalogue: {field!r}") from error
