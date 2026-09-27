@@ -81,3 +81,25 @@ jobs:
           name: player-screenshots
           path: nidana/apps/player/test-results/
           retention-days: 14
+
+  images:
+    name: Container images build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      # The images Coolify deploys (nidana/docs/DEPLOY.md). Built only, never pushed.
+      - name: Game server image
+        run: docker build -f nidana/apps/server/Dockerfile -t nidana-server:ci .
+
+      - name: Web build image
+        run: >-
+          docker build -f nidana/apps/player/Dockerfile.web
+          --build-arg EXPO_PUBLIC_API_URL=https://api.example.invalid
+          --build-arg EXPO_PUBLIC_SUPABASE_URL=https://example.invalid
+          --build-arg EXPO_PUBLIC_SUPABASE_KEY=placeholder
+          -t nidana-web:ci .

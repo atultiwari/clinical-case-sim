@@ -1,0 +1,20 @@
+# Build context is the repository root; send only what the web build needs.
+*
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!case-library/studio/package.json
+!nidana/apps/server/package.json
+!nidana/tsconfig.base.json
+!nidana/packages/**
+!nidana/apps/player/**
+**/node_modules
+**/.expo
+**/dist
+**/coverage
+**/test-results
+**/playwright-report
+**/.env*
+!**/.env.example
+nidana/apps/player/android
+nidana/apps/player/ios

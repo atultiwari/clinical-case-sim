@@ -53,10 +53,20 @@ async function build(): Promise<ServerContext> {
       : fileBundleSource(config.exportsDir);
   const store =
     config.store === "database" && sql !== null ? pgStore(sql) : memoryStore();
+  const registry = createBundleRegistry(source, catalogue);
+  // Warm the case list at start-up (the host's first health check), so no player waits for it.
+  registry.cases().catch((error: unknown) => {
+    console.error(
+      "Could not load the published cases",
+      error instanceof Error
+        ? `${error.name}: ${error.message}`
+        : "unknown error",
+    );
+  });
   return {
     catalogue,
     game: {
-      registry: createBundleRegistry(source, catalogue),
+      registry,
       store,
       settings: parseDifficultySettings(await readJson("difficulty.json")),
       scoring: parseScoringSettings(await readJson("scoring.json")),

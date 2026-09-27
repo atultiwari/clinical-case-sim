@@ -1,0 +1,20 @@
+# Build context is the repository root; send only what the server image needs.
+*
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!case-library/studio/package.json
+!nidana/apps/player/package.json
+!nidana/tsconfig.base.json
+!nidana/packages/**
+!nidana/apps/server/**
+!nidana/configs/**
+!nidana/conformance/catalogue/**
+**/node_modules
+**/.next
+**/coverage
+**/.env*
+!**/.env.example
+**/*.tsbuildinfo
+nidana/apps/server/AGENTS.md
+nidana/apps/server/CLAUDE.md

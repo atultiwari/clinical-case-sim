@@ -107,18 +107,22 @@ export function createBundleRegistry(
     const ids = await source.listPublished();
     const bySlug = new Map<string, PreparedCase>();
     const refused: Refused[] = [];
-    for (const id of ids) {
-      try {
-        const prepared = await load(id);
-        const slug = prepared.bundle.case.slug ?? "";
-        const current = bySlug.get(slug);
-        if (current === undefined || newer(id, current.bundle.bundle_id))
-          bySlug.set(slug, prepared);
-      } catch (error: unknown) {
+    // Read together: over a distant database, one at a time made the first list take half a minute.
+    const loaded = await Promise.allSettled(ids.map(load));
+    loaded.forEach((result, i) => {
+      const id = ids[i] ?? "";
+      if (result.status === "rejected") {
+        const error: unknown = result.reason;
         if (!(error instanceof BundleRefusedError)) throw error;
         refused.push({ id, code: error.code, message: error.message });
+        return;
       }
-    }
+      const prepared = result.value;
+      const slug = prepared.bundle.case.slug ?? "";
+      const current = bySlug.get(slug);
+      if (current === undefined || newer(id, current.bundle.bundle_id))
+        bySlug.set(slug, prepared);
+    });
     return { bySlug, refused };
   };
 
