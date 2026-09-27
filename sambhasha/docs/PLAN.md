@@ -123,7 +123,8 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Accept: a result becomes visible only after its turnaround; costs add up per order; a Consultant sees the Chart only after referral; a service view holds only its order and raw material.
   - Depends on: P0.3.
 
-- [ ] **P1.6 Seats and role cards**
+- [x] **P1.6 Seats and role cards**
+  - Done 27 Sep 2026: `engine/seats.py`. `LLMSeat` asks its role's model for `{"turn": <action>}`; the model may reply only with the actions `configs/permissions.yaml` allows its role, and anything else is invalid and retried. `HumanSeat` shows a person the same role card and the same `render_view` text, and asks again after an invalid action. Role cards: `prompts/attending.md`, `challenger.md`, `consultant.md` (Jinja2, one template for every specialty), `service_pathology.md` and `service_radiology.md`, all version 1. Each states what the seat sees, its actions and its rules. Jinja2 added (in SPEC §17). **For Atul:** read the five role cards before the first live run (P1.11); they are clinical wording.
   - Build: the `Seat` protocol; `LLMSeat` and a CLI `HumanSeat`. Role cards in `prompts/` for the Attending Physician, the Challenger, Consultants (one template with specialty variables) and the Pathology and Radiology Services. Each card states the seat's scope and allowed actions.
   - Accept: each seat produces a valid action from a fixture view with `FakeLLM`; a `HumanSeat` receives a view identical to an `LLMSeat`'s.
   - Depends on: P1.1, P1.5.
