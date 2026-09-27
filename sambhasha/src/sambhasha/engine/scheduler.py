@@ -261,7 +261,10 @@ class Scheduler:
                     "gatekeeper",
                     "answer",
                     Answer(
-                        text=result.text, fact_ids=result.fact_ids, ledger_ids=result.ledger_ids
+                        text=result.text,
+                        fact_ids=result.fact_ids,
+                        ledger_ids=result.ledger_ids,
+                        item_id=result.item_id,
                     ),
                     _TEAM,
                     "article" if result.fact_ids else "synthetic",
@@ -342,6 +345,7 @@ class Scheduler:
                 text=released.text,
                 fact_ids=released.fact_ids,
                 ledger_ids=released.ledger_ids,
+                item_id=released.item_id,
             ),
             _TEAM,
             "article" if released.fact_ids else "synthetic",

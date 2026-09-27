@@ -140,7 +140,13 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Accept: a scripted `FakeLLM` run of the pilot's efficient path produces the expected sequence of event types; the limits force a commit; the same config gives an identical event hash on rerun.
   - Depends on: P1.3, P1.4, P1.5, P1.6.
 
-- [ ] **P1.8 Evaluator**
+- [x] **P1.8 Evaluator**
+  - Done 27 Sep 2026: `evaluation/` (`evaluator.py`, `conditions.py`, `encounter.py`, `mapper.py`) and `sambhasha evaluate <run_id>`.
+    - Mapping (D-022): the committed diagnosis and each differential item are coded against the catalogue (P1.2), with the matcher choosing among candidates; the plan and each service report go through `prompts/plan_mapper.md` v1, keeping catalogue ids only. The mapping is stored with the score.
+    - Conditions (Case Library SPEC §10.4): every key, with `.*` prefixes, both `finding_released` forms, and `from_tests` checked against the test whose report showed the finding.
+    - The score: diagnosis from the first rubric anchor that holds; must-do and must-not-do (violations become safety flags); rank of the true diagnosis; cost, simulated hours, turns, tests rated unnecessary or risky, referrals justified and missed against the efficient path; synthetic dependence from the commit's evidence; the fallback flag read from the Event Log (D-023).
+    - Answers and results now record their catalogue `item_id`.
+    - Pilot fixtures: lead poisoning citing H10 scores 5 (4 without it), warm AIHA 2, steroid escalation a must-not-do violation, and the film must-do met only when the film report shows coarse stippling.
   - Build: the matcher's mapping of the Commit and of each service report to catalogue ids (D-022); the diagnosis rubric using the case's anchors and their conditions (Case Library SPEC §10.4); plan scoring from must-do and must-not-do; process metrics; synthetic dependence; the fallback flag (D-023); `sambhasha evaluate`.
   - Accept (pilot fixtures):
     - A commit naming lead poisoning and the supplement scores 5.
