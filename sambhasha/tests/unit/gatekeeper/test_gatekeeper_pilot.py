@@ -517,3 +517,42 @@ def test_a_service_test_with_nothing_in_the_case_goes_outside_the_catalogue(
 
     assert isinstance(outcome, OutsideCatalogue)
     assert missing.requests[-1].query == "IMG.US.ABDOMEN"
+
+
+# --- found in the first live run (P1.11): whole-system examinations ---
+
+
+@pytest.mark.parametrize("system", ["abdomen", "Abdominal", "the abdomen"])
+def test_examining_a_system_releases_its_whole_examination(
+    gatekeeper: Gatekeeper, system: str
+) -> None:
+    outcome = gatekeeper.resolve(_ask("attending", Examine(system=system)))
+
+    assert isinstance(outcome, Released)
+    sources = {LEDGER[i].target for i in outcome.ledger_ids}
+    assert {"EX.ABD.INSPECTION", "EX.ABD.PALPATION", "EX.ABD.AUSCULTATION"} <= sources
+    assert "EX.ABD.RECTAL" not in sources  # intimate: only on explicit request
+
+
+def test_an_intimate_examination_needs_an_explicit_request(gatekeeper: Gatekeeper) -> None:
+    outcome = gatekeeper.resolve(
+        _ask("attending", Examine(system="abdomen", manoeuvre="digital rectal examination"))
+    )
+
+    assert isinstance(outcome, Released)
+    assert {LEDGER[i].target for i in outcome.ledger_ids} == {"EX.ABD.RECTAL"}
+
+
+def test_a_consultant_examining_a_system_gets_only_items_in_scope(gatekeeper: Gatekeeper) -> None:
+    outcome = gatekeeper.resolve(
+        _ask(
+            "consultant.haematology",
+            Examine(system="eyes"),
+            referred=frozenset({"consultant.haematology"}),
+        )
+    )
+
+    if isinstance(outcome, Released):
+        for ledger_id in outcome.ledger_ids:
+            item = CATALOGUE.get(LEDGER[ledger_id].target)
+            assert "consultant.haematology" in item.scope or "consultant.*" in item.scope

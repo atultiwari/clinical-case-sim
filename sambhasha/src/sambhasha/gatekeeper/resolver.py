@@ -25,7 +25,7 @@ from sambhasha.domain.actions import AskHistory, BedsideTest, Examine, OrderTest
 from sambhasha.domain.base import DomainModel
 from sambhasha.domain.case_file import CaseBundle
 from sambhasha.domain.seats import SeatId
-from sambhasha.gatekeeper.coding import Coder
+from sambhasha.gatekeeper.coding import Coder, normalise
 from sambhasha.gatekeeper.lookup import CaseIndex, Line
 from sambhasha.gatekeeper.matcher import Matcher
 from sambhasha.gatekeeper.policy import Permissions, in_scope
@@ -152,7 +152,12 @@ class Gatekeeper:
         if _VAGUE.search(text):
             return Refused(reason=refusals.vague)
         kinds = _KINDS[type(action)]
-        item = self._identify(text, kinds)
+        if isinstance(action, Examine) and action.manoeuvre is None:
+            system = self._system_examination(request.seat, action.system, request.day)
+            if system is not None:
+                return system
+        named = self._identify_examination(action, kinds) if isinstance(action, Examine) else None
+        item = named or self._identify(text, kinds)
         if isinstance(item, OutsideCatalogue):
             return item
         if not in_scope(request.seat, item.scope):
@@ -168,6 +173,39 @@ class Gatekeeper:
         if not lines:
             return Refused(reason=self._permissions.refusals.not_understood)
         return Released(item_id=item_id, lines=lines)
+
+    def _system_examination(self, seat: str, system: str, day: int) -> Released | None:
+        """A whole system's examination ("abdomen"), or None if the text names no system."""
+        config = self._permissions.system_examination
+        if config is None:
+            return None
+        words = normalise(re.sub(r"(?i)\b(examin\w*|exam)\b", "", system))
+        category = config.systems.get(words)
+        if category is None:
+            return None
+        lines = tuple(
+            line
+            for item in self._catalogue.items
+            if item.kind == "exam"
+            and item.category == category
+            and item.id not in config.explicit_only
+            and in_scope(seat, item.scope)
+            for line in self._index.answer(item.id, day, system)
+        )
+        return (
+            Released(item_id=f"EX.SYSTEM.{category.upper().replace(' ', '_')}", lines=lines)
+            if lines
+            else None
+        )
+
+    def _identify_examination(
+        self, action: Examine, kinds: tuple[Kind, ...]
+    ) -> CatalogueItem | None:
+        """A named manoeuvre first ("digital rectal examination"), if it is exactly an item."""
+        if action.manoeuvre is None:
+            return None
+        coding = self._coder.code(action.manoeuvre, kinds=kinds, bundle_id=self._bundle_id)
+        return self._catalogue.get(coding.ids[0]) if coding.status == "exact" else None
 
     def _identify(self, text: str, kinds: tuple[Kind, ...]) -> CatalogueItem | OutsideCatalogue:
         coding = self._coder.code(text, kinds=kinds, bundle_id=self._bundle_id)

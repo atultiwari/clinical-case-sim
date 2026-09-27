@@ -64,6 +64,7 @@ class CatalogueItem:
     synonyms: tuple[str, ...]
     loinc: str | None = None
     scope: tuple[str, ...] = ()  # who may use it: "attending", "consultant.*", ...
+    category: str = ""  # e.g. "abdominal" for an examination
     route: str | None = None  # tests: "direct" or the service that performs it
     components: tuple[str, ...] = ()  # tests: their component ids, in order
     price_inr: int | None = None  # tests: CGHS rate or estimate
@@ -118,6 +119,7 @@ def _read_items(directory: Path) -> Iterator[CatalogueItem]:
                 synonyms=split_synonyms(row.get("synonyms")),
                 loinc=row.get("loinc") or None,
                 scope=split_synonyms(row.get("specialty_scope")),
+                category=(row.get("category") or "").strip(),
                 route=row.get("route") or None,
                 components=split_synonyms(row.get("components")),
                 price_inr=_integer(row.get("price_inr")),

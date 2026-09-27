@@ -44,10 +44,16 @@ class Refusals(DomainModel):
     not_understood: str
 
 
+class SystemExamination(DomainModel):
+    systems: dict[str, str]  # words for a system -> the catalogue's examination category
+    explicit_only: tuple[str, ...] = ()  # examinations never included in a system request
+
+
 class Permissions(DomainModel):
     actions: dict[str, tuple[str, ...]]
     consultants_need_referral: bool
     refusals: Refusals
+    system_examination: SystemExamination | None = None
 
     def check(self, seat: str, action: str, referred: frozenset[str]) -> str | None:
         """None if the seat may take the action now; otherwise the refusal to show it."""

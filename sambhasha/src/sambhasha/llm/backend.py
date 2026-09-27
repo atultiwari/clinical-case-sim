@@ -17,6 +17,9 @@ TIMEOUT_SECONDS: Final = 120.0
 RATE_RETRIES: Final = 6  # retries after a 429 before giving up
 FIRST_BACKOFF_SECONDS: Final = 15.0
 MAX_BACKOFF_SECONDS: Final = 120.0
+SERVER_RETRIES: Final = 4  # retries after a temporary server or connection error
+FIRST_SERVER_PAUSE_SECONDS: Final = 5.0
+_TRANSIENT: Final = (openai.InternalServerError, openai.APIConnectionError)
 
 
 class LLMCallError(RuntimeError):
@@ -85,8 +88,10 @@ class OpenAIBackend:
         )
 
     def _call(self, request: LLMRequest, kwargs: dict[str, Any]) -> Any:
-        """One completion, paced to the model's limits and retried after a 429."""
-        for attempt in range(RATE_RETRIES + 1):
+        """One completion, paced to the model's limits and retried after a 429 or a temporary
+        server error; every pause is recorded."""
+        server_failures = 0
+        for attempt in range(RATE_RETRIES + SERVER_RETRIES + 1):
             try:
                 self._limiter.acquire()
             except DailyQuotaError as error:
@@ -105,6 +110,16 @@ class OpenAIBackend:
                 )
                 if attempt < RATE_RETRIES:
                     self._limiter.pause(delay, "rate limited")
+                else:
+                    break
+            except _TRANSIENT as error:
+                server_failures += 1
+                if server_failures > SERVER_RETRIES:
+                    raise LLMCallError(
+                        f"call to {request.model} failed: {type(error).__name__}"
+                    ) from error
+                pause = FIRST_SERVER_PAUSE_SECONDS * 2 ** (server_failures - 1)
+                self._limiter.pause(pause, "server error")
             except openai.OpenAIError as error:
                 raise LLMCallError(
                     f"call to {request.model} failed: {type(error).__name__}"

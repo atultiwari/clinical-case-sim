@@ -43,7 +43,7 @@ class Recorder:
 def _backend(reports_cost: bool, reply: Any) -> tuple[OpenAIBackend, Recorder]:
     recorder = Recorder(reply)
     endpoint = Endpoint(base_url="https://x.invalid/v1", api_key="k", reports_cost=reports_cost)
-    return OpenAIBackend(endpoint, create=recorder), recorder
+    return OpenAIBackend(endpoint, create=recorder, sleep=lambda seconds: None), recorder
 
 
 def test_the_request_is_sent_as_given() -> None:

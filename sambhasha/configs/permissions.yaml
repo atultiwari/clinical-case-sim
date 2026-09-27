@@ -19,6 +19,39 @@ actions:
 # A Consultant acts only after the Attending Physician refers to their specialty.
 consultants_need_referral: true
 
+# An examination that names a system but no manoeuvre ("abdomen") releases the case's findings
+# for every catalogue examination in that system the seat may perform, as a clinician would
+# report a full examination. Intimate examinations come only on an explicit request.
+system_examination:
+  systems:
+    general: general
+    general examination: general
+    abdomen: abdominal
+    abdominal: abdominal
+    chest: respiratory
+    lungs: respiratory
+    respiratory: respiratory
+    respiratory system: respiratory
+    heart: cardiovascular
+    cardiovascular: cardiovascular
+    cardiovascular system: cardiovascular
+    cvs: cardiovascular
+    nervous system: neurological
+    neurological: neurological
+    neurology: neurological
+    cns: neurological
+    eyes: eyes
+    eye: eyes
+    skin: skin
+    joints: musculoskeletal
+    musculoskeletal: musculoskeletal
+    mouth: oral and ENT
+    oral: oral and ENT
+    ent: oral and ENT
+    throat: oral and ENT
+    neck: neck
+  explicit_only: [EX.ABD.RECTAL, EX.BREAST.EXAMINATION, EX.GU.GENITALIA, EX.GYN.PELVIC]
+
 # Refusal texts, shown to the seat. Keep them neutral: they must not hint at the case.
 refusals:
   not_permitted: "The {role} does not {action}."

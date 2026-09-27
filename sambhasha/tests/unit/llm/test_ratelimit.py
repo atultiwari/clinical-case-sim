@@ -187,3 +187,28 @@ def test_too_many_429s_give_up() -> None:
 
     with pytest.raises(LLMCallError, match="rate limited"):
         backend.complete(REQUEST)
+
+
+def _server_error() -> openai.InternalServerError:
+    request = httpx.Request("POST", "https://example.invalid")
+    return openai.InternalServerError(
+        "oops", response=httpx.Response(500, request=request), body=None
+    )
+
+
+def test_a_temporary_server_error_is_retried_after_a_pause() -> None:
+    backend, flaky, ledger, _ = _backend([_server_error(), _server_error()])
+
+    backend.complete(REQUEST)
+
+    assert flaky.calls == 3
+    assert ledger.by_reason() == {"server error": pytest.approx(5 + 10)}
+
+
+def test_a_server_that_keeps_failing_gives_up() -> None:
+    from sambhasha.llm.backend import LLMCallError
+
+    backend, _, _, _ = _backend([_server_error()] * 10)
+
+    with pytest.raises(LLMCallError, match="InternalServerError"):
+        backend.complete(REQUEST)
