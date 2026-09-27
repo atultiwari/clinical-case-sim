@@ -100,6 +100,7 @@ class ServiceRequest(DomainModel):
     clinical_details: str
     findings: str
     raw_material_id: str | None = None
+    report_id: str | None = None  # the case's reviewed report, when it is the material
     media: tuple[str, ...] = ()
     ledger_ids: tuple[str, ...] = ()
     from_day: int | None = None
@@ -191,7 +192,9 @@ class Gatekeeper:
         lines = tuple(line for c in direct if (line := self._index.component(c, day, indication)))
         released = Released(item_id=item.id, lines=lines) if lines else None
         if service and reports:
-            return self._service_request(item, service, reports, day, indication, released)
+            request = self._service_request(item, service, reports, day, indication, released)
+            if request is not None:
+                return request
         if released:
             return released
         if any(self._index.held_back(c, indication) for c in item.components):
@@ -207,7 +210,9 @@ class Gatekeeper:
         day: int,
         indication: str,
         released: Released | None,
-    ) -> ServiceRequest:
+    ) -> ServiceRequest | None:
+        """The material for the service: the article's raw material, else the case's reviewed
+        report for the test, else the ledger's report text. None if the case holds none."""
         raw = self._index.raw_material(item.id, day)
         if raw is not None:
             from_day = raw.day if raw.day is not None and raw.day < day else None
@@ -221,8 +226,19 @@ class Gatekeeper:
                 from_day=from_day,
                 released=released,
             )
-        # No article material: the reviewed report text from the ledger is what the service reads.
+        report = self._index.report(item.id)
+        if report is not None and report.report_text:
+            return ServiceRequest(
+                item_id=item.id,
+                service=service,
+                clinical_details=indication,
+                findings=report.report_text,
+                report_id=report.id,
+                released=released,
+            )
         lines = tuple(line for c in reports if (line := self._index.component(c, day, indication)))
+        if not lines:
+            return None
         return ServiceRequest(
             item_id=item.id,
             service=service,

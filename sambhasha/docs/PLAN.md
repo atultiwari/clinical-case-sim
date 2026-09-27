@@ -168,7 +168,17 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Accept: a fake run and its transcript work offline; a live run refuses to start without a budget cap.
   - Depends on: P1.7, P1.8.
 
-- [ ] **P1.10 Invariant test suite**
+- [x] **P1.10 Invariant test suite**
+  - Done 27 Sep 2026: `tests/invariants/`.
+    - `test_random_runs.py` (Hypothesis) plays random Attending action sequences (catalogue items and free text: questions, examinations, orders, referrals, waits, differentials) through the full Scheduler on the pilot, with scripted seats that record every view. It checks:
+      - no view holds the ground truth or names the diagnosis;
+      - the supplement comes out only after a question naming its topic;
+      - every released line is stored text;
+      - the log's sequence, hash chain and audiences are intact;
+      - a rerun repeats exactly.
+    - Scale: 40 runs per test in CI; `HYPOTHESIS_PROFILE=thorough` runs 400, and 800 passed.
+    - `test_invariants.py` checks I1 to I8 directly, and the Postgres guards for I6 and I7 stay in `tests/contract/`.
+    - The random runs found a real bug: 10 imaging and laboratory tests (every abdominal imaging study among them) are answered in the case by its reviewed reports, which the Gatekeeper never used, so a Radiology or Pathology order would have crashed a run. Services now get the article's raw material, else the case's reviewed report, else the ledger's report text; a test with none goes outside the catalogue.
   - Build: `tests/invariants/` covering SPEC §2, including a property-based test (hypothesis) of random action sequences on the pilot.
   - Accept: tests exist and pass for I1–I8. Examples: no view contains an unreleased fact id; no view contains ground-truth text; reruns are identical; released text is always stored text; frozen cases and events are immutable.
   - Depends on: P1.7.

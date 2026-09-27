@@ -14,10 +14,11 @@ from types import MappingProxyType
 from typing import Final
 
 from sambhasha.domain.base import DomainModel
-from sambhasha.domain.case_file import CaseBundle, Fact, LedgerRow, RawMaterial
+from sambhasha.domain.case_file import CaseBundle, Fact, LedgerRow, RawMaterial, Report
 from sambhasha.gatekeeper.coding import normalise
 
 SEAT_RELEASES: Final = frozenset({"chart", "vignette"})
+_REPORT_RANK: Final = {"only": 0, "expert": 1, "original": 2}
 # Words too general to show that a question names a hidden item's topic.
 _GENERIC_TOPIC_WORDS: Final = frozenset({"or", "and", "over", "the", "medicine", "drug"})
 
@@ -121,6 +122,11 @@ class CaseIndex:
         self._facts_by_component = MappingProxyType({k: tuple(v) for k, v in by_component.items()})
         self._ledger = MappingProxyType({k: tuple(v) for k, v in ledger.items()})
         self._raw = MappingProxyType({k: tuple(v) for k, v in raw.items()})
+        reports: defaultdict[str, list[Report]] = defaultdict(list)
+        for report in bundle.reports:
+            if report.test_item_id and report.report_text:
+                reports[report.test_item_id].append(report)
+        self._reports = MappingProxyType({k: tuple(v) for k, v in reports.items()})
 
     def answer(self, item_id: str, day: int, question: str) -> tuple[Line, ...]:
         """History, examination or a whole-test reply: the item's facts, else its ledger reply.
@@ -163,6 +169,11 @@ class CaseIndex:
             not _conditions_met(f, indication)
             for f in self._facts_by_component.get(component_id, ())
         )
+
+    def report(self, test_id: str) -> Report | None:
+        """The case's reviewed report for a test: the only or expert variant, else the original."""
+        ranked = sorted(self._reports.get(test_id, ()), key=lambda r: _REPORT_RANK[r.variant])
+        return ranked[0] if ranked else None
 
     def raw_material(self, test_id: str, day: int) -> RawMaterial | None:
         return _latest(self._raw.get(test_id, ()), _raw_day, day)
