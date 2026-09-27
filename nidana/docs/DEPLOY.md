@@ -6,10 +6,10 @@ Nothing secret goes in Git. The only secrets are the game server's `DATABASE_URL
 
 ## What runs
 
-| Resource | Built from | Listens on | Health check |
-| --- | --- | --- | --- |
-| Game server | `nidana/apps/server/Dockerfile` | 3100 | `GET /api/health` |
-| Web build | `nidana/apps/player/Dockerfile.web` (static files, nginx) | 80 | `GET /` |
+| Resource    | Built from                                                | Listens on | Health check      |
+| ----------- | --------------------------------------------------------- | ---------- | ----------------- |
+| Game server | `nidana/apps/server/Dockerfile`                           | 3100       | `GET /api/health` |
+| Web build   | `nidana/apps/player/Dockerfile.web` (static files, nginx) | 80         | `GET /`           |
 
 Both are built from the repository root (`atultiwari/clinical-case-sim`, branch `main`). The repository is public, so Coolify needs no deploy key. CI builds both images on every Nidana change (`.github/workflows/nidana.yml`, "Container images build"), so a broken Dockerfile shows up before a deploy.
 
@@ -23,14 +23,14 @@ In Coolify: **New resource → Public repository** → `https://github.com/atult
 - Health check: path `/api/health`, port `3100`.
 - Environment variables (runtime, not build):
 
-| Key | Value |
-| --- | --- |
-| `NIDANA_BUNDLE_SOURCE` | `database` |
-| `NIDANA_STORE` | `database` |
-| `DATABASE_URL` | the `nidana_game` URL from `apps/server/.env.local` (session pooler, port 5432) |
-| `SUPABASE_URL` | `https://vxiymbaxsiavxuyxzhnt.supabase.co` |
-| `SUPABASE_JWT_SECRET` | only if `.env.local` has one; otherwise leave it out (keys come from the project's JWKS) |
-| `NIDANA_ALLOWED_ORIGINS` | the web build's address from step 2, for example `https://nidana.<your domain>` |
+| Key                      | Value                                                                                    |
+| ------------------------ | ---------------------------------------------------------------------------------------- |
+| `NIDANA_BUNDLE_SOURCE`   | `database`                                                                               |
+| `NIDANA_STORE`           | `database`                                                                               |
+| `DATABASE_URL`           | the `nidana_game` URL from `apps/server/.env.local` (session pooler, port 5432)          |
+| `SUPABASE_URL`           | `https://vxiymbaxsiavxuyxzhnt.supabase.co`                                               |
+| `SUPABASE_JWT_SECRET`    | only if `.env.local` has one; otherwise leave it out (keys come from the project's JWKS) |
+| `NIDANA_ALLOWED_ORIGINS` | the web build's address from step 2, for example `https://nidana.<your domain>`          |
 
 Deploy. `https://nidana-api.<your domain>/api/health` should answer `{"success":true,"data":{"status":"ok"},"error":null}`, and `/api/cases` should answer 401 (sign-in needed). The server loads the published cases at start-up, which takes a few seconds from a distant database.
 
@@ -43,11 +43,11 @@ Another **Public repository** resource from the same repository and branch.
 - Domain: for example `https://nidana.<your domain>`.
 - Environment variables, each marked **Build variable** (they are inlined into the JavaScript, and all three are public by design):
 
-| Key | Value |
-| --- | --- |
-| `EXPO_PUBLIC_API_URL` | the game server's address from step 1, no trailing slash |
-| `EXPO_PUBLIC_SUPABASE_URL` | `https://vxiymbaxsiavxuyxzhnt.supabase.co` |
-| `EXPO_PUBLIC_SUPABASE_KEY` | the project's publishable key (`sb_publishable_…`) |
+| Key                        | Value                                                    |
+| -------------------------- | -------------------------------------------------------- |
+| `EXPO_PUBLIC_API_URL`      | the game server's address from step 1, no trailing slash |
+| `EXPO_PUBLIC_SUPABASE_URL` | `https://vxiymbaxsiavxuyxzhnt.supabase.co`               |
+| `EXPO_PUBLIC_SUPABASE_KEY` | the project's publishable key (`sb_publishable_…`)       |
 
 Deploy. The address should open the consent screen. If the page loads but every request fails, check that `NIDANA_ALLOWED_ORIGINS` on the game server matches this address exactly (scheme and host, no trailing slash), then redeploy the server.
 
