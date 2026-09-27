@@ -1,0 +1,8 @@
+# Types a catalogue name into the search box and picks the item. Env: QUERY, ID.
+appId: org.clinicalcasesim.nidana
+---
+- tapOn:
+    id: "search"
+- inputText: ${QUERY}
+- tapOn:
+    id: "pick-${ID}"

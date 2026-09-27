@@ -27,9 +27,12 @@ const timeOf = (minutes: number): string =>
 
 function SelectBox({
   entryRef,
+  label,
   selection,
 }: {
   readonly entryRef: string;
+  /** Read out by screen readers and used by the Android test: "Cite Blood lead". */
+  readonly label: string;
   readonly selection?: Selection;
 }) {
   if (selection === undefined) return null;
@@ -39,7 +42,7 @@ function SelectBox({
       testID={`cite-${entryRef}`}
       accessibilityRole="checkbox"
       accessibilityState={{ checked: on }}
-      accessibilityLabel="Cite as key evidence"
+      accessibilityLabel={`Cite ${label}`}
       hitSlop={8}
       onPress={() => selection.onToggle(entryRef)}
       className={`mt-0.5 h-5 w-5 items-center justify-center rounded border ${on ? "border-brand bg-brand" : "border-line bg-white"}`}
@@ -109,7 +112,11 @@ function EntryRow({
     <View testID={`entry-${entry.ref}`}>
       <Row at={entry.at} kind={entry.kind} title={entry.itemName}>
         <View className="flex-row gap-2">
-          <SelectBox entryRef={entry.ref} selection={selection} />
+          <SelectBox
+            entryRef={entry.ref}
+            label={entry.itemName ?? entry.text ?? "this entry"}
+            selection={selection}
+          />
           <View className="flex-1 gap-1">
             {entry.report ? (
               <>
@@ -204,7 +211,11 @@ function ResultsRow({
                   key={entry.ref}
                   className={`flex-row gap-2 px-2 py-1.5 ${border}`}
                 >
-                  <SelectBox entryRef={entry.ref} selection={selection} />
+                  <SelectBox
+                    entryRef={entry.ref}
+                    label={name}
+                    selection={selection}
+                  />
                   <Text className="flex-1 text-sm text-ink">
                     {name}: {entry.text ?? "—"}
                   </Text>
@@ -221,7 +232,11 @@ function ResultsRow({
                 className={`gap-0.5 px-2 py-1.5 ${border} ${abnormal ? "bg-red-50/60" : ""}`}
               >
                 <View className="flex-row items-center gap-2">
-                  <SelectBox entryRef={entry.ref} selection={selection} />
+                  <SelectBox
+                    entryRef={entry.ref}
+                    label={name}
+                    selection={selection}
+                  />
                   <Text className="flex-1 text-sm text-ink">{name}</Text>
                   <Text
                     className={`font-mono text-sm font-semibold ${abnormal ? "text-danger" : "text-ink"}`}
@@ -278,7 +293,11 @@ function Presentation({
       </Text>
       {entries.map((e) => (
         <View key={e.ref} testID={`entry-${e.ref}`} className="flex-row gap-2">
-          <SelectBox entryRef={e.ref} selection={selection} />
+          <SelectBox
+            entryRef={e.ref}
+            label={e.text ?? "this finding"}
+            selection={selection}
+          />
           <Text className="flex-1 text-sm text-ink">{e.text}</Text>
         </View>
       ))}

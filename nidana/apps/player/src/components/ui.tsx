@@ -6,7 +6,11 @@ import {
   Text,
   View,
 } from "react-native";
+import { cssInterop } from "nativewind";
 import { SafeAreaView } from "react-native-safe-area-context";
+
+// NativeWind styles core components only; third-party ones must be registered to accept className.
+cssInterop(SafeAreaView, { className: "style" });
 
 /** Small building blocks shared by the screens. */
 
@@ -22,6 +26,7 @@ export function Disclaimer() {
   );
 }
 
+/** A screen: scrolling content with the disclaimer as a fixed footer, visible at all times (SPEC §5.3). */
 export function Screen({
   children,
   scroll = true,
@@ -35,16 +40,20 @@ export function Screen({
       className="flex-1 bg-paper"
     >
       {scroll ? (
-        <ScrollView contentContainerClassName="p-4 gap-4 max-w-5xl w-full self-center">
+        <ScrollView
+          keyboardShouldPersistTaps="handled"
+          keyboardDismissMode="on-drag"
+          className="flex-1"
+          contentContainerClassName="p-4 gap-4 max-w-5xl w-full self-center"
+        >
           {children}
-          <Disclaimer />
         </ScrollView>
       ) : (
-        <View className="flex-1">
-          {children}
-          <Disclaimer />
-        </View>
+        <View className="flex-1">{children}</View>
       )}
+      <View className="border-t border-line bg-white">
+        <Disclaimer />
+      </View>
     </SafeAreaView>
   );
 }

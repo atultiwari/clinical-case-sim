@@ -1,0 +1,11 @@
+# Adds an item to the plan on the commit screen. Env: QUERY, ID.
+appId: org.clinicalcasesim.nidana
+---
+- scrollUntilVisible:
+    element:
+      id: "plan-search"
+- tapOn:
+    id: "plan-search"
+- inputText: ${QUERY}
+- tapOn:
+    id: "pick-${ID}"

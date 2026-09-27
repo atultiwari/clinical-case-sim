@@ -1,0 +1,195 @@
+# N1.5 acceptance on Android: the pilot's benchmark path (case-library/cases/PMC12949993/ANALYSIS.md §10),
+# from the case list to the debrief. Needs the game server on the Mac (http://10.0.2.2:3100 from the
+# emulator) and anonymous sign-in on the Supabase project the app is built against.
+appId: org.clinicalcasesim.nidana
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible:
+      id: "case-c-6gizm"
+    timeout: 60000
+- assertVisible:
+    id: "disclaimer"
+- tapOn:
+    id: "case-c-6gizm"
+- tapOn:
+    id: "difficulty-standard"
+- tapOn:
+    id: "start"
+- extendedWaitUntil:
+    visible:
+      id: "status"
+    timeout: 30000
+
+# History and examination.
+- tapOn: { id: "mode-ask" }
+- runFlow:
+    {
+      file: steps/pick.yaml,
+      env: { QUERY: "Pain: site", ID: "HX.PC.PAIN_DETAILS" },
+    }
+- runFlow:
+    {
+      file: steps/pick.yaml,
+      env: { QUERY: "Current medicines", ID: "HX.MEDS.CURRENT" },
+    }
+- runFlow:
+    {
+      file: steps/pick.yaml,
+      env: { QUERY: "Blood in the stool", ID: "HX.GI.BLEEDING" },
+    }
+- tapOn: { id: "mode-examine" }
+- runFlow:
+    {
+      file: steps/pick.yaml,
+      env: { QUERY: "Vital signs", ID: "EX.GEN.VITALS" },
+    }
+- runFlow:
+    { file: steps/pick.yaml, env: { QUERY: "Pallor", ID: "EX.GEN.PALLOR" } }
+- runFlow:
+    {
+      file: steps/pick.yaml,
+      env: { QUERY: "Abdominal palpation", ID: "EX.ABD.PALPATION" },
+    }
+- assertVisible: "Day 0, 00:45"
+
+# First bloods.
+- tapOn: { id: "mode-order" }
+- runFlow:
+    {
+      file: steps/order.yaml,
+      env: { QUERY: "Full blood count", ID: "LAB.HAEM.CBC" },
+    }
+- runFlow:
+    {
+      file: steps/order.yaml,
+      env: { QUERY: "Reticulocyte count", ID: "LAB.HAEM.RETIC" },
+    }
+- runFlow:
+    {
+      file: steps/order.yaml,
+      env: { QUERY: "Liver function", ID: "LAB.CHEM.LFT" },
+    }
+- runFlow:
+    {
+      file: steps/order.yaml,
+      env: { QUERY: "Lactate dehydrogenase", ID: "LAB.CHEM.LDH" },
+    }
+- runFlow:
+    {
+      file: steps/order.yaml,
+      env: { QUERY: "Serum haptoglobin", ID: "LAB.CHEM.HAPTOGLOBIN" },
+    }
+- runFlow:
+    {
+      file: steps/order.yaml,
+      env: { QUERY: "Direct antiglobulin", ID: "LAB.TBS.DAT" },
+    }
+- runFlow:
+    {
+      file: steps/order.yaml,
+      env: { QUERY: "Blood film (screening)", ID: "LAB.HAEM.FILM" },
+    }
+- runFlow:
+    {
+      file: steps/order.yaml,
+      env: { QUERY: "Renal profile", ID: "LAB.CHEM.RENAL" },
+    }
+- tapOn: { id: "mode-wait" }
+- tapOn: { id: "wait-next" }
+- assertVisible: "Day 0, 04:45"
+
+# The screening film is provisional.
+- tapOn: { id: "view-chart" }
+- scrollUntilVisible:
+    element: { id: "badge-provisional" }
+    timeout: 20000
+- assertVisible: { id: "status-line" }
+- tapOn: { id: "view-actions" }
+
+# The targeted remedy question, the film review, the blood lead and toxicology.
+- tapOn: { id: "mode-ask" }
+- runFlow:
+    {
+      file: steps/pick.yaml,
+      env: { QUERY: "Supplements, herbal", ID: "HX.MEDS.SUPPLEMENTS" },
+    }
+- runFlow:
+    {
+      file: steps/pick.yaml,
+      env: { QUERY: "Others with similar", ID: "HX.EXPOSURE.OTHERS_EXPOSED" },
+    }
+- tapOn: { id: "mode-order" }
+- runFlow:
+    {
+      file: steps/order.yaml,
+      env: { QUERY: "Blood film review", ID: "LAB.HAEM.FILM_REVIEW" },
+    }
+- runFlow:
+    {
+      file: steps/order.yaml,
+      env: { QUERY: "Blood lead", ID: "LAB.TOX.BLOOD_LEAD" },
+    }
+- tapOn: { id: "mode-refer" }
+- runFlow:
+    {
+      file: steps/order.yaml,
+      env: { QUERY: "Clinical toxicology", ID: "REF.TOXICOLOGY" },
+    }
+- tapOn: { id: "mode-wait" }
+- repeat:
+    while:
+      visible: { id: "pending" }
+    times: 8
+    commands:
+      - tapOn: { id: "wait-next" }
+- assertVisible: "Day 1, 04:55"
+- takeScreenshot: maestro-output/android-workspace
+
+# Commit: lead poisoning, citing the supplement and the blood lead, with the plan in order.
+- tapOn: { id: "mode-commit" }
+- tapOn: { id: "go-commit" }
+- tapOn: { id: "dx-search" }
+- inputText: "Lead poisoning"
+- tapOn: { id: "pick-DX.LEAD_POISONING" }
+- runFlow:
+    {
+      file: steps/plan.yaml,
+      env: { QUERY: "Stop exposure", ID: "ACT.STOP_SUSPECTED_SOURCE" },
+    }
+- runFlow:
+    {
+      file: steps/plan.yaml,
+      env: { QUERY: "Oral succimer", ID: "RX.CHELATION.SUCCIMER_ORAL" },
+    }
+- runFlow:
+    {
+      file: steps/plan.yaml,
+      env: { QUERY: "Notify public health", ID: "ACT.NOTIFY_PUBLIC_HEALTH" },
+    }
+- runFlow:
+    {
+      file: steps/plan.yaml,
+      env: { QUERY: "Repeat blood lead", ID: "ACT.REPEAT_BLOOD_LEAD" },
+    }
+- hideKeyboard
+- scrollUntilVisible:
+    element: "Cite Supplements, herbal and traditional remedies"
+    timeout: 30000
+- tapOn: "Cite Supplements, herbal and traditional remedies"
+- scrollUntilVisible:
+    element: "Cite Blood lead"
+    timeout: 30000
+- tapOn: "Cite Blood lead"
+- scrollUntilVisible:
+    element: { id: "submit-commit" }
+- tapOn: { id: "submit-commit" }
+
+# The debrief.
+- extendedWaitUntil:
+    visible: { id: "score" }
+    timeout: 30000
+- assertVisible: "Diagnosis \\(anchor 5 of 5\\)"
+- assertNotVisible: "✗.*"
+- takeScreenshot: maestro-output/android-debrief

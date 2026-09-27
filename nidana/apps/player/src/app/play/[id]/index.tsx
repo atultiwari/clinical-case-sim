@@ -128,12 +128,16 @@ export default function Workspace() {
       {wide ? (
         <View className="flex-1 flex-row gap-3 px-3">
           <ScrollView
+            keyboardShouldPersistTaps="handled"
+            keyboardDismissMode="on-drag"
             className="flex-[3]"
             contentContainerClassName="gap-3 pb-6"
           >
             {chart}
           </ScrollView>
           <ScrollView
+            keyboardShouldPersistTaps="handled"
+            keyboardDismissMode="on-drag"
             className="flex-[2]"
             contentContainerClassName="gap-3 pb-6"
           >
@@ -143,13 +147,17 @@ export default function Workspace() {
         </View>
       ) : (
         <ScrollView
+          keyboardShouldPersistTaps="handled"
+          keyboardDismissMode="on-drag"
           className="flex-1"
           contentContainerClassName="gap-3 px-3 pb-6"
         >
           {tab === "chart" ? chart : panel}
         </ScrollView>
       )}
-      <Disclaimer />
+      <View className="border-t border-line bg-white">
+        <Disclaimer />
+      </View>
     </View>
   );
 }

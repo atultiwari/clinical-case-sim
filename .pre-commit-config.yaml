@@ -42,6 +42,8 @@ repos:
       - id: detect-private-key
       - id: check-json
       - id: check-yaml
+        # Maestro flows are multi-document YAML; Nidana checks them in its own hook below.
+        exclude: ^nidana/apps/player/maestro/
       - id: check-toml
       - id: check-executables-have-shebangs
       - id: check-shebang-scripts-are-executable
@@ -86,6 +88,13 @@ repos:
         language: node
         additional_dependencies: ["prettier@3.9.9"]
         files: ^nidana/.*\.(ts|tsx|js|mjs|cjs|json)$
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-yaml
+        name: "Nidana: Maestro flows (multi-document YAML)"
+        args: [--allow-multiple-documents]
+        files: ^nidana/apps/player/maestro/.*\.ya?ml$
   # --- Sambhasha hooks (added by P0.1) ---
   # Versions match the exact pins in sambhasha/pyproject.toml; ruff and mypy read their
   # settings from there. Tests run in the Sambhasha workflow, not here.
