@@ -129,7 +129,13 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Accept: each seat produces a valid action from a fixture view with `FakeLLM`; a `HumanSeat` receives a view identical to an `LLMSeat`'s.
   - Depends on: P1.1, P1.5.
 
-- [ ] **P1.7 Scheduler**
+- [x] **P1.7 Scheduler**
+  - Done 27 Sep 2026: `engine/scheduler.py`, `engine/config.py`, `configs/pilot.yaml`.
+    - Turns: intake posts the vignette, then Attending turns run through the Gatekeeper (P1.3) and, only outside the catalogue, the Synthetic Findings Service (P1.4). Orders are priced, and results and service reports are recorded at the time they are ready. A referral opens a Consultant session of up to 4 actions, ending in a consult note.
+    - The Challenger speaks on the first commit proposal (and every N turns if configured). The turn and budget limits force a commit; a run with no commit is `aborted`.
+    - Logging: model calls are logged as `llm_call` events. Refusals go only to the seat refused and record protocol violations. Each event's hash chains to the previous one, and order ids on the Chart are short labels ("O1"), so reruns hash identically.
+    - New `wait` action (Attending only, Atul's decision 27 Sep 2026): the clock moves to the next pending result. It is in SPEC §6 and `permissions.yaml`, and the Attending card is at v2.
+    - The pilot's efficient path gives the expected event sequence in memory and on Postgres.
   - Build: the SPEC §10.2 state machine; consultant sessions of up to K actions ending in a ConsultNote; the Challenger before commit (and every N turns if configured); turn, referral and budget limits with a forced commit; `configs/pilot.yaml`.
   - Accept: a scripted `FakeLLM` run of the pilot's efficient path produces the expected sequence of event types; the limits force a commit; the same config gives an identical event hash on rerun.
   - Depends on: P1.3, P1.4, P1.5, P1.6.

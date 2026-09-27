@@ -1,0 +1,17 @@
+# The pilot run (PLAN P1.7, P1.11; SPEC §10.4, D-019). Model choice is in models.yaml.
+bundle: PMC12949993@v1.r3
+
+limits:
+  attending_turns: 30
+  referrals: 4
+  budget_inr: 25000          # per case; the study's figure is an open item (DECISIONS)
+
+consultant_session_actions: 4  # actions per consultation, ending in a consult note
+
+challenger:
+  before_commit: true          # the Challenger speaks when the Attending proposes to commit
+  every_n_turns: 0             # also every N Attending turns; 0 turns this off
+
+# The seats this run offers (D-019). A referral to any other specialty is refused.
+consultants: [gastroenterology, haematology, neurology, clinical_toxicology]
+services: [pathology, radiology]

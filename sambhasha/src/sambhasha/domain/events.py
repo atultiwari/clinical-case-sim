@@ -21,6 +21,7 @@ from sambhasha.domain.actions import (
     Refer,
     Report,
     UpdateDifferential,
+    Wait,
 )
 from sambhasha.domain.base import DomainModel, NonEmptyStr
 from sambhasha.domain.seats import SeatId
@@ -54,6 +55,7 @@ class Answer(DomainModel):
 class Refusal(DomainModel):
     record: Literal["refusal"] = "refusal"
     reason: NonEmptyStr
+    violation: bool = False  # a request for the diagnosis, the article or its source
 
 
 class Result(DomainModel):
@@ -92,6 +94,7 @@ Payload = Annotated[
     | Annotated[UpdateDifferential, Tag("update_differential")]
     | Annotated[Challenge, Tag("challenge")]
     | Annotated[Commit, Tag("commit")]
+    | Annotated[Wait, Tag("wait")]
     | Annotated[Answer, Tag("answer")]
     | Annotated[Refusal, Tag("refusal")]
     | Annotated[Result, Tag("result")]
@@ -100,7 +103,7 @@ Payload = Annotated[
 ]
 
 PAYLOADS_BY_TYPE: Final[dict[str, tuple[type[DomainModel], ...]]] = {
-    "request": (AskHistory, Examine, BedsideTest, Refer),
+    "request": (AskHistory, Examine, BedsideTest, Refer, Wait),
     "order": (OrderTest,),
     "answer": (Answer,),
     "refusal": (Refusal,),

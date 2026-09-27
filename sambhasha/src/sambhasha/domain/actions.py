@@ -67,6 +67,13 @@ class Report(DomainModel):
     suggested_reflex_tests: tuple[NonEmptyStr, ...] = ()
 
 
+class Wait(DomainModel):
+    """Attending only. Let simulated time pass until the next pending result arrives."""
+
+    action: Literal["wait"] = "wait"
+    reason: NonEmptyStr | None = None
+
+
 class DifferentialItem(DomainModel):
     diagnosis: NonEmptyStr
     probability: Annotated[float, Field(ge=0, le=1)]
@@ -107,7 +114,8 @@ Action = Annotated[
     | Report
     | UpdateDifferential
     | Challenge
-    | Commit,
+    | Commit
+    | Wait,
     Field(discriminator="action"),
 ]
 
