@@ -207,6 +207,9 @@ class Challenge(BaseModel):        # Challenger
     critique: str
     alternatives: list[str]
 
+class Wait(BaseModel):             # Attending only: time passes to the next pending result
+    reason: str | None = None
+
 class Commit(BaseModel):           # Attending only
     final_diagnosis: str
     differential: list[DifferentialItem]
@@ -234,6 +237,7 @@ Stored in `configs/permissions.yaml`.
 | Report | no | no | its own orders only | no |
 | UpdateDifferential | yes | no | no | proposes via Challenge |
 | Commit | yes | no | no | no |
+| Wait | yes | no | no | no |
 
 A manoeuvre catalogue in the same file maps examination manoeuvres and bedside tests to the specialties allowed to perform them.
 

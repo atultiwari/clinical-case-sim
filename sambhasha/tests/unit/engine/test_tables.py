@@ -94,3 +94,14 @@ def test_malformed_tables_are_a_clear_error(tmp_path: Path) -> None:
 
     with pytest.raises(TablesError, match="regenerate"):
         load_tables(tmp_path / "p.yaml", tmp_path / "t.yaml")
+
+
+def test_run_config_errors_are_clear(tmp_path: Path) -> None:
+    from sambhasha.engine.config import RunConfigError, load_run_config
+
+    with pytest.raises(RunConfigError, match="not found"):
+        load_run_config(tmp_path / "absent.yaml")
+    bad = tmp_path / "bad.yaml"
+    bad.write_text("bundle: x\n", encoding="utf-8")
+    with pytest.raises(RunConfigError, match="limits"):
+        load_run_config(bad)

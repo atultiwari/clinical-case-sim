@@ -14,6 +14,7 @@ actions:
   update_differential: [attending]
   challenge: [challenger]
   commit: [attending]
+  wait: [attending]
 
 # A Consultant acts only after the Attending Physician refers to their specialty.
 consultants_need_referral: true

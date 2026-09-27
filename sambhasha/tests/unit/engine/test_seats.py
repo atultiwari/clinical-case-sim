@@ -187,6 +187,7 @@ def test_allowed_actions_follow_the_permission_matrix() -> None:
             "order_test",
             "refer",
             "update_differential",
+            "wait",
         ],
         "challenger": ["challenge"],
         "consultant": ["ask_history", "bedside_test", "consult_note", "examine"],
@@ -210,7 +211,7 @@ def test_allowed_actions_follow_the_permission_matrix() -> None:
 def test_every_card_has_a_version_and_names_its_actions(seat: str) -> None:
     card = load_role_card(seat)
 
-    assert card.version == "1"
+    assert card.version == ("2" if seat == "attending" else "1")
     for action in ALLOWED_ACTIONS[role_of(seat)]:
         assert action in card.text, action
 

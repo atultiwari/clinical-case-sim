@@ -23,6 +23,7 @@ from sambhasha.domain.actions import (
     Refer,
     Report,
     UpdateDifferential,
+    Wait,
 )
 from sambhasha.domain.base import DomainModel
 from sambhasha.domain.views import SeatView, ServiceView
@@ -45,6 +46,7 @@ ACTION_CLASSES: Final[Mapping[str, type[DomainModel]]] = {
     "update_differential": UpdateDifferential,
     "challenge": Challenge,
     "commit": Commit,
+    "wait": Wait,
 }
 HUMAN_ATTEMPTS: Final = 3
 

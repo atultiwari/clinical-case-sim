@@ -26,6 +26,7 @@ ACTION_PHRASES: Final = {
     "update_differential": "update the differential",
     "challenge": "challenge",
     "commit": "commit",
+    "wait": "wait for results",
 }
 
 

@@ -18,6 +18,7 @@ from sambhasha.domain.actions import (
     Refer,
     Report,
     UpdateDifferential,
+    Wait,
 )
 from sambhasha.domain.events import Answer, Event, Payload, Refusal, Result
 from sambhasha.domain.seats import is_consultant
@@ -72,6 +73,8 @@ def render(payload: Payload) -> str:
             return critique + (f"\nAlternatives: {'; '.join(alternatives)}" if alternatives else "")
         case Commit(final_diagnosis=diagnosis, treatment_plan=plan):
             return f"Final diagnosis: {diagnosis}\nPlan: {plan}"
+        case Wait(reason=reason):
+            return "Waiting for results." + (f" {reason}" if reason else "")
         case Answer(text=text) | Result(text=text):
             return text
         case Refusal(reason=reason):
