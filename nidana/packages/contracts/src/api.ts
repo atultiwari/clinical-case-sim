@@ -248,3 +248,49 @@ export interface DebriefView {
     readonly attribution: string | null;
   } | null;
 }
+
+export type TrainingLevel =
+  "mbbs_student" | "intern" | "resident" | "consultant" | "other";
+
+export type Role = "player" | "admin";
+
+/** GET /api/me: the signed-in player's profile; 404 `no_profile` until they have agreed (N1.6). */
+export interface Profile {
+  readonly nickname: string;
+  readonly trainingLevel: TrainingLevel;
+  /** Separate, optional consent to research use of playthroughs (SPEC §12); off unless chosen. */
+  readonly consentResearch: boolean;
+  readonly joinedAt: string;
+  readonly role: Role;
+}
+
+/** POST /api/me: creates the profile after the consent screen, or updates it. */
+export interface SaveProfileRequest {
+  readonly nickname: string;
+  readonly trainingLevel: TrainingLevel;
+  readonly consentResearch: boolean;
+  /** The player agreed to take part in development testing on the consent screen. */
+  readonly agreed: true;
+}
+
+/** GET /api/encounters: the signed-in player's own encounters only. */
+export interface EncounterSummary {
+  readonly encounterId: string;
+  readonly caseSlug: string;
+  readonly caseTitle: string;
+  readonly difficulty: Difficulty;
+  readonly status: "active" | "committed";
+  readonly startedAt: string;
+  readonly total: number | null;
+}
+
+/** GET /api/credits: the attribution of every case the player can see (SPEC §12). */
+export interface Credits {
+  readonly statement: string;
+  readonly sources: readonly {
+    readonly citation: string | null;
+    readonly licence: string;
+    readonly attribution: string | null;
+    readonly url: string | null;
+  }[];
+}

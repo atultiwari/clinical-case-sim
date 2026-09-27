@@ -18,7 +18,8 @@ export async function GET(
   return withPlayer(
     request,
     "reads",
-    async ({ game }, playerId) => respond(await getDebrief(game, playerId, id)),
+    async ({ game }, player) =>
+      respond(await getDebrief(game, player.playerId, id)),
     getContext,
   );
 }

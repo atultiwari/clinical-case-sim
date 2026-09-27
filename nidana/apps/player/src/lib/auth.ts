@@ -28,7 +28,14 @@ function supabase(): SupabaseClient {
   return client;
 }
 
-/** The current access token, signing in anonymously the first time. */
+/** Whether this device already has a session; never signs in (the consent screen comes first). */
+export async function hasSession(): Promise<boolean> {
+  if (config.supabaseUrl === "" || config.supabaseKey === "") return false;
+  const { data } = await supabase().auth.getSession();
+  return data.session !== null;
+}
+
+/** The current access token, signing in anonymously the first time (only after consent). */
 export async function accessToken(): Promise<string> {
   const auth = supabase().auth;
   const { data } = await auth.getSession();

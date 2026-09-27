@@ -1,5 +1,5 @@
 import { getContext } from "@/lib/context";
-import { listCases } from "@/lib/game";
+import { credits } from "@/lib/game";
 import { preflight, respond, withPlayer } from "@/lib/http";
 
 export const dynamic = "force-dynamic";
@@ -9,12 +9,12 @@ export function OPTIONS(request: Request): Response {
   return preflight(request);
 }
 
-/** GET /api/cases: the published case cards, newest revision each; no source identifiers. */
+/** GET /api/credits: the attribution of every case the player can see (SPEC §12). */
 export function GET(request: Request): Promise<Response> {
   return withPlayer(
     request,
     "reads",
-    async ({ game }, player) => respond(await listCases(game, player)),
+    async ({ game }, player) => respond(await credits(game, player)),
     getContext,
   );
 }

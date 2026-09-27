@@ -18,10 +18,10 @@ export async function POST(
   return withPlayer(
     request,
     "actions",
-    async ({ game }, playerId) => {
+    async ({ game }, player) => {
       const body = await readJsonBody(request);
       return body.ok
-        ? respond(await commit(game, playerId, id, body.body))
+        ? respond(await commit(game, player.playerId, id, body.body))
         : body.response;
     },
     getContext,

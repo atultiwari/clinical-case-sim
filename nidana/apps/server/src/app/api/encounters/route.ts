@@ -1,5 +1,5 @@
 import { getContext } from "@/lib/context";
-import { startEncounter } from "@/lib/game";
+import { listMyEncounters, startEncounter } from "@/lib/game";
 import { preflight, readJsonBody, respond, withPlayer } from "@/lib/http";
 
 export const dynamic = "force-dynamic";
@@ -14,12 +14,22 @@ export function POST(request: Request): Promise<Response> {
   return withPlayer(
     request,
     "starts",
-    async ({ game }, playerId) => {
+    async ({ game }, player) => {
       const body = await readJsonBody(request);
       return body.ok
-        ? respond(await startEncounter(game, playerId, body.body))
+        ? respond(await startEncounter(game, player, body.body))
         : body.response;
     },
+    getContext,
+  );
+}
+
+/** GET /api/encounters: the signed-in player's own encounters, newest first. */
+export function GET(request: Request): Promise<Response> {
+  return withPlayer(
+    request,
+    "reads",
+    async ({ game }, player) => respond(await listMyEncounters(game, player)),
     getContext,
   );
 }

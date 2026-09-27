@@ -1,3 +1,4 @@
+import type { TrainingLevel } from "@nidana/contracts";
 import type { Action, Difficulty, Score } from "@nidana/engine";
 
 /** Play data (SPEC §8.2). The action log is append-only (invariant I5); state is never stored. */
@@ -23,6 +24,20 @@ export interface ScoreRecord {
   readonly engineVersion: string;
 }
 
+/** A player's profile. The row exists only once they have agreed on the consent screen (N1.6). */
+export interface PlayerRecord {
+  readonly id: string;
+  readonly nickname: string;
+  readonly trainingLevel: TrainingLevel;
+  readonly consentResearch: boolean;
+  readonly joinedAt: Date;
+}
+
+export interface EncounterWithScore {
+  readonly record: EncounterRecord;
+  readonly total: number | null;
+}
+
 export interface MissingRequest {
   readonly bundleId: string;
   readonly kind: string;
@@ -30,8 +45,11 @@ export interface MissingRequest {
 }
 
 export interface EncounterStore {
-  /** Creates the minimal player row the encounter refers to, if it does not exist. */
-  ensurePlayer(playerId: string): Promise<void>;
+  getPlayer(playerId: string): Promise<PlayerRecord | null>;
+  /** Creates the profile on consent, or updates nickname, training level and research consent. */
+  savePlayer(player: PlayerRecord): Promise<PlayerRecord>;
+  /** The player's own encounters, newest first. */
+  listEncounters(playerId: string): Promise<readonly EncounterWithScore[]>;
   create(record: EncounterRecord): Promise<void>;
   get(id: string): Promise<EncounterRecord | null>;
   /** The action log, in order. */
@@ -55,7 +73,7 @@ export interface EncounterStore {
 export function memoryStore(): EncounterStore & {
   readonly missing: readonly MissingRequest[];
 } {
-  const players = new Set<string>();
+  const players = new Map<string, PlayerRecord>();
   const encounters = new Map<string, EncounterRecord>();
   const logs = new Map<string, Action[]>();
   const scores = new Map<string, ScoreRecord>();
@@ -70,9 +88,23 @@ export function memoryStore(): EncounterStore & {
 
   return {
     missing,
-    ensurePlayer: async (playerId) => {
-      players.add(playerId);
+    getPlayer: async (playerId) => players.get(playerId) ?? null,
+    savePlayer: async (player) => {
+      const saved = {
+        ...player,
+        joinedAt: players.get(player.id)?.joinedAt ?? player.joinedAt,
+      };
+      players.set(player.id, saved);
+      return saved;
     },
+    listEncounters: async (playerId) =>
+      [...encounters.values()]
+        .filter((e) => e.playerId === playerId)
+        .sort((a, b) => b.startedAt.getTime() - a.startedAt.getTime())
+        .map((record) => ({
+          record,
+          total: scores.get(record.id)?.total ?? null,
+        })),
     create: async (record) => {
       if (!players.has(record.playerId))
         throw new Error(`unknown player ${record.playerId}`);

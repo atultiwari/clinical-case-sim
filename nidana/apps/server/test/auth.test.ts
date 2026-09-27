@@ -11,6 +11,7 @@ describe("createVerifier", () => {
   it("accepts a signed-in player's token", async () => {
     expect(await verifier.verify(await tokenFor(PLAYER))).toEqual({
       playerId: PLAYER,
+      role: "player",
     });
   });
 
@@ -36,6 +37,27 @@ describe("createVerifier", () => {
     ],
   ])("refuses %s", async (_label, make) => {
     expect(await verifier.verify(await make())).toBeNull();
+  });
+
+  it("reads the admin role from app_metadata, which only the project owner can set", async () => {
+    const { SignJWT } = await import("jose");
+    const sign = (claims: Record<string, unknown>) =>
+      new SignJWT(claims)
+        .setProtectedHeader({ alg: "HS256" })
+        .setSubject(PLAYER)
+        .setAudience("authenticated")
+        .setIssuer(ISSUER)
+        .setExpirationTime("1h")
+        .sign(new TextEncoder().encode(SECRET));
+    expect(
+      (await verifier.verify(await sign({ app_metadata: { role: "admin" } })))
+        ?.role,
+    ).toBe("admin");
+    // user_metadata is writable by the user, so it never grants a role.
+    expect(
+      (await verifier.verify(await sign({ user_metadata: { role: "admin" } })))
+        ?.role,
+    ).toBe("player");
   });
 
   it("needs a secret or a JWKS URL", () => {

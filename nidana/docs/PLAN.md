@@ -63,7 +63,8 @@ Rough effort: Phase 1 three to four weeks (two apps: player and server), Phase 2
   - Accept: a Playwright test completes the benchmark path on the web build; a Maestro test does the same on an Android development build; screenshots at phone, tablet and desktop sizes go to Atul.
   - Depends on: N1.4.
 
-- [ ] **N1.6 Accounts and credits**
+- [x] **N1.6 Accounts and credits**
+  - Done 2026-09-27: a consent screen before any sign-in (no network call until the player agrees), then anonymous Supabase sign-in and a profile (nickname, training level, optional research consent, withdrawable); `GET`/`POST /api/me`, `GET /api/encounters` (the player's own only), `GET /api/credits`; starting a case needs a profile; roles from `app_metadata.role` (admins also see ND cases); a credits page with the list of sources behind a spoiler warning; "My encounters" on the home screen. Invite codes were not needed: anonymous sign-in joins without a name or email. Tests: server (accounts, roles, credits, Postgres), Playwright (the benchmark path through consent, "My encounters", credits; no request before consent) and Maestro (consent on Android). Open: proposed migration `supabase/proposed/20260927090000_play_player_update.sql` (update on the three profile columns) for a Case Library session to apply; until then, profile edits fail on the development database, while joining and playing work.
   - Build: Supabase Auth in the app with pseudonymous accounts (anonymous sign-in, or an invite code and a nickname), a consent screen, `admin` and `player` roles, a minimal profile (nickname, training level) and a credits page with every case's attribution.
   - Accept: a tester can join without a real name or email, play, and see only their own encounters.
   - Depends on: N1.4.

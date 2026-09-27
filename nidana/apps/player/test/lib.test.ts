@@ -266,3 +266,14 @@ describe("commit helpers", () => {
     expect(movePlanItem(["a", "b"], 5, 1)).toEqual(["a", "b"]);
   });
 });
+
+describe("nicknameProblem", () => {
+  it("accepts a short nickname and refuses emails, symbols and odd lengths", async () => {
+    const { nicknameProblem } = await import("../src/lib/account-rules");
+    expect(nicknameProblem("Night owl")).toBeNull();
+    expect(nicknameProblem("Ānanya_2")).toBeNull();
+    expect(nicknameProblem("a")).toMatch(/2 to 24/);
+    expect(nicknameProblem("x".repeat(25))).toMatch(/2 to 24/);
+    expect(nicknameProblem("me@example.org")).toMatch(/letters/);
+  });
+});
