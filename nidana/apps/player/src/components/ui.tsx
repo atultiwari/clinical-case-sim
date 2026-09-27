@@ -85,6 +85,8 @@ export function Muted({ children }: { readonly children: ReactNode }) {
 
 interface ButtonProps {
   readonly label: string;
+  /** What a screen reader says, when the visible label is a symbol such as "↑". */
+  readonly accessibilityLabel?: string;
   readonly onPress: () => void;
   readonly testID?: string;
   readonly variant?: "primary" | "secondary" | "danger";
@@ -93,6 +95,7 @@ interface ButtonProps {
 
 export function Button({
   label,
+  accessibilityLabel,
   onPress,
   testID,
   variant = "primary",
@@ -109,10 +112,11 @@ export function Button({
     <Pressable
       testID={testID}
       accessibilityRole="button"
-      accessibilityLabel={label}
+      accessibilityLabel={accessibilityLabel ?? label}
+      accessibilityState={{ disabled }}
       disabled={disabled}
       onPress={onPress}
-      className={`rounded-lg px-4 py-2.5 items-center ${tone} ${disabled ? "opacity-40" : ""}`}
+      className={`min-h-11 min-w-11 justify-center rounded-lg px-4 py-2.5 items-center ${tone} ${disabled ? "opacity-40" : ""}`}
     >
       <Text className={`font-medium ${text}`}>{label}</Text>
     </Pressable>

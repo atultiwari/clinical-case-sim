@@ -1,6 +1,6 @@
-import type { CaseCard, Difficulty } from "@nidana/contracts/api";
+import type { Difficulty } from "@nidana/contracts/api";
 import { router, useLocalSearchParams } from "expo-router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Text, View } from "react-native";
 import {
   Button,
@@ -13,6 +13,7 @@ import {
   Tabs,
 } from "@/components/ui";
 import { useApi } from "@/lib/game";
+import { useLoad } from "@/lib/use-load";
 
 const DIFFICULTY: Record<Difficulty, string> = {
   guided:
@@ -26,18 +27,16 @@ const DIFFICULTY: Record<Difficulty, string> = {
 export default function CaseScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
   const api = useApi();
-  const [card, setCard] = useState<CaseCard | null>(null);
+  const { data: cases, error: loadError } = useLoad(
+    () => api.cases(),
+    [api],
+    "Could not load the case",
+  );
+  const card = cases?.find((c) => c.slug === slug) ?? null;
   const [difficulty, setDifficulty] = useState<Difficulty>("standard");
-  const [error, setError] = useState<string | null>(null);
+  const [startError, setError] = useState<string | null>(null);
   const [starting, setStarting] = useState(false);
-
-  useEffect(() => {
-    api.cases().then(
-      (list) => setCard(list.find((c) => c.slug === slug) ?? null),
-      (e: unknown) =>
-        setError(e instanceof Error ? e.message : "Could not load the case"),
-    );
-  }, [api, slug]);
+  const error = startError ?? loadError;
 
   const start = async () => {
     setStarting(true);
@@ -51,7 +50,7 @@ export default function CaseScreen() {
     }
   };
 
-  if (card === null && error === null) return <Loading />;
+  if (cases === null && error === null) return <Loading />;
   return (
     <Screen>
       <ErrorNote message={error} />

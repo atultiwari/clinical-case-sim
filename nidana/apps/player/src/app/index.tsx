@@ -1,23 +1,17 @@
-import type { CaseCard } from "@nidana/contracts/api";
 import { Link } from "expo-router";
-import { useEffect, useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import { ErrorNote, Heading, Loading, Muted, Screen } from "@/components/ui";
 import { useApi } from "@/lib/game";
+import { useLoad } from "@/lib/use-load";
 
 /** Home (SPEC §5.3): the published cases, with neutral titles only (§5.14). */
 export default function Home() {
   const api = useApi();
-  const [cases, setCases] = useState<CaseCard[] | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    api
-      .cases()
-      .then(setCases, (e: unknown) =>
-        setError(e instanceof Error ? e.message : "Could not load the cases"),
-      );
-  }, [api]);
+  const { data: cases, error } = useLoad(
+    () => api.cases(),
+    [api],
+    "Could not load the cases",
+  );
 
   return (
     <Screen>

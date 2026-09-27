@@ -1,7 +1,6 @@
-import type { DebriefView, ReportContent } from "@nidana/contracts/api";
+import type { ReportContent } from "@nidana/contracts/api";
 import { useLocalSearchParams, Link } from "expo-router";
 import * as WebBrowser from "expo-web-browser";
-import { useEffect, useState } from "react";
 import { Text, View } from "react-native";
 import {
   Button,
@@ -15,6 +14,7 @@ import {
 } from "@/components/ui";
 import { formatClock, formatInr } from "@/lib/format";
 import { useApi } from "@/lib/game";
+import { useLoad } from "@/lib/use-load";
 
 /** The debrief (SPEC §5.13): score, harm, paths, what was synthetic, both report versions, and the source. */
 
@@ -75,16 +75,11 @@ function Report({
 export default function Debrief() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const api = useApi();
-  const [debrief, setDebrief] = useState<DebriefView | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    api
-      .debrief(id)
-      .then(setDebrief, (e: unknown) =>
-        setError(e instanceof Error ? e.message : "Could not load the debrief"),
-      );
-  }, [api, id]);
+  const { data: debrief, error } = useLoad(
+    () => api.debrief(id),
+    [api, id],
+    "Could not load the debrief",
+  );
 
   if (debrief === null)
     return error ? <ErrorNote message={error} /> : <Loading label="Scoring…" />;
@@ -229,7 +224,7 @@ export default function Debrief() {
               ? `. ${debrief.source.attribution}`
               : ""}
           </Muted>
-          {debrief.source.url ? (
+          {debrief.source.url && /^https?:\/\//i.test(debrief.source.url) ? (
             <Button
               label="Read the article"
               variant="secondary"

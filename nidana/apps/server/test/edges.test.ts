@@ -156,6 +156,36 @@ describe("readJsonBody", () => {
   });
 });
 
+describe("readBodyLimited", () => {
+  it("stops reading a body without a length header once it passes the limit", async () => {
+    const { readBodyLimited } = await import("@/lib/http");
+    let pulled = 0;
+    const endless = new ReadableStream<Uint8Array>({
+      pull(controller) {
+        pulled += 1;
+        controller.enqueue(new Uint8Array(1024).fill(65));
+      },
+    });
+    const request = new Request("http://x/api", {
+      method: "POST",
+      body: endless,
+      duplex: "half",
+    } as RequestInit);
+    expect(await readBodyLimited(request, 4096)).toBeNull();
+    expect(pulled).toBeLessThan(10);
+  });
+
+  it("reads a small body, multi-byte characters included", async () => {
+    const { readBodyLimited } = await import("@/lib/http");
+    const request = new Request("http://x/api", {
+      method: "POST",
+      body: '{"q":"₹ anaemia"}',
+    });
+    expect(await readBodyLimited(request)).toBe('{"q":"₹ anaemia"}');
+    expect(await readBodyLimited(new Request("http://x/api"))).toBe("");
+  });
+});
+
 describe("createRateLimiter", () => {
   it("forgets old windows when many keys pile up", () => {
     let now = 0;

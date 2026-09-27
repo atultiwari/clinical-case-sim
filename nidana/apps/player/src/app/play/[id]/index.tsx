@@ -45,16 +45,24 @@ export default function Workspace() {
   const [tab, setTab] = useState<"chart" | "actions">("actions");
 
   useEffect(() => {
+    // A reply that arrives after the player has left (or opened another encounter) is ignored.
+    let live = true;
     api.view(id).then(
       (v) => {
+        if (!live) return;
         if (v.status === "committed") router.replace(`/play/${id}/debrief`);
         else setView(v);
       },
-      (e: unknown) =>
-        setError(
-          e instanceof Error ? e.message : "Could not load the encounter",
-        ),
+      (e: unknown) => {
+        if (live)
+          setError(
+            e instanceof Error ? e.message : "Could not load the encounter",
+          );
+      },
     );
+    return () => {
+      live = false;
+    };
   }, [api, id]);
 
   const act = useCallback(

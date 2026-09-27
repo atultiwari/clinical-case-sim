@@ -43,7 +43,7 @@ function SelectBox({
       accessibilityRole="checkbox"
       accessibilityState={{ checked: on }}
       accessibilityLabel={`Cite ${label}`}
-      hitSlop={8}
+      hitSlop={12}
       onPress={() => selection.onToggle(entryRef)}
       className={`mt-0.5 h-5 w-5 items-center justify-center rounded border ${on ? "border-brand bg-brand" : "border-line bg-white"}`}
     >

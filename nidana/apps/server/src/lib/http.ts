@@ -85,20 +85,51 @@ export function respond<T>(outcome: Outcome<T>): Response {
 const failure = (status: number, code: string, message: string): Response =>
   respond({ ok: false, error: { status, code, message } });
 
-/** Bytes (as characters) a request body may hold. */
+/** Bytes a request body may hold. */
 const MAX_BODY = 20_000;
+
+/**
+ * Reads the body as UTF-8 text, stopping as soon as it passes `limit` bytes, whatever the
+ * headers claim, so an oversized or unbounded body is never buffered in full. Null if too large.
+ */
+export async function readBodyLimited(
+  request: Request,
+  limit: number = MAX_BODY,
+): Promise<string | null> {
+  if (Number(request.headers.get("content-length") ?? 0) > limit) return null;
+  if (request.body === null) return "";
+  const reader = request.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let size = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    size += value.byteLength;
+    if (size > limit) {
+      await reader.cancel();
+      return null;
+    }
+    chunks.push(value);
+  }
+  const bytes = new Uint8Array(size);
+  let offset = 0;
+  for (const chunk of chunks) {
+    bytes.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  return new TextDecoder().decode(bytes);
+}
 
 export async function readJsonBody(
   request: Request,
 ): Promise<{ ok: true; body: unknown } | { ok: false; response: Response }> {
-  // Refuse by the declared size first, so an oversized body is never read into memory.
-  const declared = Number(request.headers.get("content-length") ?? 0);
-  const text = declared > MAX_BODY ? "" : await request.text();
-  if (declared > MAX_BODY || text.length > MAX_BODY)
+  const text = await readBodyLimited(request);
+  if (text === null) {
     return {
       ok: false,
       response: failure(413, "too_large", "The request is too large"),
     };
+  }
   try {
     return {
       ok: true,

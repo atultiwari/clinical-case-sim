@@ -1,6 +1,6 @@
-import type { PlayerView, SearchItem } from "@nidana/contracts/api";
+import type { SearchItem } from "@nidana/contracts/api";
 import { router, useLocalSearchParams } from "expo-router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Pressable, Text, TextInput, View } from "react-native";
 import { ChartView } from "@/components/chart";
 import {
@@ -18,6 +18,7 @@ import {
   toggleEvidence,
 } from "@/lib/commit";
 import { nameOf, useApi, useCatalogue } from "@/lib/game";
+import { useLoad } from "@/lib/use-load";
 import { searchItems, type SearchKind } from "@/lib/search";
 
 /** The commit (SPEC §5.12): diagnosis, up to five items of key evidence, and a plan in order. */
@@ -75,23 +76,18 @@ export default function Commit() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const api = useApi();
   const { items } = useCatalogue();
-  const [view, setView] = useState<PlayerView | null>(null);
+  const { data: view, error: loadError } = useLoad(
+    () => api.view(id),
+    [api, id],
+    "Could not load the encounter",
+  );
   const [dx, setDx] = useState<string | null>(null);
   const [evidence, setEvidence] = useState<readonly string[]>([]);
   const [plan, setPlan] = useState<readonly string[]>([]);
   const [note, setNote] = useState("");
-  const [error, setError] = useState<string | null>(null);
+  const [sendError, setError] = useState<string | null>(null);
   const [sending, setSending] = useState(false);
-
-  useEffect(() => {
-    api
-      .view(id)
-      .then(setView, (e: unknown) =>
-        setError(
-          e instanceof Error ? e.message : "Could not load the encounter",
-        ),
-      );
-  }, [api, id]);
+  const error = sendError ?? loadError;
 
   if (view === null || items === null)
     return error ? <ErrorNote message={error} /> : <Loading />;
@@ -161,16 +157,19 @@ export default function Commit() {
             </Text>
             <Button
               label="↑"
+              accessibilityLabel={`Move ${nameOf(items, itemId)} up`}
               variant="secondary"
               onPress={() => setPlan(movePlanItem(plan, index, -1))}
             />
             <Button
               label="↓"
+              accessibilityLabel={`Move ${nameOf(items, itemId)} down`}
               variant="secondary"
               onPress={() => setPlan(movePlanItem(plan, index, 1))}
             />
             <Button
               label="✕"
+              accessibilityLabel={`Remove ${nameOf(items, itemId)}`}
               variant="secondary"
               onPress={() => setPlan(plan.filter((p) => p !== itemId))}
             />
