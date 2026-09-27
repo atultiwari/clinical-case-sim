@@ -11,6 +11,16 @@ from sambhasha.domain.base import DomainModel, NonEmptyStr
 CORRECT_DX_SCORE = 4  # SDBench-style: 4 or more counts as correct (D-014)
 
 
+class ScoringMapping(DomainModel):
+    """How the run's free text was mapped to catalogue ids before scoring (D-022)."""
+
+    diagnosis: str | None
+    differential: tuple[str | None, ...] = ()
+    plan: tuple[str, ...] = ()
+    referrals: tuple[str, ...] = ()
+    report_findings: dict[str, tuple[str, ...]] = Field(default_factory=dict)  # label -> FND ids
+
+
 class Score(DomainModel):
     id: UUID
     run_id: UUID
@@ -31,6 +41,7 @@ class Score(DomainModel):
     synthetic_dependence: Annotated[float, Field(ge=0, le=1)] | None = None
     used_fallback: bool = False  # the run used the out-of-catalogue service (D-023)
     notes: str | None = None
+    mapping: ScoringMapping | None = None
 
     @property
     def dx_correct(self) -> bool:

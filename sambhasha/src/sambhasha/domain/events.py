@@ -50,6 +50,7 @@ class Answer(DomainModel):
     text: NonEmptyStr
     fact_ids: tuple[str, ...] = ()
     ledger_ids: tuple[str, ...] = ()
+    item_id: str | None = None  # the catalogue item the request was coded to
 
 
 class Refusal(DomainModel):
@@ -66,6 +67,7 @@ class Result(DomainModel):
     text: NonEmptyStr
     fact_ids: tuple[str, ...] = ()
     ledger_ids: tuple[str, ...] = ()
+    item_id: str | None = None  # the test ordered
 
 
 class LlmCall(DomainModel):

@@ -123,4 +123,4 @@ Acknowledgements:
 Acknowledgements:
 
 - [x] Nidana: designed against schema 0.3 (`nidana/docs/SPEC.md`).
-- [ ] Sambhasha: move the domain models and the importer from schema 0.2 to 0.3 (Sambhasha PLAN P0.2 and P0.6); map Gatekeeper requests, and before scoring the Commit and each service report, to catalogue ids (D-022, P1.2 and P1.8). Progress 2026-09-26: models (P0.2) and importer (P0.6) are on schema 0.3; the catalogue mapping (P1.2, P1.8) remains.
+- [x] Sambhasha: models (P0.2) and importer (P0.6) on schema 0.3; the Gatekeeper maps requests to catalogue ids (P1.2, P1.3); the Evaluator maps the Commit and each service report to catalogue ids before scoring (P1.8). Ticked 2026-09-27, P1.8.
