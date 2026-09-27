@@ -161,6 +161,11 @@ These tasks were in Nidana's plan (version 0.1) before the umbrella was created.
   - Depends on: Nidana N1.4 (the proposal and its tests).
   - Note (2026-09-27): applied through the connector as `20260926183432_nidana_play_schema` (the local file renamed to match; the local stack's record repaired). Checked on the development project: `anon` and `authenticated` have no usage on `play` or `casevault`; `nidana_server` reads the bundle columns only (17 published bundles visible) and cannot update or delete `play.action`; RLS on all 5 `play` tables; the Case Vault's policies are the three earlier roles' plus `nidana_server`'s select. Next for Atul: create a login role that is a member of `nidana_server` (password outside Git and chat) and give its URL to the game server.
 
+- [ ] **L1.10 Nidana: profile updates** (2026-09-27, on Atul's instruction from a Nidana session)
+  - Build: take Nidana's proposed migration (`nidana/supabase/proposed/20260927090000_play_player_update.sql`, Nidana PLAN N1.6) into the history as `supabase/migrations/…_nidana_play_player_update.sql`: `nidana_server` may update `play.player`'s nickname, training level and research consent, never the id or the time the player agreed. It touches only the `play` schema.
+  - Accept: applied locally and to the development project; the grant covers exactly those three columns; the Case Library's tests pass.
+  - Depends on: L1.9.
+
 ---
 
 ## Phase 2: release support
