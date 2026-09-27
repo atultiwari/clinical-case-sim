@@ -20,8 +20,8 @@ The web build needs the server to allow its origin: set `NIDANA_ALLOWED_ORIGINS=
 
 ## Tests
 
-| Command | What it runs |
-| --- | --- |
-| `pnpm --filter @nidana/player test` | Vitest: the app's logic (Chart grouping, units, search, commit rules, the API client) |
-| `pnpm --filter @nidana/player e2e` | Playwright: the pilot's benchmark path on the web build, with its own game server; screenshots in `test-results/screenshots/` |
-| `maestro test maestro/benchmark.yaml` | Maestro: the same path on Android; needs the game server on the Mac and anonymous sign-in on the Supabase project |
+| Command                               | What it runs                                                                                                                  |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `pnpm --filter @nidana/player test`   | Vitest: the app's logic (Chart grouping, units, search, commit rules, the API client)                                         |
+| `pnpm --filter @nidana/player e2e`    | Playwright: the pilot's benchmark path on the web build, with its own game server; screenshots in `test-results/screenshots/` |
+| `maestro test maestro/benchmark.yaml` | Maestro: the same path on Android; needs the game server on the Mac and anonymous sign-in on the Supabase project             |
