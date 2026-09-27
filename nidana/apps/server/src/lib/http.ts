@@ -1,6 +1,6 @@
 import type { ServerContext } from "./context";
 import type { Outcome } from "./game";
-import { bearerToken } from "./auth";
+import { bearerToken, type Player } from "./auth";
 import type { RateLimiter } from "./rate-limit";
 
 /**
@@ -153,7 +153,7 @@ type Limit = keyof ServerContext["limits"];
 export async function withPlayer(
   request: Request,
   limit: Limit,
-  handler: (context: ServerContext, playerId: string) => Promise<Response>,
+  handler: (context: ServerContext, player: Player) => Promise<Response>,
   getContext: () => Promise<ServerContext>,
 ): Promise<Response> {
   return withCors(request, await signedIn(request, limit, handler, getContext));
@@ -162,7 +162,7 @@ export async function withPlayer(
 async function signedIn(
   request: Request,
   limit: Limit,
-  handler: (context: ServerContext, playerId: string) => Promise<Response>,
+  handler: (context: ServerContext, player: Player) => Promise<Response>,
   getContext: () => Promise<ServerContext>,
 ): Promise<Response> {
   try {
@@ -178,7 +178,7 @@ async function signedIn(
         "Too many requests; wait a moment and try again",
       );
     }
-    return await handler(context, player.playerId);
+    return await handler(context, player);
   } catch (error: unknown) {
     // Name and message only: a wrapped database error could carry parameter values.
     const detail =

@@ -2,6 +2,7 @@ import fc from "fast-check";
 import { describe, expect, it } from "vitest";
 import type { Action } from "@nidana/engine";
 import {
+  saveMe,
   act,
   commit,
   getDebrief,
@@ -24,6 +25,13 @@ import {
 
 const PLAYER = "11111111-1111-4111-8111-111111111111";
 const OTHER = "22222222-2222-4222-8222-222222222222";
+const ME = { playerId: PLAYER, role: "player" as const };
+const PROFILE = {
+  nickname: "Tester",
+  trainingLevel: "resident",
+  consentResearch: false,
+  agreed: true,
+};
 
 async function pilotSlug(): Promise<string> {
   return (await pilot()).bundle.case.slug ?? "";
@@ -43,8 +51,9 @@ async function start(
   game: GameDeps,
   difficulty = "standard",
 ): Promise<PlayerView> {
+  await saveMe(game, ME, PROFILE);
   return unwrap(
-    await startEncounter(game, PLAYER, { slug: await pilotSlug(), difficulty }),
+    await startEncounter(game, ME, { slug: await pilotSlug(), difficulty }),
   );
 }
 
@@ -73,7 +82,7 @@ describe("leak tests (SPEC §6.4)", () => {
     const started = await start(game);
     const responses = [
       started,
-      unwrap(await listCases(game)),
+      unwrap(await listCases(game, ME)),
       ...(await playAll(game, started.encounterId, benchmarkActions())),
       unwrap(await getView(game, PLAYER, started.encounterId)),
     ];
@@ -158,13 +167,13 @@ describe("encounters", () => {
     const game = deps();
     expect(
       (
-        await startEncounter(game, PLAYER, {
+        await startEncounter(game, ME, {
           slug: "c-zzzzz",
           difficulty: "standard",
         })
       ).ok,
     ).toBe(false);
-    const bad = await startEncounter(game, PLAYER, {
+    const bad = await startEncounter(game, ME, {
       slug: await pilotSlug(),
       difficulty: "easy",
     });

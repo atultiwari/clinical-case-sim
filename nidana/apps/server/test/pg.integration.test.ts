@@ -16,6 +16,11 @@ const MIGRATION = readFileSync(
   `${NIDANA_DIR}supabase/proposed/20260926190000_play_schema.sql`,
   "utf8",
 );
+/** Proposed after the play schema was applied (N1.6); safe to run again. */
+const PLAYER_UPDATE = readFileSync(
+  `${NIDANA_DIR}supabase/proposed/20260927090000_play_player_update.sql`,
+  "utf8",
+);
 const PLAYER = "44444444-4444-4444-8444-444444444444";
 
 class Rollback extends Error {}
@@ -37,7 +42,11 @@ async function inRolledBackTransaction(
 }
 
 async function seed(tx: postgres.TransactionSql): Promise<void> {
-  await tx.unsafe(MIGRATION);
+  // The play schema may already be applied (the Case Library's local stack has it since L1.9).
+  const [applied] =
+    await tx`select exists (select 1 from pg_namespace where nspname = 'play') as present`;
+  if (applied?.present !== true) await tx.unsafe(MIGRATION);
+  await tx.unsafe(PLAYER_UPDATE);
   const body = JSON.parse(
     readFileSync(`${EXPORTS_DIR}${PILOT}.json`, "utf8"),
   ) as postgres.JSONValue;
@@ -77,8 +86,26 @@ describe.skipIf(url === undefined)(
         await tx`set local role nidana_server`;
         const store = pgStore(tx);
         const id = "55555555-5555-4555-8555-555555555555";
-        await store.ensurePlayer(PLAYER);
-        await store.ensurePlayer(PLAYER);
+        const joined = await store.savePlayer({
+          id: PLAYER,
+          nickname: "Tester",
+          trainingLevel: "resident",
+          consentResearch: true,
+          joinedAt: new Date(),
+        });
+        const updated = await store.savePlayer({
+          ...joined,
+          nickname: "Renamed",
+          consentResearch: false,
+        });
+        expect(updated).toMatchObject({
+          nickname: "Renamed",
+          consentResearch: false,
+          joinedAt: joined.joinedAt,
+        });
+        expect(await store.getPlayer(PLAYER)).toMatchObject({
+          nickname: "Renamed",
+        });
         await store.create({
           id,
           playerId: PLAYER,
@@ -105,6 +132,7 @@ describe.skipIf(url === undefined)(
           scoringVersion: "v",
           engineVersion: "0.1.0",
         };
+
         expect(await store.commit(id, 1, commit, score, new Date())).toBe(true);
         expect(await store.commit(id, 2, commit, score, new Date())).toBe(
           false,
@@ -114,6 +142,15 @@ describe.skipIf(url === undefined)(
           dxScore: 4,
           total: 61.5,
         });
+        expect(await store.listEncounters(PLAYER)).toEqual([
+          expect.objectContaining({
+            total: 61.5,
+            record: expect.objectContaining({ id, status: "committed" }),
+          }),
+        ]);
+        expect(
+          await store.listEncounters("99999999-9999-4999-8999-999999999999"),
+        ).toEqual([]);
         await store.logMissing({
           bundleId: PILOT,
           kind: "test",

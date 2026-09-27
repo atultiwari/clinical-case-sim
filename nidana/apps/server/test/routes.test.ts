@@ -91,6 +91,29 @@ describe("the API over HTTP", () => {
       (search.body.data ?? []).find((i) => i.id === "LAB.HAEM.CBC"),
     ).toMatchObject({ priceInr: 300 });
 
+    const me = await import("@/app/api/me/route");
+    expect((await json(await me.GET(req("GET")))).body.error?.code).toBe(
+      "no_profile",
+    );
+    expect(
+      (
+        await json(
+          await start.POST(req("POST", { slug, difficulty: "standard" })),
+        )
+      ).status,
+    ).toBe(403);
+    const joined = await json<{ nickname: string }>(
+      await me.POST(
+        req("POST", {
+          nickname: "Route tester",
+          trainingLevel: "intern",
+          consentResearch: false,
+          agreed: true,
+        }),
+      ),
+    );
+    expect(joined.body.data?.nickname).toBe("Route tester");
+
     const started = await json<PlayerView>(
       await start.POST(req("POST", { slug, difficulty: "standard" })),
     );

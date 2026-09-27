@@ -13,11 +13,23 @@ import {
   type ScoringSettings,
 } from "@nidana/engine";
 import { z } from "zod";
-import type { DebriefView } from "@nidana/contracts";
+import type {
+  Credits,
+  DebriefView,
+  EncounterSummary,
+  Profile,
+  TrainingLevel,
+} from "@nidana/contracts";
+import type { Player } from "./auth";
 import { BundleRefusedError } from "./bundles";
 import { buildDebriefView } from "./debrief-view";
-import type { BundleRegistry, CaseCard } from "./registry";
-import type { EncounterRecord, EncounterStore } from "./store";
+import {
+  cardOf,
+  visibleTo,
+  type BundleRegistry,
+  type CaseCard,
+} from "./registry";
+import type { EncounterRecord, EncounterStore, PlayerRecord } from "./store";
 import { buildPlayerView, sourceOfRef, type PlayerView } from "./view";
 
 /**
@@ -99,8 +111,9 @@ async function loadEncounter(
 
 export async function listCases(
   deps: GameDeps,
+  player: Player,
 ): Promise<Outcome<readonly CaseCard[]>> {
-  return ok(await deps.registry.cases());
+  return ok(await deps.registry.cases(player.role));
 }
 
 const StartRequest = z.strictObject({
@@ -110,13 +123,22 @@ const StartRequest = z.strictObject({
 
 export async function startEncounter(
   deps: GameDeps,
-  playerId: string,
+  player: Player,
   body: unknown,
 ): Promise<Outcome<PlayerView>> {
   const parsed = StartRequest.safeParse(body);
   if (!parsed.success) return invalid(parsed.error);
+  if ((await deps.store.getPlayer(player.playerId)) === null) {
+    return fail(
+      403,
+      "consent_required",
+      "Agree to the consent screen before playing",
+    );
+  }
   const prepared = (await deps.registry.newestBySlug()).get(parsed.data.slug);
-  if (prepared === undefined) return fail(404, "not_found", "No such case");
+  if (prepared === undefined || !visibleTo(prepared, player.role))
+    return fail(404, "not_found", "No such case");
+  const playerId = player.playerId;
   const record: EncounterRecord = {
     id: deps.newId(),
     playerId,
@@ -126,7 +148,6 @@ export async function startEncounter(
     startedAt: deps.now(),
     endedAt: null,
   };
-  await deps.store.ensurePlayer(playerId);
   await deps.store.create(record);
   return ok(
     buildPlayerView(
@@ -289,4 +310,116 @@ export async function logMissing(
     query: parsed.data.query,
   });
   return ok({ logged: true });
+}
+
+const TRAINING_LEVELS = [
+  "mbbs_student",
+  "intern",
+  "resident",
+  "consultant",
+  "other",
+] as const satisfies readonly TrainingLevel[];
+
+const SaveProfileBody = z.strictObject({
+  // A nickname, not a name: letters, digits, spaces and . _ ' - only, and never an email address.
+  nickname: z
+    .string()
+    .trim()
+    .min(2)
+    .max(24)
+    .regex(
+      /^[\p{L}\p{N} ._'-]+$/u,
+      "Use letters, digits, spaces and . _ ' - only",
+    ),
+  trainingLevel: z.enum(TRAINING_LEVELS),
+  consentResearch: z.boolean(),
+  agreed: z.literal(true),
+});
+
+function profileOf(record: PlayerRecord, player: Player): Profile {
+  return {
+    nickname: record.nickname,
+    trainingLevel: record.trainingLevel,
+    consentResearch: record.consentResearch,
+    joinedAt: record.joinedAt.toISOString(),
+    role: player.role,
+  };
+}
+
+/** The signed-in player's profile; 404 until they have agreed on the consent screen. */
+export async function getMe(
+  deps: GameDeps,
+  player: Player,
+): Promise<Outcome<Profile>> {
+  const record = await deps.store.getPlayer(player.playerId);
+  return record === null
+    ? fail(404, "no_profile", "No profile yet")
+    : ok(profileOf(record, player));
+}
+
+/** Creates the profile on consent, or updates the nickname, training level and research consent. */
+export async function saveMe(
+  deps: GameDeps,
+  player: Player,
+  body: unknown,
+): Promise<Outcome<Profile>> {
+  const parsed = SaveProfileBody.safeParse(body);
+  if (!parsed.success) return invalid(parsed.error);
+  const saved = await deps.store.savePlayer({
+    id: player.playerId,
+    nickname: parsed.data.nickname,
+    trainingLevel: parsed.data.trainingLevel,
+    consentResearch: parsed.data.consentResearch,
+    joinedAt: deps.now(),
+  });
+  return ok(profileOf(saved, player));
+}
+
+/** The signed-in player's own encounters, and nobody else's (N1.6). */
+export async function listMyEncounters(
+  deps: GameDeps,
+  player: Player,
+): Promise<Outcome<readonly EncounterSummary[]>> {
+  const rows = await deps.store.listEncounters(player.playerId);
+  const summaries = await Promise.all(
+    rows.map(async ({ record, total }) => {
+      const card = await deps.registry
+        .load(record.bundleId)
+        .then(cardOf, () => null);
+      return {
+        encounterId: record.id,
+        caseSlug: card?.slug ?? "",
+        caseTitle: card?.title ?? "A case that is no longer available",
+        difficulty: record.difficulty,
+        status: record.status,
+        startedAt: record.startedAt.toISOString(),
+        total,
+      };
+    }),
+  );
+  return ok(summaries);
+}
+
+export const ATTRIBUTION_STATEMENT =
+  "Every case is adapted from a published, openly licensed case report, restructured into a simulation: the diagnosis is hidden until the debrief, and simulated findings are added where marked.";
+
+/** The attribution of every case the player can see (SPEC §12), with the general statement. */
+export async function credits(
+  deps: GameDeps,
+  player: Player,
+): Promise<Outcome<Credits>> {
+  const cases = [...(await deps.registry.newestBySlug()).values()].filter((p) =>
+    visibleTo(p, player.role),
+  );
+  const sources = cases
+    .map((p) => p.bundle.source)
+    .filter((s): s is NonNullable<typeof s> => s !== null)
+    .map((s) => ({
+      citation: s.citation ?? null,
+      licence: s.licence,
+      attribution: s.attribution ?? null,
+      url: s.url ?? null,
+    }))
+    .sort((a, b) => (a.citation ?? "").localeCompare(b.citation ?? ""));
+  return ok({ statement: ATTRIBUTION_STATEMENT, sources });
 }

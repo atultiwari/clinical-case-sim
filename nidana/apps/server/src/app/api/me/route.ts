@@ -1,5 +1,5 @@
 import { getContext } from "@/lib/context";
-import { logMissing } from "@/lib/game";
+import { getMe, saveMe } from "@/lib/game";
 import { preflight, readJsonBody, respond, withPlayer } from "@/lib/http";
 
 export const dynamic = "force-dynamic";
@@ -9,7 +9,17 @@ export function OPTIONS(request: Request): Response {
   return preflight(request);
 }
 
-/** POST /api/missing { encounterId, kind, query }: logs a search with no match. */
+/** GET /api/me: the signed-in player's profile; 404 `no_profile` before the consent screen. */
+export function GET(request: Request): Promise<Response> {
+  return withPlayer(
+    request,
+    "reads",
+    async ({ game }, player) => respond(await getMe(game, player)),
+    getContext,
+  );
+}
+
+/** POST /api/me { nickname, trainingLevel, consentResearch, agreed: true }: creates or updates the profile. */
 export function POST(request: Request): Promise<Response> {
   return withPlayer(
     request,
@@ -17,7 +27,7 @@ export function POST(request: Request): Promise<Response> {
     async ({ game }, player) => {
       const body = await readJsonBody(request);
       return body.ok
-        ? respond(await logMissing(game, player.playerId, body.body))
+        ? respond(await saveMe(game, player, body.body))
         : body.response;
     },
     getContext,

@@ -12,6 +12,18 @@ export interface CaseCard {
   readonly estMinutes: number | null;
 }
 
+/**
+ * Whether a role may see a case (S-006): cases whose licence forbids sharing adaptations (ND)
+ * stay in the owner's own testing; testers see every other case.
+ */
+export function visibleTo(
+  prepared: PreparedCase,
+  role: "player" | "admin",
+): boolean {
+  if (role === "admin") return true;
+  return !/(^|[^A-Z])ND([^A-Z]|$)/.test(prepared.bundle.source?.licence ?? "");
+}
+
 export interface Refused {
   readonly id: string;
   readonly code: BundleRefusedError["code"];
@@ -23,7 +35,7 @@ export interface BundleRegistry {
   load(id: string): Promise<PreparedCase>;
   /** The newest published revision for each case, by slug. */
   newestBySlug(): Promise<ReadonlyMap<string, PreparedCase>>;
-  cases(): Promise<readonly CaseCard[]>;
+  cases(role?: "player" | "admin"): Promise<readonly CaseCard[]>;
   /** Published bundles the server refused, with the reason. */
   refused(): Promise<readonly Refused[]>;
 }
@@ -41,7 +53,7 @@ const newer = (a: string, b: string): boolean => {
   return va > vb || (va === vb && ra > rb);
 };
 
-function cardOf(prepared: PreparedCase): CaseCard {
+export function cardOf(prepared: PreparedCase): CaseCard {
   const card = prepared.bundle.case;
   return {
     slug: card.slug ?? "",
@@ -123,8 +135,9 @@ export function createBundleRegistry(
   return {
     load,
     newestBySlug: async () => (await getIndex()).bySlug,
-    cases: async () =>
+    cases: async (role = "player") =>
       [...(await getIndex()).bySlug.values()]
+        .filter((p) => visibleTo(p, role))
         .map(cardOf)
         .sort((a, b) => a.title.localeCompare(b.title)),
     refused: async () => (await getIndex()).refused,

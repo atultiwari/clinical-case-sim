@@ -7,6 +7,8 @@ import { createRemoteJWKSet, jwtVerify, type JWTVerifyGetKey } from "jose";
 
 export interface Player {
   readonly playerId: string;
+  /** `admin` only when set in the user's app_metadata, which only the project owner can change. */
+  readonly role: "player" | "admin";
 }
 
 export interface Verifier {
@@ -45,9 +47,13 @@ export function createVerifier(options: VerifierOptions): Verifier {
         const { payload } = await (key instanceof Uint8Array
           ? jwtVerify(token, key, verifyOptions)
           : jwtVerify(token, key, verifyOptions));
-        return typeof payload.sub === "string" && UUID.test(payload.sub)
-          ? { playerId: payload.sub }
-          : null;
+        if (typeof payload.sub !== "string" || !UUID.test(payload.sub))
+          return null;
+        const meta = payload.app_metadata as { role?: unknown } | undefined;
+        return {
+          playerId: payload.sub,
+          role: meta?.role === "admin" ? "admin" : "player",
+        };
       } catch {
         return null;
       }

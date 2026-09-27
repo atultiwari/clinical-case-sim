@@ -18,7 +18,8 @@ export async function GET(
   return withPlayer(
     request,
     "reads",
-    async ({ game }, playerId) => respond(await getView(game, playerId, id)),
+    async ({ game }, player) =>
+      respond(await getView(game, player.playerId, id)),
     getContext,
   );
 }

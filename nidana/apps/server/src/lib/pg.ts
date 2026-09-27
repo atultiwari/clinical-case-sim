@@ -1,7 +1,12 @@
 import type { Action } from "@nidana/engine";
 import type postgres from "postgres";
 import { storedFromBody, type BundleSource } from "./bundles";
-import type { EncounterRecord, EncounterStore, ScoreRecord } from "./store";
+import type {
+  EncounterRecord,
+  EncounterStore,
+  PlayerRecord,
+  ScoreRecord,
+} from "./store";
 
 /**
  * Postgres implementations, used through the least-privilege role nidana_server
@@ -40,6 +45,22 @@ interface EncounterRow {
   started_at: Date;
   ended_at: Date | null;
 }
+
+interface PlayerRow {
+  id: string;
+  display_name: string;
+  training_level: PlayerRecord["trainingLevel"];
+  consent_research: boolean;
+  created_at: Date;
+}
+
+const toPlayer = (row: PlayerRow): PlayerRecord => ({
+  id: row.id,
+  nickname: row.display_name,
+  trainingLevel: row.training_level,
+  consentResearch: row.consent_research,
+  joinedAt: row.created_at,
+});
 
 const toRecord = (row: EncounterRow): EncounterRecord => ({
   id: row.id,
@@ -95,8 +116,35 @@ function finiteNumber(value: string, id: string): number {
 
 export function pgStore(sql: Sql): EncounterStore {
   return {
-    async ensurePlayer(playerId) {
-      await sql`insert into play.player (id) values (${playerId}) on conflict (id) do nothing`;
+    async getPlayer(playerId) {
+      const rows = await sql<PlayerRow[]>`
+        select id, display_name, training_level, consent_research, created_at
+        from play.player where id = ${playerId}`;
+      return rows[0] === undefined ? null : toPlayer(rows[0]);
+    },
+    async savePlayer(player) {
+      // created_at records when the player agreed; an update never moves it.
+      const rows = await sql<PlayerRow[]>`
+        insert into play.player (id, display_name, training_level, consent_research)
+        values (${player.id}, ${player.nickname}, ${player.trainingLevel}, ${player.consentResearch})
+        on conflict (id) do update set
+          display_name = excluded.display_name,
+          training_level = excluded.training_level,
+          consent_research = excluded.consent_research
+        returning id, display_name, training_level, consent_research, created_at`;
+      return toPlayer(rows[0] as PlayerRow);
+    },
+    async listEncounters(playerId) {
+      const rows = await sql<(EncounterRow & { total: string | null })[]>`
+        select e.id, e.player_id, e.bundle_id, e.difficulty, e.status, e.started_at, e.ended_at, s.total
+        from play.encounter e left join play.score s on s.encounter_id = e.id
+        where e.player_id = ${playerId}
+        order by e.started_at desc
+        limit 100`;
+      return rows.map((row) => ({
+        record: toRecord(row),
+        total: row.total === null ? null : finiteNumber(row.total, row.id),
+      }));
     },
     async create(record) {
       await sql`
