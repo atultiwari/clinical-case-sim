@@ -1,5 +1,6 @@
 """The `sambhasha` command line (SPEC §17). Later tasks add `run`, `transcript` and more."""
 
+import json
 from pathlib import Path
 from typing import Annotated
 from uuid import UUID, uuid4
@@ -19,9 +20,10 @@ from sambhasha.evaluation.evaluator import Evaluator
 from sambhasha.evaluation.mapper import ScoringMapper
 from sambhasha.gatekeeper.coding import Coder, MissingRequestLog
 from sambhasha.llm.cache import CacheMiss, RecordReplayCache
-from sambhasha.llm.config import ConfigError, load_models_config
+from sambhasha.llm.config import ROLES, ConfigError, load_models_config
 from sambhasha.llm.fake import FakeLLM
 from sambhasha.llm.gateway import LLMGateway
+from sambhasha.llm.ratelimit import WaitLedger
 from sambhasha.runner import build_scheduler, fake_models_config
 from sambhasha.storage.postgres import open_postgres
 from sambhasha.storage.repo import DuplicateError, NotFoundError
@@ -155,6 +157,7 @@ def evaluate(
 
 
 MISSING_DIR = Path(__file__).resolve().parents[2] / "data" / "missing"
+RUNS_DIR = Path(__file__).resolve().parents[2] / "data" / "runs"
 
 
 @app.command("run")
@@ -163,6 +166,9 @@ def run_case(
     fake: Annotated[
         bool, typer.Option(help="Play the config's scripted replies: no network, no cost")
     ] = False,
+    doctor_profile: Annotated[
+        str | None, typer.Option(help="Put every doctor seat on this models.yaml profile")
+    ] = None,
 ) -> None:
     """Run one case with the seats in the config (SPEC §10).
 
@@ -184,8 +190,13 @@ def run_case(
                 raise RunConfigError(
                     f"a live run needs llm_budget_usd in {config.name}; set a cap or use --fake"
                 )
+            models = load_models_config()
+            if doctor_profile:
+                models = models.with_doctor_profile(doctor_profile)
+            for role in ROLES:
+                models.endpoint_for(role)  # a missing key refuses the run before it starts
             gateway = LLMGateway(
-                load_models_config(),
+                models,
                 cache=RecordReplayCache(),
                 on_call=recorder,
                 spend_cap_usd=run_config.llm_budget_usd,
@@ -236,7 +247,20 @@ def run_case(
         MISSING_DIR.mkdir(parents=True, exist_ok=True)
         path = missing.write_csv(MISSING_DIR / f"{run.id}.csv")
         typer.echo(f"Missing requests for the Case Library: {path}")
+    _report_waits(run.id, gateway.waits)
     typer.echo(f"Next: sambhasha transcript {run.id}; sambhasha evaluate {run.id}")
+
+
+def _report_waits(run_id: UUID, waits: WaitLedger) -> None:
+    """How long the run waited on rate limits, and what a paid tier would have saved."""
+    RUNS_DIR.mkdir(parents=True, exist_ok=True)
+    stats = {"run_id": str(run_id), **waits.summary()}
+    (RUNS_DIR / f"{run_id}.waits.json").write_text(json.dumps(stats, indent=1), encoding="utf-8")
+    if waits.pauses:
+        typer.echo(
+            f"Waited {WaitLedger.describe(waits.total_seconds)} for the free tier's rate limits"
+            f" ({waits.pauses} pauses). A paid tier would have saved most of this time."
+        )
 
 
 @app.command()

@@ -22,6 +22,7 @@ from sambhasha.domain.events import Event, LlmCall
 from sambhasha.llm.backend import ChatBackend, OpenAIBackend
 from sambhasha.llm.cache import RecordReplayCache
 from sambhasha.llm.config import Endpoint, ModelsConfig, Profile
+from sambhasha.llm.ratelimit import WaitLedger
 from sambhasha.llm.types import ChatMessage, LlmCallRecord, LLMRequest, LLMResponse
 
 MAX_RETRIES: Final = 2
@@ -46,20 +47,24 @@ class StructuredResult[T: BaseModel]:
     calls: tuple[LlmCallRecord, ...]
 
 
-def _default_backend_for(endpoint: Endpoint) -> ChatBackend:
-    return OpenAIBackend(endpoint)
-
-
 class LLMGateway:
     def __init__(
         self,
         config: ModelsConfig,
         *,
-        backend_for: Callable[[Endpoint], ChatBackend] = _default_backend_for,
+        backend_for: Callable[[Endpoint], ChatBackend] | None = None,
         cache: RecordReplayCache | None = None,
         on_call: Callable[[LlmCallRecord], None] = lambda record: None,
         spend_cap_usd: Decimal | None = None,
+        waits: WaitLedger | None = None,
     ) -> None:
+        self.waits = waits or WaitLedger()
+        if backend_for is None:
+            ledger = self.waits
+
+            def backend_for(endpoint: Endpoint) -> ChatBackend:
+                return OpenAIBackend(endpoint, ledger=ledger)
+
         self._config = config
         self._cap = spend_cap_usd
         self._spent = Decimal(0)

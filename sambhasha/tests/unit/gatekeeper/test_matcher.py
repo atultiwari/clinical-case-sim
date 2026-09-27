@@ -20,6 +20,7 @@ profiles:
   p: {provider: local, model: small, family: other}
 roles: {attending: p, challenger: p, consultant: p, service: p, matcher: p, synthetic: p,
         curator: p, evaluator: p}
+family_exception: tests use one scripted model
 """
 
 

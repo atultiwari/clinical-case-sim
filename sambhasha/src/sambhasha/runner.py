@@ -29,6 +29,7 @@ def fake_models_config() -> ModelsConfig:
             "providers": {"fake": {"base_url": "http://fake.invalid/v1", "api_key": "fake"}},
             "profiles": {"fake": {"provider": "fake", "model": FAKE_MODEL, "family": "fake"}},
             "roles": dict.fromkeys(ROLES, "fake"),
+            "family_exception": "a fake run plays scripted replies; no model is involved",
         }
     )
 

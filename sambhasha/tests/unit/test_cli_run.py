@@ -149,3 +149,64 @@ def test_a_capped_live_run_is_wired_to_the_cap_and_the_cache(
     assert ": aborted" in result.output
     assert "Stopped: CacheMiss" in result.output
     assert "Model calls cost USD 0 of the USD 1.5 cap." in result.output
+
+
+# --- the free Gemini pilot (P1.11 preparation) ---
+
+
+def _capped(tmp_path: Path) -> Path:
+    config = tmp_path / "run.yaml"
+    config.write_text(
+        DEFAULT_RUN_CONFIG.read_text(encoding="utf-8").replace(
+            "llm_budget_usd: null", "llm_budget_usd: 1.50"
+        ),
+        encoding="utf-8",
+    )
+    return config
+
+
+def test_a_live_run_without_the_api_key_is_refused_before_it_starts(
+    repo: InMemoryRepository, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+
+    result = runner.invoke(cli.app, ["run", "--config", str(_capped(tmp_path))])
+
+    assert result.exit_code == 1
+    assert "GEMINI_API_KEY" in result.output
+
+
+def test_an_unknown_doctor_profile_is_refused(
+    repo: InMemoryRepository, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setenv("GEMINI_API_KEY", "test-key")
+
+    result = runner.invoke(
+        cli.app, ["run", "--config", str(_capped(tmp_path)), "--doctor-profile", "doctor-z"]
+    )
+
+    assert result.exit_code == 1
+    assert "doctor-z" in result.output
+
+
+def test_the_wait_report_names_the_time_a_paid_tier_would_save(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
+) -> None:
+    import json
+
+    from sambhasha.llm.ratelimit import WaitLedger
+
+    monkeypatch.setattr(cli, "RUNS_DIR", tmp_path / "runs")
+    ledger = WaitLedger()
+    ledger.add("gemini-3.8-flash", 125, "pacing")
+    ledger.add("gemini-3.5-flash-lite", 20, "rate limited")
+    run_id = UUID("00000000-0000-4000-8000-00000000000b")
+
+    cli._report_waits(run_id, ledger)
+
+    out = capsys.readouterr().out
+    assert "Waited 2 min 25 s for the free tier's rate limits (2 pauses)" in out
+    assert "A paid tier would have saved most of this time." in out
+    stats = json.loads((tmp_path / "runs" / f"{run_id}.waits.json").read_text())
+    assert stats["waited_seconds"] == 145.0
+    assert stats["by_model"] == {"gemini-3.8-flash": 125.0, "gemini-3.5-flash-lite": 20.0}

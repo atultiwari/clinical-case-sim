@@ -100,9 +100,11 @@ def test_without_a_stub_the_backend_builds_a_real_client_offline() -> None:
     assert isinstance(backend, OpenAIBackend)
 
 
-def test_the_gateway_default_backend_is_the_openai_one() -> None:
-    from sambhasha.llm.gateway import _default_backend_for
+def test_the_gateway_default_backend_is_the_openai_one(tmp_path: object) -> None:
+    from sambhasha.llm.gateway import LLMGateway
+    from sambhasha.runner import fake_models_config
 
+    gateway = LLMGateway(fake_models_config())
     endpoint = Endpoint(base_url="http://localhost:9/v1", api_key="k", reports_cost=False)
 
-    assert isinstance(_default_backend_for(endpoint), OpenAIBackend)
+    assert isinstance(gateway._backend_for(endpoint), OpenAIBackend)
