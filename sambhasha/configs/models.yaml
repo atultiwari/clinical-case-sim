@@ -35,7 +35,7 @@ profiles:
     temperature: 0
     max_tokens: 2000
     rpm: 10
-    rpd: 250
+    rpd: 20                    # measured 2026-09-27: the free tier allows 20 a day
   doctor-b:                    # an older generation, for the pilot's second profile
     provider: gemini
     model: gemini-2.5-flash
