@@ -1,0 +1,58 @@
+# Recommended model profiles for production and the study, through OpenRouter (not active).
+# Checked against OpenRouter's live model list on 27 Sep 2026; re-check ids and prices before
+# use. To use: copy over configs/models.yaml, set OPENROUTER_API_KEY in .env, and set
+# llm_budget_usd in the run config (about USD 2 per run was the pilot estimate).
+#
+# D-010 holds strictly: the Synthetic Findings Service and the Evaluator are a different family
+# (Anthropic) from both doctor profiles (OpenAI, Google). No Claude doctor seats, so the
+# D-024 sensitivity analysis is not needed. gpt-6-sol and claude-sonnet-5 accept no
+# temperature, so it is left unset for them; reruns repeat through the reply cache.
+
+providers:
+  openrouter:
+    base_url: https://openrouter.ai/api/v1
+    api_key_env: OPENROUTER_API_KEY
+    reports_cost: true
+
+profiles:
+  doctor-a:        # USD 2 / 10 per million tokens (in / out)
+    provider: openrouter
+    model: openai/gpt-6-sol
+    family: openai
+    temperature: null
+    max_tokens: 2000
+  doctor-b:        # USD 0.75 / 3.75
+    provider: openrouter
+    model: google/gemini-3.8-flash
+    family: google
+    temperature: 0
+    seed: 20260926
+    max_tokens: 2000
+  synthetic:       # USD 2 / 10
+    provider: openrouter
+    model: anthropic/claude-sonnet-5
+    family: anthropic
+    temperature: null
+    max_tokens: 1500
+  evaluator:       # USD 2 / 10
+    provider: openrouter
+    model: anthropic/claude-sonnet-5
+    family: anthropic
+    temperature: null
+    max_tokens: 2000
+  matcher:         # USD 1 / 5; sees only catalogue text
+    provider: openrouter
+    model: anthropic/claude-haiku-4.5
+    family: anthropic
+    temperature: 0
+    max_tokens: 400
+
+roles:
+  attending: doctor-a
+  challenger: doctor-a
+  consultant: doctor-a
+  service: doctor-a
+  matcher: matcher
+  synthetic: synthetic
+  curator: matcher
+  evaluator: evaluator

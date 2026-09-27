@@ -415,7 +415,7 @@ Starting defaults, set per study in `configs/`:
 
 ## 11. LLM gateway and model policy
 
-- One module, `sambhasha.llm`, makes every model call through the `openai` Python SDK against OpenAI-compatible endpoints: OpenRouter for cloud models and Ollama for local ones.
+- One module, `sambhasha.llm`, makes every model call through the `openai` Python SDK against OpenAI-compatible endpoints: OpenRouter for cloud models, Google's Gemini API (its OpenAI-compatible endpoint; the pilot's free tier, D-028) and Ollama for local ones. Providers with rate limits are paced to each model's requests per minute and per day, and every wait is recorded.
 - Model ids live in `configs/models.yaml`, per role: attending, challenger, consultant, service, matcher, synthetic, curator, evaluator. Code never hard-codes a model id.
 - Policy: the Synthetic Findings Service and the Evaluator use a different model family from the doctor seats wherever possible.
 - **Structured output:** send a JSON schema from the Pydantic model when the provider supports it; otherwise use JSON mode, validate and retry up to twice.

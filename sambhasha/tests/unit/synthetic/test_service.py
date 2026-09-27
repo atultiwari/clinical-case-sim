@@ -46,6 +46,7 @@ profiles:
   synth: {provider: local, model: synth-model, family: two}
 roles: {attending: doctor, challenger: doctor, consultant: doctor, service: doctor,
         matcher: doctor, synthetic: synth, curator: doctor, evaluator: synth}
+family_exception: tests use one scripted model
 """
 
 

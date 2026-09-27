@@ -224,3 +224,13 @@ def test_cached_replies_cost_nothing_against_the_cap(config: ModelsConfig, tmp_p
         gateway.structured("attending", MESSAGES, Question, prompt_version="3")
 
     assert gateway.spent_usd == Decimal("0.40")
+
+
+def test_the_gateway_shares_one_wait_ledger_with_its_backends(config: ModelsConfig) -> None:
+    from sambhasha.llm.ratelimit import WaitLedger
+
+    ledger = WaitLedger()
+    gateway = LLMGateway(config, waits=ledger)
+
+    assert gateway.waits is ledger
+    assert LLMGateway(config).waits.total_seconds == 0

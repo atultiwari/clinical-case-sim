@@ -37,12 +37,67 @@ def test_the_repository_config_loads_and_covers_every_role() -> None:
         assert config.profile_for(role).model
 
 
-def test_synthetic_and_evaluator_are_another_family_than_the_doctor_seats() -> None:
-    config = load_models_config(CONFIG)
+PRODUCTION = CONFIG.with_name("models.openrouter.yaml")
+
+
+def test_the_production_profiles_keep_d010_strictly() -> None:
+    config = load_models_config(PRODUCTION)
     doctor_families = {config.profile_for(role).family for role in DOCTOR_ROLES}
 
+    assert config.family_exception is None
     assert config.profile_for("synthetic").family not in doctor_families
     assert config.profile_for("evaluator").family not in doctor_families
+
+
+def test_the_pilot_runs_on_free_gemini_with_a_recorded_d010_exception() -> None:
+    config = load_models_config(CONFIG)
+
+    assert {config.profile_for(role).model for role in ROLES} <= {
+        "gemini-3.8-flash",
+        "gemini-3.5-flash-lite",
+    }
+    assert config.profile_for("matcher").model == "gemini-3.5-flash-lite"
+    assert config.family_exception
+    assert "D-028" in config.family_exception
+
+
+def test_a_same_family_config_without_an_exception_is_rejected(tmp_path: Path) -> None:
+    text = MINIMAL.replace("family: other", "family: vendor")
+
+    with pytest.raises(ConfigError, match="D-010"):
+        load_models_config(_write(tmp_path, text))
+
+
+def test_a_stated_exception_allows_one_family(tmp_path: Path) -> None:
+    text = MINIMAL.replace("family: other", "family: vendor") + (
+        "family_exception: pilot on one provider\n"
+    )
+
+    assert load_models_config(_write(tmp_path, text)).family_exception == "pilot on one provider"
+
+
+def test_rate_limits_reach_the_endpoint(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("TEST_KEY", "k")
+    text = MINIMAL.replace(
+        "cloud: {provider: openrouter, model: vendor/model-a, family: vendor}",
+        "cloud: {provider: openrouter, model: vendor/model-a, family: vendor, rpm: 10, rpd: 250}",
+    )
+    config = load_models_config(_write(tmp_path, text))
+
+    endpoint = config.endpoint_for("attending")
+
+    assert (endpoint.model, endpoint.rpm, endpoint.rpd) == ("vendor/model-a", 10, 250)
+
+
+def test_the_doctor_seats_can_switch_profile() -> None:
+    config = load_models_config(CONFIG)
+
+    switched = config.with_doctor_profile("doctor-b")
+
+    assert {switched.profile_for(r).model for r in DOCTOR_ROLES} == {"gemini-2.5-flash"}
+    assert switched.profile_for("matcher") == config.profile_for("matcher")
+    with pytest.raises(ConfigError, match="no-such"):
+        config.with_doctor_profile("no-such")
 
 
 def test_a_profile_resolves_its_provider_and_key_from_the_environment(

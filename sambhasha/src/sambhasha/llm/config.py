@@ -38,6 +38,7 @@ class Provider(DomainModel):
     api_key: str | None = None  # only for keyless local servers such as Ollama
     api_key_env: str | None = None
     reports_cost: bool = False
+    sdk_retries: int = Field(default=2, ge=0)  # the SDK's own retries; 0 when Sambhasha paces
 
     @model_validator(mode="after")
     def _has_url_and_key(self) -> Self:
@@ -56,18 +57,27 @@ class Profile(DomainModel):
     seed: int | None = None
     max_tokens: int = Field(default=2000, ge=1)
     structured_output: Literal["json_schema", "json_object"] = "json_schema"
+    rpm: int | None = Field(default=None, ge=1)  # requests per minute this model allows
+    rpd: int | None = Field(default=None, ge=1)  # requests per day
 
 
 class Endpoint(DomainModel):
     base_url: str
     api_key: str
     reports_cost: bool
+    model: str = ""
+    rpm: int | None = None
+    rpd: int | None = None
+    sdk_retries: int = 2
 
 
 class ModelsConfig(DomainModel):
     providers: dict[str, Provider]
     profiles: dict[str, Profile]
     roles: dict[str, str]
+    # Why the Synthetic Findings Service or the Evaluator may share a family with the doctor
+    # seats (D-010); required whenever they do.
+    family_exception: str | None = None
 
     @model_validator(mode="after")
     def _references_resolve(self) -> Self:
@@ -82,7 +92,23 @@ class ModelsConfig(DomainModel):
                 raise ValueError(
                     f"profile {name} names an unknown provider {profile_config.provider!r}"
                 )
+        doctors = {self.profiles[self.roles[r]].family for r in DOCTOR_ROLES}
+        shared = [
+            r for r in ("synthetic", "evaluator") if self.profiles[self.roles[r]].family in doctors
+        ]
+        if shared and not self.family_exception:
+            raise ValueError(
+                f"D-010: {' and '.join(shared)} share a model family with the doctor seats;"
+                " use another family or state family_exception"
+            )
         return self
+
+    def with_doctor_profile(self, profile: str) -> "ModelsConfig":
+        """The same config with every doctor seat on another profile (P1.11's second profile)."""
+        if profile not in self.profiles:
+            raise ConfigError(f"no profile {profile!r} in the models config")
+        roles = {**self.roles, **dict.fromkeys(DOCTOR_ROLES, profile)}
+        return ModelsConfig.model_validate({**self.model_dump(), "roles": roles})
 
     def profile_for(self, role: str) -> Profile:
         try:
@@ -103,7 +129,16 @@ class ModelsConfig(DomainModel):
             raise ConfigError(f"set {provider.base_url_env} for role {role}")
         if not api_key:
             raise ConfigError(f"set {provider.api_key_env} in .env for role {role}")
-        return Endpoint(base_url=base_url, api_key=api_key, reports_cost=provider.reports_cost)
+        profile = self.profile_for(role)
+        return Endpoint(
+            base_url=base_url,
+            api_key=api_key,
+            reports_cost=provider.reports_cost,
+            model=profile.model,
+            rpm=profile.rpm,
+            rpd=profile.rpd,
+            sdk_retries=provider.sdk_retries,
+        )
 
 
 def load_models_config(path: Path = DEFAULT_CONFIG) -> ModelsConfig:

@@ -184,6 +184,12 @@ Design: [SPEC.md](SPEC.md). Decisions: [DECISIONS.md](DECISIONS.md). Pilot: [`..
   - Depends on: P1.7.
 
 - [ ] **P1.11 [human] Live pilot runs**
+  - Prepared 27 Sep 2026 (D-028): the pilot runs on the free Gemini API.
+    - Models (`configs/models.yaml`): `gemini-3.8-flash` for the doctor seats, synthetic and evaluator; `gemini-3.5-flash-lite` for the matcher; `--doctor-profile doctor-b` puts the doctors on `gemini-2.5-flash`.
+    - Rate limits: the gateway paces to each model's rpm and rpd (check AI Studio for this project's real limits), waits the delay Google gives after a 429, and stops a run cleanly when a daily quota is used up.
+    - Wait time: each run reports the time waited and writes it to `data/runs/<run_id>.waits.json`; the findings note sums it as the time a paid tier would have saved.
+    - A live run checks every role's API key before it starts. The paid profiles for later are in `configs/models.openrouter.yaml`.
+  - Still needed from Atul: `GEMINI_API_KEY` in `.env`, a read of the five role cards, and `llm_budget_usd` in `configs/pilot.yaml` (any positive value; the free tier reports no cost).
   - Build: run the pilot with two model profiles (for example two different families for the doctor seats), three repeats each. Prepare transcripts, scores and a short findings note for Atul.
   - Accept: six completed runs; Atul has read at least two transcripts; any leaks or rule breaks found are fixed and re-tested. Milestone M1.
   - Depends on: M0, P1.9, P1.10.

@@ -35,6 +35,7 @@ profiles:
   p: {provider: local, model: m, family: f}
 roles: {attending: p, challenger: p, consultant: p, service: p, matcher: p, synthetic: p,
         curator: p, evaluator: p}
+family_exception: tests use one scripted model
 """
 LIMITS = Limits(turns_left=29, referrals_left=4, budget_left_inr=Decimal(4700), sim_minutes=1510)
 CHART = (

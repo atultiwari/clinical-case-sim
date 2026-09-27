@@ -16,6 +16,7 @@ profiles:
   other: {provider: local, model: small, family: other, structured_output: json_object}
 roles: {attending: doctor, challenger: doctor, consultant: doctor, service: doctor,
         matcher: doctor, synthetic: other, curator: doctor, evaluator: other}
+family_exception: tests use one scripted model
 """
 
 
