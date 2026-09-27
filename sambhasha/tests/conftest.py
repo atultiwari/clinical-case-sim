@@ -5,8 +5,24 @@ from collections.abc import Iterator
 
 import psycopg
 import pytest
+from hypothesis import HealthCheck, settings
 
 from sambhasha.config import LOCAL_DB_URL
+
+# The invariant suite's random runs: 40 per test in CI; `HYPOTHESIS_PROFILE=thorough` for 400.
+settings.register_profile(
+    "default",
+    max_examples=40,
+    deadline=None,
+    suppress_health_check=[HealthCheck.too_slow, HealthCheck.data_too_large],
+)
+settings.register_profile(
+    "thorough",
+    max_examples=400,
+    deadline=None,
+    suppress_health_check=[HealthCheck.too_slow, HealthCheck.data_too_large],
+)
+settings.load_profile(os.environ.get("HYPOTHESIS_PROFILE", "default"))
 
 
 def db_url() -> str:

@@ -474,3 +474,46 @@ def test_a_diagnosis_revealing_result_comes_with_its_own_test(
 
     assert isinstance(outcome, Released)
     assert outcome.fact_ids == ("L26",)
+
+
+# --- found by the invariant suite (P1.10): imaging answered by the case's reports ---
+
+
+def test_an_imaging_order_gives_the_service_the_cases_reviewed_report(
+    gatekeeper: Gatekeeper,
+) -> None:
+    outcome = gatekeeper.resolve(
+        _ask("attending", OrderTest(item="USS abdomen", indication="pain"))
+    )
+
+    report = next(r for r in PILOT.reports if r.test_item_id == "IMG.US.ABDOMEN")
+    assert isinstance(outcome, ServiceRequest)
+    assert outcome.service == "service.radiology"
+    assert outcome.report_id == report.id
+    assert outcome.findings == report.report_text
+
+
+def test_every_service_test_the_case_can_answer_gives_the_service_material(
+    gatekeeper: Gatekeeper,
+) -> None:
+    tests = [
+        i for i in CATALOGUE.items if i.kind == "test" and (i.route or "").startswith("service.")
+    ]
+    for item in tests:
+        outcome = gatekeeper.resolve(_ask("attending", OrderTest(item=item.id, indication="x")))
+        if isinstance(outcome, ServiceRequest):
+            assert outcome.findings.strip(), item.id
+
+
+def test_a_service_test_with_nothing_in_the_case_goes_outside_the_catalogue(
+    missing: MissingRequestLog,
+) -> None:
+    bare = PILOT.model_copy(
+        update={"reports": tuple(r for r in PILOT.reports if r.test_item_id != "IMG.US.ABDOMEN")}
+    )
+    gatekeeper = _keeper(bare, missing)
+
+    outcome = gatekeeper.resolve(_ask("attending", OrderTest(item="USS abdomen", indication="x")))
+
+    assert isinstance(outcome, OutsideCatalogue)
+    assert missing.requests[-1].query == "IMG.US.ABDOMEN"
