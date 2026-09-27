@@ -6,9 +6,11 @@ from typing import Annotated
 import typer
 
 from sambhasha import __version__
+from sambhasha.catalogue import Catalogue
 from sambhasha.config import database_url
 from sambhasha.curation.catalogue_names import CatalogueError, CatalogueNames
 from sambhasha.curation.importer import ImportRefusedError, import_bundle
+from sambhasha.engine.tables import generate_tables, write_tables
 from sambhasha.storage.postgres import open_postgres
 
 app = typer.Typer(
@@ -20,6 +22,10 @@ app = typer.Typer(
 )
 case_app = typer.Typer(help="Import and list Case Library bundles.", no_args_is_help=True)
 app.add_typer(case_app, name="case")
+tables_app = typer.Typer(
+    help="Price and turnaround tables from the catalogue.", no_args_is_help=True
+)
+app.add_typer(tables_app, name="tables")
 
 # The repository the commands use; tests replace it with an in-memory one.
 open_repository = open_postgres
@@ -67,3 +73,14 @@ def case_list() -> None:
             f"{record.bundle_id}  catalogue v{record.catalogue_version}  {eligibility}"
             f"  ({record.eligibility_reason or 'no decision recorded'})"
         )
+
+
+@tables_app.command("generate")
+def tables_generate() -> None:
+    """Write configs/prices_inr.yaml and configs/turnaround.yaml from the shared catalogue."""
+    try:
+        prices, turnaround = write_tables(generate_tables(Catalogue.load()))
+    except CatalogueError as error:
+        typer.echo(f"Refused: {error}", err=True)
+        raise typer.Exit(code=1) from error
+    typer.echo(f"Wrote {prices.name} and {turnaround.name}.")
