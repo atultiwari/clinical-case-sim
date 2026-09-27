@@ -199,3 +199,35 @@ export function Tabs<T extends string>({
     </View>
   );
 }
+
+export function Checkbox({
+  checked,
+  onChange,
+  label,
+  testID,
+}: {
+  readonly checked: boolean;
+  readonly onChange: (checked: boolean) => void;
+  readonly label: string;
+  readonly testID?: string;
+}) {
+  return (
+    <Pressable
+      testID={testID}
+      accessibilityRole="checkbox"
+      accessibilityState={{ checked }}
+      accessibilityLabel={label}
+      onPress={() => onChange(!checked)}
+      className="min-h-11 flex-row items-start gap-3 py-1"
+    >
+      <View
+        className={`mt-0.5 h-6 w-6 items-center justify-center rounded border ${checked ? "border-brand bg-brand" : "border-line bg-white"}`}
+      >
+        {checked ? (
+          <Text className="text-xs font-bold text-white">✓</Text>
+        ) : null}
+      </View>
+      <Text className="flex-1 text-sm leading-5 text-ink">{label}</Text>
+    </Pressable>
+  );
+}

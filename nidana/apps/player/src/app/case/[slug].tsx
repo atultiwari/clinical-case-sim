@@ -1,5 +1,5 @@
 import type { Difficulty } from "@nidana/contracts/api";
-import { router, useLocalSearchParams } from "expo-router";
+import { Redirect, router, useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import { Text, View } from "react-native";
 import {
@@ -12,6 +12,7 @@ import {
   Screen,
   Tabs,
 } from "@/components/ui";
+import { useAccount } from "@/lib/account";
 import { useApi } from "@/lib/game";
 import { useLoad } from "@/lib/use-load";
 
@@ -27,6 +28,7 @@ const DIFFICULTY: Record<Difficulty, string> = {
 export default function CaseScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
   const api = useApi();
+  const { status } = useAccount();
   const { data: cases, error: loadError } = useLoad(
     () => api.cases(),
     [api],
@@ -50,6 +52,7 @@ export default function CaseScreen() {
     }
   };
 
+  if (status === "needs_consent") return <Redirect href="/welcome" />;
   if (cases === null && error === null) return <Loading />;
   return (
     <Screen>

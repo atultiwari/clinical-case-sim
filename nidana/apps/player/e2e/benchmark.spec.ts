@@ -61,8 +61,15 @@ test("the benchmark path, from the case list to the debrief", async ({
   const pilot = cases.find((c) => c.slug === "c-6gizm");
   expect(pilot).toBeDefined();
 
+  // First visit: the consent screen, then the profile (N1.6).
   await page.goto("/");
+  await expect(page.getByTestId("consent-terms")).toBeVisible();
   await expect(page.getByTestId("disclaimer")).toBeVisible();
+  await expect(page.getByTestId("join")).toBeDisabled();
+  await page.getByTestId("nickname").fill("Benchmark tester");
+  await page.getByTestId("level-resident").click();
+  await page.getByTestId("agree").click();
+  await page.getByTestId("join").click();
   await expect(page.getByTestId("error")).toHaveCount(0, { timeout: 15_000 });
   await page.getByTestId(`case-${pilot?.slug}`).click();
   await expect(page.getByTestId("case-card")).toBeVisible();
@@ -195,4 +202,35 @@ test("the benchmark path, from the case list to the debrief", async ({
   });
   await page.setViewportSize({ width: 390, height: 844 });
   await page.screenshot({ path: `${SHOTS}/phone-debrief.png`, fullPage: true });
+
+  // The finished encounter is listed for this player, with its score (N1.6).
+  await page.goto("/");
+  await expect(page.getByTestId("my-encounters")).toContainText("Score 95");
+  await page.getByTestId("nav-credits").click();
+  await expect(page.getByTestId("credits-statement")).toBeVisible();
+  await expect(page.getByTestId("sources")).toHaveCount(0);
+  await page.getByTestId("show-sources").click();
+  await expect(page.getByTestId("sources")).toContainText("CC BY 4.0");
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.screenshot({
+    path: `${SHOTS}/desktop-credits.png`,
+    fullPage: true,
+  });
+});
+
+test("a first visit shows the consent screen and sends nothing before the player agrees", async ({
+  page,
+}) => {
+  const requests: string[] = [];
+  page.on("request", (r) => {
+    const url = r.url();
+    if (!url.startsWith("http://localhost:8199")) requests.push(url);
+  });
+  await page.goto("/");
+  await expect(page.getByTestId("consent-terms")).toBeVisible();
+  await expect(
+    page.getByRole("checkbox", { name: /research/ }),
+  ).not.toBeChecked();
+  await page.screenshot({ path: `${SHOTS}/phone-welcome.png`, fullPage: true });
+  expect(requests).toEqual([]);
 });

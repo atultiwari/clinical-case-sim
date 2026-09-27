@@ -3,6 +3,10 @@ import type {
   CaseCard,
   CommitRequest,
   CommitResult,
+  Credits,
+  EncounterSummary,
+  Profile,
+  SaveProfileRequest,
   DebriefView,
   Envelope,
   MissingRequest,
@@ -34,6 +38,11 @@ export interface Api {
   commit(encounterId: string, request: CommitRequest): Promise<CommitResult>;
   debrief(encounterId: string): Promise<DebriefView>;
   missing(request: MissingRequest): Promise<void>;
+  /** The profile, or null before the consent screen. */
+  me(): Promise<Profile | null>;
+  saveMe(request: SaveProfileRequest): Promise<Profile>;
+  myEncounters(): Promise<EncounterSummary[]>;
+  credits(): Promise<Credits>;
 }
 
 type Fetch = (input: string, init: RequestInit) => Promise<Response>;
@@ -115,5 +124,17 @@ export function createApi(
     missing: async (request) => {
       await call("POST", "/api/missing", request);
     },
+    me: async () => {
+      try {
+        return await call<Profile>("GET", "/api/me");
+      } catch (error: unknown) {
+        if (error instanceof ApiError && error.code === "no_profile")
+          return null;
+        throw error;
+      }
+    },
+    saveMe: (request) => call("POST", "/api/me", request),
+    myEncounters: () => call("GET", "/api/encounters"),
+    credits: () => call("GET", "/api/credits"),
   };
 }

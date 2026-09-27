@@ -5,12 +5,25 @@ appId: org.clinicalcasesim.nidana
 ---
 - launchApp:
     clearState: true
+
+# First launch: the consent screen, then the profile (N1.6). Nothing is created before "Start playing".
+- extendedWaitUntil:
+    visible:
+      id: "consent-terms"
+    timeout: 60000
+- assertVisible:
+    id: "disclaimer"
+- tapOn: { id: "nickname" }
+- inputText: "Android tester"
+# Tap a heading rather than hideKeyboard, which presses Back on Android and can close the app.
+- tapOn: "Training level"
+- tapOn: { id: "level-intern" }
+- tapOn: { id: "agree" }
+- tapOn: { id: "join" }
 - extendedWaitUntil:
     visible:
       id: "case-c-6gizm"
     timeout: 60000
-- assertVisible:
-    id: "disclaimer"
 - tapOn:
     id: "case-c-6gizm"
 - tapOn:
@@ -173,7 +186,8 @@ appId: org.clinicalcasesim.nidana
       file: steps/plan.yaml,
       env: { QUERY: "Repeat blood lead", ID: "ACT.REPEAT_BLOOD_LEAD" },
     }
-- hideKeyboard
+# Close the keyboard by tapping a heading (hideKeyboard presses Back on Android).
+- tapOn: "Plan"
 - scrollUntilVisible:
     element: "Cite Supplements, herbal and traditional remedies"
     timeout: 30000

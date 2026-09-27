@@ -112,6 +112,29 @@ describe("createApi", () => {
     }
   });
 
+  it("reads a missing profile as null, and passes other errors on", async () => {
+    const none = createApi(
+      "http://api",
+      async () => "t",
+      fakeFetch(404, {
+        success: false,
+        data: null,
+        error: { code: "no_profile", message: "No profile yet" },
+      }),
+    );
+    expect(await none.me()).toBeNull();
+    const down = createApi(
+      "http://api",
+      async () => "t",
+      fakeFetch(500, {
+        success: false,
+        data: null,
+        error: { code: "server_error", message: "x" },
+      }),
+    );
+    await expect(down.me()).rejects.toMatchObject({ code: "server_error" });
+  });
+
   it("covers every endpoint", async () => {
     const urls: string[] = [];
     const ok = async (url: string) => {
@@ -128,6 +151,15 @@ describe("createApi", () => {
     await api.commit("e", { dx: "DX.A", evidence: [], plan: [] });
     await api.debrief("e");
     await api.missing({ encounterId: "e", kind: "test", query: "x" });
+    await api.me();
+    await api.saveMe({
+      nickname: "N",
+      trainingLevel: "intern",
+      consentResearch: false,
+      agreed: true,
+    });
+    await api.myEncounters();
+    await api.credits();
     expect(urls.map((u) => u.replace("http://api", ""))).toEqual([
       "/api/cases",
       "/api/catalogue",
@@ -136,6 +168,10 @@ describe("createApi", () => {
       "/api/encounters/e/commit",
       "/api/encounters/e/debrief",
       "/api/missing",
+      "/api/me",
+      "/api/me",
+      "/api/encounters",
+      "/api/credits",
     ]);
   });
 });
