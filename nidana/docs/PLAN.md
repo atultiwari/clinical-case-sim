@@ -69,10 +69,11 @@ Rough effort: Phase 1 three to four weeks (two apps: player and server), Phase 2
   - Accept: a tester can join without a real name or email, play, and see only their own encounters.
   - Depends on: N1.4.
 
-- [ ] **N1.7 Missing requests**
+- [x] **N1.7 Missing requests**
   - Build: log unmatched searches in `play.missing_request` (bundle id, kind and query text; no player identity) through the game server. The Case Library picks them up (Case Library SPEC §4.4).
   - Accept: an unmatched search is logged with the bundle id and query text, costs nothing and shows the no-match message; the row holds nothing that identifies the player.
   - Depends on: N1.5.
+  - Done 2026-09-27: every catalogue search (Ask, Examine, Order, Refer, Differential, and the commit's diagnosis and plan) reports a query that found nothing after the player stops typing for 1.2 s, once per encounter, kind and query; the report is free and silent; the Playwright run checks the request and the unchanged spend, and the database test checks the row has no player column.
 
 - [ ] **N1.8 [human] First play**
   - Build: deploy the game server and the web build to Coolify (staging) against the development database; make an Android development build; Atul plays the pilot at all three difficulties; Claude fixes what he finds.

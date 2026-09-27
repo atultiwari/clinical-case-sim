@@ -6,7 +6,7 @@ import type {
 import { useState } from "react";
 import { Pressable, Text, TextInput, View } from "react-native";
 import { formatClock, formatDuration, formatInr } from "@/lib/format";
-import { nameOf } from "@/lib/game";
+import { nameOf, useMissingReport } from "@/lib/game";
 import { searchItems, type SearchKind } from "@/lib/search";
 import { Button, Muted, Tabs } from "./ui";
 
@@ -129,15 +129,23 @@ function ResultRow({
 }
 
 interface SearchProps {
+  readonly encounterId: string;
   readonly items: readonly SearchItem[];
   readonly kind: SearchKind;
   readonly placeholder: string;
   readonly onPick: (item: SearchItem) => void;
 }
 
-function Search({ items, kind, placeholder, onPick }: SearchProps) {
+function Search({
+  encounterId,
+  items,
+  kind,
+  placeholder,
+  onPick,
+}: SearchProps) {
   const [query, setQuery] = useState("");
   const found = searchItems(items, [kind], query);
+  useMissingReport(encounterId, kind, query, found.length);
   return (
     <View className="gap-2">
       <TextInput
@@ -237,6 +245,7 @@ function DifferentialEditor({
         </View>
       ))}
       <Search
+        encounterId={view.encounterId}
         items={items}
         kind="diagnosis"
         placeholder={PLACEHOLDER.differential}
@@ -283,6 +292,7 @@ export function ActionPanel({
       case "examine":
         return (
           <Search
+            encounterId={view.encounterId}
             items={items}
             kind={KIND_OF[mode]}
             placeholder={PLACEHOLDER[mode]}
@@ -293,6 +303,7 @@ export function ActionPanel({
       case "refer":
         return selected === null ? (
           <Search
+            encounterId={view.encounterId}
             items={items}
             kind={KIND_OF[mode]}
             placeholder={PLACEHOLDER[mode]}

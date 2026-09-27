@@ -17,27 +17,31 @@ import {
   movePlanItem,
   toggleEvidence,
 } from "@/lib/commit";
-import { nameOf, useApi, useCatalogue } from "@/lib/game";
+import { nameOf, useApi, useCatalogue, useMissingReport } from "@/lib/game";
 import { useLoad } from "@/lib/use-load";
 import { searchItems, type SearchKind } from "@/lib/search";
 
 /** The commit (SPEC §5.12): diagnosis, up to five items of key evidence, and a plan in order. */
 
 function Picker({
+  encounterId,
   items,
   kinds,
   placeholder,
   testID,
   onPick,
 }: {
+  readonly encounterId: string;
   readonly items: readonly SearchItem[];
-  readonly kinds: readonly SearchKind[];
+  /** The first kind is the one a search with no match is reported as. */
+  readonly kinds: readonly [SearchKind, ...SearchKind[]];
   readonly placeholder: string;
   readonly testID: string;
   readonly onPick: (item: SearchItem) => void;
 }) {
   const [query, setQuery] = useState("");
   const found = searchItems(items, kinds, query, 8);
+  useMissingReport(encounterId, kinds[0], query, found.length);
   return (
     <View className="gap-1.5">
       <TextInput
@@ -134,6 +138,7 @@ export default function Commit() {
           </View>
         ) : (
           <Picker
+            encounterId={id}
             items={items}
             kinds={["diagnosis"]}
             placeholder="Search diagnoses"
@@ -176,6 +181,7 @@ export default function Commit() {
           </View>
         ))}
         <Picker
+          encounterId={id}
           items={items}
           kinds={["action", "referral"]}
           placeholder="Search actions and referrals"
